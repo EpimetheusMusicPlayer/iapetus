@@ -19,8 +19,9 @@ for usage instructions.
 [build_runner]: https://pub.dev/packages/build_runner#built-in-commands
 
 ### Style
-#### Formatting `dart format` must be used to format code, with the standard
-maximum width of 80 characters.
+#### Formatting
+`dart format` must be used to format code, with the standard maximum width of 80
+characters.
 
 #### Style in serializable Freezed classes
 Classes that use Freezed for serilization must:
