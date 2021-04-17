@@ -1,0 +1,251 @@
+// GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+
+part of 'icon.dart';
+
+// **************************************************************************
+// FreezedGenerator
+// **************************************************************************
+
+T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
+MediaIcon _$MediaIconFromJson(Map<String, dynamic> json) {
+  return _MediaIcon.fromJson(json);
+}
+
+/// @nodoc
+class _$MediaIconTearOff {
+  const _$MediaIconTearOff();
+
+  _MediaIcon call(
+      {@JsonKey(name: 'dominantColor', fromJson: readOptionalColor, toJson: writeOptionalColor)
+          required int? dominantColor,
+      @JsonKey(name: 'artId')
+          required String artId,
+      @JsonKey(name: 'artUrl', fromJson: readOptionalUri, toJson: writeOptionalUri)
+          required Uri? artUrl}) {
+    return _MediaIcon(
+      dominantColor: dominantColor,
+      artId: artId,
+      artUrl: artUrl,
+    );
+  }
+
+  MediaIcon fromJson(Map<String, Object> json) {
+    return MediaIcon.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $MediaIcon = _$MediaIconTearOff();
+
+/// @nodoc
+mixin _$MediaIcon {
+  /// The dominant color (0xAARRGGBB)
+  @JsonKey(
+      name: 'dominantColor',
+      fromJson: readOptionalColor,
+      toJson: writeOptionalColor)
+  int? get dominantColor => throw _privateConstructorUsedError;
+  @JsonKey(name: 'artId')
+  String get artId => throw _privateConstructorUsedError;
+  @JsonKey(name: 'artUrl', fromJson: readOptionalUri, toJson: writeOptionalUri)
+  Uri? get artUrl => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $MediaIconCopyWith<MediaIcon> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $MediaIconCopyWith<$Res> {
+  factory $MediaIconCopyWith(MediaIcon value, $Res Function(MediaIcon) then) =
+      _$MediaIconCopyWithImpl<$Res>;
+  $Res call(
+      {@JsonKey(name: 'dominantColor', fromJson: readOptionalColor, toJson: writeOptionalColor)
+          int? dominantColor,
+      @JsonKey(name: 'artId')
+          String artId,
+      @JsonKey(name: 'artUrl', fromJson: readOptionalUri, toJson: writeOptionalUri)
+          Uri? artUrl});
+}
+
+/// @nodoc
+class _$MediaIconCopyWithImpl<$Res> implements $MediaIconCopyWith<$Res> {
+  _$MediaIconCopyWithImpl(this._value, this._then);
+
+  final MediaIcon _value;
+  // ignore: unused_field
+  final $Res Function(MediaIcon) _then;
+
+  @override
+  $Res call({
+    Object? dominantColor = freezed,
+    Object? artId = freezed,
+    Object? artUrl = freezed,
+  }) {
+    return _then(_value.copyWith(
+      dominantColor: dominantColor == freezed
+          ? _value.dominantColor
+          : dominantColor // ignore: cast_nullable_to_non_nullable
+              as int?,
+      artId: artId == freezed
+          ? _value.artId
+          : artId // ignore: cast_nullable_to_non_nullable
+              as String,
+      artUrl: artUrl == freezed
+          ? _value.artUrl
+          : artUrl // ignore: cast_nullable_to_non_nullable
+              as Uri?,
+    ));
+  }
+}
+
+/// @nodoc
+abstract class _$MediaIconCopyWith<$Res> implements $MediaIconCopyWith<$Res> {
+  factory _$MediaIconCopyWith(
+          _MediaIcon value, $Res Function(_MediaIcon) then) =
+      __$MediaIconCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {@JsonKey(name: 'dominantColor', fromJson: readOptionalColor, toJson: writeOptionalColor)
+          int? dominantColor,
+      @JsonKey(name: 'artId')
+          String artId,
+      @JsonKey(name: 'artUrl', fromJson: readOptionalUri, toJson: writeOptionalUri)
+          Uri? artUrl});
+}
+
+/// @nodoc
+class __$MediaIconCopyWithImpl<$Res> extends _$MediaIconCopyWithImpl<$Res>
+    implements _$MediaIconCopyWith<$Res> {
+  __$MediaIconCopyWithImpl(_MediaIcon _value, $Res Function(_MediaIcon) _then)
+      : super(_value, (v) => _then(v as _MediaIcon));
+
+  @override
+  _MediaIcon get _value => super._value as _MediaIcon;
+
+  @override
+  $Res call({
+    Object? dominantColor = freezed,
+    Object? artId = freezed,
+    Object? artUrl = freezed,
+  }) {
+    return _then(_MediaIcon(
+      dominantColor: dominantColor == freezed
+          ? _value.dominantColor
+          : dominantColor // ignore: cast_nullable_to_non_nullable
+              as int?,
+      artId: artId == freezed
+          ? _value.artId
+          : artId // ignore: cast_nullable_to_non_nullable
+              as String,
+      artUrl: artUrl == freezed
+          ? _value.artUrl
+          : artUrl // ignore: cast_nullable_to_non_nullable
+              as Uri?,
+    ));
+  }
+}
+
+@JsonSerializable()
+
+/// @nodoc
+class _$_MediaIcon implements _MediaIcon {
+  const _$_MediaIcon(
+      {@JsonKey(name: 'dominantColor', fromJson: readOptionalColor, toJson: writeOptionalColor)
+          required this.dominantColor,
+      @JsonKey(name: 'artId')
+          required this.artId,
+      @JsonKey(name: 'artUrl', fromJson: readOptionalUri, toJson: writeOptionalUri)
+          required this.artUrl});
+
+  factory _$_MediaIcon.fromJson(Map<String, dynamic> json) =>
+      _$_$_MediaIconFromJson(json);
+
+  @override
+
+  /// The dominant color (0xAARRGGBB)
+  @JsonKey(
+      name: 'dominantColor',
+      fromJson: readOptionalColor,
+      toJson: writeOptionalColor)
+  final int? dominantColor;
+  @override
+  @JsonKey(name: 'artId')
+  final String artId;
+  @override
+  @JsonKey(name: 'artUrl', fromJson: readOptionalUri, toJson: writeOptionalUri)
+  final Uri? artUrl;
+
+  @override
+  String toString() {
+    return 'MediaIcon(dominantColor: $dominantColor, artId: $artId, artUrl: $artUrl)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _MediaIcon &&
+            (identical(other.dominantColor, dominantColor) ||
+                const DeepCollectionEquality()
+                    .equals(other.dominantColor, dominantColor)) &&
+            (identical(other.artId, artId) ||
+                const DeepCollectionEquality().equals(other.artId, artId)) &&
+            (identical(other.artUrl, artUrl) ||
+                const DeepCollectionEquality().equals(other.artUrl, artUrl)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(dominantColor) ^
+      const DeepCollectionEquality().hash(artId) ^
+      const DeepCollectionEquality().hash(artUrl);
+
+  @JsonKey(ignore: true)
+  @override
+  _$MediaIconCopyWith<_MediaIcon> get copyWith =>
+      __$MediaIconCopyWithImpl<_MediaIcon>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$_$_MediaIconToJson(this);
+  }
+}
+
+abstract class _MediaIcon implements MediaIcon {
+  const factory _MediaIcon(
+      {@JsonKey(name: 'dominantColor', fromJson: readOptionalColor, toJson: writeOptionalColor)
+          required int? dominantColor,
+      @JsonKey(name: 'artId')
+          required String artId,
+      @JsonKey(name: 'artUrl', fromJson: readOptionalUri, toJson: writeOptionalUri)
+          required Uri? artUrl}) = _$_MediaIcon;
+
+  factory _MediaIcon.fromJson(Map<String, dynamic> json) =
+      _$_MediaIcon.fromJson;
+
+  @override
+
+  /// The dominant color (0xAARRGGBB)
+  @JsonKey(
+      name: 'dominantColor',
+      fromJson: readOptionalColor,
+      toJson: writeOptionalColor)
+  int? get dominantColor => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: 'artId')
+  String get artId => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: 'artUrl', fromJson: readOptionalUri, toJson: writeOptionalUri)
+  Uri? get artUrl => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(ignore: true)
+  _$MediaIconCopyWith<_MediaIcon> get copyWith =>
+      throw _privateConstructorUsedError;
+}

@@ -1,0 +1,1 @@
+export 'data/partners.dart';

@@ -1,0 +1,36 @@
+name: iapetus
+description: A Pandora JSON API client.
+version: 0.1.0
+homepage: https://github.com/EpimetheusMusicPlayer/iapetus
+
+environment:
+  sdk: '>=2.12.0 <3.0.0'
+
+dependencies:
+  ## Language
+  meta: ^1.3.0
+  freezed_annotation: ^0.14.1
+
+  ## Data structures
+  collection: ^1.15.0
+
+  ## I/O
+  http: ^0.13.1
+
+  ## Encryption
+  blowfish_ecb: ^0.1.0
+
+  ## Identification
+  uuid: ^3.0.4
+  android_device_id_generator: ^0.1.1
+
+dev_dependencies:
+  ## Language
+  lint: ^1.5.3
+
+  ## Building
+  build_runner: ^1.12.2
+
+  ## Code generation
+  freezed: ^0.14.1+2
+  json_serializable: ^4.1.0

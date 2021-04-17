@@ -1,0 +1,49 @@
+//ignore_for_file: avoid_print
+
+import 'dart:io';
+
+import 'package:iapetus/iapetus.dart';
+
+Future<void> main(List<String> arguments) async {
+  // Read the email and password from arguments.
+  if (arguments.length != 2) {
+    stderr.writeln('Please provide an email address and password!');
+    exit(2);
+  }
+  final email = arguments[0];
+  final password = arguments[1];
+
+  // Create the [Iapetus] client, using in-memory storage.
+  // Real applications should implement persistent storage.
+  final storage = MemoryIapetusStorage();
+  final iapetus = Iapetus(fastStorage: storage, secureStorage: storage);
+
+  // Perform the authentication.
+  // As in-memory storage is in use, there's no point in registering the device.
+  await iapetus.partnerLogin();
+  await iapetus.userLogin(
+    email: email,
+    password: password,
+    registerDevice: false,
+  );
+
+  // Retrieve the station list.
+  final stationList = await iapetus.getStations();
+  final station = stationList.stations[0];
+
+  // Retrieve some station content.
+  final stationContentSet =
+      await iapetus.getStationContent(station, starting: false);
+  final stationContent =
+      stationContentSet.contentForUse(StationContentUse.standard)!;
+
+  // Print station and song info, and URLs.
+  print(station.stationName);
+  print(
+      '${stationContent.songName} by ${stationContent.artistName} (${stationContent.albumName})');
+  print('Album art: ${stationContent.albumArtUrl}');
+  print('Audio: ${stationContent.audioUrlMap[AudioUrlQuality.high]}');
+
+  // Close the client.
+  iapetus.close();
+}
