@@ -5,6 +5,10 @@ extension RegistrationApi on Iapetus {
   /// reauthentication.
   ///
   /// The created user is automatically signed in.
+  ///
+  /// If this is called when the client is already logged in, the old session
+  /// will be discarded without logging out (meaning the authentication token
+  /// and device ID will still be valid).
   Future<void> createUser({
     required String email,
     required String password,
@@ -14,7 +18,6 @@ extension RegistrationApi on Iapetus {
     required bool emailOptIn,
     bool registerDevice = true,
   }) async {
-    assert(!loggedIn);
     assert(gender != Gender.unknown, 'A gender must be specified for sign-up!');
     final Map<String, dynamic> response;
     try {

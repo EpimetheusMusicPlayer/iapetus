@@ -23,12 +23,15 @@ extension AuthenticationApi on Iapetus {
 
   /// Logs in to Pandora and optionally associates the device with the user for
   /// reauthentication.
+  ///
+  /// If this is called when the client is already logged in, the old session
+  /// will be discarded without logging out (meaning the authentication token
+  /// and device ID will still be valid).
   Future<void> userLogin({
     required String email,
     required String password,
     bool registerDevice = true,
   }) async {
-    assert(!loggedIn);
     final Map<String, dynamic> response;
     try {
       response = await makeApiRequest(
@@ -58,8 +61,10 @@ extension AuthenticationApi on Iapetus {
   Future<bool> canLoginUserFromStorage() async =>
       await secureStorage.getDeviceRegistered() ?? false;
 
+  /// If this is called when the client is already logged in, the old session
+  /// will be discarded without logging out (meaning the authentication token
+  /// will still be valid).
   Future<void> userLoginFromStorage() async {
-    assert(!loggedIn);
     final Map<String, dynamic> response;
     try {
       assert(await canLoginUserFromStorage(),
