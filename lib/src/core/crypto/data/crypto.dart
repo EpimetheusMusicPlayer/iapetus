@@ -6,24 +6,26 @@ import 'package:iapetus/src/core/crypto/data/hex.dart';
 import 'package:iapetus/src/core/crypto/data/pkcs5.dart';
 import 'package:iapetus/src/core/partners/data/partners.dart';
 
-late final _requestEncrypter = buildEncrypter(partner.requestEncryptKey);
+late final _requestEncrypter = buildPandoraEncrypter(partner.requestEncryptKey);
 
-late final _requestDecrypter = buildDecrypter(partner.requestEncryptKey);
+late final _requestDecrypter = buildPandoraDecrypter(partner.requestEncryptKey);
 
-late final _responseEncrypter = buildEncrypter(partner.responseEncryptKey);
+late final _responseEncrypter =
+    buildPandoraEncrypter(partner.responseEncryptKey);
 
-late final _responseDecrypter = buildDecrypter(partner.responseEncryptKey);
+late final _responseDecrypter =
+    buildPandoraDecrypter(partner.responseEncryptKey);
 
 /// Builds a request/response encrypter using the given [key].
-Converter<List<int>, String> buildEncrypter(String key) =>
+Converter<List<int>, String> buildPandoraEncrypter(String key) =>
     BlowfishECB(Uint8List.fromList(utf8.encode(key)))
         .encoder
         .fuse(const HexEncoder());
 
 /// Builds a request/response decrypter using the given [key].
-Converter<String, Uint8List> buildDecrypter(String key) => const HexDecoder()
-    .cast<String, List<int>>()
-    .fuse<Uint8List>(BlowfishECB(Uint8List.fromList(utf8.encode(key))).decoder);
+Converter<String, Uint8List> buildPandoraDecrypter(String key) =>
+    const HexDecoder().cast<String, List<int>>().fuse<Uint8List>(
+        BlowfishECB(Uint8List.fromList(utf8.encode(key))).decoder);
 
 /// Encrypts a request using the default partner encrypter.
 String pandoraEncryptRequest(String data) =>
