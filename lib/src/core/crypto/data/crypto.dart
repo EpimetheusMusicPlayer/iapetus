@@ -6,42 +6,50 @@ import 'package:iapetus/src/core/crypto/data/hex.dart';
 import 'package:iapetus/src/core/crypto/data/pkcs5.dart';
 import 'package:iapetus/src/core/partners/data/partners.dart';
 
-late final _requestEncrypter = _buildEncrypter(partner.requestEncryptKey);
+late final _requestEncrypter = buildEncrypter(partner.requestEncryptKey);
 
-late final _requestDecrypter = _buildDecrypter(partner.requestEncryptKey);
+late final _requestDecrypter = buildDecrypter(partner.requestEncryptKey);
 
-late final _responseEncrypter = _buildEncrypter(partner.responseEncryptKey);
+late final _responseEncrypter = buildEncrypter(partner.responseEncryptKey);
 
-late final _responseDecrypter = _buildDecrypter(partner.responseEncryptKey);
+late final _responseDecrypter = buildDecrypter(partner.responseEncryptKey);
 
-Converter<List<int>, String> _buildEncrypter(String key) =>
+/// Builds a request/response encrypter using the given [key].
+Converter<List<int>, String> buildEncrypter(String key) =>
     BlowfishECB(Uint8List.fromList(utf8.encode(key)))
         .encoder
         .fuse(const HexEncoder());
 
-Converter<String, Uint8List> _buildDecrypter(String key) => const HexDecoder()
+/// Builds a request/response decrypter using the given [key].
+Converter<String, Uint8List> buildDecrypter(String key) => const HexDecoder()
     .cast<String, List<int>>()
     .fuse<Uint8List>(BlowfishECB(Uint8List.fromList(utf8.encode(key))).decoder);
 
+/// Encrypts a request using the default partner encrypter.
 String pandoraEncryptRequest(String data) =>
-    _pandoraEncrypt(data, _requestEncrypter);
+    pandoraEncrypt(data, _requestEncrypter);
 
+/// Decrypts a request using the default partner encrypter.
 String pandoraDecryptRequest(String data) =>
-    _pandoraDecrypt(data, _requestDecrypter);
+    pandoraDecrypt(data, _requestDecrypter);
 
+/// Encrypts a response using the default partner encrypter.
 String pandoraEncryptResponse(String data) =>
-    _pandoraEncrypt(data, _responseEncrypter);
+    pandoraEncrypt(data, _responseEncrypter);
 
+/// Decrypts a response using the default partner encrypter.
 String pandoraDecryptResponse(String data, [int drop = 0]) =>
-    _pandoraDecrypt(data, _responseDecrypter, drop);
+    pandoraDecrypt(data, _responseDecrypter, drop);
 
-String _pandoraEncrypt(
+/// Encrypts a request/response with the given [encrypter].
+String pandoraEncrypt(
   String data,
   Converter<List<int>, String> encrypter,
 ) =>
     encrypter.convert(padPKCS5(utf8.encode(data)));
 
-String _pandoraDecrypt(
+/// Decrypts a request/response with the given [decrypter].
+String pandoraDecrypt(
   String data,
   Converter<String, Uint8List> decrypter, [
   int drop = 0,
