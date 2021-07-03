@@ -1,0 +1,9 @@
+{
+  "includeTrending": true,
+  "includeHostedPlaylists": true,
+  "clientTimezone": "AEST",
+  "includeNewMusicModule": true,
+  "includePodcasts": true,
+  "checksum": "6ccc4b3eb30b7547610047b2574ba23b",
+  "numOfStations": 4
+}

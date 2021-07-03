@@ -1,0 +1,104 @@
+{
+  "result": {
+    "AR:5828869": {
+      "name": "Nio García, J Balvin & Bad Bunny",
+      "sortableName": "Nio García, J Balvin & Bad Bunny",
+      "trackCount": 1,
+      "albumCount": 1,
+      "icon": {
+        "dominantColor": "f03f51",
+        "artId": "images/e3/e6/e8/7c/fb594b9dbb81e5d2a731f63e/",
+        "artUrl": "images/e3/e6/e8/7c/fb594b9dbb81e5d2a731f63e/_500W_500H.jpg"
+      },
+      "shareableUrlPath": "/artist/nio-garcia-j-balvin-and-bad-bunny/ARcfrdhVfvjJcgJ",
+      "hasRadio": true,
+      "modificationTime": 1625269576523,
+      "stationFactoryId": "SF:16722:5828869",
+      "slugPlusPandoraId": "/nio-garcia-j-balvin-and-bad-bunny/AR:5828869",
+      "collaboration": true,
+      "primaryArtists": [
+        "AR:679187",
+        "AR:370739",
+        "AR:730842"
+      ],
+      "variousArtist": false,
+      "megastar": false,
+      "hasTakeoverModes": false,
+      "pandoraId": "AR:5828869",
+      "type": "AR",
+      "scope": "core"
+    },
+    "AL:9786368": {
+      "name": "AM Remix (Single) (Explicit)",
+      "sortableName": "AM Remix (Single) (Explicit)",
+      "releaseDate": "2021-06-24T00:00:00.000-07:00",
+      "duration": 261,
+      "trackCount": 1,
+      "isCompilation": false,
+      "icon": {
+        "dominantColor": "f03f51",
+        "artId": "images/e3/e6/e8/7c/fb594b9dbb81e5d2a731f63e/",
+        "artUrl": "images/e3/e6/e8/7c/fb594b9dbb81e5d2a731f63e/_500W_500H.jpg"
+      },
+      "rightsInfo": {
+        "hasInteractive": true,
+        "hasOffline": false,
+        "hasNonInteractive": true,
+        "hasStatutory": true,
+        "hasRadioRights": true,
+        "expirationTime": 1625329147814
+      },
+      "tracks": [
+        "TR:46326224"
+      ],
+      "artistId": "AR:5828869",
+      "artistName": "Nio García, J Balvin & Bad Bunny",
+      "explicitness": "EXPLICIT",
+      "shareableUrlPath": "/artist/nio-garcia-j-balvin-and-bad-bunny/am-remix-single-explicit/ALKmt3tkXqVbc4w",
+      "modificationTime": 1624965782143,
+      "slugPlusPandoraId": "/nio-garcia-j-balvin-and-bad-bunny/am-remix-single-explicit/AL:9786368",
+      "hasRadio": true,
+      "releaseType": "Single",
+      "listenerReleaseType": "Single",
+      "rawReleaseDate": "2021-06-24T00:00:00.000-07:00",
+      "originalReleaseDate": "2021-06-24T00:00:00.000-07:00",
+      "pandoraId": "AL:9786368",
+      "type": "AL",
+      "scope": "core"
+    },
+    "TR:46326224": {
+      "name": "AM Remix",
+      "sortableName": "AM Remix",
+      "duration": 261,
+      "trackNumber": 1,
+      "icon": {
+        "dominantColor": "f03f51",
+        "artId": "images/e3/e6/e8/7c/fb594b9dbb81e5d2a731f63e/",
+        "artUrl": "images/e3/e6/e8/7c/fb594b9dbb81e5d2a731f63e/_500W_500H.jpg"
+      },
+      "rightsInfo": {
+        "hasInteractive": true,
+        "hasOffline": false,
+        "hasNonInteractive": true,
+        "hasStatutory": true,
+        "hasRadioRights": true,
+        "expirationTime": 1625329147814
+      },
+      "albumId": "AL:9786368",
+      "albumName": "AM Remix (Single) (Explicit)",
+      "artistId": "AR:5828869",
+      "artistName": "Nio García, J Balvin & Bad Bunny",
+      "explicitness": "EXPLICIT",
+      "shareableUrlPath": "/artist/nio-garcia-j-balvin-and-bad-bunny/am-remix-single-explicit/am-remix/TRmrt9Jrncf66vV",
+      "hasRadio": true,
+      "modificationTime": 1625043596796,
+      "slugPlusPandoraId": "/nio-garcia-j-balvin-and-bad-bunny/am-remix-single-explicit/am-remix/TR:46326224",
+      "stationFactoryId": "SF:21586:46326224",
+      "isrc": "QMBZ92185047",
+      "pandoraId": "TR:46326224",
+      "type": "TR",
+      "scope": "core"
+    }
+  },
+  "stat": "ok"
+}

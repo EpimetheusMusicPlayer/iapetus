@@ -1,0 +1,83 @@
+{
+  "stat": "ok",
+  "result": {
+    "artists": [
+      {
+        "artistName": "Ava Max",
+        "score": "",
+        "likelyMatch": false,
+        "artUrl": "http://mediaserver-cont-usc-mp1-2-v4v6.pandora.com/images/4b/82/a8/a7/2e2b44f293299909b58e2154/1080W_1080H.jpg",
+        "musicToken": "reR1178749",
+        "pandoraId": "AR:1178749",
+        "explanation": "Camila Cabello, Clean Bandit, Halsey, Dua Lipa, Bebe Rexha",
+        "pandoraType": "AR"
+      },
+      {
+        "artistName": "Carys",
+        "score": "",
+        "likelyMatch": false,
+        "artUrl": "http://mediaserver-cont-usc-mp1-1-v4v6.pandora.com/images/84/64/92/e2/e9f743ba92e3d2f700c13bf1/1080W_1080H.jpg",
+        "musicToken": "reR1646270",
+        "pandoraId": "AR:1646270",
+        "explanation": "Camila Cabello, Sabrina Carpenter, Alec Benjamin, Halsey, Ava Max",
+        "pandoraType": "AR"
+      },
+      {
+        "artistName": "Dixie",
+        "score": "",
+        "likelyMatch": false,
+        "artUrl": "http://cont-1.p-cdn.us/images/af/bd/3b/9f/30c34d59a8cb3e0441109b52/1080W_1080H.jpg",
+        "musicToken": "reR3611898",
+        "pandoraId": "AR:3611898",
+        "explanation": "Why Don't We, Jawsh 685 & Jason Derulo, Tate McRae, Dua Lipa, Olivia Rodrigo",
+        "pandoraType": "AR"
+      },
+      {
+        "artistName": "Camila Cabello",
+        "score": "",
+        "likelyMatch": false,
+        "artUrl": "http://mediaserver-cont-sv5-2-v4v6.pandora.com/images/71/e7/27/c6/319a4c2d8874b46b5022c53d/1080W_1080H.jpg",
+        "musicToken": "reR1040994",
+        "pandoraId": "AR:1040994",
+        "explanation": "Dua Lipa, Camila Cabello & Daddy Yankee, Ariana Grande, Halsey, Shawn Mendes & Camila Cabello",
+        "pandoraType": "AR"
+      },
+      {
+        "artistName": "Zara Larsson",
+        "score": "",
+        "likelyMatch": false,
+        "artUrl": "http://mediaserver-cont-usc-mp1-2-v4v6.pandora.com/images/c5/03/1c/ed/6642492699af39d385c30010/1080W_1080H.jpg",
+        "musicToken": "reR476200",
+        "pandoraId": "AR:476200",
+        "explanation": "Tate McRae, Demi Lovato, Halsey, Clean Bandit, Zara Larsson & MNEK",
+        "pandoraType": "AR"
+      },
+      {
+        "artistName": "Savage Love",
+        "score": "",
+        "likelyMatch": false,
+        "musicToken": "reR3789075",
+        "pandoraId": "AR:3789075",
+        "explanation": "Tones And I, Marshmello & Bastille, Imagine Dragons, Metrixx, Jawsh 685 & Jason Derulo",
+        "pandoraType": "AR"
+      }
+    ],
+    "extraArtists": [],
+    "genreStations": [
+      {
+        "musicToken": "reG3",
+        "explanation": "Chris Young, Riley Green, Luke Bryan, Blake Shelton",
+        "artUrl": "http://cont-3.p-cdn.us/images/26/91/47/75/7cb14b3baa7f7e13ccaa5e8f/1080W_1080H.jpg",
+        "stationName": "Today's Country",
+        "score": 100
+      },
+      {
+        "musicToken": "reG10099",
+        "explanation": "Meghan Trainor, Maroon 5, The Temptations, Redbone, Rihanna",
+        "stationName": "Happy",
+        "score": ""
+      }
+    ],
+    "extraGenreStations": []
+  }
+}

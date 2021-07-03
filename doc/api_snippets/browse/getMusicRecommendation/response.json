@@ -1,0 +1,511 @@
+{
+  "result": {
+    "ttl": 3600,
+    "hasSample": false,
+    "modules": [
+      {
+        "hasCategories": false,
+        "hasViewAll": true,
+        "invalidateCatalogWhenUpdated": false,
+        "useBrowseNewMusicAPI": true,
+        "hasPodcasts": false,
+        "layoutSize": 4,
+        "moduleId": 8,
+        "layout": "tile",
+        "categoryLayout": "tile",
+        "itemsLayout": "tile",
+        "title": "New Music",
+        "sources": [
+          {
+            "name": "Top Shelf Rap and R&B",
+            "musicToken": "ff40458c41975135",
+            "seedId": "10039",
+            "musicId": "G10039",
+            "pandoraId": "GE:10039",
+            "pandoraType": "GE",
+            "artUrl": "https://content-images.p-cdn.com/images/66/d1/cc/2b/08f54dd3a6f718b5083c61a8/_500W_500H.jpg",
+            "numOfTracks": 0,
+            "listenerCount": 6401874
+          },
+          {
+            "name": "Today's Indie",
+            "musicToken": "1f7c95c2005fedd6",
+            "seedId": "579",
+            "musicId": "G579",
+            "pandoraId": "GE:579",
+            "pandoraType": "GE",
+            "artUrl": "https://content-images.p-cdn.com/images/02/02/11/5a/931145aea3eff72774ae6819/_500W_500H.jpg",
+            "numOfTracks": 0,
+            "listenerCount": 1530205
+          }
+        ]
+      },
+      {
+        "hasCategories": false,
+        "hasViewAll": true,
+        "invalidateCatalogWhenUpdated": false,
+        "hasPodcasts": false,
+        "layoutSize": 4,
+        "moduleId": 14,
+        "layout": "tile",
+        "categoryLayout": "list",
+        "itemsLayout": "list",
+        "title": "Top Stations",
+        "sources": [
+          {
+            "name": "Today's Hits",
+            "musicId": "G5",
+            "pandoraId": "GE:5",
+            "pandoraType": "GE",
+            "artUrl": "https://content-images.p-cdn.com/images/32/77/68/49/cd474e83ac95c7708533569f/_500W_500H.jpg",
+            "listenerCount": 120999070,
+            "topLevelLine1": "#1 This Week"
+          },
+          {
+            "name": "Today's Country",
+            "musicId": "G3",
+            "pandoraId": "GE:3",
+            "pandoraType": "GE",
+            "artUrl": "https://content-images.p-cdn.com/images/26/91/47/75/7cb14b3baa7f7e13ccaa5e8f/_500W_500H.jpg",
+            "listenerCount": 72509375,
+            "topLevelLine1": "#2 This Week"
+          },
+          {
+            "name": "Classic Rock",
+            "musicId": "G32",
+            "pandoraId": "GE:32",
+            "pandoraType": "GE",
+            "artUrl": "https://content-images.p-cdn.com/images/3d/a3/a7/c8/419e4f9c9131a5544800af50/_500W_500H.jpg",
+            "listenerCount": 38878650,
+            "topLevelLine1": "#3 This Week"
+          },
+          {
+            "name": "60s, 70s, and 80s Hits",
+            "musicId": "G31",
+            "pandoraId": "GE:31",
+            "pandoraType": "GE",
+            "artUrl": "https://content-images.p-cdn.com/images/01/40/b7/f1/e54c4a83921cc56004bf3405/_500W_500H.jpg",
+            "listenerCount": 27910006,
+            "topLevelLine1": "#4 This Week"
+          }
+        ]
+      },
+      {
+        "hasCategories": false,
+        "hasViewAll": true,
+        "invalidateCatalogWhenUpdated": true,
+        "hasPodcasts": false,
+        "layoutSize": 4,
+        "moduleId": 3,
+        "layout": "tile",
+        "categoryLayout": "list",
+        "itemsLayout": "tile",
+        "title": "Recommended Artists",
+        "stations": [
+          {
+            "name": "Carys",
+            "musicToken": "6c251efb28d671d6425ba2910f7abf8b",
+            "seedId": "1646270",
+            "musicId": "R1646270",
+            "pandoraId": "AR:1646270",
+            "pandoraType": "AR",
+            "listenerCount": 259200,
+            "artUrl": "https://content-images.p-cdn.com/images/84/64/92/e2/e9f743ba92e3d2f700c13bf1/_500W_500H.jpg",
+            "artistArtUrl": "https://content-images.p-cdn.com/images/84/64/92/e2/e9f743ba92e3d2f700c13bf1/_500W_500H.jpg",
+            "artUrlComposite": "https://content-images.p-cdn.com/images/84/64/92/e2/e9f743ba92e3d2f700c13bf1/_500W_500H.jpg"
+          },
+          {
+            "name": "Aviva (Toronto)",
+            "musicToken": "cdf6865a95df757e425ba2910f7abf8b",
+            "seedId": "1948606",
+            "musicId": "R1948606",
+            "pandoraId": "AR:1948606",
+            "pandoraType": "AR",
+            "listenerCount": 597,
+            "artUrl": "https://content-images.p-cdn.com/images/public/int/7/6/0/3/859735303067_500W_500H.jpg",
+            "artistArtUrl": "https://content-images.p-cdn.com/images/public/int/7/6/0/3/859735303067_500W_500H.jpg",
+            "artUrlComposite": "https://content-images.p-cdn.com/images/public/int/7/6/0/3/859735303067_500W_500H.jpg"
+          },
+          {
+            "name": "Anne-Marie",
+            "description": "Essex, England-born Anne-Marie Nicholson was no stranger to performing by the time her debut EP dropped in 2015, having shared the stage as a 12-year-old with none other than Jessie J in a West End production of Whistle Down the Wind. She also auditi",
+            "musicToken": "86cd4916da3913d4",
+            "seedId": "639420",
+            "musicId": "R639420",
+            "pandoraId": "AR:639420",
+            "pandoraType": "AR",
+            "listenerCount": 388904,
+            "artUrl": "https://content-images.p-cdn.com/images/public/int/2/6/2/7/190295567262_500W_500H.jpg",
+            "artistArtUrl": "https://content-images.p-cdn.com/images/public/int/2/6/2/7/190295567262_500W_500H.jpg",
+            "artUrlComposite": "https://content-images.p-cdn.com/images/public/int/2/6/2/7/190295567262_500W_500H.jpg"
+          },
+          {
+            "name": "Dixie",
+            "musicToken": "b4ff7c5d256920da425ba2910f7abf8b",
+            "seedId": "3611898",
+            "musicId": "R3611898",
+            "pandoraId": "AR:3611898",
+            "pandoraType": "AR",
+            "listenerCount": 141828,
+            "artUrl": "https://content-images.p-cdn.com/images/3c/eb/b8/6d/2c5b4f58961899851165b123/_500W_500H.jpg",
+            "artistArtUrl": "https://content-images.p-cdn.com/images/3c/eb/b8/6d/2c5b4f58961899851165b123/_500W_500H.jpg",
+            "artUrlComposite": "https://content-images.p-cdn.com/images/3c/eb/b8/6d/2c5b4f58961899851165b123/_500W_500H.jpg"
+          }
+        ]
+      },
+      {
+        "hasCategories": true,
+        "hasViewAll": true,
+        "invalidateCatalogWhenUpdated": false,
+        "hasPodcasts": false,
+        "layoutSize": 4,
+        "moduleId": 7,
+        "layout": "tile",
+        "categoryLayout": "tile",
+        "itemsLayout": "tile",
+        "title": "Moods and Activities",
+        "categories": [
+          {
+            "stationCount": 45,
+            "categoryId": "BA1",
+            "artUrl": "https://www.pandora.com/img/browse_activities/BA1.jpg",
+            "title": "Workout"
+          },
+          {
+            "stationCount": 57,
+            "categoryId": "BA19",
+            "artUrl": "https://www.pandora.com/img/browse_activities/BA19.jpg",
+            "title": "Summer"
+          },
+          {
+            "stationCount": 15,
+            "categoryId": "BA45",
+            "artUrl": "https://www.pandora.com/img/browse_activities/BA45.jpg",
+            "title": "Gaming"
+          },
+          {
+            "stationCount": 28,
+            "categoryId": "BA9",
+            "artUrl": "https://www.pandora.com/img/browse_activities/BA9.jpg",
+            "title": "Cleaning"
+          }
+        ]
+      },
+      {
+        "hasCategories": false,
+        "hasViewAll": false,
+        "invalidateCatalogWhenUpdated": false,
+        "hasPodcasts": false,
+        "layoutSize": 3,
+        "moduleId": 1,
+        "layout": "carousel",
+        "categoryLayout": "list",
+        "itemsLayout": "carousel",
+        "title": "Featured",
+        "stations": [
+          {
+            "name": "Camila Cabello",
+            "explanation": "Because you've been listening to Demi Lovato",
+            "seedId": "1040994",
+            "musicId": "R1040994",
+            "pandoraId": "AR:1040994",
+            "pandoraType": "AR",
+            "artUrl": "https://content-images.p-cdn.com/images/53/13/f7/cd/1db449f9a08296739f93f9dd/_500W_500H.jpg",
+            "artistArtUrl": "https://content-images.p-cdn.com/images/53/13/f7/cd/1db449f9a08296739f93f9dd/_500W_500H.jpg"
+          },
+          {
+            "name": "Bebe Rexha",
+            "explanation": "Because you've been listening to Kesha",
+            "seedId": "438999",
+            "musicId": "R438999",
+            "pandoraId": "AR:438999",
+            "pandoraType": "AR",
+            "artUrl": "https://content-images.p-cdn.com/images/08/61/70/d5/92c64166a229b478a681ce96/_500W_500H.jpg",
+            "artistArtUrl": "https://content-images.p-cdn.com/images/08/61/70/d5/92c64166a229b478a681ce96/_500W_500H.jpg"
+          },
+          {
+            "name": "Fifth Harmony",
+            "explanation": "Because you've been listening to Teen Pop",
+            "seedId": "401917",
+            "musicId": "R401917",
+            "pandoraId": "AR:401917",
+            "pandoraType": "AR",
+            "artUrl": "https://content-images.p-cdn.com/images/25/59/3d/1f/cfc440a4bd9ed99403f10079/_500W_500H.jpg",
+            "artistArtUrl": "https://content-images.p-cdn.com/images/25/59/3d/1f/cfc440a4bd9ed99403f10079/_500W_500H.jpg"
+          }
+        ]
+      },
+      {
+        "hasCategories": true,
+        "hasViewAll": true,
+        "invalidateCatalogWhenUpdated": false,
+        "hasPodcasts": false,
+        "layoutSize": 4,
+        "moduleId": 6,
+        "layout": "tile",
+        "categoryLayout": "list",
+        "itemsLayout": "tile",
+        "title": "Decades",
+        "stations": [
+          {
+            "name": "This Year in Alternative",
+            "description": "This Year in Alternative is where you'll hear your favorite tracks from the year along with the latest new music discoveries. Listen here for what's new, now, and next in alt rock.",
+            "musicToken": "0dc40614591dc130",
+            "seedId": "1640",
+            "musicId": "G1640",
+            "pandoraId": "GE:1640",
+            "pandoraType": "GE",
+            "listenerCount": 64604,
+            "artUrl": "https://content-images.p-cdn.com/images/54/a0/64/c3/3403446687b411159c365765/_500W_500H.jpg",
+            "artUrlComposite": "https://content-images.p-cdn.com/images/54/a0/64/c3/3403446687b411159c365765/_500W_500H.jpg"
+          },
+          {
+            "name": "80s Pop",
+            "description": "80s Pop recalls those household hits and favorite album tracks of Reagan-era radio. Check it out - you can, like, totally sing along with your favorite '80s songs!",
+            "musicToken": "9297960cdab0342c",
+            "seedId": "519",
+            "musicId": "G519",
+            "pandoraId": "GE:519",
+            "pandoraType": "GE",
+            "listenerCount": 25722863,
+            "artUrl": "https://content-images.p-cdn.com/images/39/e5/6c/c5/45214c3894f5a6b8bbba51db/_500W_500H.jpg",
+            "artUrlComposite": "https://content-images.p-cdn.com/images/39/e5/6c/c5/45214c3894f5a6b8bbba51db/_500W_500H.jpg"
+          },
+          {
+            "name": "2000s Alternative",
+            "description": "2000s Alternative plays the good, the bad, and the forgotten one-hit-wonders of alt rock from the start of the millennium. On one hand, the 2000s introduced us to artists like The Killers, Muse, The White Stripes, and System of a Down. On the other hand, it was also the decade of Nickleback, Limp Bizkit, and Crazytown. Tune in to hear it all!",
+            "musicToken": "9907532726630a7d",
+            "seedId": "1391",
+            "musicId": "G1391",
+            "pandoraId": "GE:1391",
+            "pandoraType": "GE",
+            "listenerCount": 887520,
+            "artUrl": "https://content-images.p-cdn.com/images/fd/61/ce/e3/51914f4ca277f76e2f440166/_500W_500H.jpg",
+            "artUrlComposite": "https://content-images.p-cdn.com/images/fd/61/ce/e3/51914f4ca277f76e2f440166/_500W_500H.jpg"
+          },
+          {
+            "name": "2010s Rock",
+            "description": "2010s Rock celebrates the dawn of the 21st century with the most popular rock songs of the millennium's second decade.",
+            "musicToken": "71275bd1e9962e23",
+            "seedId": "1665",
+            "musicId": "G1665",
+            "pandoraId": "GE:1665",
+            "pandoraType": "GE",
+            "listenerCount": 102005,
+            "artUrl": "https://content-images.p-cdn.com/images/public/int/9/0/5/2/886444622509_500W_500H.jpg",
+            "artUrlComposite": "https://content-images.p-cdn.com/images/public/int/9/0/5/2/886444622509_500W_500H.jpg"
+          }
+        ]
+      },
+      {
+        "hasCategories": true,
+        "hasViewAll": true,
+        "invalidateCatalogWhenUpdated": false,
+        "hasPodcasts": false,
+        "layoutSize": 4,
+        "moduleId": 2,
+        "layout": "tile",
+        "categoryLayout": "list",
+        "itemsLayout": "tile",
+        "title": "Browse Genres",
+        "stations": [
+          {
+            "name": "Backroads",
+            "description": "Backroads is a journey through the hottest songs in country music, with a nod to traditional country instrumentation. Crank it up and hear your favorite artists of today and tomorrow.",
+            "musicToken": "b349bda9d18225de",
+            "seedId": "1592",
+            "musicId": "G1592",
+            "pandoraId": "GE:1592",
+            "pandoraType": "GE",
+            "listenerCount": 2957305,
+            "artUrl": "https://content-images.p-cdn.com/images/a9/74/2e/30/078c4eeaa1a2ccf1d840b67d/_500W_500H.jpg",
+            "artUrlComposite": "https://content-images.p-cdn.com/images/a9/74/2e/30/078c4eeaa1a2ccf1d840b67d/_500W_500H.jpg"
+          },
+          {
+            "name": "Hard Rock Strength Training",
+            "description": "Hard Rock Strength Training kicks out an epic fitness soundtrack! You'll hear nothing but today's hardest rockin' bands with some essential classic metal to keep you pumped for lifting, strength training and intense workouts.",
+            "musicToken": "d106fcba0d6198df",
+            "seedId": "696",
+            "musicId": "G696",
+            "pandoraId": "GE:696",
+            "pandoraType": "GE",
+            "listenerCount": 4414914,
+            "artUrl": "https://content-images.p-cdn.com/images/26/c0/7a/61/e8be4ec088d5db66063cd372/_500W_500H.jpg",
+            "artUrlComposite": "https://content-images.p-cdn.com/images/26/c0/7a/61/e8be4ec088d5db66063cd372/_500W_500H.jpg"
+          },
+          {
+            "name": "Rock n' Rise",
+            "description": "Rock n' Rise is the perfect station to get your day started on a the right note. Let these upbeat rock and alternative hits both old and new get you going!",
+            "musicToken": "c83367fe8fb61eb9",
+            "seedId": "10030",
+            "musicId": "G10030",
+            "pandoraId": "GE:10030",
+            "pandoraType": "GE",
+            "listenerCount": 47754,
+            "artUrl": "https://content-images.p-cdn.com/images/d5/cb/6d/e0/5c0e4c0aaca370adf25b2a76/_500W_500H.jpg",
+            "artUrlComposite": "https://content-images.p-cdn.com/images/d5/cb/6d/e0/5c0e4c0aaca370adf25b2a76/_500W_500H.jpg"
+          },
+          {
+            "name": "UNINTERRUPTED",
+            "description": "UNINTERRUPTED Radio features songs hand-picked by some of the top athletes in the world. Their music, their vibes, their channel.",
+            "musicToken": "88b84dd487652d4c",
+            "seedId": "10174",
+            "musicId": "G10174",
+            "pandoraId": "GE:10174",
+            "pandoraType": "GE",
+            "listenerCount": 2008977,
+            "artUrl": "https://content-images.p-cdn.com/images/27/c1/8e/5d/e99841dd99ba57f9e9354d4a/_500W_500H.jpg",
+            "artUrlComposite": "https://content-images.p-cdn.com/images/27/c1/8e/5d/e99841dd99ba57f9e9354d4a/_500W_500H.jpg"
+          }
+        ]
+      },
+      {
+        "hasCategories": false,
+        "hasViewAll": true,
+        "invalidateCatalogWhenUpdated": false,
+        "hasPodcasts": false,
+        "layoutSize": 4,
+        "moduleId": 15,
+        "layout": "tile",
+        "categoryLayout": "list",
+        "itemsLayout": "list",
+        "title": "Artists on the Rise",
+        "sources": [
+          {
+            "name": "Masked Wolf",
+            "musicId": "R1451284",
+            "pandoraId": "AR:1451284",
+            "pandoraType": "AR",
+            "artUrl": "https://content-images.p-cdn.com/images/ff/3f/b8/c5/9cc7446fbc73176834fd687c/_500W_500H.jpg",
+            "listenerCount": 0,
+            "topLevelLine1": "7.5K New Listeners"
+          },
+          {
+            "name": "J. Cole, 21 Savage & Morray",
+            "musicId": "R5586159",
+            "pandoraId": "AR:5586159",
+            "pandoraType": "AR",
+            "listenerCount": 0,
+            "topLevelLine1": "5.4K New Listeners"
+          },
+          {
+            "name": "Luis R. Conriquez",
+            "musicId": "R2684565",
+            "pandoraId": "AR:2684565",
+            "pandoraType": "AR",
+            "artUrl": "https://content-images.p-cdn.com/images/d9/1d/25/08/970741e8bdbb94a95579c899/_500W_500H.jpg",
+            "listenerCount": 0,
+            "topLevelLine1": "4.2K New Listeners"
+          },
+          {
+            "name": "EST Gee",
+            "musicId": "R3080334",
+            "pandoraId": "AR:3080334",
+            "pandoraType": "AR",
+            "artUrl": "https://content-images.p-cdn.com/images/03/c3/04/ff/fa8c4cae8a9b14ac74afe5fa/_500W_500H.jpg",
+            "listenerCount": 0,
+            "topLevelLine1": "3.3K New Listeners"
+          }
+        ]
+      },
+      {
+        "hasCategories": false,
+        "hasViewAll": true,
+        "invalidateCatalogWhenUpdated": false,
+        "hasPodcasts": false,
+        "layoutSize": 4,
+        "moduleId": 13,
+        "layout": "tile",
+        "categoryLayout": "list",
+        "itemsLayout": "list",
+        "title": "Top Artists",
+        "sources": [
+          {
+            "name": "Chris Stapleton",
+            "musicId": "R406242",
+            "pandoraId": "AR:406242",
+            "pandoraType": "AR",
+            "artUrl": "https://content-images.p-cdn.com/images/f3/ff/98/ee/ae5142b29ab36212f037b154/_500W_500H.jpg",
+            "listenerCount": 9598128,
+            "topLevelLine1": "#1 This Week"
+          },
+          {
+            "name": "Luke Combs",
+            "musicId": "R485976",
+            "pandoraId": "AR:485976",
+            "pandoraType": "AR",
+            "artUrl": "https://content-images.p-cdn.com/images/0d/1b/03/44/c5cc4444900a25faaf6a60e1/_500W_500H.jpg",
+            "listenerCount": 6619003,
+            "topLevelLine1": "#2 This Week"
+          },
+          {
+            "name": "Jason Aldean",
+            "musicId": "R168316",
+            "pandoraId": "AR:168316",
+            "pandoraType": "AR",
+            "artUrl": "https://content-images.p-cdn.com/images/d7/e9/63/21/a96647198b4a58a031b0e63b/_500W_500H.jpg",
+            "listenerCount": 21144763,
+            "topLevelLine1": "#3 This Week"
+          },
+          {
+            "name": "Drake",
+            "musicId": "R306247",
+            "pandoraId": "AR:306247",
+            "pandoraType": "AR",
+            "artUrl": "https://content-images.p-cdn.com/images/c8/6e/40/95/71c04a0c9d437a5335335cc9/_500W_500H.jpg",
+            "listenerCount": 83809983,
+            "topLevelLine1": "#4 This Week"
+          }
+        ]
+      },
+      {
+        "hasCategories": false,
+        "hasViewAll": true,
+        "invalidateCatalogWhenUpdated": true,
+        "hasPodcasts": true,
+        "layoutSize": 4,
+        "moduleId": 16,
+        "layout": "tile",
+        "categoryLayout": "tile",
+        "itemsLayout": "tile",
+        "title": "Recommended Podcasts",
+        "sources": [
+          {
+            "name": "MrCreepyPasta's Storytime",
+            "pandoraId": "PC:9764",
+            "pandoraType": "PC",
+            "artUrl": "https://content-images.p-cdn.com/images/84/79/ed/5f/3015417ba1df92081babfce3/_500W_500H.jpg",
+            "topLevelLine1": "MrCreepyPasta",
+            "topLevelLine2": "Podcast - 705 Episodes"
+          },
+          {
+            "name": "Your Brain on Facts",
+            "pandoraId": "PC:10362",
+            "pandoraType": "PC",
+            "artUrl": "https://content-images.p-cdn.com/images/61/12/d9/32/3bf848658d7072d330278ab6/_500W_500H.jpg",
+            "topLevelLine1": "Moxie LaBouche",
+            "topLevelLine2": "Podcast - 184 Episodes"
+          },
+          {
+            "name": "Crime Junkie",
+            "pandoraId": "PC:11024",
+            "pandoraType": "PC",
+            "artUrl": "https://content-images.p-cdn.com/images/09/26/f3/a9/6e0b4fbd977f3f864ad441b8/_500W_500H.jpg",
+            "topLevelLine1": "audiochuck",
+            "topLevelLine2": "Podcast - 200 Episodes"
+          },
+          {
+            "name": "Sleep and Relax ASMR",
+            "pandoraId": "PC:1371",
+            "pandoraType": "PC",
+            "artUrl": "https://content-images.p-cdn.com/images/82/cb/de/5e/28804eddba16394737c8a6d5/_500W_500H.jpg",
+            "topLevelLine1": "Sleep and Relax ASMR",
+            "topLevelLine2": "Podcast - 511 Episodes"
+          }
+        ]
+      }
+    ],
+    "checksum": "f5e3b96130be81a49fd628c1ddebb42b"
+  },
+  "stat": "ok"
+}
