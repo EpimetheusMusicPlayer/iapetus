@@ -121,9 +121,8 @@ class __$CreditsCopyWithImpl<$Res> extends _$CreditsCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Credits implements _Credits {
   const _$_Credits(
       {@JsonKey(name: 'creditsSnippet') required this.creditsSnippetHtml,

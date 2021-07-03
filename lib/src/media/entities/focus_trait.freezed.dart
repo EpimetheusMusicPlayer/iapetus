@@ -141,9 +141,8 @@ class __$FocusTraitCopyWithImpl<$Res> extends _$FocusTraitCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_FocusTrait implements _FocusTrait {
   const _$_FocusTrait(
       {@JsonKey(name: 'name') required this.name,

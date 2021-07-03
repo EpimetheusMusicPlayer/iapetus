@@ -142,9 +142,8 @@ class __$StationListCopyWithImpl<$Res> extends _$StationListCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_StationList implements _StationList {
   const _$_StationList(
       {@JsonKey(name: 'stations') required this.stations,

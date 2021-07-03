@@ -210,9 +210,8 @@ class __$RightsInfoCopyWithImpl<$Res> extends _$RightsInfoCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_RightsInfo implements _RightsInfo {
   const _$_RightsInfo(
       {@JsonKey(name: 'hasInteractive')

@@ -154,9 +154,8 @@ class __$TrackKeyCopyWithImpl<$Res> extends _$TrackKeyCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_TrackKey implements _TrackKey {
   const _$_TrackKey(
       {@JsonKey(name: 'trackId') required this.trackId,

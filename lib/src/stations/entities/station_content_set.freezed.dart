@@ -135,9 +135,8 @@ class __$StationContentSetCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_StationContentSet extends _StationContentSet {
   const _$_StationContentSet(
       {@JsonKey(name: 'content') required this.content,

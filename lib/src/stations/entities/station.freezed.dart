@@ -415,9 +415,8 @@ class __$StationCopyWithImpl<$Res> extends _$StationCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Station implements _Station {
   const _$_Station(
       {@JsonKey(name: 'suppressVideoAds')

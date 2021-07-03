@@ -233,9 +233,8 @@ class __$ArtistRecommendationCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ArtistRecommendation implements _ArtistRecommendation {
   const _$_ArtistRecommendation(
       {@JsonKey(name: 'artistName')

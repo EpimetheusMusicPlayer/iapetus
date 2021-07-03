@@ -198,9 +198,8 @@ class __$GenreStationRecommendationCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_GenreStationRecommendation implements _GenreStationRecommendation {
   const _$_GenreStationRecommendation(
       {@JsonKey(name: 'musicToken')

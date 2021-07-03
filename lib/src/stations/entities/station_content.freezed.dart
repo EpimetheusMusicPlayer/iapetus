@@ -1012,9 +1012,8 @@ class __$StationContentCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_StationContent extends _StationContent {
   const _$_StationContent(
       {@JsonKey(name: 'userSeed')

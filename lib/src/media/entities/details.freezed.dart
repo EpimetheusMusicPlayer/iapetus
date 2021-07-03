@@ -188,9 +188,8 @@ class _$TrackDetailsSetCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$TrackDetailsSet implements TrackDetailsSet {
   const _$TrackDetailsSet(
       {@JsonKey(name: 'annotations') required this.annotations,
@@ -366,9 +365,8 @@ class _$GenreDetailsSetCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$GenreDetailsSet implements GenreDetailsSet {
   const _$GenreDetailsSet(
       {@JsonKey(name: 'annotations') required this.annotations,
@@ -972,10 +970,9 @@ class _$TrackDetailsCopyWithImpl<$Res> extends _$MediaDetailsCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 @JsonSerializable()
 @Implements(Track)
-
-/// @nodoc
 class _$TrackDetails implements TrackDetails {
   const _$TrackDetails(
       {@JsonKey(name: 'trackTags')
@@ -1473,9 +1470,8 @@ class _$GenreDetailsCopyWithImpl<$Res> extends _$MediaDetailsCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$GenreDetails implements GenreDetails {
   const _$GenreDetails(
       {@JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)

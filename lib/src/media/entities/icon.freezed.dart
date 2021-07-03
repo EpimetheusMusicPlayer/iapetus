@@ -152,9 +152,8 @@ class __$MediaIconCopyWithImpl<$Res> extends _$MediaIconCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_MediaIcon implements _MediaIcon {
   const _$_MediaIcon(
       {@JsonKey(name: 'dominantColor', fromJson: readOptionalColor, toJson: writeOptionalColor)

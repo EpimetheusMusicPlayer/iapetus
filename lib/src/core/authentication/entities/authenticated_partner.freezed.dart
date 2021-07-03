@@ -210,9 +210,8 @@ class __$AuthenticatedPartnerCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_AuthenticatedPartner extends _AuthenticatedPartner {
   _$_AuthenticatedPartner(
       {@JsonKey(name: 'syncTime', fromJson: decryptSyncTime, toJson: encryptSyncTime)

@@ -136,9 +136,8 @@ class __$SearchRecommendationsCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_SearchRecommendations implements _SearchRecommendations {
   const _$_SearchRecommendations(
       {@JsonKey(name: 'artists') required this.artists,

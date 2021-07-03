@@ -906,9 +906,8 @@ class __$AuthenticatedUserCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_AuthenticatedUser implements _AuthenticatedUser {
   const _$_AuthenticatedUser(
       {@JsonKey(name: 'isMonthlyPayer')

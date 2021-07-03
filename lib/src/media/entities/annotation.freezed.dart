@@ -1015,11 +1015,10 @@ class _$TrackAnnotationCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 @JsonSerializable()
 @FreezedUnionValue('TR')
 @Implements(Track)
-
-/// @nodoc
 class _$TrackAnnotation implements TrackAnnotation {
   const _$TrackAnnotation(
       {@JsonKey(name: 'name')
@@ -1952,10 +1951,9 @@ class _$ArtistAnnotationCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 @JsonSerializable()
 @FreezedUnionValue('AR')
-
-/// @nodoc
 class _$ArtistAnnotation implements ArtistAnnotation {
   const _$ArtistAnnotation(
       {@JsonKey(name: 'name')
@@ -2896,10 +2894,9 @@ class _$AlbumAnnotationCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 @JsonSerializable()
 @FreezedUnionValue('AL')
-
-/// @nodoc
 class _$AlbumAnnotation implements AlbumAnnotation {
   const _$AlbumAnnotation(
       {@JsonKey(name: 'name')
@@ -3799,10 +3796,9 @@ class _$GenreAnnotationCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 @JsonSerializable()
 @FreezedUnionValue('GE')
-
-/// @nodoc
 class _$GenreAnnotation implements GenreAnnotation {
   const _$GenreAnnotation(
       {@JsonKey(name: 'name')
@@ -4575,10 +4571,9 @@ class _$ComposerAnnotationCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 @JsonSerializable()
 @FreezedUnionValue('CO')
-
-/// @nodoc
 class _$ComposerAnnotation implements ComposerAnnotation {
   const _$ComposerAnnotation(
       {@JsonKey(name: 'name')

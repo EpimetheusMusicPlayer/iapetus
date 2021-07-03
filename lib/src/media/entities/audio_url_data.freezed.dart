@@ -174,9 +174,8 @@ class __$AudioUrlDataCopyWithImpl<$Res> extends _$AudioUrlDataCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_AudioUrlData implements _AudioUrlData {
   const _$_AudioUrlData(
       {@JsonKey(name: 'audioToken') required this.audioToken,

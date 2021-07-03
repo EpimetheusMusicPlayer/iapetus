@@ -144,9 +144,8 @@ class __$IapetusMediaLyricDataCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_IapetusMediaLyricData implements _IapetusMediaLyricData {
   const _$_IapetusMediaLyricData(
       {@JsonKey(name: 'lyricId') required this.lyricId,
