@@ -26,6 +26,12 @@ DateTime readDateTimeMilliseconds(int milliseconds) =>
 int writeDateTimeMilliseconds(DateTime dateTime) =>
     dateTime.millisecondsSinceEpoch;
 
+DateTime? readOptionalDateTimeMilliseconds(int? milliseconds) =>
+    milliseconds == null ? null : readDateTimeMilliseconds(milliseconds);
+
+int? writeOptionalDateTimeMilliseconds(DateTime? dateTime) =>
+    dateTime == null ? null : writeOptionalDateTimeMilliseconds(dateTime);
+
 Duration readSeconds(int seconds) => Duration(seconds: seconds);
 
 int writeSeconds(Duration duration) => duration.inSeconds;
@@ -39,8 +45,9 @@ num readNum(String value) => num.parse(value);
 
 String writeNum(num value) => value.toString();
 
-int? readOptionalColor(String? color) =>
-    color == null ? null : int.parse(color, radix: 16) | 0xFF000000;
+int? readOptionalColor(String? color) => color == null || color.isEmpty
+    ? null
+    : int.parse(color, radix: 16) | 0xFF000000;
 
 String? writeOptionalColor(int? color) => color == null
     ? null
@@ -53,3 +60,9 @@ String writeOptionalUri(Uri? uri) => uri?.toString() ?? '';
 List<String> readEscapedLineBreakString(String value) => value.split(r'\n');
 
 String writeEscapedLineBreakString(List<String> value) => value.join(r'\n');
+
+// ignore: avoid_positional_boolean_parameters
+bool readNullableBool(bool? value) => value == true;
+
+// ignore: avoid_positional_boolean_parameters
+bool? writeNullableBool(bool value) => value ? true : null;

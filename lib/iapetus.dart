@@ -11,3 +11,5 @@ export 'src/iapetus.dart';
 export 'src/media/media.dart';
 export 'src/recommendations/recommendations.dart';
 export 'src/stations/stations.dart';
+export 'src/superbrowse/superbrowse.dart';
+export 'src/ui/ui.dart';

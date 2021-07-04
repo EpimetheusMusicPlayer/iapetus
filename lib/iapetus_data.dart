@@ -8,3 +8,5 @@ export 'src/core/partners/partners_data.dart';
 export 'src/media/media_data.dart';
 export 'src/recommendations/recommendations_data.dart';
 export 'src/stations/stations_data.dart';
+export 'src/superbrowse/superbrowse_data.dart';
+export 'src/ui/ui_data.dart';
