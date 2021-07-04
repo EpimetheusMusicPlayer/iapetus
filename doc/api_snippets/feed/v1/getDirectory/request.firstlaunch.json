@@ -1,0 +1,6 @@
+{
+  "capabilities": "canPlayAP,canPlayAT,backstageST,deeplinkAction,newBadge",
+  "feedType": "pls",
+  "directoryId": "",
+  "clientTimezone": "AEST"
+}
