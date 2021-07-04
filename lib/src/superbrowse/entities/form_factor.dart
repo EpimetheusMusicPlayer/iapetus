@@ -6,8 +6,8 @@ part 'form_factor.g.dart';
 @freezed
 class FormFactor with _$FormFactor {
   const factory FormFactor({
-    @JsonKey(name: 'numRows') required int? rowCount,
-    @JsonKey(name: 'numCols') required int columnCount,
+    @JsonKey(name: 'numRows') int? rowCount,
+    @JsonKey(name: 'numCols') int? columnCount,
     @JsonKey(name: 'fractionSize') double? fractionSize,
   }) = _FormFactor;
 

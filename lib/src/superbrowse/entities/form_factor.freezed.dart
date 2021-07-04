@@ -21,8 +21,8 @@ class _$FormFactorTearOff {
   const _$FormFactorTearOff();
 
   _FormFactor call(
-      {@JsonKey(name: 'numRows') required int? rowCount,
-      @JsonKey(name: 'numCols') required int columnCount,
+      {@JsonKey(name: 'numRows') int? rowCount,
+      @JsonKey(name: 'numCols') int? columnCount,
       @JsonKey(name: 'fractionSize') double? fractionSize}) {
     return _FormFactor(
       rowCount: rowCount,
@@ -44,7 +44,7 @@ mixin _$FormFactor {
   @JsonKey(name: 'numRows')
   int? get rowCount => throw _privateConstructorUsedError;
   @JsonKey(name: 'numCols')
-  int get columnCount => throw _privateConstructorUsedError;
+  int? get columnCount => throw _privateConstructorUsedError;
   @JsonKey(name: 'fractionSize')
   double? get fractionSize => throw _privateConstructorUsedError;
 
@@ -61,7 +61,7 @@ abstract class $FormFactorCopyWith<$Res> {
       _$FormFactorCopyWithImpl<$Res>;
   $Res call(
       {@JsonKey(name: 'numRows') int? rowCount,
-      @JsonKey(name: 'numCols') int columnCount,
+      @JsonKey(name: 'numCols') int? columnCount,
       @JsonKey(name: 'fractionSize') double? fractionSize});
 }
 
@@ -87,7 +87,7 @@ class _$FormFactorCopyWithImpl<$Res> implements $FormFactorCopyWith<$Res> {
       columnCount: columnCount == freezed
           ? _value.columnCount
           : columnCount // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       fractionSize: fractionSize == freezed
           ? _value.fractionSize
           : fractionSize // ignore: cast_nullable_to_non_nullable
@@ -104,7 +104,7 @@ abstract class _$FormFactorCopyWith<$Res> implements $FormFactorCopyWith<$Res> {
   @override
   $Res call(
       {@JsonKey(name: 'numRows') int? rowCount,
-      @JsonKey(name: 'numCols') int columnCount,
+      @JsonKey(name: 'numCols') int? columnCount,
       @JsonKey(name: 'fractionSize') double? fractionSize});
 }
 
@@ -132,7 +132,7 @@ class __$FormFactorCopyWithImpl<$Res> extends _$FormFactorCopyWithImpl<$Res>
       columnCount: columnCount == freezed
           ? _value.columnCount
           : columnCount // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       fractionSize: fractionSize == freezed
           ? _value.fractionSize
           : fractionSize // ignore: cast_nullable_to_non_nullable
@@ -145,8 +145,8 @@ class __$FormFactorCopyWithImpl<$Res> extends _$FormFactorCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_FormFactor implements _FormFactor {
   const _$_FormFactor(
-      {@JsonKey(name: 'numRows') required this.rowCount,
-      @JsonKey(name: 'numCols') required this.columnCount,
+      {@JsonKey(name: 'numRows') this.rowCount,
+      @JsonKey(name: 'numCols') this.columnCount,
       @JsonKey(name: 'fractionSize') this.fractionSize});
 
   factory _$_FormFactor.fromJson(Map<String, dynamic> json) =>
@@ -157,7 +157,7 @@ class _$_FormFactor implements _FormFactor {
   final int? rowCount;
   @override
   @JsonKey(name: 'numCols')
-  final int columnCount;
+  final int? columnCount;
   @override
   @JsonKey(name: 'fractionSize')
   final double? fractionSize;
@@ -202,8 +202,8 @@ class _$_FormFactor implements _FormFactor {
 
 abstract class _FormFactor implements FormFactor {
   const factory _FormFactor(
-      {@JsonKey(name: 'numRows') required int? rowCount,
-      @JsonKey(name: 'numCols') required int columnCount,
+      {@JsonKey(name: 'numRows') int? rowCount,
+      @JsonKey(name: 'numCols') int? columnCount,
       @JsonKey(name: 'fractionSize') double? fractionSize}) = _$_FormFactor;
 
   factory _FormFactor.fromJson(Map<String, dynamic> json) =
@@ -214,7 +214,7 @@ abstract class _FormFactor implements FormFactor {
   int? get rowCount => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'numCols')
-  int get columnCount => throw _privateConstructorUsedError;
+  int? get columnCount => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'fractionSize')
   double? get fractionSize => throw _privateConstructorUsedError;

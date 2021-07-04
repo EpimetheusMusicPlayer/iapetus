@@ -9,7 +9,7 @@ part of 'form_factor.dart';
 _$_FormFactor _$_$_FormFactorFromJson(Map<String, dynamic> json) {
   return _$_FormFactor(
     rowCount: json['numRows'] as int?,
-    columnCount: json['numCols'] as int,
+    columnCount: json['numCols'] as int?,
     fractionSize: (json['fractionSize'] as num?)?.toDouble(),
   );
 }
