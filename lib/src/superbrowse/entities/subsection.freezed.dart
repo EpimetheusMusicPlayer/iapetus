@@ -82,7 +82,7 @@ class _$SuperbrowseSubsectionTearOff {
       {@JsonKey(name: SuperbrowseSubsection._sectionIdKey)
           required String sectionId,
       @JsonKey(name: SuperbrowseSubsection._formFactorsKey)
-          required FormFactors formFactors,
+          FormFactors? formFactors,
       @JsonKey(name: SuperbrowseSubsection._itemsKey)
           required List<SuperbrowseItem> items}) {
     return SingletonSuperbrowseSubsection(
@@ -167,7 +167,7 @@ mixin _$SuperbrowseSubsection {
             @JsonKey(name: SuperbrowseSubsection._sectionIdKey)
                 String sectionId,
             @JsonKey(name: SuperbrowseSubsection._formFactorsKey)
-                FormFactors formFactors,
+                FormFactors? formFactors,
             @JsonKey(name: SuperbrowseSubsection._itemsKey)
                 List<SuperbrowseItem> items)
         singleton,
@@ -221,7 +221,7 @@ mixin _$SuperbrowseSubsection {
             @JsonKey(name: SuperbrowseSubsection._sectionIdKey)
                 String sectionId,
             @JsonKey(name: SuperbrowseSubsection._formFactorsKey)
-                FormFactors formFactors,
+                FormFactors? formFactors,
             @JsonKey(name: SuperbrowseSubsection._itemsKey)
                 List<SuperbrowseItem> items)?
         singleton,
@@ -483,7 +483,7 @@ class _$HorizontalScrollSuperbrowseSubsection
             @JsonKey(name: SuperbrowseSubsection._sectionIdKey)
                 String sectionId,
             @JsonKey(name: SuperbrowseSubsection._formFactorsKey)
-                FormFactors formFactors,
+                FormFactors? formFactors,
             @JsonKey(name: SuperbrowseSubsection._itemsKey)
                 List<SuperbrowseItem> items)
         singleton,
@@ -540,7 +540,7 @@ class _$HorizontalScrollSuperbrowseSubsection
             @JsonKey(name: SuperbrowseSubsection._sectionIdKey)
                 String sectionId,
             @JsonKey(name: SuperbrowseSubsection._formFactorsKey)
-                FormFactors formFactors,
+                FormFactors? formFactors,
             @JsonKey(name: SuperbrowseSubsection._itemsKey)
                 List<SuperbrowseItem> items)?
         singleton,
@@ -860,7 +860,7 @@ class _$RecentlyPlayedSuperbrowseSubsection
             @JsonKey(name: SuperbrowseSubsection._sectionIdKey)
                 String sectionId,
             @JsonKey(name: SuperbrowseSubsection._formFactorsKey)
-                FormFactors formFactors,
+                FormFactors? formFactors,
             @JsonKey(name: SuperbrowseSubsection._itemsKey)
                 List<SuperbrowseItem> items)
         singleton,
@@ -918,7 +918,7 @@ class _$RecentlyPlayedSuperbrowseSubsection
             @JsonKey(name: SuperbrowseSubsection._sectionIdKey)
                 String sectionId,
             @JsonKey(name: SuperbrowseSubsection._formFactorsKey)
-                FormFactors formFactors,
+                FormFactors? formFactors,
             @JsonKey(name: SuperbrowseSubsection._itemsKey)
                 List<SuperbrowseItem> items)?
         singleton,
@@ -1044,11 +1044,11 @@ abstract class $SingletonSuperbrowseSubsectionCopyWith<$Res>
       {@JsonKey(name: SuperbrowseSubsection._sectionIdKey)
           String sectionId,
       @JsonKey(name: SuperbrowseSubsection._formFactorsKey)
-          FormFactors formFactors,
+          FormFactors? formFactors,
       @JsonKey(name: SuperbrowseSubsection._itemsKey)
           List<SuperbrowseItem> items});
 
-  $FormFactorsCopyWith<$Res> get formFactors;
+  $FormFactorsCopyWith<$Res>? get formFactors;
 }
 
 /// @nodoc
@@ -1078,7 +1078,7 @@ class _$SingletonSuperbrowseSubsectionCopyWithImpl<$Res>
       formFactors: formFactors == freezed
           ? _value.formFactors
           : formFactors // ignore: cast_nullable_to_non_nullable
-              as FormFactors,
+              as FormFactors?,
       items: items == freezed
           ? _value.items
           : items // ignore: cast_nullable_to_non_nullable
@@ -1087,8 +1087,12 @@ class _$SingletonSuperbrowseSubsectionCopyWithImpl<$Res>
   }
 
   @override
-  $FormFactorsCopyWith<$Res> get formFactors {
-    return $FormFactorsCopyWith<$Res>(_value.formFactors, (value) {
+  $FormFactorsCopyWith<$Res>? get formFactors {
+    if (_value.formFactors == null) {
+      return null;
+    }
+
+    return $FormFactorsCopyWith<$Res>(_value.formFactors!, (value) {
       return _then(_value.copyWith(formFactors: value));
     });
   }
@@ -1103,7 +1107,7 @@ class _$SingletonSuperbrowseSubsection
       {@JsonKey(name: SuperbrowseSubsection._sectionIdKey)
           required this.sectionId,
       @JsonKey(name: SuperbrowseSubsection._formFactorsKey)
-          required this.formFactors,
+          this.formFactors,
       @JsonKey(name: SuperbrowseSubsection._itemsKey)
           required this.items});
 
@@ -1116,7 +1120,7 @@ class _$SingletonSuperbrowseSubsection
   final String sectionId;
   @override
   @JsonKey(name: SuperbrowseSubsection._formFactorsKey)
-  final FormFactors formFactors;
+  final FormFactors? formFactors;
   @override
   @JsonKey(name: SuperbrowseSubsection._itemsKey)
   final List<SuperbrowseItem> items;
@@ -1186,7 +1190,7 @@ class _$SingletonSuperbrowseSubsection
             @JsonKey(name: SuperbrowseSubsection._sectionIdKey)
                 String sectionId,
             @JsonKey(name: SuperbrowseSubsection._formFactorsKey)
-                FormFactors formFactors,
+                FormFactors? formFactors,
             @JsonKey(name: SuperbrowseSubsection._itemsKey)
                 List<SuperbrowseItem> items)
         singleton,
@@ -1243,7 +1247,7 @@ class _$SingletonSuperbrowseSubsection
             @JsonKey(name: SuperbrowseSubsection._sectionIdKey)
                 String sectionId,
             @JsonKey(name: SuperbrowseSubsection._formFactorsKey)
-                FormFactors formFactors,
+                FormFactors? formFactors,
             @JsonKey(name: SuperbrowseSubsection._itemsKey)
                 List<SuperbrowseItem> items)?
         singleton,
@@ -1315,7 +1319,7 @@ abstract class SingletonSuperbrowseSubsection implements SuperbrowseSubsection {
           {@JsonKey(name: SuperbrowseSubsection._sectionIdKey)
               required String sectionId,
           @JsonKey(name: SuperbrowseSubsection._formFactorsKey)
-              required FormFactors formFactors,
+              FormFactors? formFactors,
           @JsonKey(name: SuperbrowseSubsection._itemsKey)
               required List<SuperbrowseItem> items}) =
       _$SingletonSuperbrowseSubsection;
@@ -1327,7 +1331,7 @@ abstract class SingletonSuperbrowseSubsection implements SuperbrowseSubsection {
   @JsonKey(name: SuperbrowseSubsection._sectionIdKey)
   String get sectionId => throw _privateConstructorUsedError;
   @JsonKey(name: SuperbrowseSubsection._formFactorsKey)
-  FormFactors get formFactors => throw _privateConstructorUsedError;
+  FormFactors? get formFactors => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: SuperbrowseSubsection._itemsKey)
   List<SuperbrowseItem> get items => throw _privateConstructorUsedError;
@@ -1495,7 +1499,7 @@ class _$VerticalListSuperbrowseSubsection
             @JsonKey(name: SuperbrowseSubsection._sectionIdKey)
                 String sectionId,
             @JsonKey(name: SuperbrowseSubsection._formFactorsKey)
-                FormFactors formFactors,
+                FormFactors? formFactors,
             @JsonKey(name: SuperbrowseSubsection._itemsKey)
                 List<SuperbrowseItem> items)
         singleton,
@@ -1552,7 +1556,7 @@ class _$VerticalListSuperbrowseSubsection
             @JsonKey(name: SuperbrowseSubsection._sectionIdKey)
                 String sectionId,
             @JsonKey(name: SuperbrowseSubsection._formFactorsKey)
-                FormFactors formFactors,
+                FormFactors? formFactors,
             @JsonKey(name: SuperbrowseSubsection._itemsKey)
                 List<SuperbrowseItem> items)?
         singleton,
@@ -1801,7 +1805,7 @@ class _$DisplayAdSuperbrowseSubsection
             @JsonKey(name: SuperbrowseSubsection._sectionIdKey)
                 String sectionId,
             @JsonKey(name: SuperbrowseSubsection._formFactorsKey)
-                FormFactors formFactors,
+                FormFactors? formFactors,
             @JsonKey(name: SuperbrowseSubsection._itemsKey)
                 List<SuperbrowseItem> items)
         singleton,
@@ -1858,7 +1862,7 @@ class _$DisplayAdSuperbrowseSubsection
             @JsonKey(name: SuperbrowseSubsection._sectionIdKey)
                 String sectionId,
             @JsonKey(name: SuperbrowseSubsection._formFactorsKey)
-                FormFactors formFactors,
+                FormFactors? formFactors,
             @JsonKey(name: SuperbrowseSubsection._itemsKey)
                 List<SuperbrowseItem> items)?
         singleton,

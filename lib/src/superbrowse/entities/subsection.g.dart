@@ -106,8 +106,9 @@ _$SingletonSuperbrowseSubsection _$_$SingletonSuperbrowseSubsectionFromJson(
     Map<String, dynamic> json) {
   return _$SingletonSuperbrowseSubsection(
     sectionId: json['sectionId'] as String,
-    formFactors:
-        FormFactors.fromJson(json['formFactors'] as Map<String, dynamic>),
+    formFactors: json['formFactors'] == null
+        ? null
+        : FormFactors.fromJson(json['formFactors'] as Map<String, dynamic>),
     items: (json['items'] as List<dynamic>)
         .map((e) => SuperbrowseItem.fromJson(e as Map<String, dynamic>))
         .toList(),

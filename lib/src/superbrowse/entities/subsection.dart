@@ -44,7 +44,7 @@ class SuperbrowseSubsection with _$SuperbrowseSubsection {
     @JsonKey(name: SuperbrowseSubsection._sectionIdKey)
         required String sectionId,
     @JsonKey(name: SuperbrowseSubsection._formFactorsKey)
-        required FormFactors formFactors,
+        FormFactors? formFactors,
     @JsonKey(name: SuperbrowseSubsection._itemsKey)
         required List<SuperbrowseItem> items,
   }) = SingletonSuperbrowseSubsection;
