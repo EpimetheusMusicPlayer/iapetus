@@ -14,6 +14,9 @@ _$BannerSuperbrowseItem _$_$BannerSuperbrowseItemFromJson(
     labels: (json['labels'] as List<dynamic>)
         .map((e) => SuperbrowseLabel.fromJson(e as Map<String, dynamic>))
         .toList(),
+    image: json['image'] == null
+        ? null
+        : SuperbrowseImage.fromJson(json['image'] as Map<String, dynamic>),
   );
 }
 
@@ -23,6 +26,7 @@ Map<String, dynamic> _$_$BannerSuperbrowseItemToJson(
       'pandoraId': instance.pandoraId,
       'analyticsToken': instance.analyticsToken,
       'labels': instance.labels,
+      'image': instance.image,
     };
 
 _$BeltSuperbrowseItem _$_$BeltSuperbrowseItemFromJson(

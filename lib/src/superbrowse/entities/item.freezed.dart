@@ -50,11 +50,13 @@ class _$SuperbrowseItemTearOff {
   BannerSuperbrowseItem banner(
       {@JsonKey(name: 'pandoraId') String? pandoraId,
       @JsonKey(name: 'analyticsToken') required String analyticsToken,
-      @JsonKey(name: 'labels') required List<SuperbrowseLabel> labels}) {
+      @JsonKey(name: 'labels') required List<SuperbrowseLabel> labels,
+      @JsonKey(name: 'image') SuperbrowseImage? image}) {
     return BannerSuperbrowseItem(
       pandoraId: pandoraId,
       analyticsToken: analyticsToken,
       labels: labels,
+      image: image,
     );
   }
 
@@ -290,7 +292,8 @@ mixin _$SuperbrowseItem {
     required TResult Function(
             @JsonKey(name: 'pandoraId') String? pandoraId,
             @JsonKey(name: 'analyticsToken') String analyticsToken,
-            @JsonKey(name: 'labels') List<SuperbrowseLabel> labels)
+            @JsonKey(name: 'labels') List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'image') SuperbrowseImage? image)
         banner,
     required TResult Function(
             @JsonKey(name: 'pandoraId')
@@ -463,7 +466,8 @@ mixin _$SuperbrowseItem {
     TResult Function(
             @JsonKey(name: 'pandoraId') String? pandoraId,
             @JsonKey(name: 'analyticsToken') String analyticsToken,
-            @JsonKey(name: 'labels') List<SuperbrowseLabel> labels)?
+            @JsonKey(name: 'labels') List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'image') SuperbrowseImage? image)?
         banner,
     TResult Function(
             @JsonKey(name: 'pandoraId')
@@ -716,7 +720,10 @@ abstract class $BannerSuperbrowseItemCopyWith<$Res>
   $Res call(
       {@JsonKey(name: 'pandoraId') String? pandoraId,
       @JsonKey(name: 'analyticsToken') String analyticsToken,
-      @JsonKey(name: 'labels') List<SuperbrowseLabel> labels});
+      @JsonKey(name: 'labels') List<SuperbrowseLabel> labels,
+      @JsonKey(name: 'image') SuperbrowseImage? image});
+
+  $SuperbrowseImageCopyWith<$Res>? get image;
 }
 
 /// @nodoc
@@ -735,6 +742,7 @@ class _$BannerSuperbrowseItemCopyWithImpl<$Res>
     Object? pandoraId = freezed,
     Object? analyticsToken = freezed,
     Object? labels = freezed,
+    Object? image = freezed,
   }) {
     return _then(BannerSuperbrowseItem(
       pandoraId: pandoraId == freezed
@@ -749,7 +757,22 @@ class _$BannerSuperbrowseItemCopyWithImpl<$Res>
           ? _value.labels
           : labels // ignore: cast_nullable_to_non_nullable
               as List<SuperbrowseLabel>,
+      image: image == freezed
+          ? _value.image
+          : image // ignore: cast_nullable_to_non_nullable
+              as SuperbrowseImage?,
     ));
+  }
+
+  @override
+  $SuperbrowseImageCopyWith<$Res>? get image {
+    if (_value.image == null) {
+      return null;
+    }
+
+    return $SuperbrowseImageCopyWith<$Res>(_value.image!, (value) {
+      return _then(_value.copyWith(image: value));
+    });
   }
 }
 
@@ -760,7 +783,8 @@ class _$BannerSuperbrowseItem implements BannerSuperbrowseItem {
   const _$BannerSuperbrowseItem(
       {@JsonKey(name: 'pandoraId') this.pandoraId,
       @JsonKey(name: 'analyticsToken') required this.analyticsToken,
-      @JsonKey(name: 'labels') required this.labels});
+      @JsonKey(name: 'labels') required this.labels,
+      @JsonKey(name: 'image') this.image});
 
   factory _$BannerSuperbrowseItem.fromJson(Map<String, dynamic> json) =>
       _$_$BannerSuperbrowseItemFromJson(json);
@@ -774,10 +798,13 @@ class _$BannerSuperbrowseItem implements BannerSuperbrowseItem {
   @override
   @JsonKey(name: 'labels')
   final List<SuperbrowseLabel> labels;
+  @override
+  @JsonKey(name: 'image')
+  final SuperbrowseImage? image;
 
   @override
   String toString() {
-    return 'SuperbrowseItem.banner(pandoraId: $pandoraId, analyticsToken: $analyticsToken, labels: $labels)';
+    return 'SuperbrowseItem.banner(pandoraId: $pandoraId, analyticsToken: $analyticsToken, labels: $labels, image: $image)';
   }
 
   @override
@@ -791,7 +818,9 @@ class _$BannerSuperbrowseItem implements BannerSuperbrowseItem {
                 const DeepCollectionEquality()
                     .equals(other.analyticsToken, analyticsToken)) &&
             (identical(other.labels, labels) ||
-                const DeepCollectionEquality().equals(other.labels, labels)));
+                const DeepCollectionEquality().equals(other.labels, labels)) &&
+            (identical(other.image, image) ||
+                const DeepCollectionEquality().equals(other.image, image)));
   }
 
   @override
@@ -799,7 +828,8 @@ class _$BannerSuperbrowseItem implements BannerSuperbrowseItem {
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(pandoraId) ^
       const DeepCollectionEquality().hash(analyticsToken) ^
-      const DeepCollectionEquality().hash(labels);
+      const DeepCollectionEquality().hash(labels) ^
+      const DeepCollectionEquality().hash(image);
 
   @JsonKey(ignore: true)
   @override
@@ -813,7 +843,8 @@ class _$BannerSuperbrowseItem implements BannerSuperbrowseItem {
     required TResult Function(
             @JsonKey(name: 'pandoraId') String? pandoraId,
             @JsonKey(name: 'analyticsToken') String analyticsToken,
-            @JsonKey(name: 'labels') List<SuperbrowseLabel> labels)
+            @JsonKey(name: 'labels') List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'image') SuperbrowseImage? image)
         banner,
     required TResult Function(
             @JsonKey(name: 'pandoraId')
@@ -980,7 +1011,7 @@ class _$BannerSuperbrowseItem implements BannerSuperbrowseItem {
                 String? voiceText)
         tile,
   }) {
-    return banner(pandoraId, analyticsToken, labels);
+    return banner(pandoraId, analyticsToken, labels, image);
   }
 
   @override
@@ -989,7 +1020,8 @@ class _$BannerSuperbrowseItem implements BannerSuperbrowseItem {
     TResult Function(
             @JsonKey(name: 'pandoraId') String? pandoraId,
             @JsonKey(name: 'analyticsToken') String analyticsToken,
-            @JsonKey(name: 'labels') List<SuperbrowseLabel> labels)?
+            @JsonKey(name: 'labels') List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'image') SuperbrowseImage? image)?
         banner,
     TResult Function(
             @JsonKey(name: 'pandoraId')
@@ -1158,7 +1190,7 @@ class _$BannerSuperbrowseItem implements BannerSuperbrowseItem {
     required TResult orElse(),
   }) {
     if (banner != null) {
-      return banner(pandoraId, analyticsToken, labels);
+      return banner(pandoraId, analyticsToken, labels, image);
     }
     return orElse();
   }
@@ -1213,7 +1245,8 @@ abstract class BannerSuperbrowseItem implements SuperbrowseItem {
   const factory BannerSuperbrowseItem(
           {@JsonKey(name: 'pandoraId') String? pandoraId,
           @JsonKey(name: 'analyticsToken') required String analyticsToken,
-          @JsonKey(name: 'labels') required List<SuperbrowseLabel> labels}) =
+          @JsonKey(name: 'labels') required List<SuperbrowseLabel> labels,
+          @JsonKey(name: 'image') SuperbrowseImage? image}) =
       _$BannerSuperbrowseItem;
 
   factory BannerSuperbrowseItem.fromJson(Map<String, dynamic> json) =
@@ -1227,6 +1260,8 @@ abstract class BannerSuperbrowseItem implements SuperbrowseItem {
   String get analyticsToken => throw _privateConstructorUsedError;
   @JsonKey(name: 'labels')
   List<SuperbrowseLabel> get labels => throw _privateConstructorUsedError;
+  @JsonKey(name: 'image')
+  SuperbrowseImage? get image => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   $BannerSuperbrowseItemCopyWith<BannerSuperbrowseItem> get copyWith =>
@@ -1426,7 +1461,8 @@ class _$BeltSuperbrowseItem implements BeltSuperbrowseItem {
     required TResult Function(
             @JsonKey(name: 'pandoraId') String? pandoraId,
             @JsonKey(name: 'analyticsToken') String analyticsToken,
-            @JsonKey(name: 'labels') List<SuperbrowseLabel> labels)
+            @JsonKey(name: 'labels') List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'image') SuperbrowseImage? image)
         banner,
     required TResult Function(
             @JsonKey(name: 'pandoraId')
@@ -1603,7 +1639,8 @@ class _$BeltSuperbrowseItem implements BeltSuperbrowseItem {
     TResult Function(
             @JsonKey(name: 'pandoraId') String? pandoraId,
             @JsonKey(name: 'analyticsToken') String analyticsToken,
-            @JsonKey(name: 'labels') List<SuperbrowseLabel> labels)?
+            @JsonKey(name: 'labels') List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'image') SuperbrowseImage? image)?
         banner,
     TResult Function(
             @JsonKey(name: 'pandoraId')
@@ -2052,7 +2089,8 @@ class _$FeaturedSuperbrowseItem implements FeaturedSuperbrowseItem {
     required TResult Function(
             @JsonKey(name: 'pandoraId') String? pandoraId,
             @JsonKey(name: 'analyticsToken') String analyticsToken,
-            @JsonKey(name: 'labels') List<SuperbrowseLabel> labels)
+            @JsonKey(name: 'labels') List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'image') SuperbrowseImage? image)
         banner,
     required TResult Function(
             @JsonKey(name: 'pandoraId')
@@ -2229,7 +2267,8 @@ class _$FeaturedSuperbrowseItem implements FeaturedSuperbrowseItem {
     TResult Function(
             @JsonKey(name: 'pandoraId') String? pandoraId,
             @JsonKey(name: 'analyticsToken') String analyticsToken,
-            @JsonKey(name: 'labels') List<SuperbrowseLabel> labels)?
+            @JsonKey(name: 'labels') List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'image') SuperbrowseImage? image)?
         banner,
     TResult Function(
             @JsonKey(name: 'pandoraId')
@@ -2670,7 +2709,8 @@ class _$FooterSuperbrowseItem implements FooterSuperbrowseItem {
     required TResult Function(
             @JsonKey(name: 'pandoraId') String? pandoraId,
             @JsonKey(name: 'analyticsToken') String analyticsToken,
-            @JsonKey(name: 'labels') List<SuperbrowseLabel> labels)
+            @JsonKey(name: 'labels') List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'image') SuperbrowseImage? image)
         banner,
     required TResult Function(
             @JsonKey(name: 'pandoraId')
@@ -2847,7 +2887,8 @@ class _$FooterSuperbrowseItem implements FooterSuperbrowseItem {
     TResult Function(
             @JsonKey(name: 'pandoraId') String? pandoraId,
             @JsonKey(name: 'analyticsToken') String analyticsToken,
-            @JsonKey(name: 'labels') List<SuperbrowseLabel> labels)?
+            @JsonKey(name: 'labels') List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'image') SuperbrowseImage? image)?
         banner,
     TResult Function(
             @JsonKey(name: 'pandoraId')
@@ -3331,7 +3372,8 @@ class _$GridSuperbrowseItem implements GridSuperbrowseItem {
     required TResult Function(
             @JsonKey(name: 'pandoraId') String? pandoraId,
             @JsonKey(name: 'analyticsToken') String analyticsToken,
-            @JsonKey(name: 'labels') List<SuperbrowseLabel> labels)
+            @JsonKey(name: 'labels') List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'image') SuperbrowseImage? image)
         banner,
     required TResult Function(
             @JsonKey(name: 'pandoraId')
@@ -3508,7 +3550,8 @@ class _$GridSuperbrowseItem implements GridSuperbrowseItem {
     TResult Function(
             @JsonKey(name: 'pandoraId') String? pandoraId,
             @JsonKey(name: 'analyticsToken') String analyticsToken,
-            @JsonKey(name: 'labels') List<SuperbrowseLabel> labels)?
+            @JsonKey(name: 'labels') List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'image') SuperbrowseImage? image)?
         banner,
     TResult Function(
             @JsonKey(name: 'pandoraId')
@@ -3962,7 +4005,8 @@ class _$HeaderSuperbrowseItem implements HeaderSuperbrowseItem {
     required TResult Function(
             @JsonKey(name: 'pandoraId') String? pandoraId,
             @JsonKey(name: 'analyticsToken') String analyticsToken,
-            @JsonKey(name: 'labels') List<SuperbrowseLabel> labels)
+            @JsonKey(name: 'labels') List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'image') SuperbrowseImage? image)
         banner,
     required TResult Function(
             @JsonKey(name: 'pandoraId')
@@ -4139,7 +4183,8 @@ class _$HeaderSuperbrowseItem implements HeaderSuperbrowseItem {
     TResult Function(
             @JsonKey(name: 'pandoraId') String? pandoraId,
             @JsonKey(name: 'analyticsToken') String analyticsToken,
-            @JsonKey(name: 'labels') List<SuperbrowseLabel> labels)?
+            @JsonKey(name: 'labels') List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'image') SuperbrowseImage? image)?
         banner,
     TResult Function(
             @JsonKey(name: 'pandoraId')
@@ -4616,7 +4661,8 @@ class _$HeroSuperbrowseItem implements HeroSuperbrowseItem {
     required TResult Function(
             @JsonKey(name: 'pandoraId') String? pandoraId,
             @JsonKey(name: 'analyticsToken') String analyticsToken,
-            @JsonKey(name: 'labels') List<SuperbrowseLabel> labels)
+            @JsonKey(name: 'labels') List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'image') SuperbrowseImage? image)
         banner,
     required TResult Function(
             @JsonKey(name: 'pandoraId')
@@ -4793,7 +4839,8 @@ class _$HeroSuperbrowseItem implements HeroSuperbrowseItem {
     TResult Function(
             @JsonKey(name: 'pandoraId') String? pandoraId,
             @JsonKey(name: 'analyticsToken') String analyticsToken,
-            @JsonKey(name: 'labels') List<SuperbrowseLabel> labels)?
+            @JsonKey(name: 'labels') List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'image') SuperbrowseImage? image)?
         banner,
     TResult Function(
             @JsonKey(name: 'pandoraId')
@@ -5333,7 +5380,8 @@ class _$LargeRowSuperbrowseItem implements LargeRowSuperbrowseItem {
     required TResult Function(
             @JsonKey(name: 'pandoraId') String? pandoraId,
             @JsonKey(name: 'analyticsToken') String analyticsToken,
-            @JsonKey(name: 'labels') List<SuperbrowseLabel> labels)
+            @JsonKey(name: 'labels') List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'image') SuperbrowseImage? image)
         banner,
     required TResult Function(
             @JsonKey(name: 'pandoraId')
@@ -5510,7 +5558,8 @@ class _$LargeRowSuperbrowseItem implements LargeRowSuperbrowseItem {
     TResult Function(
             @JsonKey(name: 'pandoraId') String? pandoraId,
             @JsonKey(name: 'analyticsToken') String analyticsToken,
-            @JsonKey(name: 'labels') List<SuperbrowseLabel> labels)?
+            @JsonKey(name: 'labels') List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'image') SuperbrowseImage? image)?
         banner,
     TResult Function(
             @JsonKey(name: 'pandoraId')
@@ -5972,7 +6021,8 @@ class _$SmallRowSuperbrowseItem implements SmallRowSuperbrowseItem {
     required TResult Function(
             @JsonKey(name: 'pandoraId') String? pandoraId,
             @JsonKey(name: 'analyticsToken') String analyticsToken,
-            @JsonKey(name: 'labels') List<SuperbrowseLabel> labels)
+            @JsonKey(name: 'labels') List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'image') SuperbrowseImage? image)
         banner,
     required TResult Function(
             @JsonKey(name: 'pandoraId')
@@ -6149,7 +6199,8 @@ class _$SmallRowSuperbrowseItem implements SmallRowSuperbrowseItem {
     TResult Function(
             @JsonKey(name: 'pandoraId') String? pandoraId,
             @JsonKey(name: 'analyticsToken') String analyticsToken,
-            @JsonKey(name: 'labels') List<SuperbrowseLabel> labels)?
+            @JsonKey(name: 'labels') List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'image') SuperbrowseImage? image)?
         banner,
     TResult Function(
             @JsonKey(name: 'pandoraId')
@@ -6601,7 +6652,8 @@ class _$SplitSuperbrowseItem implements SplitSuperbrowseItem {
     required TResult Function(
             @JsonKey(name: 'pandoraId') String? pandoraId,
             @JsonKey(name: 'analyticsToken') String analyticsToken,
-            @JsonKey(name: 'labels') List<SuperbrowseLabel> labels)
+            @JsonKey(name: 'labels') List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'image') SuperbrowseImage? image)
         banner,
     required TResult Function(
             @JsonKey(name: 'pandoraId')
@@ -6778,7 +6830,8 @@ class _$SplitSuperbrowseItem implements SplitSuperbrowseItem {
     TResult Function(
             @JsonKey(name: 'pandoraId') String? pandoraId,
             @JsonKey(name: 'analyticsToken') String analyticsToken,
-            @JsonKey(name: 'labels') List<SuperbrowseLabel> labels)?
+            @JsonKey(name: 'labels') List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'image') SuperbrowseImage? image)?
         banner,
     TResult Function(
             @JsonKey(name: 'pandoraId')
@@ -7228,7 +7281,8 @@ class _$TileSuperbrowseItem implements TileSuperbrowseItem {
     required TResult Function(
             @JsonKey(name: 'pandoraId') String? pandoraId,
             @JsonKey(name: 'analyticsToken') String analyticsToken,
-            @JsonKey(name: 'labels') List<SuperbrowseLabel> labels)
+            @JsonKey(name: 'labels') List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'image') SuperbrowseImage? image)
         banner,
     required TResult Function(
             @JsonKey(name: 'pandoraId')
@@ -7405,7 +7459,8 @@ class _$TileSuperbrowseItem implements TileSuperbrowseItem {
     TResult Function(
             @JsonKey(name: 'pandoraId') String? pandoraId,
             @JsonKey(name: 'analyticsToken') String analyticsToken,
-            @JsonKey(name: 'labels') List<SuperbrowseLabel> labels)?
+            @JsonKey(name: 'labels') List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'image') SuperbrowseImage? image)?
         banner,
     TResult Function(
             @JsonKey(name: 'pandoraId')

@@ -18,6 +18,7 @@ class SuperbrowseItem with _$SuperbrowseItem {
     @JsonKey(name: 'pandoraId') String? pandoraId,
     @JsonKey(name: 'analyticsToken') required String analyticsToken,
     @JsonKey(name: 'labels') required List<SuperbrowseLabel> labels,
+    @JsonKey(name: 'image') SuperbrowseImage? image,
   }) = BannerSuperbrowseItem;
 
   @FreezedUnionValue(SuperbrowseItemType.belt)
