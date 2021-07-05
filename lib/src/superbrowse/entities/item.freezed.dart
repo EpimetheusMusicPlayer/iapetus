@@ -38,7 +38,8 @@ SuperbrowseItem _$SuperbrowseItemFromJson(Map<String, dynamic> json) {
       return TileSuperbrowseItem.fromJson(json);
 
     default:
-      throw FallThroughError();
+      throw CheckedFromJsonException(json, 'type', 'SuperbrowseItem',
+          'Invalid union type "${json['type']}"!');
   }
 }
 

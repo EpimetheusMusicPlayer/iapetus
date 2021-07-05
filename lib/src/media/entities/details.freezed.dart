@@ -20,7 +20,8 @@ MediaDetailsSet _$MediaDetailsSetFromJson(Map<String, dynamic> json) {
       return GenreDetailsSet.fromJson(json);
 
     default:
-      throw FallThroughError();
+      throw CheckedFromJsonException(json, 'runtimeType', 'MediaDetailsSet',
+          'Invalid union type "${json['runtimeType']}"!');
   }
 }
 
@@ -509,7 +510,8 @@ MediaDetails _$MediaDetailsFromJson(Map<String, dynamic> json) {
       return GenreDetails.fromJson(json);
 
     default:
-      throw FallThroughError();
+      throw CheckedFromJsonException(json, 'runtimeType', 'MediaDetails',
+          'Invalid union type "${json['runtimeType']}"!');
   }
 }
 

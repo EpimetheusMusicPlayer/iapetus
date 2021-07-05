@@ -27,7 +27,11 @@ SuperbrowseSubsection _$SuperbrowseSubsectionFromJson(
       return DisplayAdSuperbrowseSubsection.fromJson(json);
 
     default:
-      throw FallThroughError();
+      throw CheckedFromJsonException(
+          json,
+          'subsectionType',
+          'SuperbrowseSubsection',
+          'Invalid union type "${json['subsectionType']}"!');
   }
 }
 

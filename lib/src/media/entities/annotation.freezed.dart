@@ -26,7 +26,8 @@ MediaAnnotation _$MediaAnnotationFromJson(Map<String, dynamic> json) {
       return ComposerAnnotation.fromJson(json);
 
     default:
-      throw FallThroughError();
+      throw CheckedFromJsonException(json, 'type', 'MediaAnnotation',
+          'Invalid union type "${json['type']}"!');
   }
 }
 
