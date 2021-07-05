@@ -1,0 +1,18 @@
+{
+  "id": "BS:1:41",
+  "title": {
+    "type": "banner",
+    "image": {
+      "fullUrl": "https://content-images.p-cdn.com/images/public/int/sb/browse_images/Logo/Pandora_Logo_3x.png"
+    },
+    "labels": [
+      {
+        "text": "This is your Sunday night",
+        "style": "banner",
+        "alignment": "center",
+        "maxLines": 2
+      }
+    ],
+    "analyticsToken": "{\"generation\":\"1625448585235\",\"timezone\":\"AEST\",\"snum\":\"0\",\"secType\":\"header\",\"inum\":\"0\",\"itype\":\"banner\",\"secId\":\"BS:1:41\"}"
+  }
+}

@@ -1,0 +1,137 @@
+{
+  "id": "BS:1:31",
+  "subsections": [
+    {
+      "subsectionType": "horizontalScroll",
+      "items": [
+        {
+          "type": "belt",
+          "action": {
+            "type": "directory",
+            "pandoraId": "BR:50",
+            "title": "Genres",
+            "loadingScreen": "deep_grid"
+          },
+          "image": {
+            "fullUrl": "https://content-images.p-cdn.com/images/public/int/sb/browse_images/Belt/Genres_android_light_v1.png"
+          },
+          "pandoraId": "BR:50",
+          "voiceText": "genres",
+          "analyticsToken": "{\"generation\":\"1625448585235\",\"timezone\":\"AEST\",\"snum\":\"2\",\"secType\":\"horizontalScroll\",\"id\":\"BR:50\",\"inum\":\"0\",\"itype\":\"belt\",\"secId\":\"BS:1:31\"}"
+        },
+        {
+          "type": "belt",
+          "action": {
+            "type": "directory",
+            "pandoraId": "BR:40",
+            "title": "New Music",
+            "loadingScreen": "deep_default"
+          },
+          "image": {
+            "fullUrl": "https://content-images.p-cdn.com/images/public/int/sb/browse_images/Belt/New_Music_android_light_v1.png"
+          },
+          "pandoraId": "BR:40",
+          "voiceText": "new music",
+          "analyticsToken": "{\"generation\":\"1625448585235\",\"timezone\":\"AEST\",\"snum\":\"2\",\"secType\":\"horizontalScroll\",\"id\":\"BR:40\",\"inum\":\"1\",\"itype\":\"belt\",\"secId\":\"BS:1:31\"}"
+        },
+        {
+          "type": "belt",
+          "action": {
+            "type": "directory",
+            "pandoraId": "BR:38",
+            "title": "Podcasts",
+            "loadingScreen": "deep_default"
+          },
+          "image": {
+            "fullUrl": "https://content-images.p-cdn.com/images/public/int/sb/browse_images/Belt/Podcasts_android_light_v1.png"
+          },
+          "pandoraId": "BR:38",
+          "voiceText": "podcasts",
+          "analyticsToken": "{\"generation\":\"1625448585235\",\"timezone\":\"AEST\",\"snum\":\"2\",\"secType\":\"horizontalScroll\",\"id\":\"BR:38\",\"inum\":\"2\",\"itype\":\"belt\",\"secId\":\"BS:1:31\"}"
+        },
+        {
+          "type": "belt",
+          "action": {
+            "type": "directory",
+            "pandoraId": "BR:7",
+            "title": "Moods",
+            "loadingScreen": "deep_grid"
+          },
+          "image": {
+            "fullUrl": "https://content-images.p-cdn.com/images/public/int/sb/browse_images/Belt/Moods_android_light_v1.png"
+          },
+          "pandoraId": "BR:7",
+          "voiceText": "moods and activitities",
+          "analyticsToken": "{\"generation\":\"1625448585235\",\"timezone\":\"AEST\",\"snum\":\"2\",\"secType\":\"horizontalScroll\",\"id\":\"BR:7\",\"inum\":\"3\",\"itype\":\"belt\",\"secId\":\"BS:1:31\"}"
+        },
+        {
+          "type": "belt",
+          "action": {
+            "type": "directory",
+            "pandoraId": "BR:12",
+            "title": "Playlists",
+            "loadingScreen": "deep_default"
+          },
+          "image": {
+            "fullUrl": "https://content-images.p-cdn.com/images/public/int/sb/browse_images/Belt/Playlists_android_light_v1.png"
+          },
+          "pandoraId": "BR:12",
+          "voiceText": "playlists",
+          "analyticsToken": "{\"generation\":\"1625448585235\",\"timezone\":\"AEST\",\"snum\":\"2\",\"secType\":\"horizontalScroll\",\"id\":\"BR:12\",\"inum\":\"4\",\"itype\":\"belt\",\"secId\":\"BS:1:31\"}"
+        },
+        {
+          "type": "belt",
+          "action": {
+            "type": "directory",
+            "pandoraId": "BR:6",
+            "title": "Decades",
+            "loadingScreen": "deep_grid"
+          },
+          "image": {
+            "fullUrl": "https://content-images.p-cdn.com/images/public/int/sb/browse_images/Belt/Decades_android_light_v1.png"
+          },
+          "pandoraId": "BR:6",
+          "voiceText": "decades",
+          "analyticsToken": "{\"generation\":\"1625448585235\",\"timezone\":\"AEST\",\"snum\":\"2\",\"secType\":\"horizontalScroll\",\"id\":\"BR:6\",\"inum\":\"5\",\"itype\":\"belt\",\"secId\":\"BS:1:31\"}"
+        },
+        {
+          "type": "belt",
+          "action": {
+            "type": "directory",
+            "pandoraId": "BR:48",
+            "title": "Trending",
+            "loadingScreen": "deep_default"
+          },
+          "image": {
+            "fullUrl": "https://content-images.p-cdn.com/images/public/int/sb/browse_images/Belt/Trending_android_light_v1.png"
+          },
+          "pandoraId": "BR:48",
+          "voiceText": "trending",
+          "analyticsToken": "{\"generation\":\"1625448585235\",\"timezone\":\"AEST\",\"snum\":\"2\",\"secType\":\"horizontalScroll\",\"id\":\"BR:48\",\"inum\":\"6\",\"itype\":\"belt\",\"secId\":\"BS:1:31\"}"
+        }
+      ],
+      "sectionId": "BS:1:31",
+      "scrollType": "smooth",
+      "formFactors": {
+        "portrait": {
+          "numRows": 1,
+          "numCols": 2
+        },
+        "landscape": {
+          "numRows": 1,
+          "numCols": 4
+        }
+      }
+    }
+  ],
+  "title": {
+    "type": "header",
+    "labels": [
+      {
+        "text": "Browse By Category",
+        "style": "header"
+      }
+    ],
+    "analyticsToken": "{\"generation\":\"1625448585235\",\"timezone\":\"AEST\",\"snum\":\"2\",\"secType\":\"header\",\"inum\":\"0\",\"itype\":\"header\",\"secId\":\"BS:1:31\"}"
+  }
+}

@@ -1,0 +1,818 @@
+{
+  "id": "BS:1:38",
+  "subsections": [
+    {
+      "subsectionType": "horizontalScroll",
+      "items": [
+        {
+          "type": "split",
+          "action": {
+            "type": "backstage",
+            "pandoraId": "PC:9764"
+          },
+          "image": {
+            "scalableUrl": "https://dyn-images.p-cdn.com/?l=images%2F84%2F79%2Fed%2F5f%2F3015417ba1df92081babfce3%2F&c=90&f=jpeg",
+            "sizedUrl": "https://dyn-images.p-cdn.com/?l=images%2F84%2F79%2Fed%2F5f%2F3015417ba1df92081babfce3%2F&c=90&f=jpeg&w=$W$&h=$H$",
+            "border": true,
+            "discreteSizes": [
+              "90x90",
+              "130x130",
+              "500x500",
+              "640x640",
+              "1080x1080"
+            ]
+          },
+          "labels": [
+            {
+              "text": "MrCreepyPasta's Storytime",
+              "style": "title",
+              "alignment": "left"
+            },
+            {
+              "text": "Podcast - 705 episodes",
+              "style": "detail",
+              "alignment": "left"
+            },
+            {
+              "text": "The OFFICIAL Mr. Creepy Pasta's Creepypasta Storytime! Support the Podcast here: https://ko-fi.com/mrcreepypasta Hey there kids! It's me, Mr. Creepy Pasta! And I think I might have found a new way to bring Creepypasta stories from the deep dark stones of the crypt and right to the ear balls in your head. If you're as excited as I am to hear a good story of terror and fear as I am then give me a subscription, hide under your blanket, and prepare yourself for some sweet dreams. Creepypasta Storytime is a collection of some of the most horrifying (and occasionally funny) stories, or Creepypastas, that the internet has to offer and narrated to you by the Blue Man himself. The podcast is taken directly from the YouTube Channel of the same name and is always open to suggestions for new stories and submissions from you. mrcreepypasta@gmail.com",
+              "style": "description",
+              "alignment": "left",
+              "maxLines": 2
+            }
+          ],
+          "badges": [
+            {
+              "type": "collected"
+            },
+            {
+              "type": "newContent"
+            }
+          ],
+          "pandoraId": "PC:9764",
+          "analyticsToken": "{\"generation\":\"1625448585235\",\"timezone\":\"AEST\",\"snum\":\"11\",\"secType\":\"horizontalScroll\",\"id\":\"PC:9764\",\"inum\":\"0\",\"itype\":\"split\",\"secId\":\"BS:1:38\"}",
+          "alignment": "left"
+        },
+        {
+          "type": "split",
+          "action": {
+            "type": "backstage",
+            "pandoraId": "PC:10362"
+          },
+          "image": {
+            "scalableUrl": "https://dyn-images.p-cdn.com/?l=images%2F61%2F12%2Fd9%2F32%2F3bf848658d7072d330278ab6%2F&c=90&f=jpeg",
+            "sizedUrl": "https://dyn-images.p-cdn.com/?l=images%2F61%2F12%2Fd9%2F32%2F3bf848658d7072d330278ab6%2F&c=90&f=jpeg&w=$W$&h=$H$",
+            "border": true,
+            "discreteSizes": [
+              "90x90",
+              "130x130",
+              "500x500",
+              "640x640",
+              "1080x1080"
+            ]
+          },
+          "labels": [
+            {
+              "text": "Your Brain on Facts",
+              "style": "title",
+              "alignment": "left"
+            },
+            {
+              "text": "Podcast - 184 episodes",
+              "style": "detail",
+              "alignment": "left"
+            },
+            {
+              "text": "A half-hour show of things you didn't know, things you thought you knew, and things you never knew you never knew.",
+              "style": "description",
+              "alignment": "left",
+              "maxLines": 2
+            }
+          ],
+          "badges": [
+            {
+              "type": "collected"
+            },
+            {
+              "type": "newContent"
+            }
+          ],
+          "pandoraId": "PC:10362",
+          "analyticsToken": "{\"generation\":\"1625448585235\",\"timezone\":\"AEST\",\"snum\":\"11\",\"secType\":\"horizontalScroll\",\"id\":\"PC:10362\",\"inum\":\"1\",\"itype\":\"split\",\"secId\":\"BS:1:38\"}",
+          "alignment": "left"
+        },
+        {
+          "type": "split",
+          "action": {
+            "type": "backstage",
+            "pandoraId": "PC:11024"
+          },
+          "image": {
+            "scalableUrl": "https://dyn-images.p-cdn.com/?l=images%2F09%2F26%2Ff3%2Fa9%2F6e0b4fbd977f3f864ad441b8%2F&c=90&f=jpeg",
+            "sizedUrl": "https://dyn-images.p-cdn.com/?l=images%2F09%2F26%2Ff3%2Fa9%2F6e0b4fbd977f3f864ad441b8%2F&c=90&f=jpeg&w=$W$&h=$H$",
+            "border": true,
+            "discreteSizes": [
+              "90x90",
+              "130x130",
+              "500x500",
+              "640x640",
+              "1080x1080"
+            ]
+          },
+          "labels": [
+            {
+              "text": "Crime Junkie",
+              "style": "title",
+              "alignment": "left"
+            },
+            {
+              "text": "Podcast - 200 episodes",
+              "style": "detail",
+              "alignment": "left"
+            },
+            {
+              "text": "If you can never get enough true crime... Congratulations, you’ve found your people.",
+              "style": "description",
+              "alignment": "left",
+              "maxLines": 2
+            }
+          ],
+          "badges": [
+            {
+              "type": "collected"
+            },
+            {
+              "type": "newContent"
+            }
+          ],
+          "pandoraId": "PC:11024",
+          "analyticsToken": "{\"generation\":\"1625448585235\",\"timezone\":\"AEST\",\"snum\":\"11\",\"secType\":\"horizontalScroll\",\"id\":\"PC:11024\",\"inum\":\"2\",\"itype\":\"split\",\"secId\":\"BS:1:38\"}",
+          "alignment": "left"
+        },
+        {
+          "type": "split",
+          "action": {
+            "type": "backstage",
+            "pandoraId": "PC:31976"
+          },
+          "image": {
+            "scalableUrl": "https://dyn-images.p-cdn.com/?l=images%2F7e%2Fa9%2Fe2%2F6d%2Ff66d404f93a3dacc820ad9c4%2F&c=90&f=jpeg",
+            "sizedUrl": "https://dyn-images.p-cdn.com/?l=images%2F7e%2Fa9%2Fe2%2F6d%2Ff66d404f93a3dacc820ad9c4%2F&c=90&f=jpeg&w=$W$&h=$H$",
+            "border": true,
+            "discreteSizes": [
+              "90x90",
+              "130x130",
+              "500x500",
+              "640x640",
+              "1080x1080"
+            ]
+          },
+          "labels": [
+            {
+              "text": "Morbid: A True Crime Podcast",
+              "style": "title",
+              "alignment": "left"
+            },
+            {
+              "text": "Podcast - 291 episodes",
+              "style": "detail",
+              "alignment": "left"
+            },
+            {
+              "text": "It’s a lighthearted nightmare in here, weirdos! Morbid is a true crime, creepy history and all things spooky podcast hosted by an autopsy technician and a hairstylist. Join us for a heavy dose of research with a dash of comedy thrown in for flavor.",
+              "style": "description",
+              "alignment": "left",
+              "maxLines": 2
+            }
+          ],
+          "badges": [
+            {
+              "type": "collected"
+            },
+            {
+              "type": "newContent"
+            }
+          ],
+          "pandoraId": "PC:31976",
+          "analyticsToken": "{\"generation\":\"1625448585235\",\"timezone\":\"AEST\",\"snum\":\"11\",\"secType\":\"horizontalScroll\",\"id\":\"PC:31976\",\"inum\":\"3\",\"itype\":\"split\",\"secId\":\"BS:1:38\"}",
+          "alignment": "left"
+        },
+        {
+          "type": "split",
+          "action": {
+            "type": "backstage",
+            "pandoraId": "PC:26573"
+          },
+          "image": {
+            "scalableUrl": "https://dyn-images.p-cdn.com/?l=images%2F5d%2F6a%2F9e%2F67%2F6ea04870b188cf60c979270e%2F&c=90&f=jpeg",
+            "sizedUrl": "https://dyn-images.p-cdn.com/?l=images%2F5d%2F6a%2F9e%2F67%2F6ea04870b188cf60c979270e%2F&c=90&f=jpeg&w=$W$&h=$H$",
+            "border": true,
+            "discreteSizes": [
+              "90x90",
+              "130x130",
+              "500x500",
+              "640x640",
+              "1080x1080"
+            ]
+          },
+          "labels": [
+            {
+              "text": "Join the Party",
+              "style": "title",
+              "alignment": "left"
+            },
+            {
+              "text": "Podcast - 194 episodes",
+              "style": "detail",
+              "alignment": "left"
+            },
+            {
+              "text": "Join the Party is a collaborative storytelling and roleplaying podcast, powered by the rules of Dungeons and Dragons. That means a group of friends create a story together, chapter by chapter, that takes us beyond the tabletop to parts unknown. In the first campaign, we explored fantasy adventure, intrigue, magic, and drama. In the newest story, we tackle science, superpowers, a better future, and the responsibility to help others. Every month, we sit down for the Afterparty, where we break down our game and answer your questions about how to play D&D and other roleplaying games at home. We also have segments at the beginning of each campaign to teach people how to play the game themselves. It’s a party, and you’re invited! Find out more at jointhepartypod.com.",
+              "style": "description",
+              "alignment": "left",
+              "maxLines": 2
+            }
+          ],
+          "badges": [
+            {
+              "type": "collected"
+            }
+          ],
+          "pandoraId": "PC:26573",
+          "analyticsToken": "{\"generation\":\"1625448585235\",\"timezone\":\"AEST\",\"snum\":\"11\",\"secType\":\"horizontalScroll\",\"id\":\"PC:26573\",\"inum\":\"4\",\"itype\":\"split\",\"secId\":\"BS:1:38\"}",
+          "alignment": "left"
+        },
+        {
+          "type": "split",
+          "action": {
+            "type": "backstage",
+            "pandoraId": "PC:695"
+          },
+          "image": {
+            "scalableUrl": "https://dyn-images.p-cdn.com/?l=images%2F67%2F4d%2F65%2Fde%2F38874ca68d578c3f0993e37e%2F&c=90&f=jpeg",
+            "sizedUrl": "https://dyn-images.p-cdn.com/?l=images%2F67%2F4d%2F65%2Fde%2F38874ca68d578c3f0993e37e%2F&c=90&f=jpeg&w=$W$&h=$H$",
+            "border": true,
+            "discreteSizes": [
+              "90x90",
+              "130x130",
+              "500x500",
+              "640x640",
+              "1080x1080"
+            ]
+          },
+          "labels": [
+            {
+              "text": "Not Another D&D Podcast",
+              "style": "title",
+              "alignment": "left"
+            },
+            {
+              "text": "Podcast - 191 episodes",
+              "style": "detail",
+              "alignment": "left"
+            },
+            {
+              "text": "Welcome to the campaign after the campaign! Three unlikely adventurers attempt to right the wrongs caused by a party of legendary heroes who screwed up the world while trying to save it. DM Brian Murphy is joined by Emily Axford, Jake Hurwitz, and Caldwell Tanner for this D&D play podcast.",
+              "style": "description",
+              "alignment": "left",
+              "maxLines": 2
+            }
+          ],
+          "badges": [
+            {
+              "type": "collected"
+            },
+            {
+              "type": "newContent"
+            }
+          ],
+          "pandoraId": "PC:695",
+          "analyticsToken": "{\"generation\":\"1625448585235\",\"timezone\":\"AEST\",\"snum\":\"11\",\"secType\":\"horizontalScroll\",\"id\":\"PC:695\",\"inum\":\"5\",\"itype\":\"split\",\"secId\":\"BS:1:38\"}",
+          "alignment": "left"
+        },
+        {
+          "type": "split",
+          "action": {
+            "type": "backstage",
+            "pandoraId": "PC:564"
+          },
+          "image": {
+            "scalableUrl": "https://dyn-images.p-cdn.com/?l=images%2F2a%2Fb9%2F7e%2Fd3%2Fd97c4fe6b214d9c100e4226d%2F&c=90&f=jpeg",
+            "sizedUrl": "https://dyn-images.p-cdn.com/?l=images%2F2a%2Fb9%2F7e%2Fd3%2Fd97c4fe6b214d9c100e4226d%2F&c=90&f=jpeg&w=$W$&h=$H$",
+            "border": true,
+            "discreteSizes": [
+              "90x90",
+              "130x130",
+              "500x500",
+              "640x640",
+              "1080x1080"
+            ]
+          },
+          "labels": [
+            {
+              "text": "Joyce Meyer Radio Podcast",
+              "style": "title",
+              "alignment": "left"
+            },
+            {
+              "text": "Podcast - 893 episodes",
+              "style": "detail",
+              "alignment": "left"
+            },
+            {
+              "text": "JOYCE MEYER is one of the world’s leading practical Bible teachers. A New York Times bestselling author, her books have helped millions of people find hope and restoration through Jesus Christ. Through Joyce Meyer Ministries, she teaches on a number of topics with a particular focus on the mind, mouth, moods and attitudes. Her candid communication style allows her to share openly and practically about her experiences so others can apply what she has learned to their lives.",
+              "style": "description",
+              "alignment": "left",
+              "maxLines": 2
+            }
+          ],
+          "badges": [
+            {
+              "type": "collected"
+            },
+            {
+              "type": "newContent"
+            }
+          ],
+          "pandoraId": "PC:564",
+          "analyticsToken": "{\"generation\":\"1625448585235\",\"timezone\":\"AEST\",\"snum\":\"11\",\"secType\":\"horizontalScroll\",\"id\":\"PC:564\",\"inum\":\"6\",\"itype\":\"split\",\"secId\":\"BS:1:38\"}",
+          "alignment": "left"
+        },
+        {
+          "type": "split",
+          "action": {
+            "type": "backstage",
+            "pandoraId": "PC:1260"
+          },
+          "image": {
+            "scalableUrl": "https://dyn-images.p-cdn.com/?l=images%2Fb3%2Fa9%2F94%2Fc5%2F12554545bb3f8c7d37188c0a%2F&c=90&f=jpeg",
+            "sizedUrl": "https://dyn-images.p-cdn.com/?l=images%2Fb3%2Fa9%2F94%2Fc5%2F12554545bb3f8c7d37188c0a%2F&c=90&f=jpeg&w=$W$&h=$H$",
+            "border": true,
+            "discreteSizes": [
+              "90x90",
+              "130x130",
+              "500x500",
+              "640x640",
+              "1080x1080"
+            ]
+          },
+          "labels": [
+            {
+              "text": "Therapy for Black Girls",
+              "style": "title",
+              "alignment": "left"
+            },
+            {
+              "text": "Podcast - 224 episodes",
+              "style": "detail",
+              "alignment": "left"
+            },
+            {
+              "text": "The Therapy for Black Girls podcast is a weekly conversation with Dr. Joy Harden Bradford, a licensed psychologist in Atlanta, Georgia, about all things mental health, personal development, and all the small decisions we can make to become the best possible version of ourselves.",
+              "style": "description",
+              "alignment": "left",
+              "maxLines": 2
+            }
+          ],
+          "badges": [
+            {
+              "type": "collected"
+            },
+            {
+              "type": "newContent"
+            }
+          ],
+          "pandoraId": "PC:1260",
+          "analyticsToken": "{\"generation\":\"1625448585235\",\"timezone\":\"AEST\",\"snum\":\"11\",\"secType\":\"horizontalScroll\",\"id\":\"PC:1260\",\"inum\":\"7\",\"itype\":\"split\",\"secId\":\"BS:1:38\"}",
+          "alignment": "left"
+        },
+        {
+          "type": "split",
+          "action": {
+            "type": "backstage",
+            "pandoraId": "PC:32654"
+          },
+          "image": {
+            "scalableUrl": "https://dyn-images.p-cdn.com/?l=images%2F9d%2Ff9%2F4b%2F8f%2F72334d6980fdd387bcf8347f%2F&c=90&f=jpeg",
+            "sizedUrl": "https://dyn-images.p-cdn.com/?l=images%2F9d%2Ff9%2F4b%2F8f%2F72334d6980fdd387bcf8347f%2F&c=90&f=jpeg&w=$W$&h=$H$",
+            "border": true,
+            "discreteSizes": [
+              "90x90",
+              "130x130",
+              "500x500",
+              "640x640",
+              "1080x1080"
+            ]
+          },
+          "labels": [
+            {
+              "text": "KIDZ BOP Daily",
+              "style": "title",
+              "alignment": "left"
+            },
+            {
+              "text": "Podcast - 434 episodes",
+              "style": "detail",
+              "alignment": "left"
+            },
+            {
+              "text": "KIDZ BOP Daily is entertainment news by kids for kids! Each update features the latest KIDZ BOP news and fun facts for kids about music, pop culture and more! Check back in every day to make sure you don’t miss an update! Every day of the week has a theme: Motivation Monday, Tune-In Tuesday, Workout Wednesday, Throwback Thursday, Friday Favorite, Sing-It Saturday and Sunday Shout-outs.",
+              "style": "description",
+              "alignment": "left",
+              "maxLines": 2
+            }
+          ],
+          "badges": [
+            {
+              "type": "collected"
+            },
+            {
+              "type": "newContent"
+            }
+          ],
+          "pandoraId": "PC:32654",
+          "analyticsToken": "{\"generation\":\"1625448585235\",\"timezone\":\"AEST\",\"snum\":\"11\",\"secType\":\"horizontalScroll\",\"id\":\"PC:32654\",\"inum\":\"8\",\"itype\":\"split\",\"secId\":\"BS:1:38\"}",
+          "alignment": "left"
+        },
+        {
+          "type": "split",
+          "action": {
+            "type": "backstage",
+            "pandoraId": "PC:17414"
+          },
+          "image": {
+            "scalableUrl": "https://dyn-images.p-cdn.com/?l=images%2F18%2F54%2F49%2Fb3%2Fe89446cc9f46a1b21453cd83%2F&c=90&f=jpeg",
+            "sizedUrl": "https://dyn-images.p-cdn.com/?l=images%2F18%2F54%2F49%2Fb3%2Fe89446cc9f46a1b21453cd83%2F&c=90&f=jpeg&w=$W$&h=$H$",
+            "border": true,
+            "discreteSizes": [
+              "90x90",
+              "130x130",
+              "500x500",
+              "640x640",
+              "1080x1080"
+            ]
+          },
+          "labels": [
+            {
+              "text": "The Damage Guild | A D&D Podcast",
+              "style": "title",
+              "alignment": "left"
+            },
+            {
+              "text": "Podcast - 108 episodes",
+              "style": "detail",
+              "alignment": "left"
+            },
+            {
+              "text": "Do you like jokes, adventure, killing things, and friendship? Of course you do! The Damage Guild is an actual-play Dungeons & Dragons 5E (5th Edition) podcast with a focus on collaborative storytelling, character-driven narrative, and improv comedy shenanigans. Join us for new episodes every Monday, so you can kiss those weekend blues goodbye and get pumped to slay the dragon of your everyday life!",
+              "style": "description",
+              "alignment": "left",
+              "maxLines": 2
+            }
+          ],
+          "badges": [
+            {
+              "type": "collected"
+            },
+            {
+              "type": "newContent"
+            }
+          ],
+          "pandoraId": "PC:17414",
+          "analyticsToken": "{\"generation\":\"1625448585235\",\"timezone\":\"AEST\",\"snum\":\"11\",\"secType\":\"horizontalScroll\",\"id\":\"PC:17414\",\"inum\":\"9\",\"itype\":\"split\",\"secId\":\"BS:1:38\"}",
+          "alignment": "left"
+        },
+        {
+          "type": "split",
+          "action": {
+            "type": "backstage",
+            "pandoraId": "PC:11030"
+          },
+          "image": {
+            "scalableUrl": "https://dyn-images.p-cdn.com/?l=images%2F6d%2F30%2Fba%2F71%2Fe6274f04b7ed4da62c172901%2F&c=90&f=jpeg",
+            "sizedUrl": "https://dyn-images.p-cdn.com/?l=images%2F6d%2F30%2Fba%2F71%2Fe6274f04b7ed4da62c172901%2F&c=90&f=jpeg&w=$W$&h=$H$",
+            "border": true,
+            "discreteSizes": [
+              "90x90",
+              "130x130",
+              "500x500",
+              "640x640",
+              "1080x1080"
+            ]
+          },
+          "labels": [
+            {
+              "text": "Call Her Daddy",
+              "style": "title",
+              "alignment": "left"
+            },
+            {
+              "text": "Podcast - 126 episodes",
+              "style": "detail",
+              "alignment": "left"
+            },
+            {
+              "text": "Call Her Daddy started as a podcast and evolved into a global movement. Alex Cooper bulldozed a lane of her own, spitting in the face of misogyny and putting a modern twist on feminism. The woman-led empire produces raw, relevant and provocative conversations that promote sexual liberty and personal empowerment while stripping away any barriers of judgement. Strap in and enjoy, and more importantly - welcome to the Daddy Gang. Episodes on Wednesday - only on Spotify starting July 21st.",
+              "style": "description",
+              "alignment": "left",
+              "maxLines": 2
+            }
+          ],
+          "badges": [
+            {
+              "type": "collected"
+            },
+            {
+              "type": "newContent"
+            }
+          ],
+          "pandoraId": "PC:11030",
+          "analyticsToken": "{\"generation\":\"1625448585235\",\"timezone\":\"AEST\",\"snum\":\"11\",\"secType\":\"horizontalScroll\",\"id\":\"PC:11030\",\"inum\":\"10\",\"itype\":\"split\",\"secId\":\"BS:1:38\"}",
+          "alignment": "left"
+        },
+        {
+          "type": "split",
+          "action": {
+            "type": "backstage",
+            "pandoraId": "PC:31956"
+          },
+          "image": {
+            "scalableUrl": "https://dyn-images.p-cdn.com/?l=images%2F40%2Fdd%2Fb0%2Ff3%2F929146ac81d91df711ee5eea%2F&c=90&f=jpeg",
+            "sizedUrl": "https://dyn-images.p-cdn.com/?l=images%2F40%2Fdd%2Fb0%2Ff3%2F929146ac81d91df711ee5eea%2F&c=90&f=jpeg&w=$W$&h=$H$",
+            "border": true,
+            "discreteSizes": [
+              "90x90",
+              "130x130",
+              "500x500",
+              "640x640",
+              "1080x1080"
+            ]
+          },
+          "labels": [
+            {
+              "text": "Scared To Death",
+              "style": "title",
+              "alignment": "left"
+            },
+            {
+              "text": "Podcast - 97 episodes",
+              "style": "detail",
+              "alignment": "left"
+            },
+            {
+              "text": "True horror fan Dan Cummins attempts to terrify his wife Lynze with two new alleged-to-be-true tales each week. Demonic possession, poltergeists, shadow people, and more! Subscribe and listen in the dark to your new weekly nightmare.",
+              "style": "description",
+              "alignment": "left",
+              "maxLines": 2
+            }
+          ],
+          "badges": [
+            {
+              "type": "collected"
+            },
+            {
+              "type": "newContent"
+            }
+          ],
+          "pandoraId": "PC:31956",
+          "analyticsToken": "{\"generation\":\"1625448585235\",\"timezone\":\"AEST\",\"snum\":\"11\",\"secType\":\"horizontalScroll\",\"id\":\"PC:31956\",\"inum\":\"11\",\"itype\":\"split\",\"secId\":\"BS:1:38\"}",
+          "alignment": "left"
+        },
+        {
+          "type": "split",
+          "action": {
+            "type": "backstage",
+            "pandoraId": "PC:61418"
+          },
+          "image": {
+            "scalableUrl": "https://dyn-images.p-cdn.com/?l=images%2Fb7%2F43%2Fcf%2F21%2Fbadf437885d08ac85bd7f73b%2F&c=90&f=jpeg",
+            "sizedUrl": "https://dyn-images.p-cdn.com/?l=images%2Fb7%2F43%2Fcf%2F21%2Fbadf437885d08ac85bd7f73b%2F&c=90&f=jpeg&w=$W$&h=$H$",
+            "border": true,
+            "discreteSizes": [
+              "90x90",
+              "130x130",
+              "500x500",
+              "640x640",
+              "1080x1080"
+            ]
+          },
+          "labels": [
+            {
+              "text": "Marvel's Declassified",
+              "style": "title",
+              "alignment": "left"
+            },
+            {
+              "text": "Podcast - 13 episodes",
+              "style": "detail",
+              "alignment": "left"
+            },
+            {
+              "text": "Marvel's Declassified is a non-fiction narrative podcast focusing on the rich, dynamic, and evolving history of Marvel Comics - as told through a contemporary lens. Each episode is hosted by writer and comic book expert, Lorraine Cink (author of Powers of a Girl , co-author of Marvel Absolutely Everything You Need to Know, and Ultimate Marvel) and acclaimed journalist and critic Evan Narcisse (author of Marvel’s Rise of the Black Panther). Utilizing unique access to writers, artists, editors, and industry insiders who have shaped key storylines and witnessed firsthand the historical shifts within the comic book industry, we get the real story of Marvel Comics it could only be told by the House of Ideas itself.",
+              "style": "description",
+              "alignment": "left",
+              "maxLines": 2
+            }
+          ],
+          "badges": [
+            {
+              "type": "collected"
+            }
+          ],
+          "pandoraId": "PC:61418",
+          "analyticsToken": "{\"generation\":\"1625448585235\",\"timezone\":\"AEST\",\"snum\":\"11\",\"secType\":\"horizontalScroll\",\"id\":\"PC:61418\",\"inum\":\"12\",\"itype\":\"split\",\"secId\":\"BS:1:38\"}",
+          "alignment": "left"
+        },
+        {
+          "type": "split",
+          "action": {
+            "type": "backstage",
+            "pandoraId": "PC:555"
+          },
+          "image": {
+            "scalableUrl": "https://dyn-images.p-cdn.com/?l=images%2F8d%2F1f%2Fc8%2Fb4%2Fc75e44689c823331ba57bf9b%2F&c=90&f=jpeg",
+            "sizedUrl": "https://dyn-images.p-cdn.com/?l=images%2F8d%2F1f%2Fc8%2Fb4%2Fc75e44689c823331ba57bf9b%2F&c=90&f=jpeg&w=$W$&h=$H$",
+            "border": true,
+            "discreteSizes": [
+              "90x90",
+              "130x130",
+              "500x500",
+              "640x640",
+              "1080x1080"
+            ]
+          },
+          "labels": [
+            {
+              "text": "The Big Fib",
+              "style": "title",
+              "alignment": "left"
+            },
+            {
+              "text": "Podcast - 168 episodes",
+              "style": "detail",
+              "alignment": "left"
+            },
+            {
+              "text": "In the era of fake news, kids need to learn to be able to tell what’s true from what’s false. And what better way to do that than a game show that puts kids in the driver’s seat, adults on the hot seat, and a sound-effects robot strapped to the roof? Each week, a kid interviews two experts in a particular topic, one of which is a genuine, credentialed expert, the other a liar. Hilarious and fast-paced, the show teaches kids to ask insightful questions, weigh the evidence before them, and trust their guts. For more great Gen-Z shows, visit http://bestrobotever.com",
+              "style": "description",
+              "alignment": "left",
+              "maxLines": 2
+            }
+          ],
+          "badges": [
+            {
+              "type": "collected"
+            },
+            {
+              "type": "newContent"
+            }
+          ],
+          "pandoraId": "PC:555",
+          "analyticsToken": "{\"generation\":\"1625448585235\",\"timezone\":\"AEST\",\"snum\":\"11\",\"secType\":\"horizontalScroll\",\"id\":\"PC:555\",\"inum\":\"13\",\"itype\":\"split\",\"secId\":\"BS:1:38\"}",
+          "alignment": "left"
+        },
+        {
+          "type": "split",
+          "action": {
+            "type": "backstage",
+            "pandoraId": "PC:42279"
+          },
+          "image": {
+            "scalableUrl": "https://dyn-images.p-cdn.com/?l=images%2F7a%2F3c%2F97%2F84%2F0837411fb675f79288f2676c%2F&c=90&f=jpeg",
+            "sizedUrl": "https://dyn-images.p-cdn.com/?l=images%2F7a%2F3c%2F97%2F84%2F0837411fb675f79288f2676c%2F&c=90&f=jpeg&w=$W$&h=$H$",
+            "border": true,
+            "discreteSizes": [
+              "90x90",
+              "130x130",
+              "500x500",
+              "640x640",
+              "1080x1080"
+            ]
+          },
+          "labels": [
+            {
+              "text": "Joel Osteen Podcast",
+              "style": "title",
+              "alignment": "left"
+            },
+            {
+              "text": "Podcast - 737 episodes",
+              "style": "detail",
+              "alignment": "left"
+            },
+            {
+              "text": "Welcome to the Joel Osteen Daily Podcast. Joel & Victoria Osteen inspire people to reach their dreams, find fresh beginnings and live their best life. Both he and Victoria live in Houston, TX. Visit Joel’s website at joelosteen.com.",
+              "style": "description",
+              "alignment": "left",
+              "maxLines": 2
+            }
+          ],
+          "badges": [
+            {
+              "type": "collected"
+            },
+            {
+              "type": "newContent"
+            }
+          ],
+          "pandoraId": "PC:42279",
+          "analyticsToken": "{\"generation\":\"1625448585235\",\"timezone\":\"AEST\",\"snum\":\"11\",\"secType\":\"horizontalScroll\",\"id\":\"PC:42279\",\"inum\":\"14\",\"itype\":\"split\",\"secId\":\"BS:1:38\"}",
+          "alignment": "left"
+        },
+        {
+          "type": "split",
+          "action": {
+            "type": "backstage",
+            "pandoraId": "PC:16811"
+          },
+          "image": {
+            "scalableUrl": "https://dyn-images.p-cdn.com/?l=images%2F23%2F4e%2F0a%2F5a%2Feea94e31867cfdb5c4caab7e%2F&c=90&f=jpeg",
+            "sizedUrl": "https://dyn-images.p-cdn.com/?l=images%2F23%2F4e%2F0a%2F5a%2Feea94e31867cfdb5c4caab7e%2F&c=90&f=jpeg&w=$W$&h=$H$",
+            "border": true,
+            "discreteSizes": [
+              "90x90",
+              "130x130",
+              "500x500",
+              "640x640",
+              "1080x1080"
+            ]
+          },
+          "labels": [
+            {
+              "text": "Something Scary",
+              "style": "title",
+              "alignment": "left"
+            },
+            {
+              "text": "Podcast - 145 episodes",
+              "style": "detail",
+              "alignment": "left"
+            },
+            {
+              "text": "Do you wanna hear something scary? Join Markeia every week as they bring you the creepiest ghost stories, urban legends, and folktales. Wanna hear something scary without ads? Click here: https://somethingscary.supercast.tech/Take our survey: https://bit.ly/2EcYbu4.For advertising opportunities please email PodcastPartnerships@Studio71us.com",
+              "style": "description",
+              "alignment": "left",
+              "maxLines": 2
+            }
+          ],
+          "badges": [
+            {
+              "type": "collected"
+            },
+            {
+              "type": "newContent"
+            }
+          ],
+          "pandoraId": "PC:16811",
+          "analyticsToken": "{\"generation\":\"1625448585235\",\"timezone\":\"AEST\",\"snum\":\"11\",\"secType\":\"horizontalScroll\",\"id\":\"PC:16811\",\"inum\":\"15\",\"itype\":\"split\",\"secId\":\"BS:1:38\"}",
+          "alignment": "left"
+        }
+      ],
+      "sectionId": "BS:1:38",
+      "scrollType": "snap",
+      "formFactors": {
+        "portrait": {
+          "numRows": 3,
+          "numCols": 1
+        },
+        "landscape": {
+          "numRows": 3,
+          "numCols": 2
+        }
+      }
+    }
+  ],
+  "title": {
+    "type": "header",
+    "labels": [
+      {
+        "text": "Podcasts You Might Like",
+        "style": "header"
+      },
+      {
+        "text": "Based on your recent listening",
+        "style": "detail"
+      }
+    ],
+    "analyticsToken": "{\"generation\":\"1625448585235\",\"timezone\":\"AEST\",\"snum\":\"11\",\"secType\":\"header\",\"inum\":\"0\",\"itype\":\"header\",\"secId\":\"BS:1:38\"}"
+  },
+  "viewAll": {
+    "type": "footer",
+    "action": {
+      "type": "directory",
+      "pandoraId": "BR:38",
+      "title": "Podcasts",
+      "loadingScreen": "deep_default"
+    },
+    "labels": [
+      {
+        "text": "See all podcasts",
+        "style": "title"
+      }
+    ],
+    "button": {
+      "type": "link",
+      "analyticsToken": "{'generation':'1625448585235','button':'link','timezone':'AEST','snum':'11','secType':'viewall','id':'BR:38','inum':'0','itype':'footer','secId':'BS:1:38'}"
+    },
+    "analyticsToken": "{\"generation\":\"1625448585235\",\"timezone\":\"AEST\",\"snum\":\"11\",\"secType\":\"viewall\",\"id\":\"BR:38\",\"inum\":\"0\",\"itype\":\"footer\",\"secId\":\"BS:1:38\"}"
+  }
+}

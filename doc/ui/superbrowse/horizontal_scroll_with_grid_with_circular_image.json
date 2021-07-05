@@ -1,0 +1,258 @@
+{
+  "id": "BS:1:56:1",
+  "subsections": [
+    {
+      "subsectionType": "horizontalScroll",
+      "items": [
+        {
+          "type": "grid",
+          "action": {
+            "type": "backstage",
+            "pandoraId": "AR:558122"
+          },
+          "image": {
+            "scalableUrl": "https://dyn-images.p-cdn.com/?l=images%2F2e%2F2f%2Fa5%2F5c%2F75a24adc8e7993793d3fc3de%2F%3Bcoverbyposition(bottom)&c=90&f=jpeg",
+            "sizedUrl": "https://dyn-images.p-cdn.com/?l=images%2F2e%2F2f%2Fa5%2F5c%2F75a24adc8e7993793d3fc3de%2F%3Bcoverbyposition(bottom)&c=90&f=jpeg&w=$W$&h=$H$",
+            "circular": true,
+            "border": true,
+            "dominantColor": "60ae84",
+            "discreteSizes": [
+              "90x90",
+              "130x130",
+              "500x500",
+              "640x640",
+              "1080x1080"
+            ]
+          },
+          "labels": [
+            {
+              "text": "Sigrid",
+              "style": "title",
+              "alignment": "center"
+            },
+            {
+              "text": "101K monthly listeners",
+              "style": "detail",
+              "alignment": "center"
+            }
+          ],
+          "badges": [],
+          "pandoraId": "AR:558122",
+          "analyticsToken": "{\"generation\":\"1625448585235\",\"timezone\":\"AEST\",\"snum\":\"14\",\"secType\":\"horizontalScroll\",\"id\":\"AR:558122\",\"inum\":\"0\",\"itype\":\"grid\",\"secId\":\"BS:1:56:1\"}",
+          "alignment": "center"
+        },
+        {
+          "type": "grid",
+          "action": {
+            "type": "backstage",
+            "pandoraId": "AR:2127307"
+          },
+          "image": {
+            "scalableUrl": "https://dyn-images.p-cdn.com/?l=images%2F51%2F3f%2F3f%2F4d%2F54e343b6ab4f40830f79be98%2F%3Bcoverbyposition(bottom)&c=90&f=jpeg",
+            "sizedUrl": "https://dyn-images.p-cdn.com/?l=images%2F51%2F3f%2F3f%2F4d%2F54e343b6ab4f40830f79be98%2F%3Bcoverbyposition(bottom)&c=90&f=jpeg&w=$W$&h=$H$",
+            "circular": true,
+            "border": true,
+            "dominantColor": "3321db",
+            "discreteSizes": [
+              "90x90",
+              "130x130",
+              "500x500",
+              "640x640",
+              "1080x1080"
+            ]
+          },
+          "labels": [
+            {
+              "text": "GALXARA",
+              "style": "title",
+              "alignment": "center"
+            },
+            {
+              "text": "404 monthly listeners",
+              "style": "detail",
+              "alignment": "center"
+            }
+          ],
+          "badges": [],
+          "pandoraId": "AR:2127307",
+          "analyticsToken": "{\"generation\":\"1625448585235\",\"timezone\":\"AEST\",\"snum\":\"14\",\"secType\":\"horizontalScroll\",\"id\":\"AR:2127307\",\"inum\":\"1\",\"itype\":\"grid\",\"secId\":\"BS:1:56:1\"}",
+          "alignment": "center"
+        },
+        {
+          "type": "grid",
+          "action": {
+            "type": "backstage",
+            "pandoraId": "AR:1948811"
+          },
+          "image": {
+            "scalableUrl": "https://dyn-images.p-cdn.com/?l=images%2Fe3%2F64%2Fcc%2Fad%2F87bf4feaa06f9a370023b975%2F%3Bcoverbyposition(bottom)&c=90&f=jpeg",
+            "sizedUrl": "https://dyn-images.p-cdn.com/?l=images%2Fe3%2F64%2Fcc%2Fad%2F87bf4feaa06f9a370023b975%2F%3Bcoverbyposition(bottom)&c=90&f=jpeg&w=$W$&h=$H$",
+            "circular": true,
+            "border": true,
+            "dominantColor": "a56327",
+            "discreteSizes": [
+              "90x90",
+              "130x130",
+              "500x500",
+              "640x640",
+              "1080x1080"
+            ]
+          },
+          "labels": [
+            {
+              "text": "Little Hurt",
+              "style": "title",
+              "alignment": "center"
+            },
+            {
+              "text": "12K monthly listeners",
+              "style": "detail",
+              "alignment": "center"
+            }
+          ],
+          "badges": [],
+          "pandoraId": "AR:1948811",
+          "analyticsToken": "{\"generation\":\"1625448585235\",\"timezone\":\"AEST\",\"snum\":\"14\",\"secType\":\"horizontalScroll\",\"id\":\"AR:1948811\",\"inum\":\"2\",\"itype\":\"grid\",\"secId\":\"BS:1:56:1\"}",
+          "alignment": "center"
+        },
+        {
+          "type": "grid",
+          "action": {
+            "type": "backstage",
+            "pandoraId": "AR:1772194"
+          },
+          "image": {
+            "scalableUrl": "https://dyn-images.p-cdn.com/?l=images%2F1f%2F2f%2Fb6%2F7c%2Ffd7d4bf7bbc00b3f85f76c53%2F%3Bcoverbyposition(bottom)&c=90&f=jpeg",
+            "sizedUrl": "https://dyn-images.p-cdn.com/?l=images%2F1f%2F2f%2Fb6%2F7c%2Ffd7d4bf7bbc00b3f85f76c53%2F%3Bcoverbyposition(bottom)&c=90&f=jpeg&w=$W$&h=$H$",
+            "circular": true,
+            "border": true,
+            "dominantColor": "601809",
+            "discreteSizes": [
+              "90x90",
+              "130x130",
+              "500x500",
+              "640x640",
+              "1080x1080"
+            ]
+          },
+          "labels": [
+            {
+              "text": "Evie Irie",
+              "style": "title",
+              "alignment": "center"
+            },
+            {
+              "text": "3K monthly listeners",
+              "style": "detail",
+              "alignment": "center"
+            }
+          ],
+          "badges": [],
+          "pandoraId": "AR:1772194",
+          "analyticsToken": "{\"generation\":\"1625448585235\",\"timezone\":\"AEST\",\"snum\":\"14\",\"secType\":\"horizontalScroll\",\"id\":\"AR:1772194\",\"inum\":\"3\",\"itype\":\"grid\",\"secId\":\"BS:1:56:1\"}",
+          "alignment": "center"
+        },
+        {
+          "type": "grid",
+          "action": {
+            "type": "backstage",
+            "pandoraId": "AR:1333303"
+          },
+          "image": {
+            "scalableUrl": "https://dyn-images.p-cdn.com/?l=images%2F33%2F74%2F15%2F13%2Fc60e47bf84b08635ce22dd33%2F%3Bcoverbyposition(bottom)&c=90&f=jpeg",
+            "sizedUrl": "https://dyn-images.p-cdn.com/?l=images%2F33%2F74%2F15%2F13%2Fc60e47bf84b08635ce22dd33%2F%3Bcoverbyposition(bottom)&c=90&f=jpeg&w=$W$&h=$H$",
+            "circular": true,
+            "border": true,
+            "dominantColor": "00ffff",
+            "discreteSizes": [
+              "90x90",
+              "130x130",
+              "500x500",
+              "640x640",
+              "1080x1080"
+            ]
+          },
+          "labels": [
+            {
+              "text": "Jagwar Twin",
+              "style": "title",
+              "alignment": "center"
+            },
+            {
+              "text": "11K monthly listeners",
+              "style": "detail",
+              "alignment": "center"
+            }
+          ],
+          "badges": [],
+          "pandoraId": "AR:1333303",
+          "analyticsToken": "{\"generation\":\"1625448585235\",\"timezone\":\"AEST\",\"snum\":\"14\",\"secType\":\"horizontalScroll\",\"id\":\"AR:1333303\",\"inum\":\"4\",\"itype\":\"grid\",\"secId\":\"BS:1:56:1\"}",
+          "alignment": "center"
+        },
+        {
+          "type": "grid",
+          "action": {
+            "type": "backstage",
+            "pandoraId": "AR:711461"
+          },
+          "image": {
+            "scalableUrl": "https://dyn-images.p-cdn.com/?l=images%2Ffa%2F89%2F10%2F57%2Fe83e4b01a8e7fb4015ea2d55%2F%3Bcoverbyposition(bottom)&c=90&f=jpeg",
+            "sizedUrl": "https://dyn-images.p-cdn.com/?l=images%2Ffa%2F89%2F10%2F57%2Fe83e4b01a8e7fb4015ea2d55%2F%3Bcoverbyposition(bottom)&c=90&f=jpeg&w=$W$&h=$H$",
+            "circular": true,
+            "border": true,
+            "dominantColor": "212121",
+            "discreteSizes": [
+              "90x90",
+              "130x130",
+              "500x500",
+              "640x640",
+              "1080x1080"
+            ]
+          },
+          "labels": [
+            {
+              "text": "Ocean Park Standoff",
+              "style": "title",
+              "alignment": "center"
+            },
+            {
+              "text": "21K monthly listeners",
+              "style": "detail",
+              "alignment": "center"
+            }
+          ],
+          "badges": [],
+          "pandoraId": "AR:711461",
+          "analyticsToken": "{\"generation\":\"1625448585235\",\"timezone\":\"AEST\",\"snum\":\"14\",\"secType\":\"horizontalScroll\",\"id\":\"AR:711461\",\"inum\":\"5\",\"itype\":\"grid\",\"secId\":\"BS:1:56:1\"}",
+          "alignment": "center"
+        }
+      ],
+      "sectionId": "BS:1:56:1",
+      "scrollType": "smooth",
+      "formFactors": {
+        "portrait": {
+          "numRows": 1,
+          "numCols": 2
+        },
+        "landscape": {
+          "numRows": 1,
+          "numCols": 4
+        }
+      }
+    }
+  ],
+  "title": {
+    "type": "header",
+    "labels": [
+      {
+        "text": "Discover Something New",
+        "style": "header"
+      },
+      {
+        "text": "Based on your recent listening",
+        "style": "detail"
+      }
+    ],
+    "analyticsToken": "{\"generation\":\"1625448585235\",\"timezone\":\"AEST\",\"snum\":\"14\",\"secType\":\"header\",\"inum\":\"0\",\"itype\":\"header\",\"secId\":\"BS:1:56:1\"}"
+  }
+}

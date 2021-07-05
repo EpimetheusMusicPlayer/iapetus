@@ -1,0 +1,408 @@
+{
+  "id": "BS:1:32",
+  "subsections": [
+    {
+      "subsectionType": "recentlyPlayed",
+      "items": [],
+      "sectionId": "BS:1:32",
+      "newItemTemplate": {
+        "ST": {
+          "type": "grid",
+          "action": {
+            "type": "backstage",
+            "pandoraId": "$ID$"
+          },
+          "image": {
+            "fullUrl": "$FULLURL$",
+            "dominantColor": "80C7FF"
+          },
+          "labels": [
+            {
+              "text": "$NAME$",
+              "style": "title",
+              "alignment": "left"
+            },
+            {
+              "text": "Station",
+              "style": "detail",
+              "alignment": "left"
+            },
+            {
+              "text": " ",
+              "style": "detail",
+              "alignment": "left"
+            }
+          ],
+          "badges": [
+            {
+              "type": "collected"
+            }
+          ],
+          "pandoraId": "$ID$",
+          "analyticsToken": "{\"generation\":\"1625448585235\",\"timezone\":\"AEST\",\"snum\":\"4\",\"secType\":\"recentlyPlayed\",\"id\":\"$ID$\",\"itype\":\"grid\",\"secId\":\"BS:1:32\"}",
+          "alignment": "left"
+        },
+        "AR": {
+          "type": "grid",
+          "action": {
+            "type": "backstage",
+            "pandoraId": "$ID$"
+          },
+          "image": {
+            "scalableUrl": "https://dyn-images.p-cdn.com/?l=$ARTID$",
+            "sizedUrl": "https://dyn-images.p-cdn.com/?l=$ARTID$",
+            "circular": true,
+            "dominantColor": "80C7FF",
+            "discreteSizes": [
+              "90x90",
+              "130x130",
+              "500x500",
+              "640x640",
+              "1080x1080"
+            ]
+          },
+          "labels": [
+            {
+              "text": "$NAME$",
+              "style": "title",
+              "alignment": "center"
+            },
+            {
+              "text": "Top Songs",
+              "style": "detail",
+              "alignment": "center"
+            },
+            {
+              "text": " ",
+              "style": "detail",
+              "alignment": "left"
+            }
+          ],
+          "pandoraId": "$ID$",
+          "analyticsToken": "{\"generation\":\"1625448585235\",\"timezone\":\"AEST\",\"snum\":\"4\",\"secType\":\"recentlyPlayed\",\"id\":\"$ID$\",\"itype\":\"grid\",\"secId\":\"BS:1:32\"}"
+        },
+        "PC": {
+          "type": "grid",
+          "action": {
+            "type": "backstage",
+            "pandoraId": "$ID$"
+          },
+          "image": {
+            "scalableUrl": "https://dyn-images.p-cdn.com/?l=$ARTID$",
+            "sizedUrl": "https://dyn-images.p-cdn.com/?l=$ARTID$",
+            "dominantColor": "80C7FF",
+            "discreteSizes": [
+              "90x90",
+              "130x130",
+              "500x500",
+              "640x640",
+              "1080x1080"
+            ]
+          },
+          "labels": [
+            {
+              "text": "$NAME$",
+              "style": "title",
+              "alignment": "left"
+            },
+            {
+              "text": "Podcast",
+              "style": "detail",
+              "alignment": "left"
+            },
+            {
+              "text": " ",
+              "style": "detail",
+              "alignment": "left"
+            }
+          ],
+          "badges": [
+            {
+              "type": "$EXPLICITNESS$"
+            },
+            {
+              "type": "collected"
+            }
+          ],
+          "pandoraId": "$ID$",
+          "analyticsToken": "{\"generation\":\"1625448585235\",\"timezone\":\"AEST\",\"snum\":\"4\",\"secType\":\"recentlyPlayed\",\"id\":\"$ID$\",\"itype\":\"grid\",\"secId\":\"BS:1:32\"}",
+          "alignment": "left"
+        },
+        "AT": {
+          "type": "grid",
+          "action": {
+            "type": "backstage",
+            "pandoraId": "$ID$"
+          },
+          "image": {
+            "scalableUrl": "https://dyn-images.p-cdn.com/?l=$ARTID$",
+            "sizedUrl": "https://dyn-images.p-cdn.com/?l=$ARTID$",
+            "circular": true,
+            "dominantColor": "80C7FF",
+            "discreteSizes": [
+              "90x90",
+              "130x130",
+              "500x500",
+              "640x640",
+              "1080x1080"
+            ]
+          },
+          "labels": [
+            {
+              "text": "$NAME$",
+              "style": "title",
+              "alignment": "center"
+            },
+            {
+              "text": "All Songs",
+              "style": "detail",
+              "alignment": "center"
+            },
+            {
+              "text": " ",
+              "style": "detail",
+              "alignment": "left"
+            }
+          ],
+          "pandoraId": "$ID$",
+          "analyticsToken": "{\"generation\":\"1625448585235\",\"timezone\":\"AEST\",\"snum\":\"4\",\"secType\":\"recentlyPlayed\",\"id\":\"$ID$\",\"itype\":\"grid\",\"secId\":\"BS:1:32\"}"
+        },
+        "AL": {
+          "type": "grid",
+          "action": {
+            "type": "backstage",
+            "pandoraId": "$ID$"
+          },
+          "image": {
+            "scalableUrl": "https://dyn-images.p-cdn.com/?l=$ARTID$",
+            "sizedUrl": "https://dyn-images.p-cdn.com/?l=$ARTID$",
+            "dominantColor": "80C7FF",
+            "discreteSizes": [
+              "90x90",
+              "130x130",
+              "500x500",
+              "640x640",
+              "1080x1080"
+            ]
+          },
+          "labels": [
+            {
+              "text": "$NAME$",
+              "style": "title",
+              "alignment": "left"
+            },
+            {
+              "text": "Album",
+              "style": "detail",
+              "alignment": "left"
+            },
+            {
+              "text": "$NUMTRACKS$",
+              "style": "detail",
+              "alignment": "left"
+            }
+          ],
+          "badges": [
+            {
+              "type": "$EXPLICITNESS$"
+            },
+            {
+              "type": "collected"
+            }
+          ],
+          "pandoraId": "$ID$",
+          "analyticsToken": "{\"generation\":\"1625448585235\",\"timezone\":\"AEST\",\"snum\":\"4\",\"secType\":\"recentlyPlayed\",\"id\":\"$ID$\",\"itype\":\"grid\",\"secId\":\"BS:1:32\"}",
+          "alignment": "left"
+        },
+        "PL": {
+          "type": "grid",
+          "action": {
+            "type": "backstage",
+            "pandoraId": "$ID$"
+          },
+          "image": {
+            "scalableUrl": "$FULLURL$",
+            "sizedUrl": "$FULLURL$",
+            "dominantColor": "80C7FF",
+            "discreteSizes": [
+              "90x90",
+              "130x130",
+              "500x500",
+              "640x640",
+              "1080x1080"
+            ]
+          },
+          "labels": [
+            {
+              "text": "$NAME$",
+              "style": "title",
+              "alignment": "left"
+            },
+            {
+              "text": "Playlist",
+              "style": "detail",
+              "alignment": "left"
+            },
+            {
+              "text": "$NUMTRACKS$",
+              "style": "detail",
+              "alignment": "left"
+            }
+          ],
+          "badges": [
+            {
+              "type": "collected"
+            }
+          ],
+          "pandoraId": "$ID$",
+          "analyticsToken": "{\"generation\":\"1625448585235\",\"timezone\":\"AEST\",\"snum\":\"4\",\"secType\":\"recentlyPlayed\",\"id\":\"$ID$\",\"itype\":\"grid\",\"secId\":\"BS:1:32\"}",
+          "alignment": "left"
+        },
+        "TR": {
+          "type": "grid",
+          "action": {
+            "type": "backstage",
+            "pandoraId": "$ID$"
+          },
+          "image": {
+            "scalableUrl": "https://dyn-images.p-cdn.com/?l=$ARTID$",
+            "sizedUrl": "https://dyn-images.p-cdn.com/?l=$ARTID$",
+            "dominantColor": "80C7FF",
+            "discreteSizes": [
+              "90x90",
+              "130x130",
+              "500x500",
+              "640x640",
+              "1080x1080"
+            ]
+          },
+          "labels": [
+            {
+              "text": "$NAME$",
+              "style": "title",
+              "alignment": "left"
+            },
+            {
+              "text": "$ARTISTNAME$",
+              "style": "detail",
+              "alignment": "left"
+            },
+            {
+              "text": "Song - $TRACKLENGTH$",
+              "style": "detail",
+              "alignment": "left"
+            }
+          ],
+          "badges": [
+            {
+              "type": "$EXPLICITNESS$"
+            },
+            {
+              "type": "collected"
+            }
+          ],
+          "pandoraId": "$ID$",
+          "analyticsToken": "{\"generation\":\"1625448585235\",\"timezone\":\"AEST\",\"snum\":\"4\",\"secType\":\"recentlyPlayed\",\"id\":\"$ID$\",\"itype\":\"grid\",\"secId\":\"BS:1:32\"}",
+          "alignment": "left"
+        },
+        "GE": {
+          "type": "grid",
+          "action": {
+            "type": "backstage",
+            "pandoraId": "$ID$"
+          },
+          "image": {
+            "fullUrl": "$FULLURL$",
+            "dominantColor": "80C7FF"
+          },
+          "labels": [
+            {
+              "text": "$NAME$",
+              "style": "title",
+              "alignment": "left"
+            },
+            {
+              "text": "Station",
+              "style": "detail",
+              "alignment": "left"
+            },
+            {
+              "text": " ",
+              "style": "detail",
+              "alignment": "left"
+            }
+          ],
+          "badges": [
+            {
+              "type": "collected"
+            }
+          ],
+          "pandoraId": "$ID$",
+          "analyticsToken": "{\"generation\":\"1625448585235\",\"timezone\":\"AEST\",\"snum\":\"4\",\"secType\":\"recentlyPlayed\",\"id\":\"$ID$\",\"itype\":\"grid\",\"secId\":\"BS:1:32\"}",
+          "alignment": "left"
+        },
+        "AP": {
+          "type": "grid",
+          "action": {
+            "type": "backstage",
+            "pandoraId": "$ID$"
+          },
+          "image": {
+            "scalableUrl": "https://dyn-images.p-cdn.com/?l=$ARTID$",
+            "sizedUrl": "https://dyn-images.p-cdn.com/?l=$ARTID$",
+            "circular": true,
+            "dominantColor": "80C7FF",
+            "discreteSizes": [
+              "90x90",
+              "130x130",
+              "500x500",
+              "640x640",
+              "1080x1080"
+            ]
+          },
+          "labels": [
+            {
+              "text": "$NAME$",
+              "style": "title",
+              "alignment": "center"
+            },
+            {
+              "text": "Top Songs",
+              "style": "detail",
+              "alignment": "center"
+            },
+            {
+              "text": " ",
+              "style": "detail",
+              "alignment": "left"
+            }
+          ],
+          "pandoraId": "$ID$",
+          "analyticsToken": "{\"generation\":\"1625448585235\",\"timezone\":\"AEST\",\"snum\":\"4\",\"secType\":\"recentlyPlayed\",\"id\":\"$ID$\",\"itype\":\"grid\",\"secId\":\"BS:1:32\"}"
+        }
+      },
+      "minRequired": 2,
+      "maxRequired": 20,
+      "formFactors": {
+        "portrait": {
+          "numRows": 1,
+          "numCols": 2
+        },
+        "landscape": {
+          "numRows": 1,
+          "numCols": 4
+        }
+      }
+    }
+  ],
+  "title": {
+    "type": "header",
+    "labels": [
+      {
+        "text": "Recently Played",
+        "style": "header"
+      }
+    ],
+    "analyticsToken": "{\"generation\":\"1625448585235\",\"timezone\":\"AEST\",\"snum\":\"3\",\"secType\":\"header\",\"inum\":\"0\",\"itype\":\"header\",\"secId\":\"BS:1:32\"}"
+  }
+}

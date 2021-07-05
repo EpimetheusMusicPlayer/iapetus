@@ -1,0 +1,235 @@
+{
+  "id": "BS:1:15",
+  "subsections": [
+    {
+      "subsectionType": "verticalList",
+      "items": [
+        {
+          "type": "large_row",
+          "action": {
+            "type": "backstage",
+            "pandoraId": "AR:1451284"
+          },
+          "image": {
+            "scalableUrl": "https://dyn-images.p-cdn.com/?l=images%2F80%2Fcb%2F1f%2Ff6%2F77aa4d68950fa751295067af%2F%3Bcoverbyposition(bottom)&c=90&f=jpeg",
+            "sizedUrl": "https://dyn-images.p-cdn.com/?l=images%2F80%2Fcb%2F1f%2Ff6%2F77aa4d68950fa751295067af%2F%3Bcoverbyposition(bottom)&c=90&f=jpeg&w=$W$&h=$H$",
+            "circular": true,
+            "border": true,
+            "dominantColor": "845742",
+            "discreteSizes": [
+              "90x90",
+              "130x130",
+              "500x500",
+              "640x640",
+              "1080x1080"
+            ]
+          },
+          "labels": [
+            {
+              "text": "Masked Wolf",
+              "style": "title",
+              "alignment": "left"
+            },
+            {
+              "text": "7.5K new listeners",
+              "style": "detail",
+              "alignment": "left"
+            }
+          ],
+          "button": {
+            "type": "play",
+            "action": {
+              "type": "togglePlay",
+              "pandoraId": "AR:1451284"
+            },
+            "analyticsToken": "{'generation':'1625448585235','button':'play','timezone':'AEST','snum':'9','secType':'verticalList','id':'AR:1451284','inum':'0','itype':'large_row','secId':'BS:1:15'}"
+          },
+          "badges": [],
+          "pandoraId": "AR:1451284",
+          "rank": {
+            "text": "1",
+            "style": "detail",
+            "alignment": "left"
+          },
+          "analyticsToken": "{\"generation\":\"1625448585235\",\"timezone\":\"AEST\",\"snum\":\"9\",\"secType\":\"verticalList\",\"id\":\"AR:1451284\",\"inum\":\"0\",\"itype\":\"large_row\",\"secId\":\"BS:1:15\"}",
+          "separatorBelow": true,
+          "alignment": "left"
+        },
+        {
+          "type": "large_row",
+          "action": {
+            "type": "backstage",
+            "pandoraId": "AR:5586159"
+          },
+          "image": {
+            "fullUrl": "https://www.pandora.com/web-version/1.54.0/images/artist_500.png",
+            "circular": true,
+            "dominantColor": "54BAF5"
+          },
+          "labels": [
+            {
+              "text": "J. Cole, 21 Savage & Morray",
+              "style": "title",
+              "alignment": "left"
+            },
+            {
+              "text": "5.4K new listeners",
+              "style": "detail",
+              "alignment": "left"
+            }
+          ],
+          "button": {
+            "type": "play",
+            "action": {
+              "type": "togglePlay",
+              "pandoraId": "AR:5586159"
+            },
+            "analyticsToken": "{'generation':'1625448585235','button':'play','timezone':'AEST','snum':'9','secType':'verticalList','id':'AR:5586159','inum':'1','itype':'large_row','secId':'BS:1:15'}"
+          },
+          "badges": [],
+          "pandoraId": "AR:5586159",
+          "rank": {
+            "text": "2",
+            "style": "detail",
+            "alignment": "left"
+          },
+          "analyticsToken": "{\"generation\":\"1625448585235\",\"timezone\":\"AEST\",\"snum\":\"9\",\"secType\":\"verticalList\",\"id\":\"AR:5586159\",\"inum\":\"1\",\"itype\":\"large_row\",\"secId\":\"BS:1:15\"}",
+          "separatorBelow": true,
+          "alignment": "left"
+        },
+        {
+          "type": "large_row",
+          "action": {
+            "type": "backstage",
+            "pandoraId": "AR:2684565"
+          },
+          "image": {
+            "scalableUrl": "https://dyn-images.p-cdn.com/?l=images%2Fd9%2F1d%2F25%2F08%2F970741e8bdbb94a95579c899%2F%3Bcoverbyposition(bottom)&c=90&f=jpeg",
+            "sizedUrl": "https://dyn-images.p-cdn.com/?l=images%2Fd9%2F1d%2F25%2F08%2F970741e8bdbb94a95579c899%2F%3Bcoverbyposition(bottom)&c=90&f=jpeg&w=$W$&h=$H$",
+            "circular": true,
+            "border": true,
+            "dominantColor": "5d2d00",
+            "discreteSizes": [
+              "90x90",
+              "130x130",
+              "500x500",
+              "640x640",
+              "1080x1080"
+            ]
+          },
+          "labels": [
+            {
+              "text": "Luis R. Conriquez",
+              "style": "title",
+              "alignment": "left"
+            },
+            {
+              "text": "4.2K new listeners",
+              "style": "detail",
+              "alignment": "left"
+            }
+          ],
+          "button": {
+            "type": "play",
+            "action": {
+              "type": "togglePlay",
+              "pandoraId": "AR:2684565"
+            },
+            "analyticsToken": "{'generation':'1625448585235','button':'play','timezone':'AEST','snum':'9','secType':'verticalList','id':'AR:2684565','inum':'2','itype':'large_row','secId':'BS:1:15'}"
+          },
+          "badges": [],
+          "pandoraId": "AR:2684565",
+          "rank": {
+            "text": "3",
+            "style": "detail",
+            "alignment": "left"
+          },
+          "analyticsToken": "{\"generation\":\"1625448585235\",\"timezone\":\"AEST\",\"snum\":\"9\",\"secType\":\"verticalList\",\"id\":\"AR:2684565\",\"inum\":\"2\",\"itype\":\"large_row\",\"secId\":\"BS:1:15\"}",
+          "separatorBelow": true,
+          "alignment": "left"
+        },
+        {
+          "type": "large_row",
+          "action": {
+            "type": "backstage",
+            "pandoraId": "AR:3080334"
+          },
+          "image": {
+            "scalableUrl": "https://dyn-images.p-cdn.com/?l=images%2F03%2Fc3%2F04%2Fff%2Ffa8c4cae8a9b14ac74afe5fa%2F%3Bcoverbyposition(bottom)&c=90&f=jpeg",
+            "sizedUrl": "https://dyn-images.p-cdn.com/?l=images%2F03%2Fc3%2F04%2Fff%2Ffa8c4cae8a9b14ac74afe5fa%2F%3Bcoverbyposition(bottom)&c=90&f=jpeg&w=$W$&h=$H$",
+            "circular": true,
+            "border": true,
+            "dominantColor": "0045a5",
+            "discreteSizes": [
+              "90x90",
+              "130x130",
+              "500x500",
+              "640x640",
+              "1080x1080"
+            ]
+          },
+          "labels": [
+            {
+              "text": "EST Gee",
+              "style": "title",
+              "alignment": "left"
+            },
+            {
+              "text": "3.3K new listeners",
+              "style": "detail",
+              "alignment": "left"
+            }
+          ],
+          "button": {
+            "type": "play",
+            "action": {
+              "type": "togglePlay",
+              "pandoraId": "AR:3080334"
+            },
+            "analyticsToken": "{'generation':'1625448585235','button':'play','timezone':'AEST','snum':'9','secType':'verticalList','id':'AR:3080334','inum':'3','itype':'large_row','secId':'BS:1:15'}"
+          },
+          "badges": [],
+          "pandoraId": "AR:3080334",
+          "rank": {
+            "text": "4",
+            "style": "detail",
+            "alignment": "left"
+          },
+          "analyticsToken": "{\"generation\":\"1625448585235\",\"timezone\":\"AEST\",\"snum\":\"9\",\"secType\":\"verticalList\",\"id\":\"AR:3080334\",\"inum\":\"3\",\"itype\":\"large_row\",\"secId\":\"BS:1:15\"}",
+          "alignment": "left"
+        }
+      ],
+      "sectionId": "BS:1:15"
+    }
+  ],
+  "title": {
+    "type": "header",
+    "labels": [
+      {
+        "text": "Trendsetters: Artists on the Rise",
+        "style": "header"
+      }
+    ],
+    "analyticsToken": "{\"generation\":\"1625448585235\",\"timezone\":\"AEST\",\"snum\":\"9\",\"secType\":\"header\",\"inum\":\"0\",\"itype\":\"header\",\"secId\":\"BS:1:15\"}"
+  },
+  "viewAll": {
+    "type": "footer",
+    "action": {
+      "type": "directory",
+      "pandoraId": "BR:15",
+      "title": "Trendsetters: Artists on the Rise",
+      "loadingScreen": "deep_default"
+    },
+    "labels": [
+      {
+        "text": "See more trendsetters",
+        "style": "title"
+      }
+    ],
+    "button": {
+      "type": "link",
+      "analyticsToken": "{'generation':'1625448585235','button':'link','timezone':'AEST','snum':'9','secType':'viewall','id':'BR:15','inum':'0','itype':'footer','secId':'BS:1:15'}"
+    },
+    "analyticsToken": "{\"generation\":\"1625448585235\",\"timezone\":\"AEST\",\"snum\":\"9\",\"secType\":\"viewall\",\"id\":\"BR:15\",\"inum\":\"0\",\"itype\":\"footer\",\"secId\":\"BS:1:15\"}"
+  }
+}

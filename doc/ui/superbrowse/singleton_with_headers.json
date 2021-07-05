@@ -1,0 +1,75 @@
+{
+  "id": "BS:1:53:21547673299880357",
+  "subsections": [
+    {
+      "subsectionType": "singleton",
+      "items": [
+        {
+          "type": "hero",
+          "action": {
+            "type": "backstage",
+            "pandoraId": "GE:641"
+          },
+          "image": {
+            "scalableUrl": "https://dyn-images.p-cdn.com/?l=images/thor_assets/rings%3Bimages%2F09%2F16%2F52%2F43%2Fe48f4c99b9456677d87e8fa4%2F%3Boverlay($0)&c=90&f=png",
+            "sizedUrl": "https://dyn-images.p-cdn.com/?l=images/thor_assets/rings%3Bimages%2F09%2F16%2F52%2F43%2Fe48f4c99b9456677d87e8fa4%2F%3Boverlay($0)&c=90&f=png&w=$W$&h=$H$",
+            "border": true,
+            "dominantColor": "",
+            "discreteSizes": [
+              "90x90",
+              "130x130",
+              "500x500",
+              "640x640",
+              "1080x1080"
+            ]
+          },
+          "labels": [
+            {
+              "text": "4th of July",
+              "style": "title",
+              "alignment": "left"
+            },
+            {
+              "text": "Station",
+              "style": "detail",
+              "alignment": "left"
+            }
+          ],
+          "badges": [
+            {
+              "type": "collected"
+            }
+          ],
+          "pandoraId": "GE:641",
+          "analyticsToken": "{\"generation\":\"1625448585235\",\"timezone\":\"AEST\",\"snum\":\"1\",\"secType\":\"singleton\",\"id\":\"GE:641\",\"inum\":\"0\",\"itype\":\"hero\",\"secId\":\"BS:1:53:21547673299880357\"}",
+          "formFactors": {
+            "portrait": {
+              "fractionSize": 1
+            },
+            "landscape": {
+              "fractionSize": 0.5
+            }
+          },
+          "alignment": "left"
+        }
+      ],
+      "sectionId": "BS:1:53:21547673299880357"
+    }
+  ],
+  "title": {
+    "type": "header",
+    "labels": [
+      {
+        "text": "Happy Independence Day",
+        "style": "header",
+        "alignment": "center"
+      },
+      {
+        "text": "Let freedom ring: music to soundtrack your holiday",
+        "style": "detail",
+        "alignment": "center"
+      }
+    ],
+    "analyticsToken": "{\"generation\":\"1625448585235\",\"timezone\":\"AEST\",\"snum\":\"1\",\"secType\":\"header\",\"inum\":\"0\",\"itype\":\"header\",\"secId\":\"BS:1:53:21547673299880357\"}"
+  }
+}

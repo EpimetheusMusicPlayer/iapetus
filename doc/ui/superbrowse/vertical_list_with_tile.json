@@ -1,0 +1,117 @@
+{
+  "id": "BS:1:7",
+  "subsections": [
+    {
+      "subsectionType": "verticalList",
+      "items": [
+        {
+          "type": "tile",
+          "action": {
+            "type": "directory",
+            "pandoraId": "BR:7:182",
+            "title": "4th of July",
+            "loadingScreen": "deep_default"
+          },
+          "image": {
+            "fullUrl": "https://content-images.p-cdn.com/images/public/int/sb/browse_images/Moods/4th_Of_July_android_light_v1.png",
+            "fullUrlDark": "https://content-images.p-cdn.com/images/public/int/sb/browse_images/Moods/4th_Of_July_android_dark_v1.png"
+          },
+          "pandoraId": "BR:7:182",
+          "voiceText": "Occasion::4th of July",
+          "analyticsToken": "{\"generation\":\"1625448585235\",\"timezone\":\"AEST\",\"snum\":\"13\",\"secType\":\"verticalList\",\"id\":\"BR:7:182\",\"inum\":\"0\",\"itype\":\"tile\",\"secId\":\"BS:1:7\"}"
+        },
+        {
+          "type": "tile",
+          "action": {
+            "type": "directory",
+            "pandoraId": "BR:7:183",
+            "title": "Summer",
+            "loadingScreen": "deep_default"
+          },
+          "image": {
+            "fullUrl": "https://content-images.p-cdn.com/images/public/int/sb/browse_images/Moods/Summer_android_light_v1.png",
+            "fullUrlDark": "https://content-images.p-cdn.com/images/public/int/sb/browse_images/Moods/Summer_android_dark_v1.png"
+          },
+          "pandoraId": "BR:7:183",
+          "voiceText": "Occasion::Summer",
+          "analyticsToken": "{\"generation\":\"1625448585235\",\"timezone\":\"AEST\",\"snum\":\"13\",\"secType\":\"verticalList\",\"id\":\"BR:7:183\",\"inum\":\"1\",\"itype\":\"tile\",\"secId\":\"BS:1:7\"}"
+        },
+        {
+          "type": "tile",
+          "action": {
+            "type": "directory",
+            "pandoraId": "BR:7:214",
+            "title": "Lazy Day",
+            "loadingScreen": "deep_default"
+          },
+          "image": {
+            "fullUrl": "https://content-images.p-cdn.com/images/public/int/sb/browse_images/Moods/Lazy_Day_android_light_v1.png",
+            "fullUrlDark": "https://content-images.p-cdn.com/images/public/int/sb/browse_images/Moods/Lazy_Day_android_dark_v1.png"
+          },
+          "pandoraId": "BR:7:214",
+          "voiceText": "Mood::Lazy Day",
+          "analyticsToken": "{\"generation\":\"1625448585235\",\"timezone\":\"AEST\",\"snum\":\"13\",\"secType\":\"verticalList\",\"id\":\"BR:7:214\",\"inum\":\"2\",\"itype\":\"tile\",\"secId\":\"BS:1:7\"}"
+        },
+        {
+          "type": "tile",
+          "action": {
+            "type": "directory",
+            "pandoraId": "BR:7:206",
+            "title": "BBQ",
+            "loadingScreen": "deep_default"
+          },
+          "image": {
+            "fullUrl": "https://content-images.p-cdn.com/images/public/int/sb/browse_images/Moods/BBQ_android_light_v1.png",
+            "fullUrlDark": "https://content-images.p-cdn.com/images/public/int/sb/browse_images/Moods/BBQ_android_dark_v1.png"
+          },
+          "pandoraId": "BR:7:206",
+          "voiceText": "Activity::BBQ",
+          "analyticsToken": "{\"generation\":\"1625448585235\",\"timezone\":\"AEST\",\"snum\":\"13\",\"secType\":\"verticalList\",\"id\":\"BR:7:206\",\"inum\":\"3\",\"itype\":\"tile\",\"secId\":\"BS:1:7\"}"
+        }
+      ],
+      "sectionId": "BS:1:7",
+      "formFactors": {
+        "portrait": {
+          "numCols": 2
+        },
+        "landscape": {
+          "numCols": 4
+        }
+      }
+    }
+  ],
+  "title": {
+    "type": "header",
+    "labels": [
+      {
+        "text": "Moods and Activities",
+        "style": "header"
+      },
+      {
+        "text": "Based on what's trending right now",
+        "style": "detail"
+      }
+    ],
+    "analyticsToken": "{\"generation\":\"1625448585235\",\"timezone\":\"AEST\",\"snum\":\"13\",\"secType\":\"header\",\"inum\":\"0\",\"itype\":\"header\",\"secId\":\"BS:1:7\"}"
+  },
+  "viewAll": {
+    "type": "footer",
+    "action": {
+      "type": "directory",
+      "pandoraId": "BR:7",
+      "title": "Moods",
+      "loadingScreen": "deep_grid"
+    },
+    "labels": [
+      {
+        "text": "See all moods",
+        "style": "title"
+      }
+    ],
+    "button": {
+      "type": "link",
+      "analyticsToken": "{'generation':'1625448585235','button':'link','timezone':'AEST','snum':'13','secType':'viewall','id':'BR:7','inum':'0','itype':'footer','secId':'BS:1:7'}"
+    },
+    "analyticsToken": "{\"generation\":\"1625448585235\",\"timezone\":\"AEST\",\"snum\":\"13\",\"secType\":\"viewall\",\"id\":\"BR:7\",\"inum\":\"0\",\"itype\":\"footer\",\"secId\":\"BS:1:7\"}"
+  }
+}
