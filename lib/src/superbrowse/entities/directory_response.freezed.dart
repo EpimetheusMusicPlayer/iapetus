@@ -32,7 +32,7 @@ class _$DirectoryResponseTearOff {
       @JsonKey(name: 'preferCachedData')
           required bool preferCachedData,
       @JsonKey(name: 'formFactorsByType')
-          required Map<String, FormFactors> formFactorsByType}) {
+          required Map<SuperbrowseItemType, FormFactors> formFactorsByType}) {
     return _DirectoryResponse(
       ttl: ttl,
       checksum: checksum,
@@ -64,7 +64,7 @@ mixin _$DirectoryResponse {
   @JsonKey(name: 'preferCachedData')
   bool get preferCachedData => throw _privateConstructorUsedError;
   @JsonKey(name: 'formFactorsByType')
-  Map<String, FormFactors> get formFactorsByType =>
+  Map<SuperbrowseItemType, FormFactors> get formFactorsByType =>
       throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -90,7 +90,7 @@ abstract class $DirectoryResponseCopyWith<$Res> {
       @JsonKey(name: 'preferCachedData')
           bool preferCachedData,
       @JsonKey(name: 'formFactorsByType')
-          Map<String, FormFactors> formFactorsByType});
+          Map<SuperbrowseItemType, FormFactors> formFactorsByType});
 }
 
 /// @nodoc
@@ -135,7 +135,7 @@ class _$DirectoryResponseCopyWithImpl<$Res>
       formFactorsByType: formFactorsByType == freezed
           ? _value.formFactorsByType
           : formFactorsByType // ignore: cast_nullable_to_non_nullable
-              as Map<String, FormFactors>,
+              as Map<SuperbrowseItemType, FormFactors>,
     ));
   }
 }
@@ -159,7 +159,7 @@ abstract class _$DirectoryResponseCopyWith<$Res>
       @JsonKey(name: 'preferCachedData')
           bool preferCachedData,
       @JsonKey(name: 'formFactorsByType')
-          Map<String, FormFactors> formFactorsByType});
+          Map<SuperbrowseItemType, FormFactors> formFactorsByType});
 }
 
 /// @nodoc
@@ -206,7 +206,7 @@ class __$DirectoryResponseCopyWithImpl<$Res>
       formFactorsByType: formFactorsByType == freezed
           ? _value.formFactorsByType
           : formFactorsByType // ignore: cast_nullable_to_non_nullable
-              as Map<String, FormFactors>,
+              as Map<SuperbrowseItemType, FormFactors>,
     ));
   }
 }
@@ -248,7 +248,7 @@ class _$_DirectoryResponse implements _DirectoryResponse {
   final bool preferCachedData;
   @override
   @JsonKey(name: 'formFactorsByType')
-  final Map<String, FormFactors> formFactorsByType;
+  final Map<SuperbrowseItemType, FormFactors> formFactorsByType;
 
   @override
   String toString() {
@@ -301,19 +301,19 @@ class _$_DirectoryResponse implements _DirectoryResponse {
 
 abstract class _DirectoryResponse implements DirectoryResponse {
   const factory _DirectoryResponse(
-          {@JsonKey(name: 'ttl', fromJson: readSeconds, toJson: writeSeconds)
-              required Duration ttl,
-          @JsonKey(name: 'checksum')
-              required String checksum,
-          @JsonKey(name: 'generation')
-              required String generation,
-          @JsonKey(name: 'sections')
-              required List<SuperbrowseSection> sections,
-          @JsonKey(name: 'preferCachedData')
-              required bool preferCachedData,
-          @JsonKey(name: 'formFactorsByType')
-              required Map<String, FormFactors> formFactorsByType}) =
-      _$_DirectoryResponse;
+      {@JsonKey(name: 'ttl', fromJson: readSeconds, toJson: writeSeconds)
+          required Duration ttl,
+      @JsonKey(name: 'checksum')
+          required String checksum,
+      @JsonKey(name: 'generation')
+          required String generation,
+      @JsonKey(name: 'sections')
+          required List<SuperbrowseSection> sections,
+      @JsonKey(name: 'preferCachedData')
+          required bool preferCachedData,
+      @JsonKey(name: 'formFactorsByType')
+          required Map<SuperbrowseItemType, FormFactors>
+              formFactorsByType}) = _$_DirectoryResponse;
 
   factory _DirectoryResponse.fromJson(Map<String, dynamic> json) =
       _$_DirectoryResponse.fromJson;
@@ -335,7 +335,7 @@ abstract class _DirectoryResponse implements DirectoryResponse {
   bool get preferCachedData => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'formFactorsByType')
-  Map<String, FormFactors> get formFactorsByType =>
+  Map<SuperbrowseItemType, FormFactors> get formFactorsByType =>
       throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)

@@ -5,6 +5,7 @@ export 'entities/directory_response.dart';
 export 'entities/form_factor.dart';
 export 'entities/image.dart';
 export 'entities/item.dart';
+export 'entities/item_type.dart';
 export 'entities/label.dart';
 export 'entities/section.dart';
 export 'entities/subsection.dart';

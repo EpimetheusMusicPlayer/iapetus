@@ -755,7 +755,7 @@ class _$BannerSuperbrowseItemCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-@FreezedUnionValue('banner')
+@FreezedUnionValue(SuperbrowseItemType.banner)
 class _$BannerSuperbrowseItem implements BannerSuperbrowseItem {
   const _$BannerSuperbrowseItem(
       {@JsonKey(name: 'pandoraId') this.pandoraId,
@@ -1339,7 +1339,7 @@ class _$BeltSuperbrowseItemCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-@FreezedUnionValue('belt')
+@FreezedUnionValue(SuperbrowseItemType.belt)
 class _$BeltSuperbrowseItem implements BeltSuperbrowseItem {
   const _$BeltSuperbrowseItem(
       {@JsonKey(name: 'pandoraId') this.pandoraId,
@@ -1965,7 +1965,7 @@ class _$FeaturedSuperbrowseItemCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-@FreezedUnionValue('featured')
+@FreezedUnionValue(SuperbrowseItemType.featured)
 class _$FeaturedSuperbrowseItem implements FeaturedSuperbrowseItem {
   const _$FeaturedSuperbrowseItem(
       {@JsonKey(name: 'pandoraId') this.pandoraId,
@@ -2590,7 +2590,7 @@ class _$FooterSuperbrowseItemCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-@FreezedUnionValue('footer')
+@FreezedUnionValue(SuperbrowseItemType.footer)
 class _$FooterSuperbrowseItem implements FooterSuperbrowseItem {
   const _$FooterSuperbrowseItem(
       {@JsonKey(name: 'pandoraId') this.pandoraId,
@@ -3226,7 +3226,7 @@ class _$GridSuperbrowseItemCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-@FreezedUnionValue('grid')
+@FreezedUnionValue(SuperbrowseItemType.grid)
 class _$GridSuperbrowseItem implements GridSuperbrowseItem {
   const _$GridSuperbrowseItem(
       {@JsonKey(name: 'pandoraId')
@@ -3882,7 +3882,7 @@ class _$HeaderSuperbrowseItemCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-@FreezedUnionValue('header')
+@FreezedUnionValue(SuperbrowseItemType.header)
 class _$HeaderSuperbrowseItem implements HeaderSuperbrowseItem {
   const _$HeaderSuperbrowseItem(
       {@JsonKey(name: 'pandoraId') this.pandoraId,
@@ -4522,7 +4522,7 @@ class _$HeroSuperbrowseItemCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-@FreezedUnionValue('hero')
+@FreezedUnionValue(SuperbrowseItemType.hero)
 class _$HeroSuperbrowseItem implements HeroSuperbrowseItem {
   const _$HeroSuperbrowseItem(
       {@JsonKey(name: 'pandoraId') this.pandoraId,
@@ -5211,7 +5211,7 @@ class _$LargeRowSuperbrowseItemCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-@FreezedUnionValue('large_row')
+@FreezedUnionValue(SuperbrowseItemType.largeRow)
 class _$LargeRowSuperbrowseItem implements LargeRowSuperbrowseItem {
   const _$LargeRowSuperbrowseItem(
       {@JsonKey(name: 'pandoraId')
@@ -5892,7 +5892,7 @@ class _$SmallRowSuperbrowseItemCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-@FreezedUnionValue('small_row')
+@FreezedUnionValue(SuperbrowseItemType.smallRow)
 class _$SmallRowSuperbrowseItem implements SmallRowSuperbrowseItem {
   const _$SmallRowSuperbrowseItem(
       {@JsonKey(name: 'pandoraId') this.pandoraId,
@@ -6514,7 +6514,7 @@ class _$SplitSuperbrowseItemCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-@FreezedUnionValue('split')
+@FreezedUnionValue(SuperbrowseItemType.split)
 class _$SplitSuperbrowseItem implements SplitSuperbrowseItem {
   const _$SplitSuperbrowseItem(
       {@JsonKey(name: 'pandoraId') this.pandoraId,
@@ -7141,7 +7141,7 @@ class _$TileSuperbrowseItemCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-@FreezedUnionValue('tile')
+@FreezedUnionValue(SuperbrowseItemType.tile)
 class _$TileSuperbrowseItem implements TileSuperbrowseItem {
   const _$TileSuperbrowseItem(
       {@JsonKey(name: 'pandoraId') this.pandoraId,

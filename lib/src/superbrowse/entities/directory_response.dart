@@ -1,6 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:iapetus/src/common/data/json_utils.dart';
 import 'package:iapetus/src/superbrowse/entities/form_factors.dart';
+import 'package:iapetus/src/superbrowse/entities/item_type.dart';
 import 'package:iapetus/src/superbrowse/entities/section.dart';
 
 part 'directory_response.freezed.dart';
@@ -16,7 +17,7 @@ class DirectoryResponse with _$DirectoryResponse {
     @JsonKey(name: 'sections') required List<SuperbrowseSection> sections,
     @JsonKey(name: 'preferCachedData') required bool preferCachedData,
     @JsonKey(name: 'formFactorsByType')
-        required Map<String, FormFactors> formFactorsByType,
+        required Map<SuperbrowseItemType, FormFactors> formFactorsByType,
   }) = _DirectoryResponse;
 
   factory DirectoryResponse.fromJson(Map<String, dynamic> json) =>
