@@ -274,7 +274,7 @@ class __$SuperbrowseImageCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_SuperbrowseImage implements _SuperbrowseImage {
+class _$_SuperbrowseImage extends _SuperbrowseImage {
   const _$_SuperbrowseImage(
       {@JsonKey(name: 'border', fromJson: readNullableBool, toJson: writeNullableBool)
           required this.border,
@@ -293,7 +293,8 @@ class _$_SuperbrowseImage implements _SuperbrowseImage {
       @JsonKey(name: 'sizedUrlDark')
           this.sizedUrlDart,
       @JsonKey(name: 'discreteSizes')
-          this.sizes});
+          this.sizes})
+      : super._();
 
   factory _$_SuperbrowseImage.fromJson(Map<String, dynamic> json) =>
       _$_$_SuperbrowseImageFromJson(json);
@@ -390,7 +391,7 @@ class _$_SuperbrowseImage implements _SuperbrowseImage {
   }
 }
 
-abstract class _SuperbrowseImage implements SuperbrowseImage {
+abstract class _SuperbrowseImage extends SuperbrowseImage {
   const factory _SuperbrowseImage(
       {@JsonKey(name: 'border', fromJson: readNullableBool, toJson: writeNullableBool)
           required bool border,
@@ -410,6 +411,7 @@ abstract class _SuperbrowseImage implements SuperbrowseImage {
           Uri? sizedUrlDart,
       @JsonKey(name: 'discreteSizes')
           List<ArtSize>? sizes}) = _$_SuperbrowseImage;
+  const _SuperbrowseImage._() : super._();
 
   factory _SuperbrowseImage.fromJson(Map<String, dynamic> json) =
       _$_SuperbrowseImage.fromJson;

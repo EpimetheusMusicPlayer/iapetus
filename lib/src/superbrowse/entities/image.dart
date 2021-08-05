@@ -22,6 +22,20 @@ class SuperbrowseImage with _$SuperbrowseImage {
     @JsonKey(name: 'discreteSizes') List<ArtSize>? sizes,
   }) = _SuperbrowseImage;
 
+  const SuperbrowseImage._();
+
+  /// The optimal URL to use to display the image.
+  Uri get url =>
+      fullUrl ??
+      scalableUrl ??
+      sizedUrl!.replace(
+        queryParameters: {
+          ...sizedUrl!.queryParameters,
+          'w': sizes!.last.width,
+          'h': sizes!.last.height,
+        },
+      );
+
   factory SuperbrowseImage.fromJson(Map<String, dynamic> json) =>
       _$SuperbrowseImageFromJson(json);
 }
