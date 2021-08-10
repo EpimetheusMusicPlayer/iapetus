@@ -6,18 +6,18 @@ part of 'genre_station_recommendation.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_GenreStationRecommendation _$_$_GenreStationRecommendationFromJson(
-    Map<String, dynamic> json) {
-  return _$_GenreStationRecommendation(
-    musicToken: json['musicToken'] as String,
-    explanation: json['explanation'] as String,
-    artUrl: json['artUrl'] == null ? null : Uri.parse(json['artUrl'] as String),
-    stationName: json['stationName'] as String,
-    score: readScore(json['score'] as Object),
-  );
-}
+_$_GenreStationRecommendation _$$_GenreStationRecommendationFromJson(
+        Map<String, dynamic> json) =>
+    _$_GenreStationRecommendation(
+      musicToken: json['musicToken'] as String,
+      explanation: json['explanation'] as String,
+      artUrl:
+          json['artUrl'] == null ? null : Uri.parse(json['artUrl'] as String),
+      stationName: json['stationName'] as String,
+      score: readScore(json['score'] as Object),
+    );
 
-Map<String, dynamic> _$_$_GenreStationRecommendationToJson(
+Map<String, dynamic> _$$_GenreStationRecommendationToJson(
         _$_GenreStationRecommendation instance) =>
     <String, dynamic>{
       'musicToken': instance.musicToken,

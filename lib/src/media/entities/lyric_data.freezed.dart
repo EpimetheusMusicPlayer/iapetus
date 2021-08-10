@@ -1,5 +1,6 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'lyric_data.dart';
 
@@ -153,7 +154,7 @@ class _$_IapetusMediaLyricData implements _IapetusMediaLyricData {
       @JsonKey(name: 'lyricCredits') required this.lyricCreditsHtml});
 
   factory _$_IapetusMediaLyricData.fromJson(Map<String, dynamic> json) =>
-      _$_$_IapetusMediaLyricDataFromJson(json);
+      _$$_IapetusMediaLyricDataFromJson(json);
 
   @override
   @JsonKey(name: 'lyricId')
@@ -200,7 +201,7 @@ class _$_IapetusMediaLyricData implements _IapetusMediaLyricData {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_IapetusMediaLyricDataToJson(this);
+    return _$$_IapetusMediaLyricDataToJson(this);
   }
 }
 

@@ -6,15 +6,13 @@ part of 'badge.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_SuperbrowseBadge _$_$_SuperbrowseBadgeFromJson(Map<String, dynamic> json) {
-  return _$_SuperbrowseBadge(
-    type: _$enumDecode(_$BadgeTypeEnumMap, json['type']),
-    data: json['data'] as String?,
-  );
-}
+_$_SuperbrowseBadge _$$_SuperbrowseBadgeFromJson(Map<String, dynamic> json) =>
+    _$_SuperbrowseBadge(
+      type: _$enumDecode(_$BadgeTypeEnumMap, json['type']),
+      data: json['data'] as String?,
+    );
 
-Map<String, dynamic> _$_$_SuperbrowseBadgeToJson(
-        _$_SuperbrowseBadge instance) =>
+Map<String, dynamic> _$$_SuperbrowseBadgeToJson(_$_SuperbrowseBadge instance) =>
     <String, dynamic>{
       'type': _$BadgeTypeEnumMap[instance.type],
       'data': instance.data,

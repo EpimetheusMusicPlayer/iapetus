@@ -6,16 +6,14 @@ part of 'track_key.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_TrackKey _$_$_TrackKeyFromJson(Map<String, dynamic> json) {
-  return _$_TrackKey(
-    trackId: json['trackId'] as String,
-    trackType: _$enumDecode(_$TrackTypeEnumMap, json['trackType']),
-    trackSubtype: json['trackSubtype'] as String,
-    spinId: json['spinId'] as String,
-  );
-}
+_$_TrackKey _$$_TrackKeyFromJson(Map<String, dynamic> json) => _$_TrackKey(
+      trackId: json['trackId'] as String,
+      trackType: _$enumDecode(_$TrackTypeEnumMap, json['trackType']),
+      trackSubtype: json['trackSubtype'] as String,
+      spinId: json['spinId'] as String,
+    );
 
-Map<String, dynamic> _$_$_TrackKeyToJson(_$_TrackKey instance) =>
+Map<String, dynamic> _$$_TrackKeyToJson(_$_TrackKey instance) =>
     <String, dynamic>{
       'trackId': instance.trackId,
       'trackType': _$TrackTypeEnumMap[instance.trackType],

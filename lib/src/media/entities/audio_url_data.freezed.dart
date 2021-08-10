@@ -1,5 +1,6 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'audio_url_data.dart';
 
@@ -185,7 +186,7 @@ class _$_AudioUrlData implements _AudioUrlData {
       @JsonKey(name: 'protocol') required this.protocol});
 
   factory _$_AudioUrlData.fromJson(Map<String, dynamic> json) =>
-      _$_$_AudioUrlDataFromJson(json);
+      _$$_AudioUrlDataFromJson(json);
 
   @override
   @JsonKey(name: 'audioToken')
@@ -245,7 +246,7 @@ class _$_AudioUrlData implements _AudioUrlData {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_AudioUrlDataToJson(this);
+    return _$$_AudioUrlDataToJson(this);
   }
 }
 

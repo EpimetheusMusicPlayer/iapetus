@@ -6,20 +6,19 @@ part of 'label.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_SuperbrowseLabel _$_$_SuperbrowseLabelFromJson(Map<String, dynamic> json) {
-  return _$_SuperbrowseLabel(
-    text: json['text'] as String,
-    style: _$enumDecode(_$LabelStyleEnumMap, json['style']),
-    alignment: _$enumDecodeNullable(_$TextAlignmentEnumMap, json['alignment']),
-    maxLines: json['maxLines'] as int?,
-    bold: readNullableBool(json['bold'] as bool?),
-    italic: readNullableBool(json['italic'] as bool?),
-    underlined: readNullableBool(json['underlined'] as bool?),
-  );
-}
+_$_SuperbrowseLabel _$$_SuperbrowseLabelFromJson(Map<String, dynamic> json) =>
+    _$_SuperbrowseLabel(
+      text: json['text'] as String,
+      style: _$enumDecode(_$LabelStyleEnumMap, json['style']),
+      alignment:
+          _$enumDecodeNullable(_$TextAlignmentEnumMap, json['alignment']),
+      maxLines: json['maxLines'] as int?,
+      bold: readNullableBool(json['bold'] as bool?),
+      italic: readNullableBool(json['italic'] as bool?),
+      underlined: readNullableBool(json['underlined'] as bool?),
+    );
 
-Map<String, dynamic> _$_$_SuperbrowseLabelToJson(
-        _$_SuperbrowseLabel instance) =>
+Map<String, dynamic> _$$_SuperbrowseLabelToJson(_$_SuperbrowseLabel instance) =>
     <String, dynamic>{
       'text': instance.text,
       'style': _$LabelStyleEnumMap[instance.style],

@@ -6,72 +6,70 @@ part of 'details.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$TrackDetailsSet _$_$TrackDetailsSetFromJson(Map<String, dynamic> json) {
-  return _$TrackDetailsSet(
-    annotations: (json['annotations'] as Map<String, dynamic>).map(
-      (k, e) =>
-          MapEntry(k, MediaAnnotation.fromJson(e as Map<String, dynamic>)),
-    ),
-    details:
-        TrackDetails.fromJson(json['trackDetails'] as Map<String, dynamic>),
-  );
-}
+_$TrackDetailsSet _$$TrackDetailsSetFromJson(Map<String, dynamic> json) =>
+    _$TrackDetailsSet(
+      annotations: (json['annotations'] as Map<String, dynamic>).map(
+        (k, e) =>
+            MapEntry(k, MediaAnnotation.fromJson(e as Map<String, dynamic>)),
+      ),
+      details:
+          TrackDetails.fromJson(json['trackDetails'] as Map<String, dynamic>),
+    );
 
-Map<String, dynamic> _$_$TrackDetailsSetToJson(_$TrackDetailsSet instance) =>
+Map<String, dynamic> _$$TrackDetailsSetToJson(_$TrackDetailsSet instance) =>
     <String, dynamic>{
       'annotations': instance.annotations,
       'trackDetails': instance.details,
     };
 
-_$GenreDetailsSet _$_$GenreDetailsSetFromJson(Map<String, dynamic> json) {
-  return _$GenreDetailsSet(
-    annotations: (json['annotations'] as Map<String, dynamic>).map(
-      (k, e) =>
-          MapEntry(k, MediaAnnotation.fromJson(e as Map<String, dynamic>)),
-    ),
-    details:
-        GenreDetails.fromJson(json['genreDetails'] as Map<String, dynamic>),
-  );
-}
+_$GenreDetailsSet _$$GenreDetailsSetFromJson(Map<String, dynamic> json) =>
+    _$GenreDetailsSet(
+      annotations: (json['annotations'] as Map<String, dynamic>).map(
+        (k, e) =>
+            MapEntry(k, MediaAnnotation.fromJson(e as Map<String, dynamic>)),
+      ),
+      details:
+          GenreDetails.fromJson(json['genreDetails'] as Map<String, dynamic>),
+    );
 
-Map<String, dynamic> _$_$GenreDetailsSetToJson(_$GenreDetailsSet instance) =>
+Map<String, dynamic> _$$GenreDetailsSetToJson(_$GenreDetailsSet instance) =>
     <String, dynamic>{
       'annotations': instance.annotations,
       'genreDetails': instance.details,
     };
 
-_$TrackDetails _$_$TrackDetailsFromJson(Map<String, dynamic> json) {
-  return _$TrackDetails(
-    trackTags:
-        (json['trackTags'] as List<dynamic>).map((e) => e as String).toList(),
-    lyricData: json['lyricData'] == null
-        ? null
-        : MediaLyricData.fromJson(json['lyricData'] as Map<String, dynamic>),
-    cleanLyricData: json['cleanLyricData'] == null
-        ? null
-        : MediaLyricData.fromJson(
-            json['cleanLyricData'] as Map<String, dynamic>),
-    releaseDate: DateTime.parse(json['releaseDate'] as String),
-    copyrightHtml: json['copyright'] as String,
-    shareableUrlPath: json['shareableUrlPath'] as String,
-    modificationTime: readDateTimeMilliseconds(json['modificationTime'] as int),
-    similarTrackIds: (json['similarTracks'] as List<dynamic>)
-        .map((e) => e as String)
-        .toList(),
-    focusTraits: (json['focusTraits'] as List<dynamic>)
-        .map((e) => FocusTrait.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    credits: json['credits'] == null
-        ? null
-        : Credits.fromJson(json['credits'] as Map<String, dynamic>),
-    featured: json['featured'] as bool,
-    pandoraId: json['pandoraId'] as String,
-    pandoraType: _$enumDecode(_$PandoraTypeEnumMap, json['type']),
-    scope: json['scope'] as String,
-  );
-}
+_$TrackDetails _$$TrackDetailsFromJson(Map<String, dynamic> json) =>
+    _$TrackDetails(
+      trackTags:
+          (json['trackTags'] as List<dynamic>).map((e) => e as String).toList(),
+      lyricData: json['lyricData'] == null
+          ? null
+          : MediaLyricData.fromJson(json['lyricData'] as Map<String, dynamic>),
+      cleanLyricData: json['cleanLyricData'] == null
+          ? null
+          : MediaLyricData.fromJson(
+              json['cleanLyricData'] as Map<String, dynamic>),
+      releaseDate: DateTime.parse(json['releaseDate'] as String),
+      copyrightHtml: json['copyright'] as String,
+      shareableUrlPath: json['shareableUrlPath'] as String,
+      modificationTime:
+          readDateTimeMilliseconds(json['modificationTime'] as int),
+      similarTrackIds: (json['similarTracks'] as List<dynamic>)
+          .map((e) => e as String)
+          .toList(),
+      focusTraits: (json['focusTraits'] as List<dynamic>)
+          .map((e) => FocusTrait.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      credits: json['credits'] == null
+          ? null
+          : Credits.fromJson(json['credits'] as Map<String, dynamic>),
+      featured: json['featured'] as bool,
+      pandoraId: json['pandoraId'] as String,
+      pandoraType: _$enumDecode(_$PandoraTypeEnumMap, json['type']),
+      scope: json['scope'] as String,
+    );
 
-Map<String, dynamic> _$_$TrackDetailsToJson(_$TrackDetails instance) =>
+Map<String, dynamic> _$$TrackDetailsToJson(_$TrackDetails instance) =>
     <String, dynamic>{
       'trackTags': instance.trackTags,
       'lyricData': instance.lyricData,
@@ -142,27 +140,27 @@ const _$PandoraTypeEnumMap = {
   PandoraType.podcastCategory: 'TG',
 };
 
-_$GenreDetails _$_$GenreDetailsFromJson(Map<String, dynamic> json) {
-  return _$GenreDetails(
-    modificationTime: readDateTimeMilliseconds(json['modificationTime'] as int),
-    sampleArtistIds: (json['sampleArtists'] as List<dynamic>)
-        .map((e) => e as String)
-        .toList(),
-    sampleTrackIds: (json['sampleTracks'] as List<dynamic>)
-        .map((e) => e as String)
-        .toList(),
-    focusTraits: (json['focusTraits'] as List<dynamic>)
-        .map((e) => FocusTrait.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    isRedirect: json['isRedirect'] as bool,
-    curatorId: json['curatorId'] as String,
-    pandoraId: json['pandoraId'] as String,
-    pandoraType: _$enumDecode(_$PandoraTypeEnumMap, json['type']),
-    scope: json['scope'] as String,
-  );
-}
+_$GenreDetails _$$GenreDetailsFromJson(Map<String, dynamic> json) =>
+    _$GenreDetails(
+      modificationTime:
+          readDateTimeMilliseconds(json['modificationTime'] as int),
+      sampleArtistIds: (json['sampleArtists'] as List<dynamic>)
+          .map((e) => e as String)
+          .toList(),
+      sampleTrackIds: (json['sampleTracks'] as List<dynamic>)
+          .map((e) => e as String)
+          .toList(),
+      focusTraits: (json['focusTraits'] as List<dynamic>)
+          .map((e) => FocusTrait.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      isRedirect: json['isRedirect'] as bool,
+      curatorId: json['curatorId'] as String,
+      pandoraId: json['pandoraId'] as String,
+      pandoraType: _$enumDecode(_$PandoraTypeEnumMap, json['type']),
+      scope: json['scope'] as String,
+    );
 
-Map<String, dynamic> _$_$GenreDetailsToJson(_$GenreDetails instance) =>
+Map<String, dynamic> _$$GenreDetailsToJson(_$GenreDetails instance) =>
     <String, dynamic>{
       'modificationTime': writeDateTimeMilliseconds(instance.modificationTime),
       'sampleArtists': instance.sampleArtistIds,

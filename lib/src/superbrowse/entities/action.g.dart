@@ -6,19 +6,18 @@ part of 'action.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_SuperbrowseAction _$_$_SuperbrowseActionFromJson(Map<String, dynamic> json) {
-  return _$_SuperbrowseAction(
-    type: _$enumDecode(_$ActionTypeEnumMap, json['type']),
-    pandoraId: json['pandoraId'] as String?,
-    sourceId: json['sourceId'] as String?,
-    title: json['title'] as String?,
-    loadingScreen:
-        _$enumDecodeNullable(_$LoadingScreenTypeEnumMap, json['loadingScreen']),
-    url: json['url'] == null ? null : Uri.parse(json['url'] as String),
-  );
-}
+_$_SuperbrowseAction _$$_SuperbrowseActionFromJson(Map<String, dynamic> json) =>
+    _$_SuperbrowseAction(
+      type: _$enumDecode(_$ActionTypeEnumMap, json['type']),
+      pandoraId: json['pandoraId'] as String?,
+      sourceId: json['sourceId'] as String?,
+      title: json['title'] as String?,
+      loadingScreen: _$enumDecodeNullable(
+          _$LoadingScreenTypeEnumMap, json['loadingScreen']),
+      url: json['url'] == null ? null : Uri.parse(json['url'] as String),
+    );
 
-Map<String, dynamic> _$_$_SuperbrowseActionToJson(
+Map<String, dynamic> _$$_SuperbrowseActionToJson(
         _$_SuperbrowseAction instance) =>
     <String, dynamic>{
       'type': _$ActionTypeEnumMap[instance.type],

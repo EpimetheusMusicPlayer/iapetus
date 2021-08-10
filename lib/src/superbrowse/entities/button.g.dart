@@ -6,16 +6,15 @@ part of 'button.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_SuperbrowseButton _$_$_SuperbrowseButtonFromJson(Map<String, dynamic> json) {
-  return _$_SuperbrowseButton(
-    action: json['action'] == null
-        ? null
-        : SuperbrowseAction.fromJson(json['action'] as Map<String, dynamic>),
-    type: _$enumDecode(_$ButtonTypeEnumMap, json['type']),
-  );
-}
+_$_SuperbrowseButton _$$_SuperbrowseButtonFromJson(Map<String, dynamic> json) =>
+    _$_SuperbrowseButton(
+      action: json['action'] == null
+          ? null
+          : SuperbrowseAction.fromJson(json['action'] as Map<String, dynamic>),
+      type: _$enumDecode(_$ButtonTypeEnumMap, json['type']),
+    );
 
-Map<String, dynamic> _$_$_SuperbrowseButtonToJson(
+Map<String, dynamic> _$$_SuperbrowseButtonToJson(
         _$_SuperbrowseButton instance) =>
     <String, dynamic>{
       'action': instance.action,

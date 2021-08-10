@@ -1,5 +1,6 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'details.dart';
 
@@ -82,6 +83,22 @@ mixin _$MediaDetailsSet {
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(
+            @JsonKey(name: 'annotations')
+                Map<String, MediaAnnotation> annotations,
+            @JsonKey(name: 'trackDetails')
+                TrackDetails details)?
+        track,
+    TResult Function(
+            @JsonKey(name: 'annotations')
+                Map<String, MediaAnnotation> annotations,
+            @JsonKey(name: 'genreDetails')
+                GenreDetails details)?
+        genre,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(
             @JsonKey(name: 'annotations')
@@ -102,6 +119,12 @@ mixin _$MediaDetailsSet {
   TResult map<TResult extends Object?>({
     required TResult Function(TrackDetailsSet value) track,
     required TResult Function(GenreDetailsSet value) genre,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(TrackDetailsSet value)? track,
+    TResult Function(GenreDetailsSet value)? genre,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -197,7 +220,7 @@ class _$TrackDetailsSet implements TrackDetailsSet {
       @JsonKey(name: 'trackDetails') required this.details});
 
   factory _$TrackDetailsSet.fromJson(Map<String, dynamic> json) =>
-      _$_$TrackDetailsSetFromJson(json);
+      _$$TrackDetailsSetFromJson(json);
 
   @override
   @JsonKey(name: 'annotations')
@@ -254,6 +277,25 @@ class _$TrackDetailsSet implements TrackDetailsSet {
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(
+            @JsonKey(name: 'annotations')
+                Map<String, MediaAnnotation> annotations,
+            @JsonKey(name: 'trackDetails')
+                TrackDetails details)?
+        track,
+    TResult Function(
+            @JsonKey(name: 'annotations')
+                Map<String, MediaAnnotation> annotations,
+            @JsonKey(name: 'genreDetails')
+                GenreDetails details)?
+        genre,
+  }) {
+    return track?.call(annotations, details);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(
             @JsonKey(name: 'annotations')
@@ -286,6 +328,15 @@ class _$TrackDetailsSet implements TrackDetailsSet {
 
   @override
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(TrackDetailsSet value)? track,
+    TResult Function(GenreDetailsSet value)? genre,
+  }) {
+    return track?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(TrackDetailsSet value)? track,
     TResult Function(GenreDetailsSet value)? genre,
@@ -299,7 +350,7 @@ class _$TrackDetailsSet implements TrackDetailsSet {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$TrackDetailsSetToJson(this)..['runtimeType'] = 'track';
+    return _$$TrackDetailsSetToJson(this)..['runtimeType'] = 'track';
   }
 }
 
@@ -374,7 +425,7 @@ class _$GenreDetailsSet implements GenreDetailsSet {
       @JsonKey(name: 'genreDetails') required this.details});
 
   factory _$GenreDetailsSet.fromJson(Map<String, dynamic> json) =>
-      _$_$GenreDetailsSetFromJson(json);
+      _$$GenreDetailsSetFromJson(json);
 
   @override
   @JsonKey(name: 'annotations')
@@ -431,6 +482,25 @@ class _$GenreDetailsSet implements GenreDetailsSet {
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(
+            @JsonKey(name: 'annotations')
+                Map<String, MediaAnnotation> annotations,
+            @JsonKey(name: 'trackDetails')
+                TrackDetails details)?
+        track,
+    TResult Function(
+            @JsonKey(name: 'annotations')
+                Map<String, MediaAnnotation> annotations,
+            @JsonKey(name: 'genreDetails')
+                GenreDetails details)?
+        genre,
+  }) {
+    return genre?.call(annotations, details);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(
             @JsonKey(name: 'annotations')
@@ -463,6 +533,15 @@ class _$GenreDetailsSet implements GenreDetailsSet {
 
   @override
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(TrackDetailsSet value)? track,
+    TResult Function(GenreDetailsSet value)? genre,
+  }) {
+    return genre?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(TrackDetailsSet value)? track,
     TResult Function(GenreDetailsSet value)? genre,
@@ -476,7 +555,7 @@ class _$GenreDetailsSet implements GenreDetailsSet {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$GenreDetailsSetToJson(this)..['runtimeType'] = 'genre';
+    return _$$GenreDetailsSetToJson(this)..['runtimeType'] = 'genre';
   }
 }
 
@@ -677,6 +756,60 @@ mixin _$MediaDetails {
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(
+            @JsonKey(name: 'trackTags')
+                List<String> trackTags,
+            @JsonKey(name: 'lyricData')
+                MediaLyricData? lyricData,
+            @JsonKey(name: 'cleanLyricData')
+                MediaLyricData? cleanLyricData,
+            @JsonKey(name: 'releaseDate')
+                DateTime releaseDate,
+            @JsonKey(name: 'copyright')
+                String copyrightHtml,
+            @JsonKey(name: 'shareableUrlPath')
+                String shareableUrlPath,
+            @JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
+                DateTime modificationTime,
+            @JsonKey(name: 'similarTracks')
+                List<String> similarTrackIds,
+            @JsonKey(name: 'focusTraits')
+                List<FocusTrait> focusTraits,
+            @JsonKey(name: 'credits')
+                Credits? credits,
+            @JsonKey(name: 'featured')
+                bool featured,
+            @JsonKey(name: 'pandoraId')
+                String pandoraId,
+            @JsonKey(name: 'type')
+                PandoraType pandoraType,
+            @JsonKey(name: 'scope')
+                String scope)?
+        track,
+    TResult Function(
+            @JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
+                DateTime modificationTime,
+            @JsonKey(name: 'sampleArtists')
+                List<String> sampleArtistIds,
+            @JsonKey(name: 'sampleTracks')
+                List<String> sampleTrackIds,
+            @JsonKey(name: 'focusTraits')
+                List<FocusTrait> focusTraits,
+            @JsonKey(name: 'isRedirect')
+                bool isRedirect,
+            @JsonKey(name: 'curatorId')
+                String curatorId,
+            @JsonKey(name: 'pandoraId')
+                String pandoraId,
+            @JsonKey(name: 'type')
+                PandoraType pandoraType,
+            @JsonKey(name: 'scope')
+                String scope)?
+        genre,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(
             @JsonKey(name: 'trackTags')
@@ -735,6 +868,12 @@ mixin _$MediaDetails {
   TResult map<TResult extends Object?>({
     required TResult Function(TrackDetails value) track,
     required TResult Function(GenreDetails value) genre,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(TrackDetails value)? track,
+    TResult Function(GenreDetails value)? genre,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -1008,7 +1147,7 @@ class _$TrackDetails implements TrackDetails {
       : assert((lyricData == null && cleanLyricData == null) || (lyricData != null && cleanLyricData != null));
 
   factory _$TrackDetails.fromJson(Map<String, dynamic> json) =>
-      _$_$TrackDetailsFromJson(json);
+      _$$TrackDetailsFromJson(json);
 
   @override
   @JsonKey(name: 'trackTags')
@@ -1204,6 +1343,77 @@ class _$TrackDetails implements TrackDetails {
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(
+            @JsonKey(name: 'trackTags')
+                List<String> trackTags,
+            @JsonKey(name: 'lyricData')
+                MediaLyricData? lyricData,
+            @JsonKey(name: 'cleanLyricData')
+                MediaLyricData? cleanLyricData,
+            @JsonKey(name: 'releaseDate')
+                DateTime releaseDate,
+            @JsonKey(name: 'copyright')
+                String copyrightHtml,
+            @JsonKey(name: 'shareableUrlPath')
+                String shareableUrlPath,
+            @JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
+                DateTime modificationTime,
+            @JsonKey(name: 'similarTracks')
+                List<String> similarTrackIds,
+            @JsonKey(name: 'focusTraits')
+                List<FocusTrait> focusTraits,
+            @JsonKey(name: 'credits')
+                Credits? credits,
+            @JsonKey(name: 'featured')
+                bool featured,
+            @JsonKey(name: 'pandoraId')
+                String pandoraId,
+            @JsonKey(name: 'type')
+                PandoraType pandoraType,
+            @JsonKey(name: 'scope')
+                String scope)?
+        track,
+    TResult Function(
+            @JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
+                DateTime modificationTime,
+            @JsonKey(name: 'sampleArtists')
+                List<String> sampleArtistIds,
+            @JsonKey(name: 'sampleTracks')
+                List<String> sampleTrackIds,
+            @JsonKey(name: 'focusTraits')
+                List<FocusTrait> focusTraits,
+            @JsonKey(name: 'isRedirect')
+                bool isRedirect,
+            @JsonKey(name: 'curatorId')
+                String curatorId,
+            @JsonKey(name: 'pandoraId')
+                String pandoraId,
+            @JsonKey(name: 'type')
+                PandoraType pandoraType,
+            @JsonKey(name: 'scope')
+                String scope)?
+        genre,
+  }) {
+    return track?.call(
+        trackTags,
+        lyricData,
+        cleanLyricData,
+        releaseDate,
+        copyrightHtml,
+        shareableUrlPath,
+        modificationTime,
+        similarTrackIds,
+        focusTraits,
+        credits,
+        featured,
+        pandoraId,
+        pandoraType,
+        scope);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(
             @JsonKey(name: 'trackTags')
@@ -1288,6 +1498,15 @@ class _$TrackDetails implements TrackDetails {
 
   @override
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(TrackDetails value)? track,
+    TResult Function(GenreDetails value)? genre,
+  }) {
+    return track?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(TrackDetails value)? track,
     TResult Function(GenreDetails value)? genre,
@@ -1301,7 +1520,7 @@ class _$TrackDetails implements TrackDetails {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$TrackDetailsToJson(this)..['runtimeType'] = 'track';
+    return _$$TrackDetailsToJson(this)..['runtimeType'] = 'track';
   }
 }
 
@@ -1496,7 +1715,7 @@ class _$GenreDetails implements GenreDetails {
           required this.scope});
 
   factory _$GenreDetails.fromJson(Map<String, dynamic> json) =>
-      _$_$GenreDetailsFromJson(json);
+      _$$GenreDetailsFromJson(json);
 
   @override
   @JsonKey(
@@ -1644,6 +1863,64 @@ class _$GenreDetails implements GenreDetails {
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(
+            @JsonKey(name: 'trackTags')
+                List<String> trackTags,
+            @JsonKey(name: 'lyricData')
+                MediaLyricData? lyricData,
+            @JsonKey(name: 'cleanLyricData')
+                MediaLyricData? cleanLyricData,
+            @JsonKey(name: 'releaseDate')
+                DateTime releaseDate,
+            @JsonKey(name: 'copyright')
+                String copyrightHtml,
+            @JsonKey(name: 'shareableUrlPath')
+                String shareableUrlPath,
+            @JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
+                DateTime modificationTime,
+            @JsonKey(name: 'similarTracks')
+                List<String> similarTrackIds,
+            @JsonKey(name: 'focusTraits')
+                List<FocusTrait> focusTraits,
+            @JsonKey(name: 'credits')
+                Credits? credits,
+            @JsonKey(name: 'featured')
+                bool featured,
+            @JsonKey(name: 'pandoraId')
+                String pandoraId,
+            @JsonKey(name: 'type')
+                PandoraType pandoraType,
+            @JsonKey(name: 'scope')
+                String scope)?
+        track,
+    TResult Function(
+            @JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
+                DateTime modificationTime,
+            @JsonKey(name: 'sampleArtists')
+                List<String> sampleArtistIds,
+            @JsonKey(name: 'sampleTracks')
+                List<String> sampleTrackIds,
+            @JsonKey(name: 'focusTraits')
+                List<FocusTrait> focusTraits,
+            @JsonKey(name: 'isRedirect')
+                bool isRedirect,
+            @JsonKey(name: 'curatorId')
+                String curatorId,
+            @JsonKey(name: 'pandoraId')
+                String pandoraId,
+            @JsonKey(name: 'type')
+                PandoraType pandoraType,
+            @JsonKey(name: 'scope')
+                String scope)?
+        genre,
+  }) {
+    return genre?.call(modificationTime, sampleArtistIds, sampleTrackIds,
+        focusTraits, isRedirect, curatorId, pandoraId, pandoraType, scope);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(
             @JsonKey(name: 'trackTags')
@@ -1715,6 +1992,15 @@ class _$GenreDetails implements GenreDetails {
 
   @override
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(TrackDetails value)? track,
+    TResult Function(GenreDetails value)? genre,
+  }) {
+    return genre?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(TrackDetails value)? track,
     TResult Function(GenreDetails value)? genre,
@@ -1728,7 +2014,7 @@ class _$GenreDetails implements GenreDetails {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$GenreDetailsToJson(this)..['runtimeType'] = 'genre';
+    return _$$GenreDetailsToJson(this)..['runtimeType'] = 'genre';
   }
 }
 

@@ -5,7 +5,6 @@ import 'package:iapetus/src/superbrowse/entities/badge.dart';
 import 'package:iapetus/src/superbrowse/entities/button.dart';
 import 'package:iapetus/src/superbrowse/entities/form_factors.dart';
 import 'package:iapetus/src/superbrowse/entities/image.dart';
-import 'package:iapetus/src/superbrowse/entities/item_type.dart';
 import 'package:iapetus/src/superbrowse/entities/label.dart';
 
 part 'item.freezed.dart';
@@ -13,7 +12,7 @@ part 'item.g.dart';
 
 @Freezed(unionKey: 'type')
 class SuperbrowseItem with _$SuperbrowseItem {
-  @FreezedUnionValue(SuperbrowseItemType.banner)
+  @FreezedUnionValue('banner')
   const factory SuperbrowseItem.banner({
     @JsonKey(name: 'pandoraId') String? pandoraId,
     @JsonKey(name: 'analyticsToken') required String analyticsToken,
@@ -21,7 +20,7 @@ class SuperbrowseItem with _$SuperbrowseItem {
     @JsonKey(name: 'image') SuperbrowseImage? image,
   }) = BannerSuperbrowseItem;
 
-  @FreezedUnionValue(SuperbrowseItemType.belt)
+  @FreezedUnionValue('belt')
   const factory SuperbrowseItem.belt({
     @JsonKey(name: 'pandoraId') String? pandoraId,
     @JsonKey(name: 'analyticsToken') required String analyticsToken,
@@ -32,7 +31,7 @@ class SuperbrowseItem with _$SuperbrowseItem {
     @JsonKey(name: 'voiceText') String? voiceText,
   }) = BeltSuperbrowseItem;
 
-  @FreezedUnionValue(SuperbrowseItemType.featured)
+  @FreezedUnionValue('featured')
   const factory SuperbrowseItem.featured({
     @JsonKey(name: 'pandoraId') String? pandoraId,
     @JsonKey(name: 'analyticsToken') required String analyticsToken,
@@ -43,7 +42,7 @@ class SuperbrowseItem with _$SuperbrowseItem {
     @JsonKey(name: 'badges') List<SuperbrowseBadge>? badges,
   }) = FeaturedSuperbrowseItem;
 
-  @FreezedUnionValue(SuperbrowseItemType.footer)
+  @FreezedUnionValue('footer')
   const factory SuperbrowseItem.footer({
     @JsonKey(name: 'pandoraId') String? pandoraId,
     @JsonKey(name: 'analyticsToken') required String analyticsToken,
@@ -54,7 +53,7 @@ class SuperbrowseItem with _$SuperbrowseItem {
   }) = FooterSuperbrowseItem;
 
   // TODO: GridSuperbrowseItem: parse alignment
-  @FreezedUnionValue(SuperbrowseItemType.grid)
+  @FreezedUnionValue('grid')
   const factory SuperbrowseItem.grid({
     @JsonKey(name: 'pandoraId') String? pandoraId,
     @JsonKey(name: 'analyticsToken') required String analyticsToken,
@@ -67,7 +66,7 @@ class SuperbrowseItem with _$SuperbrowseItem {
         DateTime? timestamp,
   }) = GridSuperbrowseItem;
 
-  @FreezedUnionValue(SuperbrowseItemType.header)
+  @FreezedUnionValue('header')
   const factory SuperbrowseItem.header({
     @JsonKey(name: 'pandoraId') String? pandoraId,
     @JsonKey(name: 'analyticsToken') required String analyticsToken,
@@ -77,7 +76,7 @@ class SuperbrowseItem with _$SuperbrowseItem {
     @JsonKey(name: 'longPressAction') SuperbrowseAction? longPressAction,
   }) = HeaderSuperbrowseItem;
 
-  @FreezedUnionValue(SuperbrowseItemType.hero)
+  @FreezedUnionValue('hero')
   const factory SuperbrowseItem.hero({
     @JsonKey(name: 'pandoraId') String? pandoraId,
     @JsonKey(name: 'analyticsToken') required String analyticsToken,
@@ -89,7 +88,7 @@ class SuperbrowseItem with _$SuperbrowseItem {
     @JsonKey(name: 'formFactors') FormFactors? formFactors,
   }) = HeroSuperbrowseItem;
 
-  @FreezedUnionValue(SuperbrowseItemType.largeRow)
+  @FreezedUnionValue('large_row')
   const factory SuperbrowseItem.largeRow({
     @JsonKey(name: 'pandoraId') String? pandoraId,
     @JsonKey(name: 'analyticsToken') required String analyticsToken,
@@ -104,7 +103,7 @@ class SuperbrowseItem with _$SuperbrowseItem {
         required bool separatorBelow,
   }) = LargeRowSuperbrowseItem;
 
-  @FreezedUnionValue(SuperbrowseItemType.smallRow)
+  @FreezedUnionValue('small_row')
   const factory SuperbrowseItem.smallRow({
     @JsonKey(name: 'pandoraId') String? pandoraId,
     @JsonKey(name: 'analyticsToken') required String analyticsToken,
@@ -114,7 +113,7 @@ class SuperbrowseItem with _$SuperbrowseItem {
     @JsonKey(name: 'longPressAction') SuperbrowseAction? longPressAction,
   }) = SmallRowSuperbrowseItem;
 
-  @FreezedUnionValue(SuperbrowseItemType.split)
+  @FreezedUnionValue('split')
   const factory SuperbrowseItem.split({
     @JsonKey(name: 'pandoraId') String? pandoraId,
     @JsonKey(name: 'analyticsToken') required String analyticsToken,
@@ -125,7 +124,7 @@ class SuperbrowseItem with _$SuperbrowseItem {
     @JsonKey(name: 'badges') List<SuperbrowseBadge>? badges,
   }) = SplitSuperbrowseItem;
 
-  @FreezedUnionValue(SuperbrowseItemType.tile)
+  @FreezedUnionValue('tile')
   const factory SuperbrowseItem.tile({
     @JsonKey(name: 'pandoraId') String? pandoraId,
     @JsonKey(name: 'analyticsToken') required String analyticsToken,

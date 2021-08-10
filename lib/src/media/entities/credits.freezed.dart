@@ -1,5 +1,6 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'credits.dart';
 
@@ -129,7 +130,7 @@ class _$_Credits implements _Credits {
       @JsonKey(name: 'fullCredits') required this.fullCreditsHtml});
 
   factory _$_Credits.fromJson(Map<String, dynamic> json) =>
-      _$_$_CreditsFromJson(json);
+      _$$_CreditsFromJson(json);
 
   @override
   @JsonKey(name: 'creditsSnippet')
@@ -168,7 +169,7 @@ class _$_Credits implements _Credits {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CreditsToJson(this);
+    return _$$_CreditsToJson(this);
   }
 }
 

@@ -1,5 +1,6 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'focus_trait.dart';
 
@@ -150,7 +151,7 @@ class _$_FocusTrait implements _FocusTrait {
       @JsonKey(name: 'focusTraitSetType') required this.focusTraitSetType});
 
   factory _$_FocusTrait.fromJson(Map<String, dynamic> json) =>
-      _$_$_FocusTraitFromJson(json);
+      _$$_FocusTraitFromJson(json);
 
   @override
   @JsonKey(name: 'name')
@@ -195,7 +196,7 @@ class _$_FocusTrait implements _FocusTrait {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_FocusTraitToJson(this);
+    return _$$_FocusTraitToJson(this);
   }
 }
 

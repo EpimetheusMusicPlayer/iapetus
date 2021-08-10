@@ -1,5 +1,6 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'item.dart';
 
@@ -462,6 +463,180 @@ mixin _$SuperbrowseItem {
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(
+            @JsonKey(name: 'pandoraId') String? pandoraId,
+            @JsonKey(name: 'analyticsToken') String analyticsToken,
+            @JsonKey(name: 'labels') List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'image') SuperbrowseImage? image)?
+        banner,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel>? labels,
+            @JsonKey(name: 'image')
+                SuperbrowseImage image,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction,
+            @JsonKey(name: 'voiceText')
+                String? voiceText)?
+        belt,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'image')
+                SuperbrowseImage image,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction,
+            @JsonKey(name: 'badges')
+                List<SuperbrowseBadge>? badges)?
+        featured,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'button')
+                SuperbrowseButton? button,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction)?
+        footer,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'image')
+                SuperbrowseImage image,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction,
+            @JsonKey(name: 'badges')
+                List<SuperbrowseBadge>? badges,
+            @JsonKey(name: 'timeStamp', fromJson: readOptionalDateTimeMilliseconds, toJson: writeOptionalDateTimeMilliseconds)
+                DateTime? timestamp)?
+        grid,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'image')
+                SuperbrowseImage? image,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction)?
+        header,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'image')
+                SuperbrowseImage image,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction,
+            @JsonKey(name: 'badges')
+                List<SuperbrowseBadge>? badges,
+            @JsonKey(name: 'formFactors')
+                FormFactors? formFactors)?
+        hero,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel>? labels,
+            @JsonKey(name: 'button')
+                SuperbrowseButton? button,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'image')
+                SuperbrowseImage image,
+            @JsonKey(name: 'rank')
+                SuperbrowseLabel? rank,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction,
+            @JsonKey(name: 'badges')
+                List<SuperbrowseBadge>? badges,
+            @JsonKey(name: 'separatorBelow', fromJson: readNullableBool, toJson: writeNullableBool)
+                bool separatorBelow)?
+        largeRow,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'button')
+                SuperbrowseButton? button,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction)?
+        smallRow,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'image')
+                SuperbrowseImage image,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction,
+            @JsonKey(name: 'badges')
+                List<SuperbrowseBadge>? badges)?
+        split,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel>? labels,
+            @JsonKey(name: 'image')
+                SuperbrowseImage image,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction,
+            @JsonKey(name: 'voiceText')
+                String? voiceText)?
+        tile,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(
             @JsonKey(name: 'pandoraId') String? pandoraId,
@@ -652,6 +827,21 @@ mixin _$SuperbrowseItem {
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(BannerSuperbrowseItem value)? banner,
+    TResult Function(BeltSuperbrowseItem value)? belt,
+    TResult Function(FeaturedSuperbrowseItem value)? featured,
+    TResult Function(FooterSuperbrowseItem value)? footer,
+    TResult Function(GridSuperbrowseItem value)? grid,
+    TResult Function(HeaderSuperbrowseItem value)? header,
+    TResult Function(HeroSuperbrowseItem value)? hero,
+    TResult Function(LargeRowSuperbrowseItem value)? largeRow,
+    TResult Function(SmallRowSuperbrowseItem value)? smallRow,
+    TResult Function(SplitSuperbrowseItem value)? split,
+    TResult Function(TileSuperbrowseItem value)? tile,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(BannerSuperbrowseItem value)? banner,
     TResult Function(BeltSuperbrowseItem value)? belt,
@@ -778,7 +968,7 @@ class _$BannerSuperbrowseItemCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-@FreezedUnionValue(SuperbrowseItemType.banner)
+@FreezedUnionValue('banner')
 class _$BannerSuperbrowseItem implements BannerSuperbrowseItem {
   const _$BannerSuperbrowseItem(
       {@JsonKey(name: 'pandoraId') this.pandoraId,
@@ -787,7 +977,7 @@ class _$BannerSuperbrowseItem implements BannerSuperbrowseItem {
       @JsonKey(name: 'image') this.image});
 
   factory _$BannerSuperbrowseItem.fromJson(Map<String, dynamic> json) =>
-      _$_$BannerSuperbrowseItemFromJson(json);
+      _$$BannerSuperbrowseItemFromJson(json);
 
   @override
   @JsonKey(name: 'pandoraId')
@@ -1016,6 +1206,183 @@ class _$BannerSuperbrowseItem implements BannerSuperbrowseItem {
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(
+            @JsonKey(name: 'pandoraId') String? pandoraId,
+            @JsonKey(name: 'analyticsToken') String analyticsToken,
+            @JsonKey(name: 'labels') List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'image') SuperbrowseImage? image)?
+        banner,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel>? labels,
+            @JsonKey(name: 'image')
+                SuperbrowseImage image,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction,
+            @JsonKey(name: 'voiceText')
+                String? voiceText)?
+        belt,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'image')
+                SuperbrowseImage image,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction,
+            @JsonKey(name: 'badges')
+                List<SuperbrowseBadge>? badges)?
+        featured,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'button')
+                SuperbrowseButton? button,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction)?
+        footer,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'image')
+                SuperbrowseImage image,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction,
+            @JsonKey(name: 'badges')
+                List<SuperbrowseBadge>? badges,
+            @JsonKey(name: 'timeStamp', fromJson: readOptionalDateTimeMilliseconds, toJson: writeOptionalDateTimeMilliseconds)
+                DateTime? timestamp)?
+        grid,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'image')
+                SuperbrowseImage? image,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction)?
+        header,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'image')
+                SuperbrowseImage image,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction,
+            @JsonKey(name: 'badges')
+                List<SuperbrowseBadge>? badges,
+            @JsonKey(name: 'formFactors')
+                FormFactors? formFactors)?
+        hero,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel>? labels,
+            @JsonKey(name: 'button')
+                SuperbrowseButton? button,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'image')
+                SuperbrowseImage image,
+            @JsonKey(name: 'rank')
+                SuperbrowseLabel? rank,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction,
+            @JsonKey(name: 'badges')
+                List<SuperbrowseBadge>? badges,
+            @JsonKey(name: 'separatorBelow', fromJson: readNullableBool, toJson: writeNullableBool)
+                bool separatorBelow)?
+        largeRow,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'button')
+                SuperbrowseButton? button,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction)?
+        smallRow,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'image')
+                SuperbrowseImage image,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction,
+            @JsonKey(name: 'badges')
+                List<SuperbrowseBadge>? badges)?
+        split,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel>? labels,
+            @JsonKey(name: 'image')
+                SuperbrowseImage image,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction,
+            @JsonKey(name: 'voiceText')
+                String? voiceText)?
+        tile,
+  }) {
+    return banner?.call(pandoraId, analyticsToken, labels, image);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(
             @JsonKey(name: 'pandoraId') String? pandoraId,
@@ -1215,6 +1582,24 @@ class _$BannerSuperbrowseItem implements BannerSuperbrowseItem {
 
   @override
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(BannerSuperbrowseItem value)? banner,
+    TResult Function(BeltSuperbrowseItem value)? belt,
+    TResult Function(FeaturedSuperbrowseItem value)? featured,
+    TResult Function(FooterSuperbrowseItem value)? footer,
+    TResult Function(GridSuperbrowseItem value)? grid,
+    TResult Function(HeaderSuperbrowseItem value)? header,
+    TResult Function(HeroSuperbrowseItem value)? hero,
+    TResult Function(LargeRowSuperbrowseItem value)? largeRow,
+    TResult Function(SmallRowSuperbrowseItem value)? smallRow,
+    TResult Function(SplitSuperbrowseItem value)? split,
+    TResult Function(TileSuperbrowseItem value)? tile,
+  }) {
+    return banner?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(BannerSuperbrowseItem value)? banner,
     TResult Function(BeltSuperbrowseItem value)? belt,
@@ -1237,7 +1622,7 @@ class _$BannerSuperbrowseItem implements BannerSuperbrowseItem {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$BannerSuperbrowseItemToJson(this)..['type'] = 'banner';
+    return _$$BannerSuperbrowseItemToJson(this)..['type'] = 'banner';
   }
 }
 
@@ -1374,7 +1759,7 @@ class _$BeltSuperbrowseItemCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-@FreezedUnionValue(SuperbrowseItemType.belt)
+@FreezedUnionValue('belt')
 class _$BeltSuperbrowseItem implements BeltSuperbrowseItem {
   const _$BeltSuperbrowseItem(
       {@JsonKey(name: 'pandoraId') this.pandoraId,
@@ -1386,7 +1771,7 @@ class _$BeltSuperbrowseItem implements BeltSuperbrowseItem {
       @JsonKey(name: 'voiceText') this.voiceText});
 
   factory _$BeltSuperbrowseItem.fromJson(Map<String, dynamic> json) =>
-      _$_$BeltSuperbrowseItemFromJson(json);
+      _$$BeltSuperbrowseItemFromJson(json);
 
   @override
   @JsonKey(name: 'pandoraId')
@@ -1635,6 +2020,184 @@ class _$BeltSuperbrowseItem implements BeltSuperbrowseItem {
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(
+            @JsonKey(name: 'pandoraId') String? pandoraId,
+            @JsonKey(name: 'analyticsToken') String analyticsToken,
+            @JsonKey(name: 'labels') List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'image') SuperbrowseImage? image)?
+        banner,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel>? labels,
+            @JsonKey(name: 'image')
+                SuperbrowseImage image,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction,
+            @JsonKey(name: 'voiceText')
+                String? voiceText)?
+        belt,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'image')
+                SuperbrowseImage image,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction,
+            @JsonKey(name: 'badges')
+                List<SuperbrowseBadge>? badges)?
+        featured,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'button')
+                SuperbrowseButton? button,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction)?
+        footer,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'image')
+                SuperbrowseImage image,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction,
+            @JsonKey(name: 'badges')
+                List<SuperbrowseBadge>? badges,
+            @JsonKey(name: 'timeStamp', fromJson: readOptionalDateTimeMilliseconds, toJson: writeOptionalDateTimeMilliseconds)
+                DateTime? timestamp)?
+        grid,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'image')
+                SuperbrowseImage? image,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction)?
+        header,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'image')
+                SuperbrowseImage image,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction,
+            @JsonKey(name: 'badges')
+                List<SuperbrowseBadge>? badges,
+            @JsonKey(name: 'formFactors')
+                FormFactors? formFactors)?
+        hero,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel>? labels,
+            @JsonKey(name: 'button')
+                SuperbrowseButton? button,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'image')
+                SuperbrowseImage image,
+            @JsonKey(name: 'rank')
+                SuperbrowseLabel? rank,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction,
+            @JsonKey(name: 'badges')
+                List<SuperbrowseBadge>? badges,
+            @JsonKey(name: 'separatorBelow', fromJson: readNullableBool, toJson: writeNullableBool)
+                bool separatorBelow)?
+        largeRow,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'button')
+                SuperbrowseButton? button,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction)?
+        smallRow,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'image')
+                SuperbrowseImage image,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction,
+            @JsonKey(name: 'badges')
+                List<SuperbrowseBadge>? badges)?
+        split,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel>? labels,
+            @JsonKey(name: 'image')
+                SuperbrowseImage image,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction,
+            @JsonKey(name: 'voiceText')
+                String? voiceText)?
+        tile,
+  }) {
+    return belt?.call(pandoraId, analyticsToken, labels, image, action,
+        longPressAction, voiceText);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(
             @JsonKey(name: 'pandoraId') String? pandoraId,
@@ -1835,6 +2398,24 @@ class _$BeltSuperbrowseItem implements BeltSuperbrowseItem {
 
   @override
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(BannerSuperbrowseItem value)? banner,
+    TResult Function(BeltSuperbrowseItem value)? belt,
+    TResult Function(FeaturedSuperbrowseItem value)? featured,
+    TResult Function(FooterSuperbrowseItem value)? footer,
+    TResult Function(GridSuperbrowseItem value)? grid,
+    TResult Function(HeaderSuperbrowseItem value)? header,
+    TResult Function(HeroSuperbrowseItem value)? hero,
+    TResult Function(LargeRowSuperbrowseItem value)? largeRow,
+    TResult Function(SmallRowSuperbrowseItem value)? smallRow,
+    TResult Function(SplitSuperbrowseItem value)? split,
+    TResult Function(TileSuperbrowseItem value)? tile,
+  }) {
+    return belt?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(BannerSuperbrowseItem value)? banner,
     TResult Function(BeltSuperbrowseItem value)? belt,
@@ -1857,7 +2438,7 @@ class _$BeltSuperbrowseItem implements BeltSuperbrowseItem {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$BeltSuperbrowseItemToJson(this)..['type'] = 'belt';
+    return _$$BeltSuperbrowseItemToJson(this)..['type'] = 'belt';
   }
 }
 
@@ -2002,7 +2583,7 @@ class _$FeaturedSuperbrowseItemCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-@FreezedUnionValue(SuperbrowseItemType.featured)
+@FreezedUnionValue('featured')
 class _$FeaturedSuperbrowseItem implements FeaturedSuperbrowseItem {
   const _$FeaturedSuperbrowseItem(
       {@JsonKey(name: 'pandoraId') this.pandoraId,
@@ -2014,7 +2595,7 @@ class _$FeaturedSuperbrowseItem implements FeaturedSuperbrowseItem {
       @JsonKey(name: 'badges') this.badges});
 
   factory _$FeaturedSuperbrowseItem.fromJson(Map<String, dynamic> json) =>
-      _$_$FeaturedSuperbrowseItemFromJson(json);
+      _$$FeaturedSuperbrowseItemFromJson(json);
 
   @override
   @JsonKey(name: 'pandoraId')
@@ -2263,6 +2844,184 @@ class _$FeaturedSuperbrowseItem implements FeaturedSuperbrowseItem {
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(
+            @JsonKey(name: 'pandoraId') String? pandoraId,
+            @JsonKey(name: 'analyticsToken') String analyticsToken,
+            @JsonKey(name: 'labels') List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'image') SuperbrowseImage? image)?
+        banner,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel>? labels,
+            @JsonKey(name: 'image')
+                SuperbrowseImage image,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction,
+            @JsonKey(name: 'voiceText')
+                String? voiceText)?
+        belt,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'image')
+                SuperbrowseImage image,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction,
+            @JsonKey(name: 'badges')
+                List<SuperbrowseBadge>? badges)?
+        featured,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'button')
+                SuperbrowseButton? button,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction)?
+        footer,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'image')
+                SuperbrowseImage image,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction,
+            @JsonKey(name: 'badges')
+                List<SuperbrowseBadge>? badges,
+            @JsonKey(name: 'timeStamp', fromJson: readOptionalDateTimeMilliseconds, toJson: writeOptionalDateTimeMilliseconds)
+                DateTime? timestamp)?
+        grid,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'image')
+                SuperbrowseImage? image,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction)?
+        header,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'image')
+                SuperbrowseImage image,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction,
+            @JsonKey(name: 'badges')
+                List<SuperbrowseBadge>? badges,
+            @JsonKey(name: 'formFactors')
+                FormFactors? formFactors)?
+        hero,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel>? labels,
+            @JsonKey(name: 'button')
+                SuperbrowseButton? button,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'image')
+                SuperbrowseImage image,
+            @JsonKey(name: 'rank')
+                SuperbrowseLabel? rank,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction,
+            @JsonKey(name: 'badges')
+                List<SuperbrowseBadge>? badges,
+            @JsonKey(name: 'separatorBelow', fromJson: readNullableBool, toJson: writeNullableBool)
+                bool separatorBelow)?
+        largeRow,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'button')
+                SuperbrowseButton? button,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction)?
+        smallRow,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'image')
+                SuperbrowseImage image,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction,
+            @JsonKey(name: 'badges')
+                List<SuperbrowseBadge>? badges)?
+        split,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel>? labels,
+            @JsonKey(name: 'image')
+                SuperbrowseImage image,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction,
+            @JsonKey(name: 'voiceText')
+                String? voiceText)?
+        tile,
+  }) {
+    return featured?.call(pandoraId, analyticsToken, labels, image, action,
+        longPressAction, badges);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(
             @JsonKey(name: 'pandoraId') String? pandoraId,
@@ -2463,6 +3222,24 @@ class _$FeaturedSuperbrowseItem implements FeaturedSuperbrowseItem {
 
   @override
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(BannerSuperbrowseItem value)? banner,
+    TResult Function(BeltSuperbrowseItem value)? belt,
+    TResult Function(FeaturedSuperbrowseItem value)? featured,
+    TResult Function(FooterSuperbrowseItem value)? footer,
+    TResult Function(GridSuperbrowseItem value)? grid,
+    TResult Function(HeaderSuperbrowseItem value)? header,
+    TResult Function(HeroSuperbrowseItem value)? hero,
+    TResult Function(LargeRowSuperbrowseItem value)? largeRow,
+    TResult Function(SmallRowSuperbrowseItem value)? smallRow,
+    TResult Function(SplitSuperbrowseItem value)? split,
+    TResult Function(TileSuperbrowseItem value)? tile,
+  }) {
+    return featured?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(BannerSuperbrowseItem value)? banner,
     TResult Function(BeltSuperbrowseItem value)? belt,
@@ -2485,7 +3262,7 @@ class _$FeaturedSuperbrowseItem implements FeaturedSuperbrowseItem {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$FeaturedSuperbrowseItemToJson(this)..['type'] = 'featured';
+    return _$$FeaturedSuperbrowseItemToJson(this)..['type'] = 'featured';
   }
 }
 
@@ -2629,7 +3406,7 @@ class _$FooterSuperbrowseItemCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-@FreezedUnionValue(SuperbrowseItemType.footer)
+@FreezedUnionValue('footer')
 class _$FooterSuperbrowseItem implements FooterSuperbrowseItem {
   const _$FooterSuperbrowseItem(
       {@JsonKey(name: 'pandoraId') this.pandoraId,
@@ -2640,7 +3417,7 @@ class _$FooterSuperbrowseItem implements FooterSuperbrowseItem {
       @JsonKey(name: 'longPressAction') this.longPressAction});
 
   factory _$FooterSuperbrowseItem.fromJson(Map<String, dynamic> json) =>
-      _$_$FooterSuperbrowseItemFromJson(json);
+      _$$FooterSuperbrowseItemFromJson(json);
 
   @override
   @JsonKey(name: 'pandoraId')
@@ -2883,6 +3660,184 @@ class _$FooterSuperbrowseItem implements FooterSuperbrowseItem {
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(
+            @JsonKey(name: 'pandoraId') String? pandoraId,
+            @JsonKey(name: 'analyticsToken') String analyticsToken,
+            @JsonKey(name: 'labels') List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'image') SuperbrowseImage? image)?
+        banner,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel>? labels,
+            @JsonKey(name: 'image')
+                SuperbrowseImage image,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction,
+            @JsonKey(name: 'voiceText')
+                String? voiceText)?
+        belt,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'image')
+                SuperbrowseImage image,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction,
+            @JsonKey(name: 'badges')
+                List<SuperbrowseBadge>? badges)?
+        featured,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'button')
+                SuperbrowseButton? button,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction)?
+        footer,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'image')
+                SuperbrowseImage image,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction,
+            @JsonKey(name: 'badges')
+                List<SuperbrowseBadge>? badges,
+            @JsonKey(name: 'timeStamp', fromJson: readOptionalDateTimeMilliseconds, toJson: writeOptionalDateTimeMilliseconds)
+                DateTime? timestamp)?
+        grid,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'image')
+                SuperbrowseImage? image,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction)?
+        header,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'image')
+                SuperbrowseImage image,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction,
+            @JsonKey(name: 'badges')
+                List<SuperbrowseBadge>? badges,
+            @JsonKey(name: 'formFactors')
+                FormFactors? formFactors)?
+        hero,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel>? labels,
+            @JsonKey(name: 'button')
+                SuperbrowseButton? button,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'image')
+                SuperbrowseImage image,
+            @JsonKey(name: 'rank')
+                SuperbrowseLabel? rank,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction,
+            @JsonKey(name: 'badges')
+                List<SuperbrowseBadge>? badges,
+            @JsonKey(name: 'separatorBelow', fromJson: readNullableBool, toJson: writeNullableBool)
+                bool separatorBelow)?
+        largeRow,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'button')
+                SuperbrowseButton? button,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction)?
+        smallRow,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'image')
+                SuperbrowseImage image,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction,
+            @JsonKey(name: 'badges')
+                List<SuperbrowseBadge>? badges)?
+        split,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel>? labels,
+            @JsonKey(name: 'image')
+                SuperbrowseImage image,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction,
+            @JsonKey(name: 'voiceText')
+                String? voiceText)?
+        tile,
+  }) {
+    return footer?.call(
+        pandoraId, analyticsToken, labels, button, action, longPressAction);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(
             @JsonKey(name: 'pandoraId') String? pandoraId,
@@ -3083,6 +4038,24 @@ class _$FooterSuperbrowseItem implements FooterSuperbrowseItem {
 
   @override
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(BannerSuperbrowseItem value)? banner,
+    TResult Function(BeltSuperbrowseItem value)? belt,
+    TResult Function(FeaturedSuperbrowseItem value)? featured,
+    TResult Function(FooterSuperbrowseItem value)? footer,
+    TResult Function(GridSuperbrowseItem value)? grid,
+    TResult Function(HeaderSuperbrowseItem value)? header,
+    TResult Function(HeroSuperbrowseItem value)? hero,
+    TResult Function(LargeRowSuperbrowseItem value)? largeRow,
+    TResult Function(SmallRowSuperbrowseItem value)? smallRow,
+    TResult Function(SplitSuperbrowseItem value)? split,
+    TResult Function(TileSuperbrowseItem value)? tile,
+  }) {
+    return footer?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(BannerSuperbrowseItem value)? banner,
     TResult Function(BeltSuperbrowseItem value)? belt,
@@ -3105,7 +4078,7 @@ class _$FooterSuperbrowseItem implements FooterSuperbrowseItem {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$FooterSuperbrowseItemToJson(this)..['type'] = 'footer';
+    return _$$FooterSuperbrowseItemToJson(this)..['type'] = 'footer';
   }
 }
 
@@ -3267,7 +4240,7 @@ class _$GridSuperbrowseItemCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-@FreezedUnionValue(SuperbrowseItemType.grid)
+@FreezedUnionValue('grid')
 class _$GridSuperbrowseItem implements GridSuperbrowseItem {
   const _$GridSuperbrowseItem(
       {@JsonKey(name: 'pandoraId')
@@ -3288,7 +4261,7 @@ class _$GridSuperbrowseItem implements GridSuperbrowseItem {
           this.timestamp});
 
   factory _$GridSuperbrowseItem.fromJson(Map<String, dynamic> json) =>
-      _$_$GridSuperbrowseItemFromJson(json);
+      _$$GridSuperbrowseItemFromJson(json);
 
   @override
   @JsonKey(name: 'pandoraId')
@@ -3546,6 +4519,184 @@ class _$GridSuperbrowseItem implements GridSuperbrowseItem {
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(
+            @JsonKey(name: 'pandoraId') String? pandoraId,
+            @JsonKey(name: 'analyticsToken') String analyticsToken,
+            @JsonKey(name: 'labels') List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'image') SuperbrowseImage? image)?
+        banner,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel>? labels,
+            @JsonKey(name: 'image')
+                SuperbrowseImage image,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction,
+            @JsonKey(name: 'voiceText')
+                String? voiceText)?
+        belt,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'image')
+                SuperbrowseImage image,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction,
+            @JsonKey(name: 'badges')
+                List<SuperbrowseBadge>? badges)?
+        featured,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'button')
+                SuperbrowseButton? button,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction)?
+        footer,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'image')
+                SuperbrowseImage image,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction,
+            @JsonKey(name: 'badges')
+                List<SuperbrowseBadge>? badges,
+            @JsonKey(name: 'timeStamp', fromJson: readOptionalDateTimeMilliseconds, toJson: writeOptionalDateTimeMilliseconds)
+                DateTime? timestamp)?
+        grid,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'image')
+                SuperbrowseImage? image,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction)?
+        header,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'image')
+                SuperbrowseImage image,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction,
+            @JsonKey(name: 'badges')
+                List<SuperbrowseBadge>? badges,
+            @JsonKey(name: 'formFactors')
+                FormFactors? formFactors)?
+        hero,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel>? labels,
+            @JsonKey(name: 'button')
+                SuperbrowseButton? button,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'image')
+                SuperbrowseImage image,
+            @JsonKey(name: 'rank')
+                SuperbrowseLabel? rank,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction,
+            @JsonKey(name: 'badges')
+                List<SuperbrowseBadge>? badges,
+            @JsonKey(name: 'separatorBelow', fromJson: readNullableBool, toJson: writeNullableBool)
+                bool separatorBelow)?
+        largeRow,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'button')
+                SuperbrowseButton? button,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction)?
+        smallRow,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'image')
+                SuperbrowseImage image,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction,
+            @JsonKey(name: 'badges')
+                List<SuperbrowseBadge>? badges)?
+        split,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel>? labels,
+            @JsonKey(name: 'image')
+                SuperbrowseImage image,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction,
+            @JsonKey(name: 'voiceText')
+                String? voiceText)?
+        tile,
+  }) {
+    return grid?.call(pandoraId, analyticsToken, labels, image, action,
+        longPressAction, badges, timestamp);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(
             @JsonKey(name: 'pandoraId') String? pandoraId,
@@ -3746,6 +4897,24 @@ class _$GridSuperbrowseItem implements GridSuperbrowseItem {
 
   @override
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(BannerSuperbrowseItem value)? banner,
+    TResult Function(BeltSuperbrowseItem value)? belt,
+    TResult Function(FeaturedSuperbrowseItem value)? featured,
+    TResult Function(FooterSuperbrowseItem value)? footer,
+    TResult Function(GridSuperbrowseItem value)? grid,
+    TResult Function(HeaderSuperbrowseItem value)? header,
+    TResult Function(HeroSuperbrowseItem value)? hero,
+    TResult Function(LargeRowSuperbrowseItem value)? largeRow,
+    TResult Function(SmallRowSuperbrowseItem value)? smallRow,
+    TResult Function(SplitSuperbrowseItem value)? split,
+    TResult Function(TileSuperbrowseItem value)? tile,
+  }) {
+    return grid?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(BannerSuperbrowseItem value)? banner,
     TResult Function(BeltSuperbrowseItem value)? belt,
@@ -3768,7 +4937,7 @@ class _$GridSuperbrowseItem implements GridSuperbrowseItem {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$GridSuperbrowseItemToJson(this)..['type'] = 'grid';
+    return _$$GridSuperbrowseItemToJson(this)..['type'] = 'grid';
   }
 }
 
@@ -3925,7 +5094,7 @@ class _$HeaderSuperbrowseItemCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-@FreezedUnionValue(SuperbrowseItemType.header)
+@FreezedUnionValue('header')
 class _$HeaderSuperbrowseItem implements HeaderSuperbrowseItem {
   const _$HeaderSuperbrowseItem(
       {@JsonKey(name: 'pandoraId') this.pandoraId,
@@ -3936,7 +5105,7 @@ class _$HeaderSuperbrowseItem implements HeaderSuperbrowseItem {
       @JsonKey(name: 'longPressAction') this.longPressAction});
 
   factory _$HeaderSuperbrowseItem.fromJson(Map<String, dynamic> json) =>
-      _$_$HeaderSuperbrowseItemFromJson(json);
+      _$$HeaderSuperbrowseItemFromJson(json);
 
   @override
   @JsonKey(name: 'pandoraId')
@@ -4179,6 +5348,184 @@ class _$HeaderSuperbrowseItem implements HeaderSuperbrowseItem {
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(
+            @JsonKey(name: 'pandoraId') String? pandoraId,
+            @JsonKey(name: 'analyticsToken') String analyticsToken,
+            @JsonKey(name: 'labels') List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'image') SuperbrowseImage? image)?
+        banner,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel>? labels,
+            @JsonKey(name: 'image')
+                SuperbrowseImage image,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction,
+            @JsonKey(name: 'voiceText')
+                String? voiceText)?
+        belt,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'image')
+                SuperbrowseImage image,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction,
+            @JsonKey(name: 'badges')
+                List<SuperbrowseBadge>? badges)?
+        featured,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'button')
+                SuperbrowseButton? button,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction)?
+        footer,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'image')
+                SuperbrowseImage image,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction,
+            @JsonKey(name: 'badges')
+                List<SuperbrowseBadge>? badges,
+            @JsonKey(name: 'timeStamp', fromJson: readOptionalDateTimeMilliseconds, toJson: writeOptionalDateTimeMilliseconds)
+                DateTime? timestamp)?
+        grid,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'image')
+                SuperbrowseImage? image,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction)?
+        header,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'image')
+                SuperbrowseImage image,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction,
+            @JsonKey(name: 'badges')
+                List<SuperbrowseBadge>? badges,
+            @JsonKey(name: 'formFactors')
+                FormFactors? formFactors)?
+        hero,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel>? labels,
+            @JsonKey(name: 'button')
+                SuperbrowseButton? button,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'image')
+                SuperbrowseImage image,
+            @JsonKey(name: 'rank')
+                SuperbrowseLabel? rank,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction,
+            @JsonKey(name: 'badges')
+                List<SuperbrowseBadge>? badges,
+            @JsonKey(name: 'separatorBelow', fromJson: readNullableBool, toJson: writeNullableBool)
+                bool separatorBelow)?
+        largeRow,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'button')
+                SuperbrowseButton? button,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction)?
+        smallRow,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'image')
+                SuperbrowseImage image,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction,
+            @JsonKey(name: 'badges')
+                List<SuperbrowseBadge>? badges)?
+        split,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel>? labels,
+            @JsonKey(name: 'image')
+                SuperbrowseImage image,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction,
+            @JsonKey(name: 'voiceText')
+                String? voiceText)?
+        tile,
+  }) {
+    return header?.call(
+        pandoraId, analyticsToken, labels, image, action, longPressAction);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(
             @JsonKey(name: 'pandoraId') String? pandoraId,
@@ -4379,6 +5726,24 @@ class _$HeaderSuperbrowseItem implements HeaderSuperbrowseItem {
 
   @override
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(BannerSuperbrowseItem value)? banner,
+    TResult Function(BeltSuperbrowseItem value)? belt,
+    TResult Function(FeaturedSuperbrowseItem value)? featured,
+    TResult Function(FooterSuperbrowseItem value)? footer,
+    TResult Function(GridSuperbrowseItem value)? grid,
+    TResult Function(HeaderSuperbrowseItem value)? header,
+    TResult Function(HeroSuperbrowseItem value)? hero,
+    TResult Function(LargeRowSuperbrowseItem value)? largeRow,
+    TResult Function(SmallRowSuperbrowseItem value)? smallRow,
+    TResult Function(SplitSuperbrowseItem value)? split,
+    TResult Function(TileSuperbrowseItem value)? tile,
+  }) {
+    return header?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(BannerSuperbrowseItem value)? banner,
     TResult Function(BeltSuperbrowseItem value)? belt,
@@ -4401,7 +5766,7 @@ class _$HeaderSuperbrowseItem implements HeaderSuperbrowseItem {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$HeaderSuperbrowseItemToJson(this)..['type'] = 'header';
+    return _$$HeaderSuperbrowseItemToJson(this)..['type'] = 'header';
   }
 }
 
@@ -4567,7 +5932,7 @@ class _$HeroSuperbrowseItemCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-@FreezedUnionValue(SuperbrowseItemType.hero)
+@FreezedUnionValue('hero')
 class _$HeroSuperbrowseItem implements HeroSuperbrowseItem {
   const _$HeroSuperbrowseItem(
       {@JsonKey(name: 'pandoraId') this.pandoraId,
@@ -4580,7 +5945,7 @@ class _$HeroSuperbrowseItem implements HeroSuperbrowseItem {
       @JsonKey(name: 'formFactors') this.formFactors});
 
   factory _$HeroSuperbrowseItem.fromJson(Map<String, dynamic> json) =>
-      _$_$HeroSuperbrowseItemFromJson(json);
+      _$$HeroSuperbrowseItemFromJson(json);
 
   @override
   @JsonKey(name: 'pandoraId')
@@ -4835,6 +6200,184 @@ class _$HeroSuperbrowseItem implements HeroSuperbrowseItem {
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(
+            @JsonKey(name: 'pandoraId') String? pandoraId,
+            @JsonKey(name: 'analyticsToken') String analyticsToken,
+            @JsonKey(name: 'labels') List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'image') SuperbrowseImage? image)?
+        banner,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel>? labels,
+            @JsonKey(name: 'image')
+                SuperbrowseImage image,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction,
+            @JsonKey(name: 'voiceText')
+                String? voiceText)?
+        belt,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'image')
+                SuperbrowseImage image,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction,
+            @JsonKey(name: 'badges')
+                List<SuperbrowseBadge>? badges)?
+        featured,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'button')
+                SuperbrowseButton? button,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction)?
+        footer,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'image')
+                SuperbrowseImage image,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction,
+            @JsonKey(name: 'badges')
+                List<SuperbrowseBadge>? badges,
+            @JsonKey(name: 'timeStamp', fromJson: readOptionalDateTimeMilliseconds, toJson: writeOptionalDateTimeMilliseconds)
+                DateTime? timestamp)?
+        grid,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'image')
+                SuperbrowseImage? image,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction)?
+        header,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'image')
+                SuperbrowseImage image,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction,
+            @JsonKey(name: 'badges')
+                List<SuperbrowseBadge>? badges,
+            @JsonKey(name: 'formFactors')
+                FormFactors? formFactors)?
+        hero,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel>? labels,
+            @JsonKey(name: 'button')
+                SuperbrowseButton? button,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'image')
+                SuperbrowseImage image,
+            @JsonKey(name: 'rank')
+                SuperbrowseLabel? rank,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction,
+            @JsonKey(name: 'badges')
+                List<SuperbrowseBadge>? badges,
+            @JsonKey(name: 'separatorBelow', fromJson: readNullableBool, toJson: writeNullableBool)
+                bool separatorBelow)?
+        largeRow,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'button')
+                SuperbrowseButton? button,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction)?
+        smallRow,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'image')
+                SuperbrowseImage image,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction,
+            @JsonKey(name: 'badges')
+                List<SuperbrowseBadge>? badges)?
+        split,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel>? labels,
+            @JsonKey(name: 'image')
+                SuperbrowseImage image,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction,
+            @JsonKey(name: 'voiceText')
+                String? voiceText)?
+        tile,
+  }) {
+    return hero?.call(pandoraId, analyticsToken, labels, image, action,
+        longPressAction, badges, formFactors);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(
             @JsonKey(name: 'pandoraId') String? pandoraId,
@@ -5035,6 +6578,24 @@ class _$HeroSuperbrowseItem implements HeroSuperbrowseItem {
 
   @override
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(BannerSuperbrowseItem value)? banner,
+    TResult Function(BeltSuperbrowseItem value)? belt,
+    TResult Function(FeaturedSuperbrowseItem value)? featured,
+    TResult Function(FooterSuperbrowseItem value)? footer,
+    TResult Function(GridSuperbrowseItem value)? grid,
+    TResult Function(HeaderSuperbrowseItem value)? header,
+    TResult Function(HeroSuperbrowseItem value)? hero,
+    TResult Function(LargeRowSuperbrowseItem value)? largeRow,
+    TResult Function(SmallRowSuperbrowseItem value)? smallRow,
+    TResult Function(SplitSuperbrowseItem value)? split,
+    TResult Function(TileSuperbrowseItem value)? tile,
+  }) {
+    return hero?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(BannerSuperbrowseItem value)? banner,
     TResult Function(BeltSuperbrowseItem value)? belt,
@@ -5057,7 +6618,7 @@ class _$HeroSuperbrowseItem implements HeroSuperbrowseItem {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$HeroSuperbrowseItemToJson(this)..['type'] = 'hero';
+    return _$$HeroSuperbrowseItemToJson(this)..['type'] = 'hero';
   }
 }
 
@@ -5258,7 +6819,7 @@ class _$LargeRowSuperbrowseItemCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-@FreezedUnionValue(SuperbrowseItemType.largeRow)
+@FreezedUnionValue('large_row')
 class _$LargeRowSuperbrowseItem implements LargeRowSuperbrowseItem {
   const _$LargeRowSuperbrowseItem(
       {@JsonKey(name: 'pandoraId')
@@ -5283,7 +6844,7 @@ class _$LargeRowSuperbrowseItem implements LargeRowSuperbrowseItem {
           required this.separatorBelow});
 
   factory _$LargeRowSuperbrowseItem.fromJson(Map<String, dynamic> json) =>
-      _$_$LargeRowSuperbrowseItemFromJson(json);
+      _$$LargeRowSuperbrowseItemFromJson(json);
 
   @override
   @JsonKey(name: 'pandoraId')
@@ -5554,6 +7115,184 @@ class _$LargeRowSuperbrowseItem implements LargeRowSuperbrowseItem {
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(
+            @JsonKey(name: 'pandoraId') String? pandoraId,
+            @JsonKey(name: 'analyticsToken') String analyticsToken,
+            @JsonKey(name: 'labels') List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'image') SuperbrowseImage? image)?
+        banner,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel>? labels,
+            @JsonKey(name: 'image')
+                SuperbrowseImage image,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction,
+            @JsonKey(name: 'voiceText')
+                String? voiceText)?
+        belt,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'image')
+                SuperbrowseImage image,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction,
+            @JsonKey(name: 'badges')
+                List<SuperbrowseBadge>? badges)?
+        featured,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'button')
+                SuperbrowseButton? button,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction)?
+        footer,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'image')
+                SuperbrowseImage image,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction,
+            @JsonKey(name: 'badges')
+                List<SuperbrowseBadge>? badges,
+            @JsonKey(name: 'timeStamp', fromJson: readOptionalDateTimeMilliseconds, toJson: writeOptionalDateTimeMilliseconds)
+                DateTime? timestamp)?
+        grid,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'image')
+                SuperbrowseImage? image,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction)?
+        header,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'image')
+                SuperbrowseImage image,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction,
+            @JsonKey(name: 'badges')
+                List<SuperbrowseBadge>? badges,
+            @JsonKey(name: 'formFactors')
+                FormFactors? formFactors)?
+        hero,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel>? labels,
+            @JsonKey(name: 'button')
+                SuperbrowseButton? button,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'image')
+                SuperbrowseImage image,
+            @JsonKey(name: 'rank')
+                SuperbrowseLabel? rank,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction,
+            @JsonKey(name: 'badges')
+                List<SuperbrowseBadge>? badges,
+            @JsonKey(name: 'separatorBelow', fromJson: readNullableBool, toJson: writeNullableBool)
+                bool separatorBelow)?
+        largeRow,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'button')
+                SuperbrowseButton? button,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction)?
+        smallRow,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'image')
+                SuperbrowseImage image,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction,
+            @JsonKey(name: 'badges')
+                List<SuperbrowseBadge>? badges)?
+        split,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel>? labels,
+            @JsonKey(name: 'image')
+                SuperbrowseImage image,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction,
+            @JsonKey(name: 'voiceText')
+                String? voiceText)?
+        tile,
+  }) {
+    return largeRow?.call(pandoraId, analyticsToken, labels, button, action,
+        image, rank, longPressAction, badges, separatorBelow);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(
             @JsonKey(name: 'pandoraId') String? pandoraId,
@@ -5754,6 +7493,24 @@ class _$LargeRowSuperbrowseItem implements LargeRowSuperbrowseItem {
 
   @override
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(BannerSuperbrowseItem value)? banner,
+    TResult Function(BeltSuperbrowseItem value)? belt,
+    TResult Function(FeaturedSuperbrowseItem value)? featured,
+    TResult Function(FooterSuperbrowseItem value)? footer,
+    TResult Function(GridSuperbrowseItem value)? grid,
+    TResult Function(HeaderSuperbrowseItem value)? header,
+    TResult Function(HeroSuperbrowseItem value)? hero,
+    TResult Function(LargeRowSuperbrowseItem value)? largeRow,
+    TResult Function(SmallRowSuperbrowseItem value)? smallRow,
+    TResult Function(SplitSuperbrowseItem value)? split,
+    TResult Function(TileSuperbrowseItem value)? tile,
+  }) {
+    return largeRow?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(BannerSuperbrowseItem value)? banner,
     TResult Function(BeltSuperbrowseItem value)? belt,
@@ -5776,7 +7533,7 @@ class _$LargeRowSuperbrowseItem implements LargeRowSuperbrowseItem {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$LargeRowSuperbrowseItemToJson(this)..['type'] = 'large_row';
+    return _$$LargeRowSuperbrowseItemToJson(this)..['type'] = 'large_row';
   }
 }
 
@@ -5941,7 +7698,7 @@ class _$SmallRowSuperbrowseItemCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-@FreezedUnionValue(SuperbrowseItemType.smallRow)
+@FreezedUnionValue('small_row')
 class _$SmallRowSuperbrowseItem implements SmallRowSuperbrowseItem {
   const _$SmallRowSuperbrowseItem(
       {@JsonKey(name: 'pandoraId') this.pandoraId,
@@ -5952,7 +7709,7 @@ class _$SmallRowSuperbrowseItem implements SmallRowSuperbrowseItem {
       @JsonKey(name: 'longPressAction') this.longPressAction});
 
   factory _$SmallRowSuperbrowseItem.fromJson(Map<String, dynamic> json) =>
-      _$_$SmallRowSuperbrowseItemFromJson(json);
+      _$$SmallRowSuperbrowseItemFromJson(json);
 
   @override
   @JsonKey(name: 'pandoraId')
@@ -6195,6 +7952,184 @@ class _$SmallRowSuperbrowseItem implements SmallRowSuperbrowseItem {
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(
+            @JsonKey(name: 'pandoraId') String? pandoraId,
+            @JsonKey(name: 'analyticsToken') String analyticsToken,
+            @JsonKey(name: 'labels') List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'image') SuperbrowseImage? image)?
+        banner,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel>? labels,
+            @JsonKey(name: 'image')
+                SuperbrowseImage image,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction,
+            @JsonKey(name: 'voiceText')
+                String? voiceText)?
+        belt,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'image')
+                SuperbrowseImage image,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction,
+            @JsonKey(name: 'badges')
+                List<SuperbrowseBadge>? badges)?
+        featured,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'button')
+                SuperbrowseButton? button,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction)?
+        footer,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'image')
+                SuperbrowseImage image,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction,
+            @JsonKey(name: 'badges')
+                List<SuperbrowseBadge>? badges,
+            @JsonKey(name: 'timeStamp', fromJson: readOptionalDateTimeMilliseconds, toJson: writeOptionalDateTimeMilliseconds)
+                DateTime? timestamp)?
+        grid,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'image')
+                SuperbrowseImage? image,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction)?
+        header,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'image')
+                SuperbrowseImage image,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction,
+            @JsonKey(name: 'badges')
+                List<SuperbrowseBadge>? badges,
+            @JsonKey(name: 'formFactors')
+                FormFactors? formFactors)?
+        hero,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel>? labels,
+            @JsonKey(name: 'button')
+                SuperbrowseButton? button,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'image')
+                SuperbrowseImage image,
+            @JsonKey(name: 'rank')
+                SuperbrowseLabel? rank,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction,
+            @JsonKey(name: 'badges')
+                List<SuperbrowseBadge>? badges,
+            @JsonKey(name: 'separatorBelow', fromJson: readNullableBool, toJson: writeNullableBool)
+                bool separatorBelow)?
+        largeRow,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'button')
+                SuperbrowseButton? button,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction)?
+        smallRow,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'image')
+                SuperbrowseImage image,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction,
+            @JsonKey(name: 'badges')
+                List<SuperbrowseBadge>? badges)?
+        split,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel>? labels,
+            @JsonKey(name: 'image')
+                SuperbrowseImage image,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction,
+            @JsonKey(name: 'voiceText')
+                String? voiceText)?
+        tile,
+  }) {
+    return smallRow?.call(
+        pandoraId, analyticsToken, labels, button, action, longPressAction);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(
             @JsonKey(name: 'pandoraId') String? pandoraId,
@@ -6395,6 +8330,24 @@ class _$SmallRowSuperbrowseItem implements SmallRowSuperbrowseItem {
 
   @override
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(BannerSuperbrowseItem value)? banner,
+    TResult Function(BeltSuperbrowseItem value)? belt,
+    TResult Function(FeaturedSuperbrowseItem value)? featured,
+    TResult Function(FooterSuperbrowseItem value)? footer,
+    TResult Function(GridSuperbrowseItem value)? grid,
+    TResult Function(HeaderSuperbrowseItem value)? header,
+    TResult Function(HeroSuperbrowseItem value)? hero,
+    TResult Function(LargeRowSuperbrowseItem value)? largeRow,
+    TResult Function(SmallRowSuperbrowseItem value)? smallRow,
+    TResult Function(SplitSuperbrowseItem value)? split,
+    TResult Function(TileSuperbrowseItem value)? tile,
+  }) {
+    return smallRow?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(BannerSuperbrowseItem value)? banner,
     TResult Function(BeltSuperbrowseItem value)? belt,
@@ -6417,7 +8370,7 @@ class _$SmallRowSuperbrowseItem implements SmallRowSuperbrowseItem {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$SmallRowSuperbrowseItemToJson(this)..['type'] = 'small_row';
+    return _$$SmallRowSuperbrowseItemToJson(this)..['type'] = 'small_row';
   }
 }
 
@@ -6565,7 +8518,7 @@ class _$SplitSuperbrowseItemCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-@FreezedUnionValue(SuperbrowseItemType.split)
+@FreezedUnionValue('split')
 class _$SplitSuperbrowseItem implements SplitSuperbrowseItem {
   const _$SplitSuperbrowseItem(
       {@JsonKey(name: 'pandoraId') this.pandoraId,
@@ -6577,7 +8530,7 @@ class _$SplitSuperbrowseItem implements SplitSuperbrowseItem {
       @JsonKey(name: 'badges') this.badges});
 
   factory _$SplitSuperbrowseItem.fromJson(Map<String, dynamic> json) =>
-      _$_$SplitSuperbrowseItemFromJson(json);
+      _$$SplitSuperbrowseItemFromJson(json);
 
   @override
   @JsonKey(name: 'pandoraId')
@@ -6826,6 +8779,184 @@ class _$SplitSuperbrowseItem implements SplitSuperbrowseItem {
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(
+            @JsonKey(name: 'pandoraId') String? pandoraId,
+            @JsonKey(name: 'analyticsToken') String analyticsToken,
+            @JsonKey(name: 'labels') List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'image') SuperbrowseImage? image)?
+        banner,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel>? labels,
+            @JsonKey(name: 'image')
+                SuperbrowseImage image,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction,
+            @JsonKey(name: 'voiceText')
+                String? voiceText)?
+        belt,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'image')
+                SuperbrowseImage image,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction,
+            @JsonKey(name: 'badges')
+                List<SuperbrowseBadge>? badges)?
+        featured,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'button')
+                SuperbrowseButton? button,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction)?
+        footer,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'image')
+                SuperbrowseImage image,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction,
+            @JsonKey(name: 'badges')
+                List<SuperbrowseBadge>? badges,
+            @JsonKey(name: 'timeStamp', fromJson: readOptionalDateTimeMilliseconds, toJson: writeOptionalDateTimeMilliseconds)
+                DateTime? timestamp)?
+        grid,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'image')
+                SuperbrowseImage? image,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction)?
+        header,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'image')
+                SuperbrowseImage image,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction,
+            @JsonKey(name: 'badges')
+                List<SuperbrowseBadge>? badges,
+            @JsonKey(name: 'formFactors')
+                FormFactors? formFactors)?
+        hero,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel>? labels,
+            @JsonKey(name: 'button')
+                SuperbrowseButton? button,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'image')
+                SuperbrowseImage image,
+            @JsonKey(name: 'rank')
+                SuperbrowseLabel? rank,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction,
+            @JsonKey(name: 'badges')
+                List<SuperbrowseBadge>? badges,
+            @JsonKey(name: 'separatorBelow', fromJson: readNullableBool, toJson: writeNullableBool)
+                bool separatorBelow)?
+        largeRow,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'button')
+                SuperbrowseButton? button,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction)?
+        smallRow,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'image')
+                SuperbrowseImage image,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction,
+            @JsonKey(name: 'badges')
+                List<SuperbrowseBadge>? badges)?
+        split,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel>? labels,
+            @JsonKey(name: 'image')
+                SuperbrowseImage image,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction,
+            @JsonKey(name: 'voiceText')
+                String? voiceText)?
+        tile,
+  }) {
+    return split?.call(pandoraId, analyticsToken, labels, image, action,
+        longPressAction, badges);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(
             @JsonKey(name: 'pandoraId') String? pandoraId,
@@ -7026,6 +9157,24 @@ class _$SplitSuperbrowseItem implements SplitSuperbrowseItem {
 
   @override
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(BannerSuperbrowseItem value)? banner,
+    TResult Function(BeltSuperbrowseItem value)? belt,
+    TResult Function(FeaturedSuperbrowseItem value)? featured,
+    TResult Function(FooterSuperbrowseItem value)? footer,
+    TResult Function(GridSuperbrowseItem value)? grid,
+    TResult Function(HeaderSuperbrowseItem value)? header,
+    TResult Function(HeroSuperbrowseItem value)? hero,
+    TResult Function(LargeRowSuperbrowseItem value)? largeRow,
+    TResult Function(SmallRowSuperbrowseItem value)? smallRow,
+    TResult Function(SplitSuperbrowseItem value)? split,
+    TResult Function(TileSuperbrowseItem value)? tile,
+  }) {
+    return split?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(BannerSuperbrowseItem value)? banner,
     TResult Function(BeltSuperbrowseItem value)? belt,
@@ -7048,7 +9197,7 @@ class _$SplitSuperbrowseItem implements SplitSuperbrowseItem {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$SplitSuperbrowseItemToJson(this)..['type'] = 'split';
+    return _$$SplitSuperbrowseItemToJson(this)..['type'] = 'split';
   }
 }
 
@@ -7194,7 +9343,7 @@ class _$TileSuperbrowseItemCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-@FreezedUnionValue(SuperbrowseItemType.tile)
+@FreezedUnionValue('tile')
 class _$TileSuperbrowseItem implements TileSuperbrowseItem {
   const _$TileSuperbrowseItem(
       {@JsonKey(name: 'pandoraId') this.pandoraId,
@@ -7206,7 +9355,7 @@ class _$TileSuperbrowseItem implements TileSuperbrowseItem {
       @JsonKey(name: 'voiceText') this.voiceText});
 
   factory _$TileSuperbrowseItem.fromJson(Map<String, dynamic> json) =>
-      _$_$TileSuperbrowseItemFromJson(json);
+      _$$TileSuperbrowseItemFromJson(json);
 
   @override
   @JsonKey(name: 'pandoraId')
@@ -7455,6 +9604,184 @@ class _$TileSuperbrowseItem implements TileSuperbrowseItem {
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(
+            @JsonKey(name: 'pandoraId') String? pandoraId,
+            @JsonKey(name: 'analyticsToken') String analyticsToken,
+            @JsonKey(name: 'labels') List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'image') SuperbrowseImage? image)?
+        banner,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel>? labels,
+            @JsonKey(name: 'image')
+                SuperbrowseImage image,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction,
+            @JsonKey(name: 'voiceText')
+                String? voiceText)?
+        belt,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'image')
+                SuperbrowseImage image,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction,
+            @JsonKey(name: 'badges')
+                List<SuperbrowseBadge>? badges)?
+        featured,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'button')
+                SuperbrowseButton? button,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction)?
+        footer,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'image')
+                SuperbrowseImage image,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction,
+            @JsonKey(name: 'badges')
+                List<SuperbrowseBadge>? badges,
+            @JsonKey(name: 'timeStamp', fromJson: readOptionalDateTimeMilliseconds, toJson: writeOptionalDateTimeMilliseconds)
+                DateTime? timestamp)?
+        grid,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'image')
+                SuperbrowseImage? image,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction)?
+        header,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'image')
+                SuperbrowseImage image,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction,
+            @JsonKey(name: 'badges')
+                List<SuperbrowseBadge>? badges,
+            @JsonKey(name: 'formFactors')
+                FormFactors? formFactors)?
+        hero,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel>? labels,
+            @JsonKey(name: 'button')
+                SuperbrowseButton? button,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'image')
+                SuperbrowseImage image,
+            @JsonKey(name: 'rank')
+                SuperbrowseLabel? rank,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction,
+            @JsonKey(name: 'badges')
+                List<SuperbrowseBadge>? badges,
+            @JsonKey(name: 'separatorBelow', fromJson: readNullableBool, toJson: writeNullableBool)
+                bool separatorBelow)?
+        largeRow,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'button')
+                SuperbrowseButton? button,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction)?
+        smallRow,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel> labels,
+            @JsonKey(name: 'image')
+                SuperbrowseImage image,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction,
+            @JsonKey(name: 'badges')
+                List<SuperbrowseBadge>? badges)?
+        split,
+    TResult Function(
+            @JsonKey(name: 'pandoraId')
+                String? pandoraId,
+            @JsonKey(name: 'analyticsToken')
+                String analyticsToken,
+            @JsonKey(name: 'labels')
+                List<SuperbrowseLabel>? labels,
+            @JsonKey(name: 'image')
+                SuperbrowseImage image,
+            @JsonKey(name: 'action')
+                SuperbrowseAction? action,
+            @JsonKey(name: 'longPressAction')
+                SuperbrowseAction? longPressAction,
+            @JsonKey(name: 'voiceText')
+                String? voiceText)?
+        tile,
+  }) {
+    return tile?.call(pandoraId, analyticsToken, labels, image, action,
+        longPressAction, voiceText);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(
             @JsonKey(name: 'pandoraId') String? pandoraId,
@@ -7655,6 +9982,24 @@ class _$TileSuperbrowseItem implements TileSuperbrowseItem {
 
   @override
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(BannerSuperbrowseItem value)? banner,
+    TResult Function(BeltSuperbrowseItem value)? belt,
+    TResult Function(FeaturedSuperbrowseItem value)? featured,
+    TResult Function(FooterSuperbrowseItem value)? footer,
+    TResult Function(GridSuperbrowseItem value)? grid,
+    TResult Function(HeaderSuperbrowseItem value)? header,
+    TResult Function(HeroSuperbrowseItem value)? hero,
+    TResult Function(LargeRowSuperbrowseItem value)? largeRow,
+    TResult Function(SmallRowSuperbrowseItem value)? smallRow,
+    TResult Function(SplitSuperbrowseItem value)? split,
+    TResult Function(TileSuperbrowseItem value)? tile,
+  }) {
+    return tile?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(BannerSuperbrowseItem value)? banner,
     TResult Function(BeltSuperbrowseItem value)? belt,
@@ -7677,7 +10022,7 @@ class _$TileSuperbrowseItem implements TileSuperbrowseItem {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$TileSuperbrowseItemToJson(this)..['type'] = 'tile';
+    return _$$TileSuperbrowseItemToJson(this)..['type'] = 'tile';
   }
 }
 

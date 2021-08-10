@@ -6,12 +6,11 @@ part of 'iapetus_api_exception.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-IapetusApiException _$IapetusApiExceptionFromJson(Map<String, dynamic> json) {
-  return IapetusApiException(
-    json['code'] as int,
-    json['message'] as String,
-  );
-}
+IapetusApiException _$IapetusApiExceptionFromJson(Map<String, dynamic> json) =>
+    IapetusApiException(
+      json['code'] as int,
+      json['message'] as String,
+    );
 
 Map<String, dynamic> _$IapetusApiExceptionToJson(
         IapetusApiException instance) =>

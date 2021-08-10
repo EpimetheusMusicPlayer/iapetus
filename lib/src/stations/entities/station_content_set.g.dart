@@ -6,19 +6,19 @@ part of 'station_content_set.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_StationContentSet _$_$_StationContentSetFromJson(Map<String, dynamic> json) {
-  return _$_StationContentSet(
-    content: (json['content'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(k, StationContent.fromJson(e as Map<String, dynamic>)),
-    ),
-    contentTable: (json['contentTable'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(_$enumDecode(_$StationContentUseEnumMap, k),
-          (e as List<dynamic>).map((e) => e as String).toList()),
-    ),
-  );
-}
+_$_StationContentSet _$$_StationContentSetFromJson(Map<String, dynamic> json) =>
+    _$_StationContentSet(
+      content: (json['content'] as Map<String, dynamic>).map(
+        (k, e) =>
+            MapEntry(k, StationContent.fromJson(e as Map<String, dynamic>)),
+      ),
+      contentTable: (json['contentTable'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(_$enumDecode(_$StationContentUseEnumMap, k),
+            (e as List<dynamic>).map((e) => e as String).toList()),
+      ),
+    );
 
-Map<String, dynamic> _$_$_StationContentSetToJson(
+Map<String, dynamic> _$$_StationContentSetToJson(
         _$_StationContentSet instance) =>
     <String, dynamic>{
       'content': instance.content,

@@ -6,15 +6,14 @@ part of 'focus_trait.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_FocusTrait _$_$_FocusTraitFromJson(Map<String, dynamic> json) {
-  return _$_FocusTrait(
-    name: json['name'] as String,
-    focusTraitSet: json['focusTraitSet'] as String,
-    focusTraitSetType: json['focusTraitSetType'] as String,
-  );
-}
+_$_FocusTrait _$$_FocusTraitFromJson(Map<String, dynamic> json) =>
+    _$_FocusTrait(
+      name: json['name'] as String,
+      focusTraitSet: json['focusTraitSet'] as String,
+      focusTraitSetType: json['focusTraitSetType'] as String,
+    );
 
-Map<String, dynamic> _$_$_FocusTraitToJson(_$_FocusTrait instance) =>
+Map<String, dynamic> _$$_FocusTraitToJson(_$_FocusTrait instance) =>
     <String, dynamic>{
       'name': instance.name,
       'focusTraitSet': instance.focusTraitSet,

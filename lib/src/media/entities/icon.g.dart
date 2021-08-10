@@ -6,15 +6,13 @@ part of 'icon.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_MediaIcon _$_$_MediaIconFromJson(Map<String, dynamic> json) {
-  return _$_MediaIcon(
-    dominantColor: readOptionalColor(json['dominantColor'] as String?),
-    artId: json['artId'] as String,
-    artUrl: readOptionalUri(json['artUrl'] as String),
-  );
-}
+_$_MediaIcon _$$_MediaIconFromJson(Map<String, dynamic> json) => _$_MediaIcon(
+      dominantColor: readOptionalColor(json['dominantColor'] as String?),
+      artId: json['artId'] as String,
+      artUrl: readOptionalUri(json['artUrl'] as String),
+    );
 
-Map<String, dynamic> _$_$_MediaIconToJson(_$_MediaIcon instance) =>
+Map<String, dynamic> _$$_MediaIconToJson(_$_MediaIcon instance) =>
     <String, dynamic>{
       'dominantColor': writeOptionalColor(instance.dominantColor),
       'artId': instance.artId,
