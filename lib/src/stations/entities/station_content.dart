@@ -8,7 +8,6 @@ import 'package:iapetus/src/media/entities/rating.dart';
 import 'package:iapetus/src/media/entities/types/track.dart';
 import 'package:iapetus/src/stations/entities/track_key.dart';
 import 'package:iapetus/src/stations/entities/track_type.dart';
-import 'package:json_annotation/json_annotation.dart';
 
 part 'station_content.freezed.dart';
 part 'station_content.g.dart';
