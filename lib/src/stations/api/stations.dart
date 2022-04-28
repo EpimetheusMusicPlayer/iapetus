@@ -59,9 +59,11 @@ extension StationsApi on Iapetus {
 
     return stationContentListJson
         .where(
-            (stationContentJson) => !stationContentJson.containsKey('adToken'))
+          (stationContentJson) => !stationContentJson.containsKey('adToken'),
+        )
         .map(
-            (stationContentJson) => StationContent.fromJson(stationContentJson))
+          (stationContentJson) => StationContent.fromJson(stationContentJson),
+        )
         .toList(growable: false);
   }
 

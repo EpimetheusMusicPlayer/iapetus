@@ -67,8 +67,10 @@ extension AuthenticationApi on Iapetus {
   Future<void> userLoginFromStorage() async {
     final Map<String, dynamic> response;
     try {
-      assert(await canLoginUserFromStorage(),
-          'Cannot log in from storage - device is not registered!');
+      assert(
+        await canLoginUserFromStorage(),
+        'Cannot log in from storage - device is not registered!',
+      );
       response = await makeApiRequest(
         'auth.userLogin',
         data: {

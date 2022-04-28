@@ -18,9 +18,10 @@ class StationContent with _$StationContent implements PlayableMedia, Track {
   const StationContent._();
 
   @override
-  Map<AudioUrlQuality, Uri> get mediaUrls =>
-      audioUrlMap.map((audioUrlQuality, audioUrlData) =>
-          MapEntry(audioUrlQuality, audioUrlData.audioUrl));
+  Map<AudioUrlQuality, Uri> get mediaUrls => audioUrlMap.map(
+        (audioUrlQuality, audioUrlData) =>
+            MapEntry(audioUrlQuality, audioUrlData.audioUrl),
+      );
 
   @override
   String get mediaId => pandoraId;

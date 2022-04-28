@@ -40,13 +40,15 @@ Future<void> main(List<String> arguments) async {
   // Print station and song info, and URLs.
   print(station.stationName);
   print(
-      '${stationContent.songName} by ${stationContent.artistName} (${stationContent.albumName})');
+    '${stationContent.songName} by ${stationContent.artistName} (${stationContent.albumName})',
+  );
   print('Album art: ${stationContent.albumArtUrl}');
   print('Audio: ${stationContent.audioUrlMap[AudioUrlQuality.high]}');
 
   final annotations = await iapetus.getAnnotations([stationContent]);
   print(
-      'Track number: ${(annotations[stationContent.pandoraId]! as TrackAnnotation).trackNumber}');
+    'Track number: ${(annotations[stationContent.pandoraId]! as TrackAnnotation).trackNumber}',
+  );
 
   // Close the client.
   iapetus.close();

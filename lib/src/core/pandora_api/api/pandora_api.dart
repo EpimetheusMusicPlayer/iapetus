@@ -38,7 +38,9 @@ extension PandoraApi on Iapetus {
       if (user != null) 'userAuthToken': user.userAuthToken,
       if (partner != null)
         'syncTime': calculateSyncTimeValue(
-            partner.authenticationTime, partner.syncTime),
+          partner.authenticationTime,
+          partner.syncTime,
+        ),
     });
 
     // Send the request (encrypting the post data if required) and store the
@@ -54,7 +56,8 @@ extension PandoraApi on Iapetus {
 
     // Decrypt the response (if required), and decode the JSON.
     final response = jsonDecode(
-        decrypt ? pandoraDecryptResponse(responseData) : responseData);
+      decrypt ? pandoraDecryptResponse(responseData) : responseData,
+    );
 
     // Make sure that the response is a JSON object declaration.
     if (response is! Map<String, dynamic>) {

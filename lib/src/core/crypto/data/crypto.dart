@@ -25,7 +25,8 @@ Converter<List<int>, String> buildPandoraEncrypter(String key) =>
 /// Builds a request/response decrypter using the given [key].
 Converter<String, Uint8List> buildPandoraDecrypter(String key) =>
     const HexDecoder().cast<String, List<int>>().fuse<Uint8List>(
-        BlowfishECB(Uint8List.fromList(utf8.encode(key))).decoder);
+          BlowfishECB(Uint8List.fromList(utf8.encode(key))).decoder,
+        );
 
 /// Encrypts a request using the default partner encrypter.
 String pandoraEncryptRequest(String data) =>

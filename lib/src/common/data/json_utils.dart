@@ -3,7 +3,9 @@ DateTime readDateTimeJsonObject(Map<String, dynamic> json) {
   final time = json['time'];
   if (time is! int) {
     throw FormatException(
-        'Unexpected time format in date/time JSON object!', time);
+      'Unexpected time format in date/time JSON object!',
+      time,
+    );
   }
   return DateTime.fromMillisecondsSinceEpoch(time);
 }
