@@ -1,4 +1,3 @@
-import 'package:collection/collection.dart';
 import 'package:iapetus/src/core/storage/repositories/key_based_iapetus_storage.dart';
 import 'package:meta/meta.dart';
 
@@ -17,14 +16,4 @@ class MemoryIapetusStorage extends DynamicKeyBasedIapetusStorage {
 
   @override
   void save() {}
-
-  @override
-  bool operator ==(Object other) =>
-      identical(this, other) ||
-      other is MemoryIapetusStorage &&
-          runtimeType == other.runtimeType &&
-          const MapEquality().equals(_storage, other._storage);
-
-  @override
-  int get hashCode => const MapEquality().hash(_storage);
 }

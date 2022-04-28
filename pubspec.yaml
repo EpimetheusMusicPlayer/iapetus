@@ -14,9 +14,6 @@ dependencies:
   freezed_annotation: ^1.1.0
   json_annotation: ^4.5.0
 
-  ## Data structures
-  collection: ^1.16.0
-
   ## I/O
   http: ^0.13.4
 
