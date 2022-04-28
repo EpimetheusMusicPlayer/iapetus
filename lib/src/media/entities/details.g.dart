@@ -14,12 +14,14 @@ _$TrackDetailsSet _$$TrackDetailsSetFromJson(Map<String, dynamic> json) =>
       ),
       details:
           TrackDetails.fromJson(json['trackDetails'] as Map<String, dynamic>),
+      $type: json['runtimeType'] as String?,
     );
 
 Map<String, dynamic> _$$TrackDetailsSetToJson(_$TrackDetailsSet instance) =>
     <String, dynamic>{
       'annotations': instance.annotations,
       'trackDetails': instance.details,
+      'runtimeType': instance.$type,
     };
 
 _$GenreDetailsSet _$$GenreDetailsSetFromJson(Map<String, dynamic> json) =>
@@ -30,12 +32,14 @@ _$GenreDetailsSet _$$GenreDetailsSetFromJson(Map<String, dynamic> json) =>
       ),
       details:
           GenreDetails.fromJson(json['genreDetails'] as Map<String, dynamic>),
+      $type: json['runtimeType'] as String?,
     );
 
 Map<String, dynamic> _$$GenreDetailsSetToJson(_$GenreDetailsSet instance) =>
     <String, dynamic>{
       'annotations': instance.annotations,
       'genreDetails': instance.details,
+      'runtimeType': instance.$type,
     };
 
 _$TrackDetails _$$TrackDetailsFromJson(Map<String, dynamic> json) =>
@@ -65,8 +69,9 @@ _$TrackDetails _$$TrackDetailsFromJson(Map<String, dynamic> json) =>
           : Credits.fromJson(json['credits'] as Map<String, dynamic>),
       featured: json['featured'] as bool,
       pandoraId: json['pandoraId'] as String,
-      pandoraType: _$enumDecode(_$PandoraTypeEnumMap, json['type']),
+      pandoraType: $enumDecode(_$PandoraTypeEnumMap, json['type']),
       scope: json['scope'] as String,
+      $type: json['runtimeType'] as String?,
     );
 
 Map<String, dynamic> _$$TrackDetailsToJson(_$TrackDetails instance) =>
@@ -85,33 +90,8 @@ Map<String, dynamic> _$$TrackDetailsToJson(_$TrackDetails instance) =>
       'pandoraId': instance.pandoraId,
       'type': _$PandoraTypeEnumMap[instance.pandoraType],
       'scope': instance.scope,
+      'runtimeType': instance.$type,
     };
-
-K _$enumDecode<K, V>(
-  Map<K, V> enumValues,
-  Object? source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    throw ArgumentError(
-      'A value must be provided. Supported values: '
-      '${enumValues.values.join(', ')}',
-    );
-  }
-
-  return enumValues.entries.singleWhere(
-    (e) => e.value == source,
-    orElse: () {
-      if (unknownValue == null) {
-        throw ArgumentError(
-          '`$source` is not one of the supported values: '
-          '${enumValues.values.join(', ')}',
-        );
-      }
-      return MapEntry(unknownValue, enumValues.values.first);
-    },
-  ).key;
-}
 
 const _$PandoraTypeEnumMap = {
   PandoraType.album: 'AL',
@@ -156,8 +136,9 @@ _$GenreDetails _$$GenreDetailsFromJson(Map<String, dynamic> json) =>
       isRedirect: json['isRedirect'] as bool,
       curatorId: json['curatorId'] as String,
       pandoraId: json['pandoraId'] as String,
-      pandoraType: _$enumDecode(_$PandoraTypeEnumMap, json['type']),
+      pandoraType: $enumDecode(_$PandoraTypeEnumMap, json['type']),
       scope: json['scope'] as String,
+      $type: json['runtimeType'] as String?,
     );
 
 Map<String, dynamic> _$$GenreDetailsToJson(_$GenreDetails instance) =>
@@ -171,4 +152,5 @@ Map<String, dynamic> _$$GenreDetailsToJson(_$GenreDetails instance) =>
       'pandoraId': instance.pandoraId,
       'type': _$PandoraTypeEnumMap[instance.pandoraType],
       'scope': instance.scope,
+      'runtimeType': instance.$type,
     };

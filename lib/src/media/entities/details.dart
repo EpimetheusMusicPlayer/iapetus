@@ -31,7 +31,7 @@ class MediaDetailsSet with _$MediaDetailsSet {
 
 @freezed
 class MediaDetails with _$MediaDetails implements PandoraEntity {
-  @Implements(Track)
+  @Implements<Track>()
   @Assert(
     // language=Dart
     '(lyricData == null && cleanLyricData == null) || (lyricData != null && cleanLyricData != null)',

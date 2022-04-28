@@ -12,12 +12,13 @@ _$HorizontalScrollSuperbrowseSubsection
         _$HorizontalScrollSuperbrowseSubsection(
           sectionId: json['sectionId'] as String,
           scrollType:
-              _$enumDecodeNullable(_$ScrollTypeEnumMap, json['scrollType']),
+              $enumDecodeNullable(_$ScrollTypeEnumMap, json['scrollType']),
           formFactors:
               FormFactors.fromJson(json['formFactors'] as Map<String, dynamic>),
           items: (json['items'] as List<dynamic>)
               .map((e) => SuperbrowseItem.fromJson(e as Map<String, dynamic>))
               .toList(),
+          $type: json['subsectionType'] as String?,
         );
 
 Map<String, dynamic> _$$HorizontalScrollSuperbrowseSubsectionToJson(
@@ -27,44 +28,8 @@ Map<String, dynamic> _$$HorizontalScrollSuperbrowseSubsectionToJson(
       'scrollType': _$ScrollTypeEnumMap[instance.scrollType],
       'formFactors': instance.formFactors,
       'items': instance.items,
+      'subsectionType': instance.$type,
     };
-
-K _$enumDecode<K, V>(
-  Map<K, V> enumValues,
-  Object? source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    throw ArgumentError(
-      'A value must be provided. Supported values: '
-      '${enumValues.values.join(', ')}',
-    );
-  }
-
-  return enumValues.entries.singleWhere(
-    (e) => e.value == source,
-    orElse: () {
-      if (unknownValue == null) {
-        throw ArgumentError(
-          '`$source` is not one of the supported values: '
-          '${enumValues.values.join(', ')}',
-        );
-      }
-      return MapEntry(unknownValue, enumValues.values.first);
-    },
-  ).key;
-}
-
-K? _$enumDecodeNullable<K, V>(
-  Map<K, V> enumValues,
-  dynamic source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    return null;
-  }
-  return _$enumDecode<K, V>(enumValues, source, unknownValue: unknownValue);
-}
 
 const _$ScrollTypeEnumMap = {
   ScrollType.smooth: 'smooth',
@@ -76,7 +41,7 @@ _$RecentlyPlayedSuperbrowseSubsection
         _$RecentlyPlayedSuperbrowseSubsection(
           sectionId: json['sectionId'] as String,
           scrollType:
-              _$enumDecodeNullable(_$ScrollTypeEnumMap, json['scrollType']),
+              $enumDecodeNullable(_$ScrollTypeEnumMap, json['scrollType']),
           formFactors:
               FormFactors.fromJson(json['formFactors'] as Map<String, dynamic>),
           items: (json['items'] as List<dynamic>)
@@ -89,6 +54,7 @@ _$RecentlyPlayedSuperbrowseSubsection
           ),
           minRequired: json['minRequired'] as int?,
           maxRequired: json['maxRequired'] as int?,
+          $type: json['subsectionType'] as String?,
         );
 
 Map<String, dynamic> _$$RecentlyPlayedSuperbrowseSubsectionToJson(
@@ -101,6 +67,7 @@ Map<String, dynamic> _$$RecentlyPlayedSuperbrowseSubsectionToJson(
       'newItemTemplate': instance.newItemTemplate,
       'minRequired': instance.minRequired,
       'maxRequired': instance.maxRequired,
+      'subsectionType': instance.$type,
     };
 
 _$SingletonSuperbrowseSubsection _$$SingletonSuperbrowseSubsectionFromJson(
@@ -113,6 +80,7 @@ _$SingletonSuperbrowseSubsection _$$SingletonSuperbrowseSubsectionFromJson(
       items: (json['items'] as List<dynamic>)
           .map((e) => SuperbrowseItem.fromJson(e as Map<String, dynamic>))
           .toList(),
+      $type: json['subsectionType'] as String?,
     );
 
 Map<String, dynamic> _$$SingletonSuperbrowseSubsectionToJson(
@@ -121,6 +89,7 @@ Map<String, dynamic> _$$SingletonSuperbrowseSubsectionToJson(
       'sectionId': instance.sectionId,
       'formFactors': instance.formFactors,
       'items': instance.items,
+      'subsectionType': instance.$type,
     };
 
 _$VerticalListSuperbrowseSubsection
@@ -134,6 +103,7 @@ _$VerticalListSuperbrowseSubsection
           items: (json['items'] as List<dynamic>)
               .map((e) => SuperbrowseItem.fromJson(e as Map<String, dynamic>))
               .toList(),
+          $type: json['subsectionType'] as String?,
         );
 
 Map<String, dynamic> _$$VerticalListSuperbrowseSubsectionToJson(
@@ -142,6 +112,7 @@ Map<String, dynamic> _$$VerticalListSuperbrowseSubsectionToJson(
       'sectionId': instance.sectionId,
       'formFactors': instance.formFactors,
       'items': instance.items,
+      'subsectionType': instance.$type,
     };
 
 _$DisplayAdSuperbrowseSubsection _$$DisplayAdSuperbrowseSubsectionFromJson(
@@ -153,6 +124,7 @@ _$DisplayAdSuperbrowseSubsection _$$DisplayAdSuperbrowseSubsectionFromJson(
       items: (json['items'] as List<dynamic>)
           .map((e) => SuperbrowseItem.fromJson(e as Map<String, dynamic>))
           .toList(),
+      $type: json['subsectionType'] as String?,
     );
 
 Map<String, dynamic> _$$DisplayAdSuperbrowseSubsectionToJson(
@@ -161,4 +133,5 @@ Map<String, dynamic> _$$DisplayAdSuperbrowseSubsectionToJson(
       'sectionId': instance.sectionId,
       'formFactors': instance.formFactors,
       'items': instance.items,
+      'subsectionType': instance.$type,
     };

@@ -1,5 +1,6 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'subsection.dart';
@@ -15,7 +16,7 @@ final _privateConstructorUsedError = UnsupportedError(
 
 SuperbrowseSubsection _$SuperbrowseSubsectionFromJson(
     Map<String, dynamic> json) {
-  switch (json['subsectionType'] as String) {
+  switch (json['subsectionType']) {
     case 'horizontalScroll':
       return HorizontalScrollSuperbrowseSubsection.fromJson(json);
     case 'recentlyPlayed':
@@ -125,7 +126,7 @@ class _$SuperbrowseSubsectionTearOff {
     );
   }
 
-  SuperbrowseSubsection fromJson(Map<String, Object> json) {
+  SuperbrowseSubsection fromJson(Map<String, Object?> json) {
     return SuperbrowseSubsection.fromJson(json);
   }
 }
@@ -463,7 +464,9 @@ class _$HorizontalScrollSuperbrowseSubsection
       @JsonKey(name: SuperbrowseSubsection._formFactorsKey)
           required this.formFactors,
       @JsonKey(name: SuperbrowseSubsection._itemsKey)
-          required this.items});
+          required this.items,
+      String? $type})
+      : $type = $type ?? 'horizontalScroll';
 
   factory _$HorizontalScrollSuperbrowseSubsection.fromJson(
           Map<String, dynamic> json) =>
@@ -482,6 +485,9 @@ class _$HorizontalScrollSuperbrowseSubsection
   @JsonKey(name: SuperbrowseSubsection._itemsKey)
   final List<SuperbrowseItem> items;
 
+  @JsonKey(name: 'subsectionType')
+  final String $type;
+
   @override
   String toString() {
     return 'SuperbrowseSubsection.horizontalScroll(sectionId: $sectionId, scrollType: $scrollType, formFactors: $formFactors, items: $items)';
@@ -490,27 +496,23 @@ class _$HorizontalScrollSuperbrowseSubsection
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is HorizontalScrollSuperbrowseSubsection &&
-            (identical(other.sectionId, sectionId) ||
-                const DeepCollectionEquality()
-                    .equals(other.sectionId, sectionId)) &&
-            (identical(other.scrollType, scrollType) ||
-                const DeepCollectionEquality()
-                    .equals(other.scrollType, scrollType)) &&
-            (identical(other.formFactors, formFactors) ||
-                const DeepCollectionEquality()
-                    .equals(other.formFactors, formFactors)) &&
-            (identical(other.items, items) ||
-                const DeepCollectionEquality().equals(other.items, items)));
+        (other.runtimeType == runtimeType &&
+            other is HorizontalScrollSuperbrowseSubsection &&
+            const DeepCollectionEquality().equals(other.sectionId, sectionId) &&
+            const DeepCollectionEquality()
+                .equals(other.scrollType, scrollType) &&
+            const DeepCollectionEquality()
+                .equals(other.formFactors, formFactors) &&
+            const DeepCollectionEquality().equals(other.items, items));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(sectionId) ^
-      const DeepCollectionEquality().hash(scrollType) ^
-      const DeepCollectionEquality().hash(formFactors) ^
-      const DeepCollectionEquality().hash(items);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(sectionId),
+      const DeepCollectionEquality().hash(scrollType),
+      const DeepCollectionEquality().hash(formFactors),
+      const DeepCollectionEquality().hash(items));
 
   @JsonKey(ignore: true)
   @override
@@ -741,8 +743,7 @@ class _$HorizontalScrollSuperbrowseSubsection
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$HorizontalScrollSuperbrowseSubsectionToJson(this)
-      ..['subsectionType'] = 'horizontalScroll';
+    return _$$HorizontalScrollSuperbrowseSubsectionToJson(this);
   }
 }
 
@@ -765,14 +766,14 @@ abstract class HorizontalScrollSuperbrowseSubsection
 
   @override
   @JsonKey(name: SuperbrowseSubsection._sectionIdKey)
-  String get sectionId => throw _privateConstructorUsedError;
+  String get sectionId;
   @JsonKey(name: SuperbrowseSubsection._scrollTypeKey)
-  ScrollType? get scrollType => throw _privateConstructorUsedError;
+  ScrollType? get scrollType;
   @JsonKey(name: SuperbrowseSubsection._formFactorsKey)
-  FormFactors get formFactors => throw _privateConstructorUsedError;
+  FormFactors get formFactors;
   @override
   @JsonKey(name: SuperbrowseSubsection._itemsKey)
-  List<SuperbrowseItem> get items => throw _privateConstructorUsedError;
+  List<SuperbrowseItem> get items;
   @override
   @JsonKey(ignore: true)
   $HorizontalScrollSuperbrowseSubsectionCopyWith<
@@ -889,7 +890,9 @@ class _$RecentlyPlayedSuperbrowseSubsection
       @JsonKey(name: 'minRequired')
           this.minRequired,
       @JsonKey(name: 'maxRequired')
-          this.maxRequired});
+          this.maxRequired,
+      String? $type})
+      : $type = $type ?? 'recentlyPlayed';
 
   factory _$RecentlyPlayedSuperbrowseSubsection.fromJson(
           Map<String, dynamic> json) =>
@@ -917,6 +920,9 @@ class _$RecentlyPlayedSuperbrowseSubsection
   @JsonKey(name: 'maxRequired')
   final int? maxRequired;
 
+  @JsonKey(name: 'subsectionType')
+  final String $type;
+
   @override
   String toString() {
     return 'SuperbrowseSubsection.recentlyPlayed(sectionId: $sectionId, scrollType: $scrollType, formFactors: $formFactors, items: $items, newItemTemplate: $newItemTemplate, minRequired: $minRequired, maxRequired: $maxRequired)';
@@ -925,39 +931,32 @@ class _$RecentlyPlayedSuperbrowseSubsection
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is RecentlyPlayedSuperbrowseSubsection &&
-            (identical(other.sectionId, sectionId) ||
-                const DeepCollectionEquality()
-                    .equals(other.sectionId, sectionId)) &&
-            (identical(other.scrollType, scrollType) ||
-                const DeepCollectionEquality()
-                    .equals(other.scrollType, scrollType)) &&
-            (identical(other.formFactors, formFactors) ||
-                const DeepCollectionEquality()
-                    .equals(other.formFactors, formFactors)) &&
-            (identical(other.items, items) ||
-                const DeepCollectionEquality().equals(other.items, items)) &&
-            (identical(other.newItemTemplate, newItemTemplate) ||
-                const DeepCollectionEquality()
-                    .equals(other.newItemTemplate, newItemTemplate)) &&
-            (identical(other.minRequired, minRequired) ||
-                const DeepCollectionEquality()
-                    .equals(other.minRequired, minRequired)) &&
-            (identical(other.maxRequired, maxRequired) ||
-                const DeepCollectionEquality()
-                    .equals(other.maxRequired, maxRequired)));
+        (other.runtimeType == runtimeType &&
+            other is RecentlyPlayedSuperbrowseSubsection &&
+            const DeepCollectionEquality().equals(other.sectionId, sectionId) &&
+            const DeepCollectionEquality()
+                .equals(other.scrollType, scrollType) &&
+            const DeepCollectionEquality()
+                .equals(other.formFactors, formFactors) &&
+            const DeepCollectionEquality().equals(other.items, items) &&
+            const DeepCollectionEquality()
+                .equals(other.newItemTemplate, newItemTemplate) &&
+            const DeepCollectionEquality()
+                .equals(other.minRequired, minRequired) &&
+            const DeepCollectionEquality()
+                .equals(other.maxRequired, maxRequired));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(sectionId) ^
-      const DeepCollectionEquality().hash(scrollType) ^
-      const DeepCollectionEquality().hash(formFactors) ^
-      const DeepCollectionEquality().hash(items) ^
-      const DeepCollectionEquality().hash(newItemTemplate) ^
-      const DeepCollectionEquality().hash(minRequired) ^
-      const DeepCollectionEquality().hash(maxRequired);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(sectionId),
+      const DeepCollectionEquality().hash(scrollType),
+      const DeepCollectionEquality().hash(formFactors),
+      const DeepCollectionEquality().hash(items),
+      const DeepCollectionEquality().hash(newItemTemplate),
+      const DeepCollectionEquality().hash(minRequired),
+      const DeepCollectionEquality().hash(maxRequired));
 
   @JsonKey(ignore: true)
   @override
@@ -1191,8 +1190,7 @@ class _$RecentlyPlayedSuperbrowseSubsection
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$RecentlyPlayedSuperbrowseSubsectionToJson(this)
-      ..['subsectionType'] = 'recentlyPlayed';
+    return _$$RecentlyPlayedSuperbrowseSubsectionToJson(this);
   }
 }
 
@@ -1220,21 +1218,20 @@ abstract class RecentlyPlayedSuperbrowseSubsection
 
   @override
   @JsonKey(name: SuperbrowseSubsection._sectionIdKey)
-  String get sectionId => throw _privateConstructorUsedError;
+  String get sectionId;
   @JsonKey(name: SuperbrowseSubsection._scrollTypeKey)
-  ScrollType? get scrollType => throw _privateConstructorUsedError;
+  ScrollType? get scrollType;
   @JsonKey(name: SuperbrowseSubsection._formFactorsKey)
-  FormFactors get formFactors => throw _privateConstructorUsedError;
+  FormFactors get formFactors;
   @override
   @JsonKey(name: SuperbrowseSubsection._itemsKey)
-  List<SuperbrowseItem> get items => throw _privateConstructorUsedError;
+  List<SuperbrowseItem> get items;
   @JsonKey(name: 'newItemTemplate')
-  Map<String, SuperbrowseItem>? get newItemTemplate =>
-      throw _privateConstructorUsedError;
+  Map<String, SuperbrowseItem>? get newItemTemplate;
   @JsonKey(name: 'minRequired')
-  int? get minRequired => throw _privateConstructorUsedError;
+  int? get minRequired;
   @JsonKey(name: 'maxRequired')
-  int? get maxRequired => throw _privateConstructorUsedError;
+  int? get maxRequired;
   @override
   @JsonKey(ignore: true)
   $RecentlyPlayedSuperbrowseSubsectionCopyWith<
@@ -1319,7 +1316,9 @@ class _$SingletonSuperbrowseSubsection
       @JsonKey(name: SuperbrowseSubsection._formFactorsKey)
           this.formFactors,
       @JsonKey(name: SuperbrowseSubsection._itemsKey)
-          required this.items});
+          required this.items,
+      String? $type})
+      : $type = $type ?? 'singleton';
 
   factory _$SingletonSuperbrowseSubsection.fromJson(
           Map<String, dynamic> json) =>
@@ -1335,6 +1334,9 @@ class _$SingletonSuperbrowseSubsection
   @JsonKey(name: SuperbrowseSubsection._itemsKey)
   final List<SuperbrowseItem> items;
 
+  @JsonKey(name: 'subsectionType')
+  final String $type;
+
   @override
   String toString() {
     return 'SuperbrowseSubsection.singleton(sectionId: $sectionId, formFactors: $formFactors, items: $items)';
@@ -1343,23 +1345,20 @@ class _$SingletonSuperbrowseSubsection
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is SingletonSuperbrowseSubsection &&
-            (identical(other.sectionId, sectionId) ||
-                const DeepCollectionEquality()
-                    .equals(other.sectionId, sectionId)) &&
-            (identical(other.formFactors, formFactors) ||
-                const DeepCollectionEquality()
-                    .equals(other.formFactors, formFactors)) &&
-            (identical(other.items, items) ||
-                const DeepCollectionEquality().equals(other.items, items)));
+        (other.runtimeType == runtimeType &&
+            other is SingletonSuperbrowseSubsection &&
+            const DeepCollectionEquality().equals(other.sectionId, sectionId) &&
+            const DeepCollectionEquality()
+                .equals(other.formFactors, formFactors) &&
+            const DeepCollectionEquality().equals(other.items, items));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(sectionId) ^
-      const DeepCollectionEquality().hash(formFactors) ^
-      const DeepCollectionEquality().hash(items);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(sectionId),
+      const DeepCollectionEquality().hash(formFactors),
+      const DeepCollectionEquality().hash(items));
 
   @JsonKey(ignore: true)
   @override
@@ -1589,8 +1588,7 @@ class _$SingletonSuperbrowseSubsection
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$SingletonSuperbrowseSubsectionToJson(this)
-      ..['subsectionType'] = 'singleton';
+    return _$$SingletonSuperbrowseSubsectionToJson(this);
   }
 }
 
@@ -1609,12 +1607,12 @@ abstract class SingletonSuperbrowseSubsection implements SuperbrowseSubsection {
 
   @override
   @JsonKey(name: SuperbrowseSubsection._sectionIdKey)
-  String get sectionId => throw _privateConstructorUsedError;
+  String get sectionId;
   @JsonKey(name: SuperbrowseSubsection._formFactorsKey)
-  FormFactors? get formFactors => throw _privateConstructorUsedError;
+  FormFactors? get formFactors;
   @override
   @JsonKey(name: SuperbrowseSubsection._itemsKey)
-  List<SuperbrowseItem> get items => throw _privateConstructorUsedError;
+  List<SuperbrowseItem> get items;
   @override
   @JsonKey(ignore: true)
   $SingletonSuperbrowseSubsectionCopyWith<SingletonSuperbrowseSubsection>
@@ -1698,7 +1696,9 @@ class _$VerticalListSuperbrowseSubsection
       @JsonKey(name: SuperbrowseSubsection._formFactorsKey)
           this.formFactors,
       @JsonKey(name: SuperbrowseSubsection._itemsKey)
-          required this.items});
+          required this.items,
+      String? $type})
+      : $type = $type ?? 'verticalList';
 
   factory _$VerticalListSuperbrowseSubsection.fromJson(
           Map<String, dynamic> json) =>
@@ -1714,6 +1714,9 @@ class _$VerticalListSuperbrowseSubsection
   @JsonKey(name: SuperbrowseSubsection._itemsKey)
   final List<SuperbrowseItem> items;
 
+  @JsonKey(name: 'subsectionType')
+  final String $type;
+
   @override
   String toString() {
     return 'SuperbrowseSubsection.verticalList(sectionId: $sectionId, formFactors: $formFactors, items: $items)';
@@ -1722,23 +1725,20 @@ class _$VerticalListSuperbrowseSubsection
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is VerticalListSuperbrowseSubsection &&
-            (identical(other.sectionId, sectionId) ||
-                const DeepCollectionEquality()
-                    .equals(other.sectionId, sectionId)) &&
-            (identical(other.formFactors, formFactors) ||
-                const DeepCollectionEquality()
-                    .equals(other.formFactors, formFactors)) &&
-            (identical(other.items, items) ||
-                const DeepCollectionEquality().equals(other.items, items)));
+        (other.runtimeType == runtimeType &&
+            other is VerticalListSuperbrowseSubsection &&
+            const DeepCollectionEquality().equals(other.sectionId, sectionId) &&
+            const DeepCollectionEquality()
+                .equals(other.formFactors, formFactors) &&
+            const DeepCollectionEquality().equals(other.items, items));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(sectionId) ^
-      const DeepCollectionEquality().hash(formFactors) ^
-      const DeepCollectionEquality().hash(items);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(sectionId),
+      const DeepCollectionEquality().hash(formFactors),
+      const DeepCollectionEquality().hash(items));
 
   @JsonKey(ignore: true)
   @override
@@ -1968,8 +1968,7 @@ class _$VerticalListSuperbrowseSubsection
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$VerticalListSuperbrowseSubsectionToJson(this)
-      ..['subsectionType'] = 'verticalList';
+    return _$$VerticalListSuperbrowseSubsectionToJson(this);
   }
 }
 
@@ -1989,12 +1988,12 @@ abstract class VerticalListSuperbrowseSubsection
 
   @override
   @JsonKey(name: SuperbrowseSubsection._sectionIdKey)
-  String get sectionId => throw _privateConstructorUsedError;
+  String get sectionId;
   @JsonKey(name: SuperbrowseSubsection._formFactorsKey)
-  FormFactors? get formFactors => throw _privateConstructorUsedError;
+  FormFactors? get formFactors;
   @override
   @JsonKey(name: SuperbrowseSubsection._itemsKey)
-  List<SuperbrowseItem> get items => throw _privateConstructorUsedError;
+  List<SuperbrowseItem> get items;
   @override
   @JsonKey(ignore: true)
   $VerticalListSuperbrowseSubsectionCopyWith<VerticalListSuperbrowseSubsection>
@@ -2074,7 +2073,9 @@ class _$DisplayAdSuperbrowseSubsection
       @JsonKey(name: SuperbrowseSubsection._formFactorsKey)
           required this.formFactors,
       @JsonKey(name: SuperbrowseSubsection._itemsKey)
-          required this.items});
+          required this.items,
+      String? $type})
+      : $type = $type ?? 'displayAd';
 
   factory _$DisplayAdSuperbrowseSubsection.fromJson(
           Map<String, dynamic> json) =>
@@ -2090,6 +2091,9 @@ class _$DisplayAdSuperbrowseSubsection
   @JsonKey(name: SuperbrowseSubsection._itemsKey)
   final List<SuperbrowseItem> items;
 
+  @JsonKey(name: 'subsectionType')
+  final String $type;
+
   @override
   String toString() {
     return 'SuperbrowseSubsection.displayAd(sectionId: $sectionId, formFactors: $formFactors, items: $items)';
@@ -2098,23 +2102,20 @@ class _$DisplayAdSuperbrowseSubsection
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is DisplayAdSuperbrowseSubsection &&
-            (identical(other.sectionId, sectionId) ||
-                const DeepCollectionEquality()
-                    .equals(other.sectionId, sectionId)) &&
-            (identical(other.formFactors, formFactors) ||
-                const DeepCollectionEquality()
-                    .equals(other.formFactors, formFactors)) &&
-            (identical(other.items, items) ||
-                const DeepCollectionEquality().equals(other.items, items)));
+        (other.runtimeType == runtimeType &&
+            other is DisplayAdSuperbrowseSubsection &&
+            const DeepCollectionEquality().equals(other.sectionId, sectionId) &&
+            const DeepCollectionEquality()
+                .equals(other.formFactors, formFactors) &&
+            const DeepCollectionEquality().equals(other.items, items));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(sectionId) ^
-      const DeepCollectionEquality().hash(formFactors) ^
-      const DeepCollectionEquality().hash(items);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(sectionId),
+      const DeepCollectionEquality().hash(formFactors),
+      const DeepCollectionEquality().hash(items));
 
   @JsonKey(ignore: true)
   @override
@@ -2344,8 +2345,7 @@ class _$DisplayAdSuperbrowseSubsection
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$DisplayAdSuperbrowseSubsectionToJson(this)
-      ..['subsectionType'] = 'displayAd';
+    return _$$DisplayAdSuperbrowseSubsectionToJson(this);
   }
 }
 
@@ -2364,12 +2364,12 @@ abstract class DisplayAdSuperbrowseSubsection implements SuperbrowseSubsection {
 
   @override
   @JsonKey(name: SuperbrowseSubsection._sectionIdKey)
-  String get sectionId => throw _privateConstructorUsedError;
+  String get sectionId;
   @JsonKey(name: SuperbrowseSubsection._formFactorsKey)
-  FormFactors get formFactors => throw _privateConstructorUsedError;
+  FormFactors get formFactors;
   @override
   @JsonKey(name: SuperbrowseSubsection._itemsKey)
-  List<SuperbrowseItem> get items => throw _privateConstructorUsedError;
+  List<SuperbrowseItem> get items;
   @override
   @JsonKey(ignore: true)
   $DisplayAdSuperbrowseSubsectionCopyWith<DisplayAdSuperbrowseSubsection>

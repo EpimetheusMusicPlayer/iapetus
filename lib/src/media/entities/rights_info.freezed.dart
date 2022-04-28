@@ -1,5 +1,6 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'rights_info.dart';
@@ -44,7 +45,7 @@ class _$RightsInfoTearOff {
     );
   }
 
-  RightsInfo fromJson(Map<String, Object> json) {
+  RightsInfo fromJson(Map<String, Object?> json) {
     return RightsInfo.fromJson(json);
   }
 }
@@ -261,36 +262,30 @@ class _$_RightsInfo implements _RightsInfo {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _RightsInfo &&
-            (identical(other.hasInteractive, hasInteractive) ||
-                const DeepCollectionEquality()
-                    .equals(other.hasInteractive, hasInteractive)) &&
-            (identical(other.hasOffline, hasOffline) ||
-                const DeepCollectionEquality()
-                    .equals(other.hasOffline, hasOffline)) &&
-            (identical(other.hasNonInteractive, hasNonInteractive) ||
-                const DeepCollectionEquality()
-                    .equals(other.hasNonInteractive, hasNonInteractive)) &&
-            (identical(other.hasStatutory, hasStatutory) ||
-                const DeepCollectionEquality()
-                    .equals(other.hasStatutory, hasStatutory)) &&
-            (identical(other.hasRadioRights, hasRadioRights) ||
-                const DeepCollectionEquality()
-                    .equals(other.hasRadioRights, hasRadioRights)) &&
-            (identical(other.expiresIn, expiresIn) ||
-                const DeepCollectionEquality()
-                    .equals(other.expiresIn, expiresIn)));
+        (other.runtimeType == runtimeType &&
+            other is _RightsInfo &&
+            const DeepCollectionEquality()
+                .equals(other.hasInteractive, hasInteractive) &&
+            const DeepCollectionEquality()
+                .equals(other.hasOffline, hasOffline) &&
+            const DeepCollectionEquality()
+                .equals(other.hasNonInteractive, hasNonInteractive) &&
+            const DeepCollectionEquality()
+                .equals(other.hasStatutory, hasStatutory) &&
+            const DeepCollectionEquality()
+                .equals(other.hasRadioRights, hasRadioRights) &&
+            const DeepCollectionEquality().equals(other.expiresIn, expiresIn));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(hasInteractive) ^
-      const DeepCollectionEquality().hash(hasOffline) ^
-      const DeepCollectionEquality().hash(hasNonInteractive) ^
-      const DeepCollectionEquality().hash(hasStatutory) ^
-      const DeepCollectionEquality().hash(hasRadioRights) ^
-      const DeepCollectionEquality().hash(expiresIn);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(hasInteractive),
+      const DeepCollectionEquality().hash(hasOffline),
+      const DeepCollectionEquality().hash(hasNonInteractive),
+      const DeepCollectionEquality().hash(hasStatutory),
+      const DeepCollectionEquality().hash(hasRadioRights),
+      const DeepCollectionEquality().hash(expiresIn));
 
   @JsonKey(ignore: true)
   @override
@@ -323,25 +318,25 @@ abstract class _RightsInfo implements RightsInfo {
 
   @override
   @JsonKey(name: 'hasInteractive')
-  bool get hasInteractive => throw _privateConstructorUsedError;
+  bool get hasInteractive;
   @override
   @JsonKey(name: 'hasOffline')
-  bool get hasOffline => throw _privateConstructorUsedError;
+  bool get hasOffline;
   @override
   @JsonKey(name: 'hasNonInteractive')
-  bool get hasNonInteractive => throw _privateConstructorUsedError;
+  bool get hasNonInteractive;
   @override
   @JsonKey(name: 'hasStatutory')
-  bool get hasStatutory => throw _privateConstructorUsedError;
+  bool get hasStatutory;
   @override
   @JsonKey(name: 'hasRadioRights')
-  bool get hasRadioRights => throw _privateConstructorUsedError;
+  bool get hasRadioRights;
   @override
   @JsonKey(
       name: 'expirationTime',
       fromJson: readMilliseconds,
       toJson: writeMilliseconds)
-  Duration get expiresIn => throw _privateConstructorUsedError;
+  Duration get expiresIn;
   @override
   @JsonKey(ignore: true)
   _$RightsInfoCopyWith<_RightsInfo> get copyWith =>

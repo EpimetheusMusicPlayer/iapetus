@@ -8,7 +8,7 @@ part of 'badge.dart';
 
 _$_SuperbrowseBadge _$$_SuperbrowseBadgeFromJson(Map<String, dynamic> json) =>
     _$_SuperbrowseBadge(
-      type: _$enumDecode(_$BadgeTypeEnumMap, json['type']),
+      type: $enumDecode(_$BadgeTypeEnumMap, json['type']),
       data: json['data'] as String?,
     );
 
@@ -17,32 +17,6 @@ Map<String, dynamic> _$$_SuperbrowseBadgeToJson(_$_SuperbrowseBadge instance) =>
       'type': _$BadgeTypeEnumMap[instance.type],
       'data': instance.data,
     };
-
-K _$enumDecode<K, V>(
-  Map<K, V> enumValues,
-  Object? source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    throw ArgumentError(
-      'A value must be provided. Supported values: '
-      '${enumValues.values.join(', ')}',
-    );
-  }
-
-  return enumValues.entries.singleWhere(
-    (e) => e.value == source,
-    orElse: () {
-      if (unknownValue == null) {
-        throw ArgumentError(
-          '`$source` is not one of the supported values: '
-          '${enumValues.values.join(', ')}',
-        );
-      }
-      return MapEntry(unknownValue, enumValues.values.first);
-    },
-  ).key;
-}
 
 const _$BadgeTypeEnumMap = {
   BadgeType.explicit: 'explicit',

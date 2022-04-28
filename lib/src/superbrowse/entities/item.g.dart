@@ -17,6 +17,7 @@ _$BannerSuperbrowseItem _$$BannerSuperbrowseItemFromJson(
       image: json['image'] == null
           ? null
           : SuperbrowseImage.fromJson(json['image'] as Map<String, dynamic>),
+      $type: json['type'] as String?,
     );
 
 Map<String, dynamic> _$$BannerSuperbrowseItemToJson(
@@ -26,6 +27,7 @@ Map<String, dynamic> _$$BannerSuperbrowseItemToJson(
       'analyticsToken': instance.analyticsToken,
       'labels': instance.labels,
       'image': instance.image,
+      'type': instance.$type,
     };
 
 _$BeltSuperbrowseItem _$$BeltSuperbrowseItemFromJson(
@@ -45,6 +47,7 @@ _$BeltSuperbrowseItem _$$BeltSuperbrowseItemFromJson(
           : SuperbrowseAction.fromJson(
               json['longPressAction'] as Map<String, dynamic>),
       voiceText: json['voiceText'] as String?,
+      $type: json['type'] as String?,
     );
 
 Map<String, dynamic> _$$BeltSuperbrowseItemToJson(
@@ -57,6 +60,7 @@ Map<String, dynamic> _$$BeltSuperbrowseItemToJson(
       'action': instance.action,
       'longPressAction': instance.longPressAction,
       'voiceText': instance.voiceText,
+      'type': instance.$type,
     };
 
 _$FeaturedSuperbrowseItem _$$FeaturedSuperbrowseItemFromJson(
@@ -78,6 +82,7 @@ _$FeaturedSuperbrowseItem _$$FeaturedSuperbrowseItemFromJson(
       badges: (json['badges'] as List<dynamic>?)
           ?.map((e) => SuperbrowseBadge.fromJson(e as Map<String, dynamic>))
           .toList(),
+      $type: json['type'] as String?,
     );
 
 Map<String, dynamic> _$$FeaturedSuperbrowseItemToJson(
@@ -90,6 +95,7 @@ Map<String, dynamic> _$$FeaturedSuperbrowseItemToJson(
       'action': instance.action,
       'longPressAction': instance.longPressAction,
       'badges': instance.badges,
+      'type': instance.$type,
     };
 
 _$FooterSuperbrowseItem _$$FooterSuperbrowseItemFromJson(
@@ -110,6 +116,7 @@ _$FooterSuperbrowseItem _$$FooterSuperbrowseItemFromJson(
           ? null
           : SuperbrowseAction.fromJson(
               json['longPressAction'] as Map<String, dynamic>),
+      $type: json['type'] as String?,
     );
 
 Map<String, dynamic> _$$FooterSuperbrowseItemToJson(
@@ -121,6 +128,7 @@ Map<String, dynamic> _$$FooterSuperbrowseItemToJson(
       'button': instance.button,
       'action': instance.action,
       'longPressAction': instance.longPressAction,
+      'type': instance.$type,
     };
 
 _$GridSuperbrowseItem _$$GridSuperbrowseItemFromJson(
@@ -143,6 +151,7 @@ _$GridSuperbrowseItem _$$GridSuperbrowseItemFromJson(
           ?.map((e) => SuperbrowseBadge.fromJson(e as Map<String, dynamic>))
           .toList(),
       timestamp: readOptionalDateTimeMilliseconds(json['timeStamp'] as int?),
+      $type: json['type'] as String?,
     );
 
 Map<String, dynamic> _$$GridSuperbrowseItemToJson(
@@ -156,6 +165,7 @@ Map<String, dynamic> _$$GridSuperbrowseItemToJson(
       'longPressAction': instance.longPressAction,
       'badges': instance.badges,
       'timeStamp': writeOptionalDateTimeMilliseconds(instance.timestamp),
+      'type': instance.$type,
     };
 
 _$HeaderSuperbrowseItem _$$HeaderSuperbrowseItemFromJson(
@@ -176,6 +186,7 @@ _$HeaderSuperbrowseItem _$$HeaderSuperbrowseItemFromJson(
           ? null
           : SuperbrowseAction.fromJson(
               json['longPressAction'] as Map<String, dynamic>),
+      $type: json['type'] as String?,
     );
 
 Map<String, dynamic> _$$HeaderSuperbrowseItemToJson(
@@ -187,6 +198,7 @@ Map<String, dynamic> _$$HeaderSuperbrowseItemToJson(
       'image': instance.image,
       'action': instance.action,
       'longPressAction': instance.longPressAction,
+      'type': instance.$type,
     };
 
 _$HeroSuperbrowseItem _$$HeroSuperbrowseItemFromJson(
@@ -211,6 +223,7 @@ _$HeroSuperbrowseItem _$$HeroSuperbrowseItemFromJson(
       formFactors: json['formFactors'] == null
           ? null
           : FormFactors.fromJson(json['formFactors'] as Map<String, dynamic>),
+      $type: json['type'] as String?,
     );
 
 Map<String, dynamic> _$$HeroSuperbrowseItemToJson(
@@ -224,6 +237,7 @@ Map<String, dynamic> _$$HeroSuperbrowseItemToJson(
       'longPressAction': instance.longPressAction,
       'badges': instance.badges,
       'formFactors': instance.formFactors,
+      'type': instance.$type,
     };
 
 _$LargeRowSuperbrowseItem _$$LargeRowSuperbrowseItemFromJson(
@@ -252,6 +266,7 @@ _$LargeRowSuperbrowseItem _$$LargeRowSuperbrowseItemFromJson(
           ?.map((e) => SuperbrowseBadge.fromJson(e as Map<String, dynamic>))
           .toList(),
       separatorBelow: readNullableBool(json['separatorBelow'] as bool?),
+      $type: json['type'] as String?,
     );
 
 Map<String, dynamic> _$$LargeRowSuperbrowseItemToJson(
@@ -267,6 +282,7 @@ Map<String, dynamic> _$$LargeRowSuperbrowseItemToJson(
       'longPressAction': instance.longPressAction,
       'badges': instance.badges,
       'separatorBelow': writeNullableBool(instance.separatorBelow),
+      'type': instance.$type,
     };
 
 _$SmallRowSuperbrowseItem _$$SmallRowSuperbrowseItemFromJson(
@@ -287,6 +303,7 @@ _$SmallRowSuperbrowseItem _$$SmallRowSuperbrowseItemFromJson(
           ? null
           : SuperbrowseAction.fromJson(
               json['longPressAction'] as Map<String, dynamic>),
+      $type: json['type'] as String?,
     );
 
 Map<String, dynamic> _$$SmallRowSuperbrowseItemToJson(
@@ -298,6 +315,7 @@ Map<String, dynamic> _$$SmallRowSuperbrowseItemToJson(
       'button': instance.button,
       'action': instance.action,
       'longPressAction': instance.longPressAction,
+      'type': instance.$type,
     };
 
 _$SplitSuperbrowseItem _$$SplitSuperbrowseItemFromJson(
@@ -319,6 +337,7 @@ _$SplitSuperbrowseItem _$$SplitSuperbrowseItemFromJson(
       badges: (json['badges'] as List<dynamic>?)
           ?.map((e) => SuperbrowseBadge.fromJson(e as Map<String, dynamic>))
           .toList(),
+      $type: json['type'] as String?,
     );
 
 Map<String, dynamic> _$$SplitSuperbrowseItemToJson(
@@ -331,6 +350,7 @@ Map<String, dynamic> _$$SplitSuperbrowseItemToJson(
       'action': instance.action,
       'longPressAction': instance.longPressAction,
       'badges': instance.badges,
+      'type': instance.$type,
     };
 
 _$TileSuperbrowseItem _$$TileSuperbrowseItemFromJson(
@@ -350,6 +370,7 @@ _$TileSuperbrowseItem _$$TileSuperbrowseItemFromJson(
           : SuperbrowseAction.fromJson(
               json['longPressAction'] as Map<String, dynamic>),
       voiceText: json['voiceText'] as String?,
+      $type: json['type'] as String?,
     );
 
 Map<String, dynamic> _$$TileSuperbrowseItemToJson(
@@ -362,4 +383,5 @@ Map<String, dynamic> _$$TileSuperbrowseItemToJson(
       'action': instance.action,
       'longPressAction': instance.longPressAction,
       'voiceText': instance.voiceText,
+      'type': instance.$type,
     };

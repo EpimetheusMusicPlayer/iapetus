@@ -1,5 +1,6 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'action.dart';
@@ -38,7 +39,7 @@ class _$SuperbrowseActionTearOff {
     );
   }
 
-  SuperbrowseAction fromJson(Map<String, Object> json) {
+  SuperbrowseAction fromJson(Map<String, Object?> json) {
     return SuperbrowseAction.fromJson(json);
   }
 }
@@ -234,33 +235,26 @@ class _$_SuperbrowseAction implements _SuperbrowseAction {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _SuperbrowseAction &&
-            (identical(other.type, type) ||
-                const DeepCollectionEquality().equals(other.type, type)) &&
-            (identical(other.pandoraId, pandoraId) ||
-                const DeepCollectionEquality()
-                    .equals(other.pandoraId, pandoraId)) &&
-            (identical(other.sourceId, sourceId) ||
-                const DeepCollectionEquality()
-                    .equals(other.sourceId, sourceId)) &&
-            (identical(other.title, title) ||
-                const DeepCollectionEquality().equals(other.title, title)) &&
-            (identical(other.loadingScreen, loadingScreen) ||
-                const DeepCollectionEquality()
-                    .equals(other.loadingScreen, loadingScreen)) &&
-            (identical(other.url, url) ||
-                const DeepCollectionEquality().equals(other.url, url)));
+        (other.runtimeType == runtimeType &&
+            other is _SuperbrowseAction &&
+            const DeepCollectionEquality().equals(other.type, type) &&
+            const DeepCollectionEquality().equals(other.pandoraId, pandoraId) &&
+            const DeepCollectionEquality().equals(other.sourceId, sourceId) &&
+            const DeepCollectionEquality().equals(other.title, title) &&
+            const DeepCollectionEquality()
+                .equals(other.loadingScreen, loadingScreen) &&
+            const DeepCollectionEquality().equals(other.url, url));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(type) ^
-      const DeepCollectionEquality().hash(pandoraId) ^
-      const DeepCollectionEquality().hash(sourceId) ^
-      const DeepCollectionEquality().hash(title) ^
-      const DeepCollectionEquality().hash(loadingScreen) ^
-      const DeepCollectionEquality().hash(url);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(type),
+      const DeepCollectionEquality().hash(pandoraId),
+      const DeepCollectionEquality().hash(sourceId),
+      const DeepCollectionEquality().hash(title),
+      const DeepCollectionEquality().hash(loadingScreen),
+      const DeepCollectionEquality().hash(url));
 
   @JsonKey(ignore: true)
   @override
@@ -287,22 +281,22 @@ abstract class _SuperbrowseAction implements SuperbrowseAction {
 
   @override
   @JsonKey(name: 'type')
-  ActionType get type => throw _privateConstructorUsedError;
+  ActionType get type;
   @override
   @JsonKey(name: 'pandoraId')
-  String? get pandoraId => throw _privateConstructorUsedError;
+  String? get pandoraId;
   @override
   @JsonKey(name: 'sourceId')
-  String? get sourceId => throw _privateConstructorUsedError;
+  String? get sourceId;
   @override
   @JsonKey(name: 'title')
-  String? get title => throw _privateConstructorUsedError;
+  String? get title;
   @override
   @JsonKey(name: 'loadingScreen')
-  LoadingScreenType? get loadingScreen => throw _privateConstructorUsedError;
+  LoadingScreenType? get loadingScreen;
   @override
   @JsonKey(name: 'url')
-  Uri? get url => throw _privateConstructorUsedError;
+  Uri? get url;
   @override
   @JsonKey(ignore: true)
   _$SuperbrowseActionCopyWith<_SuperbrowseAction> get copyWith =>

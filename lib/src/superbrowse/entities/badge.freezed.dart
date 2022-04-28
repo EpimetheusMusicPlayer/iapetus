@@ -1,5 +1,6 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'badge.dart';
@@ -30,7 +31,7 @@ class _$SuperbrowseBadgeTearOff {
     );
   }
 
-  SuperbrowseBadge fromJson(Map<String, Object> json) {
+  SuperbrowseBadge fromJson(Map<String, Object?> json) {
     return SuperbrowseBadge.fromJson(json);
   }
 }
@@ -152,18 +153,17 @@ class _$_SuperbrowseBadge implements _SuperbrowseBadge {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _SuperbrowseBadge &&
-            (identical(other.type, type) ||
-                const DeepCollectionEquality().equals(other.type, type)) &&
-            (identical(other.data, data) ||
-                const DeepCollectionEquality().equals(other.data, data)));
+        (other.runtimeType == runtimeType &&
+            other is _SuperbrowseBadge &&
+            const DeepCollectionEquality().equals(other.type, type) &&
+            const DeepCollectionEquality().equals(other.data, data));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(type) ^
-      const DeepCollectionEquality().hash(data);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(type),
+      const DeepCollectionEquality().hash(data));
 
   @JsonKey(ignore: true)
   @override
@@ -186,10 +186,10 @@ abstract class _SuperbrowseBadge implements SuperbrowseBadge {
 
   @override
   @JsonValue('type')
-  BadgeType get type => throw _privateConstructorUsedError;
+  BadgeType get type;
   @override
   @JsonKey(name: 'data')
-  String? get data => throw _privateConstructorUsedError;
+  String? get data;
   @override
   @JsonKey(ignore: true)
   _$SuperbrowseBadgeCopyWith<_SuperbrowseBadge> get copyWith =>

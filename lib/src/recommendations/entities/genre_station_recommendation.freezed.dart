@@ -1,5 +1,6 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'genre_station_recommendation.dart';
@@ -42,7 +43,7 @@ class _$GenreStationRecommendationTearOff {
     );
   }
 
-  GenreStationRecommendation fromJson(Map<String, Object> json) {
+  GenreStationRecommendation fromJson(Map<String, Object?> json) {
     return GenreStationRecommendation.fromJson(json);
   }
 }
@@ -245,30 +246,26 @@ class _$_GenreStationRecommendation implements _GenreStationRecommendation {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _GenreStationRecommendation &&
-            (identical(other.musicToken, musicToken) ||
-                const DeepCollectionEquality()
-                    .equals(other.musicToken, musicToken)) &&
-            (identical(other.explanation, explanation) ||
-                const DeepCollectionEquality()
-                    .equals(other.explanation, explanation)) &&
-            (identical(other.artUrl, artUrl) ||
-                const DeepCollectionEquality().equals(other.artUrl, artUrl)) &&
-            (identical(other.stationName, stationName) ||
-                const DeepCollectionEquality()
-                    .equals(other.stationName, stationName)) &&
-            (identical(other.score, score) ||
-                const DeepCollectionEquality().equals(other.score, score)));
+        (other.runtimeType == runtimeType &&
+            other is _GenreStationRecommendation &&
+            const DeepCollectionEquality()
+                .equals(other.musicToken, musicToken) &&
+            const DeepCollectionEquality()
+                .equals(other.explanation, explanation) &&
+            const DeepCollectionEquality().equals(other.artUrl, artUrl) &&
+            const DeepCollectionEquality()
+                .equals(other.stationName, stationName) &&
+            const DeepCollectionEquality().equals(other.score, score));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(musicToken) ^
-      const DeepCollectionEquality().hash(explanation) ^
-      const DeepCollectionEquality().hash(artUrl) ^
-      const DeepCollectionEquality().hash(stationName) ^
-      const DeepCollectionEquality().hash(score);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(musicToken),
+      const DeepCollectionEquality().hash(explanation),
+      const DeepCollectionEquality().hash(artUrl),
+      const DeepCollectionEquality().hash(stationName),
+      const DeepCollectionEquality().hash(score));
 
   @JsonKey(ignore: true)
   @override
@@ -301,23 +298,23 @@ abstract class _GenreStationRecommendation
 
   @override
   @JsonKey(name: 'musicToken')
-  String get musicToken => throw _privateConstructorUsedError;
+  String get musicToken;
   @override
   @JsonKey(name: 'explanation')
-  String get explanation => throw _privateConstructorUsedError;
+  String get explanation;
   @override
   @JsonKey(name: 'artUrl')
-  Uri? get artUrl => throw _privateConstructorUsedError;
+  Uri? get artUrl;
   @override
   @JsonKey(name: 'stationName')
-  String get stationName => throw _privateConstructorUsedError;
+  String get stationName;
   @override
   @JsonKey(
       name: 'score',
       fromJson: readScore,
       toJson: writeScore,
       includeIfNull: true)
-  int? get score => throw _privateConstructorUsedError;
+  int? get score;
   @override
   @JsonKey(ignore: true)
   _$GenreStationRecommendationCopyWith<_GenreStationRecommendation>

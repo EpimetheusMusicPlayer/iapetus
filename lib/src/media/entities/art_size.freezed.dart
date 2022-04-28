@@ -1,5 +1,6 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'art_size.dart';
@@ -123,18 +124,17 @@ class _$_ArtSize extends _ArtSize {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _ArtSize &&
-            (identical(other.width, width) ||
-                const DeepCollectionEquality().equals(other.width, width)) &&
-            (identical(other.height, height) ||
-                const DeepCollectionEquality().equals(other.height, height)));
+        (other.runtimeType == runtimeType &&
+            other is _ArtSize &&
+            const DeepCollectionEquality().equals(other.width, width) &&
+            const DeepCollectionEquality().equals(other.height, height));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(width) ^
-      const DeepCollectionEquality().hash(height);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(width),
+      const DeepCollectionEquality().hash(height));
 
   @JsonKey(ignore: true)
   @override
@@ -147,9 +147,9 @@ abstract class _ArtSize extends ArtSize {
   const _ArtSize._() : super._();
 
   @override
-  int get width => throw _privateConstructorUsedError;
+  int get width;
   @override
-  int get height => throw _privateConstructorUsedError;
+  int get height;
   @override
   @JsonKey(ignore: true)
   _$ArtSizeCopyWith<_ArtSize> get copyWith =>

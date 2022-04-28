@@ -1,5 +1,6 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'annotation.dart';
@@ -14,7 +15,7 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 MediaAnnotation _$MediaAnnotationFromJson(Map<String, dynamic> json) {
-  switch (json['type'] as String) {
+  switch (json['type']) {
     case 'TR':
       return TrackAnnotation.fromJson(json);
     case 'AR':
@@ -73,8 +74,6 @@ class _$MediaAnnotationTearOff {
           required String isrc,
       @JsonKey(name: 'pandoraId')
           required String pandoraId,
-      @JsonKey(name: 'type')
-          required PandoraType pandoraType,
       @JsonKey(name: 'scope')
           required String scope}) {
     return TrackAnnotation(
@@ -96,7 +95,6 @@ class _$MediaAnnotationTearOff {
       stationFactoryId: stationFactoryId,
       isrc: isrc,
       pandoraId: pandoraId,
-      pandoraType: pandoraType,
       scope: scope,
     );
   }
@@ -136,8 +134,6 @@ class _$MediaAnnotationTearOff {
           required bool hasTakeoverModes,
       @JsonKey(name: 'pandoraId')
           required String pandoraId,
-      @JsonKey(name: 'type')
-          required PandoraType pandoraType,
       @JsonKey(name: 'scope')
           required String scope}) {
     return ArtistAnnotation(
@@ -158,7 +154,6 @@ class _$MediaAnnotationTearOff {
       megastar: megastar,
       hasTakeoverModes: hasTakeoverModes,
       pandoraId: pandoraId,
-      pandoraType: pandoraType,
       scope: scope,
     );
   }
@@ -202,8 +197,6 @@ class _$MediaAnnotationTearOff {
           required String listenerReleaseType,
       @JsonKey(name: 'pandoraId')
           required String pandoraId,
-      @JsonKey(name: 'type')
-          required PandoraType pandoraType,
       @JsonKey(name: 'scope')
           required String scope}) {
     return AlbumAnnotation(
@@ -226,7 +219,6 @@ class _$MediaAnnotationTearOff {
       releaseType: releaseType,
       listenerReleaseType: listenerReleaseType,
       pandoraId: pandoraId,
-      pandoraType: pandoraType,
       scope: scope,
     );
   }
@@ -252,8 +244,6 @@ class _$MediaAnnotationTearOff {
           required bool hasCuratedModes,
       @JsonKey(name: 'pandoraId')
           required String pandoraId,
-      @JsonKey(name: 'type')
-          required PandoraType pandoraType,
       @JsonKey(name: 'scope')
           required String scope}) {
     return GenreAnnotation(
@@ -267,7 +257,6 @@ class _$MediaAnnotationTearOff {
       hasTakeoverModes: hasTakeoverModes,
       hasCuratedModes: hasCuratedModes,
       pandoraId: pandoraId,
-      pandoraType: pandoraType,
       scope: scope,
     );
   }
@@ -295,8 +284,6 @@ class _$MediaAnnotationTearOff {
           required String stationFactoryId,
       @JsonKey(name: 'pandoraId')
           required String pandoraId,
-      @JsonKey(name: 'type')
-          required PandoraType pandoraType,
       @JsonKey(name: 'scope')
           required String scope}) {
     return ComposerAnnotation(
@@ -311,12 +298,11 @@ class _$MediaAnnotationTearOff {
       slugPlusPandoraId: slugPlusPandoraId,
       stationFactoryId: stationFactoryId,
       pandoraId: pandoraId,
-      pandoraType: pandoraType,
       scope: scope,
     );
   }
 
-  MediaAnnotation fromJson(Map<String, Object> json) {
+  MediaAnnotation fromJson(Map<String, Object?> json) {
     return MediaAnnotation.fromJson(json);
   }
 }
@@ -344,8 +330,6 @@ mixin _$MediaAnnotation {
   DateTime get modificationTime => throw _privateConstructorUsedError;
   @JsonKey(name: 'pandoraId')
   String get pandoraId => throw _privateConstructorUsedError;
-  @JsonKey(name: 'type')
-  PandoraType get pandoraType => throw _privateConstructorUsedError;
   @JsonKey(name: 'scope')
   String get scope => throw _privateConstructorUsedError;
 
@@ -388,8 +372,6 @@ mixin _$MediaAnnotation {
                 String isrc,
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
-            @JsonKey(name: 'type')
-                PandoraType pandoraType,
             @JsonKey(name: 'scope')
                 String scope)
         track,
@@ -428,8 +410,6 @@ mixin _$MediaAnnotation {
                 bool hasTakeoverModes,
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
-            @JsonKey(name: 'type')
-                PandoraType pandoraType,
             @JsonKey(name: 'scope')
                 String scope)
         artist,
@@ -472,8 +452,6 @@ mixin _$MediaAnnotation {
                 String listenerReleaseType,
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
-            @JsonKey(name: 'type')
-                PandoraType pandoraType,
             @JsonKey(name: 'scope')
                 String scope)
         album,
@@ -498,8 +476,6 @@ mixin _$MediaAnnotation {
                 bool hasCuratedModes,
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
-            @JsonKey(name: 'type')
-                PandoraType pandoraType,
             @JsonKey(name: 'scope')
                 String scope)
         genre,
@@ -526,8 +502,6 @@ mixin _$MediaAnnotation {
                 String stationFactoryId,
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
-            @JsonKey(name: 'type')
-                PandoraType pandoraType,
             @JsonKey(name: 'scope')
                 String scope)
         composer,
@@ -572,8 +546,6 @@ mixin _$MediaAnnotation {
                 String isrc,
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
-            @JsonKey(name: 'type')
-                PandoraType pandoraType,
             @JsonKey(name: 'scope')
                 String scope)?
         track,
@@ -612,8 +584,6 @@ mixin _$MediaAnnotation {
                 bool hasTakeoverModes,
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
-            @JsonKey(name: 'type')
-                PandoraType pandoraType,
             @JsonKey(name: 'scope')
                 String scope)?
         artist,
@@ -656,8 +626,6 @@ mixin _$MediaAnnotation {
                 String listenerReleaseType,
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
-            @JsonKey(name: 'type')
-                PandoraType pandoraType,
             @JsonKey(name: 'scope')
                 String scope)?
         album,
@@ -682,8 +650,6 @@ mixin _$MediaAnnotation {
                 bool hasCuratedModes,
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
-            @JsonKey(name: 'type')
-                PandoraType pandoraType,
             @JsonKey(name: 'scope')
                 String scope)?
         genre,
@@ -710,8 +676,6 @@ mixin _$MediaAnnotation {
                 String stationFactoryId,
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
-            @JsonKey(name: 'type')
-                PandoraType pandoraType,
             @JsonKey(name: 'scope')
                 String scope)?
         composer,
@@ -756,8 +720,6 @@ mixin _$MediaAnnotation {
                 String isrc,
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
-            @JsonKey(name: 'type')
-                PandoraType pandoraType,
             @JsonKey(name: 'scope')
                 String scope)?
         track,
@@ -796,8 +758,6 @@ mixin _$MediaAnnotation {
                 bool hasTakeoverModes,
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
-            @JsonKey(name: 'type')
-                PandoraType pandoraType,
             @JsonKey(name: 'scope')
                 String scope)?
         artist,
@@ -840,8 +800,6 @@ mixin _$MediaAnnotation {
                 String listenerReleaseType,
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
-            @JsonKey(name: 'type')
-                PandoraType pandoraType,
             @JsonKey(name: 'scope')
                 String scope)?
         album,
@@ -866,8 +824,6 @@ mixin _$MediaAnnotation {
                 bool hasCuratedModes,
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
-            @JsonKey(name: 'type')
-                PandoraType pandoraType,
             @JsonKey(name: 'scope')
                 String scope)?
         genre,
@@ -894,8 +850,6 @@ mixin _$MediaAnnotation {
                 String stationFactoryId,
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
-            @JsonKey(name: 'type')
-                PandoraType pandoraType,
             @JsonKey(name: 'scope')
                 String scope)?
         composer,
@@ -954,8 +908,6 @@ abstract class $MediaAnnotationCopyWith<$Res> {
           DateTime modificationTime,
       @JsonKey(name: 'pandoraId')
           String pandoraId,
-      @JsonKey(name: 'type')
-          PandoraType pandoraType,
       @JsonKey(name: 'scope')
           String scope});
 
@@ -979,7 +931,6 @@ class _$MediaAnnotationCopyWithImpl<$Res>
     Object? shareableUrlPath = freezed,
     Object? modificationTime = freezed,
     Object? pandoraId = freezed,
-    Object? pandoraType = freezed,
     Object? scope = freezed,
   }) {
     return _then(_value.copyWith(
@@ -1007,10 +958,6 @@ class _$MediaAnnotationCopyWithImpl<$Res>
           ? _value.pandoraId
           : pandoraId // ignore: cast_nullable_to_non_nullable
               as String,
-      pandoraType: pandoraType == freezed
-          ? _value.pandoraType
-          : pandoraType // ignore: cast_nullable_to_non_nullable
-              as PandoraType,
       scope: scope == freezed
           ? _value.scope
           : scope // ignore: cast_nullable_to_non_nullable
@@ -1074,8 +1021,6 @@ abstract class $TrackAnnotationCopyWith<$Res>
           String isrc,
       @JsonKey(name: 'pandoraId')
           String pandoraId,
-      @JsonKey(name: 'type')
-          PandoraType pandoraType,
       @JsonKey(name: 'scope')
           String scope});
 
@@ -1115,7 +1060,6 @@ class _$TrackAnnotationCopyWithImpl<$Res>
     Object? stationFactoryId = freezed,
     Object? isrc = freezed,
     Object? pandoraId = freezed,
-    Object? pandoraType = freezed,
     Object? scope = freezed,
   }) {
     return _then(TrackAnnotation(
@@ -1191,10 +1135,6 @@ class _$TrackAnnotationCopyWithImpl<$Res>
           ? _value.pandoraId
           : pandoraId // ignore: cast_nullable_to_non_nullable
               as String,
-      pandoraType: pandoraType == freezed
-          ? _value.pandoraType
-          : pandoraType // ignore: cast_nullable_to_non_nullable
-              as PandoraType,
       scope: scope == freezed
           ? _value.scope
           : scope // ignore: cast_nullable_to_non_nullable
@@ -1213,8 +1153,8 @@ class _$TrackAnnotationCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 @FreezedUnionValue('TR')
-@Implements(Track)
-class _$TrackAnnotation implements TrackAnnotation {
+@Implements<Track>()
+class _$TrackAnnotation extends TrackAnnotation {
   const _$TrackAnnotation(
       {@JsonKey(name: 'name')
           required this.name,
@@ -1252,10 +1192,11 @@ class _$TrackAnnotation implements TrackAnnotation {
           required this.isrc,
       @JsonKey(name: 'pandoraId')
           required this.pandoraId,
-      @JsonKey(name: 'type')
-          required this.pandoraType,
       @JsonKey(name: 'scope')
-          required this.scope});
+          required this.scope,
+      String? $type})
+      : $type = $type ?? 'TR',
+        super._();
 
   factory _$TrackAnnotation.fromJson(Map<String, dynamic> json) =>
       _$$TrackAnnotationFromJson(json);
@@ -1321,102 +1262,75 @@ class _$TrackAnnotation implements TrackAnnotation {
   @JsonKey(name: 'pandoraId')
   final String pandoraId;
   @override
-  @JsonKey(name: 'type')
-  final PandoraType pandoraType;
-  @override
   @JsonKey(name: 'scope')
   final String scope;
 
+  @JsonKey(name: 'type')
+  final String $type;
+
   @override
   String toString() {
-    return 'MediaAnnotation.track(name: $name, sortableName: $sortableName, duration: $duration, trackNumber: $trackNumber, icon: $icon, rightsInfo: $rightsInfo, albumId: $albumId, albumName: $albumName, artistId: $artistId, artistName: $artistName, explicitness: $explicitness, shareableUrlPath: $shareableUrlPath, hasRadio: $hasRadio, modificationTime: $modificationTime, slugPlusPandoraId: $slugPlusPandoraId, stationFactoryId: $stationFactoryId, isrc: $isrc, pandoraId: $pandoraId, pandoraType: $pandoraType, scope: $scope)';
+    return 'MediaAnnotation.track(name: $name, sortableName: $sortableName, duration: $duration, trackNumber: $trackNumber, icon: $icon, rightsInfo: $rightsInfo, albumId: $albumId, albumName: $albumName, artistId: $artistId, artistName: $artistName, explicitness: $explicitness, shareableUrlPath: $shareableUrlPath, hasRadio: $hasRadio, modificationTime: $modificationTime, slugPlusPandoraId: $slugPlusPandoraId, stationFactoryId: $stationFactoryId, isrc: $isrc, pandoraId: $pandoraId, scope: $scope)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is TrackAnnotation &&
-            (identical(other.name, name) ||
-                const DeepCollectionEquality().equals(other.name, name)) &&
-            (identical(other.sortableName, sortableName) ||
-                const DeepCollectionEquality()
-                    .equals(other.sortableName, sortableName)) &&
-            (identical(other.duration, duration) ||
-                const DeepCollectionEquality()
-                    .equals(other.duration, duration)) &&
-            (identical(other.trackNumber, trackNumber) ||
-                const DeepCollectionEquality()
-                    .equals(other.trackNumber, trackNumber)) &&
-            (identical(other.icon, icon) ||
-                const DeepCollectionEquality().equals(other.icon, icon)) &&
-            (identical(other.rightsInfo, rightsInfo) ||
-                const DeepCollectionEquality()
-                    .equals(other.rightsInfo, rightsInfo)) &&
-            (identical(other.albumId, albumId) ||
-                const DeepCollectionEquality()
-                    .equals(other.albumId, albumId)) &&
-            (identical(other.albumName, albumName) ||
-                const DeepCollectionEquality()
-                    .equals(other.albumName, albumName)) &&
-            (identical(other.artistId, artistId) ||
-                const DeepCollectionEquality()
-                    .equals(other.artistId, artistId)) &&
-            (identical(other.artistName, artistName) ||
-                const DeepCollectionEquality()
-                    .equals(other.artistName, artistName)) &&
-            (identical(other.explicitness, explicitness) ||
-                const DeepCollectionEquality()
-                    .equals(other.explicitness, explicitness)) &&
-            (identical(other.shareableUrlPath, shareableUrlPath) ||
-                const DeepCollectionEquality()
-                    .equals(other.shareableUrlPath, shareableUrlPath)) &&
-            (identical(other.hasRadio, hasRadio) ||
-                const DeepCollectionEquality()
-                    .equals(other.hasRadio, hasRadio)) &&
-            (identical(other.modificationTime, modificationTime) ||
-                const DeepCollectionEquality()
-                    .equals(other.modificationTime, modificationTime)) &&
-            (identical(other.slugPlusPandoraId, slugPlusPandoraId) ||
-                const DeepCollectionEquality()
-                    .equals(other.slugPlusPandoraId, slugPlusPandoraId)) &&
-            (identical(other.stationFactoryId, stationFactoryId) ||
-                const DeepCollectionEquality()
-                    .equals(other.stationFactoryId, stationFactoryId)) &&
-            (identical(other.isrc, isrc) ||
-                const DeepCollectionEquality().equals(other.isrc, isrc)) &&
-            (identical(other.pandoraId, pandoraId) ||
-                const DeepCollectionEquality()
-                    .equals(other.pandoraId, pandoraId)) &&
-            (identical(other.pandoraType, pandoraType) ||
-                const DeepCollectionEquality()
-                    .equals(other.pandoraType, pandoraType)) &&
-            (identical(other.scope, scope) ||
-                const DeepCollectionEquality().equals(other.scope, scope)));
+        (other.runtimeType == runtimeType &&
+            other is TrackAnnotation &&
+            const DeepCollectionEquality().equals(other.name, name) &&
+            const DeepCollectionEquality()
+                .equals(other.sortableName, sortableName) &&
+            const DeepCollectionEquality().equals(other.duration, duration) &&
+            const DeepCollectionEquality()
+                .equals(other.trackNumber, trackNumber) &&
+            const DeepCollectionEquality().equals(other.icon, icon) &&
+            const DeepCollectionEquality()
+                .equals(other.rightsInfo, rightsInfo) &&
+            const DeepCollectionEquality().equals(other.albumId, albumId) &&
+            const DeepCollectionEquality().equals(other.albumName, albumName) &&
+            const DeepCollectionEquality().equals(other.artistId, artistId) &&
+            const DeepCollectionEquality()
+                .equals(other.artistName, artistName) &&
+            const DeepCollectionEquality()
+                .equals(other.explicitness, explicitness) &&
+            const DeepCollectionEquality()
+                .equals(other.shareableUrlPath, shareableUrlPath) &&
+            const DeepCollectionEquality().equals(other.hasRadio, hasRadio) &&
+            const DeepCollectionEquality()
+                .equals(other.modificationTime, modificationTime) &&
+            const DeepCollectionEquality()
+                .equals(other.slugPlusPandoraId, slugPlusPandoraId) &&
+            const DeepCollectionEquality()
+                .equals(other.stationFactoryId, stationFactoryId) &&
+            const DeepCollectionEquality().equals(other.isrc, isrc) &&
+            const DeepCollectionEquality().equals(other.pandoraId, pandoraId) &&
+            const DeepCollectionEquality().equals(other.scope, scope));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(name) ^
-      const DeepCollectionEquality().hash(sortableName) ^
-      const DeepCollectionEquality().hash(duration) ^
-      const DeepCollectionEquality().hash(trackNumber) ^
-      const DeepCollectionEquality().hash(icon) ^
-      const DeepCollectionEquality().hash(rightsInfo) ^
-      const DeepCollectionEquality().hash(albumId) ^
-      const DeepCollectionEquality().hash(albumName) ^
-      const DeepCollectionEquality().hash(artistId) ^
-      const DeepCollectionEquality().hash(artistName) ^
-      const DeepCollectionEquality().hash(explicitness) ^
-      const DeepCollectionEquality().hash(shareableUrlPath) ^
-      const DeepCollectionEquality().hash(hasRadio) ^
-      const DeepCollectionEquality().hash(modificationTime) ^
-      const DeepCollectionEquality().hash(slugPlusPandoraId) ^
-      const DeepCollectionEquality().hash(stationFactoryId) ^
-      const DeepCollectionEquality().hash(isrc) ^
-      const DeepCollectionEquality().hash(pandoraId) ^
-      const DeepCollectionEquality().hash(pandoraType) ^
-      const DeepCollectionEquality().hash(scope);
+  int get hashCode => Object.hashAll([
+        runtimeType,
+        const DeepCollectionEquality().hash(name),
+        const DeepCollectionEquality().hash(sortableName),
+        const DeepCollectionEquality().hash(duration),
+        const DeepCollectionEquality().hash(trackNumber),
+        const DeepCollectionEquality().hash(icon),
+        const DeepCollectionEquality().hash(rightsInfo),
+        const DeepCollectionEquality().hash(albumId),
+        const DeepCollectionEquality().hash(albumName),
+        const DeepCollectionEquality().hash(artistId),
+        const DeepCollectionEquality().hash(artistName),
+        const DeepCollectionEquality().hash(explicitness),
+        const DeepCollectionEquality().hash(shareableUrlPath),
+        const DeepCollectionEquality().hash(hasRadio),
+        const DeepCollectionEquality().hash(modificationTime),
+        const DeepCollectionEquality().hash(slugPlusPandoraId),
+        const DeepCollectionEquality().hash(stationFactoryId),
+        const DeepCollectionEquality().hash(isrc),
+        const DeepCollectionEquality().hash(pandoraId),
+        const DeepCollectionEquality().hash(scope)
+      ]);
 
   @JsonKey(ignore: true)
   @override
@@ -1463,8 +1377,6 @@ class _$TrackAnnotation implements TrackAnnotation {
                 String isrc,
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
-            @JsonKey(name: 'type')
-                PandoraType pandoraType,
             @JsonKey(name: 'scope')
                 String scope)
         track,
@@ -1503,8 +1415,6 @@ class _$TrackAnnotation implements TrackAnnotation {
                 bool hasTakeoverModes,
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
-            @JsonKey(name: 'type')
-                PandoraType pandoraType,
             @JsonKey(name: 'scope')
                 String scope)
         artist,
@@ -1547,8 +1457,6 @@ class _$TrackAnnotation implements TrackAnnotation {
                 String listenerReleaseType,
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
-            @JsonKey(name: 'type')
-                PandoraType pandoraType,
             @JsonKey(name: 'scope')
                 String scope)
         album,
@@ -1573,8 +1481,6 @@ class _$TrackAnnotation implements TrackAnnotation {
                 bool hasCuratedModes,
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
-            @JsonKey(name: 'type')
-                PandoraType pandoraType,
             @JsonKey(name: 'scope')
                 String scope)
         genre,
@@ -1601,8 +1507,6 @@ class _$TrackAnnotation implements TrackAnnotation {
                 String stationFactoryId,
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
-            @JsonKey(name: 'type')
-                PandoraType pandoraType,
             @JsonKey(name: 'scope')
                 String scope)
         composer,
@@ -1626,7 +1530,6 @@ class _$TrackAnnotation implements TrackAnnotation {
         stationFactoryId,
         isrc,
         pandoraId,
-        pandoraType,
         scope);
   }
 
@@ -1670,8 +1573,6 @@ class _$TrackAnnotation implements TrackAnnotation {
                 String isrc,
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
-            @JsonKey(name: 'type')
-                PandoraType pandoraType,
             @JsonKey(name: 'scope')
                 String scope)?
         track,
@@ -1710,8 +1611,6 @@ class _$TrackAnnotation implements TrackAnnotation {
                 bool hasTakeoverModes,
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
-            @JsonKey(name: 'type')
-                PandoraType pandoraType,
             @JsonKey(name: 'scope')
                 String scope)?
         artist,
@@ -1754,8 +1653,6 @@ class _$TrackAnnotation implements TrackAnnotation {
                 String listenerReleaseType,
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
-            @JsonKey(name: 'type')
-                PandoraType pandoraType,
             @JsonKey(name: 'scope')
                 String scope)?
         album,
@@ -1780,8 +1677,6 @@ class _$TrackAnnotation implements TrackAnnotation {
                 bool hasCuratedModes,
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
-            @JsonKey(name: 'type')
-                PandoraType pandoraType,
             @JsonKey(name: 'scope')
                 String scope)?
         genre,
@@ -1808,8 +1703,6 @@ class _$TrackAnnotation implements TrackAnnotation {
                 String stationFactoryId,
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
-            @JsonKey(name: 'type')
-                PandoraType pandoraType,
             @JsonKey(name: 'scope')
                 String scope)?
         composer,
@@ -1833,7 +1726,6 @@ class _$TrackAnnotation implements TrackAnnotation {
         stationFactoryId,
         isrc,
         pandoraId,
-        pandoraType,
         scope);
   }
 
@@ -1877,8 +1769,6 @@ class _$TrackAnnotation implements TrackAnnotation {
                 String isrc,
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
-            @JsonKey(name: 'type')
-                PandoraType pandoraType,
             @JsonKey(name: 'scope')
                 String scope)?
         track,
@@ -1917,8 +1807,6 @@ class _$TrackAnnotation implements TrackAnnotation {
                 bool hasTakeoverModes,
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
-            @JsonKey(name: 'type')
-                PandoraType pandoraType,
             @JsonKey(name: 'scope')
                 String scope)?
         artist,
@@ -1961,8 +1849,6 @@ class _$TrackAnnotation implements TrackAnnotation {
                 String listenerReleaseType,
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
-            @JsonKey(name: 'type')
-                PandoraType pandoraType,
             @JsonKey(name: 'scope')
                 String scope)?
         album,
@@ -1987,8 +1873,6 @@ class _$TrackAnnotation implements TrackAnnotation {
                 bool hasCuratedModes,
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
-            @JsonKey(name: 'type')
-                PandoraType pandoraType,
             @JsonKey(name: 'scope')
                 String scope)?
         genre,
@@ -2015,8 +1899,6 @@ class _$TrackAnnotation implements TrackAnnotation {
                 String stationFactoryId,
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
-            @JsonKey(name: 'type')
-                PandoraType pandoraType,
             @JsonKey(name: 'scope')
                 String scope)?
         composer,
@@ -2042,7 +1924,6 @@ class _$TrackAnnotation implements TrackAnnotation {
           stationFactoryId,
           isrc,
           pandoraId,
-          pandoraType,
           scope);
     }
     return orElse();
@@ -2090,11 +1971,11 @@ class _$TrackAnnotation implements TrackAnnotation {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$TrackAnnotationToJson(this)..['type'] = 'TR';
+    return _$$TrackAnnotationToJson(this);
   }
 }
 
-abstract class TrackAnnotation implements MediaAnnotation, Track {
+abstract class TrackAnnotation extends MediaAnnotation implements Track {
   const factory TrackAnnotation(
       {@JsonKey(name: 'name')
           required String name,
@@ -2132,68 +2013,64 @@ abstract class TrackAnnotation implements MediaAnnotation, Track {
           required String isrc,
       @JsonKey(name: 'pandoraId')
           required String pandoraId,
-      @JsonKey(name: 'type')
-          required PandoraType pandoraType,
       @JsonKey(name: 'scope')
           required String scope}) = _$TrackAnnotation;
+  const TrackAnnotation._() : super._();
 
   factory TrackAnnotation.fromJson(Map<String, dynamic> json) =
       _$TrackAnnotation.fromJson;
 
   @override
   @JsonKey(name: 'name')
-  String get name => throw _privateConstructorUsedError;
+  String get name;
   @override
   @JsonKey(name: 'sortableName')
-  String get sortableName => throw _privateConstructorUsedError;
+  String get sortableName;
   @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
-  Duration get duration => throw _privateConstructorUsedError;
+  Duration get duration;
   @JsonKey(name: 'trackNumber')
-  int get trackNumber => throw _privateConstructorUsedError;
+  int get trackNumber;
   @override
   @JsonKey(
       name: 'icon',
       fromJson: MediaIcon.optionalFromJson,
       toJson: MediaIcon.optionalToJson)
-  MediaIcon? get icon => throw _privateConstructorUsedError;
+  MediaIcon? get icon;
   @JsonKey(name: 'rightsInfo')
-  RightsInfo get rightsInfo => throw _privateConstructorUsedError;
+  RightsInfo get rightsInfo;
   @JsonKey(name: 'albumId')
-  String get albumId => throw _privateConstructorUsedError;
+  String get albumId;
   @JsonKey(name: 'albumName')
-  String get albumName => throw _privateConstructorUsedError;
+  String get albumName;
   @JsonKey(name: 'artistId')
-  String get artistId => throw _privateConstructorUsedError;
+  String get artistId;
   @JsonKey(name: 'artistName')
-  String get artistName => throw _privateConstructorUsedError;
+  String get artistName;
   @JsonKey(name: 'explicitness')
-  Explicitness get explicitness => throw _privateConstructorUsedError;
+  Explicitness get explicitness;
   @override
   @JsonKey(name: 'shareableUrlPath')
-  String get shareableUrlPath => throw _privateConstructorUsedError;
+  String get shareableUrlPath;
   @JsonKey(name: 'hasRadio')
-  bool get hasRadio => throw _privateConstructorUsedError;
+  bool get hasRadio;
   @override
   @JsonKey(
       name: 'modificationTime',
       fromJson: readDateTimeMilliseconds,
       toJson: writeDateTimeMilliseconds)
-  DateTime get modificationTime => throw _privateConstructorUsedError;
+  DateTime get modificationTime;
   @JsonKey(name: 'slugPlusPandoraId')
-  String get slugPlusPandoraId => throw _privateConstructorUsedError;
+  String get slugPlusPandoraId;
   @JsonKey(name: 'stationFactoryId')
-  String get stationFactoryId => throw _privateConstructorUsedError;
+  String get stationFactoryId;
   @JsonKey(name: 'isrc')
-  String get isrc => throw _privateConstructorUsedError;
+  String get isrc;
   @override
   @JsonKey(name: 'pandoraId')
-  String get pandoraId => throw _privateConstructorUsedError;
-  @override
-  @JsonKey(name: 'type')
-  PandoraType get pandoraType => throw _privateConstructorUsedError;
+  String get pandoraId;
   @override
   @JsonKey(name: 'scope')
-  String get scope => throw _privateConstructorUsedError;
+  String get scope;
   @override
   @JsonKey(ignore: true)
   $TrackAnnotationCopyWith<TrackAnnotation> get copyWith =>
@@ -2242,8 +2119,6 @@ abstract class $ArtistAnnotationCopyWith<$Res>
           bool hasTakeoverModes,
       @JsonKey(name: 'pandoraId')
           String pandoraId,
-      @JsonKey(name: 'type')
-          PandoraType pandoraType,
       @JsonKey(name: 'scope')
           String scope});
 
@@ -2281,7 +2156,6 @@ class _$ArtistAnnotationCopyWithImpl<$Res>
     Object? megastar = freezed,
     Object? hasTakeoverModes = freezed,
     Object? pandoraId = freezed,
-    Object? pandoraType = freezed,
     Object? scope = freezed,
   }) {
     return _then(ArtistAnnotation(
@@ -2353,10 +2227,6 @@ class _$ArtistAnnotationCopyWithImpl<$Res>
           ? _value.pandoraId
           : pandoraId // ignore: cast_nullable_to_non_nullable
               as String,
-      pandoraType: pandoraType == freezed
-          ? _value.pandoraType
-          : pandoraType // ignore: cast_nullable_to_non_nullable
-              as PandoraType,
       scope: scope == freezed
           ? _value.scope
           : scope // ignore: cast_nullable_to_non_nullable
@@ -2368,7 +2238,7 @@ class _$ArtistAnnotationCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 @FreezedUnionValue('AR')
-class _$ArtistAnnotation implements ArtistAnnotation {
+class _$ArtistAnnotation extends ArtistAnnotation {
   const _$ArtistAnnotation(
       {@JsonKey(name: 'name')
           required this.name,
@@ -2404,10 +2274,11 @@ class _$ArtistAnnotation implements ArtistAnnotation {
           required this.hasTakeoverModes,
       @JsonKey(name: 'pandoraId')
           required this.pandoraId,
-      @JsonKey(name: 'type')
-          required this.pandoraType,
       @JsonKey(name: 'scope')
-          required this.scope});
+          required this.scope,
+      String? $type})
+      : $type = $type ?? 'AR',
+        super._();
 
   factory _$ArtistAnnotation.fromJson(Map<String, dynamic> json) =>
       _$$ArtistAnnotationFromJson(json);
@@ -2470,99 +2341,75 @@ class _$ArtistAnnotation implements ArtistAnnotation {
   @JsonKey(name: 'pandoraId')
   final String pandoraId;
   @override
-  @JsonKey(name: 'type')
-  final PandoraType pandoraType;
-  @override
   @JsonKey(name: 'scope')
   final String scope;
 
+  @JsonKey(name: 'type')
+  final String $type;
+
   @override
   String toString() {
-    return 'MediaAnnotation.artist(name: $name, sortableName: $sortableName, trackCount: $trackCount, albumCount: $albumCount, icon: $icon, shareableUrlPath: $shareableUrlPath, twitterHandle: $twitterHandle, hasRadio: $hasRadio, modificationTime: $modificationTime, stationFactoryId: $stationFactoryId, slugPlusPandoraId: $slugPlusPandoraId, collaboration: $collaboration, primaryArtistIds: $primaryArtistIds, variousArtist: $variousArtist, megastar: $megastar, hasTakeoverModes: $hasTakeoverModes, pandoraId: $pandoraId, pandoraType: $pandoraType, scope: $scope)';
+    return 'MediaAnnotation.artist(name: $name, sortableName: $sortableName, trackCount: $trackCount, albumCount: $albumCount, icon: $icon, shareableUrlPath: $shareableUrlPath, twitterHandle: $twitterHandle, hasRadio: $hasRadio, modificationTime: $modificationTime, stationFactoryId: $stationFactoryId, slugPlusPandoraId: $slugPlusPandoraId, collaboration: $collaboration, primaryArtistIds: $primaryArtistIds, variousArtist: $variousArtist, megastar: $megastar, hasTakeoverModes: $hasTakeoverModes, pandoraId: $pandoraId, scope: $scope)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is ArtistAnnotation &&
-            (identical(other.name, name) ||
-                const DeepCollectionEquality().equals(other.name, name)) &&
-            (identical(other.sortableName, sortableName) ||
-                const DeepCollectionEquality()
-                    .equals(other.sortableName, sortableName)) &&
-            (identical(other.trackCount, trackCount) ||
-                const DeepCollectionEquality()
-                    .equals(other.trackCount, trackCount)) &&
-            (identical(other.albumCount, albumCount) ||
-                const DeepCollectionEquality()
-                    .equals(other.albumCount, albumCount)) &&
-            (identical(other.icon, icon) ||
-                const DeepCollectionEquality().equals(other.icon, icon)) &&
-            (identical(other.shareableUrlPath, shareableUrlPath) ||
-                const DeepCollectionEquality()
-                    .equals(other.shareableUrlPath, shareableUrlPath)) &&
-            (identical(other.twitterHandle, twitterHandle) ||
-                const DeepCollectionEquality()
-                    .equals(other.twitterHandle, twitterHandle)) &&
-            (identical(other.hasRadio, hasRadio) ||
-                const DeepCollectionEquality()
-                    .equals(other.hasRadio, hasRadio)) &&
-            (identical(other.modificationTime, modificationTime) ||
-                const DeepCollectionEquality()
-                    .equals(other.modificationTime, modificationTime)) &&
-            (identical(other.stationFactoryId, stationFactoryId) ||
-                const DeepCollectionEquality()
-                    .equals(other.stationFactoryId, stationFactoryId)) &&
-            (identical(other.slugPlusPandoraId, slugPlusPandoraId) ||
-                const DeepCollectionEquality()
-                    .equals(other.slugPlusPandoraId, slugPlusPandoraId)) &&
-            (identical(other.collaboration, collaboration) ||
-                const DeepCollectionEquality()
-                    .equals(other.collaboration, collaboration)) &&
-            (identical(other.primaryArtistIds, primaryArtistIds) ||
-                const DeepCollectionEquality()
-                    .equals(other.primaryArtistIds, primaryArtistIds)) &&
-            (identical(other.variousArtist, variousArtist) ||
-                const DeepCollectionEquality()
-                    .equals(other.variousArtist, variousArtist)) &&
-            (identical(other.megastar, megastar) ||
-                const DeepCollectionEquality()
-                    .equals(other.megastar, megastar)) &&
-            (identical(other.hasTakeoverModes, hasTakeoverModes) ||
-                const DeepCollectionEquality()
-                    .equals(other.hasTakeoverModes, hasTakeoverModes)) &&
-            (identical(other.pandoraId, pandoraId) ||
-                const DeepCollectionEquality()
-                    .equals(other.pandoraId, pandoraId)) &&
-            (identical(other.pandoraType, pandoraType) ||
-                const DeepCollectionEquality()
-                    .equals(other.pandoraType, pandoraType)) &&
-            (identical(other.scope, scope) ||
-                const DeepCollectionEquality().equals(other.scope, scope)));
+        (other.runtimeType == runtimeType &&
+            other is ArtistAnnotation &&
+            const DeepCollectionEquality().equals(other.name, name) &&
+            const DeepCollectionEquality()
+                .equals(other.sortableName, sortableName) &&
+            const DeepCollectionEquality()
+                .equals(other.trackCount, trackCount) &&
+            const DeepCollectionEquality()
+                .equals(other.albumCount, albumCount) &&
+            const DeepCollectionEquality().equals(other.icon, icon) &&
+            const DeepCollectionEquality()
+                .equals(other.shareableUrlPath, shareableUrlPath) &&
+            const DeepCollectionEquality()
+                .equals(other.twitterHandle, twitterHandle) &&
+            const DeepCollectionEquality().equals(other.hasRadio, hasRadio) &&
+            const DeepCollectionEquality()
+                .equals(other.modificationTime, modificationTime) &&
+            const DeepCollectionEquality()
+                .equals(other.stationFactoryId, stationFactoryId) &&
+            const DeepCollectionEquality()
+                .equals(other.slugPlusPandoraId, slugPlusPandoraId) &&
+            const DeepCollectionEquality()
+                .equals(other.collaboration, collaboration) &&
+            const DeepCollectionEquality()
+                .equals(other.primaryArtistIds, primaryArtistIds) &&
+            const DeepCollectionEquality()
+                .equals(other.variousArtist, variousArtist) &&
+            const DeepCollectionEquality().equals(other.megastar, megastar) &&
+            const DeepCollectionEquality()
+                .equals(other.hasTakeoverModes, hasTakeoverModes) &&
+            const DeepCollectionEquality().equals(other.pandoraId, pandoraId) &&
+            const DeepCollectionEquality().equals(other.scope, scope));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(name) ^
-      const DeepCollectionEquality().hash(sortableName) ^
-      const DeepCollectionEquality().hash(trackCount) ^
-      const DeepCollectionEquality().hash(albumCount) ^
-      const DeepCollectionEquality().hash(icon) ^
-      const DeepCollectionEquality().hash(shareableUrlPath) ^
-      const DeepCollectionEquality().hash(twitterHandle) ^
-      const DeepCollectionEquality().hash(hasRadio) ^
-      const DeepCollectionEquality().hash(modificationTime) ^
-      const DeepCollectionEquality().hash(stationFactoryId) ^
-      const DeepCollectionEquality().hash(slugPlusPandoraId) ^
-      const DeepCollectionEquality().hash(collaboration) ^
-      const DeepCollectionEquality().hash(primaryArtistIds) ^
-      const DeepCollectionEquality().hash(variousArtist) ^
-      const DeepCollectionEquality().hash(megastar) ^
-      const DeepCollectionEquality().hash(hasTakeoverModes) ^
-      const DeepCollectionEquality().hash(pandoraId) ^
-      const DeepCollectionEquality().hash(pandoraType) ^
-      const DeepCollectionEquality().hash(scope);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(name),
+      const DeepCollectionEquality().hash(sortableName),
+      const DeepCollectionEquality().hash(trackCount),
+      const DeepCollectionEquality().hash(albumCount),
+      const DeepCollectionEquality().hash(icon),
+      const DeepCollectionEquality().hash(shareableUrlPath),
+      const DeepCollectionEquality().hash(twitterHandle),
+      const DeepCollectionEquality().hash(hasRadio),
+      const DeepCollectionEquality().hash(modificationTime),
+      const DeepCollectionEquality().hash(stationFactoryId),
+      const DeepCollectionEquality().hash(slugPlusPandoraId),
+      const DeepCollectionEquality().hash(collaboration),
+      const DeepCollectionEquality().hash(primaryArtistIds),
+      const DeepCollectionEquality().hash(variousArtist),
+      const DeepCollectionEquality().hash(megastar),
+      const DeepCollectionEquality().hash(hasTakeoverModes),
+      const DeepCollectionEquality().hash(pandoraId),
+      const DeepCollectionEquality().hash(scope));
 
   @JsonKey(ignore: true)
   @override
@@ -2609,8 +2456,6 @@ class _$ArtistAnnotation implements ArtistAnnotation {
                 String isrc,
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
-            @JsonKey(name: 'type')
-                PandoraType pandoraType,
             @JsonKey(name: 'scope')
                 String scope)
         track,
@@ -2649,8 +2494,6 @@ class _$ArtistAnnotation implements ArtistAnnotation {
                 bool hasTakeoverModes,
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
-            @JsonKey(name: 'type')
-                PandoraType pandoraType,
             @JsonKey(name: 'scope')
                 String scope)
         artist,
@@ -2693,8 +2536,6 @@ class _$ArtistAnnotation implements ArtistAnnotation {
                 String listenerReleaseType,
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
-            @JsonKey(name: 'type')
-                PandoraType pandoraType,
             @JsonKey(name: 'scope')
                 String scope)
         album,
@@ -2719,8 +2560,6 @@ class _$ArtistAnnotation implements ArtistAnnotation {
                 bool hasCuratedModes,
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
-            @JsonKey(name: 'type')
-                PandoraType pandoraType,
             @JsonKey(name: 'scope')
                 String scope)
         genre,
@@ -2747,8 +2586,6 @@ class _$ArtistAnnotation implements ArtistAnnotation {
                 String stationFactoryId,
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
-            @JsonKey(name: 'type')
-                PandoraType pandoraType,
             @JsonKey(name: 'scope')
                 String scope)
         composer,
@@ -2771,7 +2608,6 @@ class _$ArtistAnnotation implements ArtistAnnotation {
         megastar,
         hasTakeoverModes,
         pandoraId,
-        pandoraType,
         scope);
   }
 
@@ -2815,8 +2651,6 @@ class _$ArtistAnnotation implements ArtistAnnotation {
                 String isrc,
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
-            @JsonKey(name: 'type')
-                PandoraType pandoraType,
             @JsonKey(name: 'scope')
                 String scope)?
         track,
@@ -2855,8 +2689,6 @@ class _$ArtistAnnotation implements ArtistAnnotation {
                 bool hasTakeoverModes,
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
-            @JsonKey(name: 'type')
-                PandoraType pandoraType,
             @JsonKey(name: 'scope')
                 String scope)?
         artist,
@@ -2899,8 +2731,6 @@ class _$ArtistAnnotation implements ArtistAnnotation {
                 String listenerReleaseType,
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
-            @JsonKey(name: 'type')
-                PandoraType pandoraType,
             @JsonKey(name: 'scope')
                 String scope)?
         album,
@@ -2925,8 +2755,6 @@ class _$ArtistAnnotation implements ArtistAnnotation {
                 bool hasCuratedModes,
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
-            @JsonKey(name: 'type')
-                PandoraType pandoraType,
             @JsonKey(name: 'scope')
                 String scope)?
         genre,
@@ -2953,8 +2781,6 @@ class _$ArtistAnnotation implements ArtistAnnotation {
                 String stationFactoryId,
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
-            @JsonKey(name: 'type')
-                PandoraType pandoraType,
             @JsonKey(name: 'scope')
                 String scope)?
         composer,
@@ -2977,7 +2803,6 @@ class _$ArtistAnnotation implements ArtistAnnotation {
         megastar,
         hasTakeoverModes,
         pandoraId,
-        pandoraType,
         scope);
   }
 
@@ -3021,8 +2846,6 @@ class _$ArtistAnnotation implements ArtistAnnotation {
                 String isrc,
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
-            @JsonKey(name: 'type')
-                PandoraType pandoraType,
             @JsonKey(name: 'scope')
                 String scope)?
         track,
@@ -3061,8 +2884,6 @@ class _$ArtistAnnotation implements ArtistAnnotation {
                 bool hasTakeoverModes,
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
-            @JsonKey(name: 'type')
-                PandoraType pandoraType,
             @JsonKey(name: 'scope')
                 String scope)?
         artist,
@@ -3105,8 +2926,6 @@ class _$ArtistAnnotation implements ArtistAnnotation {
                 String listenerReleaseType,
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
-            @JsonKey(name: 'type')
-                PandoraType pandoraType,
             @JsonKey(name: 'scope')
                 String scope)?
         album,
@@ -3131,8 +2950,6 @@ class _$ArtistAnnotation implements ArtistAnnotation {
                 bool hasCuratedModes,
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
-            @JsonKey(name: 'type')
-                PandoraType pandoraType,
             @JsonKey(name: 'scope')
                 String scope)?
         genre,
@@ -3159,8 +2976,6 @@ class _$ArtistAnnotation implements ArtistAnnotation {
                 String stationFactoryId,
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
-            @JsonKey(name: 'type')
-                PandoraType pandoraType,
             @JsonKey(name: 'scope')
                 String scope)?
         composer,
@@ -3185,7 +3000,6 @@ class _$ArtistAnnotation implements ArtistAnnotation {
           megastar,
           hasTakeoverModes,
           pandoraId,
-          pandoraType,
           scope);
     }
     return orElse();
@@ -3233,11 +3047,11 @@ class _$ArtistAnnotation implements ArtistAnnotation {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ArtistAnnotationToJson(this)..['type'] = 'AR';
+    return _$$ArtistAnnotationToJson(this);
   }
 }
 
-abstract class ArtistAnnotation implements MediaAnnotation {
+abstract class ArtistAnnotation extends MediaAnnotation {
   const factory ArtistAnnotation(
       {@JsonKey(name: 'name')
           required String name,
@@ -3273,66 +3087,62 @@ abstract class ArtistAnnotation implements MediaAnnotation {
           required bool hasTakeoverModes,
       @JsonKey(name: 'pandoraId')
           required String pandoraId,
-      @JsonKey(name: 'type')
-          required PandoraType pandoraType,
       @JsonKey(name: 'scope')
           required String scope}) = _$ArtistAnnotation;
+  const ArtistAnnotation._() : super._();
 
   factory ArtistAnnotation.fromJson(Map<String, dynamic> json) =
       _$ArtistAnnotation.fromJson;
 
   @override
   @JsonKey(name: 'name')
-  String get name => throw _privateConstructorUsedError;
+  String get name;
   @override
   @JsonKey(name: 'sortableName')
-  String get sortableName => throw _privateConstructorUsedError;
+  String get sortableName;
   @JsonKey(name: 'trackCount')
-  int get trackCount => throw _privateConstructorUsedError;
+  int get trackCount;
   @JsonKey(name: 'albumCount')
-  int get albumCount => throw _privateConstructorUsedError;
+  int get albumCount;
   @override
   @JsonKey(
       name: 'icon',
       fromJson: MediaIcon.optionalFromJson,
       toJson: MediaIcon.optionalToJson)
-  MediaIcon? get icon => throw _privateConstructorUsedError;
+  MediaIcon? get icon;
   @override
   @JsonKey(name: 'shareableUrlPath')
-  String get shareableUrlPath => throw _privateConstructorUsedError;
+  String get shareableUrlPath;
   @JsonKey(name: 'twitterHandle')
-  String? get twitterHandle => throw _privateConstructorUsedError;
+  String? get twitterHandle;
   @JsonKey(name: 'hasRadio')
-  bool get hasRadio => throw _privateConstructorUsedError;
+  bool get hasRadio;
   @override
   @JsonKey(
       name: 'modificationTime',
       fromJson: readDateTimeMilliseconds,
       toJson: writeDateTimeMilliseconds)
-  DateTime get modificationTime => throw _privateConstructorUsedError;
+  DateTime get modificationTime;
   @JsonKey(name: 'stationFactoryId')
-  String get stationFactoryId => throw _privateConstructorUsedError;
+  String get stationFactoryId;
   @JsonKey(name: 'slugPlusPandoraId')
-  String get slugPlusPandoraId => throw _privateConstructorUsedError;
+  String get slugPlusPandoraId;
   @JsonKey(name: 'collaboration')
-  bool get collaboration => throw _privateConstructorUsedError;
+  bool get collaboration;
   @JsonKey(name: 'primaryArtists')
-  List<String> get primaryArtistIds => throw _privateConstructorUsedError;
+  List<String> get primaryArtistIds;
   @JsonKey(name: 'variousArtist')
-  bool get variousArtist => throw _privateConstructorUsedError;
+  bool get variousArtist;
   @JsonKey(name: 'megastar')
-  bool get megastar => throw _privateConstructorUsedError;
+  bool get megastar;
   @JsonKey(name: 'hasTakeoverModes')
-  bool get hasTakeoverModes => throw _privateConstructorUsedError;
+  bool get hasTakeoverModes;
   @override
   @JsonKey(name: 'pandoraId')
-  String get pandoraId => throw _privateConstructorUsedError;
-  @override
-  @JsonKey(name: 'type')
-  PandoraType get pandoraType => throw _privateConstructorUsedError;
+  String get pandoraId;
   @override
   @JsonKey(name: 'scope')
-  String get scope => throw _privateConstructorUsedError;
+  String get scope;
   @override
   @JsonKey(ignore: true)
   $ArtistAnnotationCopyWith<ArtistAnnotation> get copyWith =>
@@ -3385,8 +3195,6 @@ abstract class $AlbumAnnotationCopyWith<$Res>
           String listenerReleaseType,
       @JsonKey(name: 'pandoraId')
           String pandoraId,
-      @JsonKey(name: 'type')
-          PandoraType pandoraType,
       @JsonKey(name: 'scope')
           String scope});
 
@@ -3427,7 +3235,6 @@ class _$AlbumAnnotationCopyWithImpl<$Res>
     Object? releaseType = freezed,
     Object? listenerReleaseType = freezed,
     Object? pandoraId = freezed,
-    Object? pandoraType = freezed,
     Object? scope = freezed,
   }) {
     return _then(AlbumAnnotation(
@@ -3507,10 +3314,6 @@ class _$AlbumAnnotationCopyWithImpl<$Res>
           ? _value.pandoraId
           : pandoraId // ignore: cast_nullable_to_non_nullable
               as String,
-      pandoraType: pandoraType == freezed
-          ? _value.pandoraType
-          : pandoraType // ignore: cast_nullable_to_non_nullable
-              as PandoraType,
       scope: scope == freezed
           ? _value.scope
           : scope // ignore: cast_nullable_to_non_nullable
@@ -3529,7 +3332,7 @@ class _$AlbumAnnotationCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 @FreezedUnionValue('AL')
-class _$AlbumAnnotation implements AlbumAnnotation {
+class _$AlbumAnnotation extends AlbumAnnotation {
   const _$AlbumAnnotation(
       {@JsonKey(name: 'name')
           required this.name,
@@ -3569,10 +3372,11 @@ class _$AlbumAnnotation implements AlbumAnnotation {
           required this.listenerReleaseType,
       @JsonKey(name: 'pandoraId')
           required this.pandoraId,
-      @JsonKey(name: 'type')
-          required this.pandoraType,
       @JsonKey(name: 'scope')
-          required this.scope});
+          required this.scope,
+      String? $type})
+      : $type = $type ?? 'AL',
+        super._();
 
   factory _$AlbumAnnotation.fromJson(Map<String, dynamic> json) =>
       _$$AlbumAnnotationFromJson(json);
@@ -3641,107 +3445,80 @@ class _$AlbumAnnotation implements AlbumAnnotation {
   @JsonKey(name: 'pandoraId')
   final String pandoraId;
   @override
-  @JsonKey(name: 'type')
-  final PandoraType pandoraType;
-  @override
   @JsonKey(name: 'scope')
   final String scope;
 
+  @JsonKey(name: 'type')
+  final String $type;
+
   @override
   String toString() {
-    return 'MediaAnnotation.album(name: $name, sortableName: $sortableName, releaseDate: $releaseDate, duration: $duration, trackCount: $trackCount, isCompilation: $isCompilation, icon: $icon, rightsInfo: $rightsInfo, trackIds: $trackIds, artistId: $artistId, artistName: $artistName, explicitness: $explicitness, shareableUrlPath: $shareableUrlPath, modificationTime: $modificationTime, slugPlusPandoraId: $slugPlusPandoraId, hasRadio: $hasRadio, releaseType: $releaseType, listenerReleaseType: $listenerReleaseType, pandoraId: $pandoraId, pandoraType: $pandoraType, scope: $scope)';
+    return 'MediaAnnotation.album(name: $name, sortableName: $sortableName, releaseDate: $releaseDate, duration: $duration, trackCount: $trackCount, isCompilation: $isCompilation, icon: $icon, rightsInfo: $rightsInfo, trackIds: $trackIds, artistId: $artistId, artistName: $artistName, explicitness: $explicitness, shareableUrlPath: $shareableUrlPath, modificationTime: $modificationTime, slugPlusPandoraId: $slugPlusPandoraId, hasRadio: $hasRadio, releaseType: $releaseType, listenerReleaseType: $listenerReleaseType, pandoraId: $pandoraId, scope: $scope)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is AlbumAnnotation &&
-            (identical(other.name, name) ||
-                const DeepCollectionEquality().equals(other.name, name)) &&
-            (identical(other.sortableName, sortableName) ||
-                const DeepCollectionEquality()
-                    .equals(other.sortableName, sortableName)) &&
-            (identical(other.releaseDate, releaseDate) ||
-                const DeepCollectionEquality()
-                    .equals(other.releaseDate, releaseDate)) &&
-            (identical(other.duration, duration) ||
-                const DeepCollectionEquality()
-                    .equals(other.duration, duration)) &&
-            (identical(other.trackCount, trackCount) ||
-                const DeepCollectionEquality()
-                    .equals(other.trackCount, trackCount)) &&
-            (identical(other.isCompilation, isCompilation) ||
-                const DeepCollectionEquality()
-                    .equals(other.isCompilation, isCompilation)) &&
-            (identical(other.icon, icon) ||
-                const DeepCollectionEquality().equals(other.icon, icon)) &&
-            (identical(other.rightsInfo, rightsInfo) ||
-                const DeepCollectionEquality()
-                    .equals(other.rightsInfo, rightsInfo)) &&
-            (identical(other.trackIds, trackIds) ||
-                const DeepCollectionEquality()
-                    .equals(other.trackIds, trackIds)) &&
-            (identical(other.artistId, artistId) ||
-                const DeepCollectionEquality()
-                    .equals(other.artistId, artistId)) &&
-            (identical(other.artistName, artistName) ||
-                const DeepCollectionEquality()
-                    .equals(other.artistName, artistName)) &&
-            (identical(other.explicitness, explicitness) ||
-                const DeepCollectionEquality()
-                    .equals(other.explicitness, explicitness)) &&
-            (identical(other.shareableUrlPath, shareableUrlPath) ||
-                const DeepCollectionEquality()
-                    .equals(other.shareableUrlPath, shareableUrlPath)) &&
-            (identical(other.modificationTime, modificationTime) ||
-                const DeepCollectionEquality()
-                    .equals(other.modificationTime, modificationTime)) &&
-            (identical(other.slugPlusPandoraId, slugPlusPandoraId) ||
-                const DeepCollectionEquality()
-                    .equals(other.slugPlusPandoraId, slugPlusPandoraId)) &&
-            (identical(other.hasRadio, hasRadio) ||
-                const DeepCollectionEquality()
-                    .equals(other.hasRadio, hasRadio)) &&
-            (identical(other.releaseType, releaseType) ||
-                const DeepCollectionEquality()
-                    .equals(other.releaseType, releaseType)) &&
-            (identical(other.listenerReleaseType, listenerReleaseType) ||
-                const DeepCollectionEquality()
-                    .equals(other.listenerReleaseType, listenerReleaseType)) &&
-            (identical(other.pandoraId, pandoraId) ||
-                const DeepCollectionEquality()
-                    .equals(other.pandoraId, pandoraId)) &&
-            (identical(other.pandoraType, pandoraType) ||
-                const DeepCollectionEquality()
-                    .equals(other.pandoraType, pandoraType)) &&
-            (identical(other.scope, scope) ||
-                const DeepCollectionEquality().equals(other.scope, scope)));
+        (other.runtimeType == runtimeType &&
+            other is AlbumAnnotation &&
+            const DeepCollectionEquality().equals(other.name, name) &&
+            const DeepCollectionEquality()
+                .equals(other.sortableName, sortableName) &&
+            const DeepCollectionEquality()
+                .equals(other.releaseDate, releaseDate) &&
+            const DeepCollectionEquality().equals(other.duration, duration) &&
+            const DeepCollectionEquality()
+                .equals(other.trackCount, trackCount) &&
+            const DeepCollectionEquality()
+                .equals(other.isCompilation, isCompilation) &&
+            const DeepCollectionEquality().equals(other.icon, icon) &&
+            const DeepCollectionEquality()
+                .equals(other.rightsInfo, rightsInfo) &&
+            const DeepCollectionEquality().equals(other.trackIds, trackIds) &&
+            const DeepCollectionEquality().equals(other.artistId, artistId) &&
+            const DeepCollectionEquality()
+                .equals(other.artistName, artistName) &&
+            const DeepCollectionEquality()
+                .equals(other.explicitness, explicitness) &&
+            const DeepCollectionEquality()
+                .equals(other.shareableUrlPath, shareableUrlPath) &&
+            const DeepCollectionEquality()
+                .equals(other.modificationTime, modificationTime) &&
+            const DeepCollectionEquality()
+                .equals(other.slugPlusPandoraId, slugPlusPandoraId) &&
+            const DeepCollectionEquality().equals(other.hasRadio, hasRadio) &&
+            const DeepCollectionEquality()
+                .equals(other.releaseType, releaseType) &&
+            const DeepCollectionEquality()
+                .equals(other.listenerReleaseType, listenerReleaseType) &&
+            const DeepCollectionEquality().equals(other.pandoraId, pandoraId) &&
+            const DeepCollectionEquality().equals(other.scope, scope));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(name) ^
-      const DeepCollectionEquality().hash(sortableName) ^
-      const DeepCollectionEquality().hash(releaseDate) ^
-      const DeepCollectionEquality().hash(duration) ^
-      const DeepCollectionEquality().hash(trackCount) ^
-      const DeepCollectionEquality().hash(isCompilation) ^
-      const DeepCollectionEquality().hash(icon) ^
-      const DeepCollectionEquality().hash(rightsInfo) ^
-      const DeepCollectionEquality().hash(trackIds) ^
-      const DeepCollectionEquality().hash(artistId) ^
-      const DeepCollectionEquality().hash(artistName) ^
-      const DeepCollectionEquality().hash(explicitness) ^
-      const DeepCollectionEquality().hash(shareableUrlPath) ^
-      const DeepCollectionEquality().hash(modificationTime) ^
-      const DeepCollectionEquality().hash(slugPlusPandoraId) ^
-      const DeepCollectionEquality().hash(hasRadio) ^
-      const DeepCollectionEquality().hash(releaseType) ^
-      const DeepCollectionEquality().hash(listenerReleaseType) ^
-      const DeepCollectionEquality().hash(pandoraId) ^
-      const DeepCollectionEquality().hash(pandoraType) ^
-      const DeepCollectionEquality().hash(scope);
+  int get hashCode => Object.hashAll([
+        runtimeType,
+        const DeepCollectionEquality().hash(name),
+        const DeepCollectionEquality().hash(sortableName),
+        const DeepCollectionEquality().hash(releaseDate),
+        const DeepCollectionEquality().hash(duration),
+        const DeepCollectionEquality().hash(trackCount),
+        const DeepCollectionEquality().hash(isCompilation),
+        const DeepCollectionEquality().hash(icon),
+        const DeepCollectionEquality().hash(rightsInfo),
+        const DeepCollectionEquality().hash(trackIds),
+        const DeepCollectionEquality().hash(artistId),
+        const DeepCollectionEquality().hash(artistName),
+        const DeepCollectionEquality().hash(explicitness),
+        const DeepCollectionEquality().hash(shareableUrlPath),
+        const DeepCollectionEquality().hash(modificationTime),
+        const DeepCollectionEquality().hash(slugPlusPandoraId),
+        const DeepCollectionEquality().hash(hasRadio),
+        const DeepCollectionEquality().hash(releaseType),
+        const DeepCollectionEquality().hash(listenerReleaseType),
+        const DeepCollectionEquality().hash(pandoraId),
+        const DeepCollectionEquality().hash(scope)
+      ]);
 
   @JsonKey(ignore: true)
   @override
@@ -3788,8 +3565,6 @@ class _$AlbumAnnotation implements AlbumAnnotation {
                 String isrc,
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
-            @JsonKey(name: 'type')
-                PandoraType pandoraType,
             @JsonKey(name: 'scope')
                 String scope)
         track,
@@ -3828,8 +3603,6 @@ class _$AlbumAnnotation implements AlbumAnnotation {
                 bool hasTakeoverModes,
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
-            @JsonKey(name: 'type')
-                PandoraType pandoraType,
             @JsonKey(name: 'scope')
                 String scope)
         artist,
@@ -3872,8 +3645,6 @@ class _$AlbumAnnotation implements AlbumAnnotation {
                 String listenerReleaseType,
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
-            @JsonKey(name: 'type')
-                PandoraType pandoraType,
             @JsonKey(name: 'scope')
                 String scope)
         album,
@@ -3898,8 +3669,6 @@ class _$AlbumAnnotation implements AlbumAnnotation {
                 bool hasCuratedModes,
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
-            @JsonKey(name: 'type')
-                PandoraType pandoraType,
             @JsonKey(name: 'scope')
                 String scope)
         genre,
@@ -3926,8 +3695,6 @@ class _$AlbumAnnotation implements AlbumAnnotation {
                 String stationFactoryId,
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
-            @JsonKey(name: 'type')
-                PandoraType pandoraType,
             @JsonKey(name: 'scope')
                 String scope)
         composer,
@@ -3952,7 +3719,6 @@ class _$AlbumAnnotation implements AlbumAnnotation {
         releaseType,
         listenerReleaseType,
         pandoraId,
-        pandoraType,
         scope);
   }
 
@@ -3996,8 +3762,6 @@ class _$AlbumAnnotation implements AlbumAnnotation {
                 String isrc,
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
-            @JsonKey(name: 'type')
-                PandoraType pandoraType,
             @JsonKey(name: 'scope')
                 String scope)?
         track,
@@ -4036,8 +3800,6 @@ class _$AlbumAnnotation implements AlbumAnnotation {
                 bool hasTakeoverModes,
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
-            @JsonKey(name: 'type')
-                PandoraType pandoraType,
             @JsonKey(name: 'scope')
                 String scope)?
         artist,
@@ -4080,8 +3842,6 @@ class _$AlbumAnnotation implements AlbumAnnotation {
                 String listenerReleaseType,
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
-            @JsonKey(name: 'type')
-                PandoraType pandoraType,
             @JsonKey(name: 'scope')
                 String scope)?
         album,
@@ -4106,8 +3866,6 @@ class _$AlbumAnnotation implements AlbumAnnotation {
                 bool hasCuratedModes,
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
-            @JsonKey(name: 'type')
-                PandoraType pandoraType,
             @JsonKey(name: 'scope')
                 String scope)?
         genre,
@@ -4134,8 +3892,6 @@ class _$AlbumAnnotation implements AlbumAnnotation {
                 String stationFactoryId,
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
-            @JsonKey(name: 'type')
-                PandoraType pandoraType,
             @JsonKey(name: 'scope')
                 String scope)?
         composer,
@@ -4160,7 +3916,6 @@ class _$AlbumAnnotation implements AlbumAnnotation {
         releaseType,
         listenerReleaseType,
         pandoraId,
-        pandoraType,
         scope);
   }
 
@@ -4204,8 +3959,6 @@ class _$AlbumAnnotation implements AlbumAnnotation {
                 String isrc,
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
-            @JsonKey(name: 'type')
-                PandoraType pandoraType,
             @JsonKey(name: 'scope')
                 String scope)?
         track,
@@ -4244,8 +3997,6 @@ class _$AlbumAnnotation implements AlbumAnnotation {
                 bool hasTakeoverModes,
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
-            @JsonKey(name: 'type')
-                PandoraType pandoraType,
             @JsonKey(name: 'scope')
                 String scope)?
         artist,
@@ -4288,8 +4039,6 @@ class _$AlbumAnnotation implements AlbumAnnotation {
                 String listenerReleaseType,
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
-            @JsonKey(name: 'type')
-                PandoraType pandoraType,
             @JsonKey(name: 'scope')
                 String scope)?
         album,
@@ -4314,8 +4063,6 @@ class _$AlbumAnnotation implements AlbumAnnotation {
                 bool hasCuratedModes,
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
-            @JsonKey(name: 'type')
-                PandoraType pandoraType,
             @JsonKey(name: 'scope')
                 String scope)?
         genre,
@@ -4342,8 +4089,6 @@ class _$AlbumAnnotation implements AlbumAnnotation {
                 String stationFactoryId,
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
-            @JsonKey(name: 'type')
-                PandoraType pandoraType,
             @JsonKey(name: 'scope')
                 String scope)?
         composer,
@@ -4370,7 +4115,6 @@ class _$AlbumAnnotation implements AlbumAnnotation {
           releaseType,
           listenerReleaseType,
           pandoraId,
-          pandoraType,
           scope);
     }
     return orElse();
@@ -4418,11 +4162,11 @@ class _$AlbumAnnotation implements AlbumAnnotation {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$AlbumAnnotationToJson(this)..['type'] = 'AL';
+    return _$$AlbumAnnotationToJson(this);
   }
 }
 
-abstract class AlbumAnnotation implements MediaAnnotation {
+abstract class AlbumAnnotation extends MediaAnnotation {
   const factory AlbumAnnotation(
       {@JsonKey(name: 'name')
           required String name,
@@ -4462,70 +4206,66 @@ abstract class AlbumAnnotation implements MediaAnnotation {
           required String listenerReleaseType,
       @JsonKey(name: 'pandoraId')
           required String pandoraId,
-      @JsonKey(name: 'type')
-          required PandoraType pandoraType,
       @JsonKey(name: 'scope')
           required String scope}) = _$AlbumAnnotation;
+  const AlbumAnnotation._() : super._();
 
   factory AlbumAnnotation.fromJson(Map<String, dynamic> json) =
       _$AlbumAnnotation.fromJson;
 
   @override
   @JsonKey(name: 'name')
-  String get name => throw _privateConstructorUsedError;
+  String get name;
   @override
   @JsonKey(name: 'sortableName')
-  String get sortableName => throw _privateConstructorUsedError;
+  String get sortableName;
   @JsonKey(name: 'releaseDate')
-  DateTime get releaseDate => throw _privateConstructorUsedError;
+  DateTime get releaseDate;
   @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
-  Duration get duration => throw _privateConstructorUsedError;
+  Duration get duration;
   @JsonKey(name: 'trackCount')
-  int get trackCount => throw _privateConstructorUsedError;
+  int get trackCount;
   @JsonKey(name: 'isCompilation')
-  bool get isCompilation => throw _privateConstructorUsedError;
+  bool get isCompilation;
   @override
   @JsonKey(
       name: 'icon',
       fromJson: MediaIcon.optionalFromJson,
       toJson: MediaIcon.optionalToJson)
-  MediaIcon? get icon => throw _privateConstructorUsedError;
+  MediaIcon? get icon;
   @JsonKey(name: 'rightsInfo')
-  RightsInfo get rightsInfo => throw _privateConstructorUsedError;
+  RightsInfo get rightsInfo;
   @JsonKey(name: 'tracks')
-  List<String> get trackIds => throw _privateConstructorUsedError;
+  List<String> get trackIds;
   @JsonKey(name: 'artistId')
-  String get artistId => throw _privateConstructorUsedError;
+  String get artistId;
   @JsonKey(name: 'artistName')
-  String get artistName => throw _privateConstructorUsedError;
+  String get artistName;
   @JsonKey(name: 'explicitness')
-  Explicitness get explicitness => throw _privateConstructorUsedError;
+  Explicitness get explicitness;
   @override
   @JsonKey(name: 'shareableUrlPath')
-  String get shareableUrlPath => throw _privateConstructorUsedError;
+  String get shareableUrlPath;
   @override
   @JsonKey(
       name: 'modificationTime',
       fromJson: readDateTimeMilliseconds,
       toJson: writeDateTimeMilliseconds)
-  DateTime get modificationTime => throw _privateConstructorUsedError;
+  DateTime get modificationTime;
   @JsonKey(name: 'slugPlusPandoraId')
-  String get slugPlusPandoraId => throw _privateConstructorUsedError;
+  String get slugPlusPandoraId;
   @JsonKey(name: 'hasRadio')
-  bool get hasRadio => throw _privateConstructorUsedError;
+  bool get hasRadio;
   @JsonKey(name: 'releaseType')
-  String get releaseType => throw _privateConstructorUsedError;
+  String get releaseType;
   @JsonKey(name: 'listenerReleaseType')
-  String get listenerReleaseType => throw _privateConstructorUsedError;
+  String get listenerReleaseType;
   @override
   @JsonKey(name: 'pandoraId')
-  String get pandoraId => throw _privateConstructorUsedError;
-  @override
-  @JsonKey(name: 'type')
-  PandoraType get pandoraType => throw _privateConstructorUsedError;
+  String get pandoraId;
   @override
   @JsonKey(name: 'scope')
-  String get scope => throw _privateConstructorUsedError;
+  String get scope;
   @override
   @JsonKey(ignore: true)
   $AlbumAnnotationCopyWith<AlbumAnnotation> get copyWith =>
@@ -4560,8 +4300,6 @@ abstract class $GenreAnnotationCopyWith<$Res>
           bool hasCuratedModes,
       @JsonKey(name: 'pandoraId')
           String pandoraId,
-      @JsonKey(name: 'type')
-          PandoraType pandoraType,
       @JsonKey(name: 'scope')
           String scope});
 
@@ -4592,7 +4330,6 @@ class _$GenreAnnotationCopyWithImpl<$Res>
     Object? hasTakeoverModes = freezed,
     Object? hasCuratedModes = freezed,
     Object? pandoraId = freezed,
-    Object? pandoraType = freezed,
     Object? scope = freezed,
   }) {
     return _then(GenreAnnotation(
@@ -4636,10 +4373,6 @@ class _$GenreAnnotationCopyWithImpl<$Res>
           ? _value.pandoraId
           : pandoraId // ignore: cast_nullable_to_non_nullable
               as String,
-      pandoraType: pandoraType == freezed
-          ? _value.pandoraType
-          : pandoraType // ignore: cast_nullable_to_non_nullable
-              as PandoraType,
       scope: scope == freezed
           ? _value.scope
           : scope // ignore: cast_nullable_to_non_nullable
@@ -4651,7 +4384,7 @@ class _$GenreAnnotationCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 @FreezedUnionValue('GE')
-class _$GenreAnnotation implements GenreAnnotation {
+class _$GenreAnnotation extends GenreAnnotation {
   const _$GenreAnnotation(
       {@JsonKey(name: 'name')
           required this.name,
@@ -4673,10 +4406,11 @@ class _$GenreAnnotation implements GenreAnnotation {
           required this.hasCuratedModes,
       @JsonKey(name: 'pandoraId')
           required this.pandoraId,
-      @JsonKey(name: 'type')
-          required this.pandoraType,
       @JsonKey(name: 'scope')
-          required this.scope});
+          required this.scope,
+      String? $type})
+      : $type = $type ?? 'GE',
+        super._();
 
   factory _$GenreAnnotation.fromJson(Map<String, dynamic> json) =>
       _$$GenreAnnotationFromJson(json);
@@ -4718,71 +4452,56 @@ class _$GenreAnnotation implements GenreAnnotation {
   @JsonKey(name: 'pandoraId')
   final String pandoraId;
   @override
-  @JsonKey(name: 'type')
-  final PandoraType pandoraType;
-  @override
   @JsonKey(name: 'scope')
   final String scope;
 
+  @JsonKey(name: 'type')
+  final String $type;
+
   @override
   String toString() {
-    return 'MediaAnnotation.genre(name: $name, sortableName: $sortableName, icon: $icon, modificationTime: $modificationTime, description: $description, stationListenerCount: $stationListenerCount, shareableUrlPath: $shareableUrlPath, hasTakeoverModes: $hasTakeoverModes, hasCuratedModes: $hasCuratedModes, pandoraId: $pandoraId, pandoraType: $pandoraType, scope: $scope)';
+    return 'MediaAnnotation.genre(name: $name, sortableName: $sortableName, icon: $icon, modificationTime: $modificationTime, description: $description, stationListenerCount: $stationListenerCount, shareableUrlPath: $shareableUrlPath, hasTakeoverModes: $hasTakeoverModes, hasCuratedModes: $hasCuratedModes, pandoraId: $pandoraId, scope: $scope)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is GenreAnnotation &&
-            (identical(other.name, name) ||
-                const DeepCollectionEquality().equals(other.name, name)) &&
-            (identical(other.sortableName, sortableName) ||
-                const DeepCollectionEquality()
-                    .equals(other.sortableName, sortableName)) &&
-            (identical(other.icon, icon) ||
-                const DeepCollectionEquality().equals(other.icon, icon)) &&
-            (identical(other.modificationTime, modificationTime) ||
-                const DeepCollectionEquality()
-                    .equals(other.modificationTime, modificationTime)) &&
-            (identical(other.description, description) ||
-                const DeepCollectionEquality()
-                    .equals(other.description, description)) &&
-            (identical(other.stationListenerCount, stationListenerCount) ||
-                const DeepCollectionEquality().equals(
-                    other.stationListenerCount, stationListenerCount)) &&
-            (identical(other.shareableUrlPath, shareableUrlPath) ||
-                const DeepCollectionEquality()
-                    .equals(other.shareableUrlPath, shareableUrlPath)) &&
-            (identical(other.hasTakeoverModes, hasTakeoverModes) ||
-                const DeepCollectionEquality()
-                    .equals(other.hasTakeoverModes, hasTakeoverModes)) &&
-            (identical(other.hasCuratedModes, hasCuratedModes) ||
-                const DeepCollectionEquality()
-                    .equals(other.hasCuratedModes, hasCuratedModes)) &&
-            (identical(other.pandoraId, pandoraId) ||
-                const DeepCollectionEquality()
-                    .equals(other.pandoraId, pandoraId)) &&
-            (identical(other.pandoraType, pandoraType) ||
-                const DeepCollectionEquality()
-                    .equals(other.pandoraType, pandoraType)) &&
-            (identical(other.scope, scope) ||
-                const DeepCollectionEquality().equals(other.scope, scope)));
+        (other.runtimeType == runtimeType &&
+            other is GenreAnnotation &&
+            const DeepCollectionEquality().equals(other.name, name) &&
+            const DeepCollectionEquality()
+                .equals(other.sortableName, sortableName) &&
+            const DeepCollectionEquality().equals(other.icon, icon) &&
+            const DeepCollectionEquality()
+                .equals(other.modificationTime, modificationTime) &&
+            const DeepCollectionEquality()
+                .equals(other.description, description) &&
+            const DeepCollectionEquality()
+                .equals(other.stationListenerCount, stationListenerCount) &&
+            const DeepCollectionEquality()
+                .equals(other.shareableUrlPath, shareableUrlPath) &&
+            const DeepCollectionEquality()
+                .equals(other.hasTakeoverModes, hasTakeoverModes) &&
+            const DeepCollectionEquality()
+                .equals(other.hasCuratedModes, hasCuratedModes) &&
+            const DeepCollectionEquality().equals(other.pandoraId, pandoraId) &&
+            const DeepCollectionEquality().equals(other.scope, scope));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(name) ^
-      const DeepCollectionEquality().hash(sortableName) ^
-      const DeepCollectionEquality().hash(icon) ^
-      const DeepCollectionEquality().hash(modificationTime) ^
-      const DeepCollectionEquality().hash(description) ^
-      const DeepCollectionEquality().hash(stationListenerCount) ^
-      const DeepCollectionEquality().hash(shareableUrlPath) ^
-      const DeepCollectionEquality().hash(hasTakeoverModes) ^
-      const DeepCollectionEquality().hash(hasCuratedModes) ^
-      const DeepCollectionEquality().hash(pandoraId) ^
-      const DeepCollectionEquality().hash(pandoraType) ^
-      const DeepCollectionEquality().hash(scope);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(name),
+      const DeepCollectionEquality().hash(sortableName),
+      const DeepCollectionEquality().hash(icon),
+      const DeepCollectionEquality().hash(modificationTime),
+      const DeepCollectionEquality().hash(description),
+      const DeepCollectionEquality().hash(stationListenerCount),
+      const DeepCollectionEquality().hash(shareableUrlPath),
+      const DeepCollectionEquality().hash(hasTakeoverModes),
+      const DeepCollectionEquality().hash(hasCuratedModes),
+      const DeepCollectionEquality().hash(pandoraId),
+      const DeepCollectionEquality().hash(scope));
 
   @JsonKey(ignore: true)
   @override
@@ -4829,8 +4548,6 @@ class _$GenreAnnotation implements GenreAnnotation {
                 String isrc,
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
-            @JsonKey(name: 'type')
-                PandoraType pandoraType,
             @JsonKey(name: 'scope')
                 String scope)
         track,
@@ -4869,8 +4586,6 @@ class _$GenreAnnotation implements GenreAnnotation {
                 bool hasTakeoverModes,
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
-            @JsonKey(name: 'type')
-                PandoraType pandoraType,
             @JsonKey(name: 'scope')
                 String scope)
         artist,
@@ -4913,8 +4628,6 @@ class _$GenreAnnotation implements GenreAnnotation {
                 String listenerReleaseType,
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
-            @JsonKey(name: 'type')
-                PandoraType pandoraType,
             @JsonKey(name: 'scope')
                 String scope)
         album,
@@ -4939,8 +4652,6 @@ class _$GenreAnnotation implements GenreAnnotation {
                 bool hasCuratedModes,
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
-            @JsonKey(name: 'type')
-                PandoraType pandoraType,
             @JsonKey(name: 'scope')
                 String scope)
         genre,
@@ -4967,8 +4678,6 @@ class _$GenreAnnotation implements GenreAnnotation {
                 String stationFactoryId,
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
-            @JsonKey(name: 'type')
-                PandoraType pandoraType,
             @JsonKey(name: 'scope')
                 String scope)
         composer,
@@ -4984,7 +4693,6 @@ class _$GenreAnnotation implements GenreAnnotation {
         hasTakeoverModes,
         hasCuratedModes,
         pandoraId,
-        pandoraType,
         scope);
   }
 
@@ -5028,8 +4736,6 @@ class _$GenreAnnotation implements GenreAnnotation {
                 String isrc,
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
-            @JsonKey(name: 'type')
-                PandoraType pandoraType,
             @JsonKey(name: 'scope')
                 String scope)?
         track,
@@ -5068,8 +4774,6 @@ class _$GenreAnnotation implements GenreAnnotation {
                 bool hasTakeoverModes,
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
-            @JsonKey(name: 'type')
-                PandoraType pandoraType,
             @JsonKey(name: 'scope')
                 String scope)?
         artist,
@@ -5112,8 +4816,6 @@ class _$GenreAnnotation implements GenreAnnotation {
                 String listenerReleaseType,
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
-            @JsonKey(name: 'type')
-                PandoraType pandoraType,
             @JsonKey(name: 'scope')
                 String scope)?
         album,
@@ -5138,8 +4840,6 @@ class _$GenreAnnotation implements GenreAnnotation {
                 bool hasCuratedModes,
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
-            @JsonKey(name: 'type')
-                PandoraType pandoraType,
             @JsonKey(name: 'scope')
                 String scope)?
         genre,
@@ -5166,8 +4866,6 @@ class _$GenreAnnotation implements GenreAnnotation {
                 String stationFactoryId,
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
-            @JsonKey(name: 'type')
-                PandoraType pandoraType,
             @JsonKey(name: 'scope')
                 String scope)?
         composer,
@@ -5183,7 +4881,6 @@ class _$GenreAnnotation implements GenreAnnotation {
         hasTakeoverModes,
         hasCuratedModes,
         pandoraId,
-        pandoraType,
         scope);
   }
 
@@ -5227,8 +4924,6 @@ class _$GenreAnnotation implements GenreAnnotation {
                 String isrc,
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
-            @JsonKey(name: 'type')
-                PandoraType pandoraType,
             @JsonKey(name: 'scope')
                 String scope)?
         track,
@@ -5267,8 +4962,6 @@ class _$GenreAnnotation implements GenreAnnotation {
                 bool hasTakeoverModes,
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
-            @JsonKey(name: 'type')
-                PandoraType pandoraType,
             @JsonKey(name: 'scope')
                 String scope)?
         artist,
@@ -5311,8 +5004,6 @@ class _$GenreAnnotation implements GenreAnnotation {
                 String listenerReleaseType,
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
-            @JsonKey(name: 'type')
-                PandoraType pandoraType,
             @JsonKey(name: 'scope')
                 String scope)?
         album,
@@ -5337,8 +5028,6 @@ class _$GenreAnnotation implements GenreAnnotation {
                 bool hasCuratedModes,
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
-            @JsonKey(name: 'type')
-                PandoraType pandoraType,
             @JsonKey(name: 'scope')
                 String scope)?
         genre,
@@ -5365,8 +5054,6 @@ class _$GenreAnnotation implements GenreAnnotation {
                 String stationFactoryId,
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
-            @JsonKey(name: 'type')
-                PandoraType pandoraType,
             @JsonKey(name: 'scope')
                 String scope)?
         composer,
@@ -5384,7 +5071,6 @@ class _$GenreAnnotation implements GenreAnnotation {
           hasTakeoverModes,
           hasCuratedModes,
           pandoraId,
-          pandoraType,
           scope);
     }
     return orElse();
@@ -5432,11 +5118,11 @@ class _$GenreAnnotation implements GenreAnnotation {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$GenreAnnotationToJson(this)..['type'] = 'GE';
+    return _$$GenreAnnotationToJson(this);
   }
 }
 
-abstract class GenreAnnotation implements MediaAnnotation {
+abstract class GenreAnnotation extends MediaAnnotation {
   const factory GenreAnnotation(
       {@JsonKey(name: 'name')
           required String name,
@@ -5458,53 +5144,48 @@ abstract class GenreAnnotation implements MediaAnnotation {
           required bool hasCuratedModes,
       @JsonKey(name: 'pandoraId')
           required String pandoraId,
-      @JsonKey(name: 'type')
-          required PandoraType pandoraType,
       @JsonKey(name: 'scope')
           required String scope}) = _$GenreAnnotation;
+  const GenreAnnotation._() : super._();
 
   factory GenreAnnotation.fromJson(Map<String, dynamic> json) =
       _$GenreAnnotation.fromJson;
 
   @override
   @JsonKey(name: 'name')
-  String get name => throw _privateConstructorUsedError;
+  String get name;
   @override
   @JsonKey(name: 'sortableName')
-  String get sortableName => throw _privateConstructorUsedError;
+  String get sortableName;
   @override
   @JsonKey(
       name: 'icon',
       fromJson: MediaIcon.optionalFromJson,
       toJson: MediaIcon.optionalToJson)
-  MediaIcon? get icon => throw _privateConstructorUsedError;
+  MediaIcon? get icon;
   @override
   @JsonKey(
       name: 'modificationTime',
       fromJson: readDateTimeMilliseconds,
       toJson: writeDateTimeMilliseconds)
-  DateTime get modificationTime => throw _privateConstructorUsedError;
+  DateTime get modificationTime;
   @JsonKey(name: 'description')
-  String get description => throw _privateConstructorUsedError;
+  String get description;
   @JsonKey(name: 'stationListenerCount')
-  int get stationListenerCount => throw _privateConstructorUsedError;
+  int get stationListenerCount;
   @override
   @JsonKey(name: 'shareableUrlPath')
-  String get shareableUrlPath =>
-      throw _privateConstructorUsedError; // TODO work out exclusivityGroups list type
+  String get shareableUrlPath; // TODO work out exclusivityGroups list type
   @JsonKey(name: 'hasTakeoverModes')
-  bool get hasTakeoverModes => throw _privateConstructorUsedError;
+  bool get hasTakeoverModes;
   @JsonKey(name: 'hasCuratedModes')
-  bool get hasCuratedModes => throw _privateConstructorUsedError;
+  bool get hasCuratedModes;
   @override
   @JsonKey(name: 'pandoraId')
-  String get pandoraId => throw _privateConstructorUsedError;
-  @override
-  @JsonKey(name: 'type')
-  PandoraType get pandoraType => throw _privateConstructorUsedError;
+  String get pandoraId;
   @override
   @JsonKey(name: 'scope')
-  String get scope => throw _privateConstructorUsedError;
+  String get scope;
   @override
   @JsonKey(ignore: true)
   $GenreAnnotationCopyWith<GenreAnnotation> get copyWith =>
@@ -5541,8 +5222,6 @@ abstract class $ComposerAnnotationCopyWith<$Res>
           String stationFactoryId,
       @JsonKey(name: 'pandoraId')
           String pandoraId,
-      @JsonKey(name: 'type')
-          PandoraType pandoraType,
       @JsonKey(name: 'scope')
           String scope});
 
@@ -5574,7 +5253,6 @@ class _$ComposerAnnotationCopyWithImpl<$Res>
     Object? slugPlusPandoraId = freezed,
     Object? stationFactoryId = freezed,
     Object? pandoraId = freezed,
-    Object? pandoraType = freezed,
     Object? scope = freezed,
   }) {
     return _then(ComposerAnnotation(
@@ -5622,10 +5300,6 @@ class _$ComposerAnnotationCopyWithImpl<$Res>
           ? _value.pandoraId
           : pandoraId // ignore: cast_nullable_to_non_nullable
               as String,
-      pandoraType: pandoraType == freezed
-          ? _value.pandoraType
-          : pandoraType // ignore: cast_nullable_to_non_nullable
-              as PandoraType,
       scope: scope == freezed
           ? _value.scope
           : scope // ignore: cast_nullable_to_non_nullable
@@ -5637,7 +5311,7 @@ class _$ComposerAnnotationCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 @FreezedUnionValue('CO')
-class _$ComposerAnnotation implements ComposerAnnotation {
+class _$ComposerAnnotation extends ComposerAnnotation {
   const _$ComposerAnnotation(
       {@JsonKey(name: 'name')
           required this.name,
@@ -5661,10 +5335,11 @@ class _$ComposerAnnotation implements ComposerAnnotation {
           required this.stationFactoryId,
       @JsonKey(name: 'pandoraId')
           required this.pandoraId,
-      @JsonKey(name: 'type')
-          required this.pandoraType,
       @JsonKey(name: 'scope')
-          required this.scope});
+          required this.scope,
+      String? $type})
+      : $type = $type ?? 'CO',
+        super._();
 
   factory _$ComposerAnnotation.fromJson(Map<String, dynamic> json) =>
       _$$ComposerAnnotationFromJson(json);
@@ -5709,75 +5384,58 @@ class _$ComposerAnnotation implements ComposerAnnotation {
   @JsonKey(name: 'pandoraId')
   final String pandoraId;
   @override
-  @JsonKey(name: 'type')
-  final PandoraType pandoraType;
-  @override
   @JsonKey(name: 'scope')
   final String scope;
 
+  @JsonKey(name: 'type')
+  final String $type;
+
   @override
   String toString() {
-    return 'MediaAnnotation.composer(name: $name, sortableName: $sortableName, icon: $icon, hasRadio: $hasRadio, albumCount: $albumCount, trackCount: $trackCount, shareableUrlPath: $shareableUrlPath, modificationTime: $modificationTime, slugPlusPandoraId: $slugPlusPandoraId, stationFactoryId: $stationFactoryId, pandoraId: $pandoraId, pandoraType: $pandoraType, scope: $scope)';
+    return 'MediaAnnotation.composer(name: $name, sortableName: $sortableName, icon: $icon, hasRadio: $hasRadio, albumCount: $albumCount, trackCount: $trackCount, shareableUrlPath: $shareableUrlPath, modificationTime: $modificationTime, slugPlusPandoraId: $slugPlusPandoraId, stationFactoryId: $stationFactoryId, pandoraId: $pandoraId, scope: $scope)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is ComposerAnnotation &&
-            (identical(other.name, name) ||
-                const DeepCollectionEquality().equals(other.name, name)) &&
-            (identical(other.sortableName, sortableName) ||
-                const DeepCollectionEquality()
-                    .equals(other.sortableName, sortableName)) &&
-            (identical(other.icon, icon) ||
-                const DeepCollectionEquality().equals(other.icon, icon)) &&
-            (identical(other.hasRadio, hasRadio) ||
-                const DeepCollectionEquality()
-                    .equals(other.hasRadio, hasRadio)) &&
-            (identical(other.albumCount, albumCount) ||
-                const DeepCollectionEquality()
-                    .equals(other.albumCount, albumCount)) &&
-            (identical(other.trackCount, trackCount) ||
-                const DeepCollectionEquality()
-                    .equals(other.trackCount, trackCount)) &&
-            (identical(other.shareableUrlPath, shareableUrlPath) ||
-                const DeepCollectionEquality()
-                    .equals(other.shareableUrlPath, shareableUrlPath)) &&
-            (identical(other.modificationTime, modificationTime) ||
-                const DeepCollectionEquality()
-                    .equals(other.modificationTime, modificationTime)) &&
-            (identical(other.slugPlusPandoraId, slugPlusPandoraId) ||
-                const DeepCollectionEquality()
-                    .equals(other.slugPlusPandoraId, slugPlusPandoraId)) &&
-            (identical(other.stationFactoryId, stationFactoryId) ||
-                const DeepCollectionEquality()
-                    .equals(other.stationFactoryId, stationFactoryId)) &&
-            (identical(other.pandoraId, pandoraId) ||
-                const DeepCollectionEquality()
-                    .equals(other.pandoraId, pandoraId)) &&
-            (identical(other.pandoraType, pandoraType) ||
-                const DeepCollectionEquality()
-                    .equals(other.pandoraType, pandoraType)) &&
-            (identical(other.scope, scope) ||
-                const DeepCollectionEquality().equals(other.scope, scope)));
+        (other.runtimeType == runtimeType &&
+            other is ComposerAnnotation &&
+            const DeepCollectionEquality().equals(other.name, name) &&
+            const DeepCollectionEquality()
+                .equals(other.sortableName, sortableName) &&
+            const DeepCollectionEquality().equals(other.icon, icon) &&
+            const DeepCollectionEquality().equals(other.hasRadio, hasRadio) &&
+            const DeepCollectionEquality()
+                .equals(other.albumCount, albumCount) &&
+            const DeepCollectionEquality()
+                .equals(other.trackCount, trackCount) &&
+            const DeepCollectionEquality()
+                .equals(other.shareableUrlPath, shareableUrlPath) &&
+            const DeepCollectionEquality()
+                .equals(other.modificationTime, modificationTime) &&
+            const DeepCollectionEquality()
+                .equals(other.slugPlusPandoraId, slugPlusPandoraId) &&
+            const DeepCollectionEquality()
+                .equals(other.stationFactoryId, stationFactoryId) &&
+            const DeepCollectionEquality().equals(other.pandoraId, pandoraId) &&
+            const DeepCollectionEquality().equals(other.scope, scope));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(name) ^
-      const DeepCollectionEquality().hash(sortableName) ^
-      const DeepCollectionEquality().hash(icon) ^
-      const DeepCollectionEquality().hash(hasRadio) ^
-      const DeepCollectionEquality().hash(albumCount) ^
-      const DeepCollectionEquality().hash(trackCount) ^
-      const DeepCollectionEquality().hash(shareableUrlPath) ^
-      const DeepCollectionEquality().hash(modificationTime) ^
-      const DeepCollectionEquality().hash(slugPlusPandoraId) ^
-      const DeepCollectionEquality().hash(stationFactoryId) ^
-      const DeepCollectionEquality().hash(pandoraId) ^
-      const DeepCollectionEquality().hash(pandoraType) ^
-      const DeepCollectionEquality().hash(scope);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(name),
+      const DeepCollectionEquality().hash(sortableName),
+      const DeepCollectionEquality().hash(icon),
+      const DeepCollectionEquality().hash(hasRadio),
+      const DeepCollectionEquality().hash(albumCount),
+      const DeepCollectionEquality().hash(trackCount),
+      const DeepCollectionEquality().hash(shareableUrlPath),
+      const DeepCollectionEquality().hash(modificationTime),
+      const DeepCollectionEquality().hash(slugPlusPandoraId),
+      const DeepCollectionEquality().hash(stationFactoryId),
+      const DeepCollectionEquality().hash(pandoraId),
+      const DeepCollectionEquality().hash(scope));
 
   @JsonKey(ignore: true)
   @override
@@ -5824,8 +5482,6 @@ class _$ComposerAnnotation implements ComposerAnnotation {
                 String isrc,
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
-            @JsonKey(name: 'type')
-                PandoraType pandoraType,
             @JsonKey(name: 'scope')
                 String scope)
         track,
@@ -5864,8 +5520,6 @@ class _$ComposerAnnotation implements ComposerAnnotation {
                 bool hasTakeoverModes,
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
-            @JsonKey(name: 'type')
-                PandoraType pandoraType,
             @JsonKey(name: 'scope')
                 String scope)
         artist,
@@ -5908,8 +5562,6 @@ class _$ComposerAnnotation implements ComposerAnnotation {
                 String listenerReleaseType,
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
-            @JsonKey(name: 'type')
-                PandoraType pandoraType,
             @JsonKey(name: 'scope')
                 String scope)
         album,
@@ -5934,8 +5586,6 @@ class _$ComposerAnnotation implements ComposerAnnotation {
                 bool hasCuratedModes,
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
-            @JsonKey(name: 'type')
-                PandoraType pandoraType,
             @JsonKey(name: 'scope')
                 String scope)
         genre,
@@ -5962,8 +5612,6 @@ class _$ComposerAnnotation implements ComposerAnnotation {
                 String stationFactoryId,
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
-            @JsonKey(name: 'type')
-                PandoraType pandoraType,
             @JsonKey(name: 'scope')
                 String scope)
         composer,
@@ -5980,7 +5628,6 @@ class _$ComposerAnnotation implements ComposerAnnotation {
         slugPlusPandoraId,
         stationFactoryId,
         pandoraId,
-        pandoraType,
         scope);
   }
 
@@ -6024,8 +5671,6 @@ class _$ComposerAnnotation implements ComposerAnnotation {
                 String isrc,
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
-            @JsonKey(name: 'type')
-                PandoraType pandoraType,
             @JsonKey(name: 'scope')
                 String scope)?
         track,
@@ -6064,8 +5709,6 @@ class _$ComposerAnnotation implements ComposerAnnotation {
                 bool hasTakeoverModes,
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
-            @JsonKey(name: 'type')
-                PandoraType pandoraType,
             @JsonKey(name: 'scope')
                 String scope)?
         artist,
@@ -6108,8 +5751,6 @@ class _$ComposerAnnotation implements ComposerAnnotation {
                 String listenerReleaseType,
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
-            @JsonKey(name: 'type')
-                PandoraType pandoraType,
             @JsonKey(name: 'scope')
                 String scope)?
         album,
@@ -6134,8 +5775,6 @@ class _$ComposerAnnotation implements ComposerAnnotation {
                 bool hasCuratedModes,
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
-            @JsonKey(name: 'type')
-                PandoraType pandoraType,
             @JsonKey(name: 'scope')
                 String scope)?
         genre,
@@ -6162,8 +5801,6 @@ class _$ComposerAnnotation implements ComposerAnnotation {
                 String stationFactoryId,
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
-            @JsonKey(name: 'type')
-                PandoraType pandoraType,
             @JsonKey(name: 'scope')
                 String scope)?
         composer,
@@ -6180,7 +5817,6 @@ class _$ComposerAnnotation implements ComposerAnnotation {
         slugPlusPandoraId,
         stationFactoryId,
         pandoraId,
-        pandoraType,
         scope);
   }
 
@@ -6224,8 +5860,6 @@ class _$ComposerAnnotation implements ComposerAnnotation {
                 String isrc,
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
-            @JsonKey(name: 'type')
-                PandoraType pandoraType,
             @JsonKey(name: 'scope')
                 String scope)?
         track,
@@ -6264,8 +5898,6 @@ class _$ComposerAnnotation implements ComposerAnnotation {
                 bool hasTakeoverModes,
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
-            @JsonKey(name: 'type')
-                PandoraType pandoraType,
             @JsonKey(name: 'scope')
                 String scope)?
         artist,
@@ -6308,8 +5940,6 @@ class _$ComposerAnnotation implements ComposerAnnotation {
                 String listenerReleaseType,
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
-            @JsonKey(name: 'type')
-                PandoraType pandoraType,
             @JsonKey(name: 'scope')
                 String scope)?
         album,
@@ -6334,8 +5964,6 @@ class _$ComposerAnnotation implements ComposerAnnotation {
                 bool hasCuratedModes,
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
-            @JsonKey(name: 'type')
-                PandoraType pandoraType,
             @JsonKey(name: 'scope')
                 String scope)?
         genre,
@@ -6362,8 +5990,6 @@ class _$ComposerAnnotation implements ComposerAnnotation {
                 String stationFactoryId,
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
-            @JsonKey(name: 'type')
-                PandoraType pandoraType,
             @JsonKey(name: 'scope')
                 String scope)?
         composer,
@@ -6382,7 +6008,6 @@ class _$ComposerAnnotation implements ComposerAnnotation {
           slugPlusPandoraId,
           stationFactoryId,
           pandoraId,
-          pandoraType,
           scope);
     }
     return orElse();
@@ -6430,11 +6055,11 @@ class _$ComposerAnnotation implements ComposerAnnotation {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ComposerAnnotationToJson(this)..['type'] = 'CO';
+    return _$$ComposerAnnotationToJson(this);
   }
 }
 
-abstract class ComposerAnnotation implements MediaAnnotation {
+abstract class ComposerAnnotation extends MediaAnnotation {
   const factory ComposerAnnotation(
       {@JsonKey(name: 'name')
           required String name,
@@ -6458,54 +6083,50 @@ abstract class ComposerAnnotation implements MediaAnnotation {
           required String stationFactoryId,
       @JsonKey(name: 'pandoraId')
           required String pandoraId,
-      @JsonKey(name: 'type')
-          required PandoraType pandoraType,
       @JsonKey(name: 'scope')
           required String scope}) = _$ComposerAnnotation;
+  const ComposerAnnotation._() : super._();
 
   factory ComposerAnnotation.fromJson(Map<String, dynamic> json) =
       _$ComposerAnnotation.fromJson;
 
   @override
   @JsonKey(name: 'name')
-  String get name => throw _privateConstructorUsedError;
+  String get name;
   @override
   @JsonKey(name: 'sortableName')
-  String get sortableName => throw _privateConstructorUsedError;
+  String get sortableName;
   @override
   @JsonKey(
       name: 'icon',
       fromJson: MediaIcon.optionalFromJson,
       toJson: MediaIcon.optionalToJson)
-  MediaIcon? get icon => throw _privateConstructorUsedError;
+  MediaIcon? get icon;
   @JsonKey(name: 'hasRadio')
-  bool get hasRadio => throw _privateConstructorUsedError;
+  bool get hasRadio;
   @JsonKey(name: 'albumCount')
-  int get albumCount => throw _privateConstructorUsedError;
+  int get albumCount;
   @JsonKey(name: 'trackCount')
-  int get trackCount => throw _privateConstructorUsedError;
+  int get trackCount;
   @override
   @JsonKey(name: 'shareableUrlPath')
-  String get shareableUrlPath => throw _privateConstructorUsedError;
+  String get shareableUrlPath;
   @override
   @JsonKey(
       name: 'modificationTime',
       fromJson: readDateTimeMilliseconds,
       toJson: writeDateTimeMilliseconds)
-  DateTime get modificationTime => throw _privateConstructorUsedError;
+  DateTime get modificationTime;
   @JsonKey(name: 'slugPlusPandoraId')
-  String get slugPlusPandoraId => throw _privateConstructorUsedError;
+  String get slugPlusPandoraId;
   @JsonKey(name: 'stationFactoryId')
-  String get stationFactoryId => throw _privateConstructorUsedError;
+  String get stationFactoryId;
   @override
   @JsonKey(name: 'pandoraId')
-  String get pandoraId => throw _privateConstructorUsedError;
-  @override
-  @JsonKey(name: 'type')
-  PandoraType get pandoraType => throw _privateConstructorUsedError;
+  String get pandoraId;
   @override
   @JsonKey(name: 'scope')
-  String get scope => throw _privateConstructorUsedError;
+  String get scope;
   @override
   @JsonKey(ignore: true)
   $ComposerAnnotationCopyWith<ComposerAnnotation> get copyWith =>

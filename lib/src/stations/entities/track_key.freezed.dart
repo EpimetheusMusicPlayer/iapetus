@@ -1,5 +1,6 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'track_key.dart';
@@ -34,7 +35,7 @@ class _$TrackKeyTearOff {
     );
   }
 
-  TrackKey fromJson(Map<String, Object> json) {
+  TrackKey fromJson(Map<String, Object?> json) {
     return TrackKey.fromJson(json);
   }
 }
@@ -188,27 +189,22 @@ class _$_TrackKey implements _TrackKey {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _TrackKey &&
-            (identical(other.trackId, trackId) ||
-                const DeepCollectionEquality()
-                    .equals(other.trackId, trackId)) &&
-            (identical(other.trackType, trackType) ||
-                const DeepCollectionEquality()
-                    .equals(other.trackType, trackType)) &&
-            (identical(other.trackSubtype, trackSubtype) ||
-                const DeepCollectionEquality()
-                    .equals(other.trackSubtype, trackSubtype)) &&
-            (identical(other.spinId, spinId) ||
-                const DeepCollectionEquality().equals(other.spinId, spinId)));
+        (other.runtimeType == runtimeType &&
+            other is _TrackKey &&
+            const DeepCollectionEquality().equals(other.trackId, trackId) &&
+            const DeepCollectionEquality().equals(other.trackType, trackType) &&
+            const DeepCollectionEquality()
+                .equals(other.trackSubtype, trackSubtype) &&
+            const DeepCollectionEquality().equals(other.spinId, spinId));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(trackId) ^
-      const DeepCollectionEquality().hash(trackType) ^
-      const DeepCollectionEquality().hash(trackSubtype) ^
-      const DeepCollectionEquality().hash(spinId);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(trackId),
+      const DeepCollectionEquality().hash(trackType),
+      const DeepCollectionEquality().hash(trackSubtype),
+      const DeepCollectionEquality().hash(spinId));
 
   @JsonKey(ignore: true)
   @override
@@ -232,16 +228,16 @@ abstract class _TrackKey implements TrackKey {
 
   @override
   @JsonKey(name: 'trackId')
-  String get trackId => throw _privateConstructorUsedError;
+  String get trackId;
   @override
   @JsonKey(name: 'trackType')
-  TrackType get trackType => throw _privateConstructorUsedError;
+  TrackType get trackType;
   @override
   @JsonKey(name: 'trackSubtype')
-  String get trackSubtype => throw _privateConstructorUsedError;
+  String get trackSubtype;
   @override
   @JsonKey(name: 'spinId')
-  String get spinId => throw _privateConstructorUsedError;
+  String get spinId;
   @override
   @JsonKey(ignore: true)
   _$TrackKeyCopyWith<_TrackKey> get copyWith =>

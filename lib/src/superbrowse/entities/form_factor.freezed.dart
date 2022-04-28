@@ -1,5 +1,6 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'form_factor.dart';
@@ -32,7 +33,7 @@ class _$FormFactorTearOff {
     );
   }
 
-  FormFactor fromJson(Map<String, Object> json) {
+  FormFactor fromJson(Map<String, Object?> json) {
     return FormFactor.fromJson(json);
   }
 }
@@ -171,24 +172,21 @@ class _$_FormFactor implements _FormFactor {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _FormFactor &&
-            (identical(other.rowCount, rowCount) ||
-                const DeepCollectionEquality()
-                    .equals(other.rowCount, rowCount)) &&
-            (identical(other.columnCount, columnCount) ||
-                const DeepCollectionEquality()
-                    .equals(other.columnCount, columnCount)) &&
-            (identical(other.fractionSize, fractionSize) ||
-                const DeepCollectionEquality()
-                    .equals(other.fractionSize, fractionSize)));
+        (other.runtimeType == runtimeType &&
+            other is _FormFactor &&
+            const DeepCollectionEquality().equals(other.rowCount, rowCount) &&
+            const DeepCollectionEquality()
+                .equals(other.columnCount, columnCount) &&
+            const DeepCollectionEquality()
+                .equals(other.fractionSize, fractionSize));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(rowCount) ^
-      const DeepCollectionEquality().hash(columnCount) ^
-      const DeepCollectionEquality().hash(fractionSize);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(rowCount),
+      const DeepCollectionEquality().hash(columnCount),
+      const DeepCollectionEquality().hash(fractionSize));
 
   @JsonKey(ignore: true)
   @override
@@ -212,13 +210,13 @@ abstract class _FormFactor implements FormFactor {
 
   @override
   @JsonKey(name: 'numRows')
-  int? get rowCount => throw _privateConstructorUsedError;
+  int? get rowCount;
   @override
   @JsonKey(name: 'numCols')
-  int? get columnCount => throw _privateConstructorUsedError;
+  int? get columnCount;
   @override
   @JsonKey(name: 'fractionSize')
-  double? get fractionSize => throw _privateConstructorUsedError;
+  double? get fractionSize;
   @override
   @JsonKey(ignore: true)
   _$FormFactorCopyWith<_FormFactor> get copyWith =>

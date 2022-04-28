@@ -1,5 +1,6 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'directory_response.dart';
@@ -44,7 +45,7 @@ class _$DirectoryResponseTearOff {
     );
   }
 
-  DirectoryResponse fromJson(Map<String, Object> json) {
+  DirectoryResponse fromJson(Map<String, Object?> json) {
     return DirectoryResponse.fromJson(json);
   }
 }
@@ -259,35 +260,28 @@ class _$_DirectoryResponse implements _DirectoryResponse {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _DirectoryResponse &&
-            (identical(other.ttl, ttl) ||
-                const DeepCollectionEquality().equals(other.ttl, ttl)) &&
-            (identical(other.checksum, checksum) ||
-                const DeepCollectionEquality()
-                    .equals(other.checksum, checksum)) &&
-            (identical(other.generation, generation) ||
-                const DeepCollectionEquality()
-                    .equals(other.generation, generation)) &&
-            (identical(other.sections, sections) ||
-                const DeepCollectionEquality()
-                    .equals(other.sections, sections)) &&
-            (identical(other.preferCachedData, preferCachedData) ||
-                const DeepCollectionEquality()
-                    .equals(other.preferCachedData, preferCachedData)) &&
-            (identical(other.formFactorsByType, formFactorsByType) ||
-                const DeepCollectionEquality()
-                    .equals(other.formFactorsByType, formFactorsByType)));
+        (other.runtimeType == runtimeType &&
+            other is _DirectoryResponse &&
+            const DeepCollectionEquality().equals(other.ttl, ttl) &&
+            const DeepCollectionEquality().equals(other.checksum, checksum) &&
+            const DeepCollectionEquality()
+                .equals(other.generation, generation) &&
+            const DeepCollectionEquality().equals(other.sections, sections) &&
+            const DeepCollectionEquality()
+                .equals(other.preferCachedData, preferCachedData) &&
+            const DeepCollectionEquality()
+                .equals(other.formFactorsByType, formFactorsByType));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(ttl) ^
-      const DeepCollectionEquality().hash(checksum) ^
-      const DeepCollectionEquality().hash(generation) ^
-      const DeepCollectionEquality().hash(sections) ^
-      const DeepCollectionEquality().hash(preferCachedData) ^
-      const DeepCollectionEquality().hash(formFactorsByType);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(ttl),
+      const DeepCollectionEquality().hash(checksum),
+      const DeepCollectionEquality().hash(generation),
+      const DeepCollectionEquality().hash(sections),
+      const DeepCollectionEquality().hash(preferCachedData),
+      const DeepCollectionEquality().hash(formFactorsByType));
 
   @JsonKey(ignore: true)
   @override
@@ -321,23 +315,22 @@ abstract class _DirectoryResponse implements DirectoryResponse {
 
   @override
   @JsonKey(name: 'ttl', fromJson: readSeconds, toJson: writeSeconds)
-  Duration get ttl => throw _privateConstructorUsedError;
+  Duration get ttl;
   @override
   @JsonKey(name: 'checksum')
-  String get checksum => throw _privateConstructorUsedError;
+  String get checksum;
   @override
   @JsonKey(name: 'generation')
-  String get generation => throw _privateConstructorUsedError;
+  String get generation;
   @override
   @JsonKey(name: 'sections')
-  List<SuperbrowseSection> get sections => throw _privateConstructorUsedError;
+  List<SuperbrowseSection> get sections;
   @override
   @JsonKey(name: 'preferCachedData')
-  bool get preferCachedData => throw _privateConstructorUsedError;
+  bool get preferCachedData;
   @override
   @JsonKey(name: 'formFactorsByType')
-  Map<SuperbrowseItemType, FormFactors> get formFactorsByType =>
-      throw _privateConstructorUsedError;
+  Map<SuperbrowseItemType, FormFactors> get formFactorsByType;
   @override
   @JsonKey(ignore: true)
   _$DirectoryResponseCopyWith<_DirectoryResponse> get copyWith =>

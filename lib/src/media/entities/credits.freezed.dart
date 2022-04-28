@@ -1,5 +1,6 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'credits.dart';
@@ -30,7 +31,7 @@ class _$CreditsTearOff {
     );
   }
 
-  Credits fromJson(Map<String, Object> json) {
+  Credits fromJson(Map<String, Object?> json) {
     return Credits.fromJson(json);
   }
 }
@@ -147,20 +148,19 @@ class _$_Credits implements _Credits {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _Credits &&
-            (identical(other.creditsSnippetHtml, creditsSnippetHtml) ||
-                const DeepCollectionEquality()
-                    .equals(other.creditsSnippetHtml, creditsSnippetHtml)) &&
-            (identical(other.fullCreditsHtml, fullCreditsHtml) ||
-                const DeepCollectionEquality()
-                    .equals(other.fullCreditsHtml, fullCreditsHtml)));
+        (other.runtimeType == runtimeType &&
+            other is _Credits &&
+            const DeepCollectionEquality()
+                .equals(other.creditsSnippetHtml, creditsSnippetHtml) &&
+            const DeepCollectionEquality()
+                .equals(other.fullCreditsHtml, fullCreditsHtml));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(creditsSnippetHtml) ^
-      const DeepCollectionEquality().hash(fullCreditsHtml);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(creditsSnippetHtml),
+      const DeepCollectionEquality().hash(fullCreditsHtml));
 
   @JsonKey(ignore: true)
   @override
@@ -183,10 +183,10 @@ abstract class _Credits implements Credits {
 
   @override
   @JsonKey(name: 'creditsSnippet')
-  String get creditsSnippetHtml => throw _privateConstructorUsedError;
+  String get creditsSnippetHtml;
   @override
   @JsonKey(name: 'fullCredits')
-  String get fullCreditsHtml => throw _privateConstructorUsedError;
+  String get fullCreditsHtml;
   @override
   @JsonKey(ignore: true)
   _$CreditsCopyWith<_Credits> get copyWith =>

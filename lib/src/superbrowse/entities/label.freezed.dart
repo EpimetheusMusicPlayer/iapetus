@@ -1,5 +1,6 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'label.dart';
@@ -47,7 +48,7 @@ class _$SuperbrowseLabelTearOff {
     );
   }
 
-  SuperbrowseLabel fromJson(Map<String, Object> json) {
+  SuperbrowseLabel fromJson(Map<String, Object?> json) {
     return SuperbrowseLabel.fromJson(json);
   }
 }
@@ -286,36 +287,28 @@ class _$_SuperbrowseLabel implements _SuperbrowseLabel {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _SuperbrowseLabel &&
-            (identical(other.text, text) ||
-                const DeepCollectionEquality().equals(other.text, text)) &&
-            (identical(other.style, style) ||
-                const DeepCollectionEquality().equals(other.style, style)) &&
-            (identical(other.alignment, alignment) ||
-                const DeepCollectionEquality()
-                    .equals(other.alignment, alignment)) &&
-            (identical(other.maxLines, maxLines) ||
-                const DeepCollectionEquality()
-                    .equals(other.maxLines, maxLines)) &&
-            (identical(other.bold, bold) ||
-                const DeepCollectionEquality().equals(other.bold, bold)) &&
-            (identical(other.italic, italic) ||
-                const DeepCollectionEquality().equals(other.italic, italic)) &&
-            (identical(other.underlined, underlined) ||
-                const DeepCollectionEquality()
-                    .equals(other.underlined, underlined)));
+        (other.runtimeType == runtimeType &&
+            other is _SuperbrowseLabel &&
+            const DeepCollectionEquality().equals(other.text, text) &&
+            const DeepCollectionEquality().equals(other.style, style) &&
+            const DeepCollectionEquality().equals(other.alignment, alignment) &&
+            const DeepCollectionEquality().equals(other.maxLines, maxLines) &&
+            const DeepCollectionEquality().equals(other.bold, bold) &&
+            const DeepCollectionEquality().equals(other.italic, italic) &&
+            const DeepCollectionEquality()
+                .equals(other.underlined, underlined));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(text) ^
-      const DeepCollectionEquality().hash(style) ^
-      const DeepCollectionEquality().hash(alignment) ^
-      const DeepCollectionEquality().hash(maxLines) ^
-      const DeepCollectionEquality().hash(bold) ^
-      const DeepCollectionEquality().hash(italic) ^
-      const DeepCollectionEquality().hash(underlined);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(text),
+      const DeepCollectionEquality().hash(style),
+      const DeepCollectionEquality().hash(alignment),
+      const DeepCollectionEquality().hash(maxLines),
+      const DeepCollectionEquality().hash(bold),
+      const DeepCollectionEquality().hash(italic),
+      const DeepCollectionEquality().hash(underlined));
 
   @JsonKey(ignore: true)
   @override
@@ -350,27 +343,27 @@ abstract class _SuperbrowseLabel implements SuperbrowseLabel {
 
   @override
   @JsonKey(name: 'text')
-  String get text => throw _privateConstructorUsedError;
+  String get text;
   @override
   @JsonKey(name: 'style')
-  LabelStyle get style => throw _privateConstructorUsedError;
+  LabelStyle get style;
   @override
   @JsonKey(name: 'alignment')
-  TextAlignment? get alignment => throw _privateConstructorUsedError;
+  TextAlignment? get alignment;
   @override
   @JsonKey(name: 'maxLines')
-  int? get maxLines => throw _privateConstructorUsedError;
+  int? get maxLines;
   @override
   @JsonKey(name: 'bold', fromJson: readNullableBool, toJson: writeNullableBool)
-  bool get bold => throw _privateConstructorUsedError;
+  bool get bold;
   @override
   @JsonKey(
       name: 'italic', fromJson: readNullableBool, toJson: writeNullableBool)
-  bool get italic => throw _privateConstructorUsedError;
+  bool get italic;
   @override
   @JsonKey(
       name: 'underlined', fromJson: readNullableBool, toJson: writeNullableBool)
-  bool get underlined => throw _privateConstructorUsedError;
+  bool get underlined;
   @override
   @JsonKey(ignore: true)
   _$SuperbrowseLabelCopyWith<_SuperbrowseLabel> get copyWith =>

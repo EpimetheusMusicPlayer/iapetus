@@ -1,5 +1,6 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'item.dart';
@@ -14,7 +15,7 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 SuperbrowseItem _$SuperbrowseItemFromJson(Map<String, dynamic> json) {
-  switch (json['type'] as String) {
+  switch (json['type']) {
     case 'banner':
       return BannerSuperbrowseItem.fromJson(json);
     case 'belt':
@@ -273,7 +274,7 @@ class _$SuperbrowseItemTearOff {
     );
   }
 
-  SuperbrowseItem fromJson(Map<String, Object> json) {
+  SuperbrowseItem fromJson(Map<String, Object?> json) {
     return SuperbrowseItem.fromJson(json);
   }
 }
@@ -974,7 +975,9 @@ class _$BannerSuperbrowseItem implements BannerSuperbrowseItem {
       {@JsonKey(name: 'pandoraId') this.pandoraId,
       @JsonKey(name: 'analyticsToken') required this.analyticsToken,
       @JsonKey(name: 'labels') required this.labels,
-      @JsonKey(name: 'image') this.image});
+      @JsonKey(name: 'image') this.image,
+      String? $type})
+      : $type = $type ?? 'banner';
 
   factory _$BannerSuperbrowseItem.fromJson(Map<String, dynamic> json) =>
       _$$BannerSuperbrowseItemFromJson(json);
@@ -992,6 +995,9 @@ class _$BannerSuperbrowseItem implements BannerSuperbrowseItem {
   @JsonKey(name: 'image')
   final SuperbrowseImage? image;
 
+  @JsonKey(name: 'type')
+  final String $type;
+
   @override
   String toString() {
     return 'SuperbrowseItem.banner(pandoraId: $pandoraId, analyticsToken: $analyticsToken, labels: $labels, image: $image)';
@@ -1000,26 +1006,22 @@ class _$BannerSuperbrowseItem implements BannerSuperbrowseItem {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is BannerSuperbrowseItem &&
-            (identical(other.pandoraId, pandoraId) ||
-                const DeepCollectionEquality()
-                    .equals(other.pandoraId, pandoraId)) &&
-            (identical(other.analyticsToken, analyticsToken) ||
-                const DeepCollectionEquality()
-                    .equals(other.analyticsToken, analyticsToken)) &&
-            (identical(other.labels, labels) ||
-                const DeepCollectionEquality().equals(other.labels, labels)) &&
-            (identical(other.image, image) ||
-                const DeepCollectionEquality().equals(other.image, image)));
+        (other.runtimeType == runtimeType &&
+            other is BannerSuperbrowseItem &&
+            const DeepCollectionEquality().equals(other.pandoraId, pandoraId) &&
+            const DeepCollectionEquality()
+                .equals(other.analyticsToken, analyticsToken) &&
+            const DeepCollectionEquality().equals(other.labels, labels) &&
+            const DeepCollectionEquality().equals(other.image, image));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(pandoraId) ^
-      const DeepCollectionEquality().hash(analyticsToken) ^
-      const DeepCollectionEquality().hash(labels) ^
-      const DeepCollectionEquality().hash(image);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(pandoraId),
+      const DeepCollectionEquality().hash(analyticsToken),
+      const DeepCollectionEquality().hash(labels),
+      const DeepCollectionEquality().hash(image));
 
   @JsonKey(ignore: true)
   @override
@@ -1622,7 +1624,7 @@ class _$BannerSuperbrowseItem implements BannerSuperbrowseItem {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$BannerSuperbrowseItemToJson(this)..['type'] = 'banner';
+    return _$$BannerSuperbrowseItemToJson(this);
   }
 }
 
@@ -1639,14 +1641,14 @@ abstract class BannerSuperbrowseItem implements SuperbrowseItem {
 
   @override
   @JsonKey(name: 'pandoraId')
-  String? get pandoraId => throw _privateConstructorUsedError;
+  String? get pandoraId;
   @override
   @JsonKey(name: 'analyticsToken')
-  String get analyticsToken => throw _privateConstructorUsedError;
+  String get analyticsToken;
   @JsonKey(name: 'labels')
-  List<SuperbrowseLabel> get labels => throw _privateConstructorUsedError;
+  List<SuperbrowseLabel> get labels;
   @JsonKey(name: 'image')
-  SuperbrowseImage? get image => throw _privateConstructorUsedError;
+  SuperbrowseImage? get image;
   @override
   @JsonKey(ignore: true)
   $BannerSuperbrowseItemCopyWith<BannerSuperbrowseItem> get copyWith =>
@@ -1768,7 +1770,9 @@ class _$BeltSuperbrowseItem implements BeltSuperbrowseItem {
       @JsonKey(name: 'image') required this.image,
       @JsonKey(name: 'action') this.action,
       @JsonKey(name: 'longPressAction') this.longPressAction,
-      @JsonKey(name: 'voiceText') this.voiceText});
+      @JsonKey(name: 'voiceText') this.voiceText,
+      String? $type})
+      : $type = $type ?? 'belt';
 
   factory _$BeltSuperbrowseItem.fromJson(Map<String, dynamic> json) =>
       _$$BeltSuperbrowseItemFromJson(json);
@@ -1795,6 +1799,9 @@ class _$BeltSuperbrowseItem implements BeltSuperbrowseItem {
   @JsonKey(name: 'voiceText')
   final String? voiceText;
 
+  @JsonKey(name: 'type')
+  final String $type;
+
   @override
   String toString() {
     return 'SuperbrowseItem.belt(pandoraId: $pandoraId, analyticsToken: $analyticsToken, labels: $labels, image: $image, action: $action, longPressAction: $longPressAction, voiceText: $voiceText)';
@@ -1803,37 +1810,29 @@ class _$BeltSuperbrowseItem implements BeltSuperbrowseItem {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is BeltSuperbrowseItem &&
-            (identical(other.pandoraId, pandoraId) ||
-                const DeepCollectionEquality()
-                    .equals(other.pandoraId, pandoraId)) &&
-            (identical(other.analyticsToken, analyticsToken) ||
-                const DeepCollectionEquality()
-                    .equals(other.analyticsToken, analyticsToken)) &&
-            (identical(other.labels, labels) ||
-                const DeepCollectionEquality().equals(other.labels, labels)) &&
-            (identical(other.image, image) ||
-                const DeepCollectionEquality().equals(other.image, image)) &&
-            (identical(other.action, action) ||
-                const DeepCollectionEquality().equals(other.action, action)) &&
-            (identical(other.longPressAction, longPressAction) ||
-                const DeepCollectionEquality()
-                    .equals(other.longPressAction, longPressAction)) &&
-            (identical(other.voiceText, voiceText) ||
-                const DeepCollectionEquality()
-                    .equals(other.voiceText, voiceText)));
+        (other.runtimeType == runtimeType &&
+            other is BeltSuperbrowseItem &&
+            const DeepCollectionEquality().equals(other.pandoraId, pandoraId) &&
+            const DeepCollectionEquality()
+                .equals(other.analyticsToken, analyticsToken) &&
+            const DeepCollectionEquality().equals(other.labels, labels) &&
+            const DeepCollectionEquality().equals(other.image, image) &&
+            const DeepCollectionEquality().equals(other.action, action) &&
+            const DeepCollectionEquality()
+                .equals(other.longPressAction, longPressAction) &&
+            const DeepCollectionEquality().equals(other.voiceText, voiceText));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(pandoraId) ^
-      const DeepCollectionEquality().hash(analyticsToken) ^
-      const DeepCollectionEquality().hash(labels) ^
-      const DeepCollectionEquality().hash(image) ^
-      const DeepCollectionEquality().hash(action) ^
-      const DeepCollectionEquality().hash(longPressAction) ^
-      const DeepCollectionEquality().hash(voiceText);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(pandoraId),
+      const DeepCollectionEquality().hash(analyticsToken),
+      const DeepCollectionEquality().hash(labels),
+      const DeepCollectionEquality().hash(image),
+      const DeepCollectionEquality().hash(action),
+      const DeepCollectionEquality().hash(longPressAction),
+      const DeepCollectionEquality().hash(voiceText));
 
   @JsonKey(ignore: true)
   @override
@@ -2438,7 +2437,7 @@ class _$BeltSuperbrowseItem implements BeltSuperbrowseItem {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$BeltSuperbrowseItemToJson(this)..['type'] = 'belt';
+    return _$$BeltSuperbrowseItemToJson(this);
   }
 }
 
@@ -2457,20 +2456,20 @@ abstract class BeltSuperbrowseItem implements SuperbrowseItem {
 
   @override
   @JsonKey(name: 'pandoraId')
-  String? get pandoraId => throw _privateConstructorUsedError;
+  String? get pandoraId;
   @override
   @JsonKey(name: 'analyticsToken')
-  String get analyticsToken => throw _privateConstructorUsedError;
+  String get analyticsToken;
   @JsonKey(name: 'labels')
-  List<SuperbrowseLabel>? get labels => throw _privateConstructorUsedError;
+  List<SuperbrowseLabel>? get labels;
   @JsonKey(name: 'image')
-  SuperbrowseImage get image => throw _privateConstructorUsedError;
+  SuperbrowseImage get image;
   @JsonKey(name: 'action')
-  SuperbrowseAction? get action => throw _privateConstructorUsedError;
+  SuperbrowseAction? get action;
   @JsonKey(name: 'longPressAction')
-  SuperbrowseAction? get longPressAction => throw _privateConstructorUsedError;
+  SuperbrowseAction? get longPressAction;
   @JsonKey(name: 'voiceText')
-  String? get voiceText => throw _privateConstructorUsedError;
+  String? get voiceText;
   @override
   @JsonKey(ignore: true)
   $BeltSuperbrowseItemCopyWith<BeltSuperbrowseItem> get copyWith =>
@@ -2592,7 +2591,9 @@ class _$FeaturedSuperbrowseItem implements FeaturedSuperbrowseItem {
       @JsonKey(name: 'image') required this.image,
       @JsonKey(name: 'action') this.action,
       @JsonKey(name: 'longPressAction') this.longPressAction,
-      @JsonKey(name: 'badges') this.badges});
+      @JsonKey(name: 'badges') this.badges,
+      String? $type})
+      : $type = $type ?? 'featured';
 
   factory _$FeaturedSuperbrowseItem.fromJson(Map<String, dynamic> json) =>
       _$$FeaturedSuperbrowseItemFromJson(json);
@@ -2619,6 +2620,9 @@ class _$FeaturedSuperbrowseItem implements FeaturedSuperbrowseItem {
   @JsonKey(name: 'badges')
   final List<SuperbrowseBadge>? badges;
 
+  @JsonKey(name: 'type')
+  final String $type;
+
   @override
   String toString() {
     return 'SuperbrowseItem.featured(pandoraId: $pandoraId, analyticsToken: $analyticsToken, labels: $labels, image: $image, action: $action, longPressAction: $longPressAction, badges: $badges)';
@@ -2627,36 +2631,29 @@ class _$FeaturedSuperbrowseItem implements FeaturedSuperbrowseItem {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is FeaturedSuperbrowseItem &&
-            (identical(other.pandoraId, pandoraId) ||
-                const DeepCollectionEquality()
-                    .equals(other.pandoraId, pandoraId)) &&
-            (identical(other.analyticsToken, analyticsToken) ||
-                const DeepCollectionEquality()
-                    .equals(other.analyticsToken, analyticsToken)) &&
-            (identical(other.labels, labels) ||
-                const DeepCollectionEquality().equals(other.labels, labels)) &&
-            (identical(other.image, image) ||
-                const DeepCollectionEquality().equals(other.image, image)) &&
-            (identical(other.action, action) ||
-                const DeepCollectionEquality().equals(other.action, action)) &&
-            (identical(other.longPressAction, longPressAction) ||
-                const DeepCollectionEquality()
-                    .equals(other.longPressAction, longPressAction)) &&
-            (identical(other.badges, badges) ||
-                const DeepCollectionEquality().equals(other.badges, badges)));
+        (other.runtimeType == runtimeType &&
+            other is FeaturedSuperbrowseItem &&
+            const DeepCollectionEquality().equals(other.pandoraId, pandoraId) &&
+            const DeepCollectionEquality()
+                .equals(other.analyticsToken, analyticsToken) &&
+            const DeepCollectionEquality().equals(other.labels, labels) &&
+            const DeepCollectionEquality().equals(other.image, image) &&
+            const DeepCollectionEquality().equals(other.action, action) &&
+            const DeepCollectionEquality()
+                .equals(other.longPressAction, longPressAction) &&
+            const DeepCollectionEquality().equals(other.badges, badges));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(pandoraId) ^
-      const DeepCollectionEquality().hash(analyticsToken) ^
-      const DeepCollectionEquality().hash(labels) ^
-      const DeepCollectionEquality().hash(image) ^
-      const DeepCollectionEquality().hash(action) ^
-      const DeepCollectionEquality().hash(longPressAction) ^
-      const DeepCollectionEquality().hash(badges);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(pandoraId),
+      const DeepCollectionEquality().hash(analyticsToken),
+      const DeepCollectionEquality().hash(labels),
+      const DeepCollectionEquality().hash(image),
+      const DeepCollectionEquality().hash(action),
+      const DeepCollectionEquality().hash(longPressAction),
+      const DeepCollectionEquality().hash(badges));
 
   @JsonKey(ignore: true)
   @override
@@ -3262,7 +3259,7 @@ class _$FeaturedSuperbrowseItem implements FeaturedSuperbrowseItem {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$FeaturedSuperbrowseItemToJson(this)..['type'] = 'featured';
+    return _$$FeaturedSuperbrowseItemToJson(this);
   }
 }
 
@@ -3282,20 +3279,20 @@ abstract class FeaturedSuperbrowseItem implements SuperbrowseItem {
 
   @override
   @JsonKey(name: 'pandoraId')
-  String? get pandoraId => throw _privateConstructorUsedError;
+  String? get pandoraId;
   @override
   @JsonKey(name: 'analyticsToken')
-  String get analyticsToken => throw _privateConstructorUsedError;
+  String get analyticsToken;
   @JsonKey(name: 'labels')
-  List<SuperbrowseLabel> get labels => throw _privateConstructorUsedError;
+  List<SuperbrowseLabel> get labels;
   @JsonKey(name: 'image')
-  SuperbrowseImage get image => throw _privateConstructorUsedError;
+  SuperbrowseImage get image;
   @JsonKey(name: 'action')
-  SuperbrowseAction? get action => throw _privateConstructorUsedError;
+  SuperbrowseAction? get action;
   @JsonKey(name: 'longPressAction')
-  SuperbrowseAction? get longPressAction => throw _privateConstructorUsedError;
+  SuperbrowseAction? get longPressAction;
   @JsonKey(name: 'badges')
-  List<SuperbrowseBadge>? get badges => throw _privateConstructorUsedError;
+  List<SuperbrowseBadge>? get badges;
   @override
   @JsonKey(ignore: true)
   $FeaturedSuperbrowseItemCopyWith<FeaturedSuperbrowseItem> get copyWith =>
@@ -3414,7 +3411,9 @@ class _$FooterSuperbrowseItem implements FooterSuperbrowseItem {
       @JsonKey(name: 'labels') required this.labels,
       @JsonKey(name: 'button') this.button,
       @JsonKey(name: 'action') this.action,
-      @JsonKey(name: 'longPressAction') this.longPressAction});
+      @JsonKey(name: 'longPressAction') this.longPressAction,
+      String? $type})
+      : $type = $type ?? 'footer';
 
   factory _$FooterSuperbrowseItem.fromJson(Map<String, dynamic> json) =>
       _$$FooterSuperbrowseItemFromJson(json);
@@ -3438,6 +3437,9 @@ class _$FooterSuperbrowseItem implements FooterSuperbrowseItem {
   @JsonKey(name: 'longPressAction')
   final SuperbrowseAction? longPressAction;
 
+  @JsonKey(name: 'type')
+  final String $type;
+
   @override
   String toString() {
     return 'SuperbrowseItem.footer(pandoraId: $pandoraId, analyticsToken: $analyticsToken, labels: $labels, button: $button, action: $action, longPressAction: $longPressAction)';
@@ -3446,33 +3448,27 @@ class _$FooterSuperbrowseItem implements FooterSuperbrowseItem {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is FooterSuperbrowseItem &&
-            (identical(other.pandoraId, pandoraId) ||
-                const DeepCollectionEquality()
-                    .equals(other.pandoraId, pandoraId)) &&
-            (identical(other.analyticsToken, analyticsToken) ||
-                const DeepCollectionEquality()
-                    .equals(other.analyticsToken, analyticsToken)) &&
-            (identical(other.labels, labels) ||
-                const DeepCollectionEquality().equals(other.labels, labels)) &&
-            (identical(other.button, button) ||
-                const DeepCollectionEquality().equals(other.button, button)) &&
-            (identical(other.action, action) ||
-                const DeepCollectionEquality().equals(other.action, action)) &&
-            (identical(other.longPressAction, longPressAction) ||
-                const DeepCollectionEquality()
-                    .equals(other.longPressAction, longPressAction)));
+        (other.runtimeType == runtimeType &&
+            other is FooterSuperbrowseItem &&
+            const DeepCollectionEquality().equals(other.pandoraId, pandoraId) &&
+            const DeepCollectionEquality()
+                .equals(other.analyticsToken, analyticsToken) &&
+            const DeepCollectionEquality().equals(other.labels, labels) &&
+            const DeepCollectionEquality().equals(other.button, button) &&
+            const DeepCollectionEquality().equals(other.action, action) &&
+            const DeepCollectionEquality()
+                .equals(other.longPressAction, longPressAction));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(pandoraId) ^
-      const DeepCollectionEquality().hash(analyticsToken) ^
-      const DeepCollectionEquality().hash(labels) ^
-      const DeepCollectionEquality().hash(button) ^
-      const DeepCollectionEquality().hash(action) ^
-      const DeepCollectionEquality().hash(longPressAction);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(pandoraId),
+      const DeepCollectionEquality().hash(analyticsToken),
+      const DeepCollectionEquality().hash(labels),
+      const DeepCollectionEquality().hash(button),
+      const DeepCollectionEquality().hash(action),
+      const DeepCollectionEquality().hash(longPressAction));
 
   @JsonKey(ignore: true)
   @override
@@ -4078,7 +4074,7 @@ class _$FooterSuperbrowseItem implements FooterSuperbrowseItem {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$FooterSuperbrowseItemToJson(this)..['type'] = 'footer';
+    return _$$FooterSuperbrowseItemToJson(this);
   }
 }
 
@@ -4102,18 +4098,18 @@ abstract class FooterSuperbrowseItem implements SuperbrowseItem {
 
   @override
   @JsonKey(name: 'pandoraId')
-  String? get pandoraId => throw _privateConstructorUsedError;
+  String? get pandoraId;
   @override
   @JsonKey(name: 'analyticsToken')
-  String get analyticsToken => throw _privateConstructorUsedError;
+  String get analyticsToken;
   @JsonKey(name: 'labels')
-  List<SuperbrowseLabel> get labels => throw _privateConstructorUsedError;
+  List<SuperbrowseLabel> get labels;
   @JsonKey(name: 'button')
-  SuperbrowseButton? get button => throw _privateConstructorUsedError;
+  SuperbrowseButton? get button;
   @JsonKey(name: 'action')
-  SuperbrowseAction? get action => throw _privateConstructorUsedError;
+  SuperbrowseAction? get action;
   @JsonKey(name: 'longPressAction')
-  SuperbrowseAction? get longPressAction => throw _privateConstructorUsedError;
+  SuperbrowseAction? get longPressAction;
   @override
   @JsonKey(ignore: true)
   $FooterSuperbrowseItemCopyWith<FooterSuperbrowseItem> get copyWith =>
@@ -4258,7 +4254,9 @@ class _$GridSuperbrowseItem implements GridSuperbrowseItem {
       @JsonKey(name: 'badges')
           this.badges,
       @JsonKey(name: 'timeStamp', fromJson: readOptionalDateTimeMilliseconds, toJson: writeOptionalDateTimeMilliseconds)
-          this.timestamp});
+          this.timestamp,
+      String? $type})
+      : $type = $type ?? 'grid';
 
   factory _$GridSuperbrowseItem.fromJson(Map<String, dynamic> json) =>
       _$$GridSuperbrowseItemFromJson(json);
@@ -4291,6 +4289,9 @@ class _$GridSuperbrowseItem implements GridSuperbrowseItem {
       toJson: writeOptionalDateTimeMilliseconds)
   final DateTime? timestamp;
 
+  @JsonKey(name: 'type')
+  final String $type;
+
   @override
   String toString() {
     return 'SuperbrowseItem.grid(pandoraId: $pandoraId, analyticsToken: $analyticsToken, labels: $labels, image: $image, action: $action, longPressAction: $longPressAction, badges: $badges, timestamp: $timestamp)';
@@ -4299,40 +4300,31 @@ class _$GridSuperbrowseItem implements GridSuperbrowseItem {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is GridSuperbrowseItem &&
-            (identical(other.pandoraId, pandoraId) ||
-                const DeepCollectionEquality()
-                    .equals(other.pandoraId, pandoraId)) &&
-            (identical(other.analyticsToken, analyticsToken) ||
-                const DeepCollectionEquality()
-                    .equals(other.analyticsToken, analyticsToken)) &&
-            (identical(other.labels, labels) ||
-                const DeepCollectionEquality().equals(other.labels, labels)) &&
-            (identical(other.image, image) ||
-                const DeepCollectionEquality().equals(other.image, image)) &&
-            (identical(other.action, action) ||
-                const DeepCollectionEquality().equals(other.action, action)) &&
-            (identical(other.longPressAction, longPressAction) ||
-                const DeepCollectionEquality()
-                    .equals(other.longPressAction, longPressAction)) &&
-            (identical(other.badges, badges) ||
-                const DeepCollectionEquality().equals(other.badges, badges)) &&
-            (identical(other.timestamp, timestamp) ||
-                const DeepCollectionEquality()
-                    .equals(other.timestamp, timestamp)));
+        (other.runtimeType == runtimeType &&
+            other is GridSuperbrowseItem &&
+            const DeepCollectionEquality().equals(other.pandoraId, pandoraId) &&
+            const DeepCollectionEquality()
+                .equals(other.analyticsToken, analyticsToken) &&
+            const DeepCollectionEquality().equals(other.labels, labels) &&
+            const DeepCollectionEquality().equals(other.image, image) &&
+            const DeepCollectionEquality().equals(other.action, action) &&
+            const DeepCollectionEquality()
+                .equals(other.longPressAction, longPressAction) &&
+            const DeepCollectionEquality().equals(other.badges, badges) &&
+            const DeepCollectionEquality().equals(other.timestamp, timestamp));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(pandoraId) ^
-      const DeepCollectionEquality().hash(analyticsToken) ^
-      const DeepCollectionEquality().hash(labels) ^
-      const DeepCollectionEquality().hash(image) ^
-      const DeepCollectionEquality().hash(action) ^
-      const DeepCollectionEquality().hash(longPressAction) ^
-      const DeepCollectionEquality().hash(badges) ^
-      const DeepCollectionEquality().hash(timestamp);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(pandoraId),
+      const DeepCollectionEquality().hash(analyticsToken),
+      const DeepCollectionEquality().hash(labels),
+      const DeepCollectionEquality().hash(image),
+      const DeepCollectionEquality().hash(action),
+      const DeepCollectionEquality().hash(longPressAction),
+      const DeepCollectionEquality().hash(badges),
+      const DeepCollectionEquality().hash(timestamp));
 
   @JsonKey(ignore: true)
   @override
@@ -4937,7 +4929,7 @@ class _$GridSuperbrowseItem implements GridSuperbrowseItem {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$GridSuperbrowseItemToJson(this)..['type'] = 'grid';
+    return _$$GridSuperbrowseItemToJson(this);
   }
 }
 
@@ -4965,25 +4957,25 @@ abstract class GridSuperbrowseItem implements SuperbrowseItem {
 
   @override
   @JsonKey(name: 'pandoraId')
-  String? get pandoraId => throw _privateConstructorUsedError;
+  String? get pandoraId;
   @override
   @JsonKey(name: 'analyticsToken')
-  String get analyticsToken => throw _privateConstructorUsedError;
+  String get analyticsToken;
   @JsonKey(name: 'labels')
-  List<SuperbrowseLabel> get labels => throw _privateConstructorUsedError;
+  List<SuperbrowseLabel> get labels;
   @JsonKey(name: 'image')
-  SuperbrowseImage get image => throw _privateConstructorUsedError;
+  SuperbrowseImage get image;
   @JsonKey(name: 'action')
-  SuperbrowseAction? get action => throw _privateConstructorUsedError;
+  SuperbrowseAction? get action;
   @JsonKey(name: 'longPressAction')
-  SuperbrowseAction? get longPressAction => throw _privateConstructorUsedError;
+  SuperbrowseAction? get longPressAction;
   @JsonKey(name: 'badges')
-  List<SuperbrowseBadge>? get badges => throw _privateConstructorUsedError;
+  List<SuperbrowseBadge>? get badges;
   @JsonKey(
       name: 'timeStamp',
       fromJson: readOptionalDateTimeMilliseconds,
       toJson: writeOptionalDateTimeMilliseconds)
-  DateTime? get timestamp => throw _privateConstructorUsedError;
+  DateTime? get timestamp;
   @override
   @JsonKey(ignore: true)
   $GridSuperbrowseItemCopyWith<GridSuperbrowseItem> get copyWith =>
@@ -5102,7 +5094,9 @@ class _$HeaderSuperbrowseItem implements HeaderSuperbrowseItem {
       @JsonKey(name: 'labels') required this.labels,
       @JsonKey(name: 'image') this.image,
       @JsonKey(name: 'action') this.action,
-      @JsonKey(name: 'longPressAction') this.longPressAction});
+      @JsonKey(name: 'longPressAction') this.longPressAction,
+      String? $type})
+      : $type = $type ?? 'header';
 
   factory _$HeaderSuperbrowseItem.fromJson(Map<String, dynamic> json) =>
       _$$HeaderSuperbrowseItemFromJson(json);
@@ -5126,6 +5120,9 @@ class _$HeaderSuperbrowseItem implements HeaderSuperbrowseItem {
   @JsonKey(name: 'longPressAction')
   final SuperbrowseAction? longPressAction;
 
+  @JsonKey(name: 'type')
+  final String $type;
+
   @override
   String toString() {
     return 'SuperbrowseItem.header(pandoraId: $pandoraId, analyticsToken: $analyticsToken, labels: $labels, image: $image, action: $action, longPressAction: $longPressAction)';
@@ -5134,33 +5131,27 @@ class _$HeaderSuperbrowseItem implements HeaderSuperbrowseItem {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is HeaderSuperbrowseItem &&
-            (identical(other.pandoraId, pandoraId) ||
-                const DeepCollectionEquality()
-                    .equals(other.pandoraId, pandoraId)) &&
-            (identical(other.analyticsToken, analyticsToken) ||
-                const DeepCollectionEquality()
-                    .equals(other.analyticsToken, analyticsToken)) &&
-            (identical(other.labels, labels) ||
-                const DeepCollectionEquality().equals(other.labels, labels)) &&
-            (identical(other.image, image) ||
-                const DeepCollectionEquality().equals(other.image, image)) &&
-            (identical(other.action, action) ||
-                const DeepCollectionEquality().equals(other.action, action)) &&
-            (identical(other.longPressAction, longPressAction) ||
-                const DeepCollectionEquality()
-                    .equals(other.longPressAction, longPressAction)));
+        (other.runtimeType == runtimeType &&
+            other is HeaderSuperbrowseItem &&
+            const DeepCollectionEquality().equals(other.pandoraId, pandoraId) &&
+            const DeepCollectionEquality()
+                .equals(other.analyticsToken, analyticsToken) &&
+            const DeepCollectionEquality().equals(other.labels, labels) &&
+            const DeepCollectionEquality().equals(other.image, image) &&
+            const DeepCollectionEquality().equals(other.action, action) &&
+            const DeepCollectionEquality()
+                .equals(other.longPressAction, longPressAction));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(pandoraId) ^
-      const DeepCollectionEquality().hash(analyticsToken) ^
-      const DeepCollectionEquality().hash(labels) ^
-      const DeepCollectionEquality().hash(image) ^
-      const DeepCollectionEquality().hash(action) ^
-      const DeepCollectionEquality().hash(longPressAction);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(pandoraId),
+      const DeepCollectionEquality().hash(analyticsToken),
+      const DeepCollectionEquality().hash(labels),
+      const DeepCollectionEquality().hash(image),
+      const DeepCollectionEquality().hash(action),
+      const DeepCollectionEquality().hash(longPressAction));
 
   @JsonKey(ignore: true)
   @override
@@ -5766,7 +5757,7 @@ class _$HeaderSuperbrowseItem implements HeaderSuperbrowseItem {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$HeaderSuperbrowseItemToJson(this)..['type'] = 'header';
+    return _$$HeaderSuperbrowseItemToJson(this);
   }
 }
 
@@ -5790,18 +5781,18 @@ abstract class HeaderSuperbrowseItem implements SuperbrowseItem {
 
   @override
   @JsonKey(name: 'pandoraId')
-  String? get pandoraId => throw _privateConstructorUsedError;
+  String? get pandoraId;
   @override
   @JsonKey(name: 'analyticsToken')
-  String get analyticsToken => throw _privateConstructorUsedError;
+  String get analyticsToken;
   @JsonKey(name: 'labels')
-  List<SuperbrowseLabel> get labels => throw _privateConstructorUsedError;
+  List<SuperbrowseLabel> get labels;
   @JsonKey(name: 'image')
-  SuperbrowseImage? get image => throw _privateConstructorUsedError;
+  SuperbrowseImage? get image;
   @JsonKey(name: 'action')
-  SuperbrowseAction? get action => throw _privateConstructorUsedError;
+  SuperbrowseAction? get action;
   @JsonKey(name: 'longPressAction')
-  SuperbrowseAction? get longPressAction => throw _privateConstructorUsedError;
+  SuperbrowseAction? get longPressAction;
   @override
   @JsonKey(ignore: true)
   $HeaderSuperbrowseItemCopyWith<HeaderSuperbrowseItem> get copyWith =>
@@ -5942,7 +5933,9 @@ class _$HeroSuperbrowseItem implements HeroSuperbrowseItem {
       @JsonKey(name: 'action') this.action,
       @JsonKey(name: 'longPressAction') this.longPressAction,
       @JsonKey(name: 'badges') this.badges,
-      @JsonKey(name: 'formFactors') this.formFactors});
+      @JsonKey(name: 'formFactors') this.formFactors,
+      String? $type})
+      : $type = $type ?? 'hero';
 
   factory _$HeroSuperbrowseItem.fromJson(Map<String, dynamic> json) =>
       _$$HeroSuperbrowseItemFromJson(json);
@@ -5972,6 +5965,9 @@ class _$HeroSuperbrowseItem implements HeroSuperbrowseItem {
   @JsonKey(name: 'formFactors')
   final FormFactors? formFactors;
 
+  @JsonKey(name: 'type')
+  final String $type;
+
   @override
   String toString() {
     return 'SuperbrowseItem.hero(pandoraId: $pandoraId, analyticsToken: $analyticsToken, labels: $labels, image: $image, action: $action, longPressAction: $longPressAction, badges: $badges, formFactors: $formFactors)';
@@ -5980,40 +5976,32 @@ class _$HeroSuperbrowseItem implements HeroSuperbrowseItem {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is HeroSuperbrowseItem &&
-            (identical(other.pandoraId, pandoraId) ||
-                const DeepCollectionEquality()
-                    .equals(other.pandoraId, pandoraId)) &&
-            (identical(other.analyticsToken, analyticsToken) ||
-                const DeepCollectionEquality()
-                    .equals(other.analyticsToken, analyticsToken)) &&
-            (identical(other.labels, labels) ||
-                const DeepCollectionEquality().equals(other.labels, labels)) &&
-            (identical(other.image, image) ||
-                const DeepCollectionEquality().equals(other.image, image)) &&
-            (identical(other.action, action) ||
-                const DeepCollectionEquality().equals(other.action, action)) &&
-            (identical(other.longPressAction, longPressAction) ||
-                const DeepCollectionEquality()
-                    .equals(other.longPressAction, longPressAction)) &&
-            (identical(other.badges, badges) ||
-                const DeepCollectionEquality().equals(other.badges, badges)) &&
-            (identical(other.formFactors, formFactors) ||
-                const DeepCollectionEquality()
-                    .equals(other.formFactors, formFactors)));
+        (other.runtimeType == runtimeType &&
+            other is HeroSuperbrowseItem &&
+            const DeepCollectionEquality().equals(other.pandoraId, pandoraId) &&
+            const DeepCollectionEquality()
+                .equals(other.analyticsToken, analyticsToken) &&
+            const DeepCollectionEquality().equals(other.labels, labels) &&
+            const DeepCollectionEquality().equals(other.image, image) &&
+            const DeepCollectionEquality().equals(other.action, action) &&
+            const DeepCollectionEquality()
+                .equals(other.longPressAction, longPressAction) &&
+            const DeepCollectionEquality().equals(other.badges, badges) &&
+            const DeepCollectionEquality()
+                .equals(other.formFactors, formFactors));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(pandoraId) ^
-      const DeepCollectionEquality().hash(analyticsToken) ^
-      const DeepCollectionEquality().hash(labels) ^
-      const DeepCollectionEquality().hash(image) ^
-      const DeepCollectionEquality().hash(action) ^
-      const DeepCollectionEquality().hash(longPressAction) ^
-      const DeepCollectionEquality().hash(badges) ^
-      const DeepCollectionEquality().hash(formFactors);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(pandoraId),
+      const DeepCollectionEquality().hash(analyticsToken),
+      const DeepCollectionEquality().hash(labels),
+      const DeepCollectionEquality().hash(image),
+      const DeepCollectionEquality().hash(action),
+      const DeepCollectionEquality().hash(longPressAction),
+      const DeepCollectionEquality().hash(badges),
+      const DeepCollectionEquality().hash(formFactors));
 
   @JsonKey(ignore: true)
   @override
@@ -6618,7 +6606,7 @@ class _$HeroSuperbrowseItem implements HeroSuperbrowseItem {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$HeroSuperbrowseItemToJson(this)..['type'] = 'hero';
+    return _$$HeroSuperbrowseItemToJson(this);
   }
 }
 
@@ -6639,22 +6627,22 @@ abstract class HeroSuperbrowseItem implements SuperbrowseItem {
 
   @override
   @JsonKey(name: 'pandoraId')
-  String? get pandoraId => throw _privateConstructorUsedError;
+  String? get pandoraId;
   @override
   @JsonKey(name: 'analyticsToken')
-  String get analyticsToken => throw _privateConstructorUsedError;
+  String get analyticsToken;
   @JsonKey(name: 'labels')
-  List<SuperbrowseLabel> get labels => throw _privateConstructorUsedError;
+  List<SuperbrowseLabel> get labels;
   @JsonKey(name: 'image')
-  SuperbrowseImage get image => throw _privateConstructorUsedError;
+  SuperbrowseImage get image;
   @JsonKey(name: 'action')
-  SuperbrowseAction? get action => throw _privateConstructorUsedError;
+  SuperbrowseAction? get action;
   @JsonKey(name: 'longPressAction')
-  SuperbrowseAction? get longPressAction => throw _privateConstructorUsedError;
+  SuperbrowseAction? get longPressAction;
   @JsonKey(name: 'badges')
-  List<SuperbrowseBadge>? get badges => throw _privateConstructorUsedError;
+  List<SuperbrowseBadge>? get badges;
   @JsonKey(name: 'formFactors')
-  FormFactors? get formFactors => throw _privateConstructorUsedError;
+  FormFactors? get formFactors;
   @override
   @JsonKey(ignore: true)
   $HeroSuperbrowseItemCopyWith<HeroSuperbrowseItem> get copyWith =>
@@ -6841,7 +6829,9 @@ class _$LargeRowSuperbrowseItem implements LargeRowSuperbrowseItem {
       @JsonKey(name: 'badges')
           this.badges,
       @JsonKey(name: 'separatorBelow', fromJson: readNullableBool, toJson: writeNullableBool)
-          required this.separatorBelow});
+          required this.separatorBelow,
+      String? $type})
+      : $type = $type ?? 'large_row';
 
   factory _$LargeRowSuperbrowseItem.fromJson(Map<String, dynamic> json) =>
       _$$LargeRowSuperbrowseItemFromJson(json);
@@ -6880,6 +6870,9 @@ class _$LargeRowSuperbrowseItem implements LargeRowSuperbrowseItem {
       toJson: writeNullableBool)
   final bool separatorBelow;
 
+  @JsonKey(name: 'type')
+  final String $type;
+
   @override
   String toString() {
     return 'SuperbrowseItem.largeRow(pandoraId: $pandoraId, analyticsToken: $analyticsToken, labels: $labels, button: $button, action: $action, image: $image, rank: $rank, longPressAction: $longPressAction, badges: $badges, separatorBelow: $separatorBelow)';
@@ -6888,46 +6881,36 @@ class _$LargeRowSuperbrowseItem implements LargeRowSuperbrowseItem {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is LargeRowSuperbrowseItem &&
-            (identical(other.pandoraId, pandoraId) ||
-                const DeepCollectionEquality()
-                    .equals(other.pandoraId, pandoraId)) &&
-            (identical(other.analyticsToken, analyticsToken) ||
-                const DeepCollectionEquality()
-                    .equals(other.analyticsToken, analyticsToken)) &&
-            (identical(other.labels, labels) ||
-                const DeepCollectionEquality().equals(other.labels, labels)) &&
-            (identical(other.button, button) ||
-                const DeepCollectionEquality().equals(other.button, button)) &&
-            (identical(other.action, action) ||
-                const DeepCollectionEquality().equals(other.action, action)) &&
-            (identical(other.image, image) ||
-                const DeepCollectionEquality().equals(other.image, image)) &&
-            (identical(other.rank, rank) ||
-                const DeepCollectionEquality().equals(other.rank, rank)) &&
-            (identical(other.longPressAction, longPressAction) ||
-                const DeepCollectionEquality()
-                    .equals(other.longPressAction, longPressAction)) &&
-            (identical(other.badges, badges) ||
-                const DeepCollectionEquality().equals(other.badges, badges)) &&
-            (identical(other.separatorBelow, separatorBelow) ||
-                const DeepCollectionEquality()
-                    .equals(other.separatorBelow, separatorBelow)));
+        (other.runtimeType == runtimeType &&
+            other is LargeRowSuperbrowseItem &&
+            const DeepCollectionEquality().equals(other.pandoraId, pandoraId) &&
+            const DeepCollectionEquality()
+                .equals(other.analyticsToken, analyticsToken) &&
+            const DeepCollectionEquality().equals(other.labels, labels) &&
+            const DeepCollectionEquality().equals(other.button, button) &&
+            const DeepCollectionEquality().equals(other.action, action) &&
+            const DeepCollectionEquality().equals(other.image, image) &&
+            const DeepCollectionEquality().equals(other.rank, rank) &&
+            const DeepCollectionEquality()
+                .equals(other.longPressAction, longPressAction) &&
+            const DeepCollectionEquality().equals(other.badges, badges) &&
+            const DeepCollectionEquality()
+                .equals(other.separatorBelow, separatorBelow));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(pandoraId) ^
-      const DeepCollectionEquality().hash(analyticsToken) ^
-      const DeepCollectionEquality().hash(labels) ^
-      const DeepCollectionEquality().hash(button) ^
-      const DeepCollectionEquality().hash(action) ^
-      const DeepCollectionEquality().hash(image) ^
-      const DeepCollectionEquality().hash(rank) ^
-      const DeepCollectionEquality().hash(longPressAction) ^
-      const DeepCollectionEquality().hash(badges) ^
-      const DeepCollectionEquality().hash(separatorBelow);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(pandoraId),
+      const DeepCollectionEquality().hash(analyticsToken),
+      const DeepCollectionEquality().hash(labels),
+      const DeepCollectionEquality().hash(button),
+      const DeepCollectionEquality().hash(action),
+      const DeepCollectionEquality().hash(image),
+      const DeepCollectionEquality().hash(rank),
+      const DeepCollectionEquality().hash(longPressAction),
+      const DeepCollectionEquality().hash(badges),
+      const DeepCollectionEquality().hash(separatorBelow));
 
   @JsonKey(ignore: true)
   @override
@@ -7533,7 +7516,7 @@ class _$LargeRowSuperbrowseItem implements LargeRowSuperbrowseItem {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$LargeRowSuperbrowseItemToJson(this)..['type'] = 'large_row';
+    return _$$LargeRowSuperbrowseItemToJson(this);
   }
 }
 
@@ -7565,29 +7548,29 @@ abstract class LargeRowSuperbrowseItem implements SuperbrowseItem {
 
   @override
   @JsonKey(name: 'pandoraId')
-  String? get pandoraId => throw _privateConstructorUsedError;
+  String? get pandoraId;
   @override
   @JsonKey(name: 'analyticsToken')
-  String get analyticsToken => throw _privateConstructorUsedError;
+  String get analyticsToken;
   @JsonKey(name: 'labels')
-  List<SuperbrowseLabel>? get labels => throw _privateConstructorUsedError;
+  List<SuperbrowseLabel>? get labels;
   @JsonKey(name: 'button')
-  SuperbrowseButton? get button => throw _privateConstructorUsedError;
+  SuperbrowseButton? get button;
   @JsonKey(name: 'action')
-  SuperbrowseAction? get action => throw _privateConstructorUsedError;
+  SuperbrowseAction? get action;
   @JsonKey(name: 'image')
-  SuperbrowseImage get image => throw _privateConstructorUsedError;
+  SuperbrowseImage get image;
   @JsonKey(name: 'rank')
-  SuperbrowseLabel? get rank => throw _privateConstructorUsedError;
+  SuperbrowseLabel? get rank;
   @JsonKey(name: 'longPressAction')
-  SuperbrowseAction? get longPressAction => throw _privateConstructorUsedError;
+  SuperbrowseAction? get longPressAction;
   @JsonKey(name: 'badges')
-  List<SuperbrowseBadge>? get badges => throw _privateConstructorUsedError;
+  List<SuperbrowseBadge>? get badges;
   @JsonKey(
       name: 'separatorBelow',
       fromJson: readNullableBool,
       toJson: writeNullableBool)
-  bool get separatorBelow => throw _privateConstructorUsedError;
+  bool get separatorBelow;
   @override
   @JsonKey(ignore: true)
   $LargeRowSuperbrowseItemCopyWith<LargeRowSuperbrowseItem> get copyWith =>
@@ -7706,7 +7689,9 @@ class _$SmallRowSuperbrowseItem implements SmallRowSuperbrowseItem {
       @JsonKey(name: 'labels') required this.labels,
       @JsonKey(name: 'button') this.button,
       @JsonKey(name: 'action') this.action,
-      @JsonKey(name: 'longPressAction') this.longPressAction});
+      @JsonKey(name: 'longPressAction') this.longPressAction,
+      String? $type})
+      : $type = $type ?? 'small_row';
 
   factory _$SmallRowSuperbrowseItem.fromJson(Map<String, dynamic> json) =>
       _$$SmallRowSuperbrowseItemFromJson(json);
@@ -7730,6 +7715,9 @@ class _$SmallRowSuperbrowseItem implements SmallRowSuperbrowseItem {
   @JsonKey(name: 'longPressAction')
   final SuperbrowseAction? longPressAction;
 
+  @JsonKey(name: 'type')
+  final String $type;
+
   @override
   String toString() {
     return 'SuperbrowseItem.smallRow(pandoraId: $pandoraId, analyticsToken: $analyticsToken, labels: $labels, button: $button, action: $action, longPressAction: $longPressAction)';
@@ -7738,33 +7726,27 @@ class _$SmallRowSuperbrowseItem implements SmallRowSuperbrowseItem {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is SmallRowSuperbrowseItem &&
-            (identical(other.pandoraId, pandoraId) ||
-                const DeepCollectionEquality()
-                    .equals(other.pandoraId, pandoraId)) &&
-            (identical(other.analyticsToken, analyticsToken) ||
-                const DeepCollectionEquality()
-                    .equals(other.analyticsToken, analyticsToken)) &&
-            (identical(other.labels, labels) ||
-                const DeepCollectionEquality().equals(other.labels, labels)) &&
-            (identical(other.button, button) ||
-                const DeepCollectionEquality().equals(other.button, button)) &&
-            (identical(other.action, action) ||
-                const DeepCollectionEquality().equals(other.action, action)) &&
-            (identical(other.longPressAction, longPressAction) ||
-                const DeepCollectionEquality()
-                    .equals(other.longPressAction, longPressAction)));
+        (other.runtimeType == runtimeType &&
+            other is SmallRowSuperbrowseItem &&
+            const DeepCollectionEquality().equals(other.pandoraId, pandoraId) &&
+            const DeepCollectionEquality()
+                .equals(other.analyticsToken, analyticsToken) &&
+            const DeepCollectionEquality().equals(other.labels, labels) &&
+            const DeepCollectionEquality().equals(other.button, button) &&
+            const DeepCollectionEquality().equals(other.action, action) &&
+            const DeepCollectionEquality()
+                .equals(other.longPressAction, longPressAction));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(pandoraId) ^
-      const DeepCollectionEquality().hash(analyticsToken) ^
-      const DeepCollectionEquality().hash(labels) ^
-      const DeepCollectionEquality().hash(button) ^
-      const DeepCollectionEquality().hash(action) ^
-      const DeepCollectionEquality().hash(longPressAction);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(pandoraId),
+      const DeepCollectionEquality().hash(analyticsToken),
+      const DeepCollectionEquality().hash(labels),
+      const DeepCollectionEquality().hash(button),
+      const DeepCollectionEquality().hash(action),
+      const DeepCollectionEquality().hash(longPressAction));
 
   @JsonKey(ignore: true)
   @override
@@ -8370,7 +8352,7 @@ class _$SmallRowSuperbrowseItem implements SmallRowSuperbrowseItem {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$SmallRowSuperbrowseItemToJson(this)..['type'] = 'small_row';
+    return _$$SmallRowSuperbrowseItemToJson(this);
   }
 }
 
@@ -8394,18 +8376,18 @@ abstract class SmallRowSuperbrowseItem implements SuperbrowseItem {
 
   @override
   @JsonKey(name: 'pandoraId')
-  String? get pandoraId => throw _privateConstructorUsedError;
+  String? get pandoraId;
   @override
   @JsonKey(name: 'analyticsToken')
-  String get analyticsToken => throw _privateConstructorUsedError;
+  String get analyticsToken;
   @JsonKey(name: 'labels')
-  List<SuperbrowseLabel> get labels => throw _privateConstructorUsedError;
+  List<SuperbrowseLabel> get labels;
   @JsonKey(name: 'button')
-  SuperbrowseButton? get button => throw _privateConstructorUsedError;
+  SuperbrowseButton? get button;
   @JsonKey(name: 'action')
-  SuperbrowseAction? get action => throw _privateConstructorUsedError;
+  SuperbrowseAction? get action;
   @JsonKey(name: 'longPressAction')
-  SuperbrowseAction? get longPressAction => throw _privateConstructorUsedError;
+  SuperbrowseAction? get longPressAction;
   @override
   @JsonKey(ignore: true)
   $SmallRowSuperbrowseItemCopyWith<SmallRowSuperbrowseItem> get copyWith =>
@@ -8527,7 +8509,9 @@ class _$SplitSuperbrowseItem implements SplitSuperbrowseItem {
       @JsonKey(name: 'image') required this.image,
       @JsonKey(name: 'action') this.action,
       @JsonKey(name: 'longPressAction') this.longPressAction,
-      @JsonKey(name: 'badges') this.badges});
+      @JsonKey(name: 'badges') this.badges,
+      String? $type})
+      : $type = $type ?? 'split';
 
   factory _$SplitSuperbrowseItem.fromJson(Map<String, dynamic> json) =>
       _$$SplitSuperbrowseItemFromJson(json);
@@ -8554,6 +8538,9 @@ class _$SplitSuperbrowseItem implements SplitSuperbrowseItem {
   @JsonKey(name: 'badges')
   final List<SuperbrowseBadge>? badges;
 
+  @JsonKey(name: 'type')
+  final String $type;
+
   @override
   String toString() {
     return 'SuperbrowseItem.split(pandoraId: $pandoraId, analyticsToken: $analyticsToken, labels: $labels, image: $image, action: $action, longPressAction: $longPressAction, badges: $badges)';
@@ -8562,36 +8549,29 @@ class _$SplitSuperbrowseItem implements SplitSuperbrowseItem {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is SplitSuperbrowseItem &&
-            (identical(other.pandoraId, pandoraId) ||
-                const DeepCollectionEquality()
-                    .equals(other.pandoraId, pandoraId)) &&
-            (identical(other.analyticsToken, analyticsToken) ||
-                const DeepCollectionEquality()
-                    .equals(other.analyticsToken, analyticsToken)) &&
-            (identical(other.labels, labels) ||
-                const DeepCollectionEquality().equals(other.labels, labels)) &&
-            (identical(other.image, image) ||
-                const DeepCollectionEquality().equals(other.image, image)) &&
-            (identical(other.action, action) ||
-                const DeepCollectionEquality().equals(other.action, action)) &&
-            (identical(other.longPressAction, longPressAction) ||
-                const DeepCollectionEquality()
-                    .equals(other.longPressAction, longPressAction)) &&
-            (identical(other.badges, badges) ||
-                const DeepCollectionEquality().equals(other.badges, badges)));
+        (other.runtimeType == runtimeType &&
+            other is SplitSuperbrowseItem &&
+            const DeepCollectionEquality().equals(other.pandoraId, pandoraId) &&
+            const DeepCollectionEquality()
+                .equals(other.analyticsToken, analyticsToken) &&
+            const DeepCollectionEquality().equals(other.labels, labels) &&
+            const DeepCollectionEquality().equals(other.image, image) &&
+            const DeepCollectionEquality().equals(other.action, action) &&
+            const DeepCollectionEquality()
+                .equals(other.longPressAction, longPressAction) &&
+            const DeepCollectionEquality().equals(other.badges, badges));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(pandoraId) ^
-      const DeepCollectionEquality().hash(analyticsToken) ^
-      const DeepCollectionEquality().hash(labels) ^
-      const DeepCollectionEquality().hash(image) ^
-      const DeepCollectionEquality().hash(action) ^
-      const DeepCollectionEquality().hash(longPressAction) ^
-      const DeepCollectionEquality().hash(badges);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(pandoraId),
+      const DeepCollectionEquality().hash(analyticsToken),
+      const DeepCollectionEquality().hash(labels),
+      const DeepCollectionEquality().hash(image),
+      const DeepCollectionEquality().hash(action),
+      const DeepCollectionEquality().hash(longPressAction),
+      const DeepCollectionEquality().hash(badges));
 
   @JsonKey(ignore: true)
   @override
@@ -9197,7 +9177,7 @@ class _$SplitSuperbrowseItem implements SplitSuperbrowseItem {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$SplitSuperbrowseItemToJson(this)..['type'] = 'split';
+    return _$$SplitSuperbrowseItemToJson(this);
   }
 }
 
@@ -9217,20 +9197,20 @@ abstract class SplitSuperbrowseItem implements SuperbrowseItem {
 
   @override
   @JsonKey(name: 'pandoraId')
-  String? get pandoraId => throw _privateConstructorUsedError;
+  String? get pandoraId;
   @override
   @JsonKey(name: 'analyticsToken')
-  String get analyticsToken => throw _privateConstructorUsedError;
+  String get analyticsToken;
   @JsonKey(name: 'labels')
-  List<SuperbrowseLabel> get labels => throw _privateConstructorUsedError;
+  List<SuperbrowseLabel> get labels;
   @JsonKey(name: 'image')
-  SuperbrowseImage get image => throw _privateConstructorUsedError;
+  SuperbrowseImage get image;
   @JsonKey(name: 'action')
-  SuperbrowseAction? get action => throw _privateConstructorUsedError;
+  SuperbrowseAction? get action;
   @JsonKey(name: 'longPressAction')
-  SuperbrowseAction? get longPressAction => throw _privateConstructorUsedError;
+  SuperbrowseAction? get longPressAction;
   @JsonKey(name: 'badges')
-  List<SuperbrowseBadge>? get badges => throw _privateConstructorUsedError;
+  List<SuperbrowseBadge>? get badges;
   @override
   @JsonKey(ignore: true)
   $SplitSuperbrowseItemCopyWith<SplitSuperbrowseItem> get copyWith =>
@@ -9352,7 +9332,9 @@ class _$TileSuperbrowseItem implements TileSuperbrowseItem {
       @JsonKey(name: 'image') required this.image,
       @JsonKey(name: 'action') this.action,
       @JsonKey(name: 'longPressAction') this.longPressAction,
-      @JsonKey(name: 'voiceText') this.voiceText});
+      @JsonKey(name: 'voiceText') this.voiceText,
+      String? $type})
+      : $type = $type ?? 'tile';
 
   factory _$TileSuperbrowseItem.fromJson(Map<String, dynamic> json) =>
       _$$TileSuperbrowseItemFromJson(json);
@@ -9379,6 +9361,9 @@ class _$TileSuperbrowseItem implements TileSuperbrowseItem {
   @JsonKey(name: 'voiceText')
   final String? voiceText;
 
+  @JsonKey(name: 'type')
+  final String $type;
+
   @override
   String toString() {
     return 'SuperbrowseItem.tile(pandoraId: $pandoraId, analyticsToken: $analyticsToken, labels: $labels, image: $image, action: $action, longPressAction: $longPressAction, voiceText: $voiceText)';
@@ -9387,37 +9372,29 @@ class _$TileSuperbrowseItem implements TileSuperbrowseItem {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is TileSuperbrowseItem &&
-            (identical(other.pandoraId, pandoraId) ||
-                const DeepCollectionEquality()
-                    .equals(other.pandoraId, pandoraId)) &&
-            (identical(other.analyticsToken, analyticsToken) ||
-                const DeepCollectionEquality()
-                    .equals(other.analyticsToken, analyticsToken)) &&
-            (identical(other.labels, labels) ||
-                const DeepCollectionEquality().equals(other.labels, labels)) &&
-            (identical(other.image, image) ||
-                const DeepCollectionEquality().equals(other.image, image)) &&
-            (identical(other.action, action) ||
-                const DeepCollectionEquality().equals(other.action, action)) &&
-            (identical(other.longPressAction, longPressAction) ||
-                const DeepCollectionEquality()
-                    .equals(other.longPressAction, longPressAction)) &&
-            (identical(other.voiceText, voiceText) ||
-                const DeepCollectionEquality()
-                    .equals(other.voiceText, voiceText)));
+        (other.runtimeType == runtimeType &&
+            other is TileSuperbrowseItem &&
+            const DeepCollectionEquality().equals(other.pandoraId, pandoraId) &&
+            const DeepCollectionEquality()
+                .equals(other.analyticsToken, analyticsToken) &&
+            const DeepCollectionEquality().equals(other.labels, labels) &&
+            const DeepCollectionEquality().equals(other.image, image) &&
+            const DeepCollectionEquality().equals(other.action, action) &&
+            const DeepCollectionEquality()
+                .equals(other.longPressAction, longPressAction) &&
+            const DeepCollectionEquality().equals(other.voiceText, voiceText));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(pandoraId) ^
-      const DeepCollectionEquality().hash(analyticsToken) ^
-      const DeepCollectionEquality().hash(labels) ^
-      const DeepCollectionEquality().hash(image) ^
-      const DeepCollectionEquality().hash(action) ^
-      const DeepCollectionEquality().hash(longPressAction) ^
-      const DeepCollectionEquality().hash(voiceText);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(pandoraId),
+      const DeepCollectionEquality().hash(analyticsToken),
+      const DeepCollectionEquality().hash(labels),
+      const DeepCollectionEquality().hash(image),
+      const DeepCollectionEquality().hash(action),
+      const DeepCollectionEquality().hash(longPressAction),
+      const DeepCollectionEquality().hash(voiceText));
 
   @JsonKey(ignore: true)
   @override
@@ -10022,7 +9999,7 @@ class _$TileSuperbrowseItem implements TileSuperbrowseItem {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$TileSuperbrowseItemToJson(this)..['type'] = 'tile';
+    return _$$TileSuperbrowseItemToJson(this);
   }
 }
 
@@ -10041,20 +10018,20 @@ abstract class TileSuperbrowseItem implements SuperbrowseItem {
 
   @override
   @JsonKey(name: 'pandoraId')
-  String? get pandoraId => throw _privateConstructorUsedError;
+  String? get pandoraId;
   @override
   @JsonKey(name: 'analyticsToken')
-  String get analyticsToken => throw _privateConstructorUsedError;
+  String get analyticsToken;
   @JsonKey(name: 'labels')
-  List<SuperbrowseLabel>? get labels => throw _privateConstructorUsedError;
+  List<SuperbrowseLabel>? get labels;
   @JsonKey(name: 'image')
-  SuperbrowseImage get image => throw _privateConstructorUsedError;
+  SuperbrowseImage get image;
   @JsonKey(name: 'action')
-  SuperbrowseAction? get action => throw _privateConstructorUsedError;
+  SuperbrowseAction? get action;
   @JsonKey(name: 'longPressAction')
-  SuperbrowseAction? get longPressAction => throw _privateConstructorUsedError;
+  SuperbrowseAction? get longPressAction;
   @JsonKey(name: 'voiceText')
-  String? get voiceText => throw _privateConstructorUsedError;
+  String? get voiceText;
   @override
   @JsonKey(ignore: true)
   $TileSuperbrowseItemCopyWith<TileSuperbrowseItem> get copyWith =>

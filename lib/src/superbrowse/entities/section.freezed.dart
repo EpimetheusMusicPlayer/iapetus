@@ -1,5 +1,6 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'section.dart';
@@ -34,7 +35,7 @@ class _$SuperbrowseSectionTearOff {
     );
   }
 
-  SuperbrowseSection fromJson(Map<String, Object> json) {
+  SuperbrowseSection fromJson(Map<String, Object?> json) {
     return SuperbrowseSection.fromJson(json);
   }
 }
@@ -225,25 +226,22 @@ class _$_SuperbrowseSection implements _SuperbrowseSection {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _SuperbrowseSection &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.header, header) ||
-                const DeepCollectionEquality().equals(other.header, header)) &&
-            (identical(other.footer, footer) ||
-                const DeepCollectionEquality().equals(other.footer, footer)) &&
-            (identical(other.subsections, subsections) ||
-                const DeepCollectionEquality()
-                    .equals(other.subsections, subsections)));
+        (other.runtimeType == runtimeType &&
+            other is _SuperbrowseSection &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality().equals(other.header, header) &&
+            const DeepCollectionEquality().equals(other.footer, footer) &&
+            const DeepCollectionEquality()
+                .equals(other.subsections, subsections));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(header) ^
-      const DeepCollectionEquality().hash(footer) ^
-      const DeepCollectionEquality().hash(subsections);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(header),
+      const DeepCollectionEquality().hash(footer),
+      const DeepCollectionEquality().hash(subsections));
 
   @JsonKey(ignore: true)
   @override
@@ -272,17 +270,16 @@ abstract class _SuperbrowseSection implements SuperbrowseSection {
 
   @override
   @JsonKey(name: 'id')
-  String get id => throw _privateConstructorUsedError;
+  String get id;
   @override
   @JsonKey(name: 'title')
-  SuperbrowseItem? get header => throw _privateConstructorUsedError;
+  SuperbrowseItem? get header;
   @override
   @JsonKey(name: 'viewAll')
-  SuperbrowseItem? get footer => throw _privateConstructorUsedError;
+  SuperbrowseItem? get footer;
   @override
   @JsonKey(name: 'subsections')
-  List<SuperbrowseSubsection>? get subsections =>
-      throw _privateConstructorUsedError;
+  List<SuperbrowseSubsection>? get subsections;
   @override
   @JsonKey(ignore: true)
   _$SuperbrowseSectionCopyWith<_SuperbrowseSection> get copyWith =>

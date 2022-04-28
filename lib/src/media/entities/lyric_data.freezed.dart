@@ -1,5 +1,6 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'lyric_data.dart';
@@ -32,7 +33,7 @@ class _$MediaLyricDataTearOff {
     );
   }
 
-  MediaLyricData fromJson(Map<String, Object> json) {
+  MediaLyricData fromJson(Map<String, Object?> json) {
     return MediaLyricData.fromJson(json);
   }
 }
@@ -174,24 +175,21 @@ class _$_IapetusMediaLyricData implements _IapetusMediaLyricData {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _IapetusMediaLyricData &&
-            (identical(other.lyricId, lyricId) ||
-                const DeepCollectionEquality()
-                    .equals(other.lyricId, lyricId)) &&
-            (identical(other.lyricSnippetHtml, lyricSnippetHtml) ||
-                const DeepCollectionEquality()
-                    .equals(other.lyricSnippetHtml, lyricSnippetHtml)) &&
-            (identical(other.lyricCreditsHtml, lyricCreditsHtml) ||
-                const DeepCollectionEquality()
-                    .equals(other.lyricCreditsHtml, lyricCreditsHtml)));
+        (other.runtimeType == runtimeType &&
+            other is _IapetusMediaLyricData &&
+            const DeepCollectionEquality().equals(other.lyricId, lyricId) &&
+            const DeepCollectionEquality()
+                .equals(other.lyricSnippetHtml, lyricSnippetHtml) &&
+            const DeepCollectionEquality()
+                .equals(other.lyricCreditsHtml, lyricCreditsHtml));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(lyricId) ^
-      const DeepCollectionEquality().hash(lyricSnippetHtml) ^
-      const DeepCollectionEquality().hash(lyricCreditsHtml);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(lyricId),
+      const DeepCollectionEquality().hash(lyricSnippetHtml),
+      const DeepCollectionEquality().hash(lyricCreditsHtml));
 
   @JsonKey(ignore: true)
   @override
@@ -217,13 +215,13 @@ abstract class _IapetusMediaLyricData implements MediaLyricData {
 
   @override
   @JsonKey(name: 'lyricId')
-  String get lyricId => throw _privateConstructorUsedError;
+  String get lyricId;
   @override
   @JsonKey(name: 'lyricSnippet')
-  String get lyricSnippetHtml => throw _privateConstructorUsedError;
+  String get lyricSnippetHtml;
   @override
   @JsonKey(name: 'lyricCredits')
-  String get lyricCreditsHtml => throw _privateConstructorUsedError;
+  String get lyricCreditsHtml;
   @override
   @JsonKey(ignore: true)
   _$IapetusMediaLyricDataCopyWith<_IapetusMediaLyricData> get copyWith =>

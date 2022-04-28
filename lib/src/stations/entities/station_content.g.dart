@@ -15,7 +15,7 @@ _$_StationContent _$$_StationContentFromJson(Map<String, dynamic> json) =>
       artistDetailUrl: Uri.parse(json['artistDetailUrl'] as String),
       artistExplorerUrl: Uri.parse(json['artistExplorerUrl'] as String),
       songDetailUrl: Uri.parse(json['songDetailUrl'] as String),
-      trackType: _$enumDecode(_$TrackTypeEnumMap, json['trackType']),
+      trackType: $enumDecode(_$TrackTypeEnumMap, json['trackType']),
       nowPlayingStationAdUrl:
           Uri.parse(json['nowPlayingStationAdUrl'] as String),
       allowStartStationFromTrack: json['allowStartStationFromTrack'] as bool,
@@ -24,7 +24,7 @@ _$_StationContent _$$_StationContentFromJson(Map<String, dynamic> json) =>
       nowPlayingStationPremiumAdTargeting:
           json['nowPlayingStationPremiumAdTargeting'] as String,
       allowShareTrack: json['allowShareTrack'] as bool,
-      pandoraType: _$enumDecode(_$PandoraTypeEnumMap, json['pandoraType']),
+      pandoraType: $enumDecode(_$PandoraTypeEnumMap, json['pandoraType']),
       songIdentity: json['songIdentity'] as String,
       nowPlayingStationPremiumAdUrl:
           Uri.parse(json['nowPlayingStationPremiumAdUrl'] as String),
@@ -42,7 +42,7 @@ _$_StationContent _$$_StationContentFromJson(Map<String, dynamic> json) =>
       allowBuyTrack: json['allowBuyTrack'] as bool,
       albumDetailUrl: Uri.parse(json['albumDetailUrl'] as String),
       audioUrlMap: (json['audioUrlMap'] as Map<String, dynamic>).map(
-        (k, e) => MapEntry(_$enumDecode(_$AudioUrlQualityEnumMap, k),
+        (k, e) => MapEntry($enumDecode(_$AudioUrlQualityEnumMap, k),
             AudioUrlData.fromJson(e as Map<String, dynamic>)),
       ),
       albumIdentity: json['albumIdentity'] as String,
@@ -53,7 +53,7 @@ _$_StationContent _$$_StationContentFromJson(Map<String, dynamic> json) =>
       songExplorerUrl: Uri.parse(json['songExplorerUrl'] as String),
       nowPlayingStationPremiumAdUnit:
           json['nowPlayingStationPremiumAdUnit'] as String,
-      songRating: _$enumDecode(_$MediaRatingEnumMap, json['songRating']),
+      songRating: $enumDecode(_$MediaRatingEnumMap, json['songRating']),
       trackKey: json['trackKey'] == null
           ? null
           : TrackKey.fromJson(json['trackKey'] as Map<String, dynamic>),
@@ -120,32 +120,6 @@ Map<String, dynamic> _$$_StationContentToJson(_$_StationContent instance) =>
       'disableSkipButton': instance.disableSkipButton,
       'modeId': instance.modeId,
     };
-
-K _$enumDecode<K, V>(
-  Map<K, V> enumValues,
-  Object? source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    throw ArgumentError(
-      'A value must be provided. Supported values: '
-      '${enumValues.values.join(', ')}',
-    );
-  }
-
-  return enumValues.entries.singleWhere(
-    (e) => e.value == source,
-    orElse: () {
-      if (unknownValue == null) {
-        throw ArgumentError(
-          '`$source` is not one of the supported values: '
-          '${enumValues.values.join(', ')}',
-        );
-      }
-      return MapEntry(unknownValue, enumValues.values.first);
-    },
-  ).key;
-}
 
 const _$TrackTypeEnumMap = {
   TrackType.track: 'Track',

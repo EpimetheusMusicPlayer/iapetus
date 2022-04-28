@@ -1,5 +1,6 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'artist_recommendation.dart';
@@ -47,7 +48,7 @@ class _$ArtistRecommendationTearOff {
     );
   }
 
-  ArtistRecommendation fromJson(Map<String, Object> json) {
+  ArtistRecommendation fromJson(Map<String, Object?> json) {
     return ArtistRecommendation.fromJson(json);
   }
 }
@@ -290,38 +291,31 @@ class _$_ArtistRecommendation implements _ArtistRecommendation {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _ArtistRecommendation &&
-            (identical(other.artistName, artistName) ||
-                const DeepCollectionEquality()
-                    .equals(other.artistName, artistName)) &&
-            (identical(other.score, score) ||
-                const DeepCollectionEquality().equals(other.score, score)) &&
-            (identical(other.likelyMatch, likelyMatch) ||
-                const DeepCollectionEquality()
-                    .equals(other.likelyMatch, likelyMatch)) &&
-            (identical(other.artUrl, artUrl) ||
-                const DeepCollectionEquality().equals(other.artUrl, artUrl)) &&
-            (identical(other.musicToken, musicToken) ||
-                const DeepCollectionEquality()
-                    .equals(other.musicToken, musicToken)) &&
-            (identical(other.pandoraId, pandoraId) ||
-                const DeepCollectionEquality()
-                    .equals(other.pandoraId, pandoraId)) &&
-            (identical(other.explanation, explanation) ||
-                const DeepCollectionEquality()
-                    .equals(other.explanation, explanation)));
+        (other.runtimeType == runtimeType &&
+            other is _ArtistRecommendation &&
+            const DeepCollectionEquality()
+                .equals(other.artistName, artistName) &&
+            const DeepCollectionEquality().equals(other.score, score) &&
+            const DeepCollectionEquality()
+                .equals(other.likelyMatch, likelyMatch) &&
+            const DeepCollectionEquality().equals(other.artUrl, artUrl) &&
+            const DeepCollectionEquality()
+                .equals(other.musicToken, musicToken) &&
+            const DeepCollectionEquality().equals(other.pandoraId, pandoraId) &&
+            const DeepCollectionEquality()
+                .equals(other.explanation, explanation));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(artistName) ^
-      const DeepCollectionEquality().hash(score) ^
-      const DeepCollectionEquality().hash(likelyMatch) ^
-      const DeepCollectionEquality().hash(artUrl) ^
-      const DeepCollectionEquality().hash(musicToken) ^
-      const DeepCollectionEquality().hash(pandoraId) ^
-      const DeepCollectionEquality().hash(explanation);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(artistName),
+      const DeepCollectionEquality().hash(score),
+      const DeepCollectionEquality().hash(likelyMatch),
+      const DeepCollectionEquality().hash(artUrl),
+      const DeepCollectionEquality().hash(musicToken),
+      const DeepCollectionEquality().hash(pandoraId),
+      const DeepCollectionEquality().hash(explanation));
 
   @JsonKey(ignore: true)
   @override
@@ -357,29 +351,29 @@ abstract class _ArtistRecommendation implements ArtistRecommendation {
 
   @override
   @JsonKey(name: 'artistName')
-  String get artistName => throw _privateConstructorUsedError;
+  String get artistName;
   @override
   @JsonKey(
       name: 'score',
       fromJson: readScore,
       toJson: writeScore,
       includeIfNull: true)
-  int? get score => throw _privateConstructorUsedError;
+  int? get score;
   @override
   @JsonKey(name: 'likelyMatch')
-  bool get likelyMatch => throw _privateConstructorUsedError;
+  bool get likelyMatch;
   @override
   @JsonKey(name: 'artUrl')
-  Uri? get artUrl => throw _privateConstructorUsedError;
+  Uri? get artUrl;
   @override
   @JsonKey(name: 'musicToken')
-  String get musicToken => throw _privateConstructorUsedError;
+  String get musicToken;
   @override
   @JsonKey(name: 'pandoraId')
-  String get pandoraId => throw _privateConstructorUsedError;
+  String get pandoraId;
   @override
   @JsonKey(name: 'explanation')
-  String get explanation => throw _privateConstructorUsedError;
+  String get explanation;
   @override
   @JsonKey(ignore: true)
   _$ArtistRecommendationCopyWith<_ArtistRecommendation> get copyWith =>

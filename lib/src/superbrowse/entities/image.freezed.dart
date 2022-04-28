@@ -1,5 +1,6 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'image.dart';
@@ -53,7 +54,7 @@ class _$SuperbrowseImageTearOff {
     );
   }
 
-  SuperbrowseImage fromJson(Map<String, Object> json) {
+  SuperbrowseImage fromJson(Map<String, Object?> json) {
     return SuperbrowseImage.fromJson(json);
   }
 }
@@ -341,45 +342,34 @@ class _$_SuperbrowseImage extends _SuperbrowseImage {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _SuperbrowseImage &&
-            (identical(other.border, border) ||
-                const DeepCollectionEquality().equals(other.border, border)) &&
-            (identical(other.circular, circular) ||
-                const DeepCollectionEquality()
-                    .equals(other.circular, circular)) &&
-            (identical(other.color, color) ||
-                const DeepCollectionEquality().equals(other.color, color)) &&
-            (identical(other.fullUrl, fullUrl) ||
-                const DeepCollectionEquality()
-                    .equals(other.fullUrl, fullUrl)) &&
-            (identical(other.fullUrlDark, fullUrlDark) ||
-                const DeepCollectionEquality()
-                    .equals(other.fullUrlDark, fullUrlDark)) &&
-            (identical(other.scalableUrl, scalableUrl) ||
-                const DeepCollectionEquality()
-                    .equals(other.scalableUrl, scalableUrl)) &&
-            (identical(other.sizedUrl, sizedUrl) ||
-                const DeepCollectionEquality()
-                    .equals(other.sizedUrl, sizedUrl)) &&
-            (identical(other.sizedUrlDart, sizedUrlDart) ||
-                const DeepCollectionEquality()
-                    .equals(other.sizedUrlDart, sizedUrlDart)) &&
-            (identical(other.sizes, sizes) ||
-                const DeepCollectionEquality().equals(other.sizes, sizes)));
+        (other.runtimeType == runtimeType &&
+            other is _SuperbrowseImage &&
+            const DeepCollectionEquality().equals(other.border, border) &&
+            const DeepCollectionEquality().equals(other.circular, circular) &&
+            const DeepCollectionEquality().equals(other.color, color) &&
+            const DeepCollectionEquality().equals(other.fullUrl, fullUrl) &&
+            const DeepCollectionEquality()
+                .equals(other.fullUrlDark, fullUrlDark) &&
+            const DeepCollectionEquality()
+                .equals(other.scalableUrl, scalableUrl) &&
+            const DeepCollectionEquality().equals(other.sizedUrl, sizedUrl) &&
+            const DeepCollectionEquality()
+                .equals(other.sizedUrlDart, sizedUrlDart) &&
+            const DeepCollectionEquality().equals(other.sizes, sizes));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(border) ^
-      const DeepCollectionEquality().hash(circular) ^
-      const DeepCollectionEquality().hash(color) ^
-      const DeepCollectionEquality().hash(fullUrl) ^
-      const DeepCollectionEquality().hash(fullUrlDark) ^
-      const DeepCollectionEquality().hash(scalableUrl) ^
-      const DeepCollectionEquality().hash(sizedUrl) ^
-      const DeepCollectionEquality().hash(sizedUrlDart) ^
-      const DeepCollectionEquality().hash(sizes);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(border),
+      const DeepCollectionEquality().hash(circular),
+      const DeepCollectionEquality().hash(color),
+      const DeepCollectionEquality().hash(fullUrl),
+      const DeepCollectionEquality().hash(fullUrlDark),
+      const DeepCollectionEquality().hash(scalableUrl),
+      const DeepCollectionEquality().hash(sizedUrl),
+      const DeepCollectionEquality().hash(sizedUrlDart),
+      const DeepCollectionEquality().hash(sizes));
 
   @JsonKey(ignore: true)
   @override
@@ -420,35 +410,35 @@ abstract class _SuperbrowseImage extends SuperbrowseImage {
   @override
   @JsonKey(
       name: 'border', fromJson: readNullableBool, toJson: writeNullableBool)
-  bool get border => throw _privateConstructorUsedError;
+  bool get border;
   @override
   @JsonKey(
       name: 'circular', fromJson: readNullableBool, toJson: writeNullableBool)
-  bool get circular => throw _privateConstructorUsedError;
+  bool get circular;
   @override
   @JsonKey(
       name: 'dominantColor',
       fromJson: readOptionalColor,
       toJson: writeOptionalColor)
-  int? get color => throw _privateConstructorUsedError;
+  int? get color;
   @override
   @JsonKey(name: 'fullUrl')
-  Uri? get fullUrl => throw _privateConstructorUsedError;
+  Uri? get fullUrl;
   @override
   @JsonKey(name: 'fullUrlDark')
-  Uri? get fullUrlDark => throw _privateConstructorUsedError;
+  Uri? get fullUrlDark;
   @override
   @JsonKey(name: 'scalableUrl')
-  Uri? get scalableUrl => throw _privateConstructorUsedError;
+  Uri? get scalableUrl;
   @override
   @JsonKey(name: 'sizedUrl')
-  Uri? get sizedUrl => throw _privateConstructorUsedError;
+  Uri? get sizedUrl;
   @override
   @JsonKey(name: 'sizedUrlDark')
-  Uri? get sizedUrlDart => throw _privateConstructorUsedError;
+  Uri? get sizedUrlDart;
   @override
   @JsonKey(name: 'discreteSizes')
-  List<ArtSize>? get sizes => throw _privateConstructorUsedError;
+  List<ArtSize>? get sizes;
   @override
   @JsonKey(ignore: true)
   _$SuperbrowseImageCopyWith<_SuperbrowseImage> get copyWith =>

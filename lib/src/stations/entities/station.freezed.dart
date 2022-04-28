@@ -1,5 +1,6 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'station.dart';
@@ -77,7 +78,7 @@ class _$StationTearOff {
     );
   }
 
-  Station fromJson(Map<String, Object> json) {
+  Station fromJson(Map<String, Object?> json) {
     return Station.fromJson(json);
   }
 }
@@ -521,79 +522,61 @@ class _$_Station implements _Station {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _Station &&
-            (identical(other.suppressVideoAds, suppressVideoAds) ||
-                const DeepCollectionEquality()
-                    .equals(other.suppressVideoAds, suppressVideoAds)) &&
-            (identical(other.stationId, stationId) ||
-                const DeepCollectionEquality()
-                    .equals(other.stationId, stationId)) &&
-            (identical(other.allowAddMusic, allowAddMusic) ||
-                const DeepCollectionEquality()
-                    .equals(other.allowAddMusic, allowAddMusic)) &&
-            (identical(other.dateCreated, dateCreated) ||
-                const DeepCollectionEquality()
-                    .equals(other.dateCreated, dateCreated)) &&
-            (identical(other.stationDetailUrl, stationDetailUrl) ||
-                const DeepCollectionEquality()
-                    .equals(other.stationDetailUrl, stationDetailUrl)) &&
-            (identical(other.artUrl, artUrl) ||
-                const DeepCollectionEquality().equals(other.artUrl, artUrl)) &&
-            (identical(other.allowEditDescription, allowEditDescription) ||
-                const DeepCollectionEquality().equals(
-                    other.allowEditDescription, allowEditDescription)) &&
-            (identical(other.requiresCleanAds, requiresCleanAds) ||
-                const DeepCollectionEquality()
-                    .equals(other.requiresCleanAds, requiresCleanAds)) &&
-            (identical(other.isGenreStation, isGenreStation) ||
-                const DeepCollectionEquality()
-                    .equals(other.isGenreStation, isGenreStation)) &&
-            (identical(other.stationToken, stationToken) ||
-                const DeepCollectionEquality()
-                    .equals(other.stationToken, stationToken)) &&
-            (identical(other.stationName, stationName) ||
-                const DeepCollectionEquality()
-                    .equals(other.stationName, stationName)) &&
-            (identical(other.hasTakeoverModes, hasTakeoverModes) ||
-                const DeepCollectionEquality()
-                    .equals(other.hasTakeoverModes, hasTakeoverModes)) &&
-            (identical(other.isShared, isShared) ||
-                const DeepCollectionEquality()
-                    .equals(other.isShared, isShared)) &&
-            (identical(other.hasCuratedModes, hasCuratedModes) ||
-                const DeepCollectionEquality()
-                    .equals(other.hasCuratedModes, hasCuratedModes)) &&
-            (identical(other.allowDelete, allowDelete) ||
-                const DeepCollectionEquality()
-                    .equals(other.allowDelete, allowDelete)) &&
-            (identical(other.allowRename, allowRename) ||
-                const DeepCollectionEquality()
-                    .equals(other.allowRename, allowRename)) &&
-            (identical(other.stationSharingUrl, stationSharingUrl) ||
-                const DeepCollectionEquality()
-                    .equals(other.stationSharingUrl, stationSharingUrl)));
+        (other.runtimeType == runtimeType &&
+            other is _Station &&
+            const DeepCollectionEquality()
+                .equals(other.suppressVideoAds, suppressVideoAds) &&
+            const DeepCollectionEquality().equals(other.stationId, stationId) &&
+            const DeepCollectionEquality()
+                .equals(other.allowAddMusic, allowAddMusic) &&
+            const DeepCollectionEquality()
+                .equals(other.dateCreated, dateCreated) &&
+            const DeepCollectionEquality()
+                .equals(other.stationDetailUrl, stationDetailUrl) &&
+            const DeepCollectionEquality().equals(other.artUrl, artUrl) &&
+            const DeepCollectionEquality()
+                .equals(other.allowEditDescription, allowEditDescription) &&
+            const DeepCollectionEquality()
+                .equals(other.requiresCleanAds, requiresCleanAds) &&
+            const DeepCollectionEquality()
+                .equals(other.isGenreStation, isGenreStation) &&
+            const DeepCollectionEquality()
+                .equals(other.stationToken, stationToken) &&
+            const DeepCollectionEquality()
+                .equals(other.stationName, stationName) &&
+            const DeepCollectionEquality()
+                .equals(other.hasTakeoverModes, hasTakeoverModes) &&
+            const DeepCollectionEquality().equals(other.isShared, isShared) &&
+            const DeepCollectionEquality()
+                .equals(other.hasCuratedModes, hasCuratedModes) &&
+            const DeepCollectionEquality()
+                .equals(other.allowDelete, allowDelete) &&
+            const DeepCollectionEquality()
+                .equals(other.allowRename, allowRename) &&
+            const DeepCollectionEquality()
+                .equals(other.stationSharingUrl, stationSharingUrl));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(suppressVideoAds) ^
-      const DeepCollectionEquality().hash(stationId) ^
-      const DeepCollectionEquality().hash(allowAddMusic) ^
-      const DeepCollectionEquality().hash(dateCreated) ^
-      const DeepCollectionEquality().hash(stationDetailUrl) ^
-      const DeepCollectionEquality().hash(artUrl) ^
-      const DeepCollectionEquality().hash(allowEditDescription) ^
-      const DeepCollectionEquality().hash(requiresCleanAds) ^
-      const DeepCollectionEquality().hash(isGenreStation) ^
-      const DeepCollectionEquality().hash(stationToken) ^
-      const DeepCollectionEquality().hash(stationName) ^
-      const DeepCollectionEquality().hash(hasTakeoverModes) ^
-      const DeepCollectionEquality().hash(isShared) ^
-      const DeepCollectionEquality().hash(hasCuratedModes) ^
-      const DeepCollectionEquality().hash(allowDelete) ^
-      const DeepCollectionEquality().hash(allowRename) ^
-      const DeepCollectionEquality().hash(stationSharingUrl);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(suppressVideoAds),
+      const DeepCollectionEquality().hash(stationId),
+      const DeepCollectionEquality().hash(allowAddMusic),
+      const DeepCollectionEquality().hash(dateCreated),
+      const DeepCollectionEquality().hash(stationDetailUrl),
+      const DeepCollectionEquality().hash(artUrl),
+      const DeepCollectionEquality().hash(allowEditDescription),
+      const DeepCollectionEquality().hash(requiresCleanAds),
+      const DeepCollectionEquality().hash(isGenreStation),
+      const DeepCollectionEquality().hash(stationToken),
+      const DeepCollectionEquality().hash(stationName),
+      const DeepCollectionEquality().hash(hasTakeoverModes),
+      const DeepCollectionEquality().hash(isShared),
+      const DeepCollectionEquality().hash(hasCuratedModes),
+      const DeepCollectionEquality().hash(allowDelete),
+      const DeepCollectionEquality().hash(allowRename),
+      const DeepCollectionEquality().hash(stationSharingUrl));
 
   @JsonKey(ignore: true)
   @override
@@ -647,58 +630,58 @@ abstract class _Station implements Station {
 
   @override
   @JsonKey(name: 'suppressVideoAds')
-  bool get suppressVideoAds => throw _privateConstructorUsedError;
+  bool get suppressVideoAds;
   @override
   @JsonKey(name: 'stationId')
-  String get stationId => throw _privateConstructorUsedError;
+  String get stationId;
   @override
   @JsonKey(name: 'allowAddMusic')
-  bool get allowAddMusic => throw _privateConstructorUsedError;
+  bool get allowAddMusic;
   @override
   @JsonKey(
       name: 'dateCreated',
       fromJson: readDateTimeJsonObject,
       toJson: writeDateTimeJsonObject)
-  DateTime get dateCreated => throw _privateConstructorUsedError;
+  DateTime get dateCreated;
   @override
   @JsonKey(name: 'stationDetailUrl')
-  Uri get stationDetailUrl => throw _privateConstructorUsedError;
+  Uri get stationDetailUrl;
   @override
   @JsonKey(name: 'artUrl')
-  Uri get artUrl => throw _privateConstructorUsedError;
+  Uri get artUrl;
   @override
   @JsonKey(name: 'allowEditDescription')
-  bool get allowEditDescription => throw _privateConstructorUsedError;
+  bool get allowEditDescription;
   @override
   @JsonKey(name: 'requiresCleanAds')
-  bool get requiresCleanAds => throw _privateConstructorUsedError;
+  bool get requiresCleanAds;
   @override
   @JsonKey(name: 'isGenreStation')
-  bool get isGenreStation => throw _privateConstructorUsedError;
+  bool get isGenreStation;
   @override
   @JsonKey(name: 'stationToken')
-  String get stationToken => throw _privateConstructorUsedError;
+  String get stationToken;
   @override
   @JsonKey(name: 'stationName')
-  String get stationName => throw _privateConstructorUsedError;
+  String get stationName;
   @override
   @JsonKey(name: 'hasTakeoverModes')
-  bool get hasTakeoverModes => throw _privateConstructorUsedError;
+  bool get hasTakeoverModes;
   @override
   @JsonKey(name: 'isShared')
-  bool get isShared => throw _privateConstructorUsedError;
+  bool get isShared;
   @override
   @JsonKey(name: 'hasCuratedModes')
-  bool get hasCuratedModes => throw _privateConstructorUsedError;
+  bool get hasCuratedModes;
   @override
   @JsonKey(name: 'allowDelete')
-  bool get allowDelete => throw _privateConstructorUsedError;
+  bool get allowDelete;
   @override
   @JsonKey(name: 'allowRename')
-  bool get allowRename => throw _privateConstructorUsedError;
+  bool get allowRename;
   @override
   @JsonKey(name: 'stationSharingUrl')
-  Uri get stationSharingUrl => throw _privateConstructorUsedError;
+  Uri get stationSharingUrl;
   @override
   @JsonKey(ignore: true)
   _$StationCopyWith<_Station> get copyWith =>

@@ -1,5 +1,6 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'audio_url_data.dart';
@@ -36,7 +37,7 @@ class _$AudioUrlDataTearOff {
     );
   }
 
-  AudioUrlData fromJson(Map<String, Object> json) {
+  AudioUrlData fromJson(Map<String, Object?> json) {
     return AudioUrlData.fromJson(json);
   }
 }
@@ -212,32 +213,24 @@ class _$_AudioUrlData implements _AudioUrlData {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _AudioUrlData &&
-            (identical(other.audioToken, audioToken) ||
-                const DeepCollectionEquality()
-                    .equals(other.audioToken, audioToken)) &&
-            (identical(other.bitrate, bitrate) ||
-                const DeepCollectionEquality()
-                    .equals(other.bitrate, bitrate)) &&
-            (identical(other.encoding, encoding) ||
-                const DeepCollectionEquality()
-                    .equals(other.encoding, encoding)) &&
-            (identical(other.audioUrl, audioUrl) ||
-                const DeepCollectionEquality()
-                    .equals(other.audioUrl, audioUrl)) &&
-            (identical(other.protocol, protocol) ||
-                const DeepCollectionEquality()
-                    .equals(other.protocol, protocol)));
+        (other.runtimeType == runtimeType &&
+            other is _AudioUrlData &&
+            const DeepCollectionEquality()
+                .equals(other.audioToken, audioToken) &&
+            const DeepCollectionEquality().equals(other.bitrate, bitrate) &&
+            const DeepCollectionEquality().equals(other.encoding, encoding) &&
+            const DeepCollectionEquality().equals(other.audioUrl, audioUrl) &&
+            const DeepCollectionEquality().equals(other.protocol, protocol));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(audioToken) ^
-      const DeepCollectionEquality().hash(bitrate) ^
-      const DeepCollectionEquality().hash(encoding) ^
-      const DeepCollectionEquality().hash(audioUrl) ^
-      const DeepCollectionEquality().hash(protocol);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(audioToken),
+      const DeepCollectionEquality().hash(bitrate),
+      const DeepCollectionEquality().hash(encoding),
+      const DeepCollectionEquality().hash(audioUrl),
+      const DeepCollectionEquality().hash(protocol));
 
   @JsonKey(ignore: true)
   @override
@@ -263,19 +256,19 @@ abstract class _AudioUrlData implements AudioUrlData {
 
   @override
   @JsonKey(name: 'audioToken')
-  String get audioToken => throw _privateConstructorUsedError;
+  String get audioToken;
   @override
   @JsonKey(name: 'bitrate')
-  String get bitrate => throw _privateConstructorUsedError;
+  String get bitrate;
   @override
   @JsonKey(name: 'encoding')
-  String get encoding => throw _privateConstructorUsedError;
+  String get encoding;
   @override
   @JsonKey(name: 'audioUrl')
-  Uri get audioUrl => throw _privateConstructorUsedError;
+  Uri get audioUrl;
   @override
   @JsonKey(name: 'protocol')
-  String get protocol => throw _privateConstructorUsedError;
+  String get protocol;
   @override
   @JsonKey(ignore: true)
   _$AudioUrlDataCopyWith<_AudioUrlData> get copyWith =>

@@ -19,7 +19,7 @@ _$TrackAnnotation _$$TrackAnnotationFromJson(Map<String, dynamic> json) =>
       albumName: json['albumName'] as String,
       artistId: json['artistId'] as String,
       artistName: json['artistName'] as String,
-      explicitness: _$enumDecode(_$ExplicitnessEnumMap, json['explicitness']),
+      explicitness: $enumDecode(_$ExplicitnessEnumMap, json['explicitness']),
       shareableUrlPath: json['shareableUrlPath'] as String,
       hasRadio: json['hasRadio'] as bool,
       modificationTime:
@@ -28,8 +28,8 @@ _$TrackAnnotation _$$TrackAnnotationFromJson(Map<String, dynamic> json) =>
       stationFactoryId: json['stationFactoryId'] as String,
       isrc: json['isrc'] as String,
       pandoraId: json['pandoraId'] as String,
-      pandoraType: _$enumDecode(_$PandoraTypeEnumMap, json['type']),
       scope: json['scope'] as String,
+      $type: json['type'] as String?,
     );
 
 Map<String, dynamic> _$$TrackAnnotationToJson(_$TrackAnnotation instance) =>
@@ -52,67 +52,14 @@ Map<String, dynamic> _$$TrackAnnotationToJson(_$TrackAnnotation instance) =>
       'stationFactoryId': instance.stationFactoryId,
       'isrc': instance.isrc,
       'pandoraId': instance.pandoraId,
-      'type': _$PandoraTypeEnumMap[instance.pandoraType],
       'scope': instance.scope,
+      'type': instance.$type,
     };
-
-K _$enumDecode<K, V>(
-  Map<K, V> enumValues,
-  Object? source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    throw ArgumentError(
-      'A value must be provided. Supported values: '
-      '${enumValues.values.join(', ')}',
-    );
-  }
-
-  return enumValues.entries.singleWhere(
-    (e) => e.value == source,
-    orElse: () {
-      if (unknownValue == null) {
-        throw ArgumentError(
-          '`$source` is not one of the supported values: '
-          '${enumValues.values.join(', ')}',
-        );
-      }
-      return MapEntry(unknownValue, enumValues.values.first);
-    },
-  ).key;
-}
 
 const _$ExplicitnessEnumMap = {
   Explicitness.clean: 'CLEAN',
   Explicitness.explicit: 'EXPLICIT',
   Explicitness.none: 'NONE',
-};
-
-const _$PandoraTypeEnumMap = {
-  PandoraType.album: 'AL',
-  PandoraType.artist: 'AR',
-  PandoraType.artistAllSongs: 'AT',
-  PandoraType.artistTopSongs: 'AP',
-  PandoraType.autoplay: 'AU',
-  PandoraType.browseDirectory: 'BR',
-  PandoraType.collectedAlbumTracks: 'CA',
-  PandoraType.collectedTracks: 'CT',
-  PandoraType.composer: 'CO',
-  PandoraType.downloadedTracks: 'DT',
-  PandoraType.genre: 'GE',
-  PandoraType.playlist: 'PL',
-  PandoraType.podcast: 'PC',
-  PandoraType.podcastAutoplay: 'PA',
-  PandoraType.episode: 'PE',
-  PandoraType.song: 'TR',
-  PandoraType.station: 'ST',
-  PandoraType.stationSampleTracks: 'SS',
-  PandoraType.stationThumbUp: 'TU',
-  PandoraType.userStation: 'ST',
-  PandoraType.hybridStation: 'HS',
-  PandoraType.voiceTrack: 'AM',
-  PandoraType.listener: 'LI',
-  PandoraType.podcastCategory: 'TG',
 };
 
 _$ArtistAnnotation _$$ArtistAnnotationFromJson(Map<String, dynamic> json) =>
@@ -137,8 +84,8 @@ _$ArtistAnnotation _$$ArtistAnnotationFromJson(Map<String, dynamic> json) =>
       megastar: json['megastar'] as bool,
       hasTakeoverModes: json['hasTakeoverModes'] as bool,
       pandoraId: json['pandoraId'] as String,
-      pandoraType: _$enumDecode(_$PandoraTypeEnumMap, json['type']),
       scope: json['scope'] as String,
+      $type: json['type'] as String?,
     );
 
 Map<String, dynamic> _$$ArtistAnnotationToJson(_$ArtistAnnotation instance) =>
@@ -160,8 +107,8 @@ Map<String, dynamic> _$$ArtistAnnotationToJson(_$ArtistAnnotation instance) =>
       'megastar': instance.megastar,
       'hasTakeoverModes': instance.hasTakeoverModes,
       'pandoraId': instance.pandoraId,
-      'type': _$PandoraTypeEnumMap[instance.pandoraType],
       'scope': instance.scope,
+      'type': instance.$type,
     };
 
 _$AlbumAnnotation _$$AlbumAnnotationFromJson(Map<String, dynamic> json) =>
@@ -179,7 +126,7 @@ _$AlbumAnnotation _$$AlbumAnnotationFromJson(Map<String, dynamic> json) =>
           (json['tracks'] as List<dynamic>).map((e) => e as String).toList(),
       artistId: json['artistId'] as String,
       artistName: json['artistName'] as String,
-      explicitness: _$enumDecode(_$ExplicitnessEnumMap, json['explicitness']),
+      explicitness: $enumDecode(_$ExplicitnessEnumMap, json['explicitness']),
       shareableUrlPath: json['shareableUrlPath'] as String,
       modificationTime:
           readDateTimeMilliseconds(json['modificationTime'] as int),
@@ -188,8 +135,8 @@ _$AlbumAnnotation _$$AlbumAnnotationFromJson(Map<String, dynamic> json) =>
       releaseType: json['releaseType'] as String,
       listenerReleaseType: json['listenerReleaseType'] as String,
       pandoraId: json['pandoraId'] as String,
-      pandoraType: _$enumDecode(_$PandoraTypeEnumMap, json['type']),
       scope: json['scope'] as String,
+      $type: json['type'] as String?,
     );
 
 Map<String, dynamic> _$$AlbumAnnotationToJson(_$AlbumAnnotation instance) =>
@@ -213,8 +160,8 @@ Map<String, dynamic> _$$AlbumAnnotationToJson(_$AlbumAnnotation instance) =>
       'releaseType': instance.releaseType,
       'listenerReleaseType': instance.listenerReleaseType,
       'pandoraId': instance.pandoraId,
-      'type': _$PandoraTypeEnumMap[instance.pandoraType],
       'scope': instance.scope,
+      'type': instance.$type,
     };
 
 _$GenreAnnotation _$$GenreAnnotationFromJson(Map<String, dynamic> json) =>
@@ -230,8 +177,8 @@ _$GenreAnnotation _$$GenreAnnotationFromJson(Map<String, dynamic> json) =>
       hasTakeoverModes: json['hasTakeoverModes'] as bool,
       hasCuratedModes: json['hasCuratedModes'] as bool,
       pandoraId: json['pandoraId'] as String,
-      pandoraType: _$enumDecode(_$PandoraTypeEnumMap, json['type']),
       scope: json['scope'] as String,
+      $type: json['type'] as String?,
     );
 
 Map<String, dynamic> _$$GenreAnnotationToJson(_$GenreAnnotation instance) =>
@@ -246,8 +193,8 @@ Map<String, dynamic> _$$GenreAnnotationToJson(_$GenreAnnotation instance) =>
       'hasTakeoverModes': instance.hasTakeoverModes,
       'hasCuratedModes': instance.hasCuratedModes,
       'pandoraId': instance.pandoraId,
-      'type': _$PandoraTypeEnumMap[instance.pandoraType],
       'scope': instance.scope,
+      'type': instance.$type,
     };
 
 _$ComposerAnnotation _$$ComposerAnnotationFromJson(Map<String, dynamic> json) =>
@@ -264,8 +211,8 @@ _$ComposerAnnotation _$$ComposerAnnotationFromJson(Map<String, dynamic> json) =>
       slugPlusPandoraId: json['slugPlusPandoraId'] as String,
       stationFactoryId: json['stationFactoryId'] as String,
       pandoraId: json['pandoraId'] as String,
-      pandoraType: _$enumDecode(_$PandoraTypeEnumMap, json['type']),
       scope: json['scope'] as String,
+      $type: json['type'] as String?,
     );
 
 Map<String, dynamic> _$$ComposerAnnotationToJson(
@@ -282,6 +229,6 @@ Map<String, dynamic> _$$ComposerAnnotationToJson(
       'slugPlusPandoraId': instance.slugPlusPandoraId,
       'stationFactoryId': instance.stationFactoryId,
       'pandoraId': instance.pandoraId,
-      'type': _$PandoraTypeEnumMap[instance.pandoraType],
       'scope': instance.scope,
+      'type': instance.$type,
     };

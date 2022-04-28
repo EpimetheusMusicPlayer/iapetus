@@ -1,5 +1,6 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'search_recommendations.dart';
@@ -33,7 +34,7 @@ class _$SearchRecommendationsTearOff {
     );
   }
 
-  SearchRecommendations fromJson(Map<String, Object> json) {
+  SearchRecommendations fromJson(Map<String, Object?> json) {
     return SearchRecommendations.fromJson(json);
   }
 }
@@ -162,20 +163,18 @@ class _$_SearchRecommendations implements _SearchRecommendations {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _SearchRecommendations &&
-            (identical(other.artists, artists) ||
-                const DeepCollectionEquality()
-                    .equals(other.artists, artists)) &&
-            (identical(other.genreStations, genreStations) ||
-                const DeepCollectionEquality()
-                    .equals(other.genreStations, genreStations)));
+        (other.runtimeType == runtimeType &&
+            other is _SearchRecommendations &&
+            const DeepCollectionEquality().equals(other.artists, artists) &&
+            const DeepCollectionEquality()
+                .equals(other.genreStations, genreStations));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(artists) ^
-      const DeepCollectionEquality().hash(genreStations);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(artists),
+      const DeepCollectionEquality().hash(genreStations));
 
   @JsonKey(ignore: true)
   @override
@@ -202,11 +201,10 @@ abstract class _SearchRecommendations implements SearchRecommendations {
 
   @override
   @JsonKey(name: 'artists')
-  List<ArtistRecommendation> get artists => throw _privateConstructorUsedError;
+  List<ArtistRecommendation> get artists;
   @override
   @JsonKey(name: 'genreStations')
-  List<GenreStationRecommendation> get genreStations =>
-      throw _privateConstructorUsedError;
+  List<GenreStationRecommendation> get genreStations;
   @override
   @JsonKey(ignore: true)
   _$SearchRecommendationsCopyWith<_SearchRecommendations> get copyWith =>

@@ -1,5 +1,6 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'authenticated_user.dart';
@@ -152,7 +153,7 @@ class _$AuthenticatedUserTearOff {
     );
   }
 
-  AuthenticatedUser fromJson(Map<String, Object> json) {
+  AuthenticatedUser fromJson(Map<String, Object?> json) {
     return AuthenticatedUser.fromJson(json);
   }
 }
@@ -1146,125 +1147,135 @@ class _$_AuthenticatedUser implements _AuthenticatedUser {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _AuthenticatedUser &&
-            (identical(other.isMonthlyPayer, isMonthlyPayer) ||
-                const DeepCollectionEquality()
-                    .equals(other.isMonthlyPayer, isMonthlyPayer)) &&
-            (identical(other.dailySkipLimitSubscriber, dailySkipLimitSubscriber) ||
-                const DeepCollectionEquality().equals(
-                    other.dailySkipLimitSubscriber,
-                    dailySkipLimitSubscriber)) &&
-            (identical(other.minimumAdRefreshInterval, minimumAdRefreshInterval) ||
-                const DeepCollectionEquality().equals(
-                    other.minimumAdRefreshInterval,
-                    minimumAdRefreshInterval)) &&
-            (identical(other.age, age) ||
-                const DeepCollectionEquality().equals(other.age, age)) &&
-            (identical(other.facebookPermissions, facebookPermissions) ||
-                const DeepCollectionEquality()
-                    .equals(other.facebookPermissions, facebookPermissions)) &&
-            (identical(other.splashScreenAdUrl, splashScreenAdUrl) ||
-                const DeepCollectionEquality()
-                    .equals(other.splashScreenAdUrl, splashScreenAdUrl)) &&
-            (identical(other.userProfileUrl, userProfileUrl) ||
-                const DeepCollectionEquality()
-                    .equals(other.userProfileUrl, userProfileUrl)) &&
-            (identical(other.canListen, canListen) ||
-                const DeepCollectionEquality()
-                    .equals(other.canListen, canListen)) &&
-            (identical(other.hasUsedTrial, hasUsedTrial) ||
-                const DeepCollectionEquality()
-                    .equals(other.hasUsedTrial, hasUsedTrial)) &&
-            (identical(other.facebookAppId, facebookAppId) ||
-                const DeepCollectionEquality()
-                    .equals(other.facebookAppId, facebookAppId)) &&
-            (identical(other.maxStationsAllowed, maxStationsAllowed) ||
-                const DeepCollectionEquality()
-                    .equals(other.maxStationsAllowed, maxStationsAllowed)) &&
-            (identical(other.userId, userId) ||
-                const DeepCollectionEquality().equals(other.userId, userId)) &&
-            (identical(other.accountMonthlyListening, accountMonthlyListening) ||
-                const DeepCollectionEquality().equals(
-                    other.accountMonthlyListening, accountMonthlyListening)) &&
-            (identical(other.zeroVolumeAutoPauseEnabledFlag, zeroVolumeAutoPauseEnabledFlag) ||
-                const DeepCollectionEquality().equals(
-                    other.zeroVolumeAutoPauseEnabledFlag,
-                    zeroVolumeAutoPauseEnabledFlag)) &&
-            (identical(other.isSubscriber, isSubscriber) || const DeepCollectionEquality().equals(other.isSubscriber, isSubscriber)) &&
-            (identical(other.stationHourlySkipLimit, stationHourlySkipLimit) || const DeepCollectionEquality().equals(other.stationHourlySkipLimit, stationHourlySkipLimit)) &&
-            (identical(other.listeningTimeout, listeningTimeout) || const DeepCollectionEquality().equals(other.listeningTimeout, listeningTimeout)) &&
-            (identical(other.deviceMonthlyListening, deviceMonthlyListening) || const DeepCollectionEquality().equals(other.deviceMonthlyListening, deviceMonthlyListening)) &&
-            (identical(other.zip, zip) || const DeepCollectionEquality().equals(other.zip, zip)) &&
-            (identical(other.stationCreationAdUrl, stationCreationAdUrl) || const DeepCollectionEquality().equals(other.stationCreationAdUrl, stationCreationAdUrl)) &&
-            (identical(other.accountMessageUrl, accountMessageUrl) || const DeepCollectionEquality().equals(other.accountMessageUrl, accountMessageUrl)) &&
-            (identical(other.isCapped, isCapped) || const DeepCollectionEquality().equals(other.isCapped, isCapped)) &&
-            (identical(other.googleplayApiKey, googleplayApiKey) || const DeepCollectionEquality().equals(other.googleplayApiKey, googleplayApiKey)) &&
-            (identical(other.dailySkipLimitNonSubscriber, dailySkipLimitNonSubscriber) || const DeepCollectionEquality().equals(other.dailySkipLimitNonSubscriber, dailySkipLimitNonSubscriber)) &&
-            (identical(other.collectTrackLifetimeStats, collectTrackLifetimeStats) || const DeepCollectionEquality().equals(other.collectTrackLifetimeStats, collectTrackLifetimeStats)) &&
-            (identical(other.subscriptionHasExpired, subscriptionHasExpired) || const DeepCollectionEquality().equals(other.subscriptionHasExpired, subscriptionHasExpired)) &&
-            (identical(other.userAuthToken, userAuthToken) || const DeepCollectionEquality().equals(other.userAuthToken, userAuthToken)) &&
-            (identical(other.username, username) || const DeepCollectionEquality().equals(other.username, username)) &&
-            (identical(other.googleplayMonthlySku, googleplayMonthlySku) || const DeepCollectionEquality().equals(other.googleplayMonthlySku, googleplayMonthlySku)) &&
-            (identical(other.listeningTimeoutAlertMsgUri, listeningTimeoutAlertMsgUri) || const DeepCollectionEquality().equals(other.listeningTimeoutAlertMsgUri, listeningTimeoutAlertMsgUri)) &&
-            (identical(other.monthlyCapWarningRepeatPercent, monthlyCapWarningRepeatPercent) || const DeepCollectionEquality().equals(other.monthlyCapWarningRepeatPercent, monthlyCapWarningRepeatPercent)) &&
-            (identical(other.videoAdUrl, videoAdUrl) || const DeepCollectionEquality().equals(other.videoAdUrl, videoAdUrl)) &&
-            (identical(other.zeroVolumeNumMutedTracks, zeroVolumeNumMutedTracks) || const DeepCollectionEquality().equals(other.zeroVolumeNumMutedTracks, zeroVolumeNumMutedTracks)) &&
-            (identical(other.skipDelayAfterTrackStart, skipDelayAfterTrackStart) || const DeepCollectionEquality().equals(other.skipDelayAfterTrackStart, skipDelayAfterTrackStart)) &&
-            (identical(other.accountMessageKey, accountMessageKey) || const DeepCollectionEquality().equals(other.accountMessageKey, accountMessageKey)) &&
-            (identical(other.dailySkipLimit, dailySkipLimit) || const DeepCollectionEquality().equals(other.dailySkipLimit, dailySkipLimit)) &&
-            (identical(other.monthlyCapHours, monthlyCapHours) || const DeepCollectionEquality().equals(other.monthlyCapHours, monthlyCapHours)) &&
-            (identical(other.webname, webname) || const DeepCollectionEquality().equals(other.webname, webname)) &&
-            (identical(other.gender, gender) || const DeepCollectionEquality().equals(other.gender, gender)) &&
-            (identical(other.userstate, userstate) || const DeepCollectionEquality().equals(other.userstate, userstate)) &&
-            (identical(other.monthlyCapWarningPercent, monthlyCapWarningPercent) || const DeepCollectionEquality().equals(other.monthlyCapWarningPercent, monthlyCapWarningPercent)) &&
-            (identical(other.hasAudioAds, hasAudioAds) || const DeepCollectionEquality().equals(other.hasAudioAds, hasAudioAds)));
+        (other.runtimeType == runtimeType &&
+            other is _AuthenticatedUser &&
+            const DeepCollectionEquality()
+                .equals(other.isMonthlyPayer, isMonthlyPayer) &&
+            const DeepCollectionEquality().equals(
+                other.dailySkipLimitSubscriber, dailySkipLimitSubscriber) &&
+            const DeepCollectionEquality().equals(
+                other.minimumAdRefreshInterval, minimumAdRefreshInterval) &&
+            const DeepCollectionEquality().equals(other.age, age) &&
+            const DeepCollectionEquality()
+                .equals(other.facebookPermissions, facebookPermissions) &&
+            const DeepCollectionEquality()
+                .equals(other.splashScreenAdUrl, splashScreenAdUrl) &&
+            const DeepCollectionEquality()
+                .equals(other.userProfileUrl, userProfileUrl) &&
+            const DeepCollectionEquality().equals(other.canListen, canListen) &&
+            const DeepCollectionEquality()
+                .equals(other.hasUsedTrial, hasUsedTrial) &&
+            const DeepCollectionEquality()
+                .equals(other.facebookAppId, facebookAppId) &&
+            const DeepCollectionEquality()
+                .equals(other.maxStationsAllowed, maxStationsAllowed) &&
+            const DeepCollectionEquality().equals(other.userId, userId) &&
+            const DeepCollectionEquality().equals(
+                other.accountMonthlyListening, accountMonthlyListening) &&
+            const DeepCollectionEquality().equals(
+                other.zeroVolumeAutoPauseEnabledFlag,
+                zeroVolumeAutoPauseEnabledFlag) &&
+            const DeepCollectionEquality()
+                .equals(other.isSubscriber, isSubscriber) &&
+            const DeepCollectionEquality()
+                .equals(other.stationHourlySkipLimit, stationHourlySkipLimit) &&
+            const DeepCollectionEquality()
+                .equals(other.listeningTimeout, listeningTimeout) &&
+            const DeepCollectionEquality()
+                .equals(other.deviceMonthlyListening, deviceMonthlyListening) &&
+            const DeepCollectionEquality().equals(other.zip, zip) &&
+            const DeepCollectionEquality()
+                .equals(other.stationCreationAdUrl, stationCreationAdUrl) &&
+            const DeepCollectionEquality()
+                .equals(other.accountMessageUrl, accountMessageUrl) &&
+            const DeepCollectionEquality().equals(other.isCapped, isCapped) &&
+            const DeepCollectionEquality()
+                .equals(other.googleplayApiKey, googleplayApiKey) &&
+            const DeepCollectionEquality().equals(
+                other.dailySkipLimitNonSubscriber,
+                dailySkipLimitNonSubscriber) &&
+            const DeepCollectionEquality().equals(
+                other.collectTrackLifetimeStats, collectTrackLifetimeStats) &&
+            const DeepCollectionEquality()
+                .equals(other.subscriptionHasExpired, subscriptionHasExpired) &&
+            const DeepCollectionEquality()
+                .equals(other.userAuthToken, userAuthToken) &&
+            const DeepCollectionEquality().equals(other.username, username) &&
+            const DeepCollectionEquality()
+                .equals(other.googleplayMonthlySku, googleplayMonthlySku) &&
+            const DeepCollectionEquality().equals(
+                other.listeningTimeoutAlertMsgUri,
+                listeningTimeoutAlertMsgUri) &&
+            const DeepCollectionEquality().equals(
+                other.monthlyCapWarningRepeatPercent,
+                monthlyCapWarningRepeatPercent) &&
+            const DeepCollectionEquality()
+                .equals(other.videoAdUrl, videoAdUrl) &&
+            const DeepCollectionEquality().equals(
+                other.zeroVolumeNumMutedTracks, zeroVolumeNumMutedTracks) &&
+            const DeepCollectionEquality().equals(
+                other.skipDelayAfterTrackStart, skipDelayAfterTrackStart) &&
+            const DeepCollectionEquality()
+                .equals(other.accountMessageKey, accountMessageKey) &&
+            const DeepCollectionEquality()
+                .equals(other.dailySkipLimit, dailySkipLimit) &&
+            const DeepCollectionEquality()
+                .equals(other.monthlyCapHours, monthlyCapHours) &&
+            const DeepCollectionEquality().equals(other.webname, webname) &&
+            const DeepCollectionEquality().equals(other.gender, gender) &&
+            const DeepCollectionEquality().equals(other.userstate, userstate) &&
+            const DeepCollectionEquality().equals(
+                other.monthlyCapWarningPercent, monthlyCapWarningPercent) &&
+            const DeepCollectionEquality()
+                .equals(other.hasAudioAds, hasAudioAds));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(isMonthlyPayer) ^
-      const DeepCollectionEquality().hash(dailySkipLimitSubscriber) ^
-      const DeepCollectionEquality().hash(minimumAdRefreshInterval) ^
-      const DeepCollectionEquality().hash(age) ^
-      const DeepCollectionEquality().hash(facebookPermissions) ^
-      const DeepCollectionEquality().hash(splashScreenAdUrl) ^
-      const DeepCollectionEquality().hash(userProfileUrl) ^
-      const DeepCollectionEquality().hash(canListen) ^
-      const DeepCollectionEquality().hash(hasUsedTrial) ^
-      const DeepCollectionEquality().hash(facebookAppId) ^
-      const DeepCollectionEquality().hash(maxStationsAllowed) ^
-      const DeepCollectionEquality().hash(userId) ^
-      const DeepCollectionEquality().hash(accountMonthlyListening) ^
-      const DeepCollectionEquality().hash(zeroVolumeAutoPauseEnabledFlag) ^
-      const DeepCollectionEquality().hash(isSubscriber) ^
-      const DeepCollectionEquality().hash(stationHourlySkipLimit) ^
-      const DeepCollectionEquality().hash(listeningTimeout) ^
-      const DeepCollectionEquality().hash(deviceMonthlyListening) ^
-      const DeepCollectionEquality().hash(zip) ^
-      const DeepCollectionEquality().hash(stationCreationAdUrl) ^
-      const DeepCollectionEquality().hash(accountMessageUrl) ^
-      const DeepCollectionEquality().hash(isCapped) ^
-      const DeepCollectionEquality().hash(googleplayApiKey) ^
-      const DeepCollectionEquality().hash(dailySkipLimitNonSubscriber) ^
-      const DeepCollectionEquality().hash(collectTrackLifetimeStats) ^
-      const DeepCollectionEquality().hash(subscriptionHasExpired) ^
-      const DeepCollectionEquality().hash(userAuthToken) ^
-      const DeepCollectionEquality().hash(username) ^
-      const DeepCollectionEquality().hash(googleplayMonthlySku) ^
-      const DeepCollectionEquality().hash(listeningTimeoutAlertMsgUri) ^
-      const DeepCollectionEquality().hash(monthlyCapWarningRepeatPercent) ^
-      const DeepCollectionEquality().hash(videoAdUrl) ^
-      const DeepCollectionEquality().hash(zeroVolumeNumMutedTracks) ^
-      const DeepCollectionEquality().hash(skipDelayAfterTrackStart) ^
-      const DeepCollectionEquality().hash(accountMessageKey) ^
-      const DeepCollectionEquality().hash(dailySkipLimit) ^
-      const DeepCollectionEquality().hash(monthlyCapHours) ^
-      const DeepCollectionEquality().hash(webname) ^
-      const DeepCollectionEquality().hash(gender) ^
-      const DeepCollectionEquality().hash(userstate) ^
-      const DeepCollectionEquality().hash(monthlyCapWarningPercent) ^
-      const DeepCollectionEquality().hash(hasAudioAds);
+  int get hashCode => Object.hashAll([
+        runtimeType,
+        const DeepCollectionEquality().hash(isMonthlyPayer),
+        const DeepCollectionEquality().hash(dailySkipLimitSubscriber),
+        const DeepCollectionEquality().hash(minimumAdRefreshInterval),
+        const DeepCollectionEquality().hash(age),
+        const DeepCollectionEquality().hash(facebookPermissions),
+        const DeepCollectionEquality().hash(splashScreenAdUrl),
+        const DeepCollectionEquality().hash(userProfileUrl),
+        const DeepCollectionEquality().hash(canListen),
+        const DeepCollectionEquality().hash(hasUsedTrial),
+        const DeepCollectionEquality().hash(facebookAppId),
+        const DeepCollectionEquality().hash(maxStationsAllowed),
+        const DeepCollectionEquality().hash(userId),
+        const DeepCollectionEquality().hash(accountMonthlyListening),
+        const DeepCollectionEquality().hash(zeroVolumeAutoPauseEnabledFlag),
+        const DeepCollectionEquality().hash(isSubscriber),
+        const DeepCollectionEquality().hash(stationHourlySkipLimit),
+        const DeepCollectionEquality().hash(listeningTimeout),
+        const DeepCollectionEquality().hash(deviceMonthlyListening),
+        const DeepCollectionEquality().hash(zip),
+        const DeepCollectionEquality().hash(stationCreationAdUrl),
+        const DeepCollectionEquality().hash(accountMessageUrl),
+        const DeepCollectionEquality().hash(isCapped),
+        const DeepCollectionEquality().hash(googleplayApiKey),
+        const DeepCollectionEquality().hash(dailySkipLimitNonSubscriber),
+        const DeepCollectionEquality().hash(collectTrackLifetimeStats),
+        const DeepCollectionEquality().hash(subscriptionHasExpired),
+        const DeepCollectionEquality().hash(userAuthToken),
+        const DeepCollectionEquality().hash(username),
+        const DeepCollectionEquality().hash(googleplayMonthlySku),
+        const DeepCollectionEquality().hash(listeningTimeoutAlertMsgUri),
+        const DeepCollectionEquality().hash(monthlyCapWarningRepeatPercent),
+        const DeepCollectionEquality().hash(videoAdUrl),
+        const DeepCollectionEquality().hash(zeroVolumeNumMutedTracks),
+        const DeepCollectionEquality().hash(skipDelayAfterTrackStart),
+        const DeepCollectionEquality().hash(accountMessageKey),
+        const DeepCollectionEquality().hash(dailySkipLimit),
+        const DeepCollectionEquality().hash(monthlyCapHours),
+        const DeepCollectionEquality().hash(webname),
+        const DeepCollectionEquality().hash(gender),
+        const DeepCollectionEquality().hash(userstate),
+        const DeepCollectionEquality().hash(monthlyCapWarningPercent),
+        const DeepCollectionEquality().hash(hasAudioAds)
+      ]);
 
   @JsonKey(ignore: true)
   @override
@@ -1369,142 +1380,142 @@ abstract class _AuthenticatedUser implements AuthenticatedUser {
 
   @override
   @JsonKey(name: 'isMonthlyPayer')
-  bool get isMonthlyPayer => throw _privateConstructorUsedError;
+  bool get isMonthlyPayer;
   @override
   @JsonKey(name: 'dailySkipLimitSubscriber')
-  int get dailySkipLimitSubscriber => throw _privateConstructorUsedError;
+  int get dailySkipLimitSubscriber;
   @override
   @JsonKey(name: 'minimumAdRefreshInterval')
-  int? get minimumAdRefreshInterval => throw _privateConstructorUsedError;
+  int? get minimumAdRefreshInterval;
   @override
 
   /// The listener's age, in years.
   @JsonKey(name: 'age')
-  int get age => throw _privateConstructorUsedError;
+  int get age;
   @override
   @JsonKey(
       name: 'facebookPermissions',
       fromJson: AuthenticatedUser._readCommaSeparatedList,
       toJson: AuthenticatedUser._writeCommaSeparatedList)
-  List<String> get facebookPermissions => throw _privateConstructorUsedError;
+  List<String> get facebookPermissions;
   @override
   @JsonKey(name: 'splashScreenAdUrl')
-  Uri? get splashScreenAdUrl => throw _privateConstructorUsedError;
+  Uri? get splashScreenAdUrl;
   @override
   @JsonKey(name: 'userProfileUrl')
-  Uri get userProfileUrl => throw _privateConstructorUsedError;
+  Uri get userProfileUrl;
   @override
   @JsonKey(name: 'canListen')
-  bool get canListen => throw _privateConstructorUsedError;
+  bool get canListen;
   @override
   @JsonKey(name: 'hasUsedTrial')
-  bool get hasUsedTrial => throw _privateConstructorUsedError;
+  bool get hasUsedTrial;
   @override
   @JsonKey(name: 'facebookAppId')
-  String get facebookAppId => throw _privateConstructorUsedError;
+  String get facebookAppId;
   @override
   @JsonKey(name: 'maxStationsAllowed')
-  int get maxStationsAllowed => throw _privateConstructorUsedError;
+  int get maxStationsAllowed;
   @override
   @JsonKey(name: 'userId')
-  String get userId => throw _privateConstructorUsedError;
+  String get userId;
   @override
   @JsonKey(name: 'accountMonthlyListening')
-  int get accountMonthlyListening => throw _privateConstructorUsedError;
+  int get accountMonthlyListening;
   @override
   @JsonKey(name: 'zeroVolumeAutoPauseEnabledFlag')
-  bool get zeroVolumeAutoPauseEnabledFlag => throw _privateConstructorUsedError;
+  bool get zeroVolumeAutoPauseEnabledFlag;
   @override
   @JsonKey(name: 'isSubscriber')
-  bool get isSubscriber => throw _privateConstructorUsedError;
+  bool get isSubscriber;
   @override
   @JsonKey(name: 'stationHourlySkipLimit')
-  int get stationHourlySkipLimit => throw _privateConstructorUsedError;
+  int get stationHourlySkipLimit;
   @override
   @JsonKey(
       name: 'listeningTimeoutMinutes',
       fromJson: AuthenticatedUser._readMinuteString,
       toJson: AuthenticatedUser._writeMinuteString)
-  Duration get listeningTimeout => throw _privateConstructorUsedError;
+  Duration get listeningTimeout;
   @override
   @JsonKey(name: 'deviceMonthlyListening')
-  int get deviceMonthlyListening => throw _privateConstructorUsedError;
+  int get deviceMonthlyListening;
   @override
   @JsonKey(name: 'zip')
-  String get zip => throw _privateConstructorUsedError;
+  String get zip;
   @override
   @JsonKey(name: 'stationCreationAdUrl')
-  Uri? get stationCreationAdUrl => throw _privateConstructorUsedError;
+  Uri? get stationCreationAdUrl;
   @override
   @JsonKey(name: 'accountMessageUrl')
-  Uri? get accountMessageUrl => throw _privateConstructorUsedError;
+  Uri? get accountMessageUrl;
   @override
   @JsonKey(name: 'isCapped')
-  bool get isCapped => throw _privateConstructorUsedError;
+  bool get isCapped;
   @override
   @JsonKey(name: 'googleplayApiKey')
-  String get googleplayApiKey => throw _privateConstructorUsedError;
+  String get googleplayApiKey;
   @override
   @JsonKey(name: 'dailySkipLimitNonSubscriber')
-  int get dailySkipLimitNonSubscriber => throw _privateConstructorUsedError;
+  int get dailySkipLimitNonSubscriber;
   @override
   @JsonKey(name: 'collectTrackLifetimeStats')
-  bool get collectTrackLifetimeStats => throw _privateConstructorUsedError;
+  bool get collectTrackLifetimeStats;
   @override
   @JsonKey(name: 'subscriptionHasExpired')
-  bool get subscriptionHasExpired => throw _privateConstructorUsedError;
+  bool get subscriptionHasExpired;
   @override
   @JsonKey(name: 'userAuthToken')
-  String get userAuthToken => throw _privateConstructorUsedError;
+  String get userAuthToken;
   @override
   @JsonKey(name: 'username')
-  String get username => throw _privateConstructorUsedError;
+  String get username;
   @override
   @JsonKey(name: 'googleplayMonthlySku')
-  String get googleplayMonthlySku => throw _privateConstructorUsedError;
+  String get googleplayMonthlySku;
   @override
   @JsonKey(name: 'listeningTimeoutAlertMsgUri')
-  Uri get listeningTimeoutAlertMsgUri => throw _privateConstructorUsedError;
+  Uri get listeningTimeoutAlertMsgUri;
   @override
   @JsonKey(name: 'monthlyCapWarningRepeatPercent')
-  int get monthlyCapWarningRepeatPercent => throw _privateConstructorUsedError;
+  int get monthlyCapWarningRepeatPercent;
   @override
   @JsonKey(name: 'videoAdUrl')
-  Uri? get videoAdUrl => throw _privateConstructorUsedError;
+  Uri? get videoAdUrl;
   @override
   @JsonKey(name: 'zeroVolumeNumMutedTracks')
-  int get zeroVolumeNumMutedTracks => throw _privateConstructorUsedError;
+  int get zeroVolumeNumMutedTracks;
   @override
   @JsonKey(
       name: 'skipDelayMillisecondsAfterTrackStart',
       fromJson: AuthenticatedUser._readNullableMilliseconds,
       toJson: AuthenticatedUser._writeNullableMilliseconds)
-  Duration? get skipDelayAfterTrackStart => throw _privateConstructorUsedError;
+  Duration? get skipDelayAfterTrackStart;
   @override
   @JsonKey(name: 'accountMessageKey')
-  String? get accountMessageKey => throw _privateConstructorUsedError;
+  String? get accountMessageKey;
   @override
   @JsonKey(name: 'dailySkipLimit')
-  int get dailySkipLimit => throw _privateConstructorUsedError;
+  int get dailySkipLimit;
   @override
   @JsonKey(name: 'monthlyCapHours')
-  int get monthlyCapHours => throw _privateConstructorUsedError;
+  int get monthlyCapHours;
   @override
   @JsonKey(name: 'webname')
-  String get webname => throw _privateConstructorUsedError;
+  String get webname;
   @override
   @JsonKey(
       name: 'gender', fromJson: genderFromApiString, toJson: genderToApiString)
-  Gender get gender => throw _privateConstructorUsedError;
+  Gender get gender;
   @override
   @JsonKey(name: 'userstate')
-  String get userstate => throw _privateConstructorUsedError;
+  String get userstate;
   @override
   @JsonKey(name: 'monthlyCapWarningPercent')
-  int get monthlyCapWarningPercent => throw _privateConstructorUsedError;
+  int get monthlyCapWarningPercent;
   @override
   @JsonKey(name: 'hasAudioAds')
-  bool get hasAudioAds => throw _privateConstructorUsedError;
+  bool get hasAudioAds;
   @override
   @JsonKey(ignore: true)
   _$AuthenticatedUserCopyWith<_AuthenticatedUser> get copyWith =>

@@ -1,5 +1,6 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'form_factors.dart';
@@ -30,7 +31,7 @@ class _$FormFactorsTearOff {
     );
   }
 
-  FormFactors fromJson(Map<String, Object> json) {
+  FormFactors fromJson(Map<String, Object?> json) {
     return FormFactors.fromJson(json);
   }
 }
@@ -174,20 +175,17 @@ class _$_FormFactors implements _FormFactors {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _FormFactors &&
-            (identical(other.portrait, portrait) ||
-                const DeepCollectionEquality()
-                    .equals(other.portrait, portrait)) &&
-            (identical(other.landscape, landscape) ||
-                const DeepCollectionEquality()
-                    .equals(other.landscape, landscape)));
+        (other.runtimeType == runtimeType &&
+            other is _FormFactors &&
+            const DeepCollectionEquality().equals(other.portrait, portrait) &&
+            const DeepCollectionEquality().equals(other.landscape, landscape));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(portrait) ^
-      const DeepCollectionEquality().hash(landscape);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(portrait),
+      const DeepCollectionEquality().hash(landscape));
 
   @JsonKey(ignore: true)
   @override
@@ -211,10 +209,10 @@ abstract class _FormFactors implements FormFactors {
 
   @override
   @JsonKey(name: 'portrait')
-  FormFactor get portrait => throw _privateConstructorUsedError;
+  FormFactor get portrait;
   @override
   @JsonKey(name: 'landscape')
-  FormFactor get landscape => throw _privateConstructorUsedError;
+  FormFactor get landscape;
   @override
   @JsonKey(ignore: true)
   _$FormFactorsCopyWith<_FormFactors> get copyWith =>

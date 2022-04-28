@@ -8,11 +8,11 @@ part of 'action.dart';
 
 _$_SuperbrowseAction _$$_SuperbrowseActionFromJson(Map<String, dynamic> json) =>
     _$_SuperbrowseAction(
-      type: _$enumDecode(_$ActionTypeEnumMap, json['type']),
+      type: $enumDecode(_$ActionTypeEnumMap, json['type']),
       pandoraId: json['pandoraId'] as String?,
       sourceId: json['sourceId'] as String?,
       title: json['title'] as String?,
-      loadingScreen: _$enumDecodeNullable(
+      loadingScreen: $enumDecodeNullable(
           _$LoadingScreenTypeEnumMap, json['loadingScreen']),
       url: json['url'] == null ? null : Uri.parse(json['url'] as String),
     );
@@ -28,32 +28,6 @@ Map<String, dynamic> _$$_SuperbrowseActionToJson(
       'url': instance.url?.toString(),
     };
 
-K _$enumDecode<K, V>(
-  Map<K, V> enumValues,
-  Object? source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    throw ArgumentError(
-      'A value must be provided. Supported values: '
-      '${enumValues.values.join(', ')}',
-    );
-  }
-
-  return enumValues.entries.singleWhere(
-    (e) => e.value == source,
-    orElse: () {
-      if (unknownValue == null) {
-        throw ArgumentError(
-          '`$source` is not one of the supported values: '
-          '${enumValues.values.join(', ')}',
-        );
-      }
-      return MapEntry(unknownValue, enumValues.values.first);
-    },
-  ).key;
-}
-
 const _$ActionTypeEnumMap = {
   ActionType.deeplink: 'deeplink',
   ActionType.sourceCard: 'sourceCard',
@@ -61,17 +35,6 @@ const _$ActionTypeEnumMap = {
   ActionType.togglePlay: 'togglePlay',
   ActionType.backstage: 'backstage',
 };
-
-K? _$enumDecodeNullable<K, V>(
-  Map<K, V> enumValues,
-  dynamic source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    return null;
-  }
-  return _$enumDecode<K, V>(enumValues, source, unknownValue: unknownValue);
-}
 
 const _$LoadingScreenTypeEnumMap = {
   LoadingScreenType.deepDefault: 'deep_default',

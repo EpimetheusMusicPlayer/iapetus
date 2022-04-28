@@ -8,12 +8,15 @@ import 'package:iapetus/src/media/entities/rights_info.dart';
 import 'package:iapetus/src/media/entities/types/track.dart';
 
 part 'annotation.freezed.dart';
+
 part 'annotation.g.dart';
 
 @Freezed(unionKey: 'type')
 class MediaAnnotation with _$MediaAnnotation implements PandoraEntity {
+  const MediaAnnotation._();
+
   @FreezedUnionValue('TR')
-  @Implements(Track)
+  @Implements<Track>()
   const factory MediaAnnotation.track({
     @JsonKey(name: 'name') required String name,
     @JsonKey(name: 'sortableName') required String sortableName,
@@ -36,7 +39,6 @@ class MediaAnnotation with _$MediaAnnotation implements PandoraEntity {
     @JsonKey(name: 'stationFactoryId') required String stationFactoryId,
     @JsonKey(name: 'isrc') required String isrc,
     @JsonKey(name: 'pandoraId') required String pandoraId,
-    @JsonKey(name: 'type') required PandoraType pandoraType,
     @JsonKey(name: 'scope') required String scope,
   }) = TrackAnnotation;
 
@@ -61,7 +63,6 @@ class MediaAnnotation with _$MediaAnnotation implements PandoraEntity {
     @JsonKey(name: 'megastar') required bool megastar,
     @JsonKey(name: 'hasTakeoverModes') required bool hasTakeoverModes,
     @JsonKey(name: 'pandoraId') required String pandoraId,
-    @JsonKey(name: 'type') required PandoraType pandoraType,
     @JsonKey(name: 'scope') required String scope,
   }) = ArtistAnnotation;
 
@@ -89,7 +90,6 @@ class MediaAnnotation with _$MediaAnnotation implements PandoraEntity {
     @JsonKey(name: 'releaseType') required String releaseType,
     @JsonKey(name: 'listenerReleaseType') required String listenerReleaseType,
     @JsonKey(name: 'pandoraId') required String pandoraId,
-    @JsonKey(name: 'type') required PandoraType pandoraType,
     @JsonKey(name: 'scope') required String scope,
   }) = AlbumAnnotation;
 
@@ -108,7 +108,6 @@ class MediaAnnotation with _$MediaAnnotation implements PandoraEntity {
     @JsonKey(name: 'hasTakeoverModes') required bool hasTakeoverModes,
     @JsonKey(name: 'hasCuratedModes') required bool hasCuratedModes,
     @JsonKey(name: 'pandoraId') required String pandoraId,
-    @JsonKey(name: 'type') required PandoraType pandoraType,
     @JsonKey(name: 'scope') required String scope,
   }) = GenreAnnotation;
 
@@ -127,9 +126,18 @@ class MediaAnnotation with _$MediaAnnotation implements PandoraEntity {
     @JsonKey(name: 'slugPlusPandoraId') required String slugPlusPandoraId,
     @JsonKey(name: 'stationFactoryId') required String stationFactoryId,
     @JsonKey(name: 'pandoraId') required String pandoraId,
-    @JsonKey(name: 'type') required PandoraType pandoraType,
     @JsonKey(name: 'scope') required String scope,
   }) = ComposerAnnotation;
+
+  @override
+  PandoraType get pandoraType {
+    if (this is TrackAnnotation) return PandoraType.song;
+    if (this is ArtistAnnotation) return PandoraType.artist;
+    if (this is AlbumAnnotation) return PandoraType.album;
+    if (this is GenreAnnotation) return PandoraType.genre;
+    if (this is ComposerAnnotation) return PandoraType.composer;
+    throw FallThroughError();
+  }
 
   factory MediaAnnotation.fromJson(Map<String, dynamic> json) =>
       _$MediaAnnotationFromJson(json);

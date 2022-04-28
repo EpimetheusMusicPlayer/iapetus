@@ -33,12 +33,12 @@ GetStationContentRequest _$GetStationContentRequestFromJson(
       xplatformAdCapable: json['xplatformAdCapable'] as bool,
       testCreativeIdString: json['testCreativeIdString'] as String?,
       supportedTrackTypes: (json['supportedTrackTypes'] as List<dynamic>)
-          .map((e) => _$enumDecode(_$TrackTypeEnumMap, e))
+          .map((e) => $enumDecode(_$TrackTypeEnumMap, e))
           .toList(),
       includeFlexThumbsDownAdUrl: json['includeFlexThumbsDownAdUrl'] as bool,
       includeAudioToken: json['includeAudioToken'] as bool,
       getPlaylistReason:
-          _$enumDecode(_$GetPlaylistReasonEnumMap, json['getPlaylistReason']),
+          $enumDecode(_$GetPlaylistReasonEnumMap, json['getPlaylistReason']),
       audioAdPodCapable: json['audioAdPodCapable'] as bool,
       includeBackstageAdUrl: json['includeBackstageAdUrl'] as bool,
       includeVoiceTrack: json['includeVoiceTrack'] as bool,
@@ -103,32 +103,6 @@ Map<String, dynamic> _$GetStationContentRequestToJson(
       'includeBannerAd': instance.includeBannerAd,
       'testMode': instance.testMode,
     };
-
-K _$enumDecode<K, V>(
-  Map<K, V> enumValues,
-  Object? source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    throw ArgumentError(
-      'A value must be provided. Supported values: '
-      '${enumValues.values.join(', ')}',
-    );
-  }
-
-  return enumValues.entries.singleWhere(
-    (e) => e.value == source,
-    orElse: () {
-      if (unknownValue == null) {
-        throw ArgumentError(
-          '`$source` is not one of the supported values: '
-          '${enumValues.values.join(', ')}',
-        );
-      }
-      return MapEntry(unknownValue, enumValues.values.first);
-    },
-  ).key;
-}
 
 const _$TrackTypeEnumMap = {
   TrackType.track: 'Track',

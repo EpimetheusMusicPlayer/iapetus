@@ -1,5 +1,6 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'authenticated_partner.dart';
@@ -44,7 +45,7 @@ class _$AuthenticatedPartnerTearOff {
     );
   }
 
-  AuthenticatedPartner fromJson(Map<String, Object> json) {
+  AuthenticatedPartner fromJson(Map<String, Object?> json) {
     return AuthenticatedPartner.fromJson(json);
   }
 }
@@ -259,35 +260,28 @@ class _$_AuthenticatedPartner extends _AuthenticatedPartner {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _AuthenticatedPartner &&
-            (identical(other.syncTime, syncTime) ||
-                const DeepCollectionEquality()
-                    .equals(other.syncTime, syncTime)) &&
-            (identical(other.partnerAuthToken, partnerAuthToken) ||
-                const DeepCollectionEquality()
-                    .equals(other.partnerAuthToken, partnerAuthToken)) &&
-            (identical(other.partnerId, partnerId) ||
-                const DeepCollectionEquality()
-                    .equals(other.partnerId, partnerId)) &&
-            (identical(other.stationSkipUnit, stationSkipUnit) ||
-                const DeepCollectionEquality()
-                    .equals(other.stationSkipUnit, stationSkipUnit)) &&
-            (identical(other.stationSkipLimit, stationSkipLimit) ||
-                const DeepCollectionEquality()
-                    .equals(other.stationSkipLimit, stationSkipLimit)) &&
-            (identical(other.urls, urls) ||
-                const DeepCollectionEquality().equals(other.urls, urls)));
+        (other.runtimeType == runtimeType &&
+            other is _AuthenticatedPartner &&
+            const DeepCollectionEquality().equals(other.syncTime, syncTime) &&
+            const DeepCollectionEquality()
+                .equals(other.partnerAuthToken, partnerAuthToken) &&
+            const DeepCollectionEquality().equals(other.partnerId, partnerId) &&
+            const DeepCollectionEquality()
+                .equals(other.stationSkipUnit, stationSkipUnit) &&
+            const DeepCollectionEquality()
+                .equals(other.stationSkipLimit, stationSkipLimit) &&
+            const DeepCollectionEquality().equals(other.urls, urls));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(syncTime) ^
-      const DeepCollectionEquality().hash(partnerAuthToken) ^
-      const DeepCollectionEquality().hash(partnerId) ^
-      const DeepCollectionEquality().hash(stationSkipUnit) ^
-      const DeepCollectionEquality().hash(stationSkipLimit) ^
-      const DeepCollectionEquality().hash(urls);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(syncTime),
+      const DeepCollectionEquality().hash(partnerAuthToken),
+      const DeepCollectionEquality().hash(partnerId),
+      const DeepCollectionEquality().hash(stationSkipUnit),
+      const DeepCollectionEquality().hash(stationSkipLimit),
+      const DeepCollectionEquality().hash(urls));
 
   @JsonKey(ignore: true)
   @override
@@ -322,22 +316,22 @@ abstract class _AuthenticatedPartner extends AuthenticatedPartner {
 
   @override
   @JsonKey(name: 'syncTime', fromJson: decryptSyncTime, toJson: encryptSyncTime)
-  DateTime get syncTime => throw _privateConstructorUsedError;
+  DateTime get syncTime;
   @override
   @JsonKey(name: 'partnerAuthToken')
-  String get partnerAuthToken => throw _privateConstructorUsedError;
+  String get partnerAuthToken;
   @override
   @JsonKey(name: 'partnerId')
-  String get partnerId => throw _privateConstructorUsedError;
+  String get partnerId;
   @override
   @JsonKey(name: 'stationSkipUnit')
-  String get stationSkipUnit => throw _privateConstructorUsedError;
+  String get stationSkipUnit;
   @override
   @JsonKey(name: 'stationSkipLimit')
-  int get stationSkipLimit => throw _privateConstructorUsedError;
+  int get stationSkipLimit;
   @override
   @JsonKey(name: 'urls')
-  Map<String, Uri> get urls => throw _privateConstructorUsedError;
+  Map<String, Uri> get urls;
   @override
   @JsonKey(ignore: true)
   _$AuthenticatedPartnerCopyWith<_AuthenticatedPartner> get copyWith =>

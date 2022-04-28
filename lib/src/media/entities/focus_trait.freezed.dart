@@ -1,5 +1,6 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'focus_trait.dart';
@@ -32,7 +33,7 @@ class _$FocusTraitTearOff {
     );
   }
 
-  FocusTrait fromJson(Map<String, Object> json) {
+  FocusTrait fromJson(Map<String, Object?> json) {
     return FocusTrait.fromJson(json);
   }
 }
@@ -171,23 +172,21 @@ class _$_FocusTrait implements _FocusTrait {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _FocusTrait &&
-            (identical(other.name, name) ||
-                const DeepCollectionEquality().equals(other.name, name)) &&
-            (identical(other.focusTraitSet, focusTraitSet) ||
-                const DeepCollectionEquality()
-                    .equals(other.focusTraitSet, focusTraitSet)) &&
-            (identical(other.focusTraitSetType, focusTraitSetType) ||
-                const DeepCollectionEquality()
-                    .equals(other.focusTraitSetType, focusTraitSetType)));
+        (other.runtimeType == runtimeType &&
+            other is _FocusTrait &&
+            const DeepCollectionEquality().equals(other.name, name) &&
+            const DeepCollectionEquality()
+                .equals(other.focusTraitSet, focusTraitSet) &&
+            const DeepCollectionEquality()
+                .equals(other.focusTraitSetType, focusTraitSetType));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(name) ^
-      const DeepCollectionEquality().hash(focusTraitSet) ^
-      const DeepCollectionEquality().hash(focusTraitSetType);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(name),
+      const DeepCollectionEquality().hash(focusTraitSet),
+      const DeepCollectionEquality().hash(focusTraitSetType));
 
   @JsonKey(ignore: true)
   @override
@@ -214,13 +213,13 @@ abstract class _FocusTrait implements FocusTrait {
 
   @override
   @JsonKey(name: 'name')
-  String get name => throw _privateConstructorUsedError;
+  String get name;
   @override
   @JsonKey(name: 'focusTraitSet')
-  String get focusTraitSet => throw _privateConstructorUsedError;
+  String get focusTraitSet;
   @override
   @JsonKey(name: 'focusTraitSetType')
-  String get focusTraitSetType => throw _privateConstructorUsedError;
+  String get focusTraitSetType;
   @override
   @JsonKey(ignore: true)
   _$FocusTraitCopyWith<_FocusTrait> get copyWith =>

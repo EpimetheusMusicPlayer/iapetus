@@ -1,5 +1,6 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'button.dart';
@@ -30,7 +31,7 @@ class _$SuperbrowseButtonTearOff {
     );
   }
 
-  SuperbrowseButton fromJson(Map<String, Object> json) {
+  SuperbrowseButton fromJson(Map<String, Object?> json) {
     return SuperbrowseButton.fromJson(json);
   }
 }
@@ -170,18 +171,17 @@ class _$_SuperbrowseButton implements _SuperbrowseButton {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _SuperbrowseButton &&
-            (identical(other.action, action) ||
-                const DeepCollectionEquality().equals(other.action, action)) &&
-            (identical(other.type, type) ||
-                const DeepCollectionEquality().equals(other.type, type)));
+        (other.runtimeType == runtimeType &&
+            other is _SuperbrowseButton &&
+            const DeepCollectionEquality().equals(other.action, action) &&
+            const DeepCollectionEquality().equals(other.type, type));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(action) ^
-      const DeepCollectionEquality().hash(type);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(action),
+      const DeepCollectionEquality().hash(type));
 
   @JsonKey(ignore: true)
   @override
@@ -204,10 +204,10 @@ abstract class _SuperbrowseButton implements SuperbrowseButton {
 
   @override
   @JsonKey(name: 'action')
-  SuperbrowseAction? get action => throw _privateConstructorUsedError;
+  SuperbrowseAction? get action;
   @override
   @JsonKey(name: 'type')
-  ButtonType get type => throw _privateConstructorUsedError;
+  ButtonType get type;
   @override
   @JsonKey(ignore: true)
   _$SuperbrowseButtonCopyWith<_SuperbrowseButton> get copyWith =>
