@@ -44,6 +44,10 @@ Future<void> main(List<String> arguments) async {
   print('Album art: ${stationContent.albumArtUrl}');
   print('Audio: ${stationContent.audioUrlMap[AudioUrlQuality.high]}');
 
+  final annotations = await iapetus.getAnnotations([stationContent]);
+  print(
+      'Track number: ${(annotations[stationContent.pandoraId]! as TrackAnnotation).trackNumber}');
+
   // Close the client.
   iapetus.close();
 }
