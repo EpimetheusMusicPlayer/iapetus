@@ -4,3 +4,7 @@ linter:
   rules:
     sort_pub_dependencies: false
     sort_unnamed_constructors_first: false
+
+analyzer:
+  errors:
+    invalid_annotation_target: ignore
