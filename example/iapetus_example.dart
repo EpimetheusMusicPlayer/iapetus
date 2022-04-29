@@ -55,6 +55,10 @@ Future<void> main(List<String> arguments) async {
       .firstWhere((item) => item.pandoraType == PandoraType.playlist);
   final playlistSegment = await iapetus.getPlaylistSegment(playlist);
 
+  final track = collectionItems
+      .firstWhere((item) => item.pandoraType == PandoraType.song);
+  final onDemandMedia = await iapetus.getOnDemandMedia(track);
+
   // Close the client.
   iapetus.close();
 }

@@ -7,6 +7,7 @@ export 'src/core/crypto/crypto_data.dart';
 export 'src/core/pandora_api/pandora_api_data.dart';
 export 'src/core/partners/partners_data.dart';
 export 'src/media/media_data.dart';
+export 'src/on_demand/on_demand_data.dart';
 export 'src/playlists/playlists_data.dart';
 export 'src/recommendations/recommendations_data.dart';
 export 'src/stations/stations_data.dart';

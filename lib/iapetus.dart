@@ -10,6 +10,7 @@ export 'src/core/partners/partners.dart';
 export 'src/core/storage/storage.dart';
 export 'src/iapetus.dart';
 export 'src/media/media.dart';
+export 'src/on_demand/on_demand.dart';
 export 'src/playlists/playlists.dart';
 export 'src/recommendations/recommendations.dart';
 export 'src/stations/stations.dart';
