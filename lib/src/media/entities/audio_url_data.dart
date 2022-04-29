@@ -10,7 +10,6 @@ class AudioUrlData with _$AudioUrlData {
     @JsonKey(name: 'bitrate') required String bitrate,
     @JsonKey(name: 'encoding') required String encoding,
     @JsonKey(name: 'audioUrl') required Uri audioUrl,
-    @JsonKey(name: 'protocol') required String protocol,
   }) = _AudioUrlData;
 
   factory AudioUrlData.fromJson(Map<String, dynamic> json) =>

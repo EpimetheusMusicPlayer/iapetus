@@ -14,7 +14,6 @@ _$_AudioUrlData _$$_AudioUrlDataFromJson(Map<String, dynamic> json) =>
       bitrate: json['bitrate'] as String,
       encoding: json['encoding'] as String,
       audioUrl: Uri.parse(json['audioUrl'] as String),
-      protocol: json['protocol'] as String,
     );
 
 Map<String, dynamic> _$$_AudioUrlDataToJson(_$_AudioUrlData instance) =>
@@ -23,5 +22,4 @@ Map<String, dynamic> _$$_AudioUrlDataToJson(_$_AudioUrlData instance) =>
       'bitrate': instance.bitrate,
       'encoding': instance.encoding,
       'audioUrl': instance.audioUrl.toString(),
-      'protocol': instance.protocol,
     };

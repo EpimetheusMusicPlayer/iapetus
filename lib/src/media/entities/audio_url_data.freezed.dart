@@ -26,14 +26,12 @@ class _$AudioUrlDataTearOff {
       {@JsonKey(name: 'audioToken') required String audioToken,
       @JsonKey(name: 'bitrate') required String bitrate,
       @JsonKey(name: 'encoding') required String encoding,
-      @JsonKey(name: 'audioUrl') required Uri audioUrl,
-      @JsonKey(name: 'protocol') required String protocol}) {
+      @JsonKey(name: 'audioUrl') required Uri audioUrl}) {
     return _AudioUrlData(
       audioToken: audioToken,
       bitrate: bitrate,
       encoding: encoding,
       audioUrl: audioUrl,
-      protocol: protocol,
     );
   }
 
@@ -55,8 +53,6 @@ mixin _$AudioUrlData {
   String get encoding => throw _privateConstructorUsedError;
   @JsonKey(name: 'audioUrl')
   Uri get audioUrl => throw _privateConstructorUsedError;
-  @JsonKey(name: 'protocol')
-  String get protocol => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -73,8 +69,7 @@ abstract class $AudioUrlDataCopyWith<$Res> {
       {@JsonKey(name: 'audioToken') String audioToken,
       @JsonKey(name: 'bitrate') String bitrate,
       @JsonKey(name: 'encoding') String encoding,
-      @JsonKey(name: 'audioUrl') Uri audioUrl,
-      @JsonKey(name: 'protocol') String protocol});
+      @JsonKey(name: 'audioUrl') Uri audioUrl});
 }
 
 /// @nodoc
@@ -91,7 +86,6 @@ class _$AudioUrlDataCopyWithImpl<$Res> implements $AudioUrlDataCopyWith<$Res> {
     Object? bitrate = freezed,
     Object? encoding = freezed,
     Object? audioUrl = freezed,
-    Object? protocol = freezed,
   }) {
     return _then(_value.copyWith(
       audioToken: audioToken == freezed
@@ -110,10 +104,6 @@ class _$AudioUrlDataCopyWithImpl<$Res> implements $AudioUrlDataCopyWith<$Res> {
           ? _value.audioUrl
           : audioUrl // ignore: cast_nullable_to_non_nullable
               as Uri,
-      protocol: protocol == freezed
-          ? _value.protocol
-          : protocol // ignore: cast_nullable_to_non_nullable
-              as String,
     ));
   }
 }
@@ -129,8 +119,7 @@ abstract class _$AudioUrlDataCopyWith<$Res>
       {@JsonKey(name: 'audioToken') String audioToken,
       @JsonKey(name: 'bitrate') String bitrate,
       @JsonKey(name: 'encoding') String encoding,
-      @JsonKey(name: 'audioUrl') Uri audioUrl,
-      @JsonKey(name: 'protocol') String protocol});
+      @JsonKey(name: 'audioUrl') Uri audioUrl});
 }
 
 /// @nodoc
@@ -149,7 +138,6 @@ class __$AudioUrlDataCopyWithImpl<$Res> extends _$AudioUrlDataCopyWithImpl<$Res>
     Object? bitrate = freezed,
     Object? encoding = freezed,
     Object? audioUrl = freezed,
-    Object? protocol = freezed,
   }) {
     return _then(_AudioUrlData(
       audioToken: audioToken == freezed
@@ -168,10 +156,6 @@ class __$AudioUrlDataCopyWithImpl<$Res> extends _$AudioUrlDataCopyWithImpl<$Res>
           ? _value.audioUrl
           : audioUrl // ignore: cast_nullable_to_non_nullable
               as Uri,
-      protocol: protocol == freezed
-          ? _value.protocol
-          : protocol // ignore: cast_nullable_to_non_nullable
-              as String,
     ));
   }
 }
@@ -183,8 +167,7 @@ class _$_AudioUrlData implements _AudioUrlData {
       {@JsonKey(name: 'audioToken') required this.audioToken,
       @JsonKey(name: 'bitrate') required this.bitrate,
       @JsonKey(name: 'encoding') required this.encoding,
-      @JsonKey(name: 'audioUrl') required this.audioUrl,
-      @JsonKey(name: 'protocol') required this.protocol});
+      @JsonKey(name: 'audioUrl') required this.audioUrl});
 
   factory _$_AudioUrlData.fromJson(Map<String, dynamic> json) =>
       _$$_AudioUrlDataFromJson(json);
@@ -201,13 +184,10 @@ class _$_AudioUrlData implements _AudioUrlData {
   @override
   @JsonKey(name: 'audioUrl')
   final Uri audioUrl;
-  @override
-  @JsonKey(name: 'protocol')
-  final String protocol;
 
   @override
   String toString() {
-    return 'AudioUrlData(audioToken: $audioToken, bitrate: $bitrate, encoding: $encoding, audioUrl: $audioUrl, protocol: $protocol)';
+    return 'AudioUrlData(audioToken: $audioToken, bitrate: $bitrate, encoding: $encoding, audioUrl: $audioUrl)';
   }
 
   @override
@@ -219,8 +199,7 @@ class _$_AudioUrlData implements _AudioUrlData {
                 .equals(other.audioToken, audioToken) &&
             const DeepCollectionEquality().equals(other.bitrate, bitrate) &&
             const DeepCollectionEquality().equals(other.encoding, encoding) &&
-            const DeepCollectionEquality().equals(other.audioUrl, audioUrl) &&
-            const DeepCollectionEquality().equals(other.protocol, protocol));
+            const DeepCollectionEquality().equals(other.audioUrl, audioUrl));
   }
 
   @override
@@ -229,8 +208,7 @@ class _$_AudioUrlData implements _AudioUrlData {
       const DeepCollectionEquality().hash(audioToken),
       const DeepCollectionEquality().hash(bitrate),
       const DeepCollectionEquality().hash(encoding),
-      const DeepCollectionEquality().hash(audioUrl),
-      const DeepCollectionEquality().hash(protocol));
+      const DeepCollectionEquality().hash(audioUrl));
 
   @JsonKey(ignore: true)
   @override
@@ -248,8 +226,7 @@ abstract class _AudioUrlData implements AudioUrlData {
       {@JsonKey(name: 'audioToken') required String audioToken,
       @JsonKey(name: 'bitrate') required String bitrate,
       @JsonKey(name: 'encoding') required String encoding,
-      @JsonKey(name: 'audioUrl') required Uri audioUrl,
-      @JsonKey(name: 'protocol') required String protocol}) = _$_AudioUrlData;
+      @JsonKey(name: 'audioUrl') required Uri audioUrl}) = _$_AudioUrlData;
 
   factory _AudioUrlData.fromJson(Map<String, dynamic> json) =
       _$_AudioUrlData.fromJson;
@@ -266,9 +243,6 @@ abstract class _AudioUrlData implements AudioUrlData {
   @override
   @JsonKey(name: 'audioUrl')
   Uri get audioUrl;
-  @override
-  @JsonKey(name: 'protocol')
-  String get protocol;
   @override
   @JsonKey(ignore: true)
   _$AudioUrlDataCopyWith<_AudioUrlData> get copyWith =>
