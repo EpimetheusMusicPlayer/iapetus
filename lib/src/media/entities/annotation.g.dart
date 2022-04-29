@@ -23,11 +23,10 @@ _$TrackAnnotation _$$TrackAnnotationFromJson(Map<String, dynamic> json) =>
       artistName: json['artistName'] as String,
       explicitness: $enumDecode(_$ExplicitnessEnumMap, json['explicitness']),
       shareableUrlPath: json['shareableUrlPath'] as String,
-      hasRadio: json['hasRadio'] as bool,
+      hasRadio: readNullableBool(json['hasRadio'] as bool?),
       modificationTime:
           readDateTimeMilliseconds(json['modificationTime'] as int),
       slugPlusPandoraId: json['slugPlusPandoraId'] as String,
-      stationFactoryId: json['stationFactoryId'] as String,
       isrc: json['isrc'] as String,
       pandoraId: json['pandoraId'] as String,
       scope: json['scope'] as String,
@@ -48,10 +47,9 @@ Map<String, dynamic> _$$TrackAnnotationToJson(_$TrackAnnotation instance) =>
       'artistName': instance.artistName,
       'explicitness': _$ExplicitnessEnumMap[instance.explicitness],
       'shareableUrlPath': instance.shareableUrlPath,
-      'hasRadio': instance.hasRadio,
+      'hasRadio': writeNullableBool(instance.hasRadio),
       'modificationTime': writeDateTimeMilliseconds(instance.modificationTime),
       'slugPlusPandoraId': instance.slugPlusPandoraId,
-      'stationFactoryId': instance.stationFactoryId,
       'isrc': instance.isrc,
       'pandoraId': instance.pandoraId,
       'scope': instance.scope,
@@ -73,10 +71,9 @@ _$ArtistAnnotation _$$ArtistAnnotationFromJson(Map<String, dynamic> json) =>
       icon: MediaIcon.optionalFromJson(json['icon'] as Map<String, dynamic>),
       shareableUrlPath: json['shareableUrlPath'] as String,
       twitterHandle: json['twitterHandle'] as String?,
-      hasRadio: json['hasRadio'] as bool,
+      hasRadio: readNullableBool(json['hasRadio'] as bool?),
       modificationTime:
           readDateTimeMilliseconds(json['modificationTime'] as int),
-      stationFactoryId: json['stationFactoryId'] as String,
       slugPlusPandoraId: json['slugPlusPandoraId'] as String,
       collaboration: json['collaboration'] as bool,
       primaryArtistIds: (json['primaryArtists'] as List<dynamic>)
@@ -99,9 +96,8 @@ Map<String, dynamic> _$$ArtistAnnotationToJson(_$ArtistAnnotation instance) =>
       'icon': MediaIcon.optionalToJson(instance.icon),
       'shareableUrlPath': instance.shareableUrlPath,
       'twitterHandle': instance.twitterHandle,
-      'hasRadio': instance.hasRadio,
+      'hasRadio': writeNullableBool(instance.hasRadio),
       'modificationTime': writeDateTimeMilliseconds(instance.modificationTime),
-      'stationFactoryId': instance.stationFactoryId,
       'slugPlusPandoraId': instance.slugPlusPandoraId,
       'collaboration': instance.collaboration,
       'primaryArtists': instance.primaryArtistIds,
@@ -133,7 +129,7 @@ _$AlbumAnnotation _$$AlbumAnnotationFromJson(Map<String, dynamic> json) =>
       modificationTime:
           readDateTimeMilliseconds(json['modificationTime'] as int),
       slugPlusPandoraId: json['slugPlusPandoraId'] as String,
-      hasRadio: json['hasRadio'] as bool,
+      hasRadio: readNullableBool(json['hasRadio'] as bool?),
       releaseType: json['releaseType'] as String,
       listenerReleaseType: json['listenerReleaseType'] as String,
       pandoraId: json['pandoraId'] as String,
@@ -158,7 +154,7 @@ Map<String, dynamic> _$$AlbumAnnotationToJson(_$AlbumAnnotation instance) =>
       'shareableUrlPath': instance.shareableUrlPath,
       'modificationTime': writeDateTimeMilliseconds(instance.modificationTime),
       'slugPlusPandoraId': instance.slugPlusPandoraId,
-      'hasRadio': instance.hasRadio,
+      'hasRadio': writeNullableBool(instance.hasRadio),
       'releaseType': instance.releaseType,
       'listenerReleaseType': instance.listenerReleaseType,
       'pandoraId': instance.pandoraId,
@@ -204,14 +200,13 @@ _$ComposerAnnotation _$$ComposerAnnotationFromJson(Map<String, dynamic> json) =>
       name: json['name'] as String,
       sortableName: json['sortableName'] as String,
       icon: MediaIcon.optionalFromJson(json['icon'] as Map<String, dynamic>),
-      hasRadio: json['hasRadio'] as bool,
+      hasRadio: readNullableBool(json['hasRadio'] as bool?),
       albumCount: json['albumCount'] as int,
       trackCount: json['trackCount'] as int,
       shareableUrlPath: json['shareableUrlPath'] as String,
       modificationTime:
           readDateTimeMilliseconds(json['modificationTime'] as int),
       slugPlusPandoraId: json['slugPlusPandoraId'] as String,
-      stationFactoryId: json['stationFactoryId'] as String,
       pandoraId: json['pandoraId'] as String,
       scope: json['scope'] as String,
       $type: json['type'] as String?,
@@ -223,14 +218,35 @@ Map<String, dynamic> _$$ComposerAnnotationToJson(
       'name': instance.name,
       'sortableName': instance.sortableName,
       'icon': MediaIcon.optionalToJson(instance.icon),
-      'hasRadio': instance.hasRadio,
+      'hasRadio': writeNullableBool(instance.hasRadio),
       'albumCount': instance.albumCount,
       'trackCount': instance.trackCount,
       'shareableUrlPath': instance.shareableUrlPath,
       'modificationTime': writeDateTimeMilliseconds(instance.modificationTime),
       'slugPlusPandoraId': instance.slugPlusPandoraId,
-      'stationFactoryId': instance.stationFactoryId,
       'pandoraId': instance.pandoraId,
       'scope': instance.scope,
+      'type': instance.$type,
+    };
+
+_$ListenerMediaAnnotation _$$ListenerMediaAnnotationFromJson(
+        Map<String, dynamic> json) =>
+    _$ListenerMediaAnnotation(
+      pandoraId: json['pandoraId'] as String,
+      listenerId: json['listenerId'] as int,
+      webname: json['webname'] as String,
+      fullName: json['fullname'] as String,
+      displayName: json['displayname'] as String,
+      $type: json['type'] as String?,
+    );
+
+Map<String, dynamic> _$$ListenerMediaAnnotationToJson(
+        _$ListenerMediaAnnotation instance) =>
+    <String, dynamic>{
+      'pandoraId': instance.pandoraId,
+      'listenerId': instance.listenerId,
+      'webname': instance.webname,
+      'fullname': instance.fullName,
+      'displayname': instance.displayName,
       'type': instance.$type,
     };

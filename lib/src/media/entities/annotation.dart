@@ -8,7 +8,6 @@ import 'package:iapetus/src/media/entities/rights_info.dart';
 import 'package:iapetus/src/media/entities/types/track.dart';
 
 part 'annotation.freezed.dart';
-
 part 'annotation.g.dart';
 
 @Freezed(unionKey: 'type')
@@ -32,11 +31,11 @@ class MediaAnnotation with _$MediaAnnotation implements PandoraEntity {
     @JsonKey(name: 'artistName') required String artistName,
     @JsonKey(name: 'explicitness') required Explicitness explicitness,
     @JsonKey(name: 'shareableUrlPath') required String shareableUrlPath,
-    @JsonKey(name: 'hasRadio') required bool hasRadio,
+    @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+        required bool hasRadio,
     @JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
         required DateTime modificationTime,
     @JsonKey(name: 'slugPlusPandoraId') required String slugPlusPandoraId,
-    @JsonKey(name: 'stationFactoryId') required String stationFactoryId,
     @JsonKey(name: 'isrc') required String isrc,
     @JsonKey(name: 'pandoraId') required String pandoraId,
     @JsonKey(name: 'scope') required String scope,
@@ -52,10 +51,10 @@ class MediaAnnotation with _$MediaAnnotation implements PandoraEntity {
         required MediaIcon? icon,
     @JsonKey(name: 'shareableUrlPath') required String shareableUrlPath,
     @JsonKey(name: 'twitterHandle') String? twitterHandle,
-    @JsonKey(name: 'hasRadio') required bool hasRadio,
+    @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+        required bool hasRadio,
     @JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
         required DateTime modificationTime,
-    @JsonKey(name: 'stationFactoryId') required String stationFactoryId,
     @JsonKey(name: 'slugPlusPandoraId') required String slugPlusPandoraId,
     @JsonKey(name: 'collaboration') required bool collaboration,
     @JsonKey(name: 'primaryArtists') required List<String> primaryArtistIds,
@@ -86,7 +85,8 @@ class MediaAnnotation with _$MediaAnnotation implements PandoraEntity {
     @JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
         required DateTime modificationTime,
     @JsonKey(name: 'slugPlusPandoraId') required String slugPlusPandoraId,
-    @JsonKey(name: 'hasRadio') required bool hasRadio,
+    @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+        required bool hasRadio,
     @JsonKey(name: 'releaseType') required String releaseType,
     @JsonKey(name: 'listenerReleaseType') required String listenerReleaseType,
     @JsonKey(name: 'pandoraId') required String pandoraId,
@@ -117,17 +117,27 @@ class MediaAnnotation with _$MediaAnnotation implements PandoraEntity {
     @JsonKey(name: 'sortableName') required String sortableName,
     @JsonKey(name: 'icon', fromJson: MediaIcon.optionalFromJson, toJson: MediaIcon.optionalToJson)
         required MediaIcon? icon,
-    @JsonKey(name: 'hasRadio') required bool hasRadio,
+    @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+        required bool hasRadio,
     @JsonKey(name: 'albumCount') required int albumCount,
     @JsonKey(name: 'trackCount') required int trackCount,
     @JsonKey(name: 'shareableUrlPath') required String shareableUrlPath,
     @JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
         required DateTime modificationTime,
     @JsonKey(name: 'slugPlusPandoraId') required String slugPlusPandoraId,
-    @JsonKey(name: 'stationFactoryId') required String stationFactoryId,
     @JsonKey(name: 'pandoraId') required String pandoraId,
     @JsonKey(name: 'scope') required String scope,
   }) = ComposerAnnotation;
+
+  @FreezedUnionValue('LI')
+  const factory MediaAnnotation.listener({
+    @JsonKey(name: 'pandoraId') required String pandoraId,
+    @JsonKey(name: 'listenerId') required int listenerId,
+    @JsonKey(name: 'webname') required String webname,
+    @JsonKey(name: 'fullname') required String fullName,
+    @JsonKey(name: 'displayname') required String displayName,
+    // TODO investigate bio and imageUrl fields
+  }) = ListenerMediaAnnotation;
 
   @override
   PandoraType get pandoraType {
@@ -136,6 +146,7 @@ class MediaAnnotation with _$MediaAnnotation implements PandoraEntity {
     if (this is AlbumAnnotation) return PandoraType.album;
     if (this is GenreAnnotation) return PandoraType.genre;
     if (this is ComposerAnnotation) return PandoraType.composer;
+    if (this is ListenerMediaAnnotation) return PandoraType.listener;
     throw FallThroughError();
   }
 
