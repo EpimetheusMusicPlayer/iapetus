@@ -1,5 +1,6 @@
 library iapetus;
 
+export 'src/collection/collection.dart';
 export 'src/common/common.dart';
 export 'src/core/authentication/authentication.dart';
 export 'src/core/crypto/crypto.dart';

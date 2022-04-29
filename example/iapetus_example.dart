@@ -50,6 +50,8 @@ Future<void> main(List<String> arguments) async {
     'Track number: ${(annotations[stationContent.pandoraId]! as TrackAnnotation).trackNumber}',
   );
 
+  final collectionItems = await iapetus.getCollectionItems();
+
   // Close the client.
   iapetus.close();
 }
