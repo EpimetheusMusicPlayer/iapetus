@@ -40,13 +40,13 @@ class _$StationContentTearOff {
       @JsonKey(name: 'trackType')
           required TrackType trackType,
       @JsonKey(name: 'nowPlayingStationAdUrl')
-          required Uri nowPlayingStationAdUrl,
+          Uri? nowPlayingStationAdUrl,
       @JsonKey(name: 'allowStartStationFromTrack')
           required bool allowStartStationFromTrack,
       @JsonKey(name: 'nowPlayingStationAdTargeting')
-          required String nowPlayingStationAdTargeting,
+          String? nowPlayingStationAdTargeting,
       @JsonKey(name: 'nowPlayingStationPremiumAdTargeting')
-          required String nowPlayingStationPremiumAdTargeting,
+          String? nowPlayingStationPremiumAdTargeting,
       @JsonKey(name: 'allowShareTrack')
           required bool allowShareTrack,
       @JsonKey(name: 'pandoraType')
@@ -54,7 +54,7 @@ class _$StationContentTearOff {
       @JsonKey(name: 'songIdentity')
           required String songIdentity,
       @JsonKey(name: 'nowPlayingStationPremiumAdUrl')
-          required Uri nowPlayingStationPremiumAdUrl,
+          Uri? nowPlayingStationPremiumAdUrl,
       @JsonKey(name: 'allowFeedback')
           required bool allowFeedback,
       @JsonKey(name: 'musicId')
@@ -96,13 +96,13 @@ class _$StationContentTearOff {
       @JsonKey(name: 'songExplorerUrl')
           required Uri songExplorerUrl,
       @JsonKey(name: 'nowPlayingStationPremiumAdUnit')
-          required String nowPlayingStationPremiumAdUnit,
+          String? nowPlayingStationPremiumAdUnit,
       @JsonKey(name: 'songRating')
           required MediaRating songRating,
       @JsonKey(name: 'trackKey')
           required TrackKey? trackKey,
       @JsonKey(name: 'nowPlayingStationAdUnit')
-          required String nowPlayingStationAdUnit,
+          String? nowPlayingStationAdUnit,
       @JsonKey(name: 'requestedModeId')
           required int requestedModeId,
       @JsonKey(name: 'stationId')
@@ -195,13 +195,14 @@ mixin _$StationContent {
   @JsonKey(name: 'trackType')
   TrackType get trackType => throw _privateConstructorUsedError;
   @JsonKey(name: 'nowPlayingStationAdUrl')
-  Uri get nowPlayingStationAdUrl => throw _privateConstructorUsedError;
+  Uri? get nowPlayingStationAdUrl => throw _privateConstructorUsedError;
   @JsonKey(name: 'allowStartStationFromTrack')
   bool get allowStartStationFromTrack => throw _privateConstructorUsedError;
   @JsonKey(name: 'nowPlayingStationAdTargeting')
-  String get nowPlayingStationAdTargeting => throw _privateConstructorUsedError;
+  String? get nowPlayingStationAdTargeting =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: 'nowPlayingStationPremiumAdTargeting')
-  String get nowPlayingStationPremiumAdTargeting =>
+  String? get nowPlayingStationPremiumAdTargeting =>
       throw _privateConstructorUsedError;
   @JsonKey(name: 'allowShareTrack')
   bool get allowShareTrack => throw _privateConstructorUsedError;
@@ -212,7 +213,7 @@ mixin _$StationContent {
   @JsonKey(name: 'songIdentity')
   String get songIdentity => throw _privateConstructorUsedError;
   @JsonKey(name: 'nowPlayingStationPremiumAdUrl')
-  Uri get nowPlayingStationPremiumAdUrl => throw _privateConstructorUsedError;
+  Uri? get nowPlayingStationPremiumAdUrl => throw _privateConstructorUsedError;
   @JsonKey(name: 'allowFeedback')
   bool get allowFeedback => throw _privateConstructorUsedError;
   @JsonKey(name: 'musicId')
@@ -255,14 +256,14 @@ mixin _$StationContent {
   @JsonKey(name: 'songExplorerUrl')
   Uri get songExplorerUrl => throw _privateConstructorUsedError;
   @JsonKey(name: 'nowPlayingStationPremiumAdUnit')
-  String get nowPlayingStationPremiumAdUnit =>
+  String? get nowPlayingStationPremiumAdUnit =>
       throw _privateConstructorUsedError;
   @JsonKey(name: 'songRating')
   MediaRating get songRating => throw _privateConstructorUsedError;
   @JsonKey(name: 'trackKey')
   TrackKey? get trackKey => throw _privateConstructorUsedError;
   @JsonKey(name: 'nowPlayingStationAdUnit')
-  String get nowPlayingStationAdUnit => throw _privateConstructorUsedError;
+  String? get nowPlayingStationAdUnit => throw _privateConstructorUsedError;
   @JsonKey(name: 'requestedModeId')
   int get requestedModeId => throw _privateConstructorUsedError;
   @JsonKey(name: 'stationId')
@@ -307,13 +308,13 @@ abstract class $StationContentCopyWith<$Res> {
       @JsonKey(name: 'trackType')
           TrackType trackType,
       @JsonKey(name: 'nowPlayingStationAdUrl')
-          Uri nowPlayingStationAdUrl,
+          Uri? nowPlayingStationAdUrl,
       @JsonKey(name: 'allowStartStationFromTrack')
           bool allowStartStationFromTrack,
       @JsonKey(name: 'nowPlayingStationAdTargeting')
-          String nowPlayingStationAdTargeting,
+          String? nowPlayingStationAdTargeting,
       @JsonKey(name: 'nowPlayingStationPremiumAdTargeting')
-          String nowPlayingStationPremiumAdTargeting,
+          String? nowPlayingStationPremiumAdTargeting,
       @JsonKey(name: 'allowShareTrack')
           bool allowShareTrack,
       @JsonKey(name: 'pandoraType')
@@ -321,7 +322,7 @@ abstract class $StationContentCopyWith<$Res> {
       @JsonKey(name: 'songIdentity')
           String songIdentity,
       @JsonKey(name: 'nowPlayingStationPremiumAdUrl')
-          Uri nowPlayingStationPremiumAdUrl,
+          Uri? nowPlayingStationPremiumAdUrl,
       @JsonKey(name: 'allowFeedback')
           bool allowFeedback,
       @JsonKey(name: 'musicId')
@@ -363,13 +364,13 @@ abstract class $StationContentCopyWith<$Res> {
       @JsonKey(name: 'songExplorerUrl')
           Uri songExplorerUrl,
       @JsonKey(name: 'nowPlayingStationPremiumAdUnit')
-          String nowPlayingStationPremiumAdUnit,
+          String? nowPlayingStationPremiumAdUnit,
       @JsonKey(name: 'songRating')
           MediaRating songRating,
       @JsonKey(name: 'trackKey')
           TrackKey? trackKey,
       @JsonKey(name: 'nowPlayingStationAdUnit')
-          String nowPlayingStationAdUnit,
+          String? nowPlayingStationAdUnit,
       @JsonKey(name: 'requestedModeId')
           int requestedModeId,
       @JsonKey(name: 'stationId')
@@ -483,7 +484,7 @@ class _$StationContentCopyWithImpl<$Res>
       nowPlayingStationAdUrl: nowPlayingStationAdUrl == freezed
           ? _value.nowPlayingStationAdUrl
           : nowPlayingStationAdUrl // ignore: cast_nullable_to_non_nullable
-              as Uri,
+              as Uri?,
       allowStartStationFromTrack: allowStartStationFromTrack == freezed
           ? _value.allowStartStationFromTrack
           : allowStartStationFromTrack // ignore: cast_nullable_to_non_nullable
@@ -491,12 +492,12 @@ class _$StationContentCopyWithImpl<$Res>
       nowPlayingStationAdTargeting: nowPlayingStationAdTargeting == freezed
           ? _value.nowPlayingStationAdTargeting
           : nowPlayingStationAdTargeting // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       nowPlayingStationPremiumAdTargeting: nowPlayingStationPremiumAdTargeting ==
               freezed
           ? _value.nowPlayingStationPremiumAdTargeting
           : nowPlayingStationPremiumAdTargeting // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       allowShareTrack: allowShareTrack == freezed
           ? _value.allowShareTrack
           : allowShareTrack // ignore: cast_nullable_to_non_nullable
@@ -512,7 +513,7 @@ class _$StationContentCopyWithImpl<$Res>
       nowPlayingStationPremiumAdUrl: nowPlayingStationPremiumAdUrl == freezed
           ? _value.nowPlayingStationPremiumAdUrl
           : nowPlayingStationPremiumAdUrl // ignore: cast_nullable_to_non_nullable
-              as Uri,
+              as Uri?,
       allowFeedback: allowFeedback == freezed
           ? _value.allowFeedback
           : allowFeedback // ignore: cast_nullable_to_non_nullable
@@ -596,7 +597,7 @@ class _$StationContentCopyWithImpl<$Res>
       nowPlayingStationPremiumAdUnit: nowPlayingStationPremiumAdUnit == freezed
           ? _value.nowPlayingStationPremiumAdUnit
           : nowPlayingStationPremiumAdUnit // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       songRating: songRating == freezed
           ? _value.songRating
           : songRating // ignore: cast_nullable_to_non_nullable
@@ -608,7 +609,7 @@ class _$StationContentCopyWithImpl<$Res>
       nowPlayingStationAdUnit: nowPlayingStationAdUnit == freezed
           ? _value.nowPlayingStationAdUnit
           : nowPlayingStationAdUnit // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       requestedModeId: requestedModeId == freezed
           ? _value.requestedModeId
           : requestedModeId // ignore: cast_nullable_to_non_nullable
@@ -677,13 +678,13 @@ abstract class _$StationContentCopyWith<$Res>
       @JsonKey(name: 'trackType')
           TrackType trackType,
       @JsonKey(name: 'nowPlayingStationAdUrl')
-          Uri nowPlayingStationAdUrl,
+          Uri? nowPlayingStationAdUrl,
       @JsonKey(name: 'allowStartStationFromTrack')
           bool allowStartStationFromTrack,
       @JsonKey(name: 'nowPlayingStationAdTargeting')
-          String nowPlayingStationAdTargeting,
+          String? nowPlayingStationAdTargeting,
       @JsonKey(name: 'nowPlayingStationPremiumAdTargeting')
-          String nowPlayingStationPremiumAdTargeting,
+          String? nowPlayingStationPremiumAdTargeting,
       @JsonKey(name: 'allowShareTrack')
           bool allowShareTrack,
       @JsonKey(name: 'pandoraType')
@@ -691,7 +692,7 @@ abstract class _$StationContentCopyWith<$Res>
       @JsonKey(name: 'songIdentity')
           String songIdentity,
       @JsonKey(name: 'nowPlayingStationPremiumAdUrl')
-          Uri nowPlayingStationPremiumAdUrl,
+          Uri? nowPlayingStationPremiumAdUrl,
       @JsonKey(name: 'allowFeedback')
           bool allowFeedback,
       @JsonKey(name: 'musicId')
@@ -733,13 +734,13 @@ abstract class _$StationContentCopyWith<$Res>
       @JsonKey(name: 'songExplorerUrl')
           Uri songExplorerUrl,
       @JsonKey(name: 'nowPlayingStationPremiumAdUnit')
-          String nowPlayingStationPremiumAdUnit,
+          String? nowPlayingStationPremiumAdUnit,
       @JsonKey(name: 'songRating')
           MediaRating songRating,
       @JsonKey(name: 'trackKey')
           TrackKey? trackKey,
       @JsonKey(name: 'nowPlayingStationAdUnit')
-          String nowPlayingStationAdUnit,
+          String? nowPlayingStationAdUnit,
       @JsonKey(name: 'requestedModeId')
           int requestedModeId,
       @JsonKey(name: 'stationId')
@@ -856,7 +857,7 @@ class __$StationContentCopyWithImpl<$Res>
       nowPlayingStationAdUrl: nowPlayingStationAdUrl == freezed
           ? _value.nowPlayingStationAdUrl
           : nowPlayingStationAdUrl // ignore: cast_nullable_to_non_nullable
-              as Uri,
+              as Uri?,
       allowStartStationFromTrack: allowStartStationFromTrack == freezed
           ? _value.allowStartStationFromTrack
           : allowStartStationFromTrack // ignore: cast_nullable_to_non_nullable
@@ -864,12 +865,12 @@ class __$StationContentCopyWithImpl<$Res>
       nowPlayingStationAdTargeting: nowPlayingStationAdTargeting == freezed
           ? _value.nowPlayingStationAdTargeting
           : nowPlayingStationAdTargeting // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       nowPlayingStationPremiumAdTargeting: nowPlayingStationPremiumAdTargeting ==
               freezed
           ? _value.nowPlayingStationPremiumAdTargeting
           : nowPlayingStationPremiumAdTargeting // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       allowShareTrack: allowShareTrack == freezed
           ? _value.allowShareTrack
           : allowShareTrack // ignore: cast_nullable_to_non_nullable
@@ -885,7 +886,7 @@ class __$StationContentCopyWithImpl<$Res>
       nowPlayingStationPremiumAdUrl: nowPlayingStationPremiumAdUrl == freezed
           ? _value.nowPlayingStationPremiumAdUrl
           : nowPlayingStationPremiumAdUrl // ignore: cast_nullable_to_non_nullable
-              as Uri,
+              as Uri?,
       allowFeedback: allowFeedback == freezed
           ? _value.allowFeedback
           : allowFeedback // ignore: cast_nullable_to_non_nullable
@@ -969,7 +970,7 @@ class __$StationContentCopyWithImpl<$Res>
       nowPlayingStationPremiumAdUnit: nowPlayingStationPremiumAdUnit == freezed
           ? _value.nowPlayingStationPremiumAdUnit
           : nowPlayingStationPremiumAdUnit // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       songRating: songRating == freezed
           ? _value.songRating
           : songRating // ignore: cast_nullable_to_non_nullable
@@ -981,7 +982,7 @@ class __$StationContentCopyWithImpl<$Res>
       nowPlayingStationAdUnit: nowPlayingStationAdUnit == freezed
           ? _value.nowPlayingStationAdUnit
           : nowPlayingStationAdUnit // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       requestedModeId: requestedModeId == freezed
           ? _value.requestedModeId
           : requestedModeId // ignore: cast_nullable_to_non_nullable
@@ -1035,13 +1036,13 @@ class _$_StationContent extends _StationContent {
       @JsonKey(name: 'trackType')
           required this.trackType,
       @JsonKey(name: 'nowPlayingStationAdUrl')
-          required this.nowPlayingStationAdUrl,
+          this.nowPlayingStationAdUrl,
       @JsonKey(name: 'allowStartStationFromTrack')
           required this.allowStartStationFromTrack,
       @JsonKey(name: 'nowPlayingStationAdTargeting')
-          required this.nowPlayingStationAdTargeting,
+          this.nowPlayingStationAdTargeting,
       @JsonKey(name: 'nowPlayingStationPremiumAdTargeting')
-          required this.nowPlayingStationPremiumAdTargeting,
+          this.nowPlayingStationPremiumAdTargeting,
       @JsonKey(name: 'allowShareTrack')
           required this.allowShareTrack,
       @JsonKey(name: 'pandoraType')
@@ -1049,7 +1050,7 @@ class _$_StationContent extends _StationContent {
       @JsonKey(name: 'songIdentity')
           required this.songIdentity,
       @JsonKey(name: 'nowPlayingStationPremiumAdUrl')
-          required this.nowPlayingStationPremiumAdUrl,
+          this.nowPlayingStationPremiumAdUrl,
       @JsonKey(name: 'allowFeedback')
           required this.allowFeedback,
       @JsonKey(name: 'musicId')
@@ -1091,13 +1092,13 @@ class _$_StationContent extends _StationContent {
       @JsonKey(name: 'songExplorerUrl')
           required this.songExplorerUrl,
       @JsonKey(name: 'nowPlayingStationPremiumAdUnit')
-          required this.nowPlayingStationPremiumAdUnit,
+          this.nowPlayingStationPremiumAdUnit,
       @JsonKey(name: 'songRating')
           required this.songRating,
       @JsonKey(name: 'trackKey')
           required this.trackKey,
       @JsonKey(name: 'nowPlayingStationAdUnit')
-          required this.nowPlayingStationAdUnit,
+          this.nowPlayingStationAdUnit,
       @JsonKey(name: 'requestedModeId')
           required this.requestedModeId,
       @JsonKey(name: 'stationId')
@@ -1143,16 +1144,16 @@ class _$_StationContent extends _StationContent {
   final TrackType trackType;
   @override
   @JsonKey(name: 'nowPlayingStationAdUrl')
-  final Uri nowPlayingStationAdUrl;
+  final Uri? nowPlayingStationAdUrl;
   @override
   @JsonKey(name: 'allowStartStationFromTrack')
   final bool allowStartStationFromTrack;
   @override
   @JsonKey(name: 'nowPlayingStationAdTargeting')
-  final String nowPlayingStationAdTargeting;
+  final String? nowPlayingStationAdTargeting;
   @override
   @JsonKey(name: 'nowPlayingStationPremiumAdTargeting')
-  final String nowPlayingStationPremiumAdTargeting;
+  final String? nowPlayingStationPremiumAdTargeting;
   @override
   @JsonKey(name: 'allowShareTrack')
   final bool allowShareTrack;
@@ -1166,7 +1167,7 @@ class _$_StationContent extends _StationContent {
   final String songIdentity;
   @override
   @JsonKey(name: 'nowPlayingStationPremiumAdUrl')
-  final Uri nowPlayingStationPremiumAdUrl;
+  final Uri? nowPlayingStationPremiumAdUrl;
   @override
   @JsonKey(name: 'allowFeedback')
   final bool allowFeedback;
@@ -1229,7 +1230,7 @@ class _$_StationContent extends _StationContent {
   final Uri songExplorerUrl;
   @override
   @JsonKey(name: 'nowPlayingStationPremiumAdUnit')
-  final String nowPlayingStationPremiumAdUnit;
+  final String? nowPlayingStationPremiumAdUnit;
   @override
   @JsonKey(name: 'songRating')
   final MediaRating songRating;
@@ -1238,7 +1239,7 @@ class _$_StationContent extends _StationContent {
   final TrackKey? trackKey;
   @override
   @JsonKey(name: 'nowPlayingStationAdUnit')
-  final String nowPlayingStationAdUnit;
+  final String? nowPlayingStationAdUnit;
   @override
   @JsonKey(name: 'requestedModeId')
   final int requestedModeId;
@@ -1444,13 +1445,13 @@ abstract class _StationContent extends StationContent {
       @JsonKey(name: 'trackType')
           required TrackType trackType,
       @JsonKey(name: 'nowPlayingStationAdUrl')
-          required Uri nowPlayingStationAdUrl,
+          Uri? nowPlayingStationAdUrl,
       @JsonKey(name: 'allowStartStationFromTrack')
           required bool allowStartStationFromTrack,
       @JsonKey(name: 'nowPlayingStationAdTargeting')
-          required String nowPlayingStationAdTargeting,
+          String? nowPlayingStationAdTargeting,
       @JsonKey(name: 'nowPlayingStationPremiumAdTargeting')
-          required String nowPlayingStationPremiumAdTargeting,
+          String? nowPlayingStationPremiumAdTargeting,
       @JsonKey(name: 'allowShareTrack')
           required bool allowShareTrack,
       @JsonKey(name: 'pandoraType')
@@ -1458,7 +1459,7 @@ abstract class _StationContent extends StationContent {
       @JsonKey(name: 'songIdentity')
           required String songIdentity,
       @JsonKey(name: 'nowPlayingStationPremiumAdUrl')
-          required Uri nowPlayingStationPremiumAdUrl,
+          Uri? nowPlayingStationPremiumAdUrl,
       @JsonKey(name: 'allowFeedback')
           required bool allowFeedback,
       @JsonKey(name: 'musicId')
@@ -1500,13 +1501,13 @@ abstract class _StationContent extends StationContent {
       @JsonKey(name: 'songExplorerUrl')
           required Uri songExplorerUrl,
       @JsonKey(name: 'nowPlayingStationPremiumAdUnit')
-          required String nowPlayingStationPremiumAdUnit,
+          String? nowPlayingStationPremiumAdUnit,
       @JsonKey(name: 'songRating')
           required MediaRating songRating,
       @JsonKey(name: 'trackKey')
           required TrackKey? trackKey,
       @JsonKey(name: 'nowPlayingStationAdUnit')
-          required String nowPlayingStationAdUnit,
+          String? nowPlayingStationAdUnit,
       @JsonKey(name: 'requestedModeId')
           required int requestedModeId,
       @JsonKey(name: 'stationId')
@@ -1552,16 +1553,16 @@ abstract class _StationContent extends StationContent {
   TrackType get trackType;
   @override
   @JsonKey(name: 'nowPlayingStationAdUrl')
-  Uri get nowPlayingStationAdUrl;
+  Uri? get nowPlayingStationAdUrl;
   @override
   @JsonKey(name: 'allowStartStationFromTrack')
   bool get allowStartStationFromTrack;
   @override
   @JsonKey(name: 'nowPlayingStationAdTargeting')
-  String get nowPlayingStationAdTargeting;
+  String? get nowPlayingStationAdTargeting;
   @override
   @JsonKey(name: 'nowPlayingStationPremiumAdTargeting')
-  String get nowPlayingStationPremiumAdTargeting;
+  String? get nowPlayingStationPremiumAdTargeting;
   @override
   @JsonKey(name: 'allowShareTrack')
   bool get allowShareTrack;
@@ -1575,7 +1576,7 @@ abstract class _StationContent extends StationContent {
   String get songIdentity;
   @override
   @JsonKey(name: 'nowPlayingStationPremiumAdUrl')
-  Uri get nowPlayingStationPremiumAdUrl;
+  Uri? get nowPlayingStationPremiumAdUrl;
   @override
   @JsonKey(name: 'allowFeedback')
   bool get allowFeedback;
@@ -1638,7 +1639,7 @@ abstract class _StationContent extends StationContent {
   Uri get songExplorerUrl;
   @override
   @JsonKey(name: 'nowPlayingStationPremiumAdUnit')
-  String get nowPlayingStationPremiumAdUnit;
+  String? get nowPlayingStationPremiumAdUnit;
   @override
   @JsonKey(name: 'songRating')
   MediaRating get songRating;
@@ -1647,7 +1648,7 @@ abstract class _StationContent extends StationContent {
   TrackKey? get trackKey;
   @override
   @JsonKey(name: 'nowPlayingStationAdUnit')
-  String get nowPlayingStationAdUnit;
+  String? get nowPlayingStationAdUnit;
   @override
   @JsonKey(name: 'requestedModeId')
   int get requestedModeId;

@@ -58,21 +58,20 @@ class StationContent with _$StationContent implements PlayableMedia, Track {
     @JsonKey(name: 'artistExplorerUrl') required Uri artistExplorerUrl,
     @JsonKey(name: 'songDetailUrl') required Uri songDetailUrl,
     @JsonKey(name: 'trackType') required TrackType trackType,
-    @JsonKey(name: 'nowPlayingStationAdUrl')
-        required Uri nowPlayingStationAdUrl,
+    @JsonKey(name: 'nowPlayingStationAdUrl') Uri? nowPlayingStationAdUrl,
     @JsonKey(name: 'allowStartStationFromTrack')
         required bool allowStartStationFromTrack,
     @JsonKey(name: 'nowPlayingStationAdTargeting')
-        required String nowPlayingStationAdTargeting,
+        String? nowPlayingStationAdTargeting,
     @JsonKey(name: 'nowPlayingStationPremiumAdTargeting')
-        required String nowPlayingStationPremiumAdTargeting,
+        String? nowPlayingStationPremiumAdTargeting,
     @JsonKey(name: 'allowShareTrack') required bool allowShareTrack,
     @JsonKey(name: 'pandoraType') required PandoraType pandoraType,
 
     /// Used for remote applications, like Sonos.
     @JsonKey(name: 'songIdentity') required String songIdentity,
     @JsonKey(name: 'nowPlayingStationPremiumAdUrl')
-        required Uri nowPlayingStationPremiumAdUrl,
+        Uri? nowPlayingStationPremiumAdUrl,
     @JsonKey(name: 'allowFeedback') required bool allowFeedback,
     @JsonKey(name: 'musicId') required String musicId,
     @JsonKey(name: 'categoryDescriptor') required String categoryDescriptor,
@@ -97,11 +96,10 @@ class StationContent with _$StationContent implements PlayableMedia, Track {
     @JsonKey(name: 'shareLandingUrl') required Uri shareLandingUrl,
     @JsonKey(name: 'songExplorerUrl') required Uri songExplorerUrl,
     @JsonKey(name: 'nowPlayingStationPremiumAdUnit')
-        required String nowPlayingStationPremiumAdUnit,
+        String? nowPlayingStationPremiumAdUnit,
     @JsonKey(name: 'songRating') required MediaRating songRating,
     @JsonKey(name: 'trackKey') required TrackKey? trackKey,
-    @JsonKey(name: 'nowPlayingStationAdUnit')
-        required String nowPlayingStationAdUnit,
+    @JsonKey(name: 'nowPlayingStationAdUnit') String? nowPlayingStationAdUnit,
     @JsonKey(name: 'requestedModeId') required int requestedModeId,
     @JsonKey(name: 'stationId') required String stationId,
     @JsonKey(name: 'pandoraId') required String pandoraId,

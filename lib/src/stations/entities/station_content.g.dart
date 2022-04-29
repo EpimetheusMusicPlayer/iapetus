@@ -18,18 +18,21 @@ _$_StationContent _$$_StationContentFromJson(Map<String, dynamic> json) =>
       artistExplorerUrl: Uri.parse(json['artistExplorerUrl'] as String),
       songDetailUrl: Uri.parse(json['songDetailUrl'] as String),
       trackType: $enumDecode(_$TrackTypeEnumMap, json['trackType']),
-      nowPlayingStationAdUrl:
-          Uri.parse(json['nowPlayingStationAdUrl'] as String),
+      nowPlayingStationAdUrl: json['nowPlayingStationAdUrl'] == null
+          ? null
+          : Uri.parse(json['nowPlayingStationAdUrl'] as String),
       allowStartStationFromTrack: json['allowStartStationFromTrack'] as bool,
       nowPlayingStationAdTargeting:
-          json['nowPlayingStationAdTargeting'] as String,
+          json['nowPlayingStationAdTargeting'] as String?,
       nowPlayingStationPremiumAdTargeting:
-          json['nowPlayingStationPremiumAdTargeting'] as String,
+          json['nowPlayingStationPremiumAdTargeting'] as String?,
       allowShareTrack: json['allowShareTrack'] as bool,
       pandoraType: $enumDecode(_$PandoraTypeEnumMap, json['pandoraType']),
       songIdentity: json['songIdentity'] as String,
       nowPlayingStationPremiumAdUrl:
-          Uri.parse(json['nowPlayingStationPremiumAdUrl'] as String),
+          json['nowPlayingStationPremiumAdUrl'] == null
+              ? null
+              : Uri.parse(json['nowPlayingStationPremiumAdUrl'] as String),
       allowFeedback: json['allowFeedback'] as bool,
       musicId: json['musicId'] as String,
       categoryDescriptor: json['categoryDescriptor'] as String,
@@ -54,12 +57,12 @@ _$_StationContent _$$_StationContentFromJson(Map<String, dynamic> json) =>
       shareLandingUrl: Uri.parse(json['shareLandingUrl'] as String),
       songExplorerUrl: Uri.parse(json['songExplorerUrl'] as String),
       nowPlayingStationPremiumAdUnit:
-          json['nowPlayingStationPremiumAdUnit'] as String,
+          json['nowPlayingStationPremiumAdUnit'] as String?,
       songRating: $enumDecode(_$MediaRatingEnumMap, json['songRating']),
       trackKey: json['trackKey'] == null
           ? null
           : TrackKey.fromJson(json['trackKey'] as Map<String, dynamic>),
-      nowPlayingStationAdUnit: json['nowPlayingStationAdUnit'] as String,
+      nowPlayingStationAdUnit: json['nowPlayingStationAdUnit'] as String?,
       requestedModeId: json['requestedModeId'] as int,
       stationId: json['stationId'] as String,
       pandoraId: json['pandoraId'] as String,
@@ -79,7 +82,7 @@ Map<String, dynamic> _$$_StationContentToJson(_$_StationContent instance) =>
       'artistExplorerUrl': instance.artistExplorerUrl.toString(),
       'songDetailUrl': instance.songDetailUrl.toString(),
       'trackType': _$TrackTypeEnumMap[instance.trackType],
-      'nowPlayingStationAdUrl': instance.nowPlayingStationAdUrl.toString(),
+      'nowPlayingStationAdUrl': instance.nowPlayingStationAdUrl?.toString(),
       'allowStartStationFromTrack': instance.allowStartStationFromTrack,
       'nowPlayingStationAdTargeting': instance.nowPlayingStationAdTargeting,
       'nowPlayingStationPremiumAdTargeting':
@@ -88,7 +91,7 @@ Map<String, dynamic> _$$_StationContentToJson(_$_StationContent instance) =>
       'pandoraType': _$PandoraTypeEnumMap[instance.pandoraType],
       'songIdentity': instance.songIdentity,
       'nowPlayingStationPremiumAdUrl':
-          instance.nowPlayingStationPremiumAdUrl.toString(),
+          instance.nowPlayingStationPremiumAdUrl?.toString(),
       'allowFeedback': instance.allowFeedback,
       'musicId': instance.musicId,
       'categoryDescriptor': instance.categoryDescriptor,

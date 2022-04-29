@@ -7,7 +7,7 @@ part 'station.g.dart';
 @freezed
 class Station with _$Station {
   const factory Station({
-    @JsonKey(name: 'suppressVideoAds') required bool suppressVideoAds,
+    @JsonKey(name: 'suppressVideoAds') bool? suppressVideoAds,
     @JsonKey(name: 'stationId') required String stationId,
     @JsonKey(name: 'allowAddMusic') required bool allowAddMusic,
     @JsonKey(name: 'dateCreated', fromJson: readDateTimeJsonObject, toJson: writeDateTimeJsonObject)
@@ -15,7 +15,7 @@ class Station with _$Station {
     @JsonKey(name: 'stationDetailUrl') required Uri stationDetailUrl,
     @JsonKey(name: 'artUrl') required Uri artUrl,
     @JsonKey(name: 'allowEditDescription') required bool allowEditDescription,
-    @JsonKey(name: 'requiresCleanAds') required bool requiresCleanAds,
+    @JsonKey(name: 'requiresCleanAds') bool? requiresCleanAds,
     @JsonKey(name: 'isGenreStation') required bool isGenreStation,
     @JsonKey(name: 'stationToken') required String stationToken,
     @JsonKey(name: 'stationName') required String stationName,

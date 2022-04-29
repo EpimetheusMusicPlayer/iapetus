@@ -9,7 +9,7 @@ part of 'station.dart';
 // **************************************************************************
 
 _$_Station _$$_StationFromJson(Map<String, dynamic> json) => _$_Station(
-      suppressVideoAds: json['suppressVideoAds'] as bool,
+      suppressVideoAds: json['suppressVideoAds'] as bool?,
       stationId: json['stationId'] as String,
       allowAddMusic: json['allowAddMusic'] as bool,
       dateCreated:
@@ -17,7 +17,7 @@ _$_Station _$$_StationFromJson(Map<String, dynamic> json) => _$_Station(
       stationDetailUrl: Uri.parse(json['stationDetailUrl'] as String),
       artUrl: Uri.parse(json['artUrl'] as String),
       allowEditDescription: json['allowEditDescription'] as bool,
-      requiresCleanAds: json['requiresCleanAds'] as bool,
+      requiresCleanAds: json['requiresCleanAds'] as bool?,
       isGenreStation: json['isGenreStation'] as bool,
       stationToken: json['stationToken'] as String,
       stationName: json['stationName'] as String,

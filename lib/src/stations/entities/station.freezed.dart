@@ -24,7 +24,7 @@ class _$StationTearOff {
 
   _Station call(
       {@JsonKey(name: 'suppressVideoAds')
-          required bool suppressVideoAds,
+          bool? suppressVideoAds,
       @JsonKey(name: 'stationId')
           required String stationId,
       @JsonKey(name: 'allowAddMusic')
@@ -38,7 +38,7 @@ class _$StationTearOff {
       @JsonKey(name: 'allowEditDescription')
           required bool allowEditDescription,
       @JsonKey(name: 'requiresCleanAds')
-          required bool requiresCleanAds,
+          bool? requiresCleanAds,
       @JsonKey(name: 'isGenreStation')
           required bool isGenreStation,
       @JsonKey(name: 'stationToken')
@@ -89,7 +89,7 @@ const $Station = _$StationTearOff();
 /// @nodoc
 mixin _$Station {
   @JsonKey(name: 'suppressVideoAds')
-  bool get suppressVideoAds => throw _privateConstructorUsedError;
+  bool? get suppressVideoAds => throw _privateConstructorUsedError;
   @JsonKey(name: 'stationId')
   String get stationId => throw _privateConstructorUsedError;
   @JsonKey(name: 'allowAddMusic')
@@ -106,7 +106,7 @@ mixin _$Station {
   @JsonKey(name: 'allowEditDescription')
   bool get allowEditDescription => throw _privateConstructorUsedError;
   @JsonKey(name: 'requiresCleanAds')
-  bool get requiresCleanAds => throw _privateConstructorUsedError;
+  bool? get requiresCleanAds => throw _privateConstructorUsedError;
   @JsonKey(name: 'isGenreStation')
   bool get isGenreStation => throw _privateConstructorUsedError;
   @JsonKey(name: 'stationToken')
@@ -137,7 +137,7 @@ abstract class $StationCopyWith<$Res> {
       _$StationCopyWithImpl<$Res>;
   $Res call(
       {@JsonKey(name: 'suppressVideoAds')
-          bool suppressVideoAds,
+          bool? suppressVideoAds,
       @JsonKey(name: 'stationId')
           String stationId,
       @JsonKey(name: 'allowAddMusic')
@@ -151,7 +151,7 @@ abstract class $StationCopyWith<$Res> {
       @JsonKey(name: 'allowEditDescription')
           bool allowEditDescription,
       @JsonKey(name: 'requiresCleanAds')
-          bool requiresCleanAds,
+          bool? requiresCleanAds,
       @JsonKey(name: 'isGenreStation')
           bool isGenreStation,
       @JsonKey(name: 'stationToken')
@@ -204,7 +204,7 @@ class _$StationCopyWithImpl<$Res> implements $StationCopyWith<$Res> {
       suppressVideoAds: suppressVideoAds == freezed
           ? _value.suppressVideoAds
           : suppressVideoAds // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       stationId: stationId == freezed
           ? _value.stationId
           : stationId // ignore: cast_nullable_to_non_nullable
@@ -232,7 +232,7 @@ class _$StationCopyWithImpl<$Res> implements $StationCopyWith<$Res> {
       requiresCleanAds: requiresCleanAds == freezed
           ? _value.requiresCleanAds
           : requiresCleanAds // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       isGenreStation: isGenreStation == freezed
           ? _value.isGenreStation
           : isGenreStation // ignore: cast_nullable_to_non_nullable
@@ -280,7 +280,7 @@ abstract class _$StationCopyWith<$Res> implements $StationCopyWith<$Res> {
   @override
   $Res call(
       {@JsonKey(name: 'suppressVideoAds')
-          bool suppressVideoAds,
+          bool? suppressVideoAds,
       @JsonKey(name: 'stationId')
           String stationId,
       @JsonKey(name: 'allowAddMusic')
@@ -294,7 +294,7 @@ abstract class _$StationCopyWith<$Res> implements $StationCopyWith<$Res> {
       @JsonKey(name: 'allowEditDescription')
           bool allowEditDescription,
       @JsonKey(name: 'requiresCleanAds')
-          bool requiresCleanAds,
+          bool? requiresCleanAds,
       @JsonKey(name: 'isGenreStation')
           bool isGenreStation,
       @JsonKey(name: 'stationToken')
@@ -348,7 +348,7 @@ class __$StationCopyWithImpl<$Res> extends _$StationCopyWithImpl<$Res>
       suppressVideoAds: suppressVideoAds == freezed
           ? _value.suppressVideoAds
           : suppressVideoAds // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       stationId: stationId == freezed
           ? _value.stationId
           : stationId // ignore: cast_nullable_to_non_nullable
@@ -376,7 +376,7 @@ class __$StationCopyWithImpl<$Res> extends _$StationCopyWithImpl<$Res>
       requiresCleanAds: requiresCleanAds == freezed
           ? _value.requiresCleanAds
           : requiresCleanAds // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       isGenreStation: isGenreStation == freezed
           ? _value.isGenreStation
           : isGenreStation // ignore: cast_nullable_to_non_nullable
@@ -422,7 +422,7 @@ class __$StationCopyWithImpl<$Res> extends _$StationCopyWithImpl<$Res>
 class _$_Station implements _Station {
   const _$_Station(
       {@JsonKey(name: 'suppressVideoAds')
-          required this.suppressVideoAds,
+          this.suppressVideoAds,
       @JsonKey(name: 'stationId')
           required this.stationId,
       @JsonKey(name: 'allowAddMusic')
@@ -436,7 +436,7 @@ class _$_Station implements _Station {
       @JsonKey(name: 'allowEditDescription')
           required this.allowEditDescription,
       @JsonKey(name: 'requiresCleanAds')
-          required this.requiresCleanAds,
+          this.requiresCleanAds,
       @JsonKey(name: 'isGenreStation')
           required this.isGenreStation,
       @JsonKey(name: 'stationToken')
@@ -461,7 +461,7 @@ class _$_Station implements _Station {
 
   @override
   @JsonKey(name: 'suppressVideoAds')
-  final bool suppressVideoAds;
+  final bool? suppressVideoAds;
   @override
   @JsonKey(name: 'stationId')
   final String stationId;
@@ -485,7 +485,7 @@ class _$_Station implements _Station {
   final bool allowEditDescription;
   @override
   @JsonKey(name: 'requiresCleanAds')
-  final bool requiresCleanAds;
+  final bool? requiresCleanAds;
   @override
   @JsonKey(name: 'isGenreStation')
   final bool isGenreStation;
@@ -592,7 +592,7 @@ class _$_Station implements _Station {
 abstract class _Station implements Station {
   const factory _Station(
       {@JsonKey(name: 'suppressVideoAds')
-          required bool suppressVideoAds,
+          bool? suppressVideoAds,
       @JsonKey(name: 'stationId')
           required String stationId,
       @JsonKey(name: 'allowAddMusic')
@@ -606,7 +606,7 @@ abstract class _Station implements Station {
       @JsonKey(name: 'allowEditDescription')
           required bool allowEditDescription,
       @JsonKey(name: 'requiresCleanAds')
-          required bool requiresCleanAds,
+          bool? requiresCleanAds,
       @JsonKey(name: 'isGenreStation')
           required bool isGenreStation,
       @JsonKey(name: 'stationToken')
@@ -630,7 +630,7 @@ abstract class _Station implements Station {
 
   @override
   @JsonKey(name: 'suppressVideoAds')
-  bool get suppressVideoAds;
+  bool? get suppressVideoAds;
   @override
   @JsonKey(name: 'stationId')
   String get stationId;
@@ -654,7 +654,7 @@ abstract class _Station implements Station {
   bool get allowEditDescription;
   @override
   @JsonKey(name: 'requiresCleanAds')
-  bool get requiresCleanAds;
+  bool? get requiresCleanAds;
   @override
   @JsonKey(name: 'isGenreStation')
   bool get isGenreStation;
