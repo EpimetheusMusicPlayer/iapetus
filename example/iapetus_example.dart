@@ -51,6 +51,9 @@ Future<void> main(List<String> arguments) async {
   );
 
   final collectionItems = await iapetus.getCollectionItems();
+  final playlist = collectionItems
+      .firstWhere((item) => item.pandoraType == PandoraType.playlist);
+  final playlistSegment = await iapetus.getPlaylistSegment(playlist);
 
   // Close the client.
   iapetus.close();
