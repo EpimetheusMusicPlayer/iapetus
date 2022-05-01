@@ -1,5 +1,6 @@
 library iapetus_data;
 
+export 'src/autoplay/autoplay_data.dart';
 export 'src/collection/collection_data.dart';
 export 'src/common/common_data.dart';
 export 'src/core/authentication/authentication_data.dart';
