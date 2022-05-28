@@ -117,3 +117,14 @@ const vistaWidgetPartner = InternalTunerPartner(
 
 /// The partner to use for all API calls.
 const partner = androidPartner;
+
+/// A list of all known partners.
+const partners = [
+  androidPartner,
+  androidLegacyPartner, // ignore: deprecated_member_use_from_same_package
+  iosPartner,
+  palmPartner,
+  windowsMobilePartner,
+  desktopAirClientPartner,
+  vistaWidgetPartner,
+];
