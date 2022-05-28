@@ -29,8 +29,11 @@ mixin _$PlaylistTrack {
       fromJson: readDateTimeMilliseconds,
       toJson: writeDateTimeMilliseconds)
   DateTime get addedTimestamp => throw _privateConstructorUsedError;
-  @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
-  Duration get duration => throw _privateConstructorUsedError;
+  @JsonKey(
+      name: 'duration',
+      fromJson: readOptionalSeconds,
+      toJson: writeOptionalSeconds)
+  Duration? get duration => throw _privateConstructorUsedError;
   @JsonKey(name: 'trackPandoraId')
   String get trackPandoraId => throw _privateConstructorUsedError;
 
@@ -52,8 +55,8 @@ abstract class $PlaylistTrackCopyWith<$Res> {
           int itemId,
       @JsonKey(name: 'addedTimestamp', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
           DateTime addedTimestamp,
-      @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
-          Duration duration,
+      @JsonKey(name: 'duration', fromJson: readOptionalSeconds, toJson: writeOptionalSeconds)
+          Duration? duration,
       @JsonKey(name: 'trackPandoraId')
           String trackPandoraId});
 }
@@ -91,7 +94,7 @@ class _$PlaylistTrackCopyWithImpl<$Res>
       duration: duration == freezed
           ? _value.duration
           : duration // ignore: cast_nullable_to_non_nullable
-              as Duration,
+              as Duration?,
       trackPandoraId: trackPandoraId == freezed
           ? _value.trackPandoraId
           : trackPandoraId // ignore: cast_nullable_to_non_nullable
@@ -114,8 +117,8 @@ abstract class _$$_PlaylistTrackCopyWith<$Res>
           int itemId,
       @JsonKey(name: 'addedTimestamp', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
           DateTime addedTimestamp,
-      @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
-          Duration duration,
+      @JsonKey(name: 'duration', fromJson: readOptionalSeconds, toJson: writeOptionalSeconds)
+          Duration? duration,
       @JsonKey(name: 'trackPandoraId')
           String trackPandoraId});
 }
@@ -155,7 +158,7 @@ class __$$_PlaylistTrackCopyWithImpl<$Res>
       duration: duration == freezed
           ? _value.duration
           : duration // ignore: cast_nullable_to_non_nullable
-              as Duration,
+              as Duration?,
       trackPandoraId: trackPandoraId == freezed
           ? _value.trackPandoraId
           : trackPandoraId // ignore: cast_nullable_to_non_nullable
@@ -174,7 +177,7 @@ class _$_PlaylistTrack extends _PlaylistTrack {
           required this.itemId,
       @JsonKey(name: 'addedTimestamp', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
           required this.addedTimestamp,
-      @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
+      @JsonKey(name: 'duration', fromJson: readOptionalSeconds, toJson: writeOptionalSeconds)
           required this.duration,
       @JsonKey(name: 'trackPandoraId')
           required this.trackPandoraId})
@@ -196,8 +199,11 @@ class _$_PlaylistTrack extends _PlaylistTrack {
       toJson: writeDateTimeMilliseconds)
   final DateTime addedTimestamp;
   @override
-  @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
-  final Duration duration;
+  @JsonKey(
+      name: 'duration',
+      fromJson: readOptionalSeconds,
+      toJson: writeOptionalSeconds)
+  final Duration? duration;
   @override
   @JsonKey(name: 'trackPandoraId')
   final String trackPandoraId;
@@ -250,8 +256,8 @@ abstract class _PlaylistTrack extends PlaylistTrack {
           required final int itemId,
       @JsonKey(name: 'addedTimestamp', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
           required final DateTime addedTimestamp,
-      @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
-          required final Duration duration,
+      @JsonKey(name: 'duration', fromJson: readOptionalSeconds, toJson: writeOptionalSeconds)
+          required final Duration? duration,
       @JsonKey(name: 'trackPandoraId')
           required final String trackPandoraId}) = _$_PlaylistTrack;
   const _PlaylistTrack._() : super._();
@@ -272,8 +278,11 @@ abstract class _PlaylistTrack extends PlaylistTrack {
       toJson: writeDateTimeMilliseconds)
   DateTime get addedTimestamp => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
-  Duration get duration => throw _privateConstructorUsedError;
+  @JsonKey(
+      name: 'duration',
+      fromJson: readOptionalSeconds,
+      toJson: writeOptionalSeconds)
+  Duration? get duration => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'trackPandoraId')
   String get trackPandoraId => throw _privateConstructorUsedError;

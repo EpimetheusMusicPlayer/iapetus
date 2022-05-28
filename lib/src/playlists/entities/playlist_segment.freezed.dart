@@ -55,7 +55,7 @@ mixin _$PlaylistSegment {
   @JsonKey(name: 'linkedType')
   String get linkedType => throw _privateConstructorUsedError;
   @JsonKey(name: 'linkedSourceId')
-  String get linkedSourceId => throw _privateConstructorUsedError;
+  String? get linkedSourceId => throw _privateConstructorUsedError;
   @JsonKey(name: 'totalTracks')
   int get totalTracks => throw _privateConstructorUsedError;
   @JsonKey(name: 'shareableUrlPath')
@@ -73,7 +73,10 @@ mixin _$PlaylistSegment {
   @JsonKey(name: 'includedTrackTypes')
   List<PandoraType> get includedTrackTypes =>
       throw _privateConstructorUsedError;
-  @JsonKey(name: 'allowFeedback')
+  @JsonKey(
+      name: 'allowFeedback',
+      fromJson: readNullableBool,
+      toJson: writeNullableBool)
   bool get allowFeedback => throw _privateConstructorUsedError;
   @JsonKey(name: 'collectible')
   bool get collectible => throw _privateConstructorUsedError;
@@ -123,7 +126,7 @@ abstract class $PlaylistSegmentCopyWith<$Res> {
       @JsonKey(name: 'linkedType')
           String linkedType,
       @JsonKey(name: 'linkedSourceId')
-          String linkedSourceId,
+          String? linkedSourceId,
       @JsonKey(name: 'totalTracks')
           int totalTracks,
       @JsonKey(name: 'shareableUrlPath')
@@ -140,7 +143,7 @@ abstract class $PlaylistSegmentCopyWith<$Res> {
           bool autogenForListener,
       @JsonKey(name: 'includedTrackTypes')
           List<PandoraType> includedTrackTypes,
-      @JsonKey(name: 'allowFeedback')
+      @JsonKey(name: 'allowFeedback', fromJson: readNullableBool, toJson: writeNullableBool)
           bool allowFeedback,
       @JsonKey(name: 'collectible')
           bool collectible,
@@ -247,7 +250,7 @@ class _$PlaylistSegmentCopyWithImpl<$Res>
       linkedSourceId: linkedSourceId == freezed
           ? _value.linkedSourceId
           : linkedSourceId // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       totalTracks: totalTracks == freezed
           ? _value.totalTracks
           : totalTracks // ignore: cast_nullable_to_non_nullable
@@ -348,7 +351,7 @@ abstract class _$$_PlaylistSegmentCopyWith<$Res>
       @JsonKey(name: 'linkedType')
           String linkedType,
       @JsonKey(name: 'linkedSourceId')
-          String linkedSourceId,
+          String? linkedSourceId,
       @JsonKey(name: 'totalTracks')
           int totalTracks,
       @JsonKey(name: 'shareableUrlPath')
@@ -365,7 +368,7 @@ abstract class _$$_PlaylistSegmentCopyWith<$Res>
           bool autogenForListener,
       @JsonKey(name: 'includedTrackTypes')
           List<PandoraType> includedTrackTypes,
-      @JsonKey(name: 'allowFeedback')
+      @JsonKey(name: 'allowFeedback', fromJson: readNullableBool, toJson: writeNullableBool)
           bool allowFeedback,
       @JsonKey(name: 'collectible')
           bool collectible,
@@ -475,7 +478,7 @@ class __$$_PlaylistSegmentCopyWithImpl<$Res>
       linkedSourceId: linkedSourceId == freezed
           ? _value.linkedSourceId
           : linkedSourceId // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       totalTracks: totalTracks == freezed
           ? _value.totalTracks
           : totalTracks // ignore: cast_nullable_to_non_nullable
@@ -565,7 +568,7 @@ class _$_PlaylistSegment extends _PlaylistSegment {
       @JsonKey(name: 'linkedType')
           required this.linkedType,
       @JsonKey(name: 'linkedSourceId')
-          required this.linkedSourceId,
+          this.linkedSourceId,
       @JsonKey(name: 'totalTracks')
           required this.totalTracks,
       @JsonKey(name: 'shareableUrlPath')
@@ -582,7 +585,7 @@ class _$_PlaylistSegment extends _PlaylistSegment {
           required this.autogenForListener,
       @JsonKey(name: 'includedTrackTypes')
           required final List<PandoraType> includedTrackTypes,
-      @JsonKey(name: 'allowFeedback')
+      @JsonKey(name: 'allowFeedback', fromJson: readNullableBool, toJson: writeNullableBool)
           required this.allowFeedback,
       @JsonKey(name: 'collectible')
           required this.collectible,
@@ -659,7 +662,7 @@ class _$_PlaylistSegment extends _PlaylistSegment {
   final String linkedType;
   @override
   @JsonKey(name: 'linkedSourceId')
-  final String linkedSourceId;
+  final String? linkedSourceId;
   @override
   @JsonKey(name: 'totalTracks')
   final int totalTracks;
@@ -690,7 +693,10 @@ class _$_PlaylistSegment extends _PlaylistSegment {
   }
 
   @override
-  @JsonKey(name: 'allowFeedback')
+  @JsonKey(
+      name: 'allowFeedback',
+      fromJson: readNullableBool,
+      toJson: writeNullableBool)
   final bool allowFeedback;
   @override
   @JsonKey(name: 'collectible')
@@ -837,7 +843,7 @@ abstract class _PlaylistSegment extends PlaylistSegment {
       @JsonKey(name: 'linkedType')
           required final String linkedType,
       @JsonKey(name: 'linkedSourceId')
-          required final String linkedSourceId,
+          final String? linkedSourceId,
       @JsonKey(name: 'totalTracks')
           required final int totalTracks,
       @JsonKey(name: 'shareableUrlPath')
@@ -854,7 +860,7 @@ abstract class _PlaylistSegment extends PlaylistSegment {
           required final bool autogenForListener,
       @JsonKey(name: 'includedTrackTypes')
           required final List<PandoraType> includedTrackTypes,
-      @JsonKey(name: 'allowFeedback')
+      @JsonKey(name: 'allowFeedback', fromJson: readNullableBool, toJson: writeNullableBool)
           required final bool allowFeedback,
       @JsonKey(name: 'collectible')
           required final bool collectible,
@@ -919,7 +925,7 @@ abstract class _PlaylistSegment extends PlaylistSegment {
   String get linkedType => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'linkedSourceId')
-  String get linkedSourceId => throw _privateConstructorUsedError;
+  String? get linkedSourceId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'totalTracks')
   int get totalTracks => throw _privateConstructorUsedError;
@@ -946,7 +952,10 @@ abstract class _PlaylistSegment extends PlaylistSegment {
   List<PandoraType> get includedTrackTypes =>
       throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'allowFeedback')
+  @JsonKey(
+      name: 'allowFeedback',
+      fromJson: readNullableBool,
+      toJson: writeNullableBool)
   bool get allowFeedback => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'collectible')

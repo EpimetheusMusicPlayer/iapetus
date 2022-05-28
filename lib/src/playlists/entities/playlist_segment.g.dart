@@ -28,7 +28,7 @@ _$_PlaylistSegment _$$_PlaylistSegmentFromJson(Map<String, dynamic> json) =>
       private: json['isPrivate'] as bool,
       secret: json['secret'] as bool,
       linkedType: json['linkedType'] as String,
-      linkedSourceId: json['linkedSourceId'] as String,
+      linkedSourceId: json['linkedSourceId'] as String?,
       totalTracks: json['totalTracks'] as int,
       shareableUrlPath: Uri.parse(json['shareableUrlPath'] as String),
       thorLayers: json['thorLayers'] as String,
@@ -40,7 +40,7 @@ _$_PlaylistSegment _$$_PlaylistSegmentFromJson(Map<String, dynamic> json) =>
       includedTrackTypes: (json['includedTrackTypes'] as List<dynamic>)
           .map((e) => $enumDecode(_$PandoraTypeEnumMap, e))
           .toList(),
-      allowFeedback: json['allowFeedback'] as bool,
+      allowFeedback: readNullableBool(json['allowFeedback'] as bool?),
       collectible: json['collectible'] as bool,
       notModified: json['notModified'] as bool,
       listenerId: json['listenerId'] as int,
@@ -74,7 +74,7 @@ Map<String, dynamic> _$$_PlaylistSegmentToJson(_$_PlaylistSegment instance) =>
       'includedTrackTypes': instance.includedTrackTypes
           .map((e) => _$PandoraTypeEnumMap[e])
           .toList(),
-      'allowFeedback': instance.allowFeedback,
+      'allowFeedback': writeNullableBool(instance.allowFeedback),
       'collectible': instance.collectible,
       'notModified': instance.notModified,
       'listenerId': instance.listenerId,

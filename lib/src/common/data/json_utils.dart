@@ -38,6 +38,12 @@ Duration readSeconds(int seconds) => Duration(seconds: seconds);
 
 int writeSeconds(Duration duration) => duration.inSeconds;
 
+Duration? readOptionalSeconds(int? seconds) =>
+    seconds == null ? null : readSeconds(seconds);
+
+int? writeOptionalSeconds(Duration? duration) =>
+    duration == null ? null : writeSeconds(duration);
+
 Duration readMilliseconds(int milliseconds) =>
     Duration(milliseconds: milliseconds);
 

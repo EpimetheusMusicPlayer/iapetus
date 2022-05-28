@@ -16,8 +16,8 @@ class PlaylistTrack with _$PlaylistTrack implements PandoraEntity, Track {
     @JsonKey(name: 'itemId') required int itemId,
     @JsonKey(name: 'addedTimestamp', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
         required DateTime addedTimestamp,
-    @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
-        required Duration duration,
+    @JsonKey(name: 'duration', fromJson: readOptionalSeconds, toJson: writeOptionalSeconds)
+        required Duration? duration,
     @JsonKey(name: 'trackPandoraId') required String trackPandoraId,
   }) = _PlaylistTrack;
 

@@ -13,7 +13,7 @@ _$_PlaylistTrack _$$_PlaylistTrackFromJson(Map<String, dynamic> json) =>
       pandoraId: json['pandoraId'] as String,
       itemId: json['itemId'] as int,
       addedTimestamp: readDateTimeMilliseconds(json['addedTimestamp'] as int),
-      duration: readSeconds(json['duration'] as int),
+      duration: readOptionalSeconds(json['duration'] as int?),
       trackPandoraId: json['trackPandoraId'] as String,
     );
 
@@ -22,6 +22,6 @@ Map<String, dynamic> _$$_PlaylistTrackToJson(_$_PlaylistTrack instance) =>
       'pandoraId': instance.pandoraId,
       'itemId': instance.itemId,
       'addedTimestamp': writeDateTimeMilliseconds(instance.addedTimestamp),
-      'duration': writeSeconds(instance.duration),
+      'duration': writeOptionalSeconds(instance.duration),
       'trackPandoraId': instance.trackPandoraId,
     };

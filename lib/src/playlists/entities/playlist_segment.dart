@@ -30,7 +30,7 @@ class PlaylistSegment with _$PlaylistSegment implements PandoraEntity {
     @JsonKey(name: 'isPrivate') required bool private,
     @JsonKey(name: 'secret') required bool secret,
     @JsonKey(name: 'linkedType') required String linkedType,
-    @JsonKey(name: 'linkedSourceId') required String linkedSourceId,
+    @JsonKey(name: 'linkedSourceId') String? linkedSourceId,
     @JsonKey(name: 'totalTracks') required int totalTracks,
     @JsonKey(name: 'shareableUrlPath') required Uri shareableUrlPath,
     @JsonKey(name: 'thorLayers') required String thorLayers,
@@ -41,7 +41,8 @@ class PlaylistSegment with _$PlaylistSegment implements PandoraEntity {
     @JsonKey(name: 'autogenForListener') required bool autogenForListener,
     @JsonKey(name: 'includedTrackTypes')
         required List<PandoraType> includedTrackTypes,
-    @JsonKey(name: 'allowFeedback') required bool allowFeedback,
+    @JsonKey(name: 'allowFeedback', fromJson: readNullableBool, toJson: writeNullableBool)
+        required bool allowFeedback,
     @JsonKey(name: 'collectible') required bool collectible,
     @JsonKey(name: 'notModified') required bool notModified,
     @JsonKey(name: 'listenerId') required int listenerId,
