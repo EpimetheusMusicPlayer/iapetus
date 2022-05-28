@@ -55,44 +55,45 @@ extension PandoraApi on Iapetus {
         .body;
 
     // Decrypt the response (if required), and decode the JSON.
-    final response = jsonDecode(
+    final responseJson = jsonDecode(
       decrypt ? pandoraDecryptResponse(responseData) : responseData,
     );
 
     // Make sure that the response is a JSON object declaration.
-    if (response is! Map<String, dynamic>) {
-      throw FormatException('Invalid response type!', response);
+    if (responseJson is! Map<String, dynamic>) {
+      throw FormatException('Invalid response type!', responseJson);
     }
 
-    // Check for API errors.
-    if (response['stat'] == 'fail') {
-      final apiException = IapetusApiException.fromJson(response);
-      switch (apiException.code) {
-        case IapetusApiErrorCodes.invalidAuthToken:
-          // If the authentication token is invalid, reauthenticate and retry.
-          await userLoginFromStorage();
-          return makeApiRequest(
-            method,
-            data: data,
-            requiresPartner: requiresPartner,
-            requiresUser: requiresUser,
-            encrypt: encrypt,
-            decrypt: decrypt,
+    return PandoraApiResponse.fromJson(responseJson).map(
+      ok: (response) {
+        if (response.result is! T) {
+          throw FormatException(
+            'Invalid response result type!',
+            response.result,
           );
-        case IapetusApiErrorCodes.licensingRestrictions:
-          throw const IapetusLocationException();
-        default:
-          throw apiException;
-      }
-    }
-
-    // Retrieve and return the result, checking that it's the expected type.
-    final result = response['result'];
-    if (result is! T) {
-      throw FormatException('Invalid response result type!', result);
-    }
-
-    return result;
+        }
+        return response.result as T;
+      },
+      fail: (apiException) async {
+        switch (apiException.code) {
+          case PandoraApiErrorCodes.invalidAuthToken:
+            // If the authentication token is invalid, reauthenticate and retry.
+            await userLoginFromStorage();
+            return makeApiRequest(
+              method,
+              data: data,
+              requiresPartner: requiresPartner,
+              requiresUser: requiresUser,
+              encrypt: encrypt,
+              decrypt: decrypt,
+            );
+          case PandoraApiErrorCodes.licensingRestrictions:
+            throw const IapetusLocationException();
+          default:
+            throw apiException;
+        }
+      },
+    );
   }
 }
 

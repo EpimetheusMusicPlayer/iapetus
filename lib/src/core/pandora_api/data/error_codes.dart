@@ -1,6 +1,6 @@
 /// Named API error codes.
-class IapetusApiErrorCodes {
-  const IapetusApiErrorCodes._();
+class PandoraApiErrorCodes {
+  const PandoraApiErrorCodes._();
 
   // -- Taken from https://6xq.net/pandora-apidoc/json/errorcodes. --
   // static const internalError = 0;

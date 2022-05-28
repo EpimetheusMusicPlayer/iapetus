@@ -3,12 +3,26 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:http/http.dart';
-import 'package:iapetus/iapetus.dart';
-import 'package:iapetus/iapetus_data.dart' hide partner;
+import 'package:iapetus/src/core/authentication/data/app_signature.dart';
+import 'package:iapetus/src/core/authentication/data/gender_parsing.dart';
+import 'package:iapetus/src/core/authentication/data/standard_user_request_parameters.dart';
+import 'package:iapetus/src/core/authentication/entities/authenticated_partner.dart';
+import 'package:iapetus/src/core/authentication/entities/authenticated_user.dart';
+import 'package:iapetus/src/core/authentication/entities/gender.dart';
+import 'package:iapetus/src/core/authentication/errors/authentication.dart';
+import 'package:iapetus/src/core/authentication/errors/registration.dart';
+import 'package:iapetus/src/core/crypto/data/crypto.dart';
+import 'package:iapetus/src/core/device/repositories/device_info.dart';
 import 'package:iapetus/src/core/http/client_stub.dart'
     if (dart.library.html) 'package:iapetus/src/core/http/browser_client.dart'
     if (dart.library.io) 'package:iapetus/src/core/http/io_client.dart';
+import 'package:iapetus/src/core/pandora_api/data/error_codes.dart';
+import 'package:iapetus/src/core/pandora_api/data/sync_time.dart';
+import 'package:iapetus/src/core/pandora_api/entities/pandora_api_response.dart';
+import 'package:iapetus/src/core/pandora_api/errors/location_exception.dart';
 import 'package:iapetus/src/core/partners/data/partners.dart' as partners;
+import 'package:iapetus/src/core/partners/entities/partner.dart';
+import 'package:iapetus/src/core/storage/repositories/iapetus_storage.dart';
 
 part 'package:iapetus/src/core/authentication/api/authentication.dart';
 part 'package:iapetus/src/core/authentication/api/registration.dart';
@@ -24,7 +38,7 @@ class Iapetus {
   Iapetus({
     required this.fastStorage,
     required this.secureStorage,
-  })   : _httpClient = createClient(),
+  })  : _httpClient = createClient(),
         deviceInfo = DeviceInfo(secureStorage);
 
   AuthenticatedPartner? _partner;

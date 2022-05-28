@@ -39,18 +39,18 @@ extension RegistrationApi on Iapetus {
         },
         requiresUser: false,
       );
-    } on IapetusApiException catch (e) {
+    } on PandoraApiException catch (e) {
       switch (e.code) {
-        case IapetusApiErrorCodes.emailInuse:
+        case PandoraApiErrorCodes.emailInuse:
           throw IapetusRegistrationUserExistsException(email);
-        case IapetusApiErrorCodes.invalidEmail:
-        case IapetusApiErrorCodes.invalidEmail2:
+        case PandoraApiErrorCodes.invalidEmail:
+        case PandoraApiErrorCodes.invalidEmail2:
           throw IapetusRegistrationInvalidEmailException(email);
-        case IapetusApiErrorCodes.invalidPasswordLength:
+        case PandoraApiErrorCodes.invalidPasswordLength:
           throw IapetusRegistrationInvalidPasswordLengthException(password);
-        case IapetusApiErrorCodes.invalidAge:
+        case PandoraApiErrorCodes.invalidAge:
           throw IapetusRegistrationInvalidAgeException(age);
-        case IapetusApiErrorCodes.invalidZip:
+        case PandoraApiErrorCodes.invalidZip:
           throw IapetusRegistrationInvalidZipException(zipCode);
         default:
           rethrow;
