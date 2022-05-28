@@ -10,7 +10,7 @@ environment:
 
 dependencies:
   ## Language
-  meta: ^1.7.0
+  meta: ^1.8.0
   freezed_annotation: ^2.0.3
   json_annotation: ^4.5.0
 
