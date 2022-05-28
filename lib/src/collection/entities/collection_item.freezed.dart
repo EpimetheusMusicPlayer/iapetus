@@ -12,46 +12,11 @@ part of 'collection_item.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 CollectionItem _$CollectionItemFromJson(Map<String, dynamic> json) {
   return _CollectionItem.fromJson(json);
 }
-
-/// @nodoc
-class _$CollectionItemTearOff {
-  const _$CollectionItemTearOff();
-
-  _CollectionItem call(
-      {@JsonKey(name: 'pandoraId')
-          required String pandoraId,
-      @JsonKey(name: 'pandoraType')
-          required PandoraType pandoraType,
-      @JsonKey(name: 'addedTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
-          required DateTime addedTime,
-      @JsonKey(name: 'updatedTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
-          required DateTime updatedTime,
-      @JsonKey(name: 'ownerId')
-          int? ownerId,
-      @JsonKey(name: 'ownerPandoraId')
-          String? ownerPandoraId}) {
-    return _CollectionItem(
-      pandoraId: pandoraId,
-      pandoraType: pandoraType,
-      addedTime: addedTime,
-      updatedTime: updatedTime,
-      ownerId: ownerId,
-      ownerPandoraId: ownerPandoraId,
-    );
-  }
-
-  CollectionItem fromJson(Map<String, Object?> json) {
-    return CollectionItem.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $CollectionItem = _$CollectionItemTearOff();
 
 /// @nodoc
 mixin _$CollectionItem {
@@ -148,11 +113,11 @@ class _$CollectionItemCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$CollectionItemCopyWith<$Res>
+abstract class _$$_CollectionItemCopyWith<$Res>
     implements $CollectionItemCopyWith<$Res> {
-  factory _$CollectionItemCopyWith(
-          _CollectionItem value, $Res Function(_CollectionItem) then) =
-      __$CollectionItemCopyWithImpl<$Res>;
+  factory _$$_CollectionItemCopyWith(
+          _$_CollectionItem value, $Res Function(_$_CollectionItem) then) =
+      __$$_CollectionItemCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(name: 'pandoraId')
@@ -170,15 +135,15 @@ abstract class _$CollectionItemCopyWith<$Res>
 }
 
 /// @nodoc
-class __$CollectionItemCopyWithImpl<$Res>
+class __$$_CollectionItemCopyWithImpl<$Res>
     extends _$CollectionItemCopyWithImpl<$Res>
-    implements _$CollectionItemCopyWith<$Res> {
-  __$CollectionItemCopyWithImpl(
-      _CollectionItem _value, $Res Function(_CollectionItem) _then)
-      : super(_value, (v) => _then(v as _CollectionItem));
+    implements _$$_CollectionItemCopyWith<$Res> {
+  __$$_CollectionItemCopyWithImpl(
+      _$_CollectionItem _value, $Res Function(_$_CollectionItem) _then)
+      : super(_value, (v) => _then(v as _$_CollectionItem));
 
   @override
-  _CollectionItem get _value => super._value as _CollectionItem;
+  _$_CollectionItem get _value => super._value as _$_CollectionItem;
 
   @override
   $Res call({
@@ -189,7 +154,7 @@ class __$CollectionItemCopyWithImpl<$Res>
     Object? ownerId = freezed,
     Object? ownerPandoraId = freezed,
   }) {
-    return _then(_CollectionItem(
+    return _then(_$_CollectionItem(
       pandoraId: pandoraId == freezed
           ? _value.pandoraId
           : pandoraId // ignore: cast_nullable_to_non_nullable
@@ -272,7 +237,7 @@ class _$_CollectionItem implements _CollectionItem {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _CollectionItem &&
+            other is _$_CollectionItem &&
             const DeepCollectionEquality().equals(other.pandoraId, pandoraId) &&
             const DeepCollectionEquality()
                 .equals(other.pandoraType, pandoraType) &&
@@ -284,6 +249,7 @@ class _$_CollectionItem implements _CollectionItem {
                 .equals(other.ownerPandoraId, ownerPandoraId));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -296,8 +262,8 @@ class _$_CollectionItem implements _CollectionItem {
 
   @JsonKey(ignore: true)
   @override
-  _$CollectionItemCopyWith<_CollectionItem> get copyWith =>
-      __$CollectionItemCopyWithImpl<_CollectionItem>(this, _$identity);
+  _$$_CollectionItemCopyWith<_$_CollectionItem> get copyWith =>
+      __$$_CollectionItemCopyWithImpl<_$_CollectionItem>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -308,47 +274,47 @@ class _$_CollectionItem implements _CollectionItem {
 abstract class _CollectionItem implements CollectionItem {
   const factory _CollectionItem(
       {@JsonKey(name: 'pandoraId')
-          required String pandoraId,
+          required final String pandoraId,
       @JsonKey(name: 'pandoraType')
-          required PandoraType pandoraType,
+          required final PandoraType pandoraType,
       @JsonKey(name: 'addedTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
-          required DateTime addedTime,
+          required final DateTime addedTime,
       @JsonKey(name: 'updatedTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
-          required DateTime updatedTime,
+          required final DateTime updatedTime,
       @JsonKey(name: 'ownerId')
-          int? ownerId,
+          final int? ownerId,
       @JsonKey(name: 'ownerPandoraId')
-          String? ownerPandoraId}) = _$_CollectionItem;
+          final String? ownerPandoraId}) = _$_CollectionItem;
 
   factory _CollectionItem.fromJson(Map<String, dynamic> json) =
       _$_CollectionItem.fromJson;
 
   @override
   @JsonKey(name: 'pandoraId')
-  String get pandoraId;
+  String get pandoraId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'pandoraType')
-  PandoraType get pandoraType;
+  PandoraType get pandoraType => throw _privateConstructorUsedError;
   @override
   @JsonKey(
       name: 'addedTime',
       fromJson: readDateTimeMilliseconds,
       toJson: writeDateTimeMilliseconds)
-  DateTime get addedTime;
+  DateTime get addedTime => throw _privateConstructorUsedError;
   @override
   @JsonKey(
       name: 'updatedTime',
       fromJson: readDateTimeMilliseconds,
       toJson: writeDateTimeMilliseconds)
-  DateTime get updatedTime;
+  DateTime get updatedTime => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'ownerId')
-  int? get ownerId;
+  int? get ownerId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'ownerPandoraId')
-  String? get ownerPandoraId;
+  String? get ownerPandoraId => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$CollectionItemCopyWith<_CollectionItem> get copyWith =>
+  _$$_CollectionItemCopyWith<_$_CollectionItem> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -12,43 +12,11 @@ part of 'playlist_track.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 PlaylistTrack _$PlaylistTrackFromJson(Map<String, dynamic> json) {
   return _PlaylistTrack.fromJson(json);
 }
-
-/// @nodoc
-class _$PlaylistTrackTearOff {
-  const _$PlaylistTrackTearOff();
-
-  _PlaylistTrack call(
-      {@JsonKey(name: 'pandoraId')
-          required String pandoraId,
-      @JsonKey(name: 'itemId')
-          required int itemId,
-      @JsonKey(name: 'addedTimestamp', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
-          required DateTime addedTimestamp,
-      @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
-          required Duration duration,
-      @JsonKey(name: 'trackPandoraId')
-          required String trackPandoraId}) {
-    return _PlaylistTrack(
-      pandoraId: pandoraId,
-      itemId: itemId,
-      addedTimestamp: addedTimestamp,
-      duration: duration,
-      trackPandoraId: trackPandoraId,
-    );
-  }
-
-  PlaylistTrack fromJson(Map<String, Object?> json) {
-    return PlaylistTrack.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $PlaylistTrack = _$PlaylistTrackTearOff();
 
 /// @nodoc
 mixin _$PlaylistTrack {
@@ -133,11 +101,11 @@ class _$PlaylistTrackCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$PlaylistTrackCopyWith<$Res>
+abstract class _$$_PlaylistTrackCopyWith<$Res>
     implements $PlaylistTrackCopyWith<$Res> {
-  factory _$PlaylistTrackCopyWith(
-          _PlaylistTrack value, $Res Function(_PlaylistTrack) then) =
-      __$PlaylistTrackCopyWithImpl<$Res>;
+  factory _$$_PlaylistTrackCopyWith(
+          _$_PlaylistTrack value, $Res Function(_$_PlaylistTrack) then) =
+      __$$_PlaylistTrackCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(name: 'pandoraId')
@@ -153,15 +121,15 @@ abstract class _$PlaylistTrackCopyWith<$Res>
 }
 
 /// @nodoc
-class __$PlaylistTrackCopyWithImpl<$Res>
+class __$$_PlaylistTrackCopyWithImpl<$Res>
     extends _$PlaylistTrackCopyWithImpl<$Res>
-    implements _$PlaylistTrackCopyWith<$Res> {
-  __$PlaylistTrackCopyWithImpl(
-      _PlaylistTrack _value, $Res Function(_PlaylistTrack) _then)
-      : super(_value, (v) => _then(v as _PlaylistTrack));
+    implements _$$_PlaylistTrackCopyWith<$Res> {
+  __$$_PlaylistTrackCopyWithImpl(
+      _$_PlaylistTrack _value, $Res Function(_$_PlaylistTrack) _then)
+      : super(_value, (v) => _then(v as _$_PlaylistTrack));
 
   @override
-  _PlaylistTrack get _value => super._value as _PlaylistTrack;
+  _$_PlaylistTrack get _value => super._value as _$_PlaylistTrack;
 
   @override
   $Res call({
@@ -171,7 +139,7 @@ class __$PlaylistTrackCopyWithImpl<$Res>
     Object? duration = freezed,
     Object? trackPandoraId = freezed,
   }) {
-    return _then(_PlaylistTrack(
+    return _then(_$_PlaylistTrack(
       pandoraId: pandoraId == freezed
           ? _value.pandoraId
           : pandoraId // ignore: cast_nullable_to_non_nullable
@@ -243,7 +211,7 @@ class _$_PlaylistTrack extends _PlaylistTrack {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _PlaylistTrack &&
+            other is _$_PlaylistTrack &&
             const DeepCollectionEquality().equals(other.pandoraId, pandoraId) &&
             const DeepCollectionEquality().equals(other.itemId, itemId) &&
             const DeepCollectionEquality()
@@ -253,6 +221,7 @@ class _$_PlaylistTrack extends _PlaylistTrack {
                 .equals(other.trackPandoraId, trackPandoraId));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -264,8 +233,8 @@ class _$_PlaylistTrack extends _PlaylistTrack {
 
   @JsonKey(ignore: true)
   @override
-  _$PlaylistTrackCopyWith<_PlaylistTrack> get copyWith =>
-      __$PlaylistTrackCopyWithImpl<_PlaylistTrack>(this, _$identity);
+  _$$_PlaylistTrackCopyWith<_$_PlaylistTrack> get copyWith =>
+      __$$_PlaylistTrackCopyWithImpl<_$_PlaylistTrack>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -276,15 +245,15 @@ class _$_PlaylistTrack extends _PlaylistTrack {
 abstract class _PlaylistTrack extends PlaylistTrack {
   const factory _PlaylistTrack(
       {@JsonKey(name: 'pandoraId')
-          required String pandoraId,
+          required final String pandoraId,
       @JsonKey(name: 'itemId')
-          required int itemId,
+          required final int itemId,
       @JsonKey(name: 'addedTimestamp', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
-          required DateTime addedTimestamp,
+          required final DateTime addedTimestamp,
       @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
-          required Duration duration,
+          required final Duration duration,
       @JsonKey(name: 'trackPandoraId')
-          required String trackPandoraId}) = _$_PlaylistTrack;
+          required final String trackPandoraId}) = _$_PlaylistTrack;
   const _PlaylistTrack._() : super._();
 
   factory _PlaylistTrack.fromJson(Map<String, dynamic> json) =
@@ -292,24 +261,24 @@ abstract class _PlaylistTrack extends PlaylistTrack {
 
   @override
   @JsonKey(name: 'pandoraId')
-  String get pandoraId;
+  String get pandoraId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'itemId')
-  int get itemId;
+  int get itemId => throw _privateConstructorUsedError;
   @override
   @JsonKey(
       name: 'addedTimestamp',
       fromJson: readDateTimeMilliseconds,
       toJson: writeDateTimeMilliseconds)
-  DateTime get addedTimestamp;
+  DateTime get addedTimestamp => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
-  Duration get duration;
+  Duration get duration => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'trackPandoraId')
-  String get trackPandoraId;
+  String get trackPandoraId => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$PlaylistTrackCopyWith<_PlaylistTrack> get copyWith =>
+  _$$_PlaylistTrackCopyWith<_$_PlaylistTrack> get copyWith =>
       throw _privateConstructorUsedError;
 }

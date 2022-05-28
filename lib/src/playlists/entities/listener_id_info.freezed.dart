@@ -12,34 +12,11 @@ part of 'listener_id_info.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 ListenerIdInfo _$ListenerIdInfoFromJson(Map<String, dynamic> json) {
   return _ListenerIdInfo.fromJson(json);
 }
-
-/// @nodoc
-class _$ListenerIdInfoTearOff {
-  const _$ListenerIdInfoTearOff();
-
-  _ListenerIdInfo call(
-      {@JsonKey(name: 'listenerId') required int listenerId,
-      @JsonKey(name: 'listenerPandoraId') required String listenerPandoraId,
-      @JsonKey(name: 'listenerIdToken') required String listenerIdToken}) {
-    return _ListenerIdInfo(
-      listenerId: listenerId,
-      listenerPandoraId: listenerPandoraId,
-      listenerIdToken: listenerIdToken,
-    );
-  }
-
-  ListenerIdInfo fromJson(Map<String, Object?> json) {
-    return ListenerIdInfo.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ListenerIdInfo = _$ListenerIdInfoTearOff();
 
 /// @nodoc
 mixin _$ListenerIdInfo {
@@ -100,11 +77,11 @@ class _$ListenerIdInfoCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$ListenerIdInfoCopyWith<$Res>
+abstract class _$$_ListenerIdInfoCopyWith<$Res>
     implements $ListenerIdInfoCopyWith<$Res> {
-  factory _$ListenerIdInfoCopyWith(
-          _ListenerIdInfo value, $Res Function(_ListenerIdInfo) then) =
-      __$ListenerIdInfoCopyWithImpl<$Res>;
+  factory _$$_ListenerIdInfoCopyWith(
+          _$_ListenerIdInfo value, $Res Function(_$_ListenerIdInfo) then) =
+      __$$_ListenerIdInfoCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(name: 'listenerId') int listenerId,
@@ -113,15 +90,15 @@ abstract class _$ListenerIdInfoCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ListenerIdInfoCopyWithImpl<$Res>
+class __$$_ListenerIdInfoCopyWithImpl<$Res>
     extends _$ListenerIdInfoCopyWithImpl<$Res>
-    implements _$ListenerIdInfoCopyWith<$Res> {
-  __$ListenerIdInfoCopyWithImpl(
-      _ListenerIdInfo _value, $Res Function(_ListenerIdInfo) _then)
-      : super(_value, (v) => _then(v as _ListenerIdInfo));
+    implements _$$_ListenerIdInfoCopyWith<$Res> {
+  __$$_ListenerIdInfoCopyWithImpl(
+      _$_ListenerIdInfo _value, $Res Function(_$_ListenerIdInfo) _then)
+      : super(_value, (v) => _then(v as _$_ListenerIdInfo));
 
   @override
-  _ListenerIdInfo get _value => super._value as _ListenerIdInfo;
+  _$_ListenerIdInfo get _value => super._value as _$_ListenerIdInfo;
 
   @override
   $Res call({
@@ -129,7 +106,7 @@ class __$ListenerIdInfoCopyWithImpl<$Res>
     Object? listenerPandoraId = freezed,
     Object? listenerIdToken = freezed,
   }) {
-    return _then(_ListenerIdInfo(
+    return _then(_$_ListenerIdInfo(
       listenerId: listenerId == freezed
           ? _value.listenerId
           : listenerId // ignore: cast_nullable_to_non_nullable
@@ -177,7 +154,7 @@ class _$_ListenerIdInfo extends _ListenerIdInfo {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _ListenerIdInfo &&
+            other is _$_ListenerIdInfo &&
             const DeepCollectionEquality()
                 .equals(other.listenerId, listenerId) &&
             const DeepCollectionEquality()
@@ -186,6 +163,7 @@ class _$_ListenerIdInfo extends _ListenerIdInfo {
                 .equals(other.listenerIdToken, listenerIdToken));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -195,8 +173,8 @@ class _$_ListenerIdInfo extends _ListenerIdInfo {
 
   @JsonKey(ignore: true)
   @override
-  _$ListenerIdInfoCopyWith<_ListenerIdInfo> get copyWith =>
-      __$ListenerIdInfoCopyWithImpl<_ListenerIdInfo>(this, _$identity);
+  _$$_ListenerIdInfoCopyWith<_$_ListenerIdInfo> get copyWith =>
+      __$$_ListenerIdInfoCopyWithImpl<_$_ListenerIdInfo>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -206,10 +184,12 @@ class _$_ListenerIdInfo extends _ListenerIdInfo {
 
 abstract class _ListenerIdInfo extends ListenerIdInfo {
   const factory _ListenerIdInfo(
-          {@JsonKey(name: 'listenerId') required int listenerId,
-          @JsonKey(name: 'listenerPandoraId') required String listenerPandoraId,
-          @JsonKey(name: 'listenerIdToken') required String listenerIdToken}) =
-      _$_ListenerIdInfo;
+      {@JsonKey(name: 'listenerId')
+          required final int listenerId,
+      @JsonKey(name: 'listenerPandoraId')
+          required final String listenerPandoraId,
+      @JsonKey(name: 'listenerIdToken')
+          required final String listenerIdToken}) = _$_ListenerIdInfo;
   const _ListenerIdInfo._() : super._();
 
   factory _ListenerIdInfo.fromJson(Map<String, dynamic> json) =
@@ -217,15 +197,15 @@ abstract class _ListenerIdInfo extends ListenerIdInfo {
 
   @override
   @JsonKey(name: 'listenerId')
-  int get listenerId;
+  int get listenerId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'listenerPandoraId')
-  String get listenerPandoraId;
+  String get listenerPandoraId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'listenerIdToken')
-  String get listenerIdToken;
+  String get listenerIdToken => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$ListenerIdInfoCopyWith<_ListenerIdInfo> get copyWith =>
+  _$$_ListenerIdInfoCopyWith<_$_ListenerIdInfo> get copyWith =>
       throw _privateConstructorUsedError;
 }

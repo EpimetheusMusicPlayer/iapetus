@@ -12,30 +12,11 @@ part of 'playlist_viewer_info.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 PlaylistViewerInfo _$PlaylistViewerInfoFromJson(Map<String, dynamic> json) {
   return _PlaylistViewerInfo.fromJson(json);
 }
-
-/// @nodoc
-class _$PlaylistViewerInfoTearOff {
-  const _$PlaylistViewerInfoTearOff();
-
-  _PlaylistViewerInfo call(
-      {@JsonKey(name: 'editable') required bool editable}) {
-    return _PlaylistViewerInfo(
-      editable: editable,
-    );
-  }
-
-  PlaylistViewerInfo fromJson(Map<String, Object?> json) {
-    return PlaylistViewerInfo.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $PlaylistViewerInfo = _$PlaylistViewerInfoTearOff();
 
 /// @nodoc
 mixin _$PlaylistViewerInfo {
@@ -79,31 +60,31 @@ class _$PlaylistViewerInfoCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$PlaylistViewerInfoCopyWith<$Res>
+abstract class _$$_PlaylistViewerInfoCopyWith<$Res>
     implements $PlaylistViewerInfoCopyWith<$Res> {
-  factory _$PlaylistViewerInfoCopyWith(
-          _PlaylistViewerInfo value, $Res Function(_PlaylistViewerInfo) then) =
-      __$PlaylistViewerInfoCopyWithImpl<$Res>;
+  factory _$$_PlaylistViewerInfoCopyWith(_$_PlaylistViewerInfo value,
+          $Res Function(_$_PlaylistViewerInfo) then) =
+      __$$_PlaylistViewerInfoCopyWithImpl<$Res>;
   @override
   $Res call({@JsonKey(name: 'editable') bool editable});
 }
 
 /// @nodoc
-class __$PlaylistViewerInfoCopyWithImpl<$Res>
+class __$$_PlaylistViewerInfoCopyWithImpl<$Res>
     extends _$PlaylistViewerInfoCopyWithImpl<$Res>
-    implements _$PlaylistViewerInfoCopyWith<$Res> {
-  __$PlaylistViewerInfoCopyWithImpl(
-      _PlaylistViewerInfo _value, $Res Function(_PlaylistViewerInfo) _then)
-      : super(_value, (v) => _then(v as _PlaylistViewerInfo));
+    implements _$$_PlaylistViewerInfoCopyWith<$Res> {
+  __$$_PlaylistViewerInfoCopyWithImpl(
+      _$_PlaylistViewerInfo _value, $Res Function(_$_PlaylistViewerInfo) _then)
+      : super(_value, (v) => _then(v as _$_PlaylistViewerInfo));
 
   @override
-  _PlaylistViewerInfo get _value => super._value as _PlaylistViewerInfo;
+  _$_PlaylistViewerInfo get _value => super._value as _$_PlaylistViewerInfo;
 
   @override
   $Res call({
     Object? editable = freezed,
   }) {
-    return _then(_PlaylistViewerInfo(
+    return _then(_$_PlaylistViewerInfo(
       editable: editable == freezed
           ? _value.editable
           : editable // ignore: cast_nullable_to_non_nullable
@@ -134,18 +115,20 @@ class _$_PlaylistViewerInfo implements _PlaylistViewerInfo {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _PlaylistViewerInfo &&
+            other is _$_PlaylistViewerInfo &&
             const DeepCollectionEquality().equals(other.editable, editable));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(editable));
 
   @JsonKey(ignore: true)
   @override
-  _$PlaylistViewerInfoCopyWith<_PlaylistViewerInfo> get copyWith =>
-      __$PlaylistViewerInfoCopyWithImpl<_PlaylistViewerInfo>(this, _$identity);
+  _$$_PlaylistViewerInfoCopyWith<_$_PlaylistViewerInfo> get copyWith =>
+      __$$_PlaylistViewerInfoCopyWithImpl<_$_PlaylistViewerInfo>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -155,7 +138,7 @@ class _$_PlaylistViewerInfo implements _PlaylistViewerInfo {
 
 abstract class _PlaylistViewerInfo implements PlaylistViewerInfo {
   const factory _PlaylistViewerInfo(
-          {@JsonKey(name: 'editable') required bool editable}) =
+          {@JsonKey(name: 'editable') required final bool editable}) =
       _$_PlaylistViewerInfo;
 
   factory _PlaylistViewerInfo.fromJson(Map<String, dynamic> json) =
@@ -163,9 +146,9 @@ abstract class _PlaylistViewerInfo implements PlaylistViewerInfo {
 
   @override
   @JsonKey(name: 'editable')
-  bool get editable;
+  bool get editable => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$PlaylistViewerInfoCopyWith<_PlaylistViewerInfo> get copyWith =>
+  _$$_PlaylistViewerInfoCopyWith<_$_PlaylistViewerInfo> get copyWith =>
       throw _privateConstructorUsedError;
 }

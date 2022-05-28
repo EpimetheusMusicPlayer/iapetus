@@ -12,34 +12,11 @@ part of 'station_content_set.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 StationContentSet _$StationContentSetFromJson(Map<String, dynamic> json) {
   return _StationContentSet.fromJson(json);
 }
-
-/// @nodoc
-class _$StationContentSetTearOff {
-  const _$StationContentSetTearOff();
-
-  _StationContentSet call(
-      {@JsonKey(name: 'content')
-          required Map<String, StationContent> content,
-      @JsonKey(name: 'contentTable')
-          required Map<StationContentUse, List<String>> contentTable}) {
-    return _StationContentSet(
-      content: content,
-      contentTable: contentTable,
-    );
-  }
-
-  StationContentSet fromJson(Map<String, Object?> json) {
-    return StationContentSet.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $StationContentSet = _$StationContentSetTearOff();
 
 /// @nodoc
 mixin _$StationContentSet {
@@ -95,11 +72,11 @@ class _$StationContentSetCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$StationContentSetCopyWith<$Res>
+abstract class _$$_StationContentSetCopyWith<$Res>
     implements $StationContentSetCopyWith<$Res> {
-  factory _$StationContentSetCopyWith(
-          _StationContentSet value, $Res Function(_StationContentSet) then) =
-      __$StationContentSetCopyWithImpl<$Res>;
+  factory _$$_StationContentSetCopyWith(_$_StationContentSet value,
+          $Res Function(_$_StationContentSet) then) =
+      __$$_StationContentSetCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(name: 'content')
@@ -109,28 +86,28 @@ abstract class _$StationContentSetCopyWith<$Res>
 }
 
 /// @nodoc
-class __$StationContentSetCopyWithImpl<$Res>
+class __$$_StationContentSetCopyWithImpl<$Res>
     extends _$StationContentSetCopyWithImpl<$Res>
-    implements _$StationContentSetCopyWith<$Res> {
-  __$StationContentSetCopyWithImpl(
-      _StationContentSet _value, $Res Function(_StationContentSet) _then)
-      : super(_value, (v) => _then(v as _StationContentSet));
+    implements _$$_StationContentSetCopyWith<$Res> {
+  __$$_StationContentSetCopyWithImpl(
+      _$_StationContentSet _value, $Res Function(_$_StationContentSet) _then)
+      : super(_value, (v) => _then(v as _$_StationContentSet));
 
   @override
-  _StationContentSet get _value => super._value as _StationContentSet;
+  _$_StationContentSet get _value => super._value as _$_StationContentSet;
 
   @override
   $Res call({
     Object? content = freezed,
     Object? contentTable = freezed,
   }) {
-    return _then(_StationContentSet(
+    return _then(_$_StationContentSet(
       content: content == freezed
-          ? _value.content
+          ? _value._content
           : content // ignore: cast_nullable_to_non_nullable
               as Map<String, StationContent>,
       contentTable: contentTable == freezed
-          ? _value.contentTable
+          ? _value._contentTable
           : contentTable // ignore: cast_nullable_to_non_nullable
               as Map<StationContentUse, List<String>>,
     ));
@@ -141,19 +118,32 @@ class __$StationContentSetCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_StationContentSet extends _StationContentSet {
   const _$_StationContentSet(
-      {@JsonKey(name: 'content') required this.content,
-      @JsonKey(name: 'contentTable') required this.contentTable})
-      : super._();
+      {@JsonKey(name: 'content')
+          required final Map<String, StationContent> content,
+      @JsonKey(name: 'contentTable')
+          required final Map<StationContentUse, List<String>> contentTable})
+      : _content = content,
+        _contentTable = contentTable,
+        super._();
 
   factory _$_StationContentSet.fromJson(Map<String, dynamic> json) =>
       _$$_StationContentSetFromJson(json);
 
+  final Map<String, StationContent> _content;
   @override
   @JsonKey(name: 'content')
-  final Map<String, StationContent> content;
+  Map<String, StationContent> get content {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableMapView(_content);
+  }
+
+  final Map<StationContentUse, List<String>> _contentTable;
   @override
   @JsonKey(name: 'contentTable')
-  final Map<StationContentUse, List<String>> contentTable;
+  Map<StationContentUse, List<String>> get contentTable {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableMapView(_contentTable);
+  }
 
   @override
   String toString() {
@@ -164,22 +154,24 @@ class _$_StationContentSet extends _StationContentSet {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _StationContentSet &&
-            const DeepCollectionEquality().equals(other.content, content) &&
+            other is _$_StationContentSet &&
+            const DeepCollectionEquality().equals(other._content, _content) &&
             const DeepCollectionEquality()
-                .equals(other.contentTable, contentTable));
+                .equals(other._contentTable, _contentTable));
   }
-
-  @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(content),
-      const DeepCollectionEquality().hash(contentTable));
 
   @JsonKey(ignore: true)
   @override
-  _$StationContentSetCopyWith<_StationContentSet> get copyWith =>
-      __$StationContentSetCopyWithImpl<_StationContentSet>(this, _$identity);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(_content),
+      const DeepCollectionEquality().hash(_contentTable));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_StationContentSetCopyWith<_$_StationContentSet> get copyWith =>
+      __$$_StationContentSetCopyWithImpl<_$_StationContentSet>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -189,11 +181,11 @@ class _$_StationContentSet extends _StationContentSet {
 
 abstract class _StationContentSet extends StationContentSet {
   const factory _StationContentSet(
-          {@JsonKey(name: 'content')
-              required Map<String, StationContent> content,
-          @JsonKey(name: 'contentTable')
-              required Map<StationContentUse, List<String>> contentTable}) =
-      _$_StationContentSet;
+      {@JsonKey(name: 'content')
+          required final Map<String, StationContent> content,
+      @JsonKey(name: 'contentTable')
+          required final Map<StationContentUse, List<String>>
+              contentTable}) = _$_StationContentSet;
   const _StationContentSet._() : super._();
 
   factory _StationContentSet.fromJson(Map<String, dynamic> json) =
@@ -201,12 +193,13 @@ abstract class _StationContentSet extends StationContentSet {
 
   @override
   @JsonKey(name: 'content')
-  Map<String, StationContent> get content;
+  Map<String, StationContent> get content => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'contentTable')
-  Map<StationContentUse, List<String>> get contentTable;
+  Map<StationContentUse, List<String>> get contentTable =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$StationContentSetCopyWith<_StationContentSet> get copyWith =>
+  _$$_StationContentSetCopyWith<_$_StationContentSet> get copyWith =>
       throw _privateConstructorUsedError;
 }

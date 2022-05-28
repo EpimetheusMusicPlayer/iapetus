@@ -12,7 +12,7 @@ part of 'annotation.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 MediaAnnotation _$MediaAnnotationFromJson(Map<String, dynamic> json) {
   switch (json['type']) {
@@ -36,293 +36,9 @@ MediaAnnotation _$MediaAnnotationFromJson(Map<String, dynamic> json) {
 }
 
 /// @nodoc
-class _$MediaAnnotationTearOff {
-  const _$MediaAnnotationTearOff();
-
-  TrackAnnotation track(
-      {@JsonKey(name: 'name')
-          required String name,
-      @JsonKey(name: 'sortableName')
-          required String sortableName,
-      @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
-          required Duration duration,
-      @JsonKey(name: 'trackNumber')
-          required int trackNumber,
-      @JsonKey(name: 'icon', fromJson: MediaIcon.optionalFromJson, toJson: MediaIcon.optionalToJson)
-          required MediaIcon? icon,
-      @JsonKey(name: 'rightsInfo')
-          required RightsInfo rightsInfo,
-      @JsonKey(name: 'albumId')
-          required String albumId,
-      @JsonKey(name: 'albumName')
-          required String albumName,
-      @JsonKey(name: 'artistId')
-          required String artistId,
-      @JsonKey(name: 'artistName')
-          required String artistName,
-      @JsonKey(name: 'explicitness')
-          required Explicitness explicitness,
-      @JsonKey(name: 'shareableUrlPath')
-          required String shareableUrlPath,
-      @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
-          required bool hasRadio,
-      @JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
-          required DateTime modificationTime,
-      @JsonKey(name: 'slugPlusPandoraId')
-          required String slugPlusPandoraId,
-      @JsonKey(name: 'isrc')
-          required String isrc,
-      @JsonKey(name: 'pandoraId')
-          required String pandoraId,
-      @JsonKey(name: 'scope')
-          required String scope}) {
-    return TrackAnnotation(
-      name: name,
-      sortableName: sortableName,
-      duration: duration,
-      trackNumber: trackNumber,
-      icon: icon,
-      rightsInfo: rightsInfo,
-      albumId: albumId,
-      albumName: albumName,
-      artistId: artistId,
-      artistName: artistName,
-      explicitness: explicitness,
-      shareableUrlPath: shareableUrlPath,
-      hasRadio: hasRadio,
-      modificationTime: modificationTime,
-      slugPlusPandoraId: slugPlusPandoraId,
-      isrc: isrc,
-      pandoraId: pandoraId,
-      scope: scope,
-    );
-  }
-
-  ArtistAnnotation artist(
-      {@JsonKey(name: 'name')
-          required String name,
-      @JsonKey(name: 'sortableName')
-          required String sortableName,
-      @JsonKey(name: 'trackCount')
-          required int trackCount,
-      @JsonKey(name: 'albumCount')
-          required int albumCount,
-      @JsonKey(name: 'icon', fromJson: MediaIcon.optionalFromJson, toJson: MediaIcon.optionalToJson)
-          required MediaIcon? icon,
-      @JsonKey(name: 'shareableUrlPath')
-          required String shareableUrlPath,
-      @JsonKey(name: 'twitterHandle')
-          String? twitterHandle,
-      @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
-          required bool hasRadio,
-      @JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
-          required DateTime modificationTime,
-      @JsonKey(name: 'slugPlusPandoraId')
-          required String slugPlusPandoraId,
-      @JsonKey(name: 'collaboration')
-          required bool collaboration,
-      @JsonKey(name: 'primaryArtists')
-          required List<String> primaryArtistIds,
-      @JsonKey(name: 'variousArtist')
-          required bool variousArtist,
-      @JsonKey(name: 'megastar')
-          required bool megastar,
-      @JsonKey(name: 'hasTakeoverModes')
-          required bool hasTakeoverModes,
-      @JsonKey(name: 'pandoraId')
-          required String pandoraId,
-      @JsonKey(name: 'scope')
-          required String scope}) {
-    return ArtistAnnotation(
-      name: name,
-      sortableName: sortableName,
-      trackCount: trackCount,
-      albumCount: albumCount,
-      icon: icon,
-      shareableUrlPath: shareableUrlPath,
-      twitterHandle: twitterHandle,
-      hasRadio: hasRadio,
-      modificationTime: modificationTime,
-      slugPlusPandoraId: slugPlusPandoraId,
-      collaboration: collaboration,
-      primaryArtistIds: primaryArtistIds,
-      variousArtist: variousArtist,
-      megastar: megastar,
-      hasTakeoverModes: hasTakeoverModes,
-      pandoraId: pandoraId,
-      scope: scope,
-    );
-  }
-
-  AlbumAnnotation album(
-      {@JsonKey(name: 'name')
-          required String name,
-      @JsonKey(name: 'sortableName')
-          required String sortableName,
-      @JsonKey(name: 'releaseDate')
-          required DateTime releaseDate,
-      @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
-          required Duration duration,
-      @JsonKey(name: 'trackCount')
-          required int trackCount,
-      @JsonKey(name: 'isCompilation')
-          required bool isCompilation,
-      @JsonKey(name: 'icon', fromJson: MediaIcon.optionalFromJson, toJson: MediaIcon.optionalToJson)
-          required MediaIcon? icon,
-      @JsonKey(name: 'rightsInfo')
-          required RightsInfo rightsInfo,
-      @JsonKey(name: 'tracks')
-          required List<String> trackIds,
-      @JsonKey(name: 'artistId')
-          required String artistId,
-      @JsonKey(name: 'artistName')
-          required String artistName,
-      @JsonKey(name: 'explicitness')
-          required Explicitness explicitness,
-      @JsonKey(name: 'shareableUrlPath')
-          required String shareableUrlPath,
-      @JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
-          required DateTime modificationTime,
-      @JsonKey(name: 'slugPlusPandoraId')
-          required String slugPlusPandoraId,
-      @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
-          required bool hasRadio,
-      @JsonKey(name: 'releaseType')
-          required String releaseType,
-      @JsonKey(name: 'listenerReleaseType')
-          required String listenerReleaseType,
-      @JsonKey(name: 'pandoraId')
-          required String pandoraId,
-      @JsonKey(name: 'scope')
-          required String scope}) {
-    return AlbumAnnotation(
-      name: name,
-      sortableName: sortableName,
-      releaseDate: releaseDate,
-      duration: duration,
-      trackCount: trackCount,
-      isCompilation: isCompilation,
-      icon: icon,
-      rightsInfo: rightsInfo,
-      trackIds: trackIds,
-      artistId: artistId,
-      artistName: artistName,
-      explicitness: explicitness,
-      shareableUrlPath: shareableUrlPath,
-      modificationTime: modificationTime,
-      slugPlusPandoraId: slugPlusPandoraId,
-      hasRadio: hasRadio,
-      releaseType: releaseType,
-      listenerReleaseType: listenerReleaseType,
-      pandoraId: pandoraId,
-      scope: scope,
-    );
-  }
-
-  GenreAnnotation genre(
-      {@JsonKey(name: 'name')
-          required String name,
-      @JsonKey(name: 'sortableName')
-          required String sortableName,
-      @JsonKey(name: 'icon', fromJson: MediaIcon.optionalFromJson, toJson: MediaIcon.optionalToJson)
-          required MediaIcon? icon,
-      @JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
-          required DateTime modificationTime,
-      @JsonKey(name: 'description')
-          required String description,
-      @JsonKey(name: 'stationListenerCount')
-          required int stationListenerCount,
-      @JsonKey(name: 'shareableUrlPath')
-          required String shareableUrlPath,
-      @JsonKey(name: 'hasTakeoverModes')
-          required bool hasTakeoverModes,
-      @JsonKey(name: 'hasCuratedModes')
-          required bool hasCuratedModes,
-      @JsonKey(name: 'pandoraId')
-          required String pandoraId,
-      @JsonKey(name: 'scope')
-          required String scope}) {
-    return GenreAnnotation(
-      name: name,
-      sortableName: sortableName,
-      icon: icon,
-      modificationTime: modificationTime,
-      description: description,
-      stationListenerCount: stationListenerCount,
-      shareableUrlPath: shareableUrlPath,
-      hasTakeoverModes: hasTakeoverModes,
-      hasCuratedModes: hasCuratedModes,
-      pandoraId: pandoraId,
-      scope: scope,
-    );
-  }
-
-  ComposerAnnotation composer(
-      {@JsonKey(name: 'name')
-          required String name,
-      @JsonKey(name: 'sortableName')
-          required String sortableName,
-      @JsonKey(name: 'icon', fromJson: MediaIcon.optionalFromJson, toJson: MediaIcon.optionalToJson)
-          required MediaIcon? icon,
-      @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
-          required bool hasRadio,
-      @JsonKey(name: 'albumCount')
-          required int albumCount,
-      @JsonKey(name: 'trackCount')
-          required int trackCount,
-      @JsonKey(name: 'shareableUrlPath')
-          required String shareableUrlPath,
-      @JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
-          required DateTime modificationTime,
-      @JsonKey(name: 'slugPlusPandoraId')
-          required String slugPlusPandoraId,
-      @JsonKey(name: 'pandoraId')
-          required String pandoraId,
-      @JsonKey(name: 'scope')
-          required String scope}) {
-    return ComposerAnnotation(
-      name: name,
-      sortableName: sortableName,
-      icon: icon,
-      hasRadio: hasRadio,
-      albumCount: albumCount,
-      trackCount: trackCount,
-      shareableUrlPath: shareableUrlPath,
-      modificationTime: modificationTime,
-      slugPlusPandoraId: slugPlusPandoraId,
-      pandoraId: pandoraId,
-      scope: scope,
-    );
-  }
-
-  ListenerMediaAnnotation listener(
-      {@JsonKey(name: 'pandoraId') required String pandoraId,
-      @JsonKey(name: 'listenerId') required int listenerId,
-      @JsonKey(name: 'webname') required String webname,
-      @JsonKey(name: 'fullname') required String fullName,
-      @JsonKey(name: 'displayname') required String displayName}) {
-    return ListenerMediaAnnotation(
-      pandoraId: pandoraId,
-      listenerId: listenerId,
-      webname: webname,
-      fullName: fullName,
-      displayName: displayName,
-    );
-  }
-
-  MediaAnnotation fromJson(Map<String, Object?> json) {
-    return MediaAnnotation.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $MediaAnnotation = _$MediaAnnotationTearOff();
-
-/// @nodoc
 mixin _$MediaAnnotation {
   @JsonKey(name: 'pandoraId')
   String get pandoraId => throw _privateConstructorUsedError;
-
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(
@@ -917,11 +633,11 @@ class _$MediaAnnotationCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class $TrackAnnotationCopyWith<$Res>
+abstract class _$$TrackAnnotationCopyWith<$Res>
     implements $MediaAnnotationCopyWith<$Res> {
-  factory $TrackAnnotationCopyWith(
-          TrackAnnotation value, $Res Function(TrackAnnotation) then) =
-      _$TrackAnnotationCopyWithImpl<$Res>;
+  factory _$$TrackAnnotationCopyWith(
+          _$TrackAnnotation value, $Res Function(_$TrackAnnotation) then) =
+      __$$TrackAnnotationCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(name: 'name')
@@ -966,15 +682,15 @@ abstract class $TrackAnnotationCopyWith<$Res>
 }
 
 /// @nodoc
-class _$TrackAnnotationCopyWithImpl<$Res>
+class __$$TrackAnnotationCopyWithImpl<$Res>
     extends _$MediaAnnotationCopyWithImpl<$Res>
-    implements $TrackAnnotationCopyWith<$Res> {
-  _$TrackAnnotationCopyWithImpl(
-      TrackAnnotation _value, $Res Function(TrackAnnotation) _then)
-      : super(_value, (v) => _then(v as TrackAnnotation));
+    implements _$$TrackAnnotationCopyWith<$Res> {
+  __$$TrackAnnotationCopyWithImpl(
+      _$TrackAnnotation _value, $Res Function(_$TrackAnnotation) _then)
+      : super(_value, (v) => _then(v as _$TrackAnnotation));
 
   @override
-  TrackAnnotation get _value => super._value as TrackAnnotation;
+  _$TrackAnnotation get _value => super._value as _$TrackAnnotation;
 
   @override
   $Res call({
@@ -997,7 +713,7 @@ class _$TrackAnnotationCopyWithImpl<$Res>
     Object? pandoraId = freezed,
     Object? scope = freezed,
   }) {
-    return _then(TrackAnnotation(
+    return _then(_$TrackAnnotation(
       name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -1094,8 +810,6 @@ class _$TrackAnnotationCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-@FreezedUnionValue('TR')
-@Implements<Track>()
 class _$TrackAnnotation extends TrackAnnotation {
   const _$TrackAnnotation(
       {@JsonKey(name: 'name')
@@ -1134,7 +848,7 @@ class _$TrackAnnotation extends TrackAnnotation {
           required this.pandoraId,
       @JsonKey(name: 'scope')
           required this.scope,
-      String? $type})
+      final String? $type})
       : $type = $type ?? 'TR',
         super._();
 
@@ -1215,7 +929,7 @@ class _$TrackAnnotation extends TrackAnnotation {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is TrackAnnotation &&
+            other is _$TrackAnnotation &&
             const DeepCollectionEquality().equals(other.name, name) &&
             const DeepCollectionEquality()
                 .equals(other.sortableName, sortableName) &&
@@ -1244,6 +958,7 @@ class _$TrackAnnotation extends TrackAnnotation {
             const DeepCollectionEquality().equals(other.scope, scope));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -1268,8 +983,8 @@ class _$TrackAnnotation extends TrackAnnotation {
 
   @JsonKey(ignore: true)
   @override
-  $TrackAnnotationCopyWith<TrackAnnotation> get copyWith =>
-      _$TrackAnnotationCopyWithImpl<TrackAnnotation>(this, _$identity);
+  _$$TrackAnnotationCopyWith<_$TrackAnnotation> get copyWith =>
+      __$$TrackAnnotationCopyWithImpl<_$TrackAnnotation>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1915,102 +1630,102 @@ class _$TrackAnnotation extends TrackAnnotation {
 abstract class TrackAnnotation extends MediaAnnotation implements Track {
   const factory TrackAnnotation(
       {@JsonKey(name: 'name')
-          required String name,
+          required final String name,
       @JsonKey(name: 'sortableName')
-          required String sortableName,
+          required final String sortableName,
       @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
-          required Duration duration,
+          required final Duration duration,
       @JsonKey(name: 'trackNumber')
-          required int trackNumber,
+          required final int trackNumber,
       @JsonKey(name: 'icon', fromJson: MediaIcon.optionalFromJson, toJson: MediaIcon.optionalToJson)
-          required MediaIcon? icon,
+          required final MediaIcon? icon,
       @JsonKey(name: 'rightsInfo')
-          required RightsInfo rightsInfo,
+          required final RightsInfo rightsInfo,
       @JsonKey(name: 'albumId')
-          required String albumId,
+          required final String albumId,
       @JsonKey(name: 'albumName')
-          required String albumName,
+          required final String albumName,
       @JsonKey(name: 'artistId')
-          required String artistId,
+          required final String artistId,
       @JsonKey(name: 'artistName')
-          required String artistName,
+          required final String artistName,
       @JsonKey(name: 'explicitness')
-          required Explicitness explicitness,
+          required final Explicitness explicitness,
       @JsonKey(name: 'shareableUrlPath')
-          required String shareableUrlPath,
+          required final String shareableUrlPath,
       @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
-          required bool hasRadio,
+          required final bool hasRadio,
       @JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
-          required DateTime modificationTime,
+          required final DateTime modificationTime,
       @JsonKey(name: 'slugPlusPandoraId')
-          required String slugPlusPandoraId,
+          required final String slugPlusPandoraId,
       @JsonKey(name: 'isrc')
-          required String isrc,
+          required final String isrc,
       @JsonKey(name: 'pandoraId')
-          required String pandoraId,
+          required final String pandoraId,
       @JsonKey(name: 'scope')
-          required String scope}) = _$TrackAnnotation;
+          required final String scope}) = _$TrackAnnotation;
   const TrackAnnotation._() : super._();
 
   factory TrackAnnotation.fromJson(Map<String, dynamic> json) =
       _$TrackAnnotation.fromJson;
 
   @JsonKey(name: 'name')
-  String get name;
+  String get name => throw _privateConstructorUsedError;
   @JsonKey(name: 'sortableName')
-  String get sortableName;
+  String get sortableName => throw _privateConstructorUsedError;
   @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
-  Duration get duration;
+  Duration get duration => throw _privateConstructorUsedError;
   @JsonKey(name: 'trackNumber')
-  int get trackNumber;
+  int get trackNumber => throw _privateConstructorUsedError;
   @JsonKey(
       name: 'icon',
       fromJson: MediaIcon.optionalFromJson,
       toJson: MediaIcon.optionalToJson)
-  MediaIcon? get icon;
+  MediaIcon? get icon => throw _privateConstructorUsedError;
   @JsonKey(name: 'rightsInfo')
-  RightsInfo get rightsInfo;
+  RightsInfo get rightsInfo => throw _privateConstructorUsedError;
   @JsonKey(name: 'albumId')
-  String get albumId;
+  String get albumId => throw _privateConstructorUsedError;
   @JsonKey(name: 'albumName')
-  String get albumName;
+  String get albumName => throw _privateConstructorUsedError;
   @JsonKey(name: 'artistId')
-  String get artistId;
+  String get artistId => throw _privateConstructorUsedError;
   @JsonKey(name: 'artistName')
-  String get artistName;
+  String get artistName => throw _privateConstructorUsedError;
   @JsonKey(name: 'explicitness')
-  Explicitness get explicitness;
+  Explicitness get explicitness => throw _privateConstructorUsedError;
   @JsonKey(name: 'shareableUrlPath')
-  String get shareableUrlPath;
+  String get shareableUrlPath => throw _privateConstructorUsedError;
   @JsonKey(
       name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
-  bool get hasRadio;
+  bool get hasRadio => throw _privateConstructorUsedError;
   @JsonKey(
       name: 'modificationTime',
       fromJson: readDateTimeMilliseconds,
       toJson: writeDateTimeMilliseconds)
-  DateTime get modificationTime;
+  DateTime get modificationTime => throw _privateConstructorUsedError;
   @JsonKey(name: 'slugPlusPandoraId')
-  String get slugPlusPandoraId;
+  String get slugPlusPandoraId => throw _privateConstructorUsedError;
   @JsonKey(name: 'isrc')
-  String get isrc;
+  String get isrc => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'pandoraId')
-  String get pandoraId;
+  String get pandoraId => throw _privateConstructorUsedError;
   @JsonKey(name: 'scope')
-  String get scope;
+  String get scope => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  $TrackAnnotationCopyWith<TrackAnnotation> get copyWith =>
+  _$$TrackAnnotationCopyWith<_$TrackAnnotation> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $ArtistAnnotationCopyWith<$Res>
+abstract class _$$ArtistAnnotationCopyWith<$Res>
     implements $MediaAnnotationCopyWith<$Res> {
-  factory $ArtistAnnotationCopyWith(
-          ArtistAnnotation value, $Res Function(ArtistAnnotation) then) =
-      _$ArtistAnnotationCopyWithImpl<$Res>;
+  factory _$$ArtistAnnotationCopyWith(
+          _$ArtistAnnotation value, $Res Function(_$ArtistAnnotation) then) =
+      __$$ArtistAnnotationCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(name: 'name')
@@ -2052,15 +1767,15 @@ abstract class $ArtistAnnotationCopyWith<$Res>
 }
 
 /// @nodoc
-class _$ArtistAnnotationCopyWithImpl<$Res>
+class __$$ArtistAnnotationCopyWithImpl<$Res>
     extends _$MediaAnnotationCopyWithImpl<$Res>
-    implements $ArtistAnnotationCopyWith<$Res> {
-  _$ArtistAnnotationCopyWithImpl(
-      ArtistAnnotation _value, $Res Function(ArtistAnnotation) _then)
-      : super(_value, (v) => _then(v as ArtistAnnotation));
+    implements _$$ArtistAnnotationCopyWith<$Res> {
+  __$$ArtistAnnotationCopyWithImpl(
+      _$ArtistAnnotation _value, $Res Function(_$ArtistAnnotation) _then)
+      : super(_value, (v) => _then(v as _$ArtistAnnotation));
 
   @override
-  ArtistAnnotation get _value => super._value as ArtistAnnotation;
+  _$ArtistAnnotation get _value => super._value as _$ArtistAnnotation;
 
   @override
   $Res call({
@@ -2082,7 +1797,7 @@ class _$ArtistAnnotationCopyWithImpl<$Res>
     Object? pandoraId = freezed,
     Object? scope = freezed,
   }) {
-    return _then(ArtistAnnotation(
+    return _then(_$ArtistAnnotation(
       name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -2128,7 +1843,7 @@ class _$ArtistAnnotationCopyWithImpl<$Res>
           : collaboration // ignore: cast_nullable_to_non_nullable
               as bool,
       primaryArtistIds: primaryArtistIds == freezed
-          ? _value.primaryArtistIds
+          ? _value._primaryArtistIds
           : primaryArtistIds // ignore: cast_nullable_to_non_nullable
               as List<String>,
       variousArtist: variousArtist == freezed
@@ -2168,7 +1883,6 @@ class _$ArtistAnnotationCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-@FreezedUnionValue('AR')
 class _$ArtistAnnotation extends ArtistAnnotation {
   const _$ArtistAnnotation(
       {@JsonKey(name: 'name')
@@ -2194,7 +1908,7 @@ class _$ArtistAnnotation extends ArtistAnnotation {
       @JsonKey(name: 'collaboration')
           required this.collaboration,
       @JsonKey(name: 'primaryArtists')
-          required this.primaryArtistIds,
+          required final List<String> primaryArtistIds,
       @JsonKey(name: 'variousArtist')
           required this.variousArtist,
       @JsonKey(name: 'megastar')
@@ -2205,8 +1919,9 @@ class _$ArtistAnnotation extends ArtistAnnotation {
           required this.pandoraId,
       @JsonKey(name: 'scope')
           required this.scope,
-      String? $type})
-      : $type = $type ?? 'AR',
+      final String? $type})
+      : _primaryArtistIds = primaryArtistIds,
+        $type = $type ?? 'AR',
         super._();
 
   factory _$ArtistAnnotation.fromJson(Map<String, dynamic> json) =>
@@ -2252,9 +1967,14 @@ class _$ArtistAnnotation extends ArtistAnnotation {
   @override
   @JsonKey(name: 'collaboration')
   final bool collaboration;
+  final List<String> _primaryArtistIds;
   @override
   @JsonKey(name: 'primaryArtists')
-  final List<String> primaryArtistIds;
+  List<String> get primaryArtistIds {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_primaryArtistIds);
+  }
+
   @override
   @JsonKey(name: 'variousArtist')
   final bool variousArtist;
@@ -2283,7 +2003,7 @@ class _$ArtistAnnotation extends ArtistAnnotation {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is ArtistAnnotation &&
+            other is _$ArtistAnnotation &&
             const DeepCollectionEquality().equals(other.name, name) &&
             const DeepCollectionEquality()
                 .equals(other.sortableName, sortableName) &&
@@ -2304,7 +2024,7 @@ class _$ArtistAnnotation extends ArtistAnnotation {
             const DeepCollectionEquality()
                 .equals(other.collaboration, collaboration) &&
             const DeepCollectionEquality()
-                .equals(other.primaryArtistIds, primaryArtistIds) &&
+                .equals(other._primaryArtistIds, _primaryArtistIds) &&
             const DeepCollectionEquality()
                 .equals(other.variousArtist, variousArtist) &&
             const DeepCollectionEquality().equals(other.megastar, megastar) &&
@@ -2314,6 +2034,7 @@ class _$ArtistAnnotation extends ArtistAnnotation {
             const DeepCollectionEquality().equals(other.scope, scope));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -2328,7 +2049,7 @@ class _$ArtistAnnotation extends ArtistAnnotation {
       const DeepCollectionEquality().hash(modificationTime),
       const DeepCollectionEquality().hash(slugPlusPandoraId),
       const DeepCollectionEquality().hash(collaboration),
-      const DeepCollectionEquality().hash(primaryArtistIds),
+      const DeepCollectionEquality().hash(_primaryArtistIds),
       const DeepCollectionEquality().hash(variousArtist),
       const DeepCollectionEquality().hash(megastar),
       const DeepCollectionEquality().hash(hasTakeoverModes),
@@ -2337,8 +2058,8 @@ class _$ArtistAnnotation extends ArtistAnnotation {
 
   @JsonKey(ignore: true)
   @override
-  $ArtistAnnotationCopyWith<ArtistAnnotation> get copyWith =>
-      _$ArtistAnnotationCopyWithImpl<ArtistAnnotation>(this, _$identity);
+  _$$ArtistAnnotationCopyWith<_$ArtistAnnotation> get copyWith =>
+      __$$ArtistAnnotationCopyWithImpl<_$ArtistAnnotation>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -2981,98 +2702,98 @@ class _$ArtistAnnotation extends ArtistAnnotation {
 abstract class ArtistAnnotation extends MediaAnnotation {
   const factory ArtistAnnotation(
       {@JsonKey(name: 'name')
-          required String name,
+          required final String name,
       @JsonKey(name: 'sortableName')
-          required String sortableName,
+          required final String sortableName,
       @JsonKey(name: 'trackCount')
-          required int trackCount,
+          required final int trackCount,
       @JsonKey(name: 'albumCount')
-          required int albumCount,
+          required final int albumCount,
       @JsonKey(name: 'icon', fromJson: MediaIcon.optionalFromJson, toJson: MediaIcon.optionalToJson)
-          required MediaIcon? icon,
+          required final MediaIcon? icon,
       @JsonKey(name: 'shareableUrlPath')
-          required String shareableUrlPath,
+          required final String shareableUrlPath,
       @JsonKey(name: 'twitterHandle')
-          String? twitterHandle,
+          final String? twitterHandle,
       @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
-          required bool hasRadio,
+          required final bool hasRadio,
       @JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
-          required DateTime modificationTime,
+          required final DateTime modificationTime,
       @JsonKey(name: 'slugPlusPandoraId')
-          required String slugPlusPandoraId,
+          required final String slugPlusPandoraId,
       @JsonKey(name: 'collaboration')
-          required bool collaboration,
+          required final bool collaboration,
       @JsonKey(name: 'primaryArtists')
-          required List<String> primaryArtistIds,
+          required final List<String> primaryArtistIds,
       @JsonKey(name: 'variousArtist')
-          required bool variousArtist,
+          required final bool variousArtist,
       @JsonKey(name: 'megastar')
-          required bool megastar,
+          required final bool megastar,
       @JsonKey(name: 'hasTakeoverModes')
-          required bool hasTakeoverModes,
+          required final bool hasTakeoverModes,
       @JsonKey(name: 'pandoraId')
-          required String pandoraId,
+          required final String pandoraId,
       @JsonKey(name: 'scope')
-          required String scope}) = _$ArtistAnnotation;
+          required final String scope}) = _$ArtistAnnotation;
   const ArtistAnnotation._() : super._();
 
   factory ArtistAnnotation.fromJson(Map<String, dynamic> json) =
       _$ArtistAnnotation.fromJson;
 
   @JsonKey(name: 'name')
-  String get name;
+  String get name => throw _privateConstructorUsedError;
   @JsonKey(name: 'sortableName')
-  String get sortableName;
+  String get sortableName => throw _privateConstructorUsedError;
   @JsonKey(name: 'trackCount')
-  int get trackCount;
+  int get trackCount => throw _privateConstructorUsedError;
   @JsonKey(name: 'albumCount')
-  int get albumCount;
+  int get albumCount => throw _privateConstructorUsedError;
   @JsonKey(
       name: 'icon',
       fromJson: MediaIcon.optionalFromJson,
       toJson: MediaIcon.optionalToJson)
-  MediaIcon? get icon;
+  MediaIcon? get icon => throw _privateConstructorUsedError;
   @JsonKey(name: 'shareableUrlPath')
-  String get shareableUrlPath;
+  String get shareableUrlPath => throw _privateConstructorUsedError;
   @JsonKey(name: 'twitterHandle')
-  String? get twitterHandle;
+  String? get twitterHandle => throw _privateConstructorUsedError;
   @JsonKey(
       name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
-  bool get hasRadio;
+  bool get hasRadio => throw _privateConstructorUsedError;
   @JsonKey(
       name: 'modificationTime',
       fromJson: readDateTimeMilliseconds,
       toJson: writeDateTimeMilliseconds)
-  DateTime get modificationTime;
+  DateTime get modificationTime => throw _privateConstructorUsedError;
   @JsonKey(name: 'slugPlusPandoraId')
-  String get slugPlusPandoraId;
+  String get slugPlusPandoraId => throw _privateConstructorUsedError;
   @JsonKey(name: 'collaboration')
-  bool get collaboration;
+  bool get collaboration => throw _privateConstructorUsedError;
   @JsonKey(name: 'primaryArtists')
-  List<String> get primaryArtistIds;
+  List<String> get primaryArtistIds => throw _privateConstructorUsedError;
   @JsonKey(name: 'variousArtist')
-  bool get variousArtist;
+  bool get variousArtist => throw _privateConstructorUsedError;
   @JsonKey(name: 'megastar')
-  bool get megastar;
+  bool get megastar => throw _privateConstructorUsedError;
   @JsonKey(name: 'hasTakeoverModes')
-  bool get hasTakeoverModes;
+  bool get hasTakeoverModes => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'pandoraId')
-  String get pandoraId;
+  String get pandoraId => throw _privateConstructorUsedError;
   @JsonKey(name: 'scope')
-  String get scope;
+  String get scope => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  $ArtistAnnotationCopyWith<ArtistAnnotation> get copyWith =>
+  _$$ArtistAnnotationCopyWith<_$ArtistAnnotation> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $AlbumAnnotationCopyWith<$Res>
+abstract class _$$AlbumAnnotationCopyWith<$Res>
     implements $MediaAnnotationCopyWith<$Res> {
-  factory $AlbumAnnotationCopyWith(
-          AlbumAnnotation value, $Res Function(AlbumAnnotation) then) =
-      _$AlbumAnnotationCopyWithImpl<$Res>;
+  factory _$$AlbumAnnotationCopyWith(
+          _$AlbumAnnotation value, $Res Function(_$AlbumAnnotation) then) =
+      __$$AlbumAnnotationCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(name: 'name')
@@ -3121,15 +2842,15 @@ abstract class $AlbumAnnotationCopyWith<$Res>
 }
 
 /// @nodoc
-class _$AlbumAnnotationCopyWithImpl<$Res>
+class __$$AlbumAnnotationCopyWithImpl<$Res>
     extends _$MediaAnnotationCopyWithImpl<$Res>
-    implements $AlbumAnnotationCopyWith<$Res> {
-  _$AlbumAnnotationCopyWithImpl(
-      AlbumAnnotation _value, $Res Function(AlbumAnnotation) _then)
-      : super(_value, (v) => _then(v as AlbumAnnotation));
+    implements _$$AlbumAnnotationCopyWith<$Res> {
+  __$$AlbumAnnotationCopyWithImpl(
+      _$AlbumAnnotation _value, $Res Function(_$AlbumAnnotation) _then)
+      : super(_value, (v) => _then(v as _$AlbumAnnotation));
 
   @override
-  AlbumAnnotation get _value => super._value as AlbumAnnotation;
+  _$AlbumAnnotation get _value => super._value as _$AlbumAnnotation;
 
   @override
   $Res call({
@@ -3154,7 +2875,7 @@ class _$AlbumAnnotationCopyWithImpl<$Res>
     Object? pandoraId = freezed,
     Object? scope = freezed,
   }) {
-    return _then(AlbumAnnotation(
+    return _then(_$AlbumAnnotation(
       name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -3188,7 +2909,7 @@ class _$AlbumAnnotationCopyWithImpl<$Res>
           : rightsInfo // ignore: cast_nullable_to_non_nullable
               as RightsInfo,
       trackIds: trackIds == freezed
-          ? _value.trackIds
+          ? _value._trackIds
           : trackIds // ignore: cast_nullable_to_non_nullable
               as List<String>,
       artistId: artistId == freezed
@@ -3259,7 +2980,6 @@ class _$AlbumAnnotationCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-@FreezedUnionValue('AL')
 class _$AlbumAnnotation extends AlbumAnnotation {
   const _$AlbumAnnotation(
       {@JsonKey(name: 'name')
@@ -3279,7 +2999,7 @@ class _$AlbumAnnotation extends AlbumAnnotation {
       @JsonKey(name: 'rightsInfo')
           required this.rightsInfo,
       @JsonKey(name: 'tracks')
-          required this.trackIds,
+          required final List<String> trackIds,
       @JsonKey(name: 'artistId')
           required this.artistId,
       @JsonKey(name: 'artistName')
@@ -3302,8 +3022,9 @@ class _$AlbumAnnotation extends AlbumAnnotation {
           required this.pandoraId,
       @JsonKey(name: 'scope')
           required this.scope,
-      String? $type})
-      : $type = $type ?? 'AL',
+      final String? $type})
+      : _trackIds = trackIds,
+        $type = $type ?? 'AL',
         super._();
 
   factory _$AlbumAnnotation.fromJson(Map<String, dynamic> json) =>
@@ -3336,9 +3057,14 @@ class _$AlbumAnnotation extends AlbumAnnotation {
   @override
   @JsonKey(name: 'rightsInfo')
   final RightsInfo rightsInfo;
+  final List<String> _trackIds;
   @override
   @JsonKey(name: 'tracks')
-  final List<String> trackIds;
+  List<String> get trackIds {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_trackIds);
+  }
+
   @override
   @JsonKey(name: 'artistId')
   final String artistId;
@@ -3389,7 +3115,7 @@ class _$AlbumAnnotation extends AlbumAnnotation {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is AlbumAnnotation &&
+            other is _$AlbumAnnotation &&
             const DeepCollectionEquality().equals(other.name, name) &&
             const DeepCollectionEquality()
                 .equals(other.sortableName, sortableName) &&
@@ -3403,7 +3129,7 @@ class _$AlbumAnnotation extends AlbumAnnotation {
             const DeepCollectionEquality().equals(other.icon, icon) &&
             const DeepCollectionEquality()
                 .equals(other.rightsInfo, rightsInfo) &&
-            const DeepCollectionEquality().equals(other.trackIds, trackIds) &&
+            const DeepCollectionEquality().equals(other._trackIds, _trackIds) &&
             const DeepCollectionEquality().equals(other.artistId, artistId) &&
             const DeepCollectionEquality()
                 .equals(other.artistName, artistName) &&
@@ -3424,6 +3150,7 @@ class _$AlbumAnnotation extends AlbumAnnotation {
             const DeepCollectionEquality().equals(other.scope, scope));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -3435,7 +3162,7 @@ class _$AlbumAnnotation extends AlbumAnnotation {
         const DeepCollectionEquality().hash(isCompilation),
         const DeepCollectionEquality().hash(icon),
         const DeepCollectionEquality().hash(rightsInfo),
-        const DeepCollectionEquality().hash(trackIds),
+        const DeepCollectionEquality().hash(_trackIds),
         const DeepCollectionEquality().hash(artistId),
         const DeepCollectionEquality().hash(artistName),
         const DeepCollectionEquality().hash(explicitness),
@@ -3451,8 +3178,8 @@ class _$AlbumAnnotation extends AlbumAnnotation {
 
   @JsonKey(ignore: true)
   @override
-  $AlbumAnnotationCopyWith<AlbumAnnotation> get copyWith =>
-      _$AlbumAnnotationCopyWithImpl<AlbumAnnotation>(this, _$identity);
+  _$$AlbumAnnotationCopyWith<_$AlbumAnnotation> get copyWith =>
+      __$$AlbumAnnotationCopyWithImpl<_$AlbumAnnotation>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -4104,110 +3831,110 @@ class _$AlbumAnnotation extends AlbumAnnotation {
 abstract class AlbumAnnotation extends MediaAnnotation {
   const factory AlbumAnnotation(
       {@JsonKey(name: 'name')
-          required String name,
+          required final String name,
       @JsonKey(name: 'sortableName')
-          required String sortableName,
+          required final String sortableName,
       @JsonKey(name: 'releaseDate')
-          required DateTime releaseDate,
+          required final DateTime releaseDate,
       @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
-          required Duration duration,
+          required final Duration duration,
       @JsonKey(name: 'trackCount')
-          required int trackCount,
+          required final int trackCount,
       @JsonKey(name: 'isCompilation')
-          required bool isCompilation,
+          required final bool isCompilation,
       @JsonKey(name: 'icon', fromJson: MediaIcon.optionalFromJson, toJson: MediaIcon.optionalToJson)
-          required MediaIcon? icon,
+          required final MediaIcon? icon,
       @JsonKey(name: 'rightsInfo')
-          required RightsInfo rightsInfo,
+          required final RightsInfo rightsInfo,
       @JsonKey(name: 'tracks')
-          required List<String> trackIds,
+          required final List<String> trackIds,
       @JsonKey(name: 'artistId')
-          required String artistId,
+          required final String artistId,
       @JsonKey(name: 'artistName')
-          required String artistName,
+          required final String artistName,
       @JsonKey(name: 'explicitness')
-          required Explicitness explicitness,
+          required final Explicitness explicitness,
       @JsonKey(name: 'shareableUrlPath')
-          required String shareableUrlPath,
+          required final String shareableUrlPath,
       @JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
-          required DateTime modificationTime,
+          required final DateTime modificationTime,
       @JsonKey(name: 'slugPlusPandoraId')
-          required String slugPlusPandoraId,
+          required final String slugPlusPandoraId,
       @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
-          required bool hasRadio,
+          required final bool hasRadio,
       @JsonKey(name: 'releaseType')
-          required String releaseType,
+          required final String releaseType,
       @JsonKey(name: 'listenerReleaseType')
-          required String listenerReleaseType,
+          required final String listenerReleaseType,
       @JsonKey(name: 'pandoraId')
-          required String pandoraId,
+          required final String pandoraId,
       @JsonKey(name: 'scope')
-          required String scope}) = _$AlbumAnnotation;
+          required final String scope}) = _$AlbumAnnotation;
   const AlbumAnnotation._() : super._();
 
   factory AlbumAnnotation.fromJson(Map<String, dynamic> json) =
       _$AlbumAnnotation.fromJson;
 
   @JsonKey(name: 'name')
-  String get name;
+  String get name => throw _privateConstructorUsedError;
   @JsonKey(name: 'sortableName')
-  String get sortableName;
+  String get sortableName => throw _privateConstructorUsedError;
   @JsonKey(name: 'releaseDate')
-  DateTime get releaseDate;
+  DateTime get releaseDate => throw _privateConstructorUsedError;
   @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
-  Duration get duration;
+  Duration get duration => throw _privateConstructorUsedError;
   @JsonKey(name: 'trackCount')
-  int get trackCount;
+  int get trackCount => throw _privateConstructorUsedError;
   @JsonKey(name: 'isCompilation')
-  bool get isCompilation;
+  bool get isCompilation => throw _privateConstructorUsedError;
   @JsonKey(
       name: 'icon',
       fromJson: MediaIcon.optionalFromJson,
       toJson: MediaIcon.optionalToJson)
-  MediaIcon? get icon;
+  MediaIcon? get icon => throw _privateConstructorUsedError;
   @JsonKey(name: 'rightsInfo')
-  RightsInfo get rightsInfo;
+  RightsInfo get rightsInfo => throw _privateConstructorUsedError;
   @JsonKey(name: 'tracks')
-  List<String> get trackIds;
+  List<String> get trackIds => throw _privateConstructorUsedError;
   @JsonKey(name: 'artistId')
-  String get artistId;
+  String get artistId => throw _privateConstructorUsedError;
   @JsonKey(name: 'artistName')
-  String get artistName;
+  String get artistName => throw _privateConstructorUsedError;
   @JsonKey(name: 'explicitness')
-  Explicitness get explicitness;
+  Explicitness get explicitness => throw _privateConstructorUsedError;
   @JsonKey(name: 'shareableUrlPath')
-  String get shareableUrlPath;
+  String get shareableUrlPath => throw _privateConstructorUsedError;
   @JsonKey(
       name: 'modificationTime',
       fromJson: readDateTimeMilliseconds,
       toJson: writeDateTimeMilliseconds)
-  DateTime get modificationTime;
+  DateTime get modificationTime => throw _privateConstructorUsedError;
   @JsonKey(name: 'slugPlusPandoraId')
-  String get slugPlusPandoraId;
+  String get slugPlusPandoraId => throw _privateConstructorUsedError;
   @JsonKey(
       name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
-  bool get hasRadio;
+  bool get hasRadio => throw _privateConstructorUsedError;
   @JsonKey(name: 'releaseType')
-  String get releaseType;
+  String get releaseType => throw _privateConstructorUsedError;
   @JsonKey(name: 'listenerReleaseType')
-  String get listenerReleaseType;
+  String get listenerReleaseType => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'pandoraId')
-  String get pandoraId;
+  String get pandoraId => throw _privateConstructorUsedError;
   @JsonKey(name: 'scope')
-  String get scope;
+  String get scope => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  $AlbumAnnotationCopyWith<AlbumAnnotation> get copyWith =>
+  _$$AlbumAnnotationCopyWith<_$AlbumAnnotation> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $GenreAnnotationCopyWith<$Res>
+abstract class _$$GenreAnnotationCopyWith<$Res>
     implements $MediaAnnotationCopyWith<$Res> {
-  factory $GenreAnnotationCopyWith(
-          GenreAnnotation value, $Res Function(GenreAnnotation) then) =
-      _$GenreAnnotationCopyWithImpl<$Res>;
+  factory _$$GenreAnnotationCopyWith(
+          _$GenreAnnotation value, $Res Function(_$GenreAnnotation) then) =
+      __$$GenreAnnotationCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(name: 'name')
@@ -4237,15 +3964,15 @@ abstract class $GenreAnnotationCopyWith<$Res>
 }
 
 /// @nodoc
-class _$GenreAnnotationCopyWithImpl<$Res>
+class __$$GenreAnnotationCopyWithImpl<$Res>
     extends _$MediaAnnotationCopyWithImpl<$Res>
-    implements $GenreAnnotationCopyWith<$Res> {
-  _$GenreAnnotationCopyWithImpl(
-      GenreAnnotation _value, $Res Function(GenreAnnotation) _then)
-      : super(_value, (v) => _then(v as GenreAnnotation));
+    implements _$$GenreAnnotationCopyWith<$Res> {
+  __$$GenreAnnotationCopyWithImpl(
+      _$GenreAnnotation _value, $Res Function(_$GenreAnnotation) _then)
+      : super(_value, (v) => _then(v as _$GenreAnnotation));
 
   @override
-  GenreAnnotation get _value => super._value as GenreAnnotation;
+  _$GenreAnnotation get _value => super._value as _$GenreAnnotation;
 
   @override
   $Res call({
@@ -4261,7 +3988,7 @@ class _$GenreAnnotationCopyWithImpl<$Res>
     Object? pandoraId = freezed,
     Object? scope = freezed,
   }) {
-    return _then(GenreAnnotation(
+    return _then(_$GenreAnnotation(
       name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -4323,7 +4050,6 @@ class _$GenreAnnotationCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-@FreezedUnionValue('GE')
 class _$GenreAnnotation extends GenreAnnotation {
   const _$GenreAnnotation(
       {@JsonKey(name: 'name')
@@ -4348,7 +4074,7 @@ class _$GenreAnnotation extends GenreAnnotation {
           required this.pandoraId,
       @JsonKey(name: 'scope')
           required this.scope,
-      String? $type})
+      final String? $type})
       : $type = $type ?? 'GE',
         super._();
 
@@ -4382,7 +4108,8 @@ class _$GenreAnnotation extends GenreAnnotation {
   @override
   @JsonKey(name: 'shareableUrlPath')
   final String shareableUrlPath;
-  @override // TODO work out exclusivityGroups list type
+// TODO work out exclusivityGroups list type
+  @override
   @JsonKey(name: 'hasTakeoverModes')
   final bool hasTakeoverModes;
   @override
@@ -4407,7 +4134,7 @@ class _$GenreAnnotation extends GenreAnnotation {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is GenreAnnotation &&
+            other is _$GenreAnnotation &&
             const DeepCollectionEquality().equals(other.name, name) &&
             const DeepCollectionEquality()
                 .equals(other.sortableName, sortableName) &&
@@ -4428,6 +4155,7 @@ class _$GenreAnnotation extends GenreAnnotation {
             const DeepCollectionEquality().equals(other.scope, scope));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -4445,8 +4173,8 @@ class _$GenreAnnotation extends GenreAnnotation {
 
   @JsonKey(ignore: true)
   @override
-  $GenreAnnotationCopyWith<GenreAnnotation> get copyWith =>
-      _$GenreAnnotationCopyWithImpl<GenreAnnotation>(this, _$identity);
+  _$$GenreAnnotationCopyWith<_$GenreAnnotation> get copyWith =>
+      __$$GenreAnnotationCopyWithImpl<_$GenreAnnotation>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -5071,73 +4799,74 @@ class _$GenreAnnotation extends GenreAnnotation {
 abstract class GenreAnnotation extends MediaAnnotation {
   const factory GenreAnnotation(
       {@JsonKey(name: 'name')
-          required String name,
+          required final String name,
       @JsonKey(name: 'sortableName')
-          required String sortableName,
+          required final String sortableName,
       @JsonKey(name: 'icon', fromJson: MediaIcon.optionalFromJson, toJson: MediaIcon.optionalToJson)
-          required MediaIcon? icon,
+          required final MediaIcon? icon,
       @JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
-          required DateTime modificationTime,
+          required final DateTime modificationTime,
       @JsonKey(name: 'description')
-          required String description,
+          required final String description,
       @JsonKey(name: 'stationListenerCount')
-          required int stationListenerCount,
+          required final int stationListenerCount,
       @JsonKey(name: 'shareableUrlPath')
-          required String shareableUrlPath,
+          required final String shareableUrlPath,
       @JsonKey(name: 'hasTakeoverModes')
-          required bool hasTakeoverModes,
+          required final bool hasTakeoverModes,
       @JsonKey(name: 'hasCuratedModes')
-          required bool hasCuratedModes,
+          required final bool hasCuratedModes,
       @JsonKey(name: 'pandoraId')
-          required String pandoraId,
+          required final String pandoraId,
       @JsonKey(name: 'scope')
-          required String scope}) = _$GenreAnnotation;
+          required final String scope}) = _$GenreAnnotation;
   const GenreAnnotation._() : super._();
 
   factory GenreAnnotation.fromJson(Map<String, dynamic> json) =
       _$GenreAnnotation.fromJson;
 
   @JsonKey(name: 'name')
-  String get name;
+  String get name => throw _privateConstructorUsedError;
   @JsonKey(name: 'sortableName')
-  String get sortableName;
+  String get sortableName => throw _privateConstructorUsedError;
   @JsonKey(
       name: 'icon',
       fromJson: MediaIcon.optionalFromJson,
       toJson: MediaIcon.optionalToJson)
-  MediaIcon? get icon;
+  MediaIcon? get icon => throw _privateConstructorUsedError;
   @JsonKey(
       name: 'modificationTime',
       fromJson: readDateTimeMilliseconds,
       toJson: writeDateTimeMilliseconds)
-  DateTime get modificationTime;
+  DateTime get modificationTime => throw _privateConstructorUsedError;
   @JsonKey(name: 'description')
-  String get description;
+  String get description => throw _privateConstructorUsedError;
   @JsonKey(name: 'stationListenerCount')
-  int get stationListenerCount;
+  int get stationListenerCount => throw _privateConstructorUsedError;
   @JsonKey(name: 'shareableUrlPath')
-  String get shareableUrlPath; // TODO work out exclusivityGroups list type
+  String get shareableUrlPath =>
+      throw _privateConstructorUsedError; // TODO work out exclusivityGroups list type
   @JsonKey(name: 'hasTakeoverModes')
-  bool get hasTakeoverModes;
+  bool get hasTakeoverModes => throw _privateConstructorUsedError;
   @JsonKey(name: 'hasCuratedModes')
-  bool get hasCuratedModes;
+  bool get hasCuratedModes => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'pandoraId')
-  String get pandoraId;
+  String get pandoraId => throw _privateConstructorUsedError;
   @JsonKey(name: 'scope')
-  String get scope;
+  String get scope => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  $GenreAnnotationCopyWith<GenreAnnotation> get copyWith =>
+  _$$GenreAnnotationCopyWith<_$GenreAnnotation> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $ComposerAnnotationCopyWith<$Res>
+abstract class _$$ComposerAnnotationCopyWith<$Res>
     implements $MediaAnnotationCopyWith<$Res> {
-  factory $ComposerAnnotationCopyWith(
-          ComposerAnnotation value, $Res Function(ComposerAnnotation) then) =
-      _$ComposerAnnotationCopyWithImpl<$Res>;
+  factory _$$ComposerAnnotationCopyWith(_$ComposerAnnotation value,
+          $Res Function(_$ComposerAnnotation) then) =
+      __$$ComposerAnnotationCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(name: 'name')
@@ -5167,15 +4896,15 @@ abstract class $ComposerAnnotationCopyWith<$Res>
 }
 
 /// @nodoc
-class _$ComposerAnnotationCopyWithImpl<$Res>
+class __$$ComposerAnnotationCopyWithImpl<$Res>
     extends _$MediaAnnotationCopyWithImpl<$Res>
-    implements $ComposerAnnotationCopyWith<$Res> {
-  _$ComposerAnnotationCopyWithImpl(
-      ComposerAnnotation _value, $Res Function(ComposerAnnotation) _then)
-      : super(_value, (v) => _then(v as ComposerAnnotation));
+    implements _$$ComposerAnnotationCopyWith<$Res> {
+  __$$ComposerAnnotationCopyWithImpl(
+      _$ComposerAnnotation _value, $Res Function(_$ComposerAnnotation) _then)
+      : super(_value, (v) => _then(v as _$ComposerAnnotation));
 
   @override
-  ComposerAnnotation get _value => super._value as ComposerAnnotation;
+  _$ComposerAnnotation get _value => super._value as _$ComposerAnnotation;
 
   @override
   $Res call({
@@ -5191,7 +4920,7 @@ class _$ComposerAnnotationCopyWithImpl<$Res>
     Object? pandoraId = freezed,
     Object? scope = freezed,
   }) {
-    return _then(ComposerAnnotation(
+    return _then(_$ComposerAnnotation(
       name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -5253,7 +4982,6 @@ class _$ComposerAnnotationCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-@FreezedUnionValue('CO')
 class _$ComposerAnnotation extends ComposerAnnotation {
   const _$ComposerAnnotation(
       {@JsonKey(name: 'name')
@@ -5278,7 +5006,7 @@ class _$ComposerAnnotation extends ComposerAnnotation {
           required this.pandoraId,
       @JsonKey(name: 'scope')
           required this.scope,
-      String? $type})
+      final String? $type})
       : $type = $type ?? 'CO',
         super._();
 
@@ -5338,7 +5066,7 @@ class _$ComposerAnnotation extends ComposerAnnotation {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is ComposerAnnotation &&
+            other is _$ComposerAnnotation &&
             const DeepCollectionEquality().equals(other.name, name) &&
             const DeepCollectionEquality()
                 .equals(other.sortableName, sortableName) &&
@@ -5358,6 +5086,7 @@ class _$ComposerAnnotation extends ComposerAnnotation {
             const DeepCollectionEquality().equals(other.scope, scope));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -5375,8 +5104,9 @@ class _$ComposerAnnotation extends ComposerAnnotation {
 
   @JsonKey(ignore: true)
   @override
-  $ComposerAnnotationCopyWith<ComposerAnnotation> get copyWith =>
-      _$ComposerAnnotationCopyWithImpl<ComposerAnnotation>(this, _$identity);
+  _$$ComposerAnnotationCopyWith<_$ComposerAnnotation> get copyWith =>
+      __$$ComposerAnnotationCopyWithImpl<_$ComposerAnnotation>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -6001,74 +5731,74 @@ class _$ComposerAnnotation extends ComposerAnnotation {
 abstract class ComposerAnnotation extends MediaAnnotation {
   const factory ComposerAnnotation(
       {@JsonKey(name: 'name')
-          required String name,
+          required final String name,
       @JsonKey(name: 'sortableName')
-          required String sortableName,
+          required final String sortableName,
       @JsonKey(name: 'icon', fromJson: MediaIcon.optionalFromJson, toJson: MediaIcon.optionalToJson)
-          required MediaIcon? icon,
+          required final MediaIcon? icon,
       @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
-          required bool hasRadio,
+          required final bool hasRadio,
       @JsonKey(name: 'albumCount')
-          required int albumCount,
+          required final int albumCount,
       @JsonKey(name: 'trackCount')
-          required int trackCount,
+          required final int trackCount,
       @JsonKey(name: 'shareableUrlPath')
-          required String shareableUrlPath,
+          required final String shareableUrlPath,
       @JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
-          required DateTime modificationTime,
+          required final DateTime modificationTime,
       @JsonKey(name: 'slugPlusPandoraId')
-          required String slugPlusPandoraId,
+          required final String slugPlusPandoraId,
       @JsonKey(name: 'pandoraId')
-          required String pandoraId,
+          required final String pandoraId,
       @JsonKey(name: 'scope')
-          required String scope}) = _$ComposerAnnotation;
+          required final String scope}) = _$ComposerAnnotation;
   const ComposerAnnotation._() : super._();
 
   factory ComposerAnnotation.fromJson(Map<String, dynamic> json) =
       _$ComposerAnnotation.fromJson;
 
   @JsonKey(name: 'name')
-  String get name;
+  String get name => throw _privateConstructorUsedError;
   @JsonKey(name: 'sortableName')
-  String get sortableName;
+  String get sortableName => throw _privateConstructorUsedError;
   @JsonKey(
       name: 'icon',
       fromJson: MediaIcon.optionalFromJson,
       toJson: MediaIcon.optionalToJson)
-  MediaIcon? get icon;
+  MediaIcon? get icon => throw _privateConstructorUsedError;
   @JsonKey(
       name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
-  bool get hasRadio;
+  bool get hasRadio => throw _privateConstructorUsedError;
   @JsonKey(name: 'albumCount')
-  int get albumCount;
+  int get albumCount => throw _privateConstructorUsedError;
   @JsonKey(name: 'trackCount')
-  int get trackCount;
+  int get trackCount => throw _privateConstructorUsedError;
   @JsonKey(name: 'shareableUrlPath')
-  String get shareableUrlPath;
+  String get shareableUrlPath => throw _privateConstructorUsedError;
   @JsonKey(
       name: 'modificationTime',
       fromJson: readDateTimeMilliseconds,
       toJson: writeDateTimeMilliseconds)
-  DateTime get modificationTime;
+  DateTime get modificationTime => throw _privateConstructorUsedError;
   @JsonKey(name: 'slugPlusPandoraId')
-  String get slugPlusPandoraId;
+  String get slugPlusPandoraId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'pandoraId')
-  String get pandoraId;
+  String get pandoraId => throw _privateConstructorUsedError;
   @JsonKey(name: 'scope')
-  String get scope;
+  String get scope => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  $ComposerAnnotationCopyWith<ComposerAnnotation> get copyWith =>
+  _$$ComposerAnnotationCopyWith<_$ComposerAnnotation> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $ListenerMediaAnnotationCopyWith<$Res>
+abstract class _$$ListenerMediaAnnotationCopyWith<$Res>
     implements $MediaAnnotationCopyWith<$Res> {
-  factory $ListenerMediaAnnotationCopyWith(ListenerMediaAnnotation value,
-          $Res Function(ListenerMediaAnnotation) then) =
-      _$ListenerMediaAnnotationCopyWithImpl<$Res>;
+  factory _$$ListenerMediaAnnotationCopyWith(_$ListenerMediaAnnotation value,
+          $Res Function(_$ListenerMediaAnnotation) then) =
+      __$$ListenerMediaAnnotationCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(name: 'pandoraId') String pandoraId,
@@ -6079,15 +5809,16 @@ abstract class $ListenerMediaAnnotationCopyWith<$Res>
 }
 
 /// @nodoc
-class _$ListenerMediaAnnotationCopyWithImpl<$Res>
+class __$$ListenerMediaAnnotationCopyWithImpl<$Res>
     extends _$MediaAnnotationCopyWithImpl<$Res>
-    implements $ListenerMediaAnnotationCopyWith<$Res> {
-  _$ListenerMediaAnnotationCopyWithImpl(ListenerMediaAnnotation _value,
-      $Res Function(ListenerMediaAnnotation) _then)
-      : super(_value, (v) => _then(v as ListenerMediaAnnotation));
+    implements _$$ListenerMediaAnnotationCopyWith<$Res> {
+  __$$ListenerMediaAnnotationCopyWithImpl(_$ListenerMediaAnnotation _value,
+      $Res Function(_$ListenerMediaAnnotation) _then)
+      : super(_value, (v) => _then(v as _$ListenerMediaAnnotation));
 
   @override
-  ListenerMediaAnnotation get _value => super._value as ListenerMediaAnnotation;
+  _$ListenerMediaAnnotation get _value =>
+      super._value as _$ListenerMediaAnnotation;
 
   @override
   $Res call({
@@ -6097,7 +5828,7 @@ class _$ListenerMediaAnnotationCopyWithImpl<$Res>
     Object? fullName = freezed,
     Object? displayName = freezed,
   }) {
-    return _then(ListenerMediaAnnotation(
+    return _then(_$ListenerMediaAnnotation(
       pandoraId: pandoraId == freezed
           ? _value.pandoraId
           : pandoraId // ignore: cast_nullable_to_non_nullable
@@ -6124,7 +5855,6 @@ class _$ListenerMediaAnnotationCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-@FreezedUnionValue('LI')
 class _$ListenerMediaAnnotation extends ListenerMediaAnnotation {
   const _$ListenerMediaAnnotation(
       {@JsonKey(name: 'pandoraId') required this.pandoraId,
@@ -6132,7 +5862,7 @@ class _$ListenerMediaAnnotation extends ListenerMediaAnnotation {
       @JsonKey(name: 'webname') required this.webname,
       @JsonKey(name: 'fullname') required this.fullName,
       @JsonKey(name: 'displayname') required this.displayName,
-      String? $type})
+      final String? $type})
       : $type = $type ?? 'LI',
         super._();
 
@@ -6167,7 +5897,7 @@ class _$ListenerMediaAnnotation extends ListenerMediaAnnotation {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is ListenerMediaAnnotation &&
+            other is _$ListenerMediaAnnotation &&
             const DeepCollectionEquality().equals(other.pandoraId, pandoraId) &&
             const DeepCollectionEquality()
                 .equals(other.listenerId, listenerId) &&
@@ -6177,6 +5907,7 @@ class _$ListenerMediaAnnotation extends ListenerMediaAnnotation {
                 .equals(other.displayName, displayName));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -6188,8 +5919,8 @@ class _$ListenerMediaAnnotation extends ListenerMediaAnnotation {
 
   @JsonKey(ignore: true)
   @override
-  $ListenerMediaAnnotationCopyWith<ListenerMediaAnnotation> get copyWith =>
-      _$ListenerMediaAnnotationCopyWithImpl<ListenerMediaAnnotation>(
+  _$$ListenerMediaAnnotationCopyWith<_$ListenerMediaAnnotation> get copyWith =>
+      __$$ListenerMediaAnnotationCopyWithImpl<_$ListenerMediaAnnotation>(
           this, _$identity);
 
   @override
@@ -6782,11 +6513,11 @@ class _$ListenerMediaAnnotation extends ListenerMediaAnnotation {
 
 abstract class ListenerMediaAnnotation extends MediaAnnotation {
   const factory ListenerMediaAnnotation(
-          {@JsonKey(name: 'pandoraId') required String pandoraId,
-          @JsonKey(name: 'listenerId') required int listenerId,
-          @JsonKey(name: 'webname') required String webname,
-          @JsonKey(name: 'fullname') required String fullName,
-          @JsonKey(name: 'displayname') required String displayName}) =
+          {@JsonKey(name: 'pandoraId') required final String pandoraId,
+          @JsonKey(name: 'listenerId') required final int listenerId,
+          @JsonKey(name: 'webname') required final String webname,
+          @JsonKey(name: 'fullname') required final String fullName,
+          @JsonKey(name: 'displayname') required final String displayName}) =
       _$ListenerMediaAnnotation;
   const ListenerMediaAnnotation._() : super._();
 
@@ -6795,17 +6526,17 @@ abstract class ListenerMediaAnnotation extends MediaAnnotation {
 
   @override
   @JsonKey(name: 'pandoraId')
-  String get pandoraId;
+  String get pandoraId => throw _privateConstructorUsedError;
   @JsonKey(name: 'listenerId')
-  int get listenerId;
+  int get listenerId => throw _privateConstructorUsedError;
   @JsonKey(name: 'webname')
-  String get webname;
+  String get webname => throw _privateConstructorUsedError;
   @JsonKey(name: 'fullname')
-  String get fullName;
+  String get fullName => throw _privateConstructorUsedError;
   @JsonKey(name: 'displayname')
-  String get displayName;
+  String get displayName => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  $ListenerMediaAnnotationCopyWith<ListenerMediaAnnotation> get copyWith =>
+  _$$ListenerMediaAnnotationCopyWith<_$ListenerMediaAnnotation> get copyWith =>
       throw _privateConstructorUsedError;
 }

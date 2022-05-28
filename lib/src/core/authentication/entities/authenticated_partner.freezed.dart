@@ -12,46 +12,11 @@ part of 'authenticated_partner.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 AuthenticatedPartner _$AuthenticatedPartnerFromJson(Map<String, dynamic> json) {
   return _AuthenticatedPartner.fromJson(json);
 }
-
-/// @nodoc
-class _$AuthenticatedPartnerTearOff {
-  const _$AuthenticatedPartnerTearOff();
-
-  _AuthenticatedPartner call(
-      {@JsonKey(name: 'syncTime', fromJson: decryptSyncTime, toJson: encryptSyncTime)
-          required DateTime syncTime,
-      @JsonKey(name: 'partnerAuthToken')
-          required String partnerAuthToken,
-      @JsonKey(name: 'partnerId')
-          required String partnerId,
-      @JsonKey(name: 'stationSkipUnit')
-          required String stationSkipUnit,
-      @JsonKey(name: 'stationSkipLimit')
-          required int stationSkipLimit,
-      @JsonKey(name: 'urls')
-          required Map<String, Uri> urls}) {
-    return _AuthenticatedPartner(
-      syncTime: syncTime,
-      partnerAuthToken: partnerAuthToken,
-      partnerId: partnerId,
-      stationSkipUnit: stationSkipUnit,
-      stationSkipLimit: stationSkipLimit,
-      urls: urls,
-    );
-  }
-
-  AuthenticatedPartner fromJson(Map<String, Object?> json) {
-    return AuthenticatedPartner.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $AuthenticatedPartner = _$AuthenticatedPartnerTearOff();
 
 /// @nodoc
 mixin _$AuthenticatedPartner {
@@ -142,11 +107,11 @@ class _$AuthenticatedPartnerCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$AuthenticatedPartnerCopyWith<$Res>
+abstract class _$$_AuthenticatedPartnerCopyWith<$Res>
     implements $AuthenticatedPartnerCopyWith<$Res> {
-  factory _$AuthenticatedPartnerCopyWith(_AuthenticatedPartner value,
-          $Res Function(_AuthenticatedPartner) then) =
-      __$AuthenticatedPartnerCopyWithImpl<$Res>;
+  factory _$$_AuthenticatedPartnerCopyWith(_$_AuthenticatedPartner value,
+          $Res Function(_$_AuthenticatedPartner) then) =
+      __$$_AuthenticatedPartnerCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(name: 'syncTime', fromJson: decryptSyncTime, toJson: encryptSyncTime)
@@ -164,15 +129,15 @@ abstract class _$AuthenticatedPartnerCopyWith<$Res>
 }
 
 /// @nodoc
-class __$AuthenticatedPartnerCopyWithImpl<$Res>
+class __$$_AuthenticatedPartnerCopyWithImpl<$Res>
     extends _$AuthenticatedPartnerCopyWithImpl<$Res>
-    implements _$AuthenticatedPartnerCopyWith<$Res> {
-  __$AuthenticatedPartnerCopyWithImpl(
-      _AuthenticatedPartner _value, $Res Function(_AuthenticatedPartner) _then)
-      : super(_value, (v) => _then(v as _AuthenticatedPartner));
+    implements _$$_AuthenticatedPartnerCopyWith<$Res> {
+  __$$_AuthenticatedPartnerCopyWithImpl(_$_AuthenticatedPartner _value,
+      $Res Function(_$_AuthenticatedPartner) _then)
+      : super(_value, (v) => _then(v as _$_AuthenticatedPartner));
 
   @override
-  _AuthenticatedPartner get _value => super._value as _AuthenticatedPartner;
+  _$_AuthenticatedPartner get _value => super._value as _$_AuthenticatedPartner;
 
   @override
   $Res call({
@@ -183,7 +148,7 @@ class __$AuthenticatedPartnerCopyWithImpl<$Res>
     Object? stationSkipLimit = freezed,
     Object? urls = freezed,
   }) {
-    return _then(_AuthenticatedPartner(
+    return _then(_$_AuthenticatedPartner(
       syncTime: syncTime == freezed
           ? _value.syncTime
           : syncTime // ignore: cast_nullable_to_non_nullable
@@ -205,7 +170,7 @@ class __$AuthenticatedPartnerCopyWithImpl<$Res>
           : stationSkipLimit // ignore: cast_nullable_to_non_nullable
               as int,
       urls: urls == freezed
-          ? _value.urls
+          ? _value._urls
           : urls // ignore: cast_nullable_to_non_nullable
               as Map<String, Uri>,
     ));
@@ -227,8 +192,9 @@ class _$_AuthenticatedPartner extends _AuthenticatedPartner {
       @JsonKey(name: 'stationSkipLimit')
           required this.stationSkipLimit,
       @JsonKey(name: 'urls')
-          required this.urls})
-      : super._();
+          required final Map<String, Uri> urls})
+      : _urls = urls,
+        super._();
 
   factory _$_AuthenticatedPartner.fromJson(Map<String, dynamic> json) =>
       _$$_AuthenticatedPartnerFromJson(json);
@@ -248,9 +214,13 @@ class _$_AuthenticatedPartner extends _AuthenticatedPartner {
   @override
   @JsonKey(name: 'stationSkipLimit')
   final int stationSkipLimit;
+  final Map<String, Uri> _urls;
   @override
   @JsonKey(name: 'urls')
-  final Map<String, Uri> urls;
+  Map<String, Uri> get urls {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableMapView(_urls);
+  }
 
   @override
   String toString() {
@@ -261,7 +231,7 @@ class _$_AuthenticatedPartner extends _AuthenticatedPartner {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _AuthenticatedPartner &&
+            other is _$_AuthenticatedPartner &&
             const DeepCollectionEquality().equals(other.syncTime, syncTime) &&
             const DeepCollectionEquality()
                 .equals(other.partnerAuthToken, partnerAuthToken) &&
@@ -270,9 +240,10 @@ class _$_AuthenticatedPartner extends _AuthenticatedPartner {
                 .equals(other.stationSkipUnit, stationSkipUnit) &&
             const DeepCollectionEquality()
                 .equals(other.stationSkipLimit, stationSkipLimit) &&
-            const DeepCollectionEquality().equals(other.urls, urls));
+            const DeepCollectionEquality().equals(other._urls, _urls));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -281,12 +252,12 @@ class _$_AuthenticatedPartner extends _AuthenticatedPartner {
       const DeepCollectionEquality().hash(partnerId),
       const DeepCollectionEquality().hash(stationSkipUnit),
       const DeepCollectionEquality().hash(stationSkipLimit),
-      const DeepCollectionEquality().hash(urls));
+      const DeepCollectionEquality().hash(_urls));
 
   @JsonKey(ignore: true)
   @override
-  _$AuthenticatedPartnerCopyWith<_AuthenticatedPartner> get copyWith =>
-      __$AuthenticatedPartnerCopyWithImpl<_AuthenticatedPartner>(
+  _$$_AuthenticatedPartnerCopyWith<_$_AuthenticatedPartner> get copyWith =>
+      __$$_AuthenticatedPartnerCopyWithImpl<_$_AuthenticatedPartner>(
           this, _$identity);
 
   @override
@@ -298,17 +269,17 @@ class _$_AuthenticatedPartner extends _AuthenticatedPartner {
 abstract class _AuthenticatedPartner extends AuthenticatedPartner {
   factory _AuthenticatedPartner(
       {@JsonKey(name: 'syncTime', fromJson: decryptSyncTime, toJson: encryptSyncTime)
-          required DateTime syncTime,
+          required final DateTime syncTime,
       @JsonKey(name: 'partnerAuthToken')
-          required String partnerAuthToken,
+          required final String partnerAuthToken,
       @JsonKey(name: 'partnerId')
-          required String partnerId,
+          required final String partnerId,
       @JsonKey(name: 'stationSkipUnit')
-          required String stationSkipUnit,
+          required final String stationSkipUnit,
       @JsonKey(name: 'stationSkipLimit')
-          required int stationSkipLimit,
+          required final int stationSkipLimit,
       @JsonKey(name: 'urls')
-          required Map<String, Uri> urls}) = _$_AuthenticatedPartner;
+          required final Map<String, Uri> urls}) = _$_AuthenticatedPartner;
   _AuthenticatedPartner._() : super._();
 
   factory _AuthenticatedPartner.fromJson(Map<String, dynamic> json) =
@@ -316,24 +287,24 @@ abstract class _AuthenticatedPartner extends AuthenticatedPartner {
 
   @override
   @JsonKey(name: 'syncTime', fromJson: decryptSyncTime, toJson: encryptSyncTime)
-  DateTime get syncTime;
+  DateTime get syncTime => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'partnerAuthToken')
-  String get partnerAuthToken;
+  String get partnerAuthToken => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'partnerId')
-  String get partnerId;
+  String get partnerId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'stationSkipUnit')
-  String get stationSkipUnit;
+  String get stationSkipUnit => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'stationSkipLimit')
-  int get stationSkipLimit;
+  int get stationSkipLimit => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'urls')
-  Map<String, Uri> get urls;
+  Map<String, Uri> get urls => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$AuthenticatedPartnerCopyWith<_AuthenticatedPartner> get copyWith =>
+  _$$_AuthenticatedPartnerCopyWith<_$_AuthenticatedPartner> get copyWith =>
       throw _privateConstructorUsedError;
 }

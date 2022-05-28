@@ -12,40 +12,11 @@ part of 'action.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 SuperbrowseAction _$SuperbrowseActionFromJson(Map<String, dynamic> json) {
   return _SuperbrowseAction.fromJson(json);
 }
-
-/// @nodoc
-class _$SuperbrowseActionTearOff {
-  const _$SuperbrowseActionTearOff();
-
-  _SuperbrowseAction call(
-      {@JsonKey(name: 'type') required ActionType type,
-      @JsonKey(name: 'pandoraId') String? pandoraId,
-      @JsonKey(name: 'sourceId') String? sourceId,
-      @JsonKey(name: 'title') String? title,
-      @JsonKey(name: 'loadingScreen') LoadingScreenType? loadingScreen,
-      @JsonKey(name: 'url') Uri? url}) {
-    return _SuperbrowseAction(
-      type: type,
-      pandoraId: pandoraId,
-      sourceId: sourceId,
-      title: title,
-      loadingScreen: loadingScreen,
-      url: url,
-    );
-  }
-
-  SuperbrowseAction fromJson(Map<String, Object?> json) {
-    return SuperbrowseAction.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $SuperbrowseAction = _$SuperbrowseActionTearOff();
 
 /// @nodoc
 mixin _$SuperbrowseAction {
@@ -130,11 +101,11 @@ class _$SuperbrowseActionCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$SuperbrowseActionCopyWith<$Res>
+abstract class _$$_SuperbrowseActionCopyWith<$Res>
     implements $SuperbrowseActionCopyWith<$Res> {
-  factory _$SuperbrowseActionCopyWith(
-          _SuperbrowseAction value, $Res Function(_SuperbrowseAction) then) =
-      __$SuperbrowseActionCopyWithImpl<$Res>;
+  factory _$$_SuperbrowseActionCopyWith(_$_SuperbrowseAction value,
+          $Res Function(_$_SuperbrowseAction) then) =
+      __$$_SuperbrowseActionCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(name: 'type') ActionType type,
@@ -146,15 +117,15 @@ abstract class _$SuperbrowseActionCopyWith<$Res>
 }
 
 /// @nodoc
-class __$SuperbrowseActionCopyWithImpl<$Res>
+class __$$_SuperbrowseActionCopyWithImpl<$Res>
     extends _$SuperbrowseActionCopyWithImpl<$Res>
-    implements _$SuperbrowseActionCopyWith<$Res> {
-  __$SuperbrowseActionCopyWithImpl(
-      _SuperbrowseAction _value, $Res Function(_SuperbrowseAction) _then)
-      : super(_value, (v) => _then(v as _SuperbrowseAction));
+    implements _$$_SuperbrowseActionCopyWith<$Res> {
+  __$$_SuperbrowseActionCopyWithImpl(
+      _$_SuperbrowseAction _value, $Res Function(_$_SuperbrowseAction) _then)
+      : super(_value, (v) => _then(v as _$_SuperbrowseAction));
 
   @override
-  _SuperbrowseAction get _value => super._value as _SuperbrowseAction;
+  _$_SuperbrowseAction get _value => super._value as _$_SuperbrowseAction;
 
   @override
   $Res call({
@@ -165,7 +136,7 @@ class __$SuperbrowseActionCopyWithImpl<$Res>
     Object? loadingScreen = freezed,
     Object? url = freezed,
   }) {
-    return _then(_SuperbrowseAction(
+    return _then(_$_SuperbrowseAction(
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
@@ -236,7 +207,7 @@ class _$_SuperbrowseAction implements _SuperbrowseAction {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _SuperbrowseAction &&
+            other is _$_SuperbrowseAction &&
             const DeepCollectionEquality().equals(other.type, type) &&
             const DeepCollectionEquality().equals(other.pandoraId, pandoraId) &&
             const DeepCollectionEquality().equals(other.sourceId, sourceId) &&
@@ -246,6 +217,7 @@ class _$_SuperbrowseAction implements _SuperbrowseAction {
             const DeepCollectionEquality().equals(other.url, url));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -258,8 +230,9 @@ class _$_SuperbrowseAction implements _SuperbrowseAction {
 
   @JsonKey(ignore: true)
   @override
-  _$SuperbrowseActionCopyWith<_SuperbrowseAction> get copyWith =>
-      __$SuperbrowseActionCopyWithImpl<_SuperbrowseAction>(this, _$identity);
+  _$$_SuperbrowseActionCopyWith<_$_SuperbrowseAction> get copyWith =>
+      __$$_SuperbrowseActionCopyWithImpl<_$_SuperbrowseAction>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -269,36 +242,36 @@ class _$_SuperbrowseAction implements _SuperbrowseAction {
 
 abstract class _SuperbrowseAction implements SuperbrowseAction {
   const factory _SuperbrowseAction(
-      {@JsonKey(name: 'type') required ActionType type,
-      @JsonKey(name: 'pandoraId') String? pandoraId,
-      @JsonKey(name: 'sourceId') String? sourceId,
-      @JsonKey(name: 'title') String? title,
-      @JsonKey(name: 'loadingScreen') LoadingScreenType? loadingScreen,
-      @JsonKey(name: 'url') Uri? url}) = _$_SuperbrowseAction;
+      {@JsonKey(name: 'type') required final ActionType type,
+      @JsonKey(name: 'pandoraId') final String? pandoraId,
+      @JsonKey(name: 'sourceId') final String? sourceId,
+      @JsonKey(name: 'title') final String? title,
+      @JsonKey(name: 'loadingScreen') final LoadingScreenType? loadingScreen,
+      @JsonKey(name: 'url') final Uri? url}) = _$_SuperbrowseAction;
 
   factory _SuperbrowseAction.fromJson(Map<String, dynamic> json) =
       _$_SuperbrowseAction.fromJson;
 
   @override
   @JsonKey(name: 'type')
-  ActionType get type;
+  ActionType get type => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'pandoraId')
-  String? get pandoraId;
+  String? get pandoraId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'sourceId')
-  String? get sourceId;
+  String? get sourceId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'title')
-  String? get title;
+  String? get title => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'loadingScreen')
-  LoadingScreenType? get loadingScreen;
+  LoadingScreenType? get loadingScreen => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'url')
-  Uri? get url;
+  Uri? get url => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$SuperbrowseActionCopyWith<_SuperbrowseAction> get copyWith =>
+  _$$_SuperbrowseActionCopyWith<_$_SuperbrowseAction> get copyWith =>
       throw _privateConstructorUsedError;
 }

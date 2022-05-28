@@ -12,37 +12,11 @@ part of 'icon.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 MediaIcon _$MediaIconFromJson(Map<String, dynamic> json) {
   return _MediaIcon.fromJson(json);
 }
-
-/// @nodoc
-class _$MediaIconTearOff {
-  const _$MediaIconTearOff();
-
-  _MediaIcon call(
-      {@JsonKey(name: 'dominantColor', fromJson: readOptionalColor, toJson: writeOptionalColor)
-          required int? dominantColor,
-      @JsonKey(name: 'artId')
-          required String artId,
-      @JsonKey(name: 'artUrl', fromJson: readOptionalUri, toJson: writeOptionalUri)
-          required Uri? artUrl}) {
-    return _MediaIcon(
-      dominantColor: dominantColor,
-      artId: artId,
-      artUrl: artUrl,
-    );
-  }
-
-  MediaIcon fromJson(Map<String, Object?> json) {
-    return MediaIcon.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $MediaIcon = _$MediaIconTearOff();
 
 /// @nodoc
 mixin _$MediaIcon {
@@ -108,10 +82,10 @@ class _$MediaIconCopyWithImpl<$Res> implements $MediaIconCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$MediaIconCopyWith<$Res> implements $MediaIconCopyWith<$Res> {
-  factory _$MediaIconCopyWith(
-          _MediaIcon value, $Res Function(_MediaIcon) then) =
-      __$MediaIconCopyWithImpl<$Res>;
+abstract class _$$_MediaIconCopyWith<$Res> implements $MediaIconCopyWith<$Res> {
+  factory _$$_MediaIconCopyWith(
+          _$_MediaIcon value, $Res Function(_$_MediaIcon) then) =
+      __$$_MediaIconCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(name: 'dominantColor', fromJson: readOptionalColor, toJson: writeOptionalColor)
@@ -123,13 +97,14 @@ abstract class _$MediaIconCopyWith<$Res> implements $MediaIconCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$MediaIconCopyWithImpl<$Res> extends _$MediaIconCopyWithImpl<$Res>
-    implements _$MediaIconCopyWith<$Res> {
-  __$MediaIconCopyWithImpl(_MediaIcon _value, $Res Function(_MediaIcon) _then)
-      : super(_value, (v) => _then(v as _MediaIcon));
+class __$$_MediaIconCopyWithImpl<$Res> extends _$MediaIconCopyWithImpl<$Res>
+    implements _$$_MediaIconCopyWith<$Res> {
+  __$$_MediaIconCopyWithImpl(
+      _$_MediaIcon _value, $Res Function(_$_MediaIcon) _then)
+      : super(_value, (v) => _then(v as _$_MediaIcon));
 
   @override
-  _MediaIcon get _value => super._value as _MediaIcon;
+  _$_MediaIcon get _value => super._value as _$_MediaIcon;
 
   @override
   $Res call({
@@ -137,7 +112,7 @@ class __$MediaIconCopyWithImpl<$Res> extends _$MediaIconCopyWithImpl<$Res>
     Object? artId = freezed,
     Object? artUrl = freezed,
   }) {
-    return _then(_MediaIcon(
+    return _then(_$_MediaIcon(
       dominantColor: dominantColor == freezed
           ? _value.dominantColor
           : dominantColor // ignore: cast_nullable_to_non_nullable
@@ -168,9 +143,8 @@ class _$_MediaIcon implements _MediaIcon {
   factory _$_MediaIcon.fromJson(Map<String, dynamic> json) =>
       _$$_MediaIconFromJson(json);
 
-  @override
-
   /// The dominant color (0xAARRGGBB)
+  @override
   @JsonKey(
       name: 'dominantColor',
       fromJson: readOptionalColor,
@@ -192,13 +166,14 @@ class _$_MediaIcon implements _MediaIcon {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _MediaIcon &&
+            other is _$_MediaIcon &&
             const DeepCollectionEquality()
                 .equals(other.dominantColor, dominantColor) &&
             const DeepCollectionEquality().equals(other.artId, artId) &&
             const DeepCollectionEquality().equals(other.artUrl, artUrl));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -208,8 +183,8 @@ class _$_MediaIcon implements _MediaIcon {
 
   @JsonKey(ignore: true)
   @override
-  _$MediaIconCopyWith<_MediaIcon> get copyWith =>
-      __$MediaIconCopyWithImpl<_MediaIcon>(this, _$identity);
+  _$$_MediaIconCopyWith<_$_MediaIcon> get copyWith =>
+      __$$_MediaIconCopyWithImpl<_$_MediaIcon>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -220,11 +195,11 @@ class _$_MediaIcon implements _MediaIcon {
 abstract class _MediaIcon implements MediaIcon {
   const factory _MediaIcon(
       {@JsonKey(name: 'dominantColor', fromJson: readOptionalColor, toJson: writeOptionalColor)
-          required int? dominantColor,
+          required final int? dominantColor,
       @JsonKey(name: 'artId')
-          required String artId,
+          required final String artId,
       @JsonKey(name: 'artUrl', fromJson: readOptionalUri, toJson: writeOptionalUri)
-          required Uri? artUrl}) = _$_MediaIcon;
+          required final Uri? artUrl}) = _$_MediaIcon;
 
   factory _MediaIcon.fromJson(Map<String, dynamic> json) =
       _$_MediaIcon.fromJson;
@@ -236,15 +211,15 @@ abstract class _MediaIcon implements MediaIcon {
       name: 'dominantColor',
       fromJson: readOptionalColor,
       toJson: writeOptionalColor)
-  int? get dominantColor;
+  int? get dominantColor => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'artId')
-  String get artId;
+  String get artId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'artUrl', fromJson: readOptionalUri, toJson: writeOptionalUri)
-  Uri? get artUrl;
+  Uri? get artUrl => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$MediaIconCopyWith<_MediaIcon> get copyWith =>
+  _$$_MediaIconCopyWith<_$_MediaIcon> get copyWith =>
       throw _privateConstructorUsedError;
 }

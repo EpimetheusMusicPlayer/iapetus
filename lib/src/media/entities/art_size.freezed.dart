@@ -12,22 +12,7 @@ part of 'art_size.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$ArtSizeTearOff {
-  const _$ArtSizeTearOff();
-
-  _ArtSize call(int width, int height) {
-    return _ArtSize(
-      width,
-      height,
-    );
-  }
-}
-
-/// @nodoc
-const $ArtSize = _$ArtSizeTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
 mixin _$ArtSize {
@@ -72,28 +57,29 @@ class _$ArtSizeCopyWithImpl<$Res> implements $ArtSizeCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$ArtSizeCopyWith<$Res> implements $ArtSizeCopyWith<$Res> {
-  factory _$ArtSizeCopyWith(_ArtSize value, $Res Function(_ArtSize) then) =
-      __$ArtSizeCopyWithImpl<$Res>;
+abstract class _$$_ArtSizeCopyWith<$Res> implements $ArtSizeCopyWith<$Res> {
+  factory _$$_ArtSizeCopyWith(
+          _$_ArtSize value, $Res Function(_$_ArtSize) then) =
+      __$$_ArtSizeCopyWithImpl<$Res>;
   @override
   $Res call({int width, int height});
 }
 
 /// @nodoc
-class __$ArtSizeCopyWithImpl<$Res> extends _$ArtSizeCopyWithImpl<$Res>
-    implements _$ArtSizeCopyWith<$Res> {
-  __$ArtSizeCopyWithImpl(_ArtSize _value, $Res Function(_ArtSize) _then)
-      : super(_value, (v) => _then(v as _ArtSize));
+class __$$_ArtSizeCopyWithImpl<$Res> extends _$ArtSizeCopyWithImpl<$Res>
+    implements _$$_ArtSizeCopyWith<$Res> {
+  __$$_ArtSizeCopyWithImpl(_$_ArtSize _value, $Res Function(_$_ArtSize) _then)
+      : super(_value, (v) => _then(v as _$_ArtSize));
 
   @override
-  _ArtSize get _value => super._value as _ArtSize;
+  _$_ArtSize get _value => super._value as _$_ArtSize;
 
   @override
   $Res call({
     Object? width = freezed,
     Object? height = freezed,
   }) {
-    return _then(_ArtSize(
+    return _then(_$_ArtSize(
       width == freezed
           ? _value.width
           : width // ignore: cast_nullable_to_non_nullable
@@ -125,7 +111,7 @@ class _$_ArtSize extends _ArtSize {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _ArtSize &&
+            other is _$_ArtSize &&
             const DeepCollectionEquality().equals(other.width, width) &&
             const DeepCollectionEquality().equals(other.height, height));
   }
@@ -138,20 +124,20 @@ class _$_ArtSize extends _ArtSize {
 
   @JsonKey(ignore: true)
   @override
-  _$ArtSizeCopyWith<_ArtSize> get copyWith =>
-      __$ArtSizeCopyWithImpl<_ArtSize>(this, _$identity);
+  _$$_ArtSizeCopyWith<_$_ArtSize> get copyWith =>
+      __$$_ArtSizeCopyWithImpl<_$_ArtSize>(this, _$identity);
 }
 
 abstract class _ArtSize extends ArtSize {
-  const factory _ArtSize(int width, int height) = _$_ArtSize;
+  const factory _ArtSize(final int width, final int height) = _$_ArtSize;
   const _ArtSize._() : super._();
 
   @override
-  int get width;
+  int get width => throw _privateConstructorUsedError;
   @override
-  int get height;
+  int get height => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$ArtSizeCopyWith<_ArtSize> get copyWith =>
+  _$$_ArtSizeCopyWith<_$_ArtSize> get copyWith =>
       throw _privateConstructorUsedError;
 }

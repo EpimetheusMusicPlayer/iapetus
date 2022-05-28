@@ -12,35 +12,12 @@ part of 'search_recommendations.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 SearchRecommendations _$SearchRecommendationsFromJson(
     Map<String, dynamic> json) {
   return _SearchRecommendations.fromJson(json);
 }
-
-/// @nodoc
-class _$SearchRecommendationsTearOff {
-  const _$SearchRecommendationsTearOff();
-
-  _SearchRecommendations call(
-      {@JsonKey(name: 'artists')
-          required List<ArtistRecommendation> artists,
-      @JsonKey(name: 'genreStations')
-          required List<GenreStationRecommendation> genreStations}) {
-    return _SearchRecommendations(
-      artists: artists,
-      genreStations: genreStations,
-    );
-  }
-
-  SearchRecommendations fromJson(Map<String, Object?> json) {
-    return SearchRecommendations.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $SearchRecommendations = _$SearchRecommendationsTearOff();
 
 /// @nodoc
 mixin _$SearchRecommendations {
@@ -96,11 +73,11 @@ class _$SearchRecommendationsCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$SearchRecommendationsCopyWith<$Res>
+abstract class _$$_SearchRecommendationsCopyWith<$Res>
     implements $SearchRecommendationsCopyWith<$Res> {
-  factory _$SearchRecommendationsCopyWith(_SearchRecommendations value,
-          $Res Function(_SearchRecommendations) then) =
-      __$SearchRecommendationsCopyWithImpl<$Res>;
+  factory _$$_SearchRecommendationsCopyWith(_$_SearchRecommendations value,
+          $Res Function(_$_SearchRecommendations) then) =
+      __$$_SearchRecommendationsCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(name: 'artists')
@@ -110,28 +87,29 @@ abstract class _$SearchRecommendationsCopyWith<$Res>
 }
 
 /// @nodoc
-class __$SearchRecommendationsCopyWithImpl<$Res>
+class __$$_SearchRecommendationsCopyWithImpl<$Res>
     extends _$SearchRecommendationsCopyWithImpl<$Res>
-    implements _$SearchRecommendationsCopyWith<$Res> {
-  __$SearchRecommendationsCopyWithImpl(_SearchRecommendations _value,
-      $Res Function(_SearchRecommendations) _then)
-      : super(_value, (v) => _then(v as _SearchRecommendations));
+    implements _$$_SearchRecommendationsCopyWith<$Res> {
+  __$$_SearchRecommendationsCopyWithImpl(_$_SearchRecommendations _value,
+      $Res Function(_$_SearchRecommendations) _then)
+      : super(_value, (v) => _then(v as _$_SearchRecommendations));
 
   @override
-  _SearchRecommendations get _value => super._value as _SearchRecommendations;
+  _$_SearchRecommendations get _value =>
+      super._value as _$_SearchRecommendations;
 
   @override
   $Res call({
     Object? artists = freezed,
     Object? genreStations = freezed,
   }) {
-    return _then(_SearchRecommendations(
+    return _then(_$_SearchRecommendations(
       artists: artists == freezed
-          ? _value.artists
+          ? _value._artists
           : artists // ignore: cast_nullable_to_non_nullable
               as List<ArtistRecommendation>,
       genreStations: genreStations == freezed
-          ? _value.genreStations
+          ? _value._genreStations
           : genreStations // ignore: cast_nullable_to_non_nullable
               as List<GenreStationRecommendation>,
     ));
@@ -142,18 +120,31 @@ class __$SearchRecommendationsCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_SearchRecommendations implements _SearchRecommendations {
   const _$_SearchRecommendations(
-      {@JsonKey(name: 'artists') required this.artists,
-      @JsonKey(name: 'genreStations') required this.genreStations});
+      {@JsonKey(name: 'artists')
+          required final List<ArtistRecommendation> artists,
+      @JsonKey(name: 'genreStations')
+          required final List<GenreStationRecommendation> genreStations})
+      : _artists = artists,
+        _genreStations = genreStations;
 
   factory _$_SearchRecommendations.fromJson(Map<String, dynamic> json) =>
       _$$_SearchRecommendationsFromJson(json);
 
+  final List<ArtistRecommendation> _artists;
   @override
   @JsonKey(name: 'artists')
-  final List<ArtistRecommendation> artists;
+  List<ArtistRecommendation> get artists {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_artists);
+  }
+
+  final List<GenreStationRecommendation> _genreStations;
   @override
   @JsonKey(name: 'genreStations')
-  final List<GenreStationRecommendation> genreStations;
+  List<GenreStationRecommendation> get genreStations {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_genreStations);
+  }
 
   @override
   String toString() {
@@ -164,22 +155,23 @@ class _$_SearchRecommendations implements _SearchRecommendations {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _SearchRecommendations &&
-            const DeepCollectionEquality().equals(other.artists, artists) &&
+            other is _$_SearchRecommendations &&
+            const DeepCollectionEquality().equals(other._artists, _artists) &&
             const DeepCollectionEquality()
-                .equals(other.genreStations, genreStations));
+                .equals(other._genreStations, _genreStations));
   }
-
-  @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(artists),
-      const DeepCollectionEquality().hash(genreStations));
 
   @JsonKey(ignore: true)
   @override
-  _$SearchRecommendationsCopyWith<_SearchRecommendations> get copyWith =>
-      __$SearchRecommendationsCopyWithImpl<_SearchRecommendations>(
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(_artists),
+      const DeepCollectionEquality().hash(_genreStations));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_SearchRecommendationsCopyWith<_$_SearchRecommendations> get copyWith =>
+      __$$_SearchRecommendationsCopyWithImpl<_$_SearchRecommendations>(
           this, _$identity);
 
   @override
@@ -191,9 +183,9 @@ class _$_SearchRecommendations implements _SearchRecommendations {
 abstract class _SearchRecommendations implements SearchRecommendations {
   const factory _SearchRecommendations(
           {@JsonKey(name: 'artists')
-              required List<ArtistRecommendation> artists,
+              required final List<ArtistRecommendation> artists,
           @JsonKey(name: 'genreStations')
-              required List<GenreStationRecommendation> genreStations}) =
+              required final List<GenreStationRecommendation> genreStations}) =
       _$_SearchRecommendations;
 
   factory _SearchRecommendations.fromJson(Map<String, dynamic> json) =
@@ -201,12 +193,13 @@ abstract class _SearchRecommendations implements SearchRecommendations {
 
   @override
   @JsonKey(name: 'artists')
-  List<ArtistRecommendation> get artists;
+  List<ArtistRecommendation> get artists => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'genreStations')
-  List<GenreStationRecommendation> get genreStations;
+  List<GenreStationRecommendation> get genreStations =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$SearchRecommendationsCopyWith<_SearchRecommendations> get copyWith =>
+  _$$_SearchRecommendationsCopyWith<_$_SearchRecommendations> get copyWith =>
       throw _privateConstructorUsedError;
 }

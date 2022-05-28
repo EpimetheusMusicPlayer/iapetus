@@ -12,39 +12,12 @@ part of 'collection_list_segment.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 CollectionListSegment _$CollectionListSegmentFromJson(
     Map<String, dynamic> json) {
   return _CollectionListSegment.fromJson(json);
 }
-
-/// @nodoc
-class _$CollectionListSegmentTearOff {
-  const _$CollectionListSegmentTearOff();
-
-  _CollectionListSegment call(
-      {@JsonKey(name: 'listenerId') required int listenerId,
-      @JsonKey(name: 'cursor') String? cursor,
-      @JsonKey(name: 'limit') required int limit,
-      @JsonKey(name: 'version') required int version,
-      @JsonKey(name: 'items') required List<CollectionItem> items}) {
-    return _CollectionListSegment(
-      listenerId: listenerId,
-      cursor: cursor,
-      limit: limit,
-      version: version,
-      items: items,
-    );
-  }
-
-  CollectionListSegment fromJson(Map<String, Object?> json) {
-    return CollectionListSegment.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $CollectionListSegment = _$CollectionListSegmentTearOff();
 
 /// @nodoc
 mixin _$CollectionListSegment {
@@ -121,11 +94,11 @@ class _$CollectionListSegmentCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$CollectionListSegmentCopyWith<$Res>
+abstract class _$$_CollectionListSegmentCopyWith<$Res>
     implements $CollectionListSegmentCopyWith<$Res> {
-  factory _$CollectionListSegmentCopyWith(_CollectionListSegment value,
-          $Res Function(_CollectionListSegment) then) =
-      __$CollectionListSegmentCopyWithImpl<$Res>;
+  factory _$$_CollectionListSegmentCopyWith(_$_CollectionListSegment value,
+          $Res Function(_$_CollectionListSegment) then) =
+      __$$_CollectionListSegmentCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(name: 'listenerId') int listenerId,
@@ -136,15 +109,16 @@ abstract class _$CollectionListSegmentCopyWith<$Res>
 }
 
 /// @nodoc
-class __$CollectionListSegmentCopyWithImpl<$Res>
+class __$$_CollectionListSegmentCopyWithImpl<$Res>
     extends _$CollectionListSegmentCopyWithImpl<$Res>
-    implements _$CollectionListSegmentCopyWith<$Res> {
-  __$CollectionListSegmentCopyWithImpl(_CollectionListSegment _value,
-      $Res Function(_CollectionListSegment) _then)
-      : super(_value, (v) => _then(v as _CollectionListSegment));
+    implements _$$_CollectionListSegmentCopyWith<$Res> {
+  __$$_CollectionListSegmentCopyWithImpl(_$_CollectionListSegment _value,
+      $Res Function(_$_CollectionListSegment) _then)
+      : super(_value, (v) => _then(v as _$_CollectionListSegment));
 
   @override
-  _CollectionListSegment get _value => super._value as _CollectionListSegment;
+  _$_CollectionListSegment get _value =>
+      super._value as _$_CollectionListSegment;
 
   @override
   $Res call({
@@ -154,7 +128,7 @@ class __$CollectionListSegmentCopyWithImpl<$Res>
     Object? version = freezed,
     Object? items = freezed,
   }) {
-    return _then(_CollectionListSegment(
+    return _then(_$_CollectionListSegment(
       listenerId: listenerId == freezed
           ? _value.listenerId
           : listenerId // ignore: cast_nullable_to_non_nullable
@@ -172,7 +146,7 @@ class __$CollectionListSegmentCopyWithImpl<$Res>
           : version // ignore: cast_nullable_to_non_nullable
               as int,
       items: items == freezed
-          ? _value.items
+          ? _value._items
           : items // ignore: cast_nullable_to_non_nullable
               as List<CollectionItem>,
     ));
@@ -187,7 +161,8 @@ class _$_CollectionListSegment implements _CollectionListSegment {
       @JsonKey(name: 'cursor') this.cursor,
       @JsonKey(name: 'limit') required this.limit,
       @JsonKey(name: 'version') required this.version,
-      @JsonKey(name: 'items') required this.items});
+      @JsonKey(name: 'items') required final List<CollectionItem> items})
+      : _items = items;
 
   factory _$_CollectionListSegment.fromJson(Map<String, dynamic> json) =>
       _$$_CollectionListSegmentFromJson(json);
@@ -204,9 +179,13 @@ class _$_CollectionListSegment implements _CollectionListSegment {
   @override
   @JsonKey(name: 'version')
   final int version;
+  final List<CollectionItem> _items;
   @override
   @JsonKey(name: 'items')
-  final List<CollectionItem> items;
+  List<CollectionItem> get items {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_items);
+  }
 
   @override
   String toString() {
@@ -217,15 +196,16 @@ class _$_CollectionListSegment implements _CollectionListSegment {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _CollectionListSegment &&
+            other is _$_CollectionListSegment &&
             const DeepCollectionEquality()
                 .equals(other.listenerId, listenerId) &&
             const DeepCollectionEquality().equals(other.cursor, cursor) &&
             const DeepCollectionEquality().equals(other.limit, limit) &&
             const DeepCollectionEquality().equals(other.version, version) &&
-            const DeepCollectionEquality().equals(other.items, items));
+            const DeepCollectionEquality().equals(other._items, _items));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -233,12 +213,12 @@ class _$_CollectionListSegment implements _CollectionListSegment {
       const DeepCollectionEquality().hash(cursor),
       const DeepCollectionEquality().hash(limit),
       const DeepCollectionEquality().hash(version),
-      const DeepCollectionEquality().hash(items));
+      const DeepCollectionEquality().hash(_items));
 
   @JsonKey(ignore: true)
   @override
-  _$CollectionListSegmentCopyWith<_CollectionListSegment> get copyWith =>
-      __$CollectionListSegmentCopyWithImpl<_CollectionListSegment>(
+  _$$_CollectionListSegmentCopyWith<_$_CollectionListSegment> get copyWith =>
+      __$$_CollectionListSegmentCopyWithImpl<_$_CollectionListSegment>(
           this, _$identity);
 
   @override
@@ -249,11 +229,11 @@ class _$_CollectionListSegment implements _CollectionListSegment {
 
 abstract class _CollectionListSegment implements CollectionListSegment {
   const factory _CollectionListSegment(
-          {@JsonKey(name: 'listenerId') required int listenerId,
-          @JsonKey(name: 'cursor') String? cursor,
-          @JsonKey(name: 'limit') required int limit,
-          @JsonKey(name: 'version') required int version,
-          @JsonKey(name: 'items') required List<CollectionItem> items}) =
+          {@JsonKey(name: 'listenerId') required final int listenerId,
+          @JsonKey(name: 'cursor') final String? cursor,
+          @JsonKey(name: 'limit') required final int limit,
+          @JsonKey(name: 'version') required final int version,
+          @JsonKey(name: 'items') required final List<CollectionItem> items}) =
       _$_CollectionListSegment;
 
   factory _CollectionListSegment.fromJson(Map<String, dynamic> json) =
@@ -261,21 +241,21 @@ abstract class _CollectionListSegment implements CollectionListSegment {
 
   @override
   @JsonKey(name: 'listenerId')
-  int get listenerId;
+  int get listenerId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'cursor')
-  String? get cursor;
+  String? get cursor => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'limit')
-  int get limit;
+  int get limit => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'version')
-  int get version;
+  int get version => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'items')
-  List<CollectionItem> get items;
+  List<CollectionItem> get items => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$CollectionListSegmentCopyWith<_CollectionListSegment> get copyWith =>
+  _$$_CollectionListSegmentCopyWith<_$_CollectionListSegment> get copyWith =>
       throw _privateConstructorUsedError;
 }

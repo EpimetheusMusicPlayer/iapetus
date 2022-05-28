@@ -12,40 +12,11 @@ part of 'on_demand_media.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 OnDemandMedia _$OnDemandMediaFromJson(Map<String, dynamic> json) {
   return _OnDemandMedia.fromJson(json);
 }
-
-/// @nodoc
-class _$OnDemandMediaTearOff {
-  const _$OnDemandMediaTearOff();
-
-  _OnDemandMedia call(
-      {@JsonKey(name: 'audioSkipUrl')
-          required Uri audioSkipUrl,
-      @JsonKey(name: 'audioReceiptUrl')
-          required Uri audioReceiptUrl,
-      @JsonKey(name: 'audioUrlMap')
-          required Map<AudioUrlQuality, AudioUrlData> audioUrlMap,
-      @JsonKey(name: 'trackGain', fromJson: double.parse, toJson: writeNum)
-          required double trackGain}) {
-    return _OnDemandMedia(
-      audioSkipUrl: audioSkipUrl,
-      audioReceiptUrl: audioReceiptUrl,
-      audioUrlMap: audioUrlMap,
-      trackGain: trackGain,
-    );
-  }
-
-  OnDemandMedia fromJson(Map<String, Object?> json) {
-    return OnDemandMedia.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $OnDemandMedia = _$OnDemandMediaTearOff();
 
 /// @nodoc
 mixin _$OnDemandMedia {
@@ -119,11 +90,11 @@ class _$OnDemandMediaCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$OnDemandMediaCopyWith<$Res>
+abstract class _$$_OnDemandMediaCopyWith<$Res>
     implements $OnDemandMediaCopyWith<$Res> {
-  factory _$OnDemandMediaCopyWith(
-          _OnDemandMedia value, $Res Function(_OnDemandMedia) then) =
-      __$OnDemandMediaCopyWithImpl<$Res>;
+  factory _$$_OnDemandMediaCopyWith(
+          _$_OnDemandMedia value, $Res Function(_$_OnDemandMedia) then) =
+      __$$_OnDemandMediaCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(name: 'audioSkipUrl')
@@ -137,15 +108,15 @@ abstract class _$OnDemandMediaCopyWith<$Res>
 }
 
 /// @nodoc
-class __$OnDemandMediaCopyWithImpl<$Res>
+class __$$_OnDemandMediaCopyWithImpl<$Res>
     extends _$OnDemandMediaCopyWithImpl<$Res>
-    implements _$OnDemandMediaCopyWith<$Res> {
-  __$OnDemandMediaCopyWithImpl(
-      _OnDemandMedia _value, $Res Function(_OnDemandMedia) _then)
-      : super(_value, (v) => _then(v as _OnDemandMedia));
+    implements _$$_OnDemandMediaCopyWith<$Res> {
+  __$$_OnDemandMediaCopyWithImpl(
+      _$_OnDemandMedia _value, $Res Function(_$_OnDemandMedia) _then)
+      : super(_value, (v) => _then(v as _$_OnDemandMedia));
 
   @override
-  _OnDemandMedia get _value => super._value as _OnDemandMedia;
+  _$_OnDemandMedia get _value => super._value as _$_OnDemandMedia;
 
   @override
   $Res call({
@@ -154,7 +125,7 @@ class __$OnDemandMediaCopyWithImpl<$Res>
     Object? audioUrlMap = freezed,
     Object? trackGain = freezed,
   }) {
-    return _then(_OnDemandMedia(
+    return _then(_$_OnDemandMedia(
       audioSkipUrl: audioSkipUrl == freezed
           ? _value.audioSkipUrl
           : audioSkipUrl // ignore: cast_nullable_to_non_nullable
@@ -164,7 +135,7 @@ class __$OnDemandMediaCopyWithImpl<$Res>
           : audioReceiptUrl // ignore: cast_nullable_to_non_nullable
               as Uri,
       audioUrlMap: audioUrlMap == freezed
-          ? _value.audioUrlMap
+          ? _value._audioUrlMap
           : audioUrlMap // ignore: cast_nullable_to_non_nullable
               as Map<AudioUrlQuality, AudioUrlData>,
       trackGain: trackGain == freezed
@@ -184,9 +155,10 @@ class _$_OnDemandMedia implements _OnDemandMedia {
       @JsonKey(name: 'audioReceiptUrl')
           required this.audioReceiptUrl,
       @JsonKey(name: 'audioUrlMap')
-          required this.audioUrlMap,
+          required final Map<AudioUrlQuality, AudioUrlData> audioUrlMap,
       @JsonKey(name: 'trackGain', fromJson: double.parse, toJson: writeNum)
-          required this.trackGain});
+          required this.trackGain})
+      : _audioUrlMap = audioUrlMap;
 
   factory _$_OnDemandMedia.fromJson(Map<String, dynamic> json) =>
       _$$_OnDemandMediaFromJson(json);
@@ -197,9 +169,14 @@ class _$_OnDemandMedia implements _OnDemandMedia {
   @override
   @JsonKey(name: 'audioReceiptUrl')
   final Uri audioReceiptUrl;
+  final Map<AudioUrlQuality, AudioUrlData> _audioUrlMap;
   @override
   @JsonKey(name: 'audioUrlMap')
-  final Map<AudioUrlQuality, AudioUrlData> audioUrlMap;
+  Map<AudioUrlQuality, AudioUrlData> get audioUrlMap {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableMapView(_audioUrlMap);
+  }
+
   @override
   @JsonKey(name: 'trackGain', fromJson: double.parse, toJson: writeNum)
   final double trackGain;
@@ -213,28 +190,29 @@ class _$_OnDemandMedia implements _OnDemandMedia {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _OnDemandMedia &&
+            other is _$_OnDemandMedia &&
             const DeepCollectionEquality()
                 .equals(other.audioSkipUrl, audioSkipUrl) &&
             const DeepCollectionEquality()
                 .equals(other.audioReceiptUrl, audioReceiptUrl) &&
             const DeepCollectionEquality()
-                .equals(other.audioUrlMap, audioUrlMap) &&
+                .equals(other._audioUrlMap, _audioUrlMap) &&
             const DeepCollectionEquality().equals(other.trackGain, trackGain));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(audioSkipUrl),
       const DeepCollectionEquality().hash(audioReceiptUrl),
-      const DeepCollectionEquality().hash(audioUrlMap),
+      const DeepCollectionEquality().hash(_audioUrlMap),
       const DeepCollectionEquality().hash(trackGain));
 
   @JsonKey(ignore: true)
   @override
-  _$OnDemandMediaCopyWith<_OnDemandMedia> get copyWith =>
-      __$OnDemandMediaCopyWithImpl<_OnDemandMedia>(this, _$identity);
+  _$$_OnDemandMediaCopyWith<_$_OnDemandMedia> get copyWith =>
+      __$$_OnDemandMediaCopyWithImpl<_$_OnDemandMedia>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -245,31 +223,32 @@ class _$_OnDemandMedia implements _OnDemandMedia {
 abstract class _OnDemandMedia implements OnDemandMedia {
   const factory _OnDemandMedia(
       {@JsonKey(name: 'audioSkipUrl')
-          required Uri audioSkipUrl,
+          required final Uri audioSkipUrl,
       @JsonKey(name: 'audioReceiptUrl')
-          required Uri audioReceiptUrl,
+          required final Uri audioReceiptUrl,
       @JsonKey(name: 'audioUrlMap')
-          required Map<AudioUrlQuality, AudioUrlData> audioUrlMap,
+          required final Map<AudioUrlQuality, AudioUrlData> audioUrlMap,
       @JsonKey(name: 'trackGain', fromJson: double.parse, toJson: writeNum)
-          required double trackGain}) = _$_OnDemandMedia;
+          required final double trackGain}) = _$_OnDemandMedia;
 
   factory _OnDemandMedia.fromJson(Map<String, dynamic> json) =
       _$_OnDemandMedia.fromJson;
 
   @override
   @JsonKey(name: 'audioSkipUrl')
-  Uri get audioSkipUrl;
+  Uri get audioSkipUrl => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'audioReceiptUrl')
-  Uri get audioReceiptUrl;
+  Uri get audioReceiptUrl => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'audioUrlMap')
-  Map<AudioUrlQuality, AudioUrlData> get audioUrlMap;
+  Map<AudioUrlQuality, AudioUrlData> get audioUrlMap =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'trackGain', fromJson: double.parse, toJson: writeNum)
-  double get trackGain;
+  double get trackGain => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$OnDemandMediaCopyWith<_OnDemandMedia> get copyWith =>
+  _$$_OnDemandMediaCopyWith<_$_OnDemandMedia> get copyWith =>
       throw _privateConstructorUsedError;
 }

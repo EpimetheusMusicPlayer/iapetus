@@ -12,36 +12,11 @@ part of 'track_key.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 TrackKey _$TrackKeyFromJson(Map<String, dynamic> json) {
   return _TrackKey.fromJson(json);
 }
-
-/// @nodoc
-class _$TrackKeyTearOff {
-  const _$TrackKeyTearOff();
-
-  _TrackKey call(
-      {@JsonKey(name: 'trackId') required String trackId,
-      @JsonKey(name: 'trackType') required TrackType trackType,
-      @JsonKey(name: 'trackSubtype') required String trackSubtype,
-      @JsonKey(name: 'spinId') required String spinId}) {
-    return _TrackKey(
-      trackId: trackId,
-      trackType: trackType,
-      trackSubtype: trackSubtype,
-      spinId: spinId,
-    );
-  }
-
-  TrackKey fromJson(Map<String, Object?> json) {
-    return TrackKey.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $TrackKey = _$TrackKeyTearOff();
 
 /// @nodoc
 mixin _$TrackKey {
@@ -108,9 +83,10 @@ class _$TrackKeyCopyWithImpl<$Res> implements $TrackKeyCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$TrackKeyCopyWith<$Res> implements $TrackKeyCopyWith<$Res> {
-  factory _$TrackKeyCopyWith(_TrackKey value, $Res Function(_TrackKey) then) =
-      __$TrackKeyCopyWithImpl<$Res>;
+abstract class _$$_TrackKeyCopyWith<$Res> implements $TrackKeyCopyWith<$Res> {
+  factory _$$_TrackKeyCopyWith(
+          _$_TrackKey value, $Res Function(_$_TrackKey) then) =
+      __$$_TrackKeyCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(name: 'trackId') String trackId,
@@ -120,13 +96,14 @@ abstract class _$TrackKeyCopyWith<$Res> implements $TrackKeyCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$TrackKeyCopyWithImpl<$Res> extends _$TrackKeyCopyWithImpl<$Res>
-    implements _$TrackKeyCopyWith<$Res> {
-  __$TrackKeyCopyWithImpl(_TrackKey _value, $Res Function(_TrackKey) _then)
-      : super(_value, (v) => _then(v as _TrackKey));
+class __$$_TrackKeyCopyWithImpl<$Res> extends _$TrackKeyCopyWithImpl<$Res>
+    implements _$$_TrackKeyCopyWith<$Res> {
+  __$$_TrackKeyCopyWithImpl(
+      _$_TrackKey _value, $Res Function(_$_TrackKey) _then)
+      : super(_value, (v) => _then(v as _$_TrackKey));
 
   @override
-  _TrackKey get _value => super._value as _TrackKey;
+  _$_TrackKey get _value => super._value as _$_TrackKey;
 
   @override
   $Res call({
@@ -135,7 +112,7 @@ class __$TrackKeyCopyWithImpl<$Res> extends _$TrackKeyCopyWithImpl<$Res>
     Object? trackSubtype = freezed,
     Object? spinId = freezed,
   }) {
-    return _then(_TrackKey(
+    return _then(_$_TrackKey(
       trackId: trackId == freezed
           ? _value.trackId
           : trackId // ignore: cast_nullable_to_non_nullable
@@ -190,7 +167,7 @@ class _$_TrackKey implements _TrackKey {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _TrackKey &&
+            other is _$_TrackKey &&
             const DeepCollectionEquality().equals(other.trackId, trackId) &&
             const DeepCollectionEquality().equals(other.trackType, trackType) &&
             const DeepCollectionEquality()
@@ -198,6 +175,7 @@ class _$_TrackKey implements _TrackKey {
             const DeepCollectionEquality().equals(other.spinId, spinId));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -208,8 +186,8 @@ class _$_TrackKey implements _TrackKey {
 
   @JsonKey(ignore: true)
   @override
-  _$TrackKeyCopyWith<_TrackKey> get copyWith =>
-      __$TrackKeyCopyWithImpl<_TrackKey>(this, _$identity);
+  _$$_TrackKeyCopyWith<_$_TrackKey> get copyWith =>
+      __$$_TrackKeyCopyWithImpl<_$_TrackKey>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -219,27 +197,27 @@ class _$_TrackKey implements _TrackKey {
 
 abstract class _TrackKey implements TrackKey {
   const factory _TrackKey(
-      {@JsonKey(name: 'trackId') required String trackId,
-      @JsonKey(name: 'trackType') required TrackType trackType,
-      @JsonKey(name: 'trackSubtype') required String trackSubtype,
-      @JsonKey(name: 'spinId') required String spinId}) = _$_TrackKey;
+      {@JsonKey(name: 'trackId') required final String trackId,
+      @JsonKey(name: 'trackType') required final TrackType trackType,
+      @JsonKey(name: 'trackSubtype') required final String trackSubtype,
+      @JsonKey(name: 'spinId') required final String spinId}) = _$_TrackKey;
 
   factory _TrackKey.fromJson(Map<String, dynamic> json) = _$_TrackKey.fromJson;
 
   @override
   @JsonKey(name: 'trackId')
-  String get trackId;
+  String get trackId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'trackType')
-  TrackType get trackType;
+  TrackType get trackType => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'trackSubtype')
-  String get trackSubtype;
+  String get trackSubtype => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'spinId')
-  String get spinId;
+  String get spinId => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$TrackKeyCopyWith<_TrackKey> get copyWith =>
+  _$$_TrackKeyCopyWith<_$_TrackKey> get copyWith =>
       throw _privateConstructorUsedError;
 }

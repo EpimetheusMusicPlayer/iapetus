@@ -12,34 +12,11 @@ part of 'form_factor.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 FormFactor _$FormFactorFromJson(Map<String, dynamic> json) {
   return _FormFactor.fromJson(json);
 }
-
-/// @nodoc
-class _$FormFactorTearOff {
-  const _$FormFactorTearOff();
-
-  _FormFactor call(
-      {@JsonKey(name: 'numRows') int? rowCount,
-      @JsonKey(name: 'numCols') int? columnCount,
-      @JsonKey(name: 'fractionSize') double? fractionSize}) {
-    return _FormFactor(
-      rowCount: rowCount,
-      columnCount: columnCount,
-      fractionSize: fractionSize,
-    );
-  }
-
-  FormFactor fromJson(Map<String, Object?> json) {
-    return FormFactor.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $FormFactor = _$FormFactorTearOff();
 
 /// @nodoc
 mixin _$FormFactor {
@@ -99,10 +76,11 @@ class _$FormFactorCopyWithImpl<$Res> implements $FormFactorCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$FormFactorCopyWith<$Res> implements $FormFactorCopyWith<$Res> {
-  factory _$FormFactorCopyWith(
-          _FormFactor value, $Res Function(_FormFactor) then) =
-      __$FormFactorCopyWithImpl<$Res>;
+abstract class _$$_FormFactorCopyWith<$Res>
+    implements $FormFactorCopyWith<$Res> {
+  factory _$$_FormFactorCopyWith(
+          _$_FormFactor value, $Res Function(_$_FormFactor) then) =
+      __$$_FormFactorCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(name: 'numRows') int? rowCount,
@@ -111,14 +89,14 @@ abstract class _$FormFactorCopyWith<$Res> implements $FormFactorCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$FormFactorCopyWithImpl<$Res> extends _$FormFactorCopyWithImpl<$Res>
-    implements _$FormFactorCopyWith<$Res> {
-  __$FormFactorCopyWithImpl(
-      _FormFactor _value, $Res Function(_FormFactor) _then)
-      : super(_value, (v) => _then(v as _FormFactor));
+class __$$_FormFactorCopyWithImpl<$Res> extends _$FormFactorCopyWithImpl<$Res>
+    implements _$$_FormFactorCopyWith<$Res> {
+  __$$_FormFactorCopyWithImpl(
+      _$_FormFactor _value, $Res Function(_$_FormFactor) _then)
+      : super(_value, (v) => _then(v as _$_FormFactor));
 
   @override
-  _FormFactor get _value => super._value as _FormFactor;
+  _$_FormFactor get _value => super._value as _$_FormFactor;
 
   @override
   $Res call({
@@ -126,7 +104,7 @@ class __$FormFactorCopyWithImpl<$Res> extends _$FormFactorCopyWithImpl<$Res>
     Object? columnCount = freezed,
     Object? fractionSize = freezed,
   }) {
-    return _then(_FormFactor(
+    return _then(_$_FormFactor(
       rowCount: rowCount == freezed
           ? _value.rowCount
           : rowCount // ignore: cast_nullable_to_non_nullable
@@ -173,7 +151,7 @@ class _$_FormFactor implements _FormFactor {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _FormFactor &&
+            other is _$_FormFactor &&
             const DeepCollectionEquality().equals(other.rowCount, rowCount) &&
             const DeepCollectionEquality()
                 .equals(other.columnCount, columnCount) &&
@@ -181,6 +159,7 @@ class _$_FormFactor implements _FormFactor {
                 .equals(other.fractionSize, fractionSize));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -190,8 +169,8 @@ class _$_FormFactor implements _FormFactor {
 
   @JsonKey(ignore: true)
   @override
-  _$FormFactorCopyWith<_FormFactor> get copyWith =>
-      __$FormFactorCopyWithImpl<_FormFactor>(this, _$identity);
+  _$$_FormFactorCopyWith<_$_FormFactor> get copyWith =>
+      __$$_FormFactorCopyWithImpl<_$_FormFactor>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -201,24 +180,25 @@ class _$_FormFactor implements _FormFactor {
 
 abstract class _FormFactor implements FormFactor {
   const factory _FormFactor(
-      {@JsonKey(name: 'numRows') int? rowCount,
-      @JsonKey(name: 'numCols') int? columnCount,
-      @JsonKey(name: 'fractionSize') double? fractionSize}) = _$_FormFactor;
+          {@JsonKey(name: 'numRows') final int? rowCount,
+          @JsonKey(name: 'numCols') final int? columnCount,
+          @JsonKey(name: 'fractionSize') final double? fractionSize}) =
+      _$_FormFactor;
 
   factory _FormFactor.fromJson(Map<String, dynamic> json) =
       _$_FormFactor.fromJson;
 
   @override
   @JsonKey(name: 'numRows')
-  int? get rowCount;
+  int? get rowCount => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'numCols')
-  int? get columnCount;
+  int? get columnCount => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'fractionSize')
-  double? get fractionSize;
+  double? get fractionSize => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$FormFactorCopyWith<_FormFactor> get copyWith =>
+  _$$_FormFactorCopyWith<_$_FormFactor> get copyWith =>
       throw _privateConstructorUsedError;
 }

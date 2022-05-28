@@ -12,32 +12,11 @@ part of 'button.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 SuperbrowseButton _$SuperbrowseButtonFromJson(Map<String, dynamic> json) {
   return _SuperbrowseButton.fromJson(json);
 }
-
-/// @nodoc
-class _$SuperbrowseButtonTearOff {
-  const _$SuperbrowseButtonTearOff();
-
-  _SuperbrowseButton call(
-      {@JsonKey(name: 'action') SuperbrowseAction? action,
-      @JsonKey(name: 'type') required ButtonType type}) {
-    return _SuperbrowseButton(
-      action: action,
-      type: type,
-    );
-  }
-
-  SuperbrowseButton fromJson(Map<String, Object?> json) {
-    return SuperbrowseButton.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $SuperbrowseButton = _$SuperbrowseButtonTearOff();
 
 /// @nodoc
 mixin _$SuperbrowseButton {
@@ -103,11 +82,11 @@ class _$SuperbrowseButtonCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$SuperbrowseButtonCopyWith<$Res>
+abstract class _$$_SuperbrowseButtonCopyWith<$Res>
     implements $SuperbrowseButtonCopyWith<$Res> {
-  factory _$SuperbrowseButtonCopyWith(
-          _SuperbrowseButton value, $Res Function(_SuperbrowseButton) then) =
-      __$SuperbrowseButtonCopyWithImpl<$Res>;
+  factory _$$_SuperbrowseButtonCopyWith(_$_SuperbrowseButton value,
+          $Res Function(_$_SuperbrowseButton) then) =
+      __$$_SuperbrowseButtonCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(name: 'action') SuperbrowseAction? action,
@@ -118,22 +97,22 @@ abstract class _$SuperbrowseButtonCopyWith<$Res>
 }
 
 /// @nodoc
-class __$SuperbrowseButtonCopyWithImpl<$Res>
+class __$$_SuperbrowseButtonCopyWithImpl<$Res>
     extends _$SuperbrowseButtonCopyWithImpl<$Res>
-    implements _$SuperbrowseButtonCopyWith<$Res> {
-  __$SuperbrowseButtonCopyWithImpl(
-      _SuperbrowseButton _value, $Res Function(_SuperbrowseButton) _then)
-      : super(_value, (v) => _then(v as _SuperbrowseButton));
+    implements _$$_SuperbrowseButtonCopyWith<$Res> {
+  __$$_SuperbrowseButtonCopyWithImpl(
+      _$_SuperbrowseButton _value, $Res Function(_$_SuperbrowseButton) _then)
+      : super(_value, (v) => _then(v as _$_SuperbrowseButton));
 
   @override
-  _SuperbrowseButton get _value => super._value as _SuperbrowseButton;
+  _$_SuperbrowseButton get _value => super._value as _$_SuperbrowseButton;
 
   @override
   $Res call({
     Object? action = freezed,
     Object? type = freezed,
   }) {
-    return _then(_SuperbrowseButton(
+    return _then(_$_SuperbrowseButton(
       action: action == freezed
           ? _value.action
           : action // ignore: cast_nullable_to_non_nullable
@@ -172,11 +151,12 @@ class _$_SuperbrowseButton implements _SuperbrowseButton {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _SuperbrowseButton &&
+            other is _$_SuperbrowseButton &&
             const DeepCollectionEquality().equals(other.action, action) &&
             const DeepCollectionEquality().equals(other.type, type));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -185,8 +165,9 @@ class _$_SuperbrowseButton implements _SuperbrowseButton {
 
   @JsonKey(ignore: true)
   @override
-  _$SuperbrowseButtonCopyWith<_SuperbrowseButton> get copyWith =>
-      __$SuperbrowseButtonCopyWithImpl<_SuperbrowseButton>(this, _$identity);
+  _$$_SuperbrowseButtonCopyWith<_$_SuperbrowseButton> get copyWith =>
+      __$$_SuperbrowseButtonCopyWithImpl<_$_SuperbrowseButton>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -196,20 +177,21 @@ class _$_SuperbrowseButton implements _SuperbrowseButton {
 
 abstract class _SuperbrowseButton implements SuperbrowseButton {
   const factory _SuperbrowseButton(
-      {@JsonKey(name: 'action') SuperbrowseAction? action,
-      @JsonKey(name: 'type') required ButtonType type}) = _$_SuperbrowseButton;
+          {@JsonKey(name: 'action') final SuperbrowseAction? action,
+          @JsonKey(name: 'type') required final ButtonType type}) =
+      _$_SuperbrowseButton;
 
   factory _SuperbrowseButton.fromJson(Map<String, dynamic> json) =
       _$_SuperbrowseButton.fromJson;
 
   @override
   @JsonKey(name: 'action')
-  SuperbrowseAction? get action;
+  SuperbrowseAction? get action => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'type')
-  ButtonType get type;
+  ButtonType get type => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$SuperbrowseButtonCopyWith<_SuperbrowseButton> get copyWith =>
+  _$$_SuperbrowseButtonCopyWith<_$_SuperbrowseButton> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -12,46 +12,11 @@ part of 'directory_response.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 DirectoryResponse _$DirectoryResponseFromJson(Map<String, dynamic> json) {
   return _DirectoryResponse.fromJson(json);
 }
-
-/// @nodoc
-class _$DirectoryResponseTearOff {
-  const _$DirectoryResponseTearOff();
-
-  _DirectoryResponse call(
-      {@JsonKey(name: 'ttl', fromJson: readSeconds, toJson: writeSeconds)
-          required Duration ttl,
-      @JsonKey(name: 'checksum')
-          required String checksum,
-      @JsonKey(name: 'generation')
-          required String generation,
-      @JsonKey(name: 'sections')
-          required List<SuperbrowseSection> sections,
-      @JsonKey(name: 'preferCachedData')
-          required bool preferCachedData,
-      @JsonKey(name: 'formFactorsByType')
-          required Map<SuperbrowseItemType, FormFactors> formFactorsByType}) {
-    return _DirectoryResponse(
-      ttl: ttl,
-      checksum: checksum,
-      generation: generation,
-      sections: sections,
-      preferCachedData: preferCachedData,
-      formFactorsByType: formFactorsByType,
-    );
-  }
-
-  DirectoryResponse fromJson(Map<String, Object?> json) {
-    return DirectoryResponse.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $DirectoryResponse = _$DirectoryResponseTearOff();
 
 /// @nodoc
 mixin _$DirectoryResponse {
@@ -143,11 +108,11 @@ class _$DirectoryResponseCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$DirectoryResponseCopyWith<$Res>
+abstract class _$$_DirectoryResponseCopyWith<$Res>
     implements $DirectoryResponseCopyWith<$Res> {
-  factory _$DirectoryResponseCopyWith(
-          _DirectoryResponse value, $Res Function(_DirectoryResponse) then) =
-      __$DirectoryResponseCopyWithImpl<$Res>;
+  factory _$$_DirectoryResponseCopyWith(_$_DirectoryResponse value,
+          $Res Function(_$_DirectoryResponse) then) =
+      __$$_DirectoryResponseCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(name: 'ttl', fromJson: readSeconds, toJson: writeSeconds)
@@ -165,15 +130,15 @@ abstract class _$DirectoryResponseCopyWith<$Res>
 }
 
 /// @nodoc
-class __$DirectoryResponseCopyWithImpl<$Res>
+class __$$_DirectoryResponseCopyWithImpl<$Res>
     extends _$DirectoryResponseCopyWithImpl<$Res>
-    implements _$DirectoryResponseCopyWith<$Res> {
-  __$DirectoryResponseCopyWithImpl(
-      _DirectoryResponse _value, $Res Function(_DirectoryResponse) _then)
-      : super(_value, (v) => _then(v as _DirectoryResponse));
+    implements _$$_DirectoryResponseCopyWith<$Res> {
+  __$$_DirectoryResponseCopyWithImpl(
+      _$_DirectoryResponse _value, $Res Function(_$_DirectoryResponse) _then)
+      : super(_value, (v) => _then(v as _$_DirectoryResponse));
 
   @override
-  _DirectoryResponse get _value => super._value as _DirectoryResponse;
+  _$_DirectoryResponse get _value => super._value as _$_DirectoryResponse;
 
   @override
   $Res call({
@@ -184,7 +149,7 @@ class __$DirectoryResponseCopyWithImpl<$Res>
     Object? preferCachedData = freezed,
     Object? formFactorsByType = freezed,
   }) {
-    return _then(_DirectoryResponse(
+    return _then(_$_DirectoryResponse(
       ttl: ttl == freezed
           ? _value.ttl
           : ttl // ignore: cast_nullable_to_non_nullable
@@ -198,7 +163,7 @@ class __$DirectoryResponseCopyWithImpl<$Res>
           : generation // ignore: cast_nullable_to_non_nullable
               as String,
       sections: sections == freezed
-          ? _value.sections
+          ? _value._sections
           : sections // ignore: cast_nullable_to_non_nullable
               as List<SuperbrowseSection>,
       preferCachedData: preferCachedData == freezed
@@ -206,7 +171,7 @@ class __$DirectoryResponseCopyWithImpl<$Res>
           : preferCachedData // ignore: cast_nullable_to_non_nullable
               as bool,
       formFactorsByType: formFactorsByType == freezed
-          ? _value.formFactorsByType
+          ? _value._formFactorsByType
           : formFactorsByType // ignore: cast_nullable_to_non_nullable
               as Map<SuperbrowseItemType, FormFactors>,
     ));
@@ -224,11 +189,14 @@ class _$_DirectoryResponse implements _DirectoryResponse {
       @JsonKey(name: 'generation')
           required this.generation,
       @JsonKey(name: 'sections')
-          required this.sections,
+          required final List<SuperbrowseSection> sections,
       @JsonKey(name: 'preferCachedData')
           required this.preferCachedData,
       @JsonKey(name: 'formFactorsByType')
-          required this.formFactorsByType});
+          required final Map<SuperbrowseItemType, FormFactors>
+              formFactorsByType})
+      : _sections = sections,
+        _formFactorsByType = formFactorsByType;
 
   factory _$_DirectoryResponse.fromJson(Map<String, dynamic> json) =>
       _$$_DirectoryResponseFromJson(json);
@@ -242,15 +210,24 @@ class _$_DirectoryResponse implements _DirectoryResponse {
   @override
   @JsonKey(name: 'generation')
   final String generation;
+  final List<SuperbrowseSection> _sections;
   @override
   @JsonKey(name: 'sections')
-  final List<SuperbrowseSection> sections;
+  List<SuperbrowseSection> get sections {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_sections);
+  }
+
   @override
   @JsonKey(name: 'preferCachedData')
   final bool preferCachedData;
+  final Map<SuperbrowseItemType, FormFactors> _formFactorsByType;
   @override
   @JsonKey(name: 'formFactorsByType')
-  final Map<SuperbrowseItemType, FormFactors> formFactorsByType;
+  Map<SuperbrowseItemType, FormFactors> get formFactorsByType {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableMapView(_formFactorsByType);
+  }
 
   @override
   String toString() {
@@ -261,32 +238,34 @@ class _$_DirectoryResponse implements _DirectoryResponse {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _DirectoryResponse &&
+            other is _$_DirectoryResponse &&
             const DeepCollectionEquality().equals(other.ttl, ttl) &&
             const DeepCollectionEquality().equals(other.checksum, checksum) &&
             const DeepCollectionEquality()
                 .equals(other.generation, generation) &&
-            const DeepCollectionEquality().equals(other.sections, sections) &&
+            const DeepCollectionEquality().equals(other._sections, _sections) &&
             const DeepCollectionEquality()
                 .equals(other.preferCachedData, preferCachedData) &&
             const DeepCollectionEquality()
-                .equals(other.formFactorsByType, formFactorsByType));
+                .equals(other._formFactorsByType, _formFactorsByType));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(ttl),
       const DeepCollectionEquality().hash(checksum),
       const DeepCollectionEquality().hash(generation),
-      const DeepCollectionEquality().hash(sections),
+      const DeepCollectionEquality().hash(_sections),
       const DeepCollectionEquality().hash(preferCachedData),
-      const DeepCollectionEquality().hash(formFactorsByType));
+      const DeepCollectionEquality().hash(_formFactorsByType));
 
   @JsonKey(ignore: true)
   @override
-  _$DirectoryResponseCopyWith<_DirectoryResponse> get copyWith =>
-      __$DirectoryResponseCopyWithImpl<_DirectoryResponse>(this, _$identity);
+  _$$_DirectoryResponseCopyWith<_$_DirectoryResponse> get copyWith =>
+      __$$_DirectoryResponseCopyWithImpl<_$_DirectoryResponse>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -297,17 +276,17 @@ class _$_DirectoryResponse implements _DirectoryResponse {
 abstract class _DirectoryResponse implements DirectoryResponse {
   const factory _DirectoryResponse(
       {@JsonKey(name: 'ttl', fromJson: readSeconds, toJson: writeSeconds)
-          required Duration ttl,
+          required final Duration ttl,
       @JsonKey(name: 'checksum')
-          required String checksum,
+          required final String checksum,
       @JsonKey(name: 'generation')
-          required String generation,
+          required final String generation,
       @JsonKey(name: 'sections')
-          required List<SuperbrowseSection> sections,
+          required final List<SuperbrowseSection> sections,
       @JsonKey(name: 'preferCachedData')
-          required bool preferCachedData,
+          required final bool preferCachedData,
       @JsonKey(name: 'formFactorsByType')
-          required Map<SuperbrowseItemType, FormFactors>
+          required final Map<SuperbrowseItemType, FormFactors>
               formFactorsByType}) = _$_DirectoryResponse;
 
   factory _DirectoryResponse.fromJson(Map<String, dynamic> json) =
@@ -315,24 +294,25 @@ abstract class _DirectoryResponse implements DirectoryResponse {
 
   @override
   @JsonKey(name: 'ttl', fromJson: readSeconds, toJson: writeSeconds)
-  Duration get ttl;
+  Duration get ttl => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'checksum')
-  String get checksum;
+  String get checksum => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'generation')
-  String get generation;
+  String get generation => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'sections')
-  List<SuperbrowseSection> get sections;
+  List<SuperbrowseSection> get sections => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'preferCachedData')
-  bool get preferCachedData;
+  bool get preferCachedData => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'formFactorsByType')
-  Map<SuperbrowseItemType, FormFactors> get formFactorsByType;
+  Map<SuperbrowseItemType, FormFactors> get formFactorsByType =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$DirectoryResponseCopyWith<_DirectoryResponse> get copyWith =>
+  _$$_DirectoryResponseCopyWith<_$_DirectoryResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }

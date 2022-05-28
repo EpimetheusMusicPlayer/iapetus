@@ -12,34 +12,11 @@ part of 'lyric_data.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 MediaLyricData _$MediaLyricDataFromJson(Map<String, dynamic> json) {
   return _IapetusMediaLyricData.fromJson(json);
 }
-
-/// @nodoc
-class _$MediaLyricDataTearOff {
-  const _$MediaLyricDataTearOff();
-
-  _IapetusMediaLyricData call(
-      {@JsonKey(name: 'lyricId') required String lyricId,
-      @JsonKey(name: 'lyricSnippet') required String lyricSnippetHtml,
-      @JsonKey(name: 'lyricCredits') required String lyricCreditsHtml}) {
-    return _IapetusMediaLyricData(
-      lyricId: lyricId,
-      lyricSnippetHtml: lyricSnippetHtml,
-      lyricCreditsHtml: lyricCreditsHtml,
-    );
-  }
-
-  MediaLyricData fromJson(Map<String, Object?> json) {
-    return MediaLyricData.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $MediaLyricData = _$MediaLyricDataTearOff();
 
 /// @nodoc
 mixin _$MediaLyricData {
@@ -100,11 +77,11 @@ class _$MediaLyricDataCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$IapetusMediaLyricDataCopyWith<$Res>
+abstract class _$$_IapetusMediaLyricDataCopyWith<$Res>
     implements $MediaLyricDataCopyWith<$Res> {
-  factory _$IapetusMediaLyricDataCopyWith(_IapetusMediaLyricData value,
-          $Res Function(_IapetusMediaLyricData) then) =
-      __$IapetusMediaLyricDataCopyWithImpl<$Res>;
+  factory _$$_IapetusMediaLyricDataCopyWith(_$_IapetusMediaLyricData value,
+          $Res Function(_$_IapetusMediaLyricData) then) =
+      __$$_IapetusMediaLyricDataCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(name: 'lyricId') String lyricId,
@@ -113,15 +90,16 @@ abstract class _$IapetusMediaLyricDataCopyWith<$Res>
 }
 
 /// @nodoc
-class __$IapetusMediaLyricDataCopyWithImpl<$Res>
+class __$$_IapetusMediaLyricDataCopyWithImpl<$Res>
     extends _$MediaLyricDataCopyWithImpl<$Res>
-    implements _$IapetusMediaLyricDataCopyWith<$Res> {
-  __$IapetusMediaLyricDataCopyWithImpl(_IapetusMediaLyricData _value,
-      $Res Function(_IapetusMediaLyricData) _then)
-      : super(_value, (v) => _then(v as _IapetusMediaLyricData));
+    implements _$$_IapetusMediaLyricDataCopyWith<$Res> {
+  __$$_IapetusMediaLyricDataCopyWithImpl(_$_IapetusMediaLyricData _value,
+      $Res Function(_$_IapetusMediaLyricData) _then)
+      : super(_value, (v) => _then(v as _$_IapetusMediaLyricData));
 
   @override
-  _IapetusMediaLyricData get _value => super._value as _IapetusMediaLyricData;
+  _$_IapetusMediaLyricData get _value =>
+      super._value as _$_IapetusMediaLyricData;
 
   @override
   $Res call({
@@ -129,7 +107,7 @@ class __$IapetusMediaLyricDataCopyWithImpl<$Res>
     Object? lyricSnippetHtml = freezed,
     Object? lyricCreditsHtml = freezed,
   }) {
-    return _then(_IapetusMediaLyricData(
+    return _then(_$_IapetusMediaLyricData(
       lyricId: lyricId == freezed
           ? _value.lyricId
           : lyricId // ignore: cast_nullable_to_non_nullable
@@ -176,7 +154,7 @@ class _$_IapetusMediaLyricData implements _IapetusMediaLyricData {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _IapetusMediaLyricData &&
+            other is _$_IapetusMediaLyricData &&
             const DeepCollectionEquality().equals(other.lyricId, lyricId) &&
             const DeepCollectionEquality()
                 .equals(other.lyricSnippetHtml, lyricSnippetHtml) &&
@@ -184,6 +162,7 @@ class _$_IapetusMediaLyricData implements _IapetusMediaLyricData {
                 .equals(other.lyricCreditsHtml, lyricCreditsHtml));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -193,8 +172,8 @@ class _$_IapetusMediaLyricData implements _IapetusMediaLyricData {
 
   @JsonKey(ignore: true)
   @override
-  _$IapetusMediaLyricDataCopyWith<_IapetusMediaLyricData> get copyWith =>
-      __$IapetusMediaLyricDataCopyWithImpl<_IapetusMediaLyricData>(
+  _$$_IapetusMediaLyricDataCopyWith<_$_IapetusMediaLyricData> get copyWith =>
+      __$$_IapetusMediaLyricDataCopyWithImpl<_$_IapetusMediaLyricData>(
           this, _$identity);
 
   @override
@@ -205,25 +184,27 @@ class _$_IapetusMediaLyricData implements _IapetusMediaLyricData {
 
 abstract class _IapetusMediaLyricData implements MediaLyricData {
   const factory _IapetusMediaLyricData(
-          {@JsonKey(name: 'lyricId') required String lyricId,
-          @JsonKey(name: 'lyricSnippet') required String lyricSnippetHtml,
-          @JsonKey(name: 'lyricCredits') required String lyricCreditsHtml}) =
-      _$_IapetusMediaLyricData;
+      {@JsonKey(name: 'lyricId')
+          required final String lyricId,
+      @JsonKey(name: 'lyricSnippet')
+          required final String lyricSnippetHtml,
+      @JsonKey(name: 'lyricCredits')
+          required final String lyricCreditsHtml}) = _$_IapetusMediaLyricData;
 
   factory _IapetusMediaLyricData.fromJson(Map<String, dynamic> json) =
       _$_IapetusMediaLyricData.fromJson;
 
   @override
   @JsonKey(name: 'lyricId')
-  String get lyricId;
+  String get lyricId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'lyricSnippet')
-  String get lyricSnippetHtml;
+  String get lyricSnippetHtml => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'lyricCredits')
-  String get lyricCreditsHtml;
+  String get lyricCreditsHtml => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$IapetusMediaLyricDataCopyWith<_IapetusMediaLyricData> get copyWith =>
+  _$$_IapetusMediaLyricDataCopyWith<_$_IapetusMediaLyricData> get copyWith =>
       throw _privateConstructorUsedError;
 }

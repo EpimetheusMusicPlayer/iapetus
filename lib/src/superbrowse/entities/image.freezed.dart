@@ -12,55 +12,11 @@ part of 'image.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 SuperbrowseImage _$SuperbrowseImageFromJson(Map<String, dynamic> json) {
   return _SuperbrowseImage.fromJson(json);
 }
-
-/// @nodoc
-class _$SuperbrowseImageTearOff {
-  const _$SuperbrowseImageTearOff();
-
-  _SuperbrowseImage call(
-      {@JsonKey(name: 'border', fromJson: readNullableBool, toJson: writeNullableBool)
-          required bool border,
-      @JsonKey(name: 'circular', fromJson: readNullableBool, toJson: writeNullableBool)
-          required bool circular,
-      @JsonKey(name: 'dominantColor', fromJson: readOptionalColor, toJson: writeOptionalColor)
-          int? color,
-      @JsonKey(name: 'fullUrl')
-          Uri? fullUrl,
-      @JsonKey(name: 'fullUrlDark')
-          Uri? fullUrlDark,
-      @JsonKey(name: 'scalableUrl')
-          Uri? scalableUrl,
-      @JsonKey(name: 'sizedUrl')
-          Uri? sizedUrl,
-      @JsonKey(name: 'sizedUrlDark')
-          Uri? sizedUrlDart,
-      @JsonKey(name: 'discreteSizes')
-          List<ArtSize>? sizes}) {
-    return _SuperbrowseImage(
-      border: border,
-      circular: circular,
-      color: color,
-      fullUrl: fullUrl,
-      fullUrlDark: fullUrlDark,
-      scalableUrl: scalableUrl,
-      sizedUrl: sizedUrl,
-      sizedUrlDart: sizedUrlDart,
-      sizes: sizes,
-    );
-  }
-
-  SuperbrowseImage fromJson(Map<String, Object?> json) {
-    return SuperbrowseImage.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $SuperbrowseImage = _$SuperbrowseImageTearOff();
 
 /// @nodoc
 mixin _$SuperbrowseImage {
@@ -183,11 +139,11 @@ class _$SuperbrowseImageCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$SuperbrowseImageCopyWith<$Res>
+abstract class _$$_SuperbrowseImageCopyWith<$Res>
     implements $SuperbrowseImageCopyWith<$Res> {
-  factory _$SuperbrowseImageCopyWith(
-          _SuperbrowseImage value, $Res Function(_SuperbrowseImage) then) =
-      __$SuperbrowseImageCopyWithImpl<$Res>;
+  factory _$$_SuperbrowseImageCopyWith(
+          _$_SuperbrowseImage value, $Res Function(_$_SuperbrowseImage) then) =
+      __$$_SuperbrowseImageCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(name: 'border', fromJson: readNullableBool, toJson: writeNullableBool)
@@ -211,15 +167,15 @@ abstract class _$SuperbrowseImageCopyWith<$Res>
 }
 
 /// @nodoc
-class __$SuperbrowseImageCopyWithImpl<$Res>
+class __$$_SuperbrowseImageCopyWithImpl<$Res>
     extends _$SuperbrowseImageCopyWithImpl<$Res>
-    implements _$SuperbrowseImageCopyWith<$Res> {
-  __$SuperbrowseImageCopyWithImpl(
-      _SuperbrowseImage _value, $Res Function(_SuperbrowseImage) _then)
-      : super(_value, (v) => _then(v as _SuperbrowseImage));
+    implements _$$_SuperbrowseImageCopyWith<$Res> {
+  __$$_SuperbrowseImageCopyWithImpl(
+      _$_SuperbrowseImage _value, $Res Function(_$_SuperbrowseImage) _then)
+      : super(_value, (v) => _then(v as _$_SuperbrowseImage));
 
   @override
-  _SuperbrowseImage get _value => super._value as _SuperbrowseImage;
+  _$_SuperbrowseImage get _value => super._value as _$_SuperbrowseImage;
 
   @override
   $Res call({
@@ -233,7 +189,7 @@ class __$SuperbrowseImageCopyWithImpl<$Res>
     Object? sizedUrlDart = freezed,
     Object? sizes = freezed,
   }) {
-    return _then(_SuperbrowseImage(
+    return _then(_$_SuperbrowseImage(
       border: border == freezed
           ? _value.border
           : border // ignore: cast_nullable_to_non_nullable
@@ -267,7 +223,7 @@ class __$SuperbrowseImageCopyWithImpl<$Res>
           : sizedUrlDart // ignore: cast_nullable_to_non_nullable
               as Uri?,
       sizes: sizes == freezed
-          ? _value.sizes
+          ? _value._sizes
           : sizes // ignore: cast_nullable_to_non_nullable
               as List<ArtSize>?,
     ));
@@ -295,8 +251,9 @@ class _$_SuperbrowseImage extends _SuperbrowseImage {
       @JsonKey(name: 'sizedUrlDark')
           this.sizedUrlDart,
       @JsonKey(name: 'discreteSizes')
-          this.sizes})
-      : super._();
+          final List<ArtSize>? sizes})
+      : _sizes = sizes,
+        super._();
 
   factory _$_SuperbrowseImage.fromJson(Map<String, dynamic> json) =>
       _$$_SuperbrowseImageFromJson(json);
@@ -330,9 +287,15 @@ class _$_SuperbrowseImage extends _SuperbrowseImage {
   @override
   @JsonKey(name: 'sizedUrlDark')
   final Uri? sizedUrlDart;
+  final List<ArtSize>? _sizes;
   @override
   @JsonKey(name: 'discreteSizes')
-  final List<ArtSize>? sizes;
+  List<ArtSize>? get sizes {
+    final value = _sizes;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -343,7 +306,7 @@ class _$_SuperbrowseImage extends _SuperbrowseImage {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _SuperbrowseImage &&
+            other is _$_SuperbrowseImage &&
             const DeepCollectionEquality().equals(other.border, border) &&
             const DeepCollectionEquality().equals(other.circular, circular) &&
             const DeepCollectionEquality().equals(other.color, color) &&
@@ -355,9 +318,10 @@ class _$_SuperbrowseImage extends _SuperbrowseImage {
             const DeepCollectionEquality().equals(other.sizedUrl, sizedUrl) &&
             const DeepCollectionEquality()
                 .equals(other.sizedUrlDart, sizedUrlDart) &&
-            const DeepCollectionEquality().equals(other.sizes, sizes));
+            const DeepCollectionEquality().equals(other._sizes, _sizes));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -369,12 +333,12 @@ class _$_SuperbrowseImage extends _SuperbrowseImage {
       const DeepCollectionEquality().hash(scalableUrl),
       const DeepCollectionEquality().hash(sizedUrl),
       const DeepCollectionEquality().hash(sizedUrlDart),
-      const DeepCollectionEquality().hash(sizes));
+      const DeepCollectionEquality().hash(_sizes));
 
   @JsonKey(ignore: true)
   @override
-  _$SuperbrowseImageCopyWith<_SuperbrowseImage> get copyWith =>
-      __$SuperbrowseImageCopyWithImpl<_SuperbrowseImage>(this, _$identity);
+  _$$_SuperbrowseImageCopyWith<_$_SuperbrowseImage> get copyWith =>
+      __$$_SuperbrowseImageCopyWithImpl<_$_SuperbrowseImage>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -385,23 +349,23 @@ class _$_SuperbrowseImage extends _SuperbrowseImage {
 abstract class _SuperbrowseImage extends SuperbrowseImage {
   const factory _SuperbrowseImage(
       {@JsonKey(name: 'border', fromJson: readNullableBool, toJson: writeNullableBool)
-          required bool border,
+          required final bool border,
       @JsonKey(name: 'circular', fromJson: readNullableBool, toJson: writeNullableBool)
-          required bool circular,
+          required final bool circular,
       @JsonKey(name: 'dominantColor', fromJson: readOptionalColor, toJson: writeOptionalColor)
-          int? color,
+          final int? color,
       @JsonKey(name: 'fullUrl')
-          Uri? fullUrl,
+          final Uri? fullUrl,
       @JsonKey(name: 'fullUrlDark')
-          Uri? fullUrlDark,
+          final Uri? fullUrlDark,
       @JsonKey(name: 'scalableUrl')
-          Uri? scalableUrl,
+          final Uri? scalableUrl,
       @JsonKey(name: 'sizedUrl')
-          Uri? sizedUrl,
+          final Uri? sizedUrl,
       @JsonKey(name: 'sizedUrlDark')
-          Uri? sizedUrlDart,
+          final Uri? sizedUrlDart,
       @JsonKey(name: 'discreteSizes')
-          List<ArtSize>? sizes}) = _$_SuperbrowseImage;
+          final List<ArtSize>? sizes}) = _$_SuperbrowseImage;
   const _SuperbrowseImage._() : super._();
 
   factory _SuperbrowseImage.fromJson(Map<String, dynamic> json) =
@@ -410,37 +374,37 @@ abstract class _SuperbrowseImage extends SuperbrowseImage {
   @override
   @JsonKey(
       name: 'border', fromJson: readNullableBool, toJson: writeNullableBool)
-  bool get border;
+  bool get border => throw _privateConstructorUsedError;
   @override
   @JsonKey(
       name: 'circular', fromJson: readNullableBool, toJson: writeNullableBool)
-  bool get circular;
+  bool get circular => throw _privateConstructorUsedError;
   @override
   @JsonKey(
       name: 'dominantColor',
       fromJson: readOptionalColor,
       toJson: writeOptionalColor)
-  int? get color;
+  int? get color => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'fullUrl')
-  Uri? get fullUrl;
+  Uri? get fullUrl => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'fullUrlDark')
-  Uri? get fullUrlDark;
+  Uri? get fullUrlDark => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'scalableUrl')
-  Uri? get scalableUrl;
+  Uri? get scalableUrl => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'sizedUrl')
-  Uri? get sizedUrl;
+  Uri? get sizedUrl => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'sizedUrlDark')
-  Uri? get sizedUrlDart;
+  Uri? get sizedUrlDart => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'discreteSizes')
-  List<ArtSize>? get sizes;
+  List<ArtSize>? get sizes => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$SuperbrowseImageCopyWith<_SuperbrowseImage> get copyWith =>
+  _$$_SuperbrowseImageCopyWith<_$_SuperbrowseImage> get copyWith =>
       throw _privateConstructorUsedError;
 }

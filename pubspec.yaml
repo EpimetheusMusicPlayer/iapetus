@@ -11,7 +11,7 @@ environment:
 dependencies:
   ## Language
   meta: ^1.7.0
-  freezed_annotation: ^1.1.0
+  freezed_annotation: ^2.0.3
   json_annotation: ^4.5.0
 
   ## I/O
@@ -29,8 +29,8 @@ dev_dependencies:
   lint: ^1.8.2
 
   ## Building
-  build_runner: ^2.1.10
+  build_runner: ^2.1.11
 
   ## Code generation
-  freezed: ^1.1.1
+  freezed: ^2.0.3+1
   json_serializable: ^6.2.0

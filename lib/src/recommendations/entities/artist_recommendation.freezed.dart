@@ -12,49 +12,11 @@ part of 'artist_recommendation.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 ArtistRecommendation _$ArtistRecommendationFromJson(Map<String, dynamic> json) {
   return _ArtistRecommendation.fromJson(json);
 }
-
-/// @nodoc
-class _$ArtistRecommendationTearOff {
-  const _$ArtistRecommendationTearOff();
-
-  _ArtistRecommendation call(
-      {@JsonKey(name: 'artistName')
-          required String artistName,
-      @JsonKey(name: 'score', fromJson: readScore, toJson: writeScore, includeIfNull: true)
-          int? score,
-      @JsonKey(name: 'likelyMatch')
-          required bool likelyMatch,
-      @JsonKey(name: 'artUrl')
-          Uri? artUrl,
-      @JsonKey(name: 'musicToken')
-          required String musicToken,
-      @JsonKey(name: 'pandoraId')
-          required String pandoraId,
-      @JsonKey(name: 'explanation')
-          required String explanation}) {
-    return _ArtistRecommendation(
-      artistName: artistName,
-      score: score,
-      likelyMatch: likelyMatch,
-      artUrl: artUrl,
-      musicToken: musicToken,
-      pandoraId: pandoraId,
-      explanation: explanation,
-    );
-  }
-
-  ArtistRecommendation fromJson(Map<String, Object?> json) {
-    return ArtistRecommendation.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ArtistRecommendation = _$ArtistRecommendationTearOff();
 
 /// @nodoc
 mixin _$ArtistRecommendation {
@@ -158,11 +120,11 @@ class _$ArtistRecommendationCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$ArtistRecommendationCopyWith<$Res>
+abstract class _$$_ArtistRecommendationCopyWith<$Res>
     implements $ArtistRecommendationCopyWith<$Res> {
-  factory _$ArtistRecommendationCopyWith(_ArtistRecommendation value,
-          $Res Function(_ArtistRecommendation) then) =
-      __$ArtistRecommendationCopyWithImpl<$Res>;
+  factory _$$_ArtistRecommendationCopyWith(_$_ArtistRecommendation value,
+          $Res Function(_$_ArtistRecommendation) then) =
+      __$$_ArtistRecommendationCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(name: 'artistName')
@@ -182,15 +144,15 @@ abstract class _$ArtistRecommendationCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ArtistRecommendationCopyWithImpl<$Res>
+class __$$_ArtistRecommendationCopyWithImpl<$Res>
     extends _$ArtistRecommendationCopyWithImpl<$Res>
-    implements _$ArtistRecommendationCopyWith<$Res> {
-  __$ArtistRecommendationCopyWithImpl(
-      _ArtistRecommendation _value, $Res Function(_ArtistRecommendation) _then)
-      : super(_value, (v) => _then(v as _ArtistRecommendation));
+    implements _$$_ArtistRecommendationCopyWith<$Res> {
+  __$$_ArtistRecommendationCopyWithImpl(_$_ArtistRecommendation _value,
+      $Res Function(_$_ArtistRecommendation) _then)
+      : super(_value, (v) => _then(v as _$_ArtistRecommendation));
 
   @override
-  _ArtistRecommendation get _value => super._value as _ArtistRecommendation;
+  _$_ArtistRecommendation get _value => super._value as _$_ArtistRecommendation;
 
   @override
   $Res call({
@@ -202,7 +164,7 @@ class __$ArtistRecommendationCopyWithImpl<$Res>
     Object? pandoraId = freezed,
     Object? explanation = freezed,
   }) {
-    return _then(_ArtistRecommendation(
+    return _then(_$_ArtistRecommendation(
       artistName: artistName == freezed
           ? _value.artistName
           : artistName // ignore: cast_nullable_to_non_nullable
@@ -292,7 +254,7 @@ class _$_ArtistRecommendation implements _ArtistRecommendation {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _ArtistRecommendation &&
+            other is _$_ArtistRecommendation &&
             const DeepCollectionEquality()
                 .equals(other.artistName, artistName) &&
             const DeepCollectionEquality().equals(other.score, score) &&
@@ -306,6 +268,7 @@ class _$_ArtistRecommendation implements _ArtistRecommendation {
                 .equals(other.explanation, explanation));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -319,8 +282,8 @@ class _$_ArtistRecommendation implements _ArtistRecommendation {
 
   @JsonKey(ignore: true)
   @override
-  _$ArtistRecommendationCopyWith<_ArtistRecommendation> get copyWith =>
-      __$ArtistRecommendationCopyWithImpl<_ArtistRecommendation>(
+  _$$_ArtistRecommendationCopyWith<_$_ArtistRecommendation> get copyWith =>
+      __$$_ArtistRecommendationCopyWithImpl<_$_ArtistRecommendation>(
           this, _$identity);
 
   @override
@@ -332,50 +295,50 @@ class _$_ArtistRecommendation implements _ArtistRecommendation {
 abstract class _ArtistRecommendation implements ArtistRecommendation {
   const factory _ArtistRecommendation(
       {@JsonKey(name: 'artistName')
-          required String artistName,
+          required final String artistName,
       @JsonKey(name: 'score', fromJson: readScore, toJson: writeScore, includeIfNull: true)
-          int? score,
+          final int? score,
       @JsonKey(name: 'likelyMatch')
-          required bool likelyMatch,
+          required final bool likelyMatch,
       @JsonKey(name: 'artUrl')
-          Uri? artUrl,
+          final Uri? artUrl,
       @JsonKey(name: 'musicToken')
-          required String musicToken,
+          required final String musicToken,
       @JsonKey(name: 'pandoraId')
-          required String pandoraId,
+          required final String pandoraId,
       @JsonKey(name: 'explanation')
-          required String explanation}) = _$_ArtistRecommendation;
+          required final String explanation}) = _$_ArtistRecommendation;
 
   factory _ArtistRecommendation.fromJson(Map<String, dynamic> json) =
       _$_ArtistRecommendation.fromJson;
 
   @override
   @JsonKey(name: 'artistName')
-  String get artistName;
+  String get artistName => throw _privateConstructorUsedError;
   @override
   @JsonKey(
       name: 'score',
       fromJson: readScore,
       toJson: writeScore,
       includeIfNull: true)
-  int? get score;
+  int? get score => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'likelyMatch')
-  bool get likelyMatch;
+  bool get likelyMatch => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'artUrl')
-  Uri? get artUrl;
+  Uri? get artUrl => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'musicToken')
-  String get musicToken;
+  String get musicToken => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'pandoraId')
-  String get pandoraId;
+  String get pandoraId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'explanation')
-  String get explanation;
+  String get explanation => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$ArtistRecommendationCopyWith<_ArtistRecommendation> get copyWith =>
+  _$$_ArtistRecommendationCopyWith<_$_ArtistRecommendation> get copyWith =>
       throw _privateConstructorUsedError;
 }

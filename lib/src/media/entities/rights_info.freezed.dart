@@ -12,46 +12,11 @@ part of 'rights_info.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 RightsInfo _$RightsInfoFromJson(Map<String, dynamic> json) {
   return _RightsInfo.fromJson(json);
 }
-
-/// @nodoc
-class _$RightsInfoTearOff {
-  const _$RightsInfoTearOff();
-
-  _RightsInfo call(
-      {@JsonKey(name: 'hasInteractive')
-          required bool hasInteractive,
-      @JsonKey(name: 'hasOffline')
-          required bool hasOffline,
-      @JsonKey(name: 'hasNonInteractive')
-          required bool hasNonInteractive,
-      @JsonKey(name: 'hasStatutory')
-          required bool hasStatutory,
-      @JsonKey(name: 'hasRadioRights')
-          required bool hasRadioRights,
-      @JsonKey(name: 'expirationTime', fromJson: readMilliseconds, toJson: writeMilliseconds)
-          required Duration expiresIn}) {
-    return _RightsInfo(
-      hasInteractive: hasInteractive,
-      hasOffline: hasOffline,
-      hasNonInteractive: hasNonInteractive,
-      hasStatutory: hasStatutory,
-      hasRadioRights: hasRadioRights,
-      expiresIn: expiresIn,
-    );
-  }
-
-  RightsInfo fromJson(Map<String, Object?> json) {
-    return RightsInfo.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $RightsInfo = _$RightsInfoTearOff();
 
 /// @nodoc
 mixin _$RightsInfo {
@@ -144,10 +109,11 @@ class _$RightsInfoCopyWithImpl<$Res> implements $RightsInfoCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$RightsInfoCopyWith<$Res> implements $RightsInfoCopyWith<$Res> {
-  factory _$RightsInfoCopyWith(
-          _RightsInfo value, $Res Function(_RightsInfo) then) =
-      __$RightsInfoCopyWithImpl<$Res>;
+abstract class _$$_RightsInfoCopyWith<$Res>
+    implements $RightsInfoCopyWith<$Res> {
+  factory _$$_RightsInfoCopyWith(
+          _$_RightsInfo value, $Res Function(_$_RightsInfo) then) =
+      __$$_RightsInfoCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(name: 'hasInteractive')
@@ -165,14 +131,14 @@ abstract class _$RightsInfoCopyWith<$Res> implements $RightsInfoCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$RightsInfoCopyWithImpl<$Res> extends _$RightsInfoCopyWithImpl<$Res>
-    implements _$RightsInfoCopyWith<$Res> {
-  __$RightsInfoCopyWithImpl(
-      _RightsInfo _value, $Res Function(_RightsInfo) _then)
-      : super(_value, (v) => _then(v as _RightsInfo));
+class __$$_RightsInfoCopyWithImpl<$Res> extends _$RightsInfoCopyWithImpl<$Res>
+    implements _$$_RightsInfoCopyWith<$Res> {
+  __$$_RightsInfoCopyWithImpl(
+      _$_RightsInfo _value, $Res Function(_$_RightsInfo) _then)
+      : super(_value, (v) => _then(v as _$_RightsInfo));
 
   @override
-  _RightsInfo get _value => super._value as _RightsInfo;
+  _$_RightsInfo get _value => super._value as _$_RightsInfo;
 
   @override
   $Res call({
@@ -183,7 +149,7 @@ class __$RightsInfoCopyWithImpl<$Res> extends _$RightsInfoCopyWithImpl<$Res>
     Object? hasRadioRights = freezed,
     Object? expiresIn = freezed,
   }) {
-    return _then(_RightsInfo(
+    return _then(_$_RightsInfo(
       hasInteractive: hasInteractive == freezed
           ? _value.hasInteractive
           : hasInteractive // ignore: cast_nullable_to_non_nullable
@@ -263,7 +229,7 @@ class _$_RightsInfo implements _RightsInfo {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _RightsInfo &&
+            other is _$_RightsInfo &&
             const DeepCollectionEquality()
                 .equals(other.hasInteractive, hasInteractive) &&
             const DeepCollectionEquality()
@@ -277,6 +243,7 @@ class _$_RightsInfo implements _RightsInfo {
             const DeepCollectionEquality().equals(other.expiresIn, expiresIn));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -289,8 +256,8 @@ class _$_RightsInfo implements _RightsInfo {
 
   @JsonKey(ignore: true)
   @override
-  _$RightsInfoCopyWith<_RightsInfo> get copyWith =>
-      __$RightsInfoCopyWithImpl<_RightsInfo>(this, _$identity);
+  _$$_RightsInfoCopyWith<_$_RightsInfo> get copyWith =>
+      __$$_RightsInfoCopyWithImpl<_$_RightsInfo>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -301,44 +268,44 @@ class _$_RightsInfo implements _RightsInfo {
 abstract class _RightsInfo implements RightsInfo {
   const factory _RightsInfo(
       {@JsonKey(name: 'hasInteractive')
-          required bool hasInteractive,
+          required final bool hasInteractive,
       @JsonKey(name: 'hasOffline')
-          required bool hasOffline,
+          required final bool hasOffline,
       @JsonKey(name: 'hasNonInteractive')
-          required bool hasNonInteractive,
+          required final bool hasNonInteractive,
       @JsonKey(name: 'hasStatutory')
-          required bool hasStatutory,
+          required final bool hasStatutory,
       @JsonKey(name: 'hasRadioRights')
-          required bool hasRadioRights,
+          required final bool hasRadioRights,
       @JsonKey(name: 'expirationTime', fromJson: readMilliseconds, toJson: writeMilliseconds)
-          required Duration expiresIn}) = _$_RightsInfo;
+          required final Duration expiresIn}) = _$_RightsInfo;
 
   factory _RightsInfo.fromJson(Map<String, dynamic> json) =
       _$_RightsInfo.fromJson;
 
   @override
   @JsonKey(name: 'hasInteractive')
-  bool get hasInteractive;
+  bool get hasInteractive => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'hasOffline')
-  bool get hasOffline;
+  bool get hasOffline => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'hasNonInteractive')
-  bool get hasNonInteractive;
+  bool get hasNonInteractive => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'hasStatutory')
-  bool get hasStatutory;
+  bool get hasStatutory => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'hasRadioRights')
-  bool get hasRadioRights;
+  bool get hasRadioRights => throw _privateConstructorUsedError;
   @override
   @JsonKey(
       name: 'expirationTime',
       fromJson: readMilliseconds,
       toJson: writeMilliseconds)
-  Duration get expiresIn;
+  Duration get expiresIn => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$RightsInfoCopyWith<_RightsInfo> get copyWith =>
+  _$$_RightsInfoCopyWith<_$_RightsInfo> get copyWith =>
       throw _privateConstructorUsedError;
 }

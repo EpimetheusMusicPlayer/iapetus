@@ -12,7 +12,7 @@ part of 'subsection.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 SuperbrowseSubsection _$SuperbrowseSubsectionFromJson(
     Map<String, dynamic> json) {
@@ -38,109 +38,11 @@ SuperbrowseSubsection _$SuperbrowseSubsectionFromJson(
 }
 
 /// @nodoc
-class _$SuperbrowseSubsectionTearOff {
-  const _$SuperbrowseSubsectionTearOff();
-
-  HorizontalScrollSuperbrowseSubsection horizontalScroll(
-      {@JsonKey(name: SuperbrowseSubsection._sectionIdKey)
-          required String sectionId,
-      @JsonKey(name: SuperbrowseSubsection._scrollTypeKey)
-          ScrollType? scrollType,
-      @JsonKey(name: SuperbrowseSubsection._formFactorsKey)
-          required FormFactors formFactors,
-      @JsonKey(name: SuperbrowseSubsection._itemsKey)
-          required List<SuperbrowseItem> items}) {
-    return HorizontalScrollSuperbrowseSubsection(
-      sectionId: sectionId,
-      scrollType: scrollType,
-      formFactors: formFactors,
-      items: items,
-    );
-  }
-
-  RecentlyPlayedSuperbrowseSubsection recentlyPlayed(
-      {@JsonKey(name: SuperbrowseSubsection._sectionIdKey)
-          required String sectionId,
-      @JsonKey(name: SuperbrowseSubsection._scrollTypeKey)
-          ScrollType? scrollType,
-      @JsonKey(name: SuperbrowseSubsection._formFactorsKey)
-          required FormFactors formFactors,
-      @JsonKey(name: SuperbrowseSubsection._itemsKey)
-          required List<SuperbrowseItem> items,
-      @JsonKey(name: 'newItemTemplate')
-          required Map<String, SuperbrowseItem>? newItemTemplate,
-      @JsonKey(name: 'minRequired')
-          int? minRequired,
-      @JsonKey(name: 'maxRequired')
-          int? maxRequired}) {
-    return RecentlyPlayedSuperbrowseSubsection(
-      sectionId: sectionId,
-      scrollType: scrollType,
-      formFactors: formFactors,
-      items: items,
-      newItemTemplate: newItemTemplate,
-      minRequired: minRequired,
-      maxRequired: maxRequired,
-    );
-  }
-
-  SingletonSuperbrowseSubsection singleton(
-      {@JsonKey(name: SuperbrowseSubsection._sectionIdKey)
-          required String sectionId,
-      @JsonKey(name: SuperbrowseSubsection._formFactorsKey)
-          FormFactors? formFactors,
-      @JsonKey(name: SuperbrowseSubsection._itemsKey)
-          required List<SuperbrowseItem> items}) {
-    return SingletonSuperbrowseSubsection(
-      sectionId: sectionId,
-      formFactors: formFactors,
-      items: items,
-    );
-  }
-
-  VerticalListSuperbrowseSubsection verticalList(
-      {@JsonKey(name: SuperbrowseSubsection._sectionIdKey)
-          required String sectionId,
-      @JsonKey(name: SuperbrowseSubsection._formFactorsKey)
-          FormFactors? formFactors,
-      @JsonKey(name: SuperbrowseSubsection._itemsKey)
-          required List<SuperbrowseItem> items}) {
-    return VerticalListSuperbrowseSubsection(
-      sectionId: sectionId,
-      formFactors: formFactors,
-      items: items,
-    );
-  }
-
-  DisplayAdSuperbrowseSubsection displayAd(
-      {@JsonKey(name: SuperbrowseSubsection._sectionIdKey)
-          required String sectionId,
-      @JsonKey(name: SuperbrowseSubsection._formFactorsKey)
-          required FormFactors formFactors,
-      @JsonKey(name: SuperbrowseSubsection._itemsKey)
-          required List<SuperbrowseItem> items}) {
-    return DisplayAdSuperbrowseSubsection(
-      sectionId: sectionId,
-      formFactors: formFactors,
-      items: items,
-    );
-  }
-
-  SuperbrowseSubsection fromJson(Map<String, Object?> json) {
-    return SuperbrowseSubsection.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $SuperbrowseSubsection = _$SuperbrowseSubsectionTearOff();
-
-/// @nodoc
 mixin _$SuperbrowseSubsection {
   @JsonKey(name: SuperbrowseSubsection._sectionIdKey)
   String get sectionId => throw _privateConstructorUsedError;
   @JsonKey(name: SuperbrowseSubsection._itemsKey)
   List<SuperbrowseItem> get items => throw _privateConstructorUsedError;
-
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(
@@ -383,12 +285,12 @@ class _$SuperbrowseSubsectionCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class $HorizontalScrollSuperbrowseSubsectionCopyWith<$Res>
+abstract class _$$HorizontalScrollSuperbrowseSubsectionCopyWith<$Res>
     implements $SuperbrowseSubsectionCopyWith<$Res> {
-  factory $HorizontalScrollSuperbrowseSubsectionCopyWith(
-          HorizontalScrollSuperbrowseSubsection value,
-          $Res Function(HorizontalScrollSuperbrowseSubsection) then) =
-      _$HorizontalScrollSuperbrowseSubsectionCopyWithImpl<$Res>;
+  factory _$$HorizontalScrollSuperbrowseSubsectionCopyWith(
+          _$HorizontalScrollSuperbrowseSubsection value,
+          $Res Function(_$HorizontalScrollSuperbrowseSubsection) then) =
+      __$$HorizontalScrollSuperbrowseSubsectionCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(name: SuperbrowseSubsection._sectionIdKey)
@@ -404,17 +306,18 @@ abstract class $HorizontalScrollSuperbrowseSubsectionCopyWith<$Res>
 }
 
 /// @nodoc
-class _$HorizontalScrollSuperbrowseSubsectionCopyWithImpl<$Res>
+class __$$HorizontalScrollSuperbrowseSubsectionCopyWithImpl<$Res>
     extends _$SuperbrowseSubsectionCopyWithImpl<$Res>
-    implements $HorizontalScrollSuperbrowseSubsectionCopyWith<$Res> {
-  _$HorizontalScrollSuperbrowseSubsectionCopyWithImpl(
-      HorizontalScrollSuperbrowseSubsection _value,
-      $Res Function(HorizontalScrollSuperbrowseSubsection) _then)
-      : super(_value, (v) => _then(v as HorizontalScrollSuperbrowseSubsection));
+    implements _$$HorizontalScrollSuperbrowseSubsectionCopyWith<$Res> {
+  __$$HorizontalScrollSuperbrowseSubsectionCopyWithImpl(
+      _$HorizontalScrollSuperbrowseSubsection _value,
+      $Res Function(_$HorizontalScrollSuperbrowseSubsection) _then)
+      : super(
+            _value, (v) => _then(v as _$HorizontalScrollSuperbrowseSubsection));
 
   @override
-  HorizontalScrollSuperbrowseSubsection get _value =>
-      super._value as HorizontalScrollSuperbrowseSubsection;
+  _$HorizontalScrollSuperbrowseSubsection get _value =>
+      super._value as _$HorizontalScrollSuperbrowseSubsection;
 
   @override
   $Res call({
@@ -423,7 +326,7 @@ class _$HorizontalScrollSuperbrowseSubsectionCopyWithImpl<$Res>
     Object? formFactors = freezed,
     Object? items = freezed,
   }) {
-    return _then(HorizontalScrollSuperbrowseSubsection(
+    return _then(_$HorizontalScrollSuperbrowseSubsection(
       sectionId: sectionId == freezed
           ? _value.sectionId
           : sectionId // ignore: cast_nullable_to_non_nullable
@@ -437,7 +340,7 @@ class _$HorizontalScrollSuperbrowseSubsectionCopyWithImpl<$Res>
           : formFactors // ignore: cast_nullable_to_non_nullable
               as FormFactors,
       items: items == freezed
-          ? _value.items
+          ? _value._items
           : items // ignore: cast_nullable_to_non_nullable
               as List<SuperbrowseItem>,
     ));
@@ -453,7 +356,6 @@ class _$HorizontalScrollSuperbrowseSubsectionCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-@FreezedUnionValue('horizontalScroll')
 class _$HorizontalScrollSuperbrowseSubsection
     implements HorizontalScrollSuperbrowseSubsection {
   const _$HorizontalScrollSuperbrowseSubsection(
@@ -464,9 +366,10 @@ class _$HorizontalScrollSuperbrowseSubsection
       @JsonKey(name: SuperbrowseSubsection._formFactorsKey)
           required this.formFactors,
       @JsonKey(name: SuperbrowseSubsection._itemsKey)
-          required this.items,
-      String? $type})
-      : $type = $type ?? 'horizontalScroll';
+          required final List<SuperbrowseItem> items,
+      final String? $type})
+      : _items = items,
+        $type = $type ?? 'horizontalScroll';
 
   factory _$HorizontalScrollSuperbrowseSubsection.fromJson(
           Map<String, dynamic> json) =>
@@ -481,9 +384,13 @@ class _$HorizontalScrollSuperbrowseSubsection
   @override
   @JsonKey(name: SuperbrowseSubsection._formFactorsKey)
   final FormFactors formFactors;
+  final List<SuperbrowseItem> _items;
   @override
   @JsonKey(name: SuperbrowseSubsection._itemsKey)
-  final List<SuperbrowseItem> items;
+  List<SuperbrowseItem> get items {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_items);
+  }
 
   @JsonKey(name: 'subsectionType')
   final String $type;
@@ -497,29 +404,30 @@ class _$HorizontalScrollSuperbrowseSubsection
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is HorizontalScrollSuperbrowseSubsection &&
+            other is _$HorizontalScrollSuperbrowseSubsection &&
             const DeepCollectionEquality().equals(other.sectionId, sectionId) &&
             const DeepCollectionEquality()
                 .equals(other.scrollType, scrollType) &&
             const DeepCollectionEquality()
                 .equals(other.formFactors, formFactors) &&
-            const DeepCollectionEquality().equals(other.items, items));
+            const DeepCollectionEquality().equals(other._items, _items));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(sectionId),
       const DeepCollectionEquality().hash(scrollType),
       const DeepCollectionEquality().hash(formFactors),
-      const DeepCollectionEquality().hash(items));
+      const DeepCollectionEquality().hash(_items));
 
   @JsonKey(ignore: true)
   @override
-  $HorizontalScrollSuperbrowseSubsectionCopyWith<
-          HorizontalScrollSuperbrowseSubsection>
-      get copyWith => _$HorizontalScrollSuperbrowseSubsectionCopyWithImpl<
-          HorizontalScrollSuperbrowseSubsection>(this, _$identity);
+  _$$HorizontalScrollSuperbrowseSubsectionCopyWith<
+          _$HorizontalScrollSuperbrowseSubsection>
+      get copyWith => __$$HorizontalScrollSuperbrowseSubsectionCopyWithImpl<
+          _$HorizontalScrollSuperbrowseSubsection>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -751,13 +659,13 @@ abstract class HorizontalScrollSuperbrowseSubsection
     implements SuperbrowseSubsection {
   const factory HorizontalScrollSuperbrowseSubsection(
           {@JsonKey(name: SuperbrowseSubsection._sectionIdKey)
-              required String sectionId,
+              required final String sectionId,
           @JsonKey(name: SuperbrowseSubsection._scrollTypeKey)
-              ScrollType? scrollType,
+              final ScrollType? scrollType,
           @JsonKey(name: SuperbrowseSubsection._formFactorsKey)
-              required FormFactors formFactors,
+              required final FormFactors formFactors,
           @JsonKey(name: SuperbrowseSubsection._itemsKey)
-              required List<SuperbrowseItem> items}) =
+              required final List<SuperbrowseItem> items}) =
       _$HorizontalScrollSuperbrowseSubsection;
 
   factory HorizontalScrollSuperbrowseSubsection.fromJson(
@@ -766,28 +674,28 @@ abstract class HorizontalScrollSuperbrowseSubsection
 
   @override
   @JsonKey(name: SuperbrowseSubsection._sectionIdKey)
-  String get sectionId;
+  String get sectionId => throw _privateConstructorUsedError;
   @JsonKey(name: SuperbrowseSubsection._scrollTypeKey)
-  ScrollType? get scrollType;
+  ScrollType? get scrollType => throw _privateConstructorUsedError;
   @JsonKey(name: SuperbrowseSubsection._formFactorsKey)
-  FormFactors get formFactors;
+  FormFactors get formFactors => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: SuperbrowseSubsection._itemsKey)
-  List<SuperbrowseItem> get items;
+  List<SuperbrowseItem> get items => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  $HorizontalScrollSuperbrowseSubsectionCopyWith<
-          HorizontalScrollSuperbrowseSubsection>
+  _$$HorizontalScrollSuperbrowseSubsectionCopyWith<
+          _$HorizontalScrollSuperbrowseSubsection>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $RecentlyPlayedSuperbrowseSubsectionCopyWith<$Res>
+abstract class _$$RecentlyPlayedSuperbrowseSubsectionCopyWith<$Res>
     implements $SuperbrowseSubsectionCopyWith<$Res> {
-  factory $RecentlyPlayedSuperbrowseSubsectionCopyWith(
-          RecentlyPlayedSuperbrowseSubsection value,
-          $Res Function(RecentlyPlayedSuperbrowseSubsection) then) =
-      _$RecentlyPlayedSuperbrowseSubsectionCopyWithImpl<$Res>;
+  factory _$$RecentlyPlayedSuperbrowseSubsectionCopyWith(
+          _$RecentlyPlayedSuperbrowseSubsection value,
+          $Res Function(_$RecentlyPlayedSuperbrowseSubsection) then) =
+      __$$RecentlyPlayedSuperbrowseSubsectionCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(name: SuperbrowseSubsection._sectionIdKey)
@@ -809,17 +717,17 @@ abstract class $RecentlyPlayedSuperbrowseSubsectionCopyWith<$Res>
 }
 
 /// @nodoc
-class _$RecentlyPlayedSuperbrowseSubsectionCopyWithImpl<$Res>
+class __$$RecentlyPlayedSuperbrowseSubsectionCopyWithImpl<$Res>
     extends _$SuperbrowseSubsectionCopyWithImpl<$Res>
-    implements $RecentlyPlayedSuperbrowseSubsectionCopyWith<$Res> {
-  _$RecentlyPlayedSuperbrowseSubsectionCopyWithImpl(
-      RecentlyPlayedSuperbrowseSubsection _value,
-      $Res Function(RecentlyPlayedSuperbrowseSubsection) _then)
-      : super(_value, (v) => _then(v as RecentlyPlayedSuperbrowseSubsection));
+    implements _$$RecentlyPlayedSuperbrowseSubsectionCopyWith<$Res> {
+  __$$RecentlyPlayedSuperbrowseSubsectionCopyWithImpl(
+      _$RecentlyPlayedSuperbrowseSubsection _value,
+      $Res Function(_$RecentlyPlayedSuperbrowseSubsection) _then)
+      : super(_value, (v) => _then(v as _$RecentlyPlayedSuperbrowseSubsection));
 
   @override
-  RecentlyPlayedSuperbrowseSubsection get _value =>
-      super._value as RecentlyPlayedSuperbrowseSubsection;
+  _$RecentlyPlayedSuperbrowseSubsection get _value =>
+      super._value as _$RecentlyPlayedSuperbrowseSubsection;
 
   @override
   $Res call({
@@ -831,7 +739,7 @@ class _$RecentlyPlayedSuperbrowseSubsectionCopyWithImpl<$Res>
     Object? minRequired = freezed,
     Object? maxRequired = freezed,
   }) {
-    return _then(RecentlyPlayedSuperbrowseSubsection(
+    return _then(_$RecentlyPlayedSuperbrowseSubsection(
       sectionId: sectionId == freezed
           ? _value.sectionId
           : sectionId // ignore: cast_nullable_to_non_nullable
@@ -845,11 +753,11 @@ class _$RecentlyPlayedSuperbrowseSubsectionCopyWithImpl<$Res>
           : formFactors // ignore: cast_nullable_to_non_nullable
               as FormFactors,
       items: items == freezed
-          ? _value.items
+          ? _value._items
           : items // ignore: cast_nullable_to_non_nullable
               as List<SuperbrowseItem>,
       newItemTemplate: newItemTemplate == freezed
-          ? _value.newItemTemplate
+          ? _value._newItemTemplate
           : newItemTemplate // ignore: cast_nullable_to_non_nullable
               as Map<String, SuperbrowseItem>?,
       minRequired: minRequired == freezed
@@ -873,7 +781,6 @@ class _$RecentlyPlayedSuperbrowseSubsectionCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-@FreezedUnionValue('recentlyPlayed')
 class _$RecentlyPlayedSuperbrowseSubsection
     implements RecentlyPlayedSuperbrowseSubsection {
   const _$RecentlyPlayedSuperbrowseSubsection(
@@ -884,15 +791,17 @@ class _$RecentlyPlayedSuperbrowseSubsection
       @JsonKey(name: SuperbrowseSubsection._formFactorsKey)
           required this.formFactors,
       @JsonKey(name: SuperbrowseSubsection._itemsKey)
-          required this.items,
+          required final List<SuperbrowseItem> items,
       @JsonKey(name: 'newItemTemplate')
-          required this.newItemTemplate,
+          required final Map<String, SuperbrowseItem>? newItemTemplate,
       @JsonKey(name: 'minRequired')
           this.minRequired,
       @JsonKey(name: 'maxRequired')
           this.maxRequired,
-      String? $type})
-      : $type = $type ?? 'recentlyPlayed';
+      final String? $type})
+      : _items = items,
+        _newItemTemplate = newItemTemplate,
+        $type = $type ?? 'recentlyPlayed';
 
   factory _$RecentlyPlayedSuperbrowseSubsection.fromJson(
           Map<String, dynamic> json) =>
@@ -907,12 +816,24 @@ class _$RecentlyPlayedSuperbrowseSubsection
   @override
   @JsonKey(name: SuperbrowseSubsection._formFactorsKey)
   final FormFactors formFactors;
+  final List<SuperbrowseItem> _items;
   @override
   @JsonKey(name: SuperbrowseSubsection._itemsKey)
-  final List<SuperbrowseItem> items;
+  List<SuperbrowseItem> get items {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_items);
+  }
+
+  final Map<String, SuperbrowseItem>? _newItemTemplate;
   @override
   @JsonKey(name: 'newItemTemplate')
-  final Map<String, SuperbrowseItem>? newItemTemplate;
+  Map<String, SuperbrowseItem>? get newItemTemplate {
+    final value = _newItemTemplate;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableMapView(value);
+  }
+
   @override
   @JsonKey(name: 'minRequired')
   final int? minRequired;
@@ -932,38 +853,39 @@ class _$RecentlyPlayedSuperbrowseSubsection
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is RecentlyPlayedSuperbrowseSubsection &&
+            other is _$RecentlyPlayedSuperbrowseSubsection &&
             const DeepCollectionEquality().equals(other.sectionId, sectionId) &&
             const DeepCollectionEquality()
                 .equals(other.scrollType, scrollType) &&
             const DeepCollectionEquality()
                 .equals(other.formFactors, formFactors) &&
-            const DeepCollectionEquality().equals(other.items, items) &&
+            const DeepCollectionEquality().equals(other._items, _items) &&
             const DeepCollectionEquality()
-                .equals(other.newItemTemplate, newItemTemplate) &&
+                .equals(other._newItemTemplate, _newItemTemplate) &&
             const DeepCollectionEquality()
                 .equals(other.minRequired, minRequired) &&
             const DeepCollectionEquality()
                 .equals(other.maxRequired, maxRequired));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(sectionId),
       const DeepCollectionEquality().hash(scrollType),
       const DeepCollectionEquality().hash(formFactors),
-      const DeepCollectionEquality().hash(items),
-      const DeepCollectionEquality().hash(newItemTemplate),
+      const DeepCollectionEquality().hash(_items),
+      const DeepCollectionEquality().hash(_newItemTemplate),
       const DeepCollectionEquality().hash(minRequired),
       const DeepCollectionEquality().hash(maxRequired));
 
   @JsonKey(ignore: true)
   @override
-  $RecentlyPlayedSuperbrowseSubsectionCopyWith<
-          RecentlyPlayedSuperbrowseSubsection>
-      get copyWith => _$RecentlyPlayedSuperbrowseSubsectionCopyWithImpl<
-          RecentlyPlayedSuperbrowseSubsection>(this, _$identity);
+  _$$RecentlyPlayedSuperbrowseSubsectionCopyWith<
+          _$RecentlyPlayedSuperbrowseSubsection>
+      get copyWith => __$$RecentlyPlayedSuperbrowseSubsectionCopyWithImpl<
+          _$RecentlyPlayedSuperbrowseSubsection>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1198,19 +1120,19 @@ abstract class RecentlyPlayedSuperbrowseSubsection
     implements SuperbrowseSubsection {
   const factory RecentlyPlayedSuperbrowseSubsection(
       {@JsonKey(name: SuperbrowseSubsection._sectionIdKey)
-          required String sectionId,
+          required final String sectionId,
       @JsonKey(name: SuperbrowseSubsection._scrollTypeKey)
-          ScrollType? scrollType,
+          final ScrollType? scrollType,
       @JsonKey(name: SuperbrowseSubsection._formFactorsKey)
-          required FormFactors formFactors,
+          required final FormFactors formFactors,
       @JsonKey(name: SuperbrowseSubsection._itemsKey)
-          required List<SuperbrowseItem> items,
+          required final List<SuperbrowseItem> items,
       @JsonKey(name: 'newItemTemplate')
-          required Map<String, SuperbrowseItem>? newItemTemplate,
+          required final Map<String, SuperbrowseItem>? newItemTemplate,
       @JsonKey(name: 'minRequired')
-          int? minRequired,
+          final int? minRequired,
       @JsonKey(name: 'maxRequired')
-          int? maxRequired}) = _$RecentlyPlayedSuperbrowseSubsection;
+          final int? maxRequired}) = _$RecentlyPlayedSuperbrowseSubsection;
 
   factory RecentlyPlayedSuperbrowseSubsection.fromJson(
           Map<String, dynamic> json) =
@@ -1218,34 +1140,35 @@ abstract class RecentlyPlayedSuperbrowseSubsection
 
   @override
   @JsonKey(name: SuperbrowseSubsection._sectionIdKey)
-  String get sectionId;
+  String get sectionId => throw _privateConstructorUsedError;
   @JsonKey(name: SuperbrowseSubsection._scrollTypeKey)
-  ScrollType? get scrollType;
+  ScrollType? get scrollType => throw _privateConstructorUsedError;
   @JsonKey(name: SuperbrowseSubsection._formFactorsKey)
-  FormFactors get formFactors;
+  FormFactors get formFactors => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: SuperbrowseSubsection._itemsKey)
-  List<SuperbrowseItem> get items;
+  List<SuperbrowseItem> get items => throw _privateConstructorUsedError;
   @JsonKey(name: 'newItemTemplate')
-  Map<String, SuperbrowseItem>? get newItemTemplate;
+  Map<String, SuperbrowseItem>? get newItemTemplate =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: 'minRequired')
-  int? get minRequired;
+  int? get minRequired => throw _privateConstructorUsedError;
   @JsonKey(name: 'maxRequired')
-  int? get maxRequired;
+  int? get maxRequired => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  $RecentlyPlayedSuperbrowseSubsectionCopyWith<
-          RecentlyPlayedSuperbrowseSubsection>
+  _$$RecentlyPlayedSuperbrowseSubsectionCopyWith<
+          _$RecentlyPlayedSuperbrowseSubsection>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $SingletonSuperbrowseSubsectionCopyWith<$Res>
+abstract class _$$SingletonSuperbrowseSubsectionCopyWith<$Res>
     implements $SuperbrowseSubsectionCopyWith<$Res> {
-  factory $SingletonSuperbrowseSubsectionCopyWith(
-          SingletonSuperbrowseSubsection value,
-          $Res Function(SingletonSuperbrowseSubsection) then) =
-      _$SingletonSuperbrowseSubsectionCopyWithImpl<$Res>;
+  factory _$$SingletonSuperbrowseSubsectionCopyWith(
+          _$SingletonSuperbrowseSubsection value,
+          $Res Function(_$SingletonSuperbrowseSubsection) then) =
+      __$$SingletonSuperbrowseSubsectionCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(name: SuperbrowseSubsection._sectionIdKey)
@@ -1259,17 +1182,17 @@ abstract class $SingletonSuperbrowseSubsectionCopyWith<$Res>
 }
 
 /// @nodoc
-class _$SingletonSuperbrowseSubsectionCopyWithImpl<$Res>
+class __$$SingletonSuperbrowseSubsectionCopyWithImpl<$Res>
     extends _$SuperbrowseSubsectionCopyWithImpl<$Res>
-    implements $SingletonSuperbrowseSubsectionCopyWith<$Res> {
-  _$SingletonSuperbrowseSubsectionCopyWithImpl(
-      SingletonSuperbrowseSubsection _value,
-      $Res Function(SingletonSuperbrowseSubsection) _then)
-      : super(_value, (v) => _then(v as SingletonSuperbrowseSubsection));
+    implements _$$SingletonSuperbrowseSubsectionCopyWith<$Res> {
+  __$$SingletonSuperbrowseSubsectionCopyWithImpl(
+      _$SingletonSuperbrowseSubsection _value,
+      $Res Function(_$SingletonSuperbrowseSubsection) _then)
+      : super(_value, (v) => _then(v as _$SingletonSuperbrowseSubsection));
 
   @override
-  SingletonSuperbrowseSubsection get _value =>
-      super._value as SingletonSuperbrowseSubsection;
+  _$SingletonSuperbrowseSubsection get _value =>
+      super._value as _$SingletonSuperbrowseSubsection;
 
   @override
   $Res call({
@@ -1277,7 +1200,7 @@ class _$SingletonSuperbrowseSubsectionCopyWithImpl<$Res>
     Object? formFactors = freezed,
     Object? items = freezed,
   }) {
-    return _then(SingletonSuperbrowseSubsection(
+    return _then(_$SingletonSuperbrowseSubsection(
       sectionId: sectionId == freezed
           ? _value.sectionId
           : sectionId // ignore: cast_nullable_to_non_nullable
@@ -1287,7 +1210,7 @@ class _$SingletonSuperbrowseSubsectionCopyWithImpl<$Res>
           : formFactors // ignore: cast_nullable_to_non_nullable
               as FormFactors?,
       items: items == freezed
-          ? _value.items
+          ? _value._items
           : items // ignore: cast_nullable_to_non_nullable
               as List<SuperbrowseItem>,
     ));
@@ -1307,7 +1230,6 @@ class _$SingletonSuperbrowseSubsectionCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-@FreezedUnionValue('singleton')
 class _$SingletonSuperbrowseSubsection
     implements SingletonSuperbrowseSubsection {
   const _$SingletonSuperbrowseSubsection(
@@ -1316,9 +1238,10 @@ class _$SingletonSuperbrowseSubsection
       @JsonKey(name: SuperbrowseSubsection._formFactorsKey)
           this.formFactors,
       @JsonKey(name: SuperbrowseSubsection._itemsKey)
-          required this.items,
-      String? $type})
-      : $type = $type ?? 'singleton';
+          required final List<SuperbrowseItem> items,
+      final String? $type})
+      : _items = items,
+        $type = $type ?? 'singleton';
 
   factory _$SingletonSuperbrowseSubsection.fromJson(
           Map<String, dynamic> json) =>
@@ -1330,9 +1253,13 @@ class _$SingletonSuperbrowseSubsection
   @override
   @JsonKey(name: SuperbrowseSubsection._formFactorsKey)
   final FormFactors? formFactors;
+  final List<SuperbrowseItem> _items;
   @override
   @JsonKey(name: SuperbrowseSubsection._itemsKey)
-  final List<SuperbrowseItem> items;
+  List<SuperbrowseItem> get items {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_items);
+  }
 
   @JsonKey(name: 'subsectionType')
   final String $type;
@@ -1346,25 +1273,26 @@ class _$SingletonSuperbrowseSubsection
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is SingletonSuperbrowseSubsection &&
+            other is _$SingletonSuperbrowseSubsection &&
             const DeepCollectionEquality().equals(other.sectionId, sectionId) &&
             const DeepCollectionEquality()
                 .equals(other.formFactors, formFactors) &&
-            const DeepCollectionEquality().equals(other.items, items));
+            const DeepCollectionEquality().equals(other._items, _items));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(sectionId),
       const DeepCollectionEquality().hash(formFactors),
-      const DeepCollectionEquality().hash(items));
+      const DeepCollectionEquality().hash(_items));
 
   @JsonKey(ignore: true)
   @override
-  $SingletonSuperbrowseSubsectionCopyWith<SingletonSuperbrowseSubsection>
-      get copyWith => _$SingletonSuperbrowseSubsectionCopyWithImpl<
-          SingletonSuperbrowseSubsection>(this, _$identity);
+  _$$SingletonSuperbrowseSubsectionCopyWith<_$SingletonSuperbrowseSubsection>
+      get copyWith => __$$SingletonSuperbrowseSubsectionCopyWithImpl<
+          _$SingletonSuperbrowseSubsection>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1595,11 +1523,11 @@ class _$SingletonSuperbrowseSubsection
 abstract class SingletonSuperbrowseSubsection implements SuperbrowseSubsection {
   const factory SingletonSuperbrowseSubsection(
           {@JsonKey(name: SuperbrowseSubsection._sectionIdKey)
-              required String sectionId,
+              required final String sectionId,
           @JsonKey(name: SuperbrowseSubsection._formFactorsKey)
-              FormFactors? formFactors,
+              final FormFactors? formFactors,
           @JsonKey(name: SuperbrowseSubsection._itemsKey)
-              required List<SuperbrowseItem> items}) =
+              required final List<SuperbrowseItem> items}) =
       _$SingletonSuperbrowseSubsection;
 
   factory SingletonSuperbrowseSubsection.fromJson(Map<String, dynamic> json) =
@@ -1607,25 +1535,25 @@ abstract class SingletonSuperbrowseSubsection implements SuperbrowseSubsection {
 
   @override
   @JsonKey(name: SuperbrowseSubsection._sectionIdKey)
-  String get sectionId;
+  String get sectionId => throw _privateConstructorUsedError;
   @JsonKey(name: SuperbrowseSubsection._formFactorsKey)
-  FormFactors? get formFactors;
+  FormFactors? get formFactors => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: SuperbrowseSubsection._itemsKey)
-  List<SuperbrowseItem> get items;
+  List<SuperbrowseItem> get items => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  $SingletonSuperbrowseSubsectionCopyWith<SingletonSuperbrowseSubsection>
+  _$$SingletonSuperbrowseSubsectionCopyWith<_$SingletonSuperbrowseSubsection>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $VerticalListSuperbrowseSubsectionCopyWith<$Res>
+abstract class _$$VerticalListSuperbrowseSubsectionCopyWith<$Res>
     implements $SuperbrowseSubsectionCopyWith<$Res> {
-  factory $VerticalListSuperbrowseSubsectionCopyWith(
-          VerticalListSuperbrowseSubsection value,
-          $Res Function(VerticalListSuperbrowseSubsection) then) =
-      _$VerticalListSuperbrowseSubsectionCopyWithImpl<$Res>;
+  factory _$$VerticalListSuperbrowseSubsectionCopyWith(
+          _$VerticalListSuperbrowseSubsection value,
+          $Res Function(_$VerticalListSuperbrowseSubsection) then) =
+      __$$VerticalListSuperbrowseSubsectionCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(name: SuperbrowseSubsection._sectionIdKey)
@@ -1639,17 +1567,17 @@ abstract class $VerticalListSuperbrowseSubsectionCopyWith<$Res>
 }
 
 /// @nodoc
-class _$VerticalListSuperbrowseSubsectionCopyWithImpl<$Res>
+class __$$VerticalListSuperbrowseSubsectionCopyWithImpl<$Res>
     extends _$SuperbrowseSubsectionCopyWithImpl<$Res>
-    implements $VerticalListSuperbrowseSubsectionCopyWith<$Res> {
-  _$VerticalListSuperbrowseSubsectionCopyWithImpl(
-      VerticalListSuperbrowseSubsection _value,
-      $Res Function(VerticalListSuperbrowseSubsection) _then)
-      : super(_value, (v) => _then(v as VerticalListSuperbrowseSubsection));
+    implements _$$VerticalListSuperbrowseSubsectionCopyWith<$Res> {
+  __$$VerticalListSuperbrowseSubsectionCopyWithImpl(
+      _$VerticalListSuperbrowseSubsection _value,
+      $Res Function(_$VerticalListSuperbrowseSubsection) _then)
+      : super(_value, (v) => _then(v as _$VerticalListSuperbrowseSubsection));
 
   @override
-  VerticalListSuperbrowseSubsection get _value =>
-      super._value as VerticalListSuperbrowseSubsection;
+  _$VerticalListSuperbrowseSubsection get _value =>
+      super._value as _$VerticalListSuperbrowseSubsection;
 
   @override
   $Res call({
@@ -1657,7 +1585,7 @@ class _$VerticalListSuperbrowseSubsectionCopyWithImpl<$Res>
     Object? formFactors = freezed,
     Object? items = freezed,
   }) {
-    return _then(VerticalListSuperbrowseSubsection(
+    return _then(_$VerticalListSuperbrowseSubsection(
       sectionId: sectionId == freezed
           ? _value.sectionId
           : sectionId // ignore: cast_nullable_to_non_nullable
@@ -1667,7 +1595,7 @@ class _$VerticalListSuperbrowseSubsectionCopyWithImpl<$Res>
           : formFactors // ignore: cast_nullable_to_non_nullable
               as FormFactors?,
       items: items == freezed
-          ? _value.items
+          ? _value._items
           : items // ignore: cast_nullable_to_non_nullable
               as List<SuperbrowseItem>,
     ));
@@ -1687,7 +1615,6 @@ class _$VerticalListSuperbrowseSubsectionCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-@FreezedUnionValue('verticalList')
 class _$VerticalListSuperbrowseSubsection
     implements VerticalListSuperbrowseSubsection {
   const _$VerticalListSuperbrowseSubsection(
@@ -1696,9 +1623,10 @@ class _$VerticalListSuperbrowseSubsection
       @JsonKey(name: SuperbrowseSubsection._formFactorsKey)
           this.formFactors,
       @JsonKey(name: SuperbrowseSubsection._itemsKey)
-          required this.items,
-      String? $type})
-      : $type = $type ?? 'verticalList';
+          required final List<SuperbrowseItem> items,
+      final String? $type})
+      : _items = items,
+        $type = $type ?? 'verticalList';
 
   factory _$VerticalListSuperbrowseSubsection.fromJson(
           Map<String, dynamic> json) =>
@@ -1710,9 +1638,13 @@ class _$VerticalListSuperbrowseSubsection
   @override
   @JsonKey(name: SuperbrowseSubsection._formFactorsKey)
   final FormFactors? formFactors;
+  final List<SuperbrowseItem> _items;
   @override
   @JsonKey(name: SuperbrowseSubsection._itemsKey)
-  final List<SuperbrowseItem> items;
+  List<SuperbrowseItem> get items {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_items);
+  }
 
   @JsonKey(name: 'subsectionType')
   final String $type;
@@ -1726,25 +1658,27 @@ class _$VerticalListSuperbrowseSubsection
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is VerticalListSuperbrowseSubsection &&
+            other is _$VerticalListSuperbrowseSubsection &&
             const DeepCollectionEquality().equals(other.sectionId, sectionId) &&
             const DeepCollectionEquality()
                 .equals(other.formFactors, formFactors) &&
-            const DeepCollectionEquality().equals(other.items, items));
+            const DeepCollectionEquality().equals(other._items, _items));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(sectionId),
       const DeepCollectionEquality().hash(formFactors),
-      const DeepCollectionEquality().hash(items));
+      const DeepCollectionEquality().hash(_items));
 
   @JsonKey(ignore: true)
   @override
-  $VerticalListSuperbrowseSubsectionCopyWith<VerticalListSuperbrowseSubsection>
-      get copyWith => _$VerticalListSuperbrowseSubsectionCopyWithImpl<
-          VerticalListSuperbrowseSubsection>(this, _$identity);
+  _$$VerticalListSuperbrowseSubsectionCopyWith<
+          _$VerticalListSuperbrowseSubsection>
+      get copyWith => __$$VerticalListSuperbrowseSubsectionCopyWithImpl<
+          _$VerticalListSuperbrowseSubsection>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1976,11 +1910,11 @@ abstract class VerticalListSuperbrowseSubsection
     implements SuperbrowseSubsection {
   const factory VerticalListSuperbrowseSubsection(
           {@JsonKey(name: SuperbrowseSubsection._sectionIdKey)
-              required String sectionId,
+              required final String sectionId,
           @JsonKey(name: SuperbrowseSubsection._formFactorsKey)
-              FormFactors? formFactors,
+              final FormFactors? formFactors,
           @JsonKey(name: SuperbrowseSubsection._itemsKey)
-              required List<SuperbrowseItem> items}) =
+              required final List<SuperbrowseItem> items}) =
       _$VerticalListSuperbrowseSubsection;
 
   factory VerticalListSuperbrowseSubsection.fromJson(
@@ -1988,25 +1922,26 @@ abstract class VerticalListSuperbrowseSubsection
 
   @override
   @JsonKey(name: SuperbrowseSubsection._sectionIdKey)
-  String get sectionId;
+  String get sectionId => throw _privateConstructorUsedError;
   @JsonKey(name: SuperbrowseSubsection._formFactorsKey)
-  FormFactors? get formFactors;
+  FormFactors? get formFactors => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: SuperbrowseSubsection._itemsKey)
-  List<SuperbrowseItem> get items;
+  List<SuperbrowseItem> get items => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  $VerticalListSuperbrowseSubsectionCopyWith<VerticalListSuperbrowseSubsection>
+  _$$VerticalListSuperbrowseSubsectionCopyWith<
+          _$VerticalListSuperbrowseSubsection>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $DisplayAdSuperbrowseSubsectionCopyWith<$Res>
+abstract class _$$DisplayAdSuperbrowseSubsectionCopyWith<$Res>
     implements $SuperbrowseSubsectionCopyWith<$Res> {
-  factory $DisplayAdSuperbrowseSubsectionCopyWith(
-          DisplayAdSuperbrowseSubsection value,
-          $Res Function(DisplayAdSuperbrowseSubsection) then) =
-      _$DisplayAdSuperbrowseSubsectionCopyWithImpl<$Res>;
+  factory _$$DisplayAdSuperbrowseSubsectionCopyWith(
+          _$DisplayAdSuperbrowseSubsection value,
+          $Res Function(_$DisplayAdSuperbrowseSubsection) then) =
+      __$$DisplayAdSuperbrowseSubsectionCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(name: SuperbrowseSubsection._sectionIdKey)
@@ -2020,17 +1955,17 @@ abstract class $DisplayAdSuperbrowseSubsectionCopyWith<$Res>
 }
 
 /// @nodoc
-class _$DisplayAdSuperbrowseSubsectionCopyWithImpl<$Res>
+class __$$DisplayAdSuperbrowseSubsectionCopyWithImpl<$Res>
     extends _$SuperbrowseSubsectionCopyWithImpl<$Res>
-    implements $DisplayAdSuperbrowseSubsectionCopyWith<$Res> {
-  _$DisplayAdSuperbrowseSubsectionCopyWithImpl(
-      DisplayAdSuperbrowseSubsection _value,
-      $Res Function(DisplayAdSuperbrowseSubsection) _then)
-      : super(_value, (v) => _then(v as DisplayAdSuperbrowseSubsection));
+    implements _$$DisplayAdSuperbrowseSubsectionCopyWith<$Res> {
+  __$$DisplayAdSuperbrowseSubsectionCopyWithImpl(
+      _$DisplayAdSuperbrowseSubsection _value,
+      $Res Function(_$DisplayAdSuperbrowseSubsection) _then)
+      : super(_value, (v) => _then(v as _$DisplayAdSuperbrowseSubsection));
 
   @override
-  DisplayAdSuperbrowseSubsection get _value =>
-      super._value as DisplayAdSuperbrowseSubsection;
+  _$DisplayAdSuperbrowseSubsection get _value =>
+      super._value as _$DisplayAdSuperbrowseSubsection;
 
   @override
   $Res call({
@@ -2038,7 +1973,7 @@ class _$DisplayAdSuperbrowseSubsectionCopyWithImpl<$Res>
     Object? formFactors = freezed,
     Object? items = freezed,
   }) {
-    return _then(DisplayAdSuperbrowseSubsection(
+    return _then(_$DisplayAdSuperbrowseSubsection(
       sectionId: sectionId == freezed
           ? _value.sectionId
           : sectionId // ignore: cast_nullable_to_non_nullable
@@ -2048,7 +1983,7 @@ class _$DisplayAdSuperbrowseSubsectionCopyWithImpl<$Res>
           : formFactors // ignore: cast_nullable_to_non_nullable
               as FormFactors,
       items: items == freezed
-          ? _value.items
+          ? _value._items
           : items // ignore: cast_nullable_to_non_nullable
               as List<SuperbrowseItem>,
     ));
@@ -2064,7 +1999,6 @@ class _$DisplayAdSuperbrowseSubsectionCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-@FreezedUnionValue('displayAd')
 class _$DisplayAdSuperbrowseSubsection
     implements DisplayAdSuperbrowseSubsection {
   const _$DisplayAdSuperbrowseSubsection(
@@ -2073,9 +2007,10 @@ class _$DisplayAdSuperbrowseSubsection
       @JsonKey(name: SuperbrowseSubsection._formFactorsKey)
           required this.formFactors,
       @JsonKey(name: SuperbrowseSubsection._itemsKey)
-          required this.items,
-      String? $type})
-      : $type = $type ?? 'displayAd';
+          required final List<SuperbrowseItem> items,
+      final String? $type})
+      : _items = items,
+        $type = $type ?? 'displayAd';
 
   factory _$DisplayAdSuperbrowseSubsection.fromJson(
           Map<String, dynamic> json) =>
@@ -2087,9 +2022,13 @@ class _$DisplayAdSuperbrowseSubsection
   @override
   @JsonKey(name: SuperbrowseSubsection._formFactorsKey)
   final FormFactors formFactors;
+  final List<SuperbrowseItem> _items;
   @override
   @JsonKey(name: SuperbrowseSubsection._itemsKey)
-  final List<SuperbrowseItem> items;
+  List<SuperbrowseItem> get items {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_items);
+  }
 
   @JsonKey(name: 'subsectionType')
   final String $type;
@@ -2103,25 +2042,26 @@ class _$DisplayAdSuperbrowseSubsection
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is DisplayAdSuperbrowseSubsection &&
+            other is _$DisplayAdSuperbrowseSubsection &&
             const DeepCollectionEquality().equals(other.sectionId, sectionId) &&
             const DeepCollectionEquality()
                 .equals(other.formFactors, formFactors) &&
-            const DeepCollectionEquality().equals(other.items, items));
+            const DeepCollectionEquality().equals(other._items, _items));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(sectionId),
       const DeepCollectionEquality().hash(formFactors),
-      const DeepCollectionEquality().hash(items));
+      const DeepCollectionEquality().hash(_items));
 
   @JsonKey(ignore: true)
   @override
-  $DisplayAdSuperbrowseSubsectionCopyWith<DisplayAdSuperbrowseSubsection>
-      get copyWith => _$DisplayAdSuperbrowseSubsectionCopyWithImpl<
-          DisplayAdSuperbrowseSubsection>(this, _$identity);
+  _$$DisplayAdSuperbrowseSubsectionCopyWith<_$DisplayAdSuperbrowseSubsection>
+      get copyWith => __$$DisplayAdSuperbrowseSubsectionCopyWithImpl<
+          _$DisplayAdSuperbrowseSubsection>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -2352,11 +2292,11 @@ class _$DisplayAdSuperbrowseSubsection
 abstract class DisplayAdSuperbrowseSubsection implements SuperbrowseSubsection {
   const factory DisplayAdSuperbrowseSubsection(
           {@JsonKey(name: SuperbrowseSubsection._sectionIdKey)
-              required String sectionId,
+              required final String sectionId,
           @JsonKey(name: SuperbrowseSubsection._formFactorsKey)
-              required FormFactors formFactors,
+              required final FormFactors formFactors,
           @JsonKey(name: SuperbrowseSubsection._itemsKey)
-              required List<SuperbrowseItem> items}) =
+              required final List<SuperbrowseItem> items}) =
       _$DisplayAdSuperbrowseSubsection;
 
   factory DisplayAdSuperbrowseSubsection.fromJson(Map<String, dynamic> json) =
@@ -2364,14 +2304,14 @@ abstract class DisplayAdSuperbrowseSubsection implements SuperbrowseSubsection {
 
   @override
   @JsonKey(name: SuperbrowseSubsection._sectionIdKey)
-  String get sectionId;
+  String get sectionId => throw _privateConstructorUsedError;
   @JsonKey(name: SuperbrowseSubsection._formFactorsKey)
-  FormFactors get formFactors;
+  FormFactors get formFactors => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: SuperbrowseSubsection._itemsKey)
-  List<SuperbrowseItem> get items;
+  List<SuperbrowseItem> get items => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  $DisplayAdSuperbrowseSubsectionCopyWith<DisplayAdSuperbrowseSubsection>
+  _$$DisplayAdSuperbrowseSubsectionCopyWith<_$DisplayAdSuperbrowseSubsection>
       get copyWith => throw _privateConstructorUsedError;
 }

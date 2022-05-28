@@ -12,36 +12,11 @@ part of 'audio_url_data.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 AudioUrlData _$AudioUrlDataFromJson(Map<String, dynamic> json) {
   return _AudioUrlData.fromJson(json);
 }
-
-/// @nodoc
-class _$AudioUrlDataTearOff {
-  const _$AudioUrlDataTearOff();
-
-  _AudioUrlData call(
-      {@JsonKey(name: 'audioToken') required String audioToken,
-      @JsonKey(name: 'bitrate') required String bitrate,
-      @JsonKey(name: 'encoding') required String encoding,
-      @JsonKey(name: 'audioUrl') required Uri audioUrl}) {
-    return _AudioUrlData(
-      audioToken: audioToken,
-      bitrate: bitrate,
-      encoding: encoding,
-      audioUrl: audioUrl,
-    );
-  }
-
-  AudioUrlData fromJson(Map<String, Object?> json) {
-    return AudioUrlData.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $AudioUrlData = _$AudioUrlDataTearOff();
 
 /// @nodoc
 mixin _$AudioUrlData {
@@ -109,11 +84,11 @@ class _$AudioUrlDataCopyWithImpl<$Res> implements $AudioUrlDataCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$AudioUrlDataCopyWith<$Res>
+abstract class _$$_AudioUrlDataCopyWith<$Res>
     implements $AudioUrlDataCopyWith<$Res> {
-  factory _$AudioUrlDataCopyWith(
-          _AudioUrlData value, $Res Function(_AudioUrlData) then) =
-      __$AudioUrlDataCopyWithImpl<$Res>;
+  factory _$$_AudioUrlDataCopyWith(
+          _$_AudioUrlData value, $Res Function(_$_AudioUrlData) then) =
+      __$$_AudioUrlDataCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(name: 'audioToken') String audioToken,
@@ -123,14 +98,15 @@ abstract class _$AudioUrlDataCopyWith<$Res>
 }
 
 /// @nodoc
-class __$AudioUrlDataCopyWithImpl<$Res> extends _$AudioUrlDataCopyWithImpl<$Res>
-    implements _$AudioUrlDataCopyWith<$Res> {
-  __$AudioUrlDataCopyWithImpl(
-      _AudioUrlData _value, $Res Function(_AudioUrlData) _then)
-      : super(_value, (v) => _then(v as _AudioUrlData));
+class __$$_AudioUrlDataCopyWithImpl<$Res>
+    extends _$AudioUrlDataCopyWithImpl<$Res>
+    implements _$$_AudioUrlDataCopyWith<$Res> {
+  __$$_AudioUrlDataCopyWithImpl(
+      _$_AudioUrlData _value, $Res Function(_$_AudioUrlData) _then)
+      : super(_value, (v) => _then(v as _$_AudioUrlData));
 
   @override
-  _AudioUrlData get _value => super._value as _AudioUrlData;
+  _$_AudioUrlData get _value => super._value as _$_AudioUrlData;
 
   @override
   $Res call({
@@ -139,7 +115,7 @@ class __$AudioUrlDataCopyWithImpl<$Res> extends _$AudioUrlDataCopyWithImpl<$Res>
     Object? encoding = freezed,
     Object? audioUrl = freezed,
   }) {
-    return _then(_AudioUrlData(
+    return _then(_$_AudioUrlData(
       audioToken: audioToken == freezed
           ? _value.audioToken
           : audioToken // ignore: cast_nullable_to_non_nullable
@@ -194,7 +170,7 @@ class _$_AudioUrlData implements _AudioUrlData {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _AudioUrlData &&
+            other is _$_AudioUrlData &&
             const DeepCollectionEquality()
                 .equals(other.audioToken, audioToken) &&
             const DeepCollectionEquality().equals(other.bitrate, bitrate) &&
@@ -202,6 +178,7 @@ class _$_AudioUrlData implements _AudioUrlData {
             const DeepCollectionEquality().equals(other.audioUrl, audioUrl));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -212,8 +189,8 @@ class _$_AudioUrlData implements _AudioUrlData {
 
   @JsonKey(ignore: true)
   @override
-  _$AudioUrlDataCopyWith<_AudioUrlData> get copyWith =>
-      __$AudioUrlDataCopyWithImpl<_AudioUrlData>(this, _$identity);
+  _$$_AudioUrlDataCopyWith<_$_AudioUrlData> get copyWith =>
+      __$$_AudioUrlDataCopyWithImpl<_$_AudioUrlData>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -223,28 +200,29 @@ class _$_AudioUrlData implements _AudioUrlData {
 
 abstract class _AudioUrlData implements AudioUrlData {
   const factory _AudioUrlData(
-      {@JsonKey(name: 'audioToken') required String audioToken,
-      @JsonKey(name: 'bitrate') required String bitrate,
-      @JsonKey(name: 'encoding') required String encoding,
-      @JsonKey(name: 'audioUrl') required Uri audioUrl}) = _$_AudioUrlData;
+          {@JsonKey(name: 'audioToken') required final String audioToken,
+          @JsonKey(name: 'bitrate') required final String bitrate,
+          @JsonKey(name: 'encoding') required final String encoding,
+          @JsonKey(name: 'audioUrl') required final Uri audioUrl}) =
+      _$_AudioUrlData;
 
   factory _AudioUrlData.fromJson(Map<String, dynamic> json) =
       _$_AudioUrlData.fromJson;
 
   @override
   @JsonKey(name: 'audioToken')
-  String get audioToken;
+  String get audioToken => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'bitrate')
-  String get bitrate;
+  String get bitrate => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'encoding')
-  String get encoding;
+  String get encoding => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'audioUrl')
-  Uri get audioUrl;
+  Uri get audioUrl => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$AudioUrlDataCopyWith<_AudioUrlData> get copyWith =>
+  _$$_AudioUrlDataCopyWith<_$_AudioUrlData> get copyWith =>
       throw _privateConstructorUsedError;
 }

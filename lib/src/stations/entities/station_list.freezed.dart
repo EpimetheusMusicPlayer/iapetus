@@ -12,34 +12,11 @@ part of 'station_list.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 StationList _$StationListFromJson(Map<String, dynamic> json) {
   return _StationList.fromJson(json);
 }
-
-/// @nodoc
-class _$StationListTearOff {
-  const _$StationListTearOff();
-
-  _StationList call(
-      {@JsonKey(name: 'stations')
-          required List<Station> stations,
-      @JsonKey(name: 'recommendations')
-          required SearchRecommendations recommendations}) {
-    return _StationList(
-      stations: stations,
-      recommendations: recommendations,
-    );
-  }
-
-  StationList fromJson(Map<String, Object?> json) {
-    return StationList.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $StationList = _$StationListTearOff();
 
 /// @nodoc
 mixin _$StationList {
@@ -102,11 +79,11 @@ class _$StationListCopyWithImpl<$Res> implements $StationListCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$StationListCopyWith<$Res>
+abstract class _$$_StationListCopyWith<$Res>
     implements $StationListCopyWith<$Res> {
-  factory _$StationListCopyWith(
-          _StationList value, $Res Function(_StationList) then) =
-      __$StationListCopyWithImpl<$Res>;
+  factory _$$_StationListCopyWith(
+          _$_StationList value, $Res Function(_$_StationList) then) =
+      __$$_StationListCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(name: 'stations') List<Station> stations,
@@ -117,23 +94,23 @@ abstract class _$StationListCopyWith<$Res>
 }
 
 /// @nodoc
-class __$StationListCopyWithImpl<$Res> extends _$StationListCopyWithImpl<$Res>
-    implements _$StationListCopyWith<$Res> {
-  __$StationListCopyWithImpl(
-      _StationList _value, $Res Function(_StationList) _then)
-      : super(_value, (v) => _then(v as _StationList));
+class __$$_StationListCopyWithImpl<$Res> extends _$StationListCopyWithImpl<$Res>
+    implements _$$_StationListCopyWith<$Res> {
+  __$$_StationListCopyWithImpl(
+      _$_StationList _value, $Res Function(_$_StationList) _then)
+      : super(_value, (v) => _then(v as _$_StationList));
 
   @override
-  _StationList get _value => super._value as _StationList;
+  _$_StationList get _value => super._value as _$_StationList;
 
   @override
   $Res call({
     Object? stations = freezed,
     Object? recommendations = freezed,
   }) {
-    return _then(_StationList(
+    return _then(_$_StationList(
       stations: stations == freezed
-          ? _value.stations
+          ? _value._stations
           : stations // ignore: cast_nullable_to_non_nullable
               as List<Station>,
       recommendations: recommendations == freezed
@@ -148,15 +125,21 @@ class __$StationListCopyWithImpl<$Res> extends _$StationListCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_StationList implements _StationList {
   const _$_StationList(
-      {@JsonKey(name: 'stations') required this.stations,
-      @JsonKey(name: 'recommendations') required this.recommendations});
+      {@JsonKey(name: 'stations') required final List<Station> stations,
+      @JsonKey(name: 'recommendations') required this.recommendations})
+      : _stations = stations;
 
   factory _$_StationList.fromJson(Map<String, dynamic> json) =>
       _$$_StationListFromJson(json);
 
+  final List<Station> _stations;
   @override
   @JsonKey(name: 'stations')
-  final List<Station> stations;
+  List<Station> get stations {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_stations);
+  }
+
   @override
   @JsonKey(name: 'recommendations')
   final SearchRecommendations recommendations;
@@ -170,22 +153,23 @@ class _$_StationList implements _StationList {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _StationList &&
-            const DeepCollectionEquality().equals(other.stations, stations) &&
+            other is _$_StationList &&
+            const DeepCollectionEquality().equals(other._stations, _stations) &&
             const DeepCollectionEquality()
                 .equals(other.recommendations, recommendations));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(stations),
+      const DeepCollectionEquality().hash(_stations),
       const DeepCollectionEquality().hash(recommendations));
 
   @JsonKey(ignore: true)
   @override
-  _$StationListCopyWith<_StationList> get copyWith =>
-      __$StationListCopyWithImpl<_StationList>(this, _$identity);
+  _$$_StationListCopyWith<_$_StationList> get copyWith =>
+      __$$_StationListCopyWithImpl<_$_StationList>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -195,22 +179,24 @@ class _$_StationList implements _StationList {
 
 abstract class _StationList implements StationList {
   const factory _StationList(
-      {@JsonKey(name: 'stations')
-          required List<Station> stations,
-      @JsonKey(name: 'recommendations')
-          required SearchRecommendations recommendations}) = _$_StationList;
+          {@JsonKey(name: 'stations')
+              required final List<Station> stations,
+          @JsonKey(name: 'recommendations')
+              required final SearchRecommendations recommendations}) =
+      _$_StationList;
 
   factory _StationList.fromJson(Map<String, dynamic> json) =
       _$_StationList.fromJson;
 
   @override
   @JsonKey(name: 'stations')
-  List<Station> get stations;
+  List<Station> get stations => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'recommendations')
-  SearchRecommendations get recommendations;
+  SearchRecommendations get recommendations =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$StationListCopyWith<_StationList> get copyWith =>
+  _$$_StationListCopyWith<_$_StationList> get copyWith =>
       throw _privateConstructorUsedError;
 }

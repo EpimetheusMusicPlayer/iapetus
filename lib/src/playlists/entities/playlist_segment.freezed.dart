@@ -12,109 +12,11 @@ part of 'playlist_segment.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 PlaylistSegment _$PlaylistSegmentFromJson(Map<String, dynamic> json) {
   return _PlaylistSegment.fromJson(json);
 }
-
-/// @nodoc
-class _$PlaylistSegmentTearOff {
-  const _$PlaylistSegmentTearOff();
-
-  _PlaylistSegment call(
-      {@JsonKey(name: 'pandoraId')
-          required String pandoraId,
-      @JsonKey(name: 'annotations')
-          required Map<String, MediaAnnotation> annotations,
-      @JsonKey(name: 'tracks')
-          required List<PlaylistTrack> tracks,
-      @JsonKey(name: 'version')
-          required int version,
-      @JsonKey(name: 'name')
-          required String name,
-      @JsonKey(name: 'description')
-          required String description,
-      @JsonKey(name: 'timeCreated', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
-          required DateTime timeCreated,
-      @JsonKey(name: 'timeLastUpdated', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
-          required DateTime timeLastUpdated,
-      @JsonKey(name: 'timeLastRefreshed', fromJson: readOptionalDateTimeMilliseconds, toJson: writeOptionalDateTimeMilliseconds)
-          DateTime? timeLastRefreshed,
-      @JsonKey(name: 'isPrivate')
-          required bool private,
-      @JsonKey(name: 'secret')
-          required bool secret,
-      @JsonKey(name: 'linkedType')
-          required String linkedType,
-      @JsonKey(name: 'linkedSourceId')
-          required String linkedSourceId,
-      @JsonKey(name: 'totalTracks')
-          required int totalTracks,
-      @JsonKey(name: 'shareableUrlPath')
-          required Uri shareableUrlPath,
-      @JsonKey(name: 'thorLayers')
-          required String thorLayers,
-      @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
-          required Duration duration,
-      @JsonKey(name: 'unlocked')
-          required bool unlocked,
-      @JsonKey(name: 'viewerInfo')
-          required PlaylistViewerInfo viewerInfo,
-      @JsonKey(name: 'autogenForListener')
-          required bool autogenForListener,
-      @JsonKey(name: 'includedTrackTypes')
-          required List<PandoraType> includedTrackTypes,
-      @JsonKey(name: 'allowFeedback')
-          required bool allowFeedback,
-      @JsonKey(name: 'collectible')
-          required bool collectible,
-      @JsonKey(name: 'notModified')
-          required bool notModified,
-      @JsonKey(name: 'listenerId')
-          required int listenerId,
-      @JsonKey(name: 'listenerPandoraId')
-          required String listenerPandoraId,
-      @JsonKey(name: 'listenerIdToken')
-          required String listenerIdToken}) {
-    return _PlaylistSegment(
-      pandoraId: pandoraId,
-      annotations: annotations,
-      tracks: tracks,
-      version: version,
-      name: name,
-      description: description,
-      timeCreated: timeCreated,
-      timeLastUpdated: timeLastUpdated,
-      timeLastRefreshed: timeLastRefreshed,
-      private: private,
-      secret: secret,
-      linkedType: linkedType,
-      linkedSourceId: linkedSourceId,
-      totalTracks: totalTracks,
-      shareableUrlPath: shareableUrlPath,
-      thorLayers: thorLayers,
-      duration: duration,
-      unlocked: unlocked,
-      viewerInfo: viewerInfo,
-      autogenForListener: autogenForListener,
-      includedTrackTypes: includedTrackTypes,
-      allowFeedback: allowFeedback,
-      collectible: collectible,
-      notModified: notModified,
-      listenerId: listenerId,
-      listenerPandoraId: listenerPandoraId,
-      listenerIdToken: listenerIdToken,
-    );
-  }
-
-  PlaylistSegment fromJson(Map<String, Object?> json) {
-    return PlaylistSegment.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $PlaylistSegment = _$PlaylistSegmentTearOff();
 
 /// @nodoc
 mixin _$PlaylistSegment {
@@ -414,11 +316,11 @@ class _$PlaylistSegmentCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$PlaylistSegmentCopyWith<$Res>
+abstract class _$$_PlaylistSegmentCopyWith<$Res>
     implements $PlaylistSegmentCopyWith<$Res> {
-  factory _$PlaylistSegmentCopyWith(
-          _PlaylistSegment value, $Res Function(_PlaylistSegment) then) =
-      __$PlaylistSegmentCopyWithImpl<$Res>;
+  factory _$$_PlaylistSegmentCopyWith(
+          _$_PlaylistSegment value, $Res Function(_$_PlaylistSegment) then) =
+      __$$_PlaylistSegmentCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(name: 'pandoraId')
@@ -481,15 +383,15 @@ abstract class _$PlaylistSegmentCopyWith<$Res>
 }
 
 /// @nodoc
-class __$PlaylistSegmentCopyWithImpl<$Res>
+class __$$_PlaylistSegmentCopyWithImpl<$Res>
     extends _$PlaylistSegmentCopyWithImpl<$Res>
-    implements _$PlaylistSegmentCopyWith<$Res> {
-  __$PlaylistSegmentCopyWithImpl(
-      _PlaylistSegment _value, $Res Function(_PlaylistSegment) _then)
-      : super(_value, (v) => _then(v as _PlaylistSegment));
+    implements _$$_PlaylistSegmentCopyWith<$Res> {
+  __$$_PlaylistSegmentCopyWithImpl(
+      _$_PlaylistSegment _value, $Res Function(_$_PlaylistSegment) _then)
+      : super(_value, (v) => _then(v as _$_PlaylistSegment));
 
   @override
-  _PlaylistSegment get _value => super._value as _PlaylistSegment;
+  _$_PlaylistSegment get _value => super._value as _$_PlaylistSegment;
 
   @override
   $Res call({
@@ -521,17 +423,17 @@ class __$PlaylistSegmentCopyWithImpl<$Res>
     Object? listenerPandoraId = freezed,
     Object? listenerIdToken = freezed,
   }) {
-    return _then(_PlaylistSegment(
+    return _then(_$_PlaylistSegment(
       pandoraId: pandoraId == freezed
           ? _value.pandoraId
           : pandoraId // ignore: cast_nullable_to_non_nullable
               as String,
       annotations: annotations == freezed
-          ? _value.annotations
+          ? _value._annotations
           : annotations // ignore: cast_nullable_to_non_nullable
               as Map<String, MediaAnnotation>,
       tracks: tracks == freezed
-          ? _value.tracks
+          ? _value._tracks
           : tracks // ignore: cast_nullable_to_non_nullable
               as List<PlaylistTrack>,
       version: version == freezed
@@ -603,7 +505,7 @@ class __$PlaylistSegmentCopyWithImpl<$Res>
           : autogenForListener // ignore: cast_nullable_to_non_nullable
               as bool,
       includedTrackTypes: includedTrackTypes == freezed
-          ? _value.includedTrackTypes
+          ? _value._includedTrackTypes
           : includedTrackTypes // ignore: cast_nullable_to_non_nullable
               as List<PandoraType>,
       allowFeedback: allowFeedback == freezed
@@ -641,9 +543,9 @@ class _$_PlaylistSegment extends _PlaylistSegment {
       {@JsonKey(name: 'pandoraId')
           required this.pandoraId,
       @JsonKey(name: 'annotations')
-          required this.annotations,
+          required final Map<String, MediaAnnotation> annotations,
       @JsonKey(name: 'tracks')
-          required this.tracks,
+          required final List<PlaylistTrack> tracks,
       @JsonKey(name: 'version')
           required this.version,
       @JsonKey(name: 'name')
@@ -679,7 +581,7 @@ class _$_PlaylistSegment extends _PlaylistSegment {
       @JsonKey(name: 'autogenForListener')
           required this.autogenForListener,
       @JsonKey(name: 'includedTrackTypes')
-          required this.includedTrackTypes,
+          required final List<PandoraType> includedTrackTypes,
       @JsonKey(name: 'allowFeedback')
           required this.allowFeedback,
       @JsonKey(name: 'collectible')
@@ -692,7 +594,10 @@ class _$_PlaylistSegment extends _PlaylistSegment {
           required this.listenerPandoraId,
       @JsonKey(name: 'listenerIdToken')
           required this.listenerIdToken})
-      : super._();
+      : _annotations = annotations,
+        _tracks = tracks,
+        _includedTrackTypes = includedTrackTypes,
+        super._();
 
   factory _$_PlaylistSegment.fromJson(Map<String, dynamic> json) =>
       _$$_PlaylistSegmentFromJson(json);
@@ -700,12 +605,22 @@ class _$_PlaylistSegment extends _PlaylistSegment {
   @override
   @JsonKey(name: 'pandoraId')
   final String pandoraId;
+  final Map<String, MediaAnnotation> _annotations;
   @override
   @JsonKey(name: 'annotations')
-  final Map<String, MediaAnnotation> annotations;
+  Map<String, MediaAnnotation> get annotations {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableMapView(_annotations);
+  }
+
+  final List<PlaylistTrack> _tracks;
   @override
   @JsonKey(name: 'tracks')
-  final List<PlaylistTrack> tracks;
+  List<PlaylistTrack> get tracks {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_tracks);
+  }
+
   @override
   @JsonKey(name: 'version')
   final int version;
@@ -766,9 +681,14 @@ class _$_PlaylistSegment extends _PlaylistSegment {
   @override
   @JsonKey(name: 'autogenForListener')
   final bool autogenForListener;
+  final List<PandoraType> _includedTrackTypes;
   @override
   @JsonKey(name: 'includedTrackTypes')
-  final List<PandoraType> includedTrackTypes;
+  List<PandoraType> get includedTrackTypes {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_includedTrackTypes);
+  }
+
   @override
   @JsonKey(name: 'allowFeedback')
   final bool allowFeedback;
@@ -797,11 +717,11 @@ class _$_PlaylistSegment extends _PlaylistSegment {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _PlaylistSegment &&
+            other is _$_PlaylistSegment &&
             const DeepCollectionEquality().equals(other.pandoraId, pandoraId) &&
             const DeepCollectionEquality()
-                .equals(other.annotations, annotations) &&
-            const DeepCollectionEquality().equals(other.tracks, tracks) &&
+                .equals(other._annotations, _annotations) &&
+            const DeepCollectionEquality().equals(other._tracks, _tracks) &&
             const DeepCollectionEquality().equals(other.version, version) &&
             const DeepCollectionEquality().equals(other.name, name) &&
             const DeepCollectionEquality()
@@ -831,7 +751,7 @@ class _$_PlaylistSegment extends _PlaylistSegment {
             const DeepCollectionEquality()
                 .equals(other.autogenForListener, autogenForListener) &&
             const DeepCollectionEquality()
-                .equals(other.includedTrackTypes, includedTrackTypes) &&
+                .equals(other._includedTrackTypes, _includedTrackTypes) &&
             const DeepCollectionEquality()
                 .equals(other.allowFeedback, allowFeedback) &&
             const DeepCollectionEquality()
@@ -846,12 +766,13 @@ class _$_PlaylistSegment extends _PlaylistSegment {
                 .equals(other.listenerIdToken, listenerIdToken));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
         const DeepCollectionEquality().hash(pandoraId),
-        const DeepCollectionEquality().hash(annotations),
-        const DeepCollectionEquality().hash(tracks),
+        const DeepCollectionEquality().hash(_annotations),
+        const DeepCollectionEquality().hash(_tracks),
         const DeepCollectionEquality().hash(version),
         const DeepCollectionEquality().hash(name),
         const DeepCollectionEquality().hash(description),
@@ -869,7 +790,7 @@ class _$_PlaylistSegment extends _PlaylistSegment {
         const DeepCollectionEquality().hash(unlocked),
         const DeepCollectionEquality().hash(viewerInfo),
         const DeepCollectionEquality().hash(autogenForListener),
-        const DeepCollectionEquality().hash(includedTrackTypes),
+        const DeepCollectionEquality().hash(_includedTrackTypes),
         const DeepCollectionEquality().hash(allowFeedback),
         const DeepCollectionEquality().hash(collectible),
         const DeepCollectionEquality().hash(notModified),
@@ -880,8 +801,8 @@ class _$_PlaylistSegment extends _PlaylistSegment {
 
   @JsonKey(ignore: true)
   @override
-  _$PlaylistSegmentCopyWith<_PlaylistSegment> get copyWith =>
-      __$PlaylistSegmentCopyWithImpl<_PlaylistSegment>(this, _$identity);
+  _$$_PlaylistSegmentCopyWith<_$_PlaylistSegment> get copyWith =>
+      __$$_PlaylistSegmentCopyWithImpl<_$_PlaylistSegment>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -892,59 +813,59 @@ class _$_PlaylistSegment extends _PlaylistSegment {
 abstract class _PlaylistSegment extends PlaylistSegment {
   const factory _PlaylistSegment(
       {@JsonKey(name: 'pandoraId')
-          required String pandoraId,
+          required final String pandoraId,
       @JsonKey(name: 'annotations')
-          required Map<String, MediaAnnotation> annotations,
+          required final Map<String, MediaAnnotation> annotations,
       @JsonKey(name: 'tracks')
-          required List<PlaylistTrack> tracks,
+          required final List<PlaylistTrack> tracks,
       @JsonKey(name: 'version')
-          required int version,
+          required final int version,
       @JsonKey(name: 'name')
-          required String name,
+          required final String name,
       @JsonKey(name: 'description')
-          required String description,
+          required final String description,
       @JsonKey(name: 'timeCreated', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
-          required DateTime timeCreated,
+          required final DateTime timeCreated,
       @JsonKey(name: 'timeLastUpdated', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
-          required DateTime timeLastUpdated,
+          required final DateTime timeLastUpdated,
       @JsonKey(name: 'timeLastRefreshed', fromJson: readOptionalDateTimeMilliseconds, toJson: writeOptionalDateTimeMilliseconds)
-          DateTime? timeLastRefreshed,
+          final DateTime? timeLastRefreshed,
       @JsonKey(name: 'isPrivate')
-          required bool private,
+          required final bool private,
       @JsonKey(name: 'secret')
-          required bool secret,
+          required final bool secret,
       @JsonKey(name: 'linkedType')
-          required String linkedType,
+          required final String linkedType,
       @JsonKey(name: 'linkedSourceId')
-          required String linkedSourceId,
+          required final String linkedSourceId,
       @JsonKey(name: 'totalTracks')
-          required int totalTracks,
+          required final int totalTracks,
       @JsonKey(name: 'shareableUrlPath')
-          required Uri shareableUrlPath,
+          required final Uri shareableUrlPath,
       @JsonKey(name: 'thorLayers')
-          required String thorLayers,
+          required final String thorLayers,
       @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
-          required Duration duration,
+          required final Duration duration,
       @JsonKey(name: 'unlocked')
-          required bool unlocked,
+          required final bool unlocked,
       @JsonKey(name: 'viewerInfo')
-          required PlaylistViewerInfo viewerInfo,
+          required final PlaylistViewerInfo viewerInfo,
       @JsonKey(name: 'autogenForListener')
-          required bool autogenForListener,
+          required final bool autogenForListener,
       @JsonKey(name: 'includedTrackTypes')
-          required List<PandoraType> includedTrackTypes,
+          required final List<PandoraType> includedTrackTypes,
       @JsonKey(name: 'allowFeedback')
-          required bool allowFeedback,
+          required final bool allowFeedback,
       @JsonKey(name: 'collectible')
-          required bool collectible,
+          required final bool collectible,
       @JsonKey(name: 'notModified')
-          required bool notModified,
+          required final bool notModified,
       @JsonKey(name: 'listenerId')
-          required int listenerId,
+          required final int listenerId,
       @JsonKey(name: 'listenerPandoraId')
-          required String listenerPandoraId,
+          required final String listenerPandoraId,
       @JsonKey(name: 'listenerIdToken')
-          required String listenerIdToken}) = _$_PlaylistSegment;
+          required final String listenerIdToken}) = _$_PlaylistSegment;
   const _PlaylistSegment._() : super._();
 
   factory _PlaylistSegment.fromJson(Map<String, dynamic> json) =
@@ -952,96 +873,98 @@ abstract class _PlaylistSegment extends PlaylistSegment {
 
   @override
   @JsonKey(name: 'pandoraId')
-  String get pandoraId;
+  String get pandoraId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'annotations')
-  Map<String, MediaAnnotation> get annotations;
+  Map<String, MediaAnnotation> get annotations =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'tracks')
-  List<PlaylistTrack> get tracks;
+  List<PlaylistTrack> get tracks => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'version')
-  int get version;
+  int get version => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'name')
-  String get name;
+  String get name => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'description')
-  String get description;
+  String get description => throw _privateConstructorUsedError;
   @override
   @JsonKey(
       name: 'timeCreated',
       fromJson: readDateTimeMilliseconds,
       toJson: writeDateTimeMilliseconds)
-  DateTime get timeCreated;
+  DateTime get timeCreated => throw _privateConstructorUsedError;
   @override
   @JsonKey(
       name: 'timeLastUpdated',
       fromJson: readDateTimeMilliseconds,
       toJson: writeDateTimeMilliseconds)
-  DateTime get timeLastUpdated;
+  DateTime get timeLastUpdated => throw _privateConstructorUsedError;
   @override
   @JsonKey(
       name: 'timeLastRefreshed',
       fromJson: readOptionalDateTimeMilliseconds,
       toJson: writeOptionalDateTimeMilliseconds)
-  DateTime? get timeLastRefreshed;
+  DateTime? get timeLastRefreshed => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'isPrivate')
-  bool get private;
+  bool get private => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'secret')
-  bool get secret;
+  bool get secret => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'linkedType')
-  String get linkedType;
+  String get linkedType => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'linkedSourceId')
-  String get linkedSourceId;
+  String get linkedSourceId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'totalTracks')
-  int get totalTracks;
+  int get totalTracks => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'shareableUrlPath')
-  Uri get shareableUrlPath;
+  Uri get shareableUrlPath => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'thorLayers')
-  String get thorLayers;
+  String get thorLayers => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
-  Duration get duration;
+  Duration get duration => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'unlocked')
-  bool get unlocked;
+  bool get unlocked => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'viewerInfo')
-  PlaylistViewerInfo get viewerInfo;
+  PlaylistViewerInfo get viewerInfo => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'autogenForListener')
-  bool get autogenForListener;
+  bool get autogenForListener => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'includedTrackTypes')
-  List<PandoraType> get includedTrackTypes;
+  List<PandoraType> get includedTrackTypes =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'allowFeedback')
-  bool get allowFeedback;
+  bool get allowFeedback => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'collectible')
-  bool get collectible;
+  bool get collectible => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'notModified')
-  bool get notModified;
+  bool get notModified => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'listenerId')
-  int get listenerId;
+  int get listenerId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'listenerPandoraId')
-  String get listenerPandoraId;
+  String get listenerPandoraId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'listenerIdToken')
-  String get listenerIdToken;
+  String get listenerIdToken => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$PlaylistSegmentCopyWith<_PlaylistSegment> get copyWith =>
+  _$$_PlaylistSegmentCopyWith<_$_PlaylistSegment> get copyWith =>
       throw _privateConstructorUsedError;
 }

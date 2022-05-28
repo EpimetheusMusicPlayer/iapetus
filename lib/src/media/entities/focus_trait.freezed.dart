@@ -12,34 +12,11 @@ part of 'focus_trait.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 FocusTrait _$FocusTraitFromJson(Map<String, dynamic> json) {
   return _FocusTrait.fromJson(json);
 }
-
-/// @nodoc
-class _$FocusTraitTearOff {
-  const _$FocusTraitTearOff();
-
-  _FocusTrait call(
-      {@JsonKey(name: 'name') required String name,
-      @JsonKey(name: 'focusTraitSet') required String focusTraitSet,
-      @JsonKey(name: 'focusTraitSetType') required String focusTraitSetType}) {
-    return _FocusTrait(
-      name: name,
-      focusTraitSet: focusTraitSet,
-      focusTraitSetType: focusTraitSetType,
-    );
-  }
-
-  FocusTrait fromJson(Map<String, Object?> json) {
-    return FocusTrait.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $FocusTrait = _$FocusTraitTearOff();
 
 /// @nodoc
 mixin _$FocusTrait {
@@ -99,10 +76,11 @@ class _$FocusTraitCopyWithImpl<$Res> implements $FocusTraitCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$FocusTraitCopyWith<$Res> implements $FocusTraitCopyWith<$Res> {
-  factory _$FocusTraitCopyWith(
-          _FocusTrait value, $Res Function(_FocusTrait) then) =
-      __$FocusTraitCopyWithImpl<$Res>;
+abstract class _$$_FocusTraitCopyWith<$Res>
+    implements $FocusTraitCopyWith<$Res> {
+  factory _$$_FocusTraitCopyWith(
+          _$_FocusTrait value, $Res Function(_$_FocusTrait) then) =
+      __$$_FocusTraitCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(name: 'name') String name,
@@ -111,14 +89,14 @@ abstract class _$FocusTraitCopyWith<$Res> implements $FocusTraitCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$FocusTraitCopyWithImpl<$Res> extends _$FocusTraitCopyWithImpl<$Res>
-    implements _$FocusTraitCopyWith<$Res> {
-  __$FocusTraitCopyWithImpl(
-      _FocusTrait _value, $Res Function(_FocusTrait) _then)
-      : super(_value, (v) => _then(v as _FocusTrait));
+class __$$_FocusTraitCopyWithImpl<$Res> extends _$FocusTraitCopyWithImpl<$Res>
+    implements _$$_FocusTraitCopyWith<$Res> {
+  __$$_FocusTraitCopyWithImpl(
+      _$_FocusTrait _value, $Res Function(_$_FocusTrait) _then)
+      : super(_value, (v) => _then(v as _$_FocusTrait));
 
   @override
-  _FocusTrait get _value => super._value as _FocusTrait;
+  _$_FocusTrait get _value => super._value as _$_FocusTrait;
 
   @override
   $Res call({
@@ -126,7 +104,7 @@ class __$FocusTraitCopyWithImpl<$Res> extends _$FocusTraitCopyWithImpl<$Res>
     Object? focusTraitSet = freezed,
     Object? focusTraitSetType = freezed,
   }) {
-    return _then(_FocusTrait(
+    return _then(_$_FocusTrait(
       name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -173,7 +151,7 @@ class _$_FocusTrait implements _FocusTrait {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _FocusTrait &&
+            other is _$_FocusTrait &&
             const DeepCollectionEquality().equals(other.name, name) &&
             const DeepCollectionEquality()
                 .equals(other.focusTraitSet, focusTraitSet) &&
@@ -181,6 +159,7 @@ class _$_FocusTrait implements _FocusTrait {
                 .equals(other.focusTraitSetType, focusTraitSetType));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -190,8 +169,8 @@ class _$_FocusTrait implements _FocusTrait {
 
   @JsonKey(ignore: true)
   @override
-  _$FocusTraitCopyWith<_FocusTrait> get copyWith =>
-      __$FocusTraitCopyWithImpl<_FocusTrait>(this, _$identity);
+  _$$_FocusTraitCopyWith<_$_FocusTrait> get copyWith =>
+      __$$_FocusTraitCopyWithImpl<_$_FocusTrait>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -202,26 +181,26 @@ class _$_FocusTrait implements _FocusTrait {
 abstract class _FocusTrait implements FocusTrait {
   const factory _FocusTrait(
       {@JsonKey(name: 'name')
-          required String name,
+          required final String name,
       @JsonKey(name: 'focusTraitSet')
-          required String focusTraitSet,
+          required final String focusTraitSet,
       @JsonKey(name: 'focusTraitSetType')
-          required String focusTraitSetType}) = _$_FocusTrait;
+          required final String focusTraitSetType}) = _$_FocusTrait;
 
   factory _FocusTrait.fromJson(Map<String, dynamic> json) =
       _$_FocusTrait.fromJson;
 
   @override
   @JsonKey(name: 'name')
-  String get name;
+  String get name => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'focusTraitSet')
-  String get focusTraitSet;
+  String get focusTraitSet => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'focusTraitSetType')
-  String get focusTraitSetType;
+  String get focusTraitSetType => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$FocusTraitCopyWith<_FocusTrait> get copyWith =>
+  _$$_FocusTraitCopyWith<_$_FocusTrait> get copyWith =>
       throw _privateConstructorUsedError;
 }

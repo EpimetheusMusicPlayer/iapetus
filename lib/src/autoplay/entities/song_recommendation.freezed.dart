@@ -12,36 +12,11 @@ part of 'song_recommendation.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 SongRecommendation _$SongRecommendationFromJson(Map<String, dynamic> json) {
   return _SongRecommendation.fromJson(json);
 }
-
-/// @nodoc
-class _$SongRecommendationTearOff {
-  const _$SongRecommendationTearOff();
-
-  _SongRecommendation call(
-      {@JsonKey(name: 'musicId') required String pandoraId,
-      @JsonKey(name: 'autoplaySourceId') String? autoplaySourceId,
-      @JsonKey(name: 'token') required String token,
-      @JsonKey(name: 'songRating') MediaRating songRating = MediaRating.none}) {
-    return _SongRecommendation(
-      pandoraId: pandoraId,
-      autoplaySourceId: autoplaySourceId,
-      token: token,
-      songRating: songRating,
-    );
-  }
-
-  SongRecommendation fromJson(Map<String, Object?> json) {
-    return SongRecommendation.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $SongRecommendation = _$SongRecommendationTearOff();
 
 /// @nodoc
 mixin _$SongRecommendation {
@@ -110,11 +85,11 @@ class _$SongRecommendationCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$SongRecommendationCopyWith<$Res>
+abstract class _$$_SongRecommendationCopyWith<$Res>
     implements $SongRecommendationCopyWith<$Res> {
-  factory _$SongRecommendationCopyWith(
-          _SongRecommendation value, $Res Function(_SongRecommendation) then) =
-      __$SongRecommendationCopyWithImpl<$Res>;
+  factory _$$_SongRecommendationCopyWith(_$_SongRecommendation value,
+          $Res Function(_$_SongRecommendation) then) =
+      __$$_SongRecommendationCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(name: 'musicId') String pandoraId,
@@ -124,15 +99,15 @@ abstract class _$SongRecommendationCopyWith<$Res>
 }
 
 /// @nodoc
-class __$SongRecommendationCopyWithImpl<$Res>
+class __$$_SongRecommendationCopyWithImpl<$Res>
     extends _$SongRecommendationCopyWithImpl<$Res>
-    implements _$SongRecommendationCopyWith<$Res> {
-  __$SongRecommendationCopyWithImpl(
-      _SongRecommendation _value, $Res Function(_SongRecommendation) _then)
-      : super(_value, (v) => _then(v as _SongRecommendation));
+    implements _$$_SongRecommendationCopyWith<$Res> {
+  __$$_SongRecommendationCopyWithImpl(
+      _$_SongRecommendation _value, $Res Function(_$_SongRecommendation) _then)
+      : super(_value, (v) => _then(v as _$_SongRecommendation));
 
   @override
-  _SongRecommendation get _value => super._value as _SongRecommendation;
+  _$_SongRecommendation get _value => super._value as _$_SongRecommendation;
 
   @override
   $Res call({
@@ -141,7 +116,7 @@ class __$SongRecommendationCopyWithImpl<$Res>
     Object? token = freezed,
     Object? songRating = freezed,
   }) {
-    return _then(_SongRecommendation(
+    return _then(_$_SongRecommendation(
       pandoraId: pandoraId == freezed
           ? _value.pandoraId
           : pandoraId // ignore: cast_nullable_to_non_nullable
@@ -197,7 +172,7 @@ class _$_SongRecommendation extends _SongRecommendation {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _SongRecommendation &&
+            other is _$_SongRecommendation &&
             const DeepCollectionEquality().equals(other.pandoraId, pandoraId) &&
             const DeepCollectionEquality()
                 .equals(other.autoplaySourceId, autoplaySourceId) &&
@@ -206,6 +181,7 @@ class _$_SongRecommendation extends _SongRecommendation {
                 .equals(other.songRating, songRating));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -216,8 +192,9 @@ class _$_SongRecommendation extends _SongRecommendation {
 
   @JsonKey(ignore: true)
   @override
-  _$SongRecommendationCopyWith<_SongRecommendation> get copyWith =>
-      __$SongRecommendationCopyWithImpl<_SongRecommendation>(this, _$identity);
+  _$$_SongRecommendationCopyWith<_$_SongRecommendation> get copyWith =>
+      __$$_SongRecommendationCopyWithImpl<_$_SongRecommendation>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -227,10 +204,10 @@ class _$_SongRecommendation extends _SongRecommendation {
 
 abstract class _SongRecommendation extends SongRecommendation {
   const factory _SongRecommendation(
-          {@JsonKey(name: 'musicId') required String pandoraId,
-          @JsonKey(name: 'autoplaySourceId') String? autoplaySourceId,
-          @JsonKey(name: 'token') required String token,
-          @JsonKey(name: 'songRating') MediaRating songRating}) =
+          {@JsonKey(name: 'musicId') required final String pandoraId,
+          @JsonKey(name: 'autoplaySourceId') final String? autoplaySourceId,
+          @JsonKey(name: 'token') required final String token,
+          @JsonKey(name: 'songRating') final MediaRating songRating}) =
       _$_SongRecommendation;
   const _SongRecommendation._() : super._();
 
@@ -239,18 +216,18 @@ abstract class _SongRecommendation extends SongRecommendation {
 
   @override
   @JsonKey(name: 'musicId')
-  String get pandoraId;
+  String get pandoraId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'autoplaySourceId')
-  String? get autoplaySourceId;
+  String? get autoplaySourceId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'token')
-  String get token;
+  String get token => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'songRating')
-  MediaRating get songRating;
+  MediaRating get songRating => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$SongRecommendationCopyWith<_SongRecommendation> get copyWith =>
+  _$$_SongRecommendationCopyWith<_$_SongRecommendation> get copyWith =>
       throw _privateConstructorUsedError;
 }

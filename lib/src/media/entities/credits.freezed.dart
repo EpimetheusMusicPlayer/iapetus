@@ -12,32 +12,11 @@ part of 'credits.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 Credits _$CreditsFromJson(Map<String, dynamic> json) {
   return _Credits.fromJson(json);
 }
-
-/// @nodoc
-class _$CreditsTearOff {
-  const _$CreditsTearOff();
-
-  _Credits call(
-      {@JsonKey(name: 'creditsSnippet') required String creditsSnippetHtml,
-      @JsonKey(name: 'fullCredits') required String fullCreditsHtml}) {
-    return _Credits(
-      creditsSnippetHtml: creditsSnippetHtml,
-      fullCreditsHtml: fullCreditsHtml,
-    );
-  }
-
-  Credits fromJson(Map<String, Object?> json) {
-    return Credits.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $Credits = _$CreditsTearOff();
 
 /// @nodoc
 mixin _$Credits {
@@ -87,9 +66,10 @@ class _$CreditsCopyWithImpl<$Res> implements $CreditsCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$CreditsCopyWith<$Res> implements $CreditsCopyWith<$Res> {
-  factory _$CreditsCopyWith(_Credits value, $Res Function(_Credits) then) =
-      __$CreditsCopyWithImpl<$Res>;
+abstract class _$$_CreditsCopyWith<$Res> implements $CreditsCopyWith<$Res> {
+  factory _$$_CreditsCopyWith(
+          _$_Credits value, $Res Function(_$_Credits) then) =
+      __$$_CreditsCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(name: 'creditsSnippet') String creditsSnippetHtml,
@@ -97,20 +77,20 @@ abstract class _$CreditsCopyWith<$Res> implements $CreditsCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$CreditsCopyWithImpl<$Res> extends _$CreditsCopyWithImpl<$Res>
-    implements _$CreditsCopyWith<$Res> {
-  __$CreditsCopyWithImpl(_Credits _value, $Res Function(_Credits) _then)
-      : super(_value, (v) => _then(v as _Credits));
+class __$$_CreditsCopyWithImpl<$Res> extends _$CreditsCopyWithImpl<$Res>
+    implements _$$_CreditsCopyWith<$Res> {
+  __$$_CreditsCopyWithImpl(_$_Credits _value, $Res Function(_$_Credits) _then)
+      : super(_value, (v) => _then(v as _$_Credits));
 
   @override
-  _Credits get _value => super._value as _Credits;
+  _$_Credits get _value => super._value as _$_Credits;
 
   @override
   $Res call({
     Object? creditsSnippetHtml = freezed,
     Object? fullCreditsHtml = freezed,
   }) {
-    return _then(_Credits(
+    return _then(_$_Credits(
       creditsSnippetHtml: creditsSnippetHtml == freezed
           ? _value.creditsSnippetHtml
           : creditsSnippetHtml // ignore: cast_nullable_to_non_nullable
@@ -149,13 +129,14 @@ class _$_Credits implements _Credits {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _Credits &&
+            other is _$_Credits &&
             const DeepCollectionEquality()
                 .equals(other.creditsSnippetHtml, creditsSnippetHtml) &&
             const DeepCollectionEquality()
                 .equals(other.fullCreditsHtml, fullCreditsHtml));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -164,8 +145,8 @@ class _$_Credits implements _Credits {
 
   @JsonKey(ignore: true)
   @override
-  _$CreditsCopyWith<_Credits> get copyWith =>
-      __$CreditsCopyWithImpl<_Credits>(this, _$identity);
+  _$$_CreditsCopyWith<_$_Credits> get copyWith =>
+      __$$_CreditsCopyWithImpl<_$_Credits>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -175,20 +156,21 @@ class _$_Credits implements _Credits {
 
 abstract class _Credits implements Credits {
   const factory _Credits(
-          {@JsonKey(name: 'creditsSnippet') required String creditsSnippetHtml,
-          @JsonKey(name: 'fullCredits') required String fullCreditsHtml}) =
-      _$_Credits;
+      {@JsonKey(name: 'creditsSnippet')
+          required final String creditsSnippetHtml,
+      @JsonKey(name: 'fullCredits')
+          required final String fullCreditsHtml}) = _$_Credits;
 
   factory _Credits.fromJson(Map<String, dynamic> json) = _$_Credits.fromJson;
 
   @override
   @JsonKey(name: 'creditsSnippet')
-  String get creditsSnippetHtml;
+  String get creditsSnippetHtml => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'fullCredits')
-  String get fullCreditsHtml;
+  String get fullCreditsHtml => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$CreditsCopyWith<_Credits> get copyWith =>
+  _$$_CreditsCopyWith<_$_Credits> get copyWith =>
       throw _privateConstructorUsedError;
 }

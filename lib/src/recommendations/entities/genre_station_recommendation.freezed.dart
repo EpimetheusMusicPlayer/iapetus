@@ -12,44 +12,12 @@ part of 'genre_station_recommendation.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 GenreStationRecommendation _$GenreStationRecommendationFromJson(
     Map<String, dynamic> json) {
   return _GenreStationRecommendation.fromJson(json);
 }
-
-/// @nodoc
-class _$GenreStationRecommendationTearOff {
-  const _$GenreStationRecommendationTearOff();
-
-  _GenreStationRecommendation call(
-      {@JsonKey(name: 'musicToken')
-          required String musicToken,
-      @JsonKey(name: 'explanation')
-          required String explanation,
-      @JsonKey(name: 'artUrl')
-          Uri? artUrl,
-      @JsonKey(name: 'stationName')
-          required String stationName,
-      @JsonKey(name: 'score', fromJson: readScore, toJson: writeScore, includeIfNull: true)
-          int? score}) {
-    return _GenreStationRecommendation(
-      musicToken: musicToken,
-      explanation: explanation,
-      artUrl: artUrl,
-      stationName: stationName,
-      score: score,
-    );
-  }
-
-  GenreStationRecommendation fromJson(Map<String, Object?> json) {
-    return GenreStationRecommendation.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $GenreStationRecommendation = _$GenreStationRecommendationTearOff();
 
 /// @nodoc
 mixin _$GenreStationRecommendation {
@@ -135,12 +103,12 @@ class _$GenreStationRecommendationCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$GenreStationRecommendationCopyWith<$Res>
+abstract class _$$_GenreStationRecommendationCopyWith<$Res>
     implements $GenreStationRecommendationCopyWith<$Res> {
-  factory _$GenreStationRecommendationCopyWith(
-          _GenreStationRecommendation value,
-          $Res Function(_GenreStationRecommendation) then) =
-      __$GenreStationRecommendationCopyWithImpl<$Res>;
+  factory _$$_GenreStationRecommendationCopyWith(
+          _$_GenreStationRecommendation value,
+          $Res Function(_$_GenreStationRecommendation) then) =
+      __$$_GenreStationRecommendationCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(name: 'musicToken')
@@ -156,16 +124,17 @@ abstract class _$GenreStationRecommendationCopyWith<$Res>
 }
 
 /// @nodoc
-class __$GenreStationRecommendationCopyWithImpl<$Res>
+class __$$_GenreStationRecommendationCopyWithImpl<$Res>
     extends _$GenreStationRecommendationCopyWithImpl<$Res>
-    implements _$GenreStationRecommendationCopyWith<$Res> {
-  __$GenreStationRecommendationCopyWithImpl(_GenreStationRecommendation _value,
-      $Res Function(_GenreStationRecommendation) _then)
-      : super(_value, (v) => _then(v as _GenreStationRecommendation));
+    implements _$$_GenreStationRecommendationCopyWith<$Res> {
+  __$$_GenreStationRecommendationCopyWithImpl(
+      _$_GenreStationRecommendation _value,
+      $Res Function(_$_GenreStationRecommendation) _then)
+      : super(_value, (v) => _then(v as _$_GenreStationRecommendation));
 
   @override
-  _GenreStationRecommendation get _value =>
-      super._value as _GenreStationRecommendation;
+  _$_GenreStationRecommendation get _value =>
+      super._value as _$_GenreStationRecommendation;
 
   @override
   $Res call({
@@ -175,7 +144,7 @@ class __$GenreStationRecommendationCopyWithImpl<$Res>
     Object? stationName = freezed,
     Object? score = freezed,
   }) {
-    return _then(_GenreStationRecommendation(
+    return _then(_$_GenreStationRecommendation(
       musicToken: musicToken == freezed
           ? _value.musicToken
           : musicToken // ignore: cast_nullable_to_non_nullable
@@ -247,7 +216,7 @@ class _$_GenreStationRecommendation implements _GenreStationRecommendation {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _GenreStationRecommendation &&
+            other is _$_GenreStationRecommendation &&
             const DeepCollectionEquality()
                 .equals(other.musicToken, musicToken) &&
             const DeepCollectionEquality()
@@ -258,6 +227,7 @@ class _$_GenreStationRecommendation implements _GenreStationRecommendation {
             const DeepCollectionEquality().equals(other.score, score));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -269,9 +239,9 @@ class _$_GenreStationRecommendation implements _GenreStationRecommendation {
 
   @JsonKey(ignore: true)
   @override
-  _$GenreStationRecommendationCopyWith<_GenreStationRecommendation>
-      get copyWith => __$GenreStationRecommendationCopyWithImpl<
-          _GenreStationRecommendation>(this, _$identity);
+  _$$_GenreStationRecommendationCopyWith<_$_GenreStationRecommendation>
+      get copyWith => __$$_GenreStationRecommendationCopyWithImpl<
+          _$_GenreStationRecommendation>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -283,40 +253,40 @@ abstract class _GenreStationRecommendation
     implements GenreStationRecommendation {
   const factory _GenreStationRecommendation(
       {@JsonKey(name: 'musicToken')
-          required String musicToken,
+          required final String musicToken,
       @JsonKey(name: 'explanation')
-          required String explanation,
+          required final String explanation,
       @JsonKey(name: 'artUrl')
-          Uri? artUrl,
+          final Uri? artUrl,
       @JsonKey(name: 'stationName')
-          required String stationName,
+          required final String stationName,
       @JsonKey(name: 'score', fromJson: readScore, toJson: writeScore, includeIfNull: true)
-          int? score}) = _$_GenreStationRecommendation;
+          final int? score}) = _$_GenreStationRecommendation;
 
   factory _GenreStationRecommendation.fromJson(Map<String, dynamic> json) =
       _$_GenreStationRecommendation.fromJson;
 
   @override
   @JsonKey(name: 'musicToken')
-  String get musicToken;
+  String get musicToken => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'explanation')
-  String get explanation;
+  String get explanation => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'artUrl')
-  Uri? get artUrl;
+  Uri? get artUrl => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'stationName')
-  String get stationName;
+  String get stationName => throw _privateConstructorUsedError;
   @override
   @JsonKey(
       name: 'score',
       fromJson: readScore,
       toJson: writeScore,
       includeIfNull: true)
-  int? get score;
+  int? get score => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$GenreStationRecommendationCopyWith<_GenreStationRecommendation>
+  _$$_GenreStationRecommendationCopyWith<_$_GenreStationRecommendation>
       get copyWith => throw _privateConstructorUsedError;
 }

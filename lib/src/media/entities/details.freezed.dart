@@ -12,7 +12,7 @@ part of 'details.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 MediaDetailsSet _$MediaDetailsSetFromJson(Map<String, dynamic> json) {
   switch (json['runtimeType']) {
@@ -28,45 +28,10 @@ MediaDetailsSet _$MediaDetailsSetFromJson(Map<String, dynamic> json) {
 }
 
 /// @nodoc
-class _$MediaDetailsSetTearOff {
-  const _$MediaDetailsSetTearOff();
-
-  TrackDetailsSet track(
-      {@JsonKey(name: 'annotations')
-          required Map<String, MediaAnnotation> annotations,
-      @JsonKey(name: 'trackDetails')
-          required TrackDetails details}) {
-    return TrackDetailsSet(
-      annotations: annotations,
-      details: details,
-    );
-  }
-
-  GenreDetailsSet genre(
-      {@JsonKey(name: 'annotations')
-          required Map<String, MediaAnnotation> annotations,
-      @JsonKey(name: 'genreDetails')
-          required GenreDetails details}) {
-    return GenreDetailsSet(
-      annotations: annotations,
-      details: details,
-    );
-  }
-
-  MediaDetailsSet fromJson(Map<String, Object?> json) {
-    return MediaDetailsSet.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $MediaDetailsSet = _$MediaDetailsSetTearOff();
-
-/// @nodoc
 mixin _$MediaDetailsSet {
   @JsonKey(name: 'annotations')
   Map<String, MediaAnnotation> get annotations =>
       throw _privateConstructorUsedError;
-
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(
@@ -173,11 +138,11 @@ class _$MediaDetailsSetCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class $TrackDetailsSetCopyWith<$Res>
+abstract class _$$TrackDetailsSetCopyWith<$Res>
     implements $MediaDetailsSetCopyWith<$Res> {
-  factory $TrackDetailsSetCopyWith(
-          TrackDetailsSet value, $Res Function(TrackDetailsSet) then) =
-      _$TrackDetailsSetCopyWithImpl<$Res>;
+  factory _$$TrackDetailsSetCopyWith(
+          _$TrackDetailsSet value, $Res Function(_$TrackDetailsSet) then) =
+      __$$TrackDetailsSetCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(name: 'annotations') Map<String, MediaAnnotation> annotations,
@@ -185,24 +150,24 @@ abstract class $TrackDetailsSetCopyWith<$Res>
 }
 
 /// @nodoc
-class _$TrackDetailsSetCopyWithImpl<$Res>
+class __$$TrackDetailsSetCopyWithImpl<$Res>
     extends _$MediaDetailsSetCopyWithImpl<$Res>
-    implements $TrackDetailsSetCopyWith<$Res> {
-  _$TrackDetailsSetCopyWithImpl(
-      TrackDetailsSet _value, $Res Function(TrackDetailsSet) _then)
-      : super(_value, (v) => _then(v as TrackDetailsSet));
+    implements _$$TrackDetailsSetCopyWith<$Res> {
+  __$$TrackDetailsSetCopyWithImpl(
+      _$TrackDetailsSet _value, $Res Function(_$TrackDetailsSet) _then)
+      : super(_value, (v) => _then(v as _$TrackDetailsSet));
 
   @override
-  TrackDetailsSet get _value => super._value as TrackDetailsSet;
+  _$TrackDetailsSet get _value => super._value as _$TrackDetailsSet;
 
   @override
   $Res call({
     Object? annotations = freezed,
     Object? details = freezed,
   }) {
-    return _then(TrackDetailsSet(
+    return _then(_$TrackDetailsSet(
       annotations: annotations == freezed
-          ? _value.annotations
+          ? _value._annotations
           : annotations // ignore: cast_nullable_to_non_nullable
               as Map<String, MediaAnnotation>,
       details: details == freezed
@@ -217,17 +182,25 @@ class _$TrackDetailsSetCopyWithImpl<$Res>
 @JsonSerializable()
 class _$TrackDetailsSet implements TrackDetailsSet {
   const _$TrackDetailsSet(
-      {@JsonKey(name: 'annotations') required this.annotations,
-      @JsonKey(name: 'trackDetails') required this.details,
-      String? $type})
-      : $type = $type ?? 'track';
+      {@JsonKey(name: 'annotations')
+          required final Map<String, MediaAnnotation> annotations,
+      @JsonKey(name: 'trackDetails')
+          required this.details,
+      final String? $type})
+      : _annotations = annotations,
+        $type = $type ?? 'track';
 
   factory _$TrackDetailsSet.fromJson(Map<String, dynamic> json) =>
       _$$TrackDetailsSetFromJson(json);
 
+  final Map<String, MediaAnnotation> _annotations;
   @override
   @JsonKey(name: 'annotations')
-  final Map<String, MediaAnnotation> annotations;
+  Map<String, MediaAnnotation> get annotations {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableMapView(_annotations);
+  }
+
   @override
   @JsonKey(name: 'trackDetails')
   final TrackDetails details;
@@ -244,22 +217,23 @@ class _$TrackDetailsSet implements TrackDetailsSet {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is TrackDetailsSet &&
+            other is _$TrackDetailsSet &&
             const DeepCollectionEquality()
-                .equals(other.annotations, annotations) &&
+                .equals(other._annotations, _annotations) &&
             const DeepCollectionEquality().equals(other.details, details));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(annotations),
+      const DeepCollectionEquality().hash(_annotations),
       const DeepCollectionEquality().hash(details));
 
   @JsonKey(ignore: true)
   @override
-  $TrackDetailsSetCopyWith<TrackDetailsSet> get copyWith =>
-      _$TrackDetailsSetCopyWithImpl<TrackDetailsSet>(this, _$identity);
+  _$$TrackDetailsSetCopyWith<_$TrackDetailsSet> get copyWith =>
+      __$$TrackDetailsSetCopyWithImpl<_$TrackDetailsSet>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -362,30 +336,31 @@ class _$TrackDetailsSet implements TrackDetailsSet {
 abstract class TrackDetailsSet implements MediaDetailsSet {
   const factory TrackDetailsSet(
       {@JsonKey(name: 'annotations')
-          required Map<String, MediaAnnotation> annotations,
+          required final Map<String, MediaAnnotation> annotations,
       @JsonKey(name: 'trackDetails')
-          required TrackDetails details}) = _$TrackDetailsSet;
+          required final TrackDetails details}) = _$TrackDetailsSet;
 
   factory TrackDetailsSet.fromJson(Map<String, dynamic> json) =
       _$TrackDetailsSet.fromJson;
 
   @override
   @JsonKey(name: 'annotations')
-  Map<String, MediaAnnotation> get annotations;
+  Map<String, MediaAnnotation> get annotations =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: 'trackDetails')
-  TrackDetails get details;
+  TrackDetails get details => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  $TrackDetailsSetCopyWith<TrackDetailsSet> get copyWith =>
+  _$$TrackDetailsSetCopyWith<_$TrackDetailsSet> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $GenreDetailsSetCopyWith<$Res>
+abstract class _$$GenreDetailsSetCopyWith<$Res>
     implements $MediaDetailsSetCopyWith<$Res> {
-  factory $GenreDetailsSetCopyWith(
-          GenreDetailsSet value, $Res Function(GenreDetailsSet) then) =
-      _$GenreDetailsSetCopyWithImpl<$Res>;
+  factory _$$GenreDetailsSetCopyWith(
+          _$GenreDetailsSet value, $Res Function(_$GenreDetailsSet) then) =
+      __$$GenreDetailsSetCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(name: 'annotations') Map<String, MediaAnnotation> annotations,
@@ -393,24 +368,24 @@ abstract class $GenreDetailsSetCopyWith<$Res>
 }
 
 /// @nodoc
-class _$GenreDetailsSetCopyWithImpl<$Res>
+class __$$GenreDetailsSetCopyWithImpl<$Res>
     extends _$MediaDetailsSetCopyWithImpl<$Res>
-    implements $GenreDetailsSetCopyWith<$Res> {
-  _$GenreDetailsSetCopyWithImpl(
-      GenreDetailsSet _value, $Res Function(GenreDetailsSet) _then)
-      : super(_value, (v) => _then(v as GenreDetailsSet));
+    implements _$$GenreDetailsSetCopyWith<$Res> {
+  __$$GenreDetailsSetCopyWithImpl(
+      _$GenreDetailsSet _value, $Res Function(_$GenreDetailsSet) _then)
+      : super(_value, (v) => _then(v as _$GenreDetailsSet));
 
   @override
-  GenreDetailsSet get _value => super._value as GenreDetailsSet;
+  _$GenreDetailsSet get _value => super._value as _$GenreDetailsSet;
 
   @override
   $Res call({
     Object? annotations = freezed,
     Object? details = freezed,
   }) {
-    return _then(GenreDetailsSet(
+    return _then(_$GenreDetailsSet(
       annotations: annotations == freezed
-          ? _value.annotations
+          ? _value._annotations
           : annotations // ignore: cast_nullable_to_non_nullable
               as Map<String, MediaAnnotation>,
       details: details == freezed
@@ -425,17 +400,25 @@ class _$GenreDetailsSetCopyWithImpl<$Res>
 @JsonSerializable()
 class _$GenreDetailsSet implements GenreDetailsSet {
   const _$GenreDetailsSet(
-      {@JsonKey(name: 'annotations') required this.annotations,
-      @JsonKey(name: 'genreDetails') required this.details,
-      String? $type})
-      : $type = $type ?? 'genre';
+      {@JsonKey(name: 'annotations')
+          required final Map<String, MediaAnnotation> annotations,
+      @JsonKey(name: 'genreDetails')
+          required this.details,
+      final String? $type})
+      : _annotations = annotations,
+        $type = $type ?? 'genre';
 
   factory _$GenreDetailsSet.fromJson(Map<String, dynamic> json) =>
       _$$GenreDetailsSetFromJson(json);
 
+  final Map<String, MediaAnnotation> _annotations;
   @override
   @JsonKey(name: 'annotations')
-  final Map<String, MediaAnnotation> annotations;
+  Map<String, MediaAnnotation> get annotations {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableMapView(_annotations);
+  }
+
   @override
   @JsonKey(name: 'genreDetails')
   final GenreDetails details;
@@ -452,22 +435,23 @@ class _$GenreDetailsSet implements GenreDetailsSet {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is GenreDetailsSet &&
+            other is _$GenreDetailsSet &&
             const DeepCollectionEquality()
-                .equals(other.annotations, annotations) &&
+                .equals(other._annotations, _annotations) &&
             const DeepCollectionEquality().equals(other.details, details));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(annotations),
+      const DeepCollectionEquality().hash(_annotations),
       const DeepCollectionEquality().hash(details));
 
   @JsonKey(ignore: true)
   @override
-  $GenreDetailsSetCopyWith<GenreDetailsSet> get copyWith =>
-      _$GenreDetailsSetCopyWithImpl<GenreDetailsSet>(this, _$identity);
+  _$$GenreDetailsSetCopyWith<_$GenreDetailsSet> get copyWith =>
+      __$$GenreDetailsSetCopyWithImpl<_$GenreDetailsSet>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -570,21 +554,22 @@ class _$GenreDetailsSet implements GenreDetailsSet {
 abstract class GenreDetailsSet implements MediaDetailsSet {
   const factory GenreDetailsSet(
       {@JsonKey(name: 'annotations')
-          required Map<String, MediaAnnotation> annotations,
+          required final Map<String, MediaAnnotation> annotations,
       @JsonKey(name: 'genreDetails')
-          required GenreDetails details}) = _$GenreDetailsSet;
+          required final GenreDetails details}) = _$GenreDetailsSet;
 
   factory GenreDetailsSet.fromJson(Map<String, dynamic> json) =
       _$GenreDetailsSet.fromJson;
 
   @override
   @JsonKey(name: 'annotations')
-  Map<String, MediaAnnotation> get annotations;
+  Map<String, MediaAnnotation> get annotations =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: 'genreDetails')
-  GenreDetails get details;
+  GenreDetails get details => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  $GenreDetailsSetCopyWith<GenreDetailsSet> get copyWith =>
+  _$$GenreDetailsSetCopyWith<_$GenreDetailsSet> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -602,97 +587,6 @@ MediaDetails _$MediaDetailsFromJson(Map<String, dynamic> json) {
 }
 
 /// @nodoc
-class _$MediaDetailsTearOff {
-  const _$MediaDetailsTearOff();
-
-  TrackDetails track(
-      {@JsonKey(name: 'trackTags')
-          required List<String> trackTags,
-      @JsonKey(name: 'lyricData')
-          MediaLyricData? lyricData,
-      @JsonKey(name: 'cleanLyricData')
-          MediaLyricData? cleanLyricData,
-      @JsonKey(name: 'releaseDate')
-          required DateTime releaseDate,
-      @JsonKey(name: 'copyright')
-          required String copyrightHtml,
-      @JsonKey(name: 'shareableUrlPath')
-          required String shareableUrlPath,
-      @JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
-          required DateTime modificationTime,
-      @JsonKey(name: 'similarTracks')
-          required List<String> similarTrackIds,
-      @JsonKey(name: 'focusTraits')
-          required List<FocusTrait> focusTraits,
-      @JsonKey(name: 'credits')
-          Credits? credits,
-      @JsonKey(name: 'featured')
-          required bool featured,
-      @JsonKey(name: 'pandoraId')
-          required String pandoraId,
-      @JsonKey(name: 'type')
-          required PandoraType pandoraType,
-      @JsonKey(name: 'scope')
-          required String scope}) {
-    return TrackDetails(
-      trackTags: trackTags,
-      lyricData: lyricData,
-      cleanLyricData: cleanLyricData,
-      releaseDate: releaseDate,
-      copyrightHtml: copyrightHtml,
-      shareableUrlPath: shareableUrlPath,
-      modificationTime: modificationTime,
-      similarTrackIds: similarTrackIds,
-      focusTraits: focusTraits,
-      credits: credits,
-      featured: featured,
-      pandoraId: pandoraId,
-      pandoraType: pandoraType,
-      scope: scope,
-    );
-  }
-
-  GenreDetails genre(
-      {@JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
-          required DateTime modificationTime,
-      @JsonKey(name: 'sampleArtists')
-          required List<String> sampleArtistIds,
-      @JsonKey(name: 'sampleTracks')
-          required List<String> sampleTrackIds,
-      @JsonKey(name: 'focusTraits')
-          required List<FocusTrait> focusTraits,
-      @JsonKey(name: 'isRedirect')
-          required bool isRedirect,
-      @JsonKey(name: 'curatorId')
-          required String curatorId,
-      @JsonKey(name: 'pandoraId')
-          required String pandoraId,
-      @JsonKey(name: 'type')
-          required PandoraType pandoraType,
-      @JsonKey(name: 'scope')
-          required String scope}) {
-    return GenreDetails(
-      modificationTime: modificationTime,
-      sampleArtistIds: sampleArtistIds,
-      sampleTrackIds: sampleTrackIds,
-      focusTraits: focusTraits,
-      isRedirect: isRedirect,
-      curatorId: curatorId,
-      pandoraId: pandoraId,
-      pandoraType: pandoraType,
-      scope: scope,
-    );
-  }
-
-  MediaDetails fromJson(Map<String, Object?> json) {
-    return MediaDetails.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $MediaDetails = _$MediaDetailsTearOff();
-
-/// @nodoc
 mixin _$MediaDetails {
   @JsonKey(
       name: 'modificationTime',
@@ -707,7 +601,6 @@ mixin _$MediaDetails {
   PandoraType get pandoraType => throw _privateConstructorUsedError;
   @JsonKey(name: 'scope')
   String get scope => throw _privateConstructorUsedError;
-
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(
@@ -956,11 +849,11 @@ class _$MediaDetailsCopyWithImpl<$Res> implements $MediaDetailsCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class $TrackDetailsCopyWith<$Res>
+abstract class _$$TrackDetailsCopyWith<$Res>
     implements $MediaDetailsCopyWith<$Res> {
-  factory $TrackDetailsCopyWith(
-          TrackDetails value, $Res Function(TrackDetails) then) =
-      _$TrackDetailsCopyWithImpl<$Res>;
+  factory _$$TrackDetailsCopyWith(
+          _$TrackDetails value, $Res Function(_$TrackDetails) then) =
+      __$$TrackDetailsCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(name: 'trackTags')
@@ -998,14 +891,15 @@ abstract class $TrackDetailsCopyWith<$Res>
 }
 
 /// @nodoc
-class _$TrackDetailsCopyWithImpl<$Res> extends _$MediaDetailsCopyWithImpl<$Res>
-    implements $TrackDetailsCopyWith<$Res> {
-  _$TrackDetailsCopyWithImpl(
-      TrackDetails _value, $Res Function(TrackDetails) _then)
-      : super(_value, (v) => _then(v as TrackDetails));
+class __$$TrackDetailsCopyWithImpl<$Res>
+    extends _$MediaDetailsCopyWithImpl<$Res>
+    implements _$$TrackDetailsCopyWith<$Res> {
+  __$$TrackDetailsCopyWithImpl(
+      _$TrackDetails _value, $Res Function(_$TrackDetails) _then)
+      : super(_value, (v) => _then(v as _$TrackDetails));
 
   @override
-  TrackDetails get _value => super._value as TrackDetails;
+  _$TrackDetails get _value => super._value as _$TrackDetails;
 
   @override
   $Res call({
@@ -1024,9 +918,9 @@ class _$TrackDetailsCopyWithImpl<$Res> extends _$MediaDetailsCopyWithImpl<$Res>
     Object? pandoraType = freezed,
     Object? scope = freezed,
   }) {
-    return _then(TrackDetails(
+    return _then(_$TrackDetails(
       trackTags: trackTags == freezed
-          ? _value.trackTags
+          ? _value._trackTags
           : trackTags // ignore: cast_nullable_to_non_nullable
               as List<String>,
       lyricData: lyricData == freezed
@@ -1054,11 +948,11 @@ class _$TrackDetailsCopyWithImpl<$Res> extends _$MediaDetailsCopyWithImpl<$Res>
           : modificationTime // ignore: cast_nullable_to_non_nullable
               as DateTime,
       similarTrackIds: similarTrackIds == freezed
-          ? _value.similarTrackIds
+          ? _value._similarTrackIds
           : similarTrackIds // ignore: cast_nullable_to_non_nullable
               as List<String>,
       focusTraits: focusTraits == freezed
-          ? _value.focusTraits
+          ? _value._focusTraits
           : focusTraits // ignore: cast_nullable_to_non_nullable
               as List<FocusTrait>,
       credits: credits == freezed
@@ -1120,11 +1014,10 @@ class _$TrackDetailsCopyWithImpl<$Res> extends _$MediaDetailsCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-@Implements<Track>()
 class _$TrackDetails implements TrackDetails {
   const _$TrackDetails(
       {@JsonKey(name: 'trackTags')
-          required this.trackTags,
+          required final List<String> trackTags,
       @JsonKey(name: 'lyricData')
           this.lyricData,
       @JsonKey(name: 'cleanLyricData')
@@ -1138,9 +1031,9 @@ class _$TrackDetails implements TrackDetails {
       @JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
           required this.modificationTime,
       @JsonKey(name: 'similarTracks')
-          required this.similarTrackIds,
+          required final List<String> similarTrackIds,
       @JsonKey(name: 'focusTraits')
-          required this.focusTraits,
+          required final List<FocusTrait> focusTraits,
       @JsonKey(name: 'credits')
           this.credits,
       @JsonKey(name: 'featured')
@@ -1151,17 +1044,25 @@ class _$TrackDetails implements TrackDetails {
           required this.pandoraType,
       @JsonKey(name: 'scope')
           required this.scope,
-      String? $type})
+      final String? $type})
       : assert((lyricData == null && cleanLyricData == null) ||
             (lyricData != null && cleanLyricData != null)),
+        _trackTags = trackTags,
+        _similarTrackIds = similarTrackIds,
+        _focusTraits = focusTraits,
         $type = $type ?? 'track';
 
   factory _$TrackDetails.fromJson(Map<String, dynamic> json) =>
       _$$TrackDetailsFromJson(json);
 
+  final List<String> _trackTags;
   @override
   @JsonKey(name: 'trackTags')
-  final List<String> trackTags;
+  List<String> get trackTags {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_trackTags);
+  }
+
   @override
   @JsonKey(name: 'lyricData')
   final MediaLyricData? lyricData;
@@ -1183,12 +1084,22 @@ class _$TrackDetails implements TrackDetails {
       fromJson: readDateTimeMilliseconds,
       toJson: writeDateTimeMilliseconds)
   final DateTime modificationTime;
+  final List<String> _similarTrackIds;
   @override
   @JsonKey(name: 'similarTracks')
-  final List<String> similarTrackIds;
+  List<String> get similarTrackIds {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_similarTrackIds);
+  }
+
+  final List<FocusTrait> _focusTraits;
   @override
   @JsonKey(name: 'focusTraits')
-  final List<FocusTrait> focusTraits;
+  List<FocusTrait> get focusTraits {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_focusTraits);
+  }
+
   @override
   @JsonKey(name: 'credits')
   final Credits? credits;
@@ -1217,8 +1128,9 @@ class _$TrackDetails implements TrackDetails {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is TrackDetails &&
-            const DeepCollectionEquality().equals(other.trackTags, trackTags) &&
+            other is _$TrackDetails &&
+            const DeepCollectionEquality()
+                .equals(other._trackTags, _trackTags) &&
             const DeepCollectionEquality().equals(other.lyricData, lyricData) &&
             const DeepCollectionEquality()
                 .equals(other.cleanLyricData, cleanLyricData) &&
@@ -1231,9 +1143,9 @@ class _$TrackDetails implements TrackDetails {
             const DeepCollectionEquality()
                 .equals(other.modificationTime, modificationTime) &&
             const DeepCollectionEquality()
-                .equals(other.similarTrackIds, similarTrackIds) &&
+                .equals(other._similarTrackIds, _similarTrackIds) &&
             const DeepCollectionEquality()
-                .equals(other.focusTraits, focusTraits) &&
+                .equals(other._focusTraits, _focusTraits) &&
             const DeepCollectionEquality().equals(other.credits, credits) &&
             const DeepCollectionEquality().equals(other.featured, featured) &&
             const DeepCollectionEquality().equals(other.pandoraId, pandoraId) &&
@@ -1242,18 +1154,19 @@ class _$TrackDetails implements TrackDetails {
             const DeepCollectionEquality().equals(other.scope, scope));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(trackTags),
+      const DeepCollectionEquality().hash(_trackTags),
       const DeepCollectionEquality().hash(lyricData),
       const DeepCollectionEquality().hash(cleanLyricData),
       const DeepCollectionEquality().hash(releaseDate),
       const DeepCollectionEquality().hash(copyrightHtml),
       const DeepCollectionEquality().hash(shareableUrlPath),
       const DeepCollectionEquality().hash(modificationTime),
-      const DeepCollectionEquality().hash(similarTrackIds),
-      const DeepCollectionEquality().hash(focusTraits),
+      const DeepCollectionEquality().hash(_similarTrackIds),
+      const DeepCollectionEquality().hash(_focusTraits),
       const DeepCollectionEquality().hash(credits),
       const DeepCollectionEquality().hash(featured),
       const DeepCollectionEquality().hash(pandoraId),
@@ -1262,8 +1175,8 @@ class _$TrackDetails implements TrackDetails {
 
   @JsonKey(ignore: true)
   @override
-  $TrackDetailsCopyWith<TrackDetails> get copyWith =>
-      _$TrackDetailsCopyWithImpl<TrackDetails>(this, _$identity);
+  _$$TrackDetailsCopyWith<_$TrackDetails> get copyWith =>
+      __$$TrackDetailsCopyWithImpl<_$TrackDetails>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1522,85 +1435,85 @@ class _$TrackDetails implements TrackDetails {
 abstract class TrackDetails implements MediaDetails, Track {
   const factory TrackDetails(
       {@JsonKey(name: 'trackTags')
-          required List<String> trackTags,
+          required final List<String> trackTags,
       @JsonKey(name: 'lyricData')
-          MediaLyricData? lyricData,
+          final MediaLyricData? lyricData,
       @JsonKey(name: 'cleanLyricData')
-          MediaLyricData? cleanLyricData,
+          final MediaLyricData? cleanLyricData,
       @JsonKey(name: 'releaseDate')
-          required DateTime releaseDate,
+          required final DateTime releaseDate,
       @JsonKey(name: 'copyright')
-          required String copyrightHtml,
+          required final String copyrightHtml,
       @JsonKey(name: 'shareableUrlPath')
-          required String shareableUrlPath,
+          required final String shareableUrlPath,
       @JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
-          required DateTime modificationTime,
+          required final DateTime modificationTime,
       @JsonKey(name: 'similarTracks')
-          required List<String> similarTrackIds,
+          required final List<String> similarTrackIds,
       @JsonKey(name: 'focusTraits')
-          required List<FocusTrait> focusTraits,
+          required final List<FocusTrait> focusTraits,
       @JsonKey(name: 'credits')
-          Credits? credits,
+          final Credits? credits,
       @JsonKey(name: 'featured')
-          required bool featured,
+          required final bool featured,
       @JsonKey(name: 'pandoraId')
-          required String pandoraId,
+          required final String pandoraId,
       @JsonKey(name: 'type')
-          required PandoraType pandoraType,
+          required final PandoraType pandoraType,
       @JsonKey(name: 'scope')
-          required String scope}) = _$TrackDetails;
+          required final String scope}) = _$TrackDetails;
 
   factory TrackDetails.fromJson(Map<String, dynamic> json) =
       _$TrackDetails.fromJson;
 
   @JsonKey(name: 'trackTags')
-  List<String> get trackTags;
+  List<String> get trackTags => throw _privateConstructorUsedError;
   @JsonKey(name: 'lyricData')
-  MediaLyricData? get lyricData;
+  MediaLyricData? get lyricData => throw _privateConstructorUsedError;
   @JsonKey(name: 'cleanLyricData')
-  MediaLyricData? get cleanLyricData;
+  MediaLyricData? get cleanLyricData => throw _privateConstructorUsedError;
   @JsonKey(name: 'releaseDate')
-  DateTime get releaseDate;
+  DateTime get releaseDate => throw _privateConstructorUsedError;
   @JsonKey(name: 'copyright')
-  String get copyrightHtml;
+  String get copyrightHtml => throw _privateConstructorUsedError;
   @JsonKey(name: 'shareableUrlPath')
-  String get shareableUrlPath;
+  String get shareableUrlPath => throw _privateConstructorUsedError;
   @override
   @JsonKey(
       name: 'modificationTime',
       fromJson: readDateTimeMilliseconds,
       toJson: writeDateTimeMilliseconds)
-  DateTime get modificationTime;
+  DateTime get modificationTime => throw _privateConstructorUsedError;
   @JsonKey(name: 'similarTracks')
-  List<String> get similarTrackIds;
+  List<String> get similarTrackIds => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'focusTraits')
-  List<FocusTrait> get focusTraits;
+  List<FocusTrait> get focusTraits => throw _privateConstructorUsedError;
   @JsonKey(name: 'credits')
-  Credits? get credits;
+  Credits? get credits => throw _privateConstructorUsedError;
   @JsonKey(name: 'featured')
-  bool get featured;
+  bool get featured => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'pandoraId')
-  String get pandoraId;
+  String get pandoraId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'type')
-  PandoraType get pandoraType;
+  PandoraType get pandoraType => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'scope')
-  String get scope;
+  String get scope => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  $TrackDetailsCopyWith<TrackDetails> get copyWith =>
+  _$$TrackDetailsCopyWith<_$TrackDetails> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $GenreDetailsCopyWith<$Res>
+abstract class _$$GenreDetailsCopyWith<$Res>
     implements $MediaDetailsCopyWith<$Res> {
-  factory $GenreDetailsCopyWith(
-          GenreDetails value, $Res Function(GenreDetails) then) =
-      _$GenreDetailsCopyWithImpl<$Res>;
+  factory _$$GenreDetailsCopyWith(
+          _$GenreDetails value, $Res Function(_$GenreDetails) then) =
+      __$$GenreDetailsCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
@@ -1624,14 +1537,15 @@ abstract class $GenreDetailsCopyWith<$Res>
 }
 
 /// @nodoc
-class _$GenreDetailsCopyWithImpl<$Res> extends _$MediaDetailsCopyWithImpl<$Res>
-    implements $GenreDetailsCopyWith<$Res> {
-  _$GenreDetailsCopyWithImpl(
-      GenreDetails _value, $Res Function(GenreDetails) _then)
-      : super(_value, (v) => _then(v as GenreDetails));
+class __$$GenreDetailsCopyWithImpl<$Res>
+    extends _$MediaDetailsCopyWithImpl<$Res>
+    implements _$$GenreDetailsCopyWith<$Res> {
+  __$$GenreDetailsCopyWithImpl(
+      _$GenreDetails _value, $Res Function(_$GenreDetails) _then)
+      : super(_value, (v) => _then(v as _$GenreDetails));
 
   @override
-  GenreDetails get _value => super._value as GenreDetails;
+  _$GenreDetails get _value => super._value as _$GenreDetails;
 
   @override
   $Res call({
@@ -1645,21 +1559,21 @@ class _$GenreDetailsCopyWithImpl<$Res> extends _$MediaDetailsCopyWithImpl<$Res>
     Object? pandoraType = freezed,
     Object? scope = freezed,
   }) {
-    return _then(GenreDetails(
+    return _then(_$GenreDetails(
       modificationTime: modificationTime == freezed
           ? _value.modificationTime
           : modificationTime // ignore: cast_nullable_to_non_nullable
               as DateTime,
       sampleArtistIds: sampleArtistIds == freezed
-          ? _value.sampleArtistIds
+          ? _value._sampleArtistIds
           : sampleArtistIds // ignore: cast_nullable_to_non_nullable
               as List<String>,
       sampleTrackIds: sampleTrackIds == freezed
-          ? _value.sampleTrackIds
+          ? _value._sampleTrackIds
           : sampleTrackIds // ignore: cast_nullable_to_non_nullable
               as List<String>,
       focusTraits: focusTraits == freezed
-          ? _value.focusTraits
+          ? _value._focusTraits
           : focusTraits // ignore: cast_nullable_to_non_nullable
               as List<FocusTrait>,
       isRedirect: isRedirect == freezed
@@ -1693,11 +1607,11 @@ class _$GenreDetails implements GenreDetails {
       {@JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
           required this.modificationTime,
       @JsonKey(name: 'sampleArtists')
-          required this.sampleArtistIds,
+          required final List<String> sampleArtistIds,
       @JsonKey(name: 'sampleTracks')
-          required this.sampleTrackIds,
+          required final List<String> sampleTrackIds,
       @JsonKey(name: 'focusTraits')
-          required this.focusTraits,
+          required final List<FocusTrait> focusTraits,
       @JsonKey(name: 'isRedirect')
           required this.isRedirect,
       @JsonKey(name: 'curatorId')
@@ -1708,8 +1622,11 @@ class _$GenreDetails implements GenreDetails {
           required this.pandoraType,
       @JsonKey(name: 'scope')
           required this.scope,
-      String? $type})
-      : $type = $type ?? 'genre';
+      final String? $type})
+      : _sampleArtistIds = sampleArtistIds,
+        _sampleTrackIds = sampleTrackIds,
+        _focusTraits = focusTraits,
+        $type = $type ?? 'genre';
 
   factory _$GenreDetails.fromJson(Map<String, dynamic> json) =>
       _$$GenreDetailsFromJson(json);
@@ -1720,15 +1637,30 @@ class _$GenreDetails implements GenreDetails {
       fromJson: readDateTimeMilliseconds,
       toJson: writeDateTimeMilliseconds)
   final DateTime modificationTime;
+  final List<String> _sampleArtistIds;
   @override
   @JsonKey(name: 'sampleArtists')
-  final List<String> sampleArtistIds;
+  List<String> get sampleArtistIds {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_sampleArtistIds);
+  }
+
+  final List<String> _sampleTrackIds;
   @override
   @JsonKey(name: 'sampleTracks')
-  final List<String> sampleTrackIds;
+  List<String> get sampleTrackIds {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_sampleTrackIds);
+  }
+
+  final List<FocusTrait> _focusTraits;
   @override
   @JsonKey(name: 'focusTraits')
-  final List<FocusTrait> focusTraits;
+  List<FocusTrait> get focusTraits {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_focusTraits);
+  }
+
   @override
   @JsonKey(name: 'isRedirect')
   final bool isRedirect;
@@ -1757,15 +1689,15 @@ class _$GenreDetails implements GenreDetails {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is GenreDetails &&
+            other is _$GenreDetails &&
             const DeepCollectionEquality()
                 .equals(other.modificationTime, modificationTime) &&
             const DeepCollectionEquality()
-                .equals(other.sampleArtistIds, sampleArtistIds) &&
+                .equals(other._sampleArtistIds, _sampleArtistIds) &&
             const DeepCollectionEquality()
-                .equals(other.sampleTrackIds, sampleTrackIds) &&
+                .equals(other._sampleTrackIds, _sampleTrackIds) &&
             const DeepCollectionEquality()
-                .equals(other.focusTraits, focusTraits) &&
+                .equals(other._focusTraits, _focusTraits) &&
             const DeepCollectionEquality()
                 .equals(other.isRedirect, isRedirect) &&
             const DeepCollectionEquality().equals(other.curatorId, curatorId) &&
@@ -1775,13 +1707,14 @@ class _$GenreDetails implements GenreDetails {
             const DeepCollectionEquality().equals(other.scope, scope));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(modificationTime),
-      const DeepCollectionEquality().hash(sampleArtistIds),
-      const DeepCollectionEquality().hash(sampleTrackIds),
-      const DeepCollectionEquality().hash(focusTraits),
+      const DeepCollectionEquality().hash(_sampleArtistIds),
+      const DeepCollectionEquality().hash(_sampleTrackIds),
+      const DeepCollectionEquality().hash(_focusTraits),
       const DeepCollectionEquality().hash(isRedirect),
       const DeepCollectionEquality().hash(curatorId),
       const DeepCollectionEquality().hash(pandoraId),
@@ -1790,8 +1723,8 @@ class _$GenreDetails implements GenreDetails {
 
   @JsonKey(ignore: true)
   @override
-  $GenreDetailsCopyWith<GenreDetails> get copyWith =>
-      _$GenreDetailsCopyWithImpl<GenreDetails>(this, _$identity);
+  _$$GenreDetailsCopyWith<_$GenreDetails> get copyWith =>
+      __$$GenreDetailsCopyWithImpl<_$GenreDetails>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -2011,23 +1944,23 @@ class _$GenreDetails implements GenreDetails {
 abstract class GenreDetails implements MediaDetails {
   const factory GenreDetails(
       {@JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
-          required DateTime modificationTime,
+          required final DateTime modificationTime,
       @JsonKey(name: 'sampleArtists')
-          required List<String> sampleArtistIds,
+          required final List<String> sampleArtistIds,
       @JsonKey(name: 'sampleTracks')
-          required List<String> sampleTrackIds,
+          required final List<String> sampleTrackIds,
       @JsonKey(name: 'focusTraits')
-          required List<FocusTrait> focusTraits,
+          required final List<FocusTrait> focusTraits,
       @JsonKey(name: 'isRedirect')
-          required bool isRedirect,
+          required final bool isRedirect,
       @JsonKey(name: 'curatorId')
-          required String curatorId,
+          required final String curatorId,
       @JsonKey(name: 'pandoraId')
-          required String pandoraId,
+          required final String pandoraId,
       @JsonKey(name: 'type')
-          required PandoraType pandoraType,
+          required final PandoraType pandoraType,
       @JsonKey(name: 'scope')
-          required String scope}) = _$GenreDetails;
+          required final String scope}) = _$GenreDetails;
 
   factory GenreDetails.fromJson(Map<String, dynamic> json) =
       _$GenreDetails.fromJson;
@@ -2037,29 +1970,29 @@ abstract class GenreDetails implements MediaDetails {
       name: 'modificationTime',
       fromJson: readDateTimeMilliseconds,
       toJson: writeDateTimeMilliseconds)
-  DateTime get modificationTime;
+  DateTime get modificationTime => throw _privateConstructorUsedError;
   @JsonKey(name: 'sampleArtists')
-  List<String> get sampleArtistIds;
+  List<String> get sampleArtistIds => throw _privateConstructorUsedError;
   @JsonKey(name: 'sampleTracks')
-  List<String> get sampleTrackIds;
+  List<String> get sampleTrackIds => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'focusTraits')
-  List<FocusTrait> get focusTraits;
+  List<FocusTrait> get focusTraits => throw _privateConstructorUsedError;
   @JsonKey(name: 'isRedirect')
-  bool get isRedirect;
+  bool get isRedirect => throw _privateConstructorUsedError;
   @JsonKey(name: 'curatorId')
-  String get curatorId;
+  String get curatorId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'pandoraId')
-  String get pandoraId;
+  String get pandoraId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'type')
-  PandoraType get pandoraType;
+  PandoraType get pandoraType => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'scope')
-  String get scope;
+  String get scope => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  $GenreDetailsCopyWith<GenreDetails> get copyWith =>
+  _$$GenreDetailsCopyWith<_$GenreDetails> get copyWith =>
       throw _privateConstructorUsedError;
 }
