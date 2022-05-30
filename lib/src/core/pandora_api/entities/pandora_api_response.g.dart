@@ -11,7 +11,7 @@ part of 'pandora_api_response.dart';
 _$SuccessfulPandoraApiResponse _$$SuccessfulPandoraApiResponseFromJson(
         Map<String, dynamic> json) =>
     _$SuccessfulPandoraApiResponse(
-      result: json['result'] as Object,
+      result: json['result'],
       $type: json['stat'] as String?,
     );
 

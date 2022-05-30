@@ -7,7 +7,7 @@ part 'pandora_api_response.g.dart';
 class PandoraApiResponse with _$PandoraApiResponse {
   @FreezedUnionValue('ok')
   const factory PandoraApiResponse.ok({
-    @JsonKey(name: 'result') required Object result,
+    @JsonKey(name: 'result') Object? result,
   }) = SuccessfulPandoraApiResponse;
 
   @FreezedUnionValue('fail')

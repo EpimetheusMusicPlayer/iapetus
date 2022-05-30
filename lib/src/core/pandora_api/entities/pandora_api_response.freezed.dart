@@ -31,7 +31,7 @@ PandoraApiResponse _$PandoraApiResponseFromJson(Map<String, dynamic> json) {
 mixin _$PandoraApiResponse {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(@JsonKey(name: 'result') Object result) ok,
+    required TResult Function(@JsonKey(name: 'result') Object? result) ok,
     required TResult Function(@JsonKey(name: 'code') int code,
             @JsonKey(name: 'message') String message)
         fail,
@@ -39,7 +39,7 @@ mixin _$PandoraApiResponse {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(@JsonKey(name: 'result') Object result)? ok,
+    TResult Function(@JsonKey(name: 'result') Object? result)? ok,
     TResult Function(@JsonKey(name: 'code') int code,
             @JsonKey(name: 'message') String message)?
         fail,
@@ -47,7 +47,7 @@ mixin _$PandoraApiResponse {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(@JsonKey(name: 'result') Object result)? ok,
+    TResult Function(@JsonKey(name: 'result') Object? result)? ok,
     TResult Function(@JsonKey(name: 'code') int code,
             @JsonKey(name: 'message') String message)?
         fail,
@@ -99,7 +99,7 @@ abstract class _$$SuccessfulPandoraApiResponseCopyWith<$Res> {
           _$SuccessfulPandoraApiResponse value,
           $Res Function(_$SuccessfulPandoraApiResponse) then) =
       __$$SuccessfulPandoraApiResponseCopyWithImpl<$Res>;
-  $Res call({@JsonKey(name: 'result') Object result});
+  $Res call({@JsonKey(name: 'result') Object? result});
 }
 
 /// @nodoc
@@ -120,10 +120,7 @@ class __$$SuccessfulPandoraApiResponseCopyWithImpl<$Res>
     Object? result = freezed,
   }) {
     return _then(_$SuccessfulPandoraApiResponse(
-      result: result == freezed
-          ? _value.result
-          : result // ignore: cast_nullable_to_non_nullable
-              as Object,
+      result: result == freezed ? _value.result : result,
     ));
   }
 }
@@ -132,7 +129,7 @@ class __$$SuccessfulPandoraApiResponseCopyWithImpl<$Res>
 @JsonSerializable()
 class _$SuccessfulPandoraApiResponse implements SuccessfulPandoraApiResponse {
   const _$SuccessfulPandoraApiResponse(
-      {@JsonKey(name: 'result') required this.result, final String? $type})
+      {@JsonKey(name: 'result') this.result, final String? $type})
       : $type = $type ?? 'ok';
 
   factory _$SuccessfulPandoraApiResponse.fromJson(Map<String, dynamic> json) =>
@@ -140,7 +137,7 @@ class _$SuccessfulPandoraApiResponse implements SuccessfulPandoraApiResponse {
 
   @override
   @JsonKey(name: 'result')
-  final Object result;
+  final Object? result;
 
   @JsonKey(name: 'stat')
   final String $type;
@@ -172,7 +169,7 @@ class _$SuccessfulPandoraApiResponse implements SuccessfulPandoraApiResponse {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(@JsonKey(name: 'result') Object result) ok,
+    required TResult Function(@JsonKey(name: 'result') Object? result) ok,
     required TResult Function(@JsonKey(name: 'code') int code,
             @JsonKey(name: 'message') String message)
         fail,
@@ -183,7 +180,7 @@ class _$SuccessfulPandoraApiResponse implements SuccessfulPandoraApiResponse {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(@JsonKey(name: 'result') Object result)? ok,
+    TResult Function(@JsonKey(name: 'result') Object? result)? ok,
     TResult Function(@JsonKey(name: 'code') int code,
             @JsonKey(name: 'message') String message)?
         fail,
@@ -194,7 +191,7 @@ class _$SuccessfulPandoraApiResponse implements SuccessfulPandoraApiResponse {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(@JsonKey(name: 'result') Object result)? ok,
+    TResult Function(@JsonKey(name: 'result') Object? result)? ok,
     TResult Function(@JsonKey(name: 'code') int code,
             @JsonKey(name: 'message') String message)?
         fail,
@@ -245,14 +242,14 @@ class _$SuccessfulPandoraApiResponse implements SuccessfulPandoraApiResponse {
 
 abstract class SuccessfulPandoraApiResponse implements PandoraApiResponse {
   const factory SuccessfulPandoraApiResponse(
-          {@JsonKey(name: 'result') required final Object result}) =
+          {@JsonKey(name: 'result') final Object? result}) =
       _$SuccessfulPandoraApiResponse;
 
   factory SuccessfulPandoraApiResponse.fromJson(Map<String, dynamic> json) =
       _$SuccessfulPandoraApiResponse.fromJson;
 
   @JsonKey(name: 'result')
-  Object get result => throw _privateConstructorUsedError;
+  Object? get result => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   _$$SuccessfulPandoraApiResponseCopyWith<_$SuccessfulPandoraApiResponse>
       get copyWith => throw _privateConstructorUsedError;
@@ -349,7 +346,7 @@ class _$PandoraApiException implements PandoraApiException {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(@JsonKey(name: 'result') Object result) ok,
+    required TResult Function(@JsonKey(name: 'result') Object? result) ok,
     required TResult Function(@JsonKey(name: 'code') int code,
             @JsonKey(name: 'message') String message)
         fail,
@@ -360,7 +357,7 @@ class _$PandoraApiException implements PandoraApiException {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(@JsonKey(name: 'result') Object result)? ok,
+    TResult Function(@JsonKey(name: 'result') Object? result)? ok,
     TResult Function(@JsonKey(name: 'code') int code,
             @JsonKey(name: 'message') String message)?
         fail,
@@ -371,7 +368,7 @@ class _$PandoraApiException implements PandoraApiException {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(@JsonKey(name: 'result') Object result)? ok,
+    TResult Function(@JsonKey(name: 'result') Object? result)? ok,
     TResult Function(@JsonKey(name: 'code') int code,
             @JsonKey(name: 'message') String message)?
         fail,
