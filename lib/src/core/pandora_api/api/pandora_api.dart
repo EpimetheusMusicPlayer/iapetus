@@ -65,15 +65,7 @@ extension PandoraApi on Iapetus {
     }
 
     return PandoraApiResponse.fromJson(responseJson).map(
-      ok: (response) {
-        if (response.result is! T) {
-          throw FormatException(
-            'Invalid response result type!',
-            response.result,
-          );
-        }
-        return response.result as T;
-      },
+      ok: (response) => response.castResult<T>(),
       fail: (apiException) async {
         switch (apiException.code) {
           case PandoraApiErrorCodes.invalidAuthToken:

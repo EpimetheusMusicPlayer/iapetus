@@ -20,3 +20,16 @@ class PandoraApiResponse with _$PandoraApiResponse {
   factory PandoraApiResponse.fromJson(Map<String, dynamic> json) =>
       _$PandoraApiResponseFromJson(json);
 }
+
+extension SuccesfulPandoraApiResponseResultGetters
+    on SuccessfulPandoraApiResponse {
+  T castResult<T>() {
+    final result = this.result;
+    if (result is! T) {
+      throw FormatException('Invalid response result type!', result);
+    }
+    return result;
+  }
+
+  Map<String, dynamic> get resultJson => castResult<Map<String, dynamic>>();
+}
