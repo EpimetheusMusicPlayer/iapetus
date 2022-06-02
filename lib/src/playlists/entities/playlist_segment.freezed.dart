@@ -74,9 +74,7 @@ mixin _$PlaylistSegment {
   List<PandoraType> get includedTrackTypes =>
       throw _privateConstructorUsedError;
   @JsonKey(
-      name: 'allowFeedback',
-      fromJson: readNullableBool,
-      toJson: writeNullableBool)
+      name: 'allowFeedback', fromJson: readOptInBool, toJson: writeOptInBool)
   bool get allowFeedback => throw _privateConstructorUsedError;
   @JsonKey(name: 'collectible')
   bool get collectible => throw _privateConstructorUsedError;
@@ -143,7 +141,7 @@ abstract class $PlaylistSegmentCopyWith<$Res> {
           bool autogenForListener,
       @JsonKey(name: 'includedTrackTypes')
           List<PandoraType> includedTrackTypes,
-      @JsonKey(name: 'allowFeedback', fromJson: readNullableBool, toJson: writeNullableBool)
+      @JsonKey(name: 'allowFeedback', fromJson: readOptInBool, toJson: writeOptInBool)
           bool allowFeedback,
       @JsonKey(name: 'collectible')
           bool collectible,
@@ -368,7 +366,7 @@ abstract class _$$_PlaylistSegmentCopyWith<$Res>
           bool autogenForListener,
       @JsonKey(name: 'includedTrackTypes')
           List<PandoraType> includedTrackTypes,
-      @JsonKey(name: 'allowFeedback', fromJson: readNullableBool, toJson: writeNullableBool)
+      @JsonKey(name: 'allowFeedback', fromJson: readOptInBool, toJson: writeOptInBool)
           bool allowFeedback,
       @JsonKey(name: 'collectible')
           bool collectible,
@@ -585,7 +583,7 @@ class _$_PlaylistSegment extends _PlaylistSegment {
           required this.autogenForListener,
       @JsonKey(name: 'includedTrackTypes')
           required final List<PandoraType> includedTrackTypes,
-      @JsonKey(name: 'allowFeedback', fromJson: readNullableBool, toJson: writeNullableBool)
+      @JsonKey(name: 'allowFeedback', fromJson: readOptInBool, toJson: writeOptInBool)
           required this.allowFeedback,
       @JsonKey(name: 'collectible')
           required this.collectible,
@@ -694,9 +692,7 @@ class _$_PlaylistSegment extends _PlaylistSegment {
 
   @override
   @JsonKey(
-      name: 'allowFeedback',
-      fromJson: readNullableBool,
-      toJson: writeNullableBool)
+      name: 'allowFeedback', fromJson: readOptInBool, toJson: writeOptInBool)
   final bool allowFeedback;
   @override
   @JsonKey(name: 'collectible')
@@ -860,7 +856,7 @@ abstract class _PlaylistSegment extends PlaylistSegment {
           required final bool autogenForListener,
       @JsonKey(name: 'includedTrackTypes')
           required final List<PandoraType> includedTrackTypes,
-      @JsonKey(name: 'allowFeedback', fromJson: readNullableBool, toJson: writeNullableBool)
+      @JsonKey(name: 'allowFeedback', fromJson: readOptInBool, toJson: writeOptInBool)
           required final bool allowFeedback,
       @JsonKey(name: 'collectible')
           required final bool collectible,
@@ -953,9 +949,7 @@ abstract class _PlaylistSegment extends PlaylistSegment {
       throw _privateConstructorUsedError;
   @override
   @JsonKey(
-      name: 'allowFeedback',
-      fromJson: readNullableBool,
-      toJson: writeNullableBool)
+      name: 'allowFeedback', fromJson: readOptInBool, toJson: writeOptInBool)
   bool get allowFeedback => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'collectible')

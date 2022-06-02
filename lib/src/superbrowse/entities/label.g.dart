@@ -14,9 +14,9 @@ _$_SuperbrowseLabel _$$_SuperbrowseLabelFromJson(Map<String, dynamic> json) =>
       style: $enumDecode(_$LabelStyleEnumMap, json['style']),
       alignment: $enumDecodeNullable(_$TextAlignmentEnumMap, json['alignment']),
       maxLines: json['maxLines'] as int?,
-      bold: readNullableBool(json['bold'] as bool?),
-      italic: readNullableBool(json['italic'] as bool?),
-      underlined: readNullableBool(json['underlined'] as bool?),
+      bold: readOptInBool(json['bold'] as bool?),
+      italic: readOptInBool(json['italic'] as bool?),
+      underlined: readOptInBool(json['underlined'] as bool?),
     );
 
 Map<String, dynamic> _$$_SuperbrowseLabelToJson(_$_SuperbrowseLabel instance) =>
@@ -25,9 +25,9 @@ Map<String, dynamic> _$$_SuperbrowseLabelToJson(_$_SuperbrowseLabel instance) =>
       'style': _$LabelStyleEnumMap[instance.style],
       'alignment': _$TextAlignmentEnumMap[instance.alignment],
       'maxLines': instance.maxLines,
-      'bold': writeNullableBool(instance.bold),
-      'italic': writeNullableBool(instance.italic),
-      'underlined': writeNullableBool(instance.underlined),
+      'bold': writeOptInBool(instance.bold),
+      'italic': writeOptInBool(instance.italic),
+      'underlined': writeOptInBool(instance.underlined),
     };
 
 const _$LabelStyleEnumMap = {

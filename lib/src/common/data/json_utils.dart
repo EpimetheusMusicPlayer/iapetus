@@ -70,7 +70,17 @@ List<String> readEscapedLineBreakString(String value) => value.split(r'\n');
 String writeEscapedLineBreakString(List<String> value) => value.join(r'\n');
 
 // ignore: avoid_positional_boolean_parameters
-bool readNullableBool(bool? value) => value == true;
+bool readOptInBool(bool? value) => value ?? false;
 
 // ignore: avoid_positional_boolean_parameters
-bool? writeNullableBool(bool value) => value ? true : null;
+bool? writeOptInBool(bool value) => value ? true : null;
+
+// ignore: avoid_positional_boolean_parameters
+bool readOptOutBool(bool? value) => value ?? true;
+
+// ignore: avoid_positional_boolean_parameters
+bool? writeOptOutBool(bool value) => value ? null : false;
+
+String? readOptionalString(String value) => value.isEmpty ? null : value;
+
+String writeOptionalString(String? value) => value ?? '';

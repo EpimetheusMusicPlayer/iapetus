@@ -99,7 +99,7 @@ class SuperbrowseItem with _$SuperbrowseItem {
     @JsonKey(name: 'rank') SuperbrowseLabel? rank,
     @JsonKey(name: 'longPressAction') SuperbrowseAction? longPressAction,
     @JsonKey(name: 'badges') List<SuperbrowseBadge>? badges,
-    @JsonKey(name: 'separatorBelow', fromJson: readNullableBool, toJson: writeNullableBool)
+    @JsonKey(name: 'separatorBelow', fromJson: readOptInBool, toJson: writeOptInBool)
         required bool separatorBelow,
   }) = LargeRowSuperbrowseItem;
 

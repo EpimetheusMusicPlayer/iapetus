@@ -66,6 +66,18 @@ _$_AuthenticatedUser _$$_AuthenticatedUserFromJson(Map<String, dynamic> json) =>
       userstate: json['userstate'] as String,
       monthlyCapWarningPercent: json['monthlyCapWarningPercent'] as int,
       hasAudioAds: json['hasAudioAds'] as bool,
+      fullname: readOptionalString(json['fullname'] as String),
+      skipLimitBehavior: $enumDecodeNullable(
+              _$SkipLimitBehaviorEnumMap, json['skipLimitBehavior']) ??
+          SkipLimitBehavior.block,
+      enableOnDemand: readOptInBool(json['enableOnDemand'] as bool?),
+      isEligibleForOffline:
+          readOptInBool(json['isEligibleForOffline'] as bool?),
+      isEligibleForManualDownload:
+          readOptInBool(json['isEligibleForManualDownload'] as bool?),
+      pandoraBrandingType: $enumDecodeNullable(
+          _$PandoraBrandingTypeEnumMap, json['pandoraBrandingType']),
+      canSellUserData: readOptOutBool(json['canSellUserData'] as bool?),
     );
 
 Map<String, dynamic> _$$_AuthenticatedUserToJson(
@@ -118,4 +130,27 @@ Map<String, dynamic> _$$_AuthenticatedUserToJson(
       'userstate': instance.userstate,
       'monthlyCapWarningPercent': instance.monthlyCapWarningPercent,
       'hasAudioAds': instance.hasAudioAds,
+      'fullname': writeOptionalString(instance.fullname),
+      'skipLimitBehavior':
+          _$SkipLimitBehaviorEnumMap[instance.skipLimitBehavior],
+      'enableOnDemand': writeOptInBool(instance.enableOnDemand),
+      'isEligibleForOffline': writeOptInBool(instance.isEligibleForOffline),
+      'isEligibleForManualDownload':
+          writeOptInBool(instance.isEligibleForManualDownload),
+      'pandoraBrandingType':
+          _$PandoraBrandingTypeEnumMap[instance.pandoraBrandingType],
+      'canSellUserData': writeOptOutBool(instance.canSellUserData),
     };
+
+const _$SkipLimitBehaviorEnumMap = {
+  SkipLimitBehavior.block: 'block',
+  SkipLimitBehavior.rewardRequired: 'reward_required',
+  SkipLimitBehavior.unlimited: 'unlimited',
+};
+
+const _$PandoraBrandingTypeEnumMap = {
+  PandoraBrandingType.normal: 'normal',
+  PandoraBrandingType.plus: 'p1',
+  PandoraBrandingType.premium: 'premium',
+  PandoraBrandingType.business: 'business',
+};

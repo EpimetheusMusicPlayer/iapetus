@@ -28,13 +28,11 @@ mixin _$SuperbrowseLabel {
   TextAlignment? get alignment => throw _privateConstructorUsedError;
   @JsonKey(name: 'maxLines')
   int? get maxLines => throw _privateConstructorUsedError;
-  @JsonKey(name: 'bold', fromJson: readNullableBool, toJson: writeNullableBool)
+  @JsonKey(name: 'bold', fromJson: readOptInBool, toJson: writeOptInBool)
   bool get bold => throw _privateConstructorUsedError;
-  @JsonKey(
-      name: 'italic', fromJson: readNullableBool, toJson: writeNullableBool)
+  @JsonKey(name: 'italic', fromJson: readOptInBool, toJson: writeOptInBool)
   bool get italic => throw _privateConstructorUsedError;
-  @JsonKey(
-      name: 'underlined', fromJson: readNullableBool, toJson: writeNullableBool)
+  @JsonKey(name: 'underlined', fromJson: readOptInBool, toJson: writeOptInBool)
   bool get underlined => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -57,11 +55,11 @@ abstract class $SuperbrowseLabelCopyWith<$Res> {
           TextAlignment? alignment,
       @JsonKey(name: 'maxLines')
           int? maxLines,
-      @JsonKey(name: 'bold', fromJson: readNullableBool, toJson: writeNullableBool)
+      @JsonKey(name: 'bold', fromJson: readOptInBool, toJson: writeOptInBool)
           bool bold,
-      @JsonKey(name: 'italic', fromJson: readNullableBool, toJson: writeNullableBool)
+      @JsonKey(name: 'italic', fromJson: readOptInBool, toJson: writeOptInBool)
           bool italic,
-      @JsonKey(name: 'underlined', fromJson: readNullableBool, toJson: writeNullableBool)
+      @JsonKey(name: 'underlined', fromJson: readOptInBool, toJson: writeOptInBool)
           bool underlined});
 }
 
@@ -133,11 +131,11 @@ abstract class _$$_SuperbrowseLabelCopyWith<$Res>
           TextAlignment? alignment,
       @JsonKey(name: 'maxLines')
           int? maxLines,
-      @JsonKey(name: 'bold', fromJson: readNullableBool, toJson: writeNullableBool)
+      @JsonKey(name: 'bold', fromJson: readOptInBool, toJson: writeOptInBool)
           bool bold,
-      @JsonKey(name: 'italic', fromJson: readNullableBool, toJson: writeNullableBool)
+      @JsonKey(name: 'italic', fromJson: readOptInBool, toJson: writeOptInBool)
           bool italic,
-      @JsonKey(name: 'underlined', fromJson: readNullableBool, toJson: writeNullableBool)
+      @JsonKey(name: 'underlined', fromJson: readOptInBool, toJson: writeOptInBool)
           bool underlined});
 }
 
@@ -207,11 +205,11 @@ class _$_SuperbrowseLabel implements _SuperbrowseLabel {
           this.alignment,
       @JsonKey(name: 'maxLines')
           this.maxLines,
-      @JsonKey(name: 'bold', fromJson: readNullableBool, toJson: writeNullableBool)
+      @JsonKey(name: 'bold', fromJson: readOptInBool, toJson: writeOptInBool)
           required this.bold,
-      @JsonKey(name: 'italic', fromJson: readNullableBool, toJson: writeNullableBool)
+      @JsonKey(name: 'italic', fromJson: readOptInBool, toJson: writeOptInBool)
           required this.italic,
-      @JsonKey(name: 'underlined', fromJson: readNullableBool, toJson: writeNullableBool)
+      @JsonKey(name: 'underlined', fromJson: readOptInBool, toJson: writeOptInBool)
           required this.underlined});
 
   factory _$_SuperbrowseLabel.fromJson(Map<String, dynamic> json) =>
@@ -230,15 +228,13 @@ class _$_SuperbrowseLabel implements _SuperbrowseLabel {
   @JsonKey(name: 'maxLines')
   final int? maxLines;
   @override
-  @JsonKey(name: 'bold', fromJson: readNullableBool, toJson: writeNullableBool)
+  @JsonKey(name: 'bold', fromJson: readOptInBool, toJson: writeOptInBool)
   final bool bold;
   @override
-  @JsonKey(
-      name: 'italic', fromJson: readNullableBool, toJson: writeNullableBool)
+  @JsonKey(name: 'italic', fromJson: readOptInBool, toJson: writeOptInBool)
   final bool italic;
   @override
-  @JsonKey(
-      name: 'underlined', fromJson: readNullableBool, toJson: writeNullableBool)
+  @JsonKey(name: 'underlined', fromJson: readOptInBool, toJson: writeOptInBool)
   final bool underlined;
 
   @override
@@ -294,11 +290,11 @@ abstract class _SuperbrowseLabel implements SuperbrowseLabel {
           final TextAlignment? alignment,
       @JsonKey(name: 'maxLines')
           final int? maxLines,
-      @JsonKey(name: 'bold', fromJson: readNullableBool, toJson: writeNullableBool)
+      @JsonKey(name: 'bold', fromJson: readOptInBool, toJson: writeOptInBool)
           required final bool bold,
-      @JsonKey(name: 'italic', fromJson: readNullableBool, toJson: writeNullableBool)
+      @JsonKey(name: 'italic', fromJson: readOptInBool, toJson: writeOptInBool)
           required final bool italic,
-      @JsonKey(name: 'underlined', fromJson: readNullableBool, toJson: writeNullableBool)
+      @JsonKey(name: 'underlined', fromJson: readOptInBool, toJson: writeOptInBool)
           required final bool underlined}) = _$_SuperbrowseLabel;
 
   factory _SuperbrowseLabel.fromJson(Map<String, dynamic> json) =
@@ -317,15 +313,13 @@ abstract class _SuperbrowseLabel implements SuperbrowseLabel {
   @JsonKey(name: 'maxLines')
   int? get maxLines => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'bold', fromJson: readNullableBool, toJson: writeNullableBool)
+  @JsonKey(name: 'bold', fromJson: readOptInBool, toJson: writeOptInBool)
   bool get bold => throw _privateConstructorUsedError;
   @override
-  @JsonKey(
-      name: 'italic', fromJson: readNullableBool, toJson: writeNullableBool)
+  @JsonKey(name: 'italic', fromJson: readOptInBool, toJson: writeOptInBool)
   bool get italic => throw _privateConstructorUsedError;
   @override
-  @JsonKey(
-      name: 'underlined', fromJson: readNullableBool, toJson: writeNullableBool)
+  @JsonKey(name: 'underlined', fromJson: readOptInBool, toJson: writeOptInBool)
   bool get underlined => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)

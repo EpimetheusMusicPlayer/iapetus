@@ -174,7 +174,7 @@ mixin _$SuperbrowseItem {
                 SuperbrowseAction? longPressAction,
             @JsonKey(name: 'badges')
                 List<SuperbrowseBadge>? badges,
-            @JsonKey(name: 'separatorBelow', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'separatorBelow', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool separatorBelow)
         largeRow,
     required TResult Function(
@@ -348,7 +348,7 @@ mixin _$SuperbrowseItem {
                 SuperbrowseAction? longPressAction,
             @JsonKey(name: 'badges')
                 List<SuperbrowseBadge>? badges,
-            @JsonKey(name: 'separatorBelow', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'separatorBelow', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool separatorBelow)?
         largeRow,
     TResult Function(
@@ -522,7 +522,7 @@ mixin _$SuperbrowseItem {
                 SuperbrowseAction? longPressAction,
             @JsonKey(name: 'badges')
                 List<SuperbrowseBadge>? badges,
-            @JsonKey(name: 'separatorBelow', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'separatorBelow', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool separatorBelow)?
         largeRow,
     TResult Function(
@@ -921,7 +921,7 @@ class _$BannerSuperbrowseItem implements BannerSuperbrowseItem {
                 SuperbrowseAction? longPressAction,
             @JsonKey(name: 'badges')
                 List<SuperbrowseBadge>? badges,
-            @JsonKey(name: 'separatorBelow', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'separatorBelow', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool separatorBelow)
         largeRow,
     required TResult Function(
@@ -1098,7 +1098,7 @@ class _$BannerSuperbrowseItem implements BannerSuperbrowseItem {
                 SuperbrowseAction? longPressAction,
             @JsonKey(name: 'badges')
                 List<SuperbrowseBadge>? badges,
-            @JsonKey(name: 'separatorBelow', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'separatorBelow', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool separatorBelow)?
         largeRow,
     TResult Function(
@@ -1275,7 +1275,7 @@ class _$BannerSuperbrowseItem implements BannerSuperbrowseItem {
                 SuperbrowseAction? longPressAction,
             @JsonKey(name: 'badges')
                 List<SuperbrowseBadge>? badges,
-            @JsonKey(name: 'separatorBelow', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'separatorBelow', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool separatorBelow)?
         largeRow,
     TResult Function(
@@ -1740,7 +1740,7 @@ class _$BeltSuperbrowseItem implements BeltSuperbrowseItem {
                 SuperbrowseAction? longPressAction,
             @JsonKey(name: 'badges')
                 List<SuperbrowseBadge>? badges,
-            @JsonKey(name: 'separatorBelow', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'separatorBelow', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool separatorBelow)
         largeRow,
     required TResult Function(
@@ -1918,7 +1918,7 @@ class _$BeltSuperbrowseItem implements BeltSuperbrowseItem {
                 SuperbrowseAction? longPressAction,
             @JsonKey(name: 'badges')
                 List<SuperbrowseBadge>? badges,
-            @JsonKey(name: 'separatorBelow', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'separatorBelow', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool separatorBelow)?
         largeRow,
     TResult Function(
@@ -2096,7 +2096,7 @@ class _$BeltSuperbrowseItem implements BeltSuperbrowseItem {
                 SuperbrowseAction? longPressAction,
             @JsonKey(name: 'badges')
                 List<SuperbrowseBadge>? badges,
-            @JsonKey(name: 'separatorBelow', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'separatorBelow', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool separatorBelow)?
         largeRow,
     TResult Function(
@@ -2583,7 +2583,7 @@ class _$FeaturedSuperbrowseItem implements FeaturedSuperbrowseItem {
                 SuperbrowseAction? longPressAction,
             @JsonKey(name: 'badges')
                 List<SuperbrowseBadge>? badges,
-            @JsonKey(name: 'separatorBelow', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'separatorBelow', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool separatorBelow)
         largeRow,
     required TResult Function(
@@ -2761,7 +2761,7 @@ class _$FeaturedSuperbrowseItem implements FeaturedSuperbrowseItem {
                 SuperbrowseAction? longPressAction,
             @JsonKey(name: 'badges')
                 List<SuperbrowseBadge>? badges,
-            @JsonKey(name: 'separatorBelow', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'separatorBelow', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool separatorBelow)?
         largeRow,
     TResult Function(
@@ -2939,7 +2939,7 @@ class _$FeaturedSuperbrowseItem implements FeaturedSuperbrowseItem {
                 SuperbrowseAction? longPressAction,
             @JsonKey(name: 'badges')
                 List<SuperbrowseBadge>? badges,
-            @JsonKey(name: 'separatorBelow', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'separatorBelow', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool separatorBelow)?
         largeRow,
     TResult Function(
@@ -3410,7 +3410,7 @@ class _$FooterSuperbrowseItem implements FooterSuperbrowseItem {
                 SuperbrowseAction? longPressAction,
             @JsonKey(name: 'badges')
                 List<SuperbrowseBadge>? badges,
-            @JsonKey(name: 'separatorBelow', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'separatorBelow', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool separatorBelow)
         largeRow,
     required TResult Function(
@@ -3588,7 +3588,7 @@ class _$FooterSuperbrowseItem implements FooterSuperbrowseItem {
                 SuperbrowseAction? longPressAction,
             @JsonKey(name: 'badges')
                 List<SuperbrowseBadge>? badges,
-            @JsonKey(name: 'separatorBelow', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'separatorBelow', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool separatorBelow)?
         largeRow,
     TResult Function(
@@ -3766,7 +3766,7 @@ class _$FooterSuperbrowseItem implements FooterSuperbrowseItem {
                 SuperbrowseAction? longPressAction,
             @JsonKey(name: 'badges')
                 List<SuperbrowseBadge>? badges,
-            @JsonKey(name: 'separatorBelow', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'separatorBelow', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool separatorBelow)?
         largeRow,
     TResult Function(
@@ -4280,7 +4280,7 @@ class _$GridSuperbrowseItem implements GridSuperbrowseItem {
                 SuperbrowseAction? longPressAction,
             @JsonKey(name: 'badges')
                 List<SuperbrowseBadge>? badges,
-            @JsonKey(name: 'separatorBelow', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'separatorBelow', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool separatorBelow)
         largeRow,
     required TResult Function(
@@ -4458,7 +4458,7 @@ class _$GridSuperbrowseItem implements GridSuperbrowseItem {
                 SuperbrowseAction? longPressAction,
             @JsonKey(name: 'badges')
                 List<SuperbrowseBadge>? badges,
-            @JsonKey(name: 'separatorBelow', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'separatorBelow', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool separatorBelow)?
         largeRow,
     TResult Function(
@@ -4636,7 +4636,7 @@ class _$GridSuperbrowseItem implements GridSuperbrowseItem {
                 SuperbrowseAction? longPressAction,
             @JsonKey(name: 'badges')
                 List<SuperbrowseBadge>? badges,
-            @JsonKey(name: 'separatorBelow', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'separatorBelow', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool separatorBelow)?
         largeRow,
     TResult Function(
@@ -5114,7 +5114,7 @@ class _$HeaderSuperbrowseItem implements HeaderSuperbrowseItem {
                 SuperbrowseAction? longPressAction,
             @JsonKey(name: 'badges')
                 List<SuperbrowseBadge>? badges,
-            @JsonKey(name: 'separatorBelow', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'separatorBelow', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool separatorBelow)
         largeRow,
     required TResult Function(
@@ -5292,7 +5292,7 @@ class _$HeaderSuperbrowseItem implements HeaderSuperbrowseItem {
                 SuperbrowseAction? longPressAction,
             @JsonKey(name: 'badges')
                 List<SuperbrowseBadge>? badges,
-            @JsonKey(name: 'separatorBelow', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'separatorBelow', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool separatorBelow)?
         largeRow,
     TResult Function(
@@ -5470,7 +5470,7 @@ class _$HeaderSuperbrowseItem implements HeaderSuperbrowseItem {
                 SuperbrowseAction? longPressAction,
             @JsonKey(name: 'badges')
                 List<SuperbrowseBadge>? badges,
-            @JsonKey(name: 'separatorBelow', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'separatorBelow', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool separatorBelow)?
         largeRow,
     TResult Function(
@@ -5978,7 +5978,7 @@ class _$HeroSuperbrowseItem implements HeroSuperbrowseItem {
                 SuperbrowseAction? longPressAction,
             @JsonKey(name: 'badges')
                 List<SuperbrowseBadge>? badges,
-            @JsonKey(name: 'separatorBelow', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'separatorBelow', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool separatorBelow)
         largeRow,
     required TResult Function(
@@ -6156,7 +6156,7 @@ class _$HeroSuperbrowseItem implements HeroSuperbrowseItem {
                 SuperbrowseAction? longPressAction,
             @JsonKey(name: 'badges')
                 List<SuperbrowseBadge>? badges,
-            @JsonKey(name: 'separatorBelow', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'separatorBelow', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool separatorBelow)?
         largeRow,
     TResult Function(
@@ -6334,7 +6334,7 @@ class _$HeroSuperbrowseItem implements HeroSuperbrowseItem {
                 SuperbrowseAction? longPressAction,
             @JsonKey(name: 'badges')
                 List<SuperbrowseBadge>? badges,
-            @JsonKey(name: 'separatorBelow', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'separatorBelow', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool separatorBelow)?
         largeRow,
     TResult Function(
@@ -6528,7 +6528,7 @@ abstract class _$$LargeRowSuperbrowseItemCopyWith<$Res>
           SuperbrowseAction? longPressAction,
       @JsonKey(name: 'badges')
           List<SuperbrowseBadge>? badges,
-      @JsonKey(name: 'separatorBelow', fromJson: readNullableBool, toJson: writeNullableBool)
+      @JsonKey(name: 'separatorBelow', fromJson: readOptInBool, toJson: writeOptInBool)
           bool separatorBelow});
 
   $SuperbrowseButtonCopyWith<$Res>? get button;
@@ -6681,7 +6681,7 @@ class _$LargeRowSuperbrowseItem implements LargeRowSuperbrowseItem {
           this.longPressAction,
       @JsonKey(name: 'badges')
           final List<SuperbrowseBadge>? badges,
-      @JsonKey(name: 'separatorBelow', fromJson: readNullableBool, toJson: writeNullableBool)
+      @JsonKey(name: 'separatorBelow', fromJson: readOptInBool, toJson: writeOptInBool)
           required this.separatorBelow,
       final String? $type})
       : _labels = labels,
@@ -6734,9 +6734,7 @@ class _$LargeRowSuperbrowseItem implements LargeRowSuperbrowseItem {
 
   @override
   @JsonKey(
-      name: 'separatorBelow',
-      fromJson: readNullableBool,
-      toJson: writeNullableBool)
+      name: 'separatorBelow', fromJson: readOptInBool, toJson: writeOptInBool)
   final bool separatorBelow;
 
   @JsonKey(name: 'type')
@@ -6912,7 +6910,7 @@ class _$LargeRowSuperbrowseItem implements LargeRowSuperbrowseItem {
                 SuperbrowseAction? longPressAction,
             @JsonKey(name: 'badges')
                 List<SuperbrowseBadge>? badges,
-            @JsonKey(name: 'separatorBelow', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'separatorBelow', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool separatorBelow)
         largeRow,
     required TResult Function(
@@ -7090,7 +7088,7 @@ class _$LargeRowSuperbrowseItem implements LargeRowSuperbrowseItem {
                 SuperbrowseAction? longPressAction,
             @JsonKey(name: 'badges')
                 List<SuperbrowseBadge>? badges,
-            @JsonKey(name: 'separatorBelow', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'separatorBelow', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool separatorBelow)?
         largeRow,
     TResult Function(
@@ -7268,7 +7266,7 @@ class _$LargeRowSuperbrowseItem implements LargeRowSuperbrowseItem {
                 SuperbrowseAction? longPressAction,
             @JsonKey(name: 'badges')
                 List<SuperbrowseBadge>? badges,
-            @JsonKey(name: 'separatorBelow', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'separatorBelow', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool separatorBelow)?
         largeRow,
     TResult Function(
@@ -7410,7 +7408,7 @@ abstract class LargeRowSuperbrowseItem implements SuperbrowseItem {
           final SuperbrowseAction? longPressAction,
       @JsonKey(name: 'badges')
           final List<SuperbrowseBadge>? badges,
-      @JsonKey(name: 'separatorBelow', fromJson: readNullableBool, toJson: writeNullableBool)
+      @JsonKey(name: 'separatorBelow', fromJson: readOptInBool, toJson: writeOptInBool)
           required final bool separatorBelow}) = _$LargeRowSuperbrowseItem;
 
   factory LargeRowSuperbrowseItem.fromJson(Map<String, dynamic> json) =
@@ -7437,9 +7435,7 @@ abstract class LargeRowSuperbrowseItem implements SuperbrowseItem {
   @JsonKey(name: 'badges')
   List<SuperbrowseBadge>? get badges => throw _privateConstructorUsedError;
   @JsonKey(
-      name: 'separatorBelow',
-      fromJson: readNullableBool,
-      toJson: writeNullableBool)
+      name: 'separatorBelow', fromJson: readOptInBool, toJson: writeOptInBool)
   bool get separatorBelow => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
@@ -7755,7 +7751,7 @@ class _$SmallRowSuperbrowseItem implements SmallRowSuperbrowseItem {
                 SuperbrowseAction? longPressAction,
             @JsonKey(name: 'badges')
                 List<SuperbrowseBadge>? badges,
-            @JsonKey(name: 'separatorBelow', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'separatorBelow', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool separatorBelow)
         largeRow,
     required TResult Function(
@@ -7933,7 +7929,7 @@ class _$SmallRowSuperbrowseItem implements SmallRowSuperbrowseItem {
                 SuperbrowseAction? longPressAction,
             @JsonKey(name: 'badges')
                 List<SuperbrowseBadge>? badges,
-            @JsonKey(name: 'separatorBelow', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'separatorBelow', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool separatorBelow)?
         largeRow,
     TResult Function(
@@ -8111,7 +8107,7 @@ class _$SmallRowSuperbrowseItem implements SmallRowSuperbrowseItem {
                 SuperbrowseAction? longPressAction,
             @JsonKey(name: 'badges')
                 List<SuperbrowseBadge>? badges,
-            @JsonKey(name: 'separatorBelow', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'separatorBelow', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool separatorBelow)?
         largeRow,
     TResult Function(
@@ -8594,7 +8590,7 @@ class _$SplitSuperbrowseItem implements SplitSuperbrowseItem {
                 SuperbrowseAction? longPressAction,
             @JsonKey(name: 'badges')
                 List<SuperbrowseBadge>? badges,
-            @JsonKey(name: 'separatorBelow', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'separatorBelow', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool separatorBelow)
         largeRow,
     required TResult Function(
@@ -8772,7 +8768,7 @@ class _$SplitSuperbrowseItem implements SplitSuperbrowseItem {
                 SuperbrowseAction? longPressAction,
             @JsonKey(name: 'badges')
                 List<SuperbrowseBadge>? badges,
-            @JsonKey(name: 'separatorBelow', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'separatorBelow', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool separatorBelow)?
         largeRow,
     TResult Function(
@@ -8950,7 +8946,7 @@ class _$SplitSuperbrowseItem implements SplitSuperbrowseItem {
                 SuperbrowseAction? longPressAction,
             @JsonKey(name: 'badges')
                 List<SuperbrowseBadge>? badges,
-            @JsonKey(name: 'separatorBelow', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'separatorBelow', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool separatorBelow)?
         largeRow,
     TResult Function(
@@ -9431,7 +9427,7 @@ class _$TileSuperbrowseItem implements TileSuperbrowseItem {
                 SuperbrowseAction? longPressAction,
             @JsonKey(name: 'badges')
                 List<SuperbrowseBadge>? badges,
-            @JsonKey(name: 'separatorBelow', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'separatorBelow', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool separatorBelow)
         largeRow,
     required TResult Function(
@@ -9609,7 +9605,7 @@ class _$TileSuperbrowseItem implements TileSuperbrowseItem {
                 SuperbrowseAction? longPressAction,
             @JsonKey(name: 'badges')
                 List<SuperbrowseBadge>? badges,
-            @JsonKey(name: 'separatorBelow', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'separatorBelow', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool separatorBelow)?
         largeRow,
     TResult Function(
@@ -9787,7 +9783,7 @@ class _$TileSuperbrowseItem implements TileSuperbrowseItem {
                 SuperbrowseAction? longPressAction,
             @JsonKey(name: 'badges')
                 List<SuperbrowseBadge>? badges,
-            @JsonKey(name: 'separatorBelow', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'separatorBelow', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool separatorBelow)?
         largeRow,
     TResult Function(

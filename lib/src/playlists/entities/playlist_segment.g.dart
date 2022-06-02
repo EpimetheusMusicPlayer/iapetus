@@ -40,7 +40,7 @@ _$_PlaylistSegment _$$_PlaylistSegmentFromJson(Map<String, dynamic> json) =>
       includedTrackTypes: (json['includedTrackTypes'] as List<dynamic>)
           .map((e) => $enumDecode(_$PandoraTypeEnumMap, e))
           .toList(),
-      allowFeedback: readNullableBool(json['allowFeedback'] as bool?),
+      allowFeedback: readOptInBool(json['allowFeedback'] as bool?),
       collectible: json['collectible'] as bool,
       notModified: json['notModified'] as bool,
       listenerId: json['listenerId'] as int,
@@ -74,7 +74,7 @@ Map<String, dynamic> _$$_PlaylistSegmentToJson(_$_PlaylistSegment instance) =>
       'includedTrackTypes': instance.includedTrackTypes
           .map((e) => _$PandoraTypeEnumMap[e])
           .toList(),
-      'allowFeedback': writeNullableBool(instance.allowFeedback),
+      'allowFeedback': writeOptInBool(instance.allowFeedback),
       'collectible': instance.collectible,
       'notModified': instance.notModified,
       'listenerId': instance.listenerId,

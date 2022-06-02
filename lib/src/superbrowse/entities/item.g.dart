@@ -267,7 +267,7 @@ _$LargeRowSuperbrowseItem _$$LargeRowSuperbrowseItemFromJson(
       badges: (json['badges'] as List<dynamic>?)
           ?.map((e) => SuperbrowseBadge.fromJson(e as Map<String, dynamic>))
           .toList(),
-      separatorBelow: readNullableBool(json['separatorBelow'] as bool?),
+      separatorBelow: readOptInBool(json['separatorBelow'] as bool?),
       $type: json['type'] as String?,
     );
 
@@ -283,7 +283,7 @@ Map<String, dynamic> _$$LargeRowSuperbrowseItemToJson(
       'rank': instance.rank,
       'longPressAction': instance.longPressAction,
       'badges': instance.badges,
-      'separatorBelow': writeNullableBool(instance.separatorBelow),
+      'separatorBelow': writeOptInBool(instance.separatorBelow),
       'type': instance.$type,
     };
 

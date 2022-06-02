@@ -41,7 +41,7 @@ class PlaylistSegment with _$PlaylistSegment implements PandoraEntity {
     @JsonKey(name: 'autogenForListener') required bool autogenForListener,
     @JsonKey(name: 'includedTrackTypes')
         required List<PandoraType> includedTrackTypes,
-    @JsonKey(name: 'allowFeedback', fromJson: readNullableBool, toJson: writeNullableBool)
+    @JsonKey(name: 'allowFeedback', fromJson: readOptInBool, toJson: writeOptInBool)
         required bool allowFeedback,
     @JsonKey(name: 'collectible') required bool collectible,
     @JsonKey(name: 'notModified') required bool notModified,

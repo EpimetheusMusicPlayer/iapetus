@@ -66,7 +66,7 @@ mixin _$MediaAnnotation {
                 Explicitness explicitness,
             @JsonKey(name: 'shareableUrlPath')
                 String shareableUrlPath,
-            @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool hasRadio,
             @JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
                 DateTime modificationTime,
@@ -94,7 +94,7 @@ mixin _$MediaAnnotation {
                 String shareableUrlPath,
             @JsonKey(name: 'twitterHandle')
                 String? twitterHandle,
-            @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool hasRadio,
             @JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
                 DateTime modificationTime,
@@ -146,7 +146,7 @@ mixin _$MediaAnnotation {
                 DateTime modificationTime,
             @JsonKey(name: 'slugPlusPandoraId')
                 String slugPlusPandoraId,
-            @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool hasRadio,
             @JsonKey(name: 'releaseType')
                 String releaseType,
@@ -188,7 +188,7 @@ mixin _$MediaAnnotation {
                 String sortableName,
             @JsonKey(name: 'icon', fromJson: MediaIcon.optionalFromJson, toJson: MediaIcon.optionalToJson)
                 MediaIcon? icon,
-            @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool hasRadio,
             @JsonKey(name: 'albumCount')
                 int albumCount,
@@ -241,7 +241,7 @@ mixin _$MediaAnnotation {
                 Explicitness explicitness,
             @JsonKey(name: 'shareableUrlPath')
                 String shareableUrlPath,
-            @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool hasRadio,
             @JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
                 DateTime modificationTime,
@@ -269,7 +269,7 @@ mixin _$MediaAnnotation {
                 String shareableUrlPath,
             @JsonKey(name: 'twitterHandle')
                 String? twitterHandle,
-            @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool hasRadio,
             @JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
                 DateTime modificationTime,
@@ -321,7 +321,7 @@ mixin _$MediaAnnotation {
                 DateTime modificationTime,
             @JsonKey(name: 'slugPlusPandoraId')
                 String slugPlusPandoraId,
-            @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool hasRadio,
             @JsonKey(name: 'releaseType')
                 String releaseType,
@@ -363,7 +363,7 @@ mixin _$MediaAnnotation {
                 String sortableName,
             @JsonKey(name: 'icon', fromJson: MediaIcon.optionalFromJson, toJson: MediaIcon.optionalToJson)
                 MediaIcon? icon,
-            @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool hasRadio,
             @JsonKey(name: 'albumCount')
                 int albumCount,
@@ -416,7 +416,7 @@ mixin _$MediaAnnotation {
                 Explicitness explicitness,
             @JsonKey(name: 'shareableUrlPath')
                 String shareableUrlPath,
-            @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool hasRadio,
             @JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
                 DateTime modificationTime,
@@ -444,7 +444,7 @@ mixin _$MediaAnnotation {
                 String shareableUrlPath,
             @JsonKey(name: 'twitterHandle')
                 String? twitterHandle,
-            @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool hasRadio,
             @JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
                 DateTime modificationTime,
@@ -496,7 +496,7 @@ mixin _$MediaAnnotation {
                 DateTime modificationTime,
             @JsonKey(name: 'slugPlusPandoraId')
                 String slugPlusPandoraId,
-            @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool hasRadio,
             @JsonKey(name: 'releaseType')
                 String releaseType,
@@ -538,7 +538,7 @@ mixin _$MediaAnnotation {
                 String sortableName,
             @JsonKey(name: 'icon', fromJson: MediaIcon.optionalFromJson, toJson: MediaIcon.optionalToJson)
                 MediaIcon? icon,
-            @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool hasRadio,
             @JsonKey(name: 'albumCount')
                 int albumCount,
@@ -664,7 +664,7 @@ abstract class _$$TrackAnnotationCopyWith<$Res>
           Explicitness explicitness,
       @JsonKey(name: 'shareableUrlPath')
           String shareableUrlPath,
-      @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+      @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
           bool hasRadio,
       @JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
           DateTime modificationTime,
@@ -836,7 +836,7 @@ class _$TrackAnnotation extends TrackAnnotation {
           required this.explicitness,
       @JsonKey(name: 'shareableUrlPath')
           required this.shareableUrlPath,
-      @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+      @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
           required this.hasRadio,
       @JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
           required this.modificationTime,
@@ -895,8 +895,7 @@ class _$TrackAnnotation extends TrackAnnotation {
   @JsonKey(name: 'shareableUrlPath')
   final String shareableUrlPath;
   @override
-  @JsonKey(
-      name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+  @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
   final bool hasRadio;
   @override
   @JsonKey(
@@ -1014,7 +1013,7 @@ class _$TrackAnnotation extends TrackAnnotation {
                 Explicitness explicitness,
             @JsonKey(name: 'shareableUrlPath')
                 String shareableUrlPath,
-            @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool hasRadio,
             @JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
                 DateTime modificationTime,
@@ -1042,7 +1041,7 @@ class _$TrackAnnotation extends TrackAnnotation {
                 String shareableUrlPath,
             @JsonKey(name: 'twitterHandle')
                 String? twitterHandle,
-            @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool hasRadio,
             @JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
                 DateTime modificationTime,
@@ -1094,7 +1093,7 @@ class _$TrackAnnotation extends TrackAnnotation {
                 DateTime modificationTime,
             @JsonKey(name: 'slugPlusPandoraId')
                 String slugPlusPandoraId,
-            @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool hasRadio,
             @JsonKey(name: 'releaseType')
                 String releaseType,
@@ -1136,7 +1135,7 @@ class _$TrackAnnotation extends TrackAnnotation {
                 String sortableName,
             @JsonKey(name: 'icon', fromJson: MediaIcon.optionalFromJson, toJson: MediaIcon.optionalToJson)
                 MediaIcon? icon,
-            @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool hasRadio,
             @JsonKey(name: 'albumCount')
                 int albumCount,
@@ -1210,7 +1209,7 @@ class _$TrackAnnotation extends TrackAnnotation {
                 Explicitness explicitness,
             @JsonKey(name: 'shareableUrlPath')
                 String shareableUrlPath,
-            @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool hasRadio,
             @JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
                 DateTime modificationTime,
@@ -1238,7 +1237,7 @@ class _$TrackAnnotation extends TrackAnnotation {
                 String shareableUrlPath,
             @JsonKey(name: 'twitterHandle')
                 String? twitterHandle,
-            @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool hasRadio,
             @JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
                 DateTime modificationTime,
@@ -1290,7 +1289,7 @@ class _$TrackAnnotation extends TrackAnnotation {
                 DateTime modificationTime,
             @JsonKey(name: 'slugPlusPandoraId')
                 String slugPlusPandoraId,
-            @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool hasRadio,
             @JsonKey(name: 'releaseType')
                 String releaseType,
@@ -1332,7 +1331,7 @@ class _$TrackAnnotation extends TrackAnnotation {
                 String sortableName,
             @JsonKey(name: 'icon', fromJson: MediaIcon.optionalFromJson, toJson: MediaIcon.optionalToJson)
                 MediaIcon? icon,
-            @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool hasRadio,
             @JsonKey(name: 'albumCount')
                 int albumCount,
@@ -1406,7 +1405,7 @@ class _$TrackAnnotation extends TrackAnnotation {
                 Explicitness explicitness,
             @JsonKey(name: 'shareableUrlPath')
                 String shareableUrlPath,
-            @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool hasRadio,
             @JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
                 DateTime modificationTime,
@@ -1434,7 +1433,7 @@ class _$TrackAnnotation extends TrackAnnotation {
                 String shareableUrlPath,
             @JsonKey(name: 'twitterHandle')
                 String? twitterHandle,
-            @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool hasRadio,
             @JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
                 DateTime modificationTime,
@@ -1486,7 +1485,7 @@ class _$TrackAnnotation extends TrackAnnotation {
                 DateTime modificationTime,
             @JsonKey(name: 'slugPlusPandoraId')
                 String slugPlusPandoraId,
-            @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool hasRadio,
             @JsonKey(name: 'releaseType')
                 String releaseType,
@@ -1528,7 +1527,7 @@ class _$TrackAnnotation extends TrackAnnotation {
                 String sortableName,
             @JsonKey(name: 'icon', fromJson: MediaIcon.optionalFromJson, toJson: MediaIcon.optionalToJson)
                 MediaIcon? icon,
-            @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool hasRadio,
             @JsonKey(name: 'albumCount')
                 int albumCount,
@@ -1653,7 +1652,7 @@ abstract class TrackAnnotation extends MediaAnnotation implements Track {
           required final Explicitness explicitness,
       @JsonKey(name: 'shareableUrlPath')
           required final String shareableUrlPath,
-      @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+      @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
           required final bool hasRadio,
       @JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
           required final DateTime modificationTime,
@@ -1697,8 +1696,7 @@ abstract class TrackAnnotation extends MediaAnnotation implements Track {
   Explicitness get explicitness => throw _privateConstructorUsedError;
   @JsonKey(name: 'shareableUrlPath')
   String get shareableUrlPath => throw _privateConstructorUsedError;
-  @JsonKey(
-      name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+  @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
   bool get hasRadio => throw _privateConstructorUsedError;
   @JsonKey(
       name: 'modificationTime',
@@ -1742,7 +1740,7 @@ abstract class _$$ArtistAnnotationCopyWith<$Res>
           String shareableUrlPath,
       @JsonKey(name: 'twitterHandle')
           String? twitterHandle,
-      @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+      @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
           bool hasRadio,
       @JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
           DateTime modificationTime,
@@ -1899,7 +1897,7 @@ class _$ArtistAnnotation extends ArtistAnnotation {
           required this.shareableUrlPath,
       @JsonKey(name: 'twitterHandle')
           this.twitterHandle,
-      @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+      @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
           required this.hasRadio,
       @JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
           required this.modificationTime,
@@ -1952,8 +1950,7 @@ class _$ArtistAnnotation extends ArtistAnnotation {
   @JsonKey(name: 'twitterHandle')
   final String? twitterHandle;
   @override
-  @JsonKey(
-      name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+  @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
   final bool hasRadio;
   @override
   @JsonKey(
@@ -2089,7 +2086,7 @@ class _$ArtistAnnotation extends ArtistAnnotation {
                 Explicitness explicitness,
             @JsonKey(name: 'shareableUrlPath')
                 String shareableUrlPath,
-            @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool hasRadio,
             @JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
                 DateTime modificationTime,
@@ -2117,7 +2114,7 @@ class _$ArtistAnnotation extends ArtistAnnotation {
                 String shareableUrlPath,
             @JsonKey(name: 'twitterHandle')
                 String? twitterHandle,
-            @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool hasRadio,
             @JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
                 DateTime modificationTime,
@@ -2169,7 +2166,7 @@ class _$ArtistAnnotation extends ArtistAnnotation {
                 DateTime modificationTime,
             @JsonKey(name: 'slugPlusPandoraId')
                 String slugPlusPandoraId,
-            @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool hasRadio,
             @JsonKey(name: 'releaseType')
                 String releaseType,
@@ -2211,7 +2208,7 @@ class _$ArtistAnnotation extends ArtistAnnotation {
                 String sortableName,
             @JsonKey(name: 'icon', fromJson: MediaIcon.optionalFromJson, toJson: MediaIcon.optionalToJson)
                 MediaIcon? icon,
-            @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool hasRadio,
             @JsonKey(name: 'albumCount')
                 int albumCount,
@@ -2284,7 +2281,7 @@ class _$ArtistAnnotation extends ArtistAnnotation {
                 Explicitness explicitness,
             @JsonKey(name: 'shareableUrlPath')
                 String shareableUrlPath,
-            @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool hasRadio,
             @JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
                 DateTime modificationTime,
@@ -2312,7 +2309,7 @@ class _$ArtistAnnotation extends ArtistAnnotation {
                 String shareableUrlPath,
             @JsonKey(name: 'twitterHandle')
                 String? twitterHandle,
-            @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool hasRadio,
             @JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
                 DateTime modificationTime,
@@ -2364,7 +2361,7 @@ class _$ArtistAnnotation extends ArtistAnnotation {
                 DateTime modificationTime,
             @JsonKey(name: 'slugPlusPandoraId')
                 String slugPlusPandoraId,
-            @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool hasRadio,
             @JsonKey(name: 'releaseType')
                 String releaseType,
@@ -2406,7 +2403,7 @@ class _$ArtistAnnotation extends ArtistAnnotation {
                 String sortableName,
             @JsonKey(name: 'icon', fromJson: MediaIcon.optionalFromJson, toJson: MediaIcon.optionalToJson)
                 MediaIcon? icon,
-            @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool hasRadio,
             @JsonKey(name: 'albumCount')
                 int albumCount,
@@ -2479,7 +2476,7 @@ class _$ArtistAnnotation extends ArtistAnnotation {
                 Explicitness explicitness,
             @JsonKey(name: 'shareableUrlPath')
                 String shareableUrlPath,
-            @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool hasRadio,
             @JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
                 DateTime modificationTime,
@@ -2507,7 +2504,7 @@ class _$ArtistAnnotation extends ArtistAnnotation {
                 String shareableUrlPath,
             @JsonKey(name: 'twitterHandle')
                 String? twitterHandle,
-            @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool hasRadio,
             @JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
                 DateTime modificationTime,
@@ -2559,7 +2556,7 @@ class _$ArtistAnnotation extends ArtistAnnotation {
                 DateTime modificationTime,
             @JsonKey(name: 'slugPlusPandoraId')
                 String slugPlusPandoraId,
-            @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool hasRadio,
             @JsonKey(name: 'releaseType')
                 String releaseType,
@@ -2601,7 +2598,7 @@ class _$ArtistAnnotation extends ArtistAnnotation {
                 String sortableName,
             @JsonKey(name: 'icon', fromJson: MediaIcon.optionalFromJson, toJson: MediaIcon.optionalToJson)
                 MediaIcon? icon,
-            @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool hasRadio,
             @JsonKey(name: 'albumCount')
                 int albumCount,
@@ -2715,7 +2712,7 @@ abstract class ArtistAnnotation extends MediaAnnotation {
           required final String shareableUrlPath,
       @JsonKey(name: 'twitterHandle')
           final String? twitterHandle,
-      @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+      @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
           required final bool hasRadio,
       @JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
           required final DateTime modificationTime,
@@ -2757,8 +2754,7 @@ abstract class ArtistAnnotation extends MediaAnnotation {
   String get shareableUrlPath => throw _privateConstructorUsedError;
   @JsonKey(name: 'twitterHandle')
   String? get twitterHandle => throw _privateConstructorUsedError;
-  @JsonKey(
-      name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+  @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
   bool get hasRadio => throw _privateConstructorUsedError;
   @JsonKey(
       name: 'modificationTime',
@@ -2826,7 +2822,7 @@ abstract class _$$AlbumAnnotationCopyWith<$Res>
           DateTime modificationTime,
       @JsonKey(name: 'slugPlusPandoraId')
           String slugPlusPandoraId,
-      @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+      @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
           bool hasRadio,
       @JsonKey(name: 'releaseType')
           String releaseType,
@@ -3012,7 +3008,7 @@ class _$AlbumAnnotation extends AlbumAnnotation {
           required this.modificationTime,
       @JsonKey(name: 'slugPlusPandoraId')
           required this.slugPlusPandoraId,
-      @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+      @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
           required this.hasRadio,
       @JsonKey(name: 'releaseType')
           required this.releaseType,
@@ -3087,8 +3083,7 @@ class _$AlbumAnnotation extends AlbumAnnotation {
   @JsonKey(name: 'slugPlusPandoraId')
   final String slugPlusPandoraId;
   @override
-  @JsonKey(
-      name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+  @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
   final bool hasRadio;
   @override
   @JsonKey(name: 'releaseType')
@@ -3209,7 +3204,7 @@ class _$AlbumAnnotation extends AlbumAnnotation {
                 Explicitness explicitness,
             @JsonKey(name: 'shareableUrlPath')
                 String shareableUrlPath,
-            @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool hasRadio,
             @JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
                 DateTime modificationTime,
@@ -3237,7 +3232,7 @@ class _$AlbumAnnotation extends AlbumAnnotation {
                 String shareableUrlPath,
             @JsonKey(name: 'twitterHandle')
                 String? twitterHandle,
-            @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool hasRadio,
             @JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
                 DateTime modificationTime,
@@ -3289,7 +3284,7 @@ class _$AlbumAnnotation extends AlbumAnnotation {
                 DateTime modificationTime,
             @JsonKey(name: 'slugPlusPandoraId')
                 String slugPlusPandoraId,
-            @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool hasRadio,
             @JsonKey(name: 'releaseType')
                 String releaseType,
@@ -3331,7 +3326,7 @@ class _$AlbumAnnotation extends AlbumAnnotation {
                 String sortableName,
             @JsonKey(name: 'icon', fromJson: MediaIcon.optionalFromJson, toJson: MediaIcon.optionalToJson)
                 MediaIcon? icon,
-            @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool hasRadio,
             @JsonKey(name: 'albumCount')
                 int albumCount,
@@ -3407,7 +3402,7 @@ class _$AlbumAnnotation extends AlbumAnnotation {
                 Explicitness explicitness,
             @JsonKey(name: 'shareableUrlPath')
                 String shareableUrlPath,
-            @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool hasRadio,
             @JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
                 DateTime modificationTime,
@@ -3435,7 +3430,7 @@ class _$AlbumAnnotation extends AlbumAnnotation {
                 String shareableUrlPath,
             @JsonKey(name: 'twitterHandle')
                 String? twitterHandle,
-            @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool hasRadio,
             @JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
                 DateTime modificationTime,
@@ -3487,7 +3482,7 @@ class _$AlbumAnnotation extends AlbumAnnotation {
                 DateTime modificationTime,
             @JsonKey(name: 'slugPlusPandoraId')
                 String slugPlusPandoraId,
-            @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool hasRadio,
             @JsonKey(name: 'releaseType')
                 String releaseType,
@@ -3529,7 +3524,7 @@ class _$AlbumAnnotation extends AlbumAnnotation {
                 String sortableName,
             @JsonKey(name: 'icon', fromJson: MediaIcon.optionalFromJson, toJson: MediaIcon.optionalToJson)
                 MediaIcon? icon,
-            @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool hasRadio,
             @JsonKey(name: 'albumCount')
                 int albumCount,
@@ -3605,7 +3600,7 @@ class _$AlbumAnnotation extends AlbumAnnotation {
                 Explicitness explicitness,
             @JsonKey(name: 'shareableUrlPath')
                 String shareableUrlPath,
-            @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool hasRadio,
             @JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
                 DateTime modificationTime,
@@ -3633,7 +3628,7 @@ class _$AlbumAnnotation extends AlbumAnnotation {
                 String shareableUrlPath,
             @JsonKey(name: 'twitterHandle')
                 String? twitterHandle,
-            @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool hasRadio,
             @JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
                 DateTime modificationTime,
@@ -3685,7 +3680,7 @@ class _$AlbumAnnotation extends AlbumAnnotation {
                 DateTime modificationTime,
             @JsonKey(name: 'slugPlusPandoraId')
                 String slugPlusPandoraId,
-            @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool hasRadio,
             @JsonKey(name: 'releaseType')
                 String releaseType,
@@ -3727,7 +3722,7 @@ class _$AlbumAnnotation extends AlbumAnnotation {
                 String sortableName,
             @JsonKey(name: 'icon', fromJson: MediaIcon.optionalFromJson, toJson: MediaIcon.optionalToJson)
                 MediaIcon? icon,
-            @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool hasRadio,
             @JsonKey(name: 'albumCount')
                 int albumCount,
@@ -3860,7 +3855,7 @@ abstract class AlbumAnnotation extends MediaAnnotation {
           required final DateTime modificationTime,
       @JsonKey(name: 'slugPlusPandoraId')
           required final String slugPlusPandoraId,
-      @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+      @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
           required final bool hasRadio,
       @JsonKey(name: 'releaseType')
           required final String releaseType,
@@ -3911,8 +3906,7 @@ abstract class AlbumAnnotation extends MediaAnnotation {
   DateTime get modificationTime => throw _privateConstructorUsedError;
   @JsonKey(name: 'slugPlusPandoraId')
   String get slugPlusPandoraId => throw _privateConstructorUsedError;
-  @JsonKey(
-      name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+  @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
   bool get hasRadio => throw _privateConstructorUsedError;
   @JsonKey(name: 'releaseType')
   String get releaseType => throw _privateConstructorUsedError;
@@ -4204,7 +4198,7 @@ class _$GenreAnnotation extends GenreAnnotation {
                 Explicitness explicitness,
             @JsonKey(name: 'shareableUrlPath')
                 String shareableUrlPath,
-            @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool hasRadio,
             @JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
                 DateTime modificationTime,
@@ -4232,7 +4226,7 @@ class _$GenreAnnotation extends GenreAnnotation {
                 String shareableUrlPath,
             @JsonKey(name: 'twitterHandle')
                 String? twitterHandle,
-            @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool hasRadio,
             @JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
                 DateTime modificationTime,
@@ -4284,7 +4278,7 @@ class _$GenreAnnotation extends GenreAnnotation {
                 DateTime modificationTime,
             @JsonKey(name: 'slugPlusPandoraId')
                 String slugPlusPandoraId,
-            @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool hasRadio,
             @JsonKey(name: 'releaseType')
                 String releaseType,
@@ -4326,7 +4320,7 @@ class _$GenreAnnotation extends GenreAnnotation {
                 String sortableName,
             @JsonKey(name: 'icon', fromJson: MediaIcon.optionalFromJson, toJson: MediaIcon.optionalToJson)
                 MediaIcon? icon,
-            @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool hasRadio,
             @JsonKey(name: 'albumCount')
                 int albumCount,
@@ -4393,7 +4387,7 @@ class _$GenreAnnotation extends GenreAnnotation {
                 Explicitness explicitness,
             @JsonKey(name: 'shareableUrlPath')
                 String shareableUrlPath,
-            @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool hasRadio,
             @JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
                 DateTime modificationTime,
@@ -4421,7 +4415,7 @@ class _$GenreAnnotation extends GenreAnnotation {
                 String shareableUrlPath,
             @JsonKey(name: 'twitterHandle')
                 String? twitterHandle,
-            @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool hasRadio,
             @JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
                 DateTime modificationTime,
@@ -4473,7 +4467,7 @@ class _$GenreAnnotation extends GenreAnnotation {
                 DateTime modificationTime,
             @JsonKey(name: 'slugPlusPandoraId')
                 String slugPlusPandoraId,
-            @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool hasRadio,
             @JsonKey(name: 'releaseType')
                 String releaseType,
@@ -4515,7 +4509,7 @@ class _$GenreAnnotation extends GenreAnnotation {
                 String sortableName,
             @JsonKey(name: 'icon', fromJson: MediaIcon.optionalFromJson, toJson: MediaIcon.optionalToJson)
                 MediaIcon? icon,
-            @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool hasRadio,
             @JsonKey(name: 'albumCount')
                 int albumCount,
@@ -4582,7 +4576,7 @@ class _$GenreAnnotation extends GenreAnnotation {
                 Explicitness explicitness,
             @JsonKey(name: 'shareableUrlPath')
                 String shareableUrlPath,
-            @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool hasRadio,
             @JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
                 DateTime modificationTime,
@@ -4610,7 +4604,7 @@ class _$GenreAnnotation extends GenreAnnotation {
                 String shareableUrlPath,
             @JsonKey(name: 'twitterHandle')
                 String? twitterHandle,
-            @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool hasRadio,
             @JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
                 DateTime modificationTime,
@@ -4662,7 +4656,7 @@ class _$GenreAnnotation extends GenreAnnotation {
                 DateTime modificationTime,
             @JsonKey(name: 'slugPlusPandoraId')
                 String slugPlusPandoraId,
-            @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool hasRadio,
             @JsonKey(name: 'releaseType')
                 String releaseType,
@@ -4704,7 +4698,7 @@ class _$GenreAnnotation extends GenreAnnotation {
                 String sortableName,
             @JsonKey(name: 'icon', fromJson: MediaIcon.optionalFromJson, toJson: MediaIcon.optionalToJson)
                 MediaIcon? icon,
-            @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool hasRadio,
             @JsonKey(name: 'albumCount')
                 int albumCount,
@@ -4875,7 +4869,7 @@ abstract class _$$ComposerAnnotationCopyWith<$Res>
           String sortableName,
       @JsonKey(name: 'icon', fromJson: MediaIcon.optionalFromJson, toJson: MediaIcon.optionalToJson)
           MediaIcon? icon,
-      @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+      @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
           bool hasRadio,
       @JsonKey(name: 'albumCount')
           int albumCount,
@@ -4990,7 +4984,7 @@ class _$ComposerAnnotation extends ComposerAnnotation {
           required this.sortableName,
       @JsonKey(name: 'icon', fromJson: MediaIcon.optionalFromJson, toJson: MediaIcon.optionalToJson)
           required this.icon,
-      @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+      @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
           required this.hasRadio,
       @JsonKey(name: 'albumCount')
           required this.albumCount,
@@ -5026,8 +5020,7 @@ class _$ComposerAnnotation extends ComposerAnnotation {
       toJson: MediaIcon.optionalToJson)
   final MediaIcon? icon;
   @override
-  @JsonKey(
-      name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+  @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
   final bool hasRadio;
   @override
   @JsonKey(name: 'albumCount')
@@ -5136,7 +5129,7 @@ class _$ComposerAnnotation extends ComposerAnnotation {
                 Explicitness explicitness,
             @JsonKey(name: 'shareableUrlPath')
                 String shareableUrlPath,
-            @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool hasRadio,
             @JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
                 DateTime modificationTime,
@@ -5164,7 +5157,7 @@ class _$ComposerAnnotation extends ComposerAnnotation {
                 String shareableUrlPath,
             @JsonKey(name: 'twitterHandle')
                 String? twitterHandle,
-            @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool hasRadio,
             @JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
                 DateTime modificationTime,
@@ -5216,7 +5209,7 @@ class _$ComposerAnnotation extends ComposerAnnotation {
                 DateTime modificationTime,
             @JsonKey(name: 'slugPlusPandoraId')
                 String slugPlusPandoraId,
-            @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool hasRadio,
             @JsonKey(name: 'releaseType')
                 String releaseType,
@@ -5258,7 +5251,7 @@ class _$ComposerAnnotation extends ComposerAnnotation {
                 String sortableName,
             @JsonKey(name: 'icon', fromJson: MediaIcon.optionalFromJson, toJson: MediaIcon.optionalToJson)
                 MediaIcon? icon,
-            @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool hasRadio,
             @JsonKey(name: 'albumCount')
                 int albumCount,
@@ -5325,7 +5318,7 @@ class _$ComposerAnnotation extends ComposerAnnotation {
                 Explicitness explicitness,
             @JsonKey(name: 'shareableUrlPath')
                 String shareableUrlPath,
-            @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool hasRadio,
             @JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
                 DateTime modificationTime,
@@ -5353,7 +5346,7 @@ class _$ComposerAnnotation extends ComposerAnnotation {
                 String shareableUrlPath,
             @JsonKey(name: 'twitterHandle')
                 String? twitterHandle,
-            @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool hasRadio,
             @JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
                 DateTime modificationTime,
@@ -5405,7 +5398,7 @@ class _$ComposerAnnotation extends ComposerAnnotation {
                 DateTime modificationTime,
             @JsonKey(name: 'slugPlusPandoraId')
                 String slugPlusPandoraId,
-            @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool hasRadio,
             @JsonKey(name: 'releaseType')
                 String releaseType,
@@ -5447,7 +5440,7 @@ class _$ComposerAnnotation extends ComposerAnnotation {
                 String sortableName,
             @JsonKey(name: 'icon', fromJson: MediaIcon.optionalFromJson, toJson: MediaIcon.optionalToJson)
                 MediaIcon? icon,
-            @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool hasRadio,
             @JsonKey(name: 'albumCount')
                 int albumCount,
@@ -5514,7 +5507,7 @@ class _$ComposerAnnotation extends ComposerAnnotation {
                 Explicitness explicitness,
             @JsonKey(name: 'shareableUrlPath')
                 String shareableUrlPath,
-            @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool hasRadio,
             @JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
                 DateTime modificationTime,
@@ -5542,7 +5535,7 @@ class _$ComposerAnnotation extends ComposerAnnotation {
                 String shareableUrlPath,
             @JsonKey(name: 'twitterHandle')
                 String? twitterHandle,
-            @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool hasRadio,
             @JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
                 DateTime modificationTime,
@@ -5594,7 +5587,7 @@ class _$ComposerAnnotation extends ComposerAnnotation {
                 DateTime modificationTime,
             @JsonKey(name: 'slugPlusPandoraId')
                 String slugPlusPandoraId,
-            @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool hasRadio,
             @JsonKey(name: 'releaseType')
                 String releaseType,
@@ -5636,7 +5629,7 @@ class _$ComposerAnnotation extends ComposerAnnotation {
                 String sortableName,
             @JsonKey(name: 'icon', fromJson: MediaIcon.optionalFromJson, toJson: MediaIcon.optionalToJson)
                 MediaIcon? icon,
-            @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool hasRadio,
             @JsonKey(name: 'albumCount')
                 int albumCount,
@@ -5736,7 +5729,7 @@ abstract class ComposerAnnotation extends MediaAnnotation {
           required final String sortableName,
       @JsonKey(name: 'icon', fromJson: MediaIcon.optionalFromJson, toJson: MediaIcon.optionalToJson)
           required final MediaIcon? icon,
-      @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+      @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
           required final bool hasRadio,
       @JsonKey(name: 'albumCount')
           required final int albumCount,
@@ -5766,8 +5759,7 @@ abstract class ComposerAnnotation extends MediaAnnotation {
       fromJson: MediaIcon.optionalFromJson,
       toJson: MediaIcon.optionalToJson)
   MediaIcon? get icon => throw _privateConstructorUsedError;
-  @JsonKey(
-      name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+  @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
   bool get hasRadio => throw _privateConstructorUsedError;
   @JsonKey(name: 'albumCount')
   int get albumCount => throw _privateConstructorUsedError;
@@ -5951,7 +5943,7 @@ class _$ListenerMediaAnnotation extends ListenerMediaAnnotation {
                 Explicitness explicitness,
             @JsonKey(name: 'shareableUrlPath')
                 String shareableUrlPath,
-            @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool hasRadio,
             @JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
                 DateTime modificationTime,
@@ -5979,7 +5971,7 @@ class _$ListenerMediaAnnotation extends ListenerMediaAnnotation {
                 String shareableUrlPath,
             @JsonKey(name: 'twitterHandle')
                 String? twitterHandle,
-            @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool hasRadio,
             @JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
                 DateTime modificationTime,
@@ -6031,7 +6023,7 @@ class _$ListenerMediaAnnotation extends ListenerMediaAnnotation {
                 DateTime modificationTime,
             @JsonKey(name: 'slugPlusPandoraId')
                 String slugPlusPandoraId,
-            @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool hasRadio,
             @JsonKey(name: 'releaseType')
                 String releaseType,
@@ -6073,7 +6065,7 @@ class _$ListenerMediaAnnotation extends ListenerMediaAnnotation {
                 String sortableName,
             @JsonKey(name: 'icon', fromJson: MediaIcon.optionalFromJson, toJson: MediaIcon.optionalToJson)
                 MediaIcon? icon,
-            @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool hasRadio,
             @JsonKey(name: 'albumCount')
                 int albumCount,
@@ -6129,7 +6121,7 @@ class _$ListenerMediaAnnotation extends ListenerMediaAnnotation {
                 Explicitness explicitness,
             @JsonKey(name: 'shareableUrlPath')
                 String shareableUrlPath,
-            @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool hasRadio,
             @JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
                 DateTime modificationTime,
@@ -6157,7 +6149,7 @@ class _$ListenerMediaAnnotation extends ListenerMediaAnnotation {
                 String shareableUrlPath,
             @JsonKey(name: 'twitterHandle')
                 String? twitterHandle,
-            @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool hasRadio,
             @JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
                 DateTime modificationTime,
@@ -6209,7 +6201,7 @@ class _$ListenerMediaAnnotation extends ListenerMediaAnnotation {
                 DateTime modificationTime,
             @JsonKey(name: 'slugPlusPandoraId')
                 String slugPlusPandoraId,
-            @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool hasRadio,
             @JsonKey(name: 'releaseType')
                 String releaseType,
@@ -6251,7 +6243,7 @@ class _$ListenerMediaAnnotation extends ListenerMediaAnnotation {
                 String sortableName,
             @JsonKey(name: 'icon', fromJson: MediaIcon.optionalFromJson, toJson: MediaIcon.optionalToJson)
                 MediaIcon? icon,
-            @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool hasRadio,
             @JsonKey(name: 'albumCount')
                 int albumCount,
@@ -6308,7 +6300,7 @@ class _$ListenerMediaAnnotation extends ListenerMediaAnnotation {
                 Explicitness explicitness,
             @JsonKey(name: 'shareableUrlPath')
                 String shareableUrlPath,
-            @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool hasRadio,
             @JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
                 DateTime modificationTime,
@@ -6336,7 +6328,7 @@ class _$ListenerMediaAnnotation extends ListenerMediaAnnotation {
                 String shareableUrlPath,
             @JsonKey(name: 'twitterHandle')
                 String? twitterHandle,
-            @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool hasRadio,
             @JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
                 DateTime modificationTime,
@@ -6388,7 +6380,7 @@ class _$ListenerMediaAnnotation extends ListenerMediaAnnotation {
                 DateTime modificationTime,
             @JsonKey(name: 'slugPlusPandoraId')
                 String slugPlusPandoraId,
-            @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool hasRadio,
             @JsonKey(name: 'releaseType')
                 String releaseType,
@@ -6430,7 +6422,7 @@ class _$ListenerMediaAnnotation extends ListenerMediaAnnotation {
                 String sortableName,
             @JsonKey(name: 'icon', fromJson: MediaIcon.optionalFromJson, toJson: MediaIcon.optionalToJson)
                 MediaIcon? icon,
-            @JsonKey(name: 'hasRadio', fromJson: readNullableBool, toJson: writeNullableBool)
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
                 bool hasRadio,
             @JsonKey(name: 'albumCount')
                 int albumCount,

@@ -13,11 +13,11 @@ class SuperbrowseLabel with _$SuperbrowseLabel {
     @JsonKey(name: 'style') required LabelStyle style,
     @JsonKey(name: 'alignment') TextAlignment? alignment,
     @JsonKey(name: 'maxLines') int? maxLines,
-    @JsonKey(name: 'bold', fromJson: readNullableBool, toJson: writeNullableBool)
+    @JsonKey(name: 'bold', fromJson: readOptInBool, toJson: writeOptInBool)
         required bool bold,
-    @JsonKey(name: 'italic', fromJson: readNullableBool, toJson: writeNullableBool)
+    @JsonKey(name: 'italic', fromJson: readOptInBool, toJson: writeOptInBool)
         required bool italic,
-    @JsonKey(name: 'underlined', fromJson: readNullableBool, toJson: writeNullableBool)
+    @JsonKey(name: 'underlined', fromJson: readOptInBool, toJson: writeOptInBool)
         required bool underlined,
   }) = _SuperbrowseLabel;
 

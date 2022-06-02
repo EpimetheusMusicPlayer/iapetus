@@ -1,6 +1,9 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:iapetus/src/common/data/json_utils.dart';
 import 'package:iapetus/src/core/authentication/data/gender_parsing.dart';
 import 'package:iapetus/src/core/authentication/entities/gender.dart';
+import 'package:iapetus/src/core/authentication/entities/pandora_branding_type.dart';
+import 'package:iapetus/src/core/authentication/entities/skip_limit_behavior.dart';
 
 part 'authenticated_user.freezed.dart';
 part 'authenticated_user.g.dart';
@@ -69,6 +72,21 @@ class AuthenticatedUser with _$AuthenticatedUser {
     @JsonKey(name: 'monthlyCapWarningPercent')
         required int monthlyCapWarningPercent,
     @JsonKey(name: 'hasAudioAds') required bool hasAudioAds,
+    @JsonKey(name: 'fullname', fromJson: readOptionalString, toJson: writeOptionalString)
+        String? fullname,
+    @JsonKey(name: 'skipLimitBehavior')
+    @Default(SkipLimitBehavior.block)
+        SkipLimitBehavior skipLimitBehavior,
+    @JsonKey(name: 'enableOnDemand', fromJson: readOptInBool, toJson: writeOptInBool)
+        required bool enableOnDemand,
+    @JsonKey(name: 'isEligibleForOffline', fromJson: readOptInBool, toJson: writeOptInBool)
+        required bool isEligibleForOffline,
+    @JsonKey(name: 'isEligibleForManualDownload', fromJson: readOptInBool, toJson: writeOptInBool)
+        required bool isEligibleForManualDownload,
+    @JsonKey(name: 'pandoraBrandingType')
+        PandoraBrandingType? pandoraBrandingType,
+    @JsonKey(name: 'canSellUserData', fromJson: readOptOutBool, toJson: writeOptOutBool)
+        required bool canSellUserData,
   }) = _AuthenticatedUser;
 
   factory AuthenticatedUser.fromJson(Map<String, dynamic> json) =>

@@ -20,11 +20,9 @@ SuperbrowseImage _$SuperbrowseImageFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$SuperbrowseImage {
-  @JsonKey(
-      name: 'border', fromJson: readNullableBool, toJson: writeNullableBool)
+  @JsonKey(name: 'border', fromJson: readOptInBool, toJson: writeOptInBool)
   bool get border => throw _privateConstructorUsedError;
-  @JsonKey(
-      name: 'circular', fromJson: readNullableBool, toJson: writeNullableBool)
+  @JsonKey(name: 'circular', fromJson: readOptInBool, toJson: writeOptInBool)
   bool get circular => throw _privateConstructorUsedError;
   @JsonKey(
       name: 'dominantColor',
@@ -56,9 +54,9 @@ abstract class $SuperbrowseImageCopyWith<$Res> {
           SuperbrowseImage value, $Res Function(SuperbrowseImage) then) =
       _$SuperbrowseImageCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(name: 'border', fromJson: readNullableBool, toJson: writeNullableBool)
+      {@JsonKey(name: 'border', fromJson: readOptInBool, toJson: writeOptInBool)
           bool border,
-      @JsonKey(name: 'circular', fromJson: readNullableBool, toJson: writeNullableBool)
+      @JsonKey(name: 'circular', fromJson: readOptInBool, toJson: writeOptInBool)
           bool circular,
       @JsonKey(name: 'dominantColor', fromJson: readOptionalColor, toJson: writeOptionalColor)
           int? color,
@@ -146,9 +144,9 @@ abstract class _$$_SuperbrowseImageCopyWith<$Res>
       __$$_SuperbrowseImageCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(name: 'border', fromJson: readNullableBool, toJson: writeNullableBool)
+      {@JsonKey(name: 'border', fromJson: readOptInBool, toJson: writeOptInBool)
           bool border,
-      @JsonKey(name: 'circular', fromJson: readNullableBool, toJson: writeNullableBool)
+      @JsonKey(name: 'circular', fromJson: readOptInBool, toJson: writeOptInBool)
           bool circular,
       @JsonKey(name: 'dominantColor', fromJson: readOptionalColor, toJson: writeOptionalColor)
           int? color,
@@ -234,9 +232,9 @@ class __$$_SuperbrowseImageCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_SuperbrowseImage extends _SuperbrowseImage {
   const _$_SuperbrowseImage(
-      {@JsonKey(name: 'border', fromJson: readNullableBool, toJson: writeNullableBool)
+      {@JsonKey(name: 'border', fromJson: readOptInBool, toJson: writeOptInBool)
           required this.border,
-      @JsonKey(name: 'circular', fromJson: readNullableBool, toJson: writeNullableBool)
+      @JsonKey(name: 'circular', fromJson: readOptInBool, toJson: writeOptInBool)
           required this.circular,
       @JsonKey(name: 'dominantColor', fromJson: readOptionalColor, toJson: writeOptionalColor)
           this.color,
@@ -259,12 +257,10 @@ class _$_SuperbrowseImage extends _SuperbrowseImage {
       _$$_SuperbrowseImageFromJson(json);
 
   @override
-  @JsonKey(
-      name: 'border', fromJson: readNullableBool, toJson: writeNullableBool)
+  @JsonKey(name: 'border', fromJson: readOptInBool, toJson: writeOptInBool)
   final bool border;
   @override
-  @JsonKey(
-      name: 'circular', fromJson: readNullableBool, toJson: writeNullableBool)
+  @JsonKey(name: 'circular', fromJson: readOptInBool, toJson: writeOptInBool)
   final bool circular;
   @override
   @JsonKey(
@@ -348,9 +344,9 @@ class _$_SuperbrowseImage extends _SuperbrowseImage {
 
 abstract class _SuperbrowseImage extends SuperbrowseImage {
   const factory _SuperbrowseImage(
-      {@JsonKey(name: 'border', fromJson: readNullableBool, toJson: writeNullableBool)
+      {@JsonKey(name: 'border', fromJson: readOptInBool, toJson: writeOptInBool)
           required final bool border,
-      @JsonKey(name: 'circular', fromJson: readNullableBool, toJson: writeNullableBool)
+      @JsonKey(name: 'circular', fromJson: readOptInBool, toJson: writeOptInBool)
           required final bool circular,
       @JsonKey(name: 'dominantColor', fromJson: readOptionalColor, toJson: writeOptionalColor)
           final int? color,
@@ -372,12 +368,10 @@ abstract class _SuperbrowseImage extends SuperbrowseImage {
       _$_SuperbrowseImage.fromJson;
 
   @override
-  @JsonKey(
-      name: 'border', fromJson: readNullableBool, toJson: writeNullableBool)
+  @JsonKey(name: 'border', fromJson: readOptInBool, toJson: writeOptInBool)
   bool get border => throw _privateConstructorUsedError;
   @override
-  @JsonKey(
-      name: 'circular', fromJson: readNullableBool, toJson: writeNullableBool)
+  @JsonKey(name: 'circular', fromJson: readOptInBool, toJson: writeOptInBool)
   bool get circular => throw _privateConstructorUsedError;
   @override
   @JsonKey(

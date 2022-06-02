@@ -116,6 +116,34 @@ mixin _$AuthenticatedUser {
   int get monthlyCapWarningPercent => throw _privateConstructorUsedError;
   @JsonKey(name: 'hasAudioAds')
   bool get hasAudioAds => throw _privateConstructorUsedError;
+  @JsonKey(
+      name: 'fullname',
+      fromJson: readOptionalString,
+      toJson: writeOptionalString)
+  String? get fullname => throw _privateConstructorUsedError;
+  @JsonKey(name: 'skipLimitBehavior')
+  SkipLimitBehavior get skipLimitBehavior => throw _privateConstructorUsedError;
+  @JsonKey(
+      name: 'enableOnDemand', fromJson: readOptInBool, toJson: writeOptInBool)
+  bool get enableOnDemand => throw _privateConstructorUsedError;
+  @JsonKey(
+      name: 'isEligibleForOffline',
+      fromJson: readOptInBool,
+      toJson: writeOptInBool)
+  bool get isEligibleForOffline => throw _privateConstructorUsedError;
+  @JsonKey(
+      name: 'isEligibleForManualDownload',
+      fromJson: readOptInBool,
+      toJson: writeOptInBool)
+  bool get isEligibleForManualDownload => throw _privateConstructorUsedError;
+  @JsonKey(name: 'pandoraBrandingType')
+  PandoraBrandingType? get pandoraBrandingType =>
+      throw _privateConstructorUsedError;
+  @JsonKey(
+      name: 'canSellUserData',
+      fromJson: readOptOutBool,
+      toJson: writeOptOutBool)
+  bool get canSellUserData => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -212,7 +240,21 @@ abstract class $AuthenticatedUserCopyWith<$Res> {
       @JsonKey(name: 'monthlyCapWarningPercent')
           int monthlyCapWarningPercent,
       @JsonKey(name: 'hasAudioAds')
-          bool hasAudioAds});
+          bool hasAudioAds,
+      @JsonKey(name: 'fullname', fromJson: readOptionalString, toJson: writeOptionalString)
+          String? fullname,
+      @JsonKey(name: 'skipLimitBehavior')
+          SkipLimitBehavior skipLimitBehavior,
+      @JsonKey(name: 'enableOnDemand', fromJson: readOptInBool, toJson: writeOptInBool)
+          bool enableOnDemand,
+      @JsonKey(name: 'isEligibleForOffline', fromJson: readOptInBool, toJson: writeOptInBool)
+          bool isEligibleForOffline,
+      @JsonKey(name: 'isEligibleForManualDownload', fromJson: readOptInBool, toJson: writeOptInBool)
+          bool isEligibleForManualDownload,
+      @JsonKey(name: 'pandoraBrandingType')
+          PandoraBrandingType? pandoraBrandingType,
+      @JsonKey(name: 'canSellUserData', fromJson: readOptOutBool, toJson: writeOptOutBool)
+          bool canSellUserData});
 }
 
 /// @nodoc
@@ -268,6 +310,13 @@ class _$AuthenticatedUserCopyWithImpl<$Res>
     Object? userstate = freezed,
     Object? monthlyCapWarningPercent = freezed,
     Object? hasAudioAds = freezed,
+    Object? fullname = freezed,
+    Object? skipLimitBehavior = freezed,
+    Object? enableOnDemand = freezed,
+    Object? isEligibleForOffline = freezed,
+    Object? isEligibleForManualDownload = freezed,
+    Object? pandoraBrandingType = freezed,
+    Object? canSellUserData = freezed,
   }) {
     return _then(_value.copyWith(
       isMonthlyPayer: isMonthlyPayer == freezed
@@ -438,6 +487,34 @@ class _$AuthenticatedUserCopyWithImpl<$Res>
           ? _value.hasAudioAds
           : hasAudioAds // ignore: cast_nullable_to_non_nullable
               as bool,
+      fullname: fullname == freezed
+          ? _value.fullname
+          : fullname // ignore: cast_nullable_to_non_nullable
+              as String?,
+      skipLimitBehavior: skipLimitBehavior == freezed
+          ? _value.skipLimitBehavior
+          : skipLimitBehavior // ignore: cast_nullable_to_non_nullable
+              as SkipLimitBehavior,
+      enableOnDemand: enableOnDemand == freezed
+          ? _value.enableOnDemand
+          : enableOnDemand // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isEligibleForOffline: isEligibleForOffline == freezed
+          ? _value.isEligibleForOffline
+          : isEligibleForOffline // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isEligibleForManualDownload: isEligibleForManualDownload == freezed
+          ? _value.isEligibleForManualDownload
+          : isEligibleForManualDownload // ignore: cast_nullable_to_non_nullable
+              as bool,
+      pandoraBrandingType: pandoraBrandingType == freezed
+          ? _value.pandoraBrandingType
+          : pandoraBrandingType // ignore: cast_nullable_to_non_nullable
+              as PandoraBrandingType?,
+      canSellUserData: canSellUserData == freezed
+          ? _value.canSellUserData
+          : canSellUserData // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
@@ -533,7 +610,21 @@ abstract class _$$_AuthenticatedUserCopyWith<$Res>
       @JsonKey(name: 'monthlyCapWarningPercent')
           int monthlyCapWarningPercent,
       @JsonKey(name: 'hasAudioAds')
-          bool hasAudioAds});
+          bool hasAudioAds,
+      @JsonKey(name: 'fullname', fromJson: readOptionalString, toJson: writeOptionalString)
+          String? fullname,
+      @JsonKey(name: 'skipLimitBehavior')
+          SkipLimitBehavior skipLimitBehavior,
+      @JsonKey(name: 'enableOnDemand', fromJson: readOptInBool, toJson: writeOptInBool)
+          bool enableOnDemand,
+      @JsonKey(name: 'isEligibleForOffline', fromJson: readOptInBool, toJson: writeOptInBool)
+          bool isEligibleForOffline,
+      @JsonKey(name: 'isEligibleForManualDownload', fromJson: readOptInBool, toJson: writeOptInBool)
+          bool isEligibleForManualDownload,
+      @JsonKey(name: 'pandoraBrandingType')
+          PandoraBrandingType? pandoraBrandingType,
+      @JsonKey(name: 'canSellUserData', fromJson: readOptOutBool, toJson: writeOptOutBool)
+          bool canSellUserData});
 }
 
 /// @nodoc
@@ -591,6 +682,13 @@ class __$$_AuthenticatedUserCopyWithImpl<$Res>
     Object? userstate = freezed,
     Object? monthlyCapWarningPercent = freezed,
     Object? hasAudioAds = freezed,
+    Object? fullname = freezed,
+    Object? skipLimitBehavior = freezed,
+    Object? enableOnDemand = freezed,
+    Object? isEligibleForOffline = freezed,
+    Object? isEligibleForManualDownload = freezed,
+    Object? pandoraBrandingType = freezed,
+    Object? canSellUserData = freezed,
   }) {
     return _then(_$_AuthenticatedUser(
       isMonthlyPayer: isMonthlyPayer == freezed
@@ -761,6 +859,34 @@ class __$$_AuthenticatedUserCopyWithImpl<$Res>
           ? _value.hasAudioAds
           : hasAudioAds // ignore: cast_nullable_to_non_nullable
               as bool,
+      fullname: fullname == freezed
+          ? _value.fullname
+          : fullname // ignore: cast_nullable_to_non_nullable
+              as String?,
+      skipLimitBehavior: skipLimitBehavior == freezed
+          ? _value.skipLimitBehavior
+          : skipLimitBehavior // ignore: cast_nullable_to_non_nullable
+              as SkipLimitBehavior,
+      enableOnDemand: enableOnDemand == freezed
+          ? _value.enableOnDemand
+          : enableOnDemand // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isEligibleForOffline: isEligibleForOffline == freezed
+          ? _value.isEligibleForOffline
+          : isEligibleForOffline // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isEligibleForManualDownload: isEligibleForManualDownload == freezed
+          ? _value.isEligibleForManualDownload
+          : isEligibleForManualDownload // ignore: cast_nullable_to_non_nullable
+              as bool,
+      pandoraBrandingType: pandoraBrandingType == freezed
+          ? _value.pandoraBrandingType
+          : pandoraBrandingType // ignore: cast_nullable_to_non_nullable
+              as PandoraBrandingType?,
+      canSellUserData: canSellUserData == freezed
+          ? _value.canSellUserData
+          : canSellUserData // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
@@ -852,7 +978,21 @@ class _$_AuthenticatedUser implements _AuthenticatedUser {
       @JsonKey(name: 'monthlyCapWarningPercent')
           required this.monthlyCapWarningPercent,
       @JsonKey(name: 'hasAudioAds')
-          required this.hasAudioAds})
+          required this.hasAudioAds,
+      @JsonKey(name: 'fullname', fromJson: readOptionalString, toJson: writeOptionalString)
+          this.fullname,
+      @JsonKey(name: 'skipLimitBehavior')
+          this.skipLimitBehavior = SkipLimitBehavior.block,
+      @JsonKey(name: 'enableOnDemand', fromJson: readOptInBool, toJson: writeOptInBool)
+          required this.enableOnDemand,
+      @JsonKey(name: 'isEligibleForOffline', fromJson: readOptInBool, toJson: writeOptInBool)
+          required this.isEligibleForOffline,
+      @JsonKey(name: 'isEligibleForManualDownload', fromJson: readOptInBool, toJson: writeOptInBool)
+          required this.isEligibleForManualDownload,
+      @JsonKey(name: 'pandoraBrandingType')
+          this.pandoraBrandingType,
+      @JsonKey(name: 'canSellUserData', fromJson: readOptOutBool, toJson: writeOptOutBool)
+          required this.canSellUserData})
       : _facebookPermissions = facebookPermissions;
 
   factory _$_AuthenticatedUser.fromJson(Map<String, dynamic> json) =>
@@ -1001,10 +1141,44 @@ class _$_AuthenticatedUser implements _AuthenticatedUser {
   @override
   @JsonKey(name: 'hasAudioAds')
   final bool hasAudioAds;
+  @override
+  @JsonKey(
+      name: 'fullname',
+      fromJson: readOptionalString,
+      toJson: writeOptionalString)
+  final String? fullname;
+  @override
+  @JsonKey(name: 'skipLimitBehavior')
+  final SkipLimitBehavior skipLimitBehavior;
+  @override
+  @JsonKey(
+      name: 'enableOnDemand', fromJson: readOptInBool, toJson: writeOptInBool)
+  final bool enableOnDemand;
+  @override
+  @JsonKey(
+      name: 'isEligibleForOffline',
+      fromJson: readOptInBool,
+      toJson: writeOptInBool)
+  final bool isEligibleForOffline;
+  @override
+  @JsonKey(
+      name: 'isEligibleForManualDownload',
+      fromJson: readOptInBool,
+      toJson: writeOptInBool)
+  final bool isEligibleForManualDownload;
+  @override
+  @JsonKey(name: 'pandoraBrandingType')
+  final PandoraBrandingType? pandoraBrandingType;
+  @override
+  @JsonKey(
+      name: 'canSellUserData',
+      fromJson: readOptOutBool,
+      toJson: writeOptOutBool)
+  final bool canSellUserData;
 
   @override
   String toString() {
-    return 'AuthenticatedUser(isMonthlyPayer: $isMonthlyPayer, dailySkipLimitSubscriber: $dailySkipLimitSubscriber, minimumAdRefreshInterval: $minimumAdRefreshInterval, age: $age, facebookPermissions: $facebookPermissions, splashScreenAdUrl: $splashScreenAdUrl, userProfileUrl: $userProfileUrl, canListen: $canListen, hasUsedTrial: $hasUsedTrial, facebookAppId: $facebookAppId, maxStationsAllowed: $maxStationsAllowed, userId: $userId, accountMonthlyListening: $accountMonthlyListening, zeroVolumeAutoPauseEnabledFlag: $zeroVolumeAutoPauseEnabledFlag, isSubscriber: $isSubscriber, stationHourlySkipLimit: $stationHourlySkipLimit, listeningTimeout: $listeningTimeout, deviceMonthlyListening: $deviceMonthlyListening, zip: $zip, stationCreationAdUrl: $stationCreationAdUrl, accountMessageUrl: $accountMessageUrl, isCapped: $isCapped, googleplayApiKey: $googleplayApiKey, dailySkipLimitNonSubscriber: $dailySkipLimitNonSubscriber, collectTrackLifetimeStats: $collectTrackLifetimeStats, subscriptionHasExpired: $subscriptionHasExpired, userAuthToken: $userAuthToken, username: $username, googleplayMonthlySku: $googleplayMonthlySku, listeningTimeoutAlertMsgUri: $listeningTimeoutAlertMsgUri, monthlyCapWarningRepeatPercent: $monthlyCapWarningRepeatPercent, videoAdUrl: $videoAdUrl, zeroVolumeNumMutedTracks: $zeroVolumeNumMutedTracks, skipDelayAfterTrackStart: $skipDelayAfterTrackStart, accountMessageKey: $accountMessageKey, dailySkipLimit: $dailySkipLimit, monthlyCapHours: $monthlyCapHours, webname: $webname, gender: $gender, userstate: $userstate, monthlyCapWarningPercent: $monthlyCapWarningPercent, hasAudioAds: $hasAudioAds)';
+    return 'AuthenticatedUser(isMonthlyPayer: $isMonthlyPayer, dailySkipLimitSubscriber: $dailySkipLimitSubscriber, minimumAdRefreshInterval: $minimumAdRefreshInterval, age: $age, facebookPermissions: $facebookPermissions, splashScreenAdUrl: $splashScreenAdUrl, userProfileUrl: $userProfileUrl, canListen: $canListen, hasUsedTrial: $hasUsedTrial, facebookAppId: $facebookAppId, maxStationsAllowed: $maxStationsAllowed, userId: $userId, accountMonthlyListening: $accountMonthlyListening, zeroVolumeAutoPauseEnabledFlag: $zeroVolumeAutoPauseEnabledFlag, isSubscriber: $isSubscriber, stationHourlySkipLimit: $stationHourlySkipLimit, listeningTimeout: $listeningTimeout, deviceMonthlyListening: $deviceMonthlyListening, zip: $zip, stationCreationAdUrl: $stationCreationAdUrl, accountMessageUrl: $accountMessageUrl, isCapped: $isCapped, googleplayApiKey: $googleplayApiKey, dailySkipLimitNonSubscriber: $dailySkipLimitNonSubscriber, collectTrackLifetimeStats: $collectTrackLifetimeStats, subscriptionHasExpired: $subscriptionHasExpired, userAuthToken: $userAuthToken, username: $username, googleplayMonthlySku: $googleplayMonthlySku, listeningTimeoutAlertMsgUri: $listeningTimeoutAlertMsgUri, monthlyCapWarningRepeatPercent: $monthlyCapWarningRepeatPercent, videoAdUrl: $videoAdUrl, zeroVolumeNumMutedTracks: $zeroVolumeNumMutedTracks, skipDelayAfterTrackStart: $skipDelayAfterTrackStart, accountMessageKey: $accountMessageKey, dailySkipLimit: $dailySkipLimit, monthlyCapHours: $monthlyCapHours, webname: $webname, gender: $gender, userstate: $userstate, monthlyCapWarningPercent: $monthlyCapWarningPercent, hasAudioAds: $hasAudioAds, fullname: $fullname, skipLimitBehavior: $skipLimitBehavior, enableOnDemand: $enableOnDemand, isEligibleForOffline: $isEligibleForOffline, isEligibleForManualDownload: $isEligibleForManualDownload, pandoraBrandingType: $pandoraBrandingType, canSellUserData: $canSellUserData)';
   }
 
   @override
@@ -1090,7 +1264,20 @@ class _$_AuthenticatedUser implements _AuthenticatedUser {
             const DeepCollectionEquality().equals(
                 other.monthlyCapWarningPercent, monthlyCapWarningPercent) &&
             const DeepCollectionEquality()
-                .equals(other.hasAudioAds, hasAudioAds));
+                .equals(other.hasAudioAds, hasAudioAds) &&
+            const DeepCollectionEquality().equals(other.fullname, fullname) &&
+            const DeepCollectionEquality()
+                .equals(other.skipLimitBehavior, skipLimitBehavior) &&
+            const DeepCollectionEquality()
+                .equals(other.enableOnDemand, enableOnDemand) &&
+            const DeepCollectionEquality()
+                .equals(other.isEligibleForOffline, isEligibleForOffline) &&
+            const DeepCollectionEquality().equals(
+                other.isEligibleForManualDownload,
+                isEligibleForManualDownload) &&
+            const DeepCollectionEquality()
+                .equals(other.pandoraBrandingType, pandoraBrandingType) &&
+            const DeepCollectionEquality().equals(other.canSellUserData, canSellUserData));
   }
 
   @JsonKey(ignore: true)
@@ -1138,7 +1325,14 @@ class _$_AuthenticatedUser implements _AuthenticatedUser {
         const DeepCollectionEquality().hash(gender),
         const DeepCollectionEquality().hash(userstate),
         const DeepCollectionEquality().hash(monthlyCapWarningPercent),
-        const DeepCollectionEquality().hash(hasAudioAds)
+        const DeepCollectionEquality().hash(hasAudioAds),
+        const DeepCollectionEquality().hash(fullname),
+        const DeepCollectionEquality().hash(skipLimitBehavior),
+        const DeepCollectionEquality().hash(enableOnDemand),
+        const DeepCollectionEquality().hash(isEligibleForOffline),
+        const DeepCollectionEquality().hash(isEligibleForManualDownload),
+        const DeepCollectionEquality().hash(pandoraBrandingType),
+        const DeepCollectionEquality().hash(canSellUserData)
       ]);
 
   @JsonKey(ignore: true)
@@ -1238,7 +1432,21 @@ abstract class _AuthenticatedUser implements AuthenticatedUser {
       @JsonKey(name: 'monthlyCapWarningPercent')
           required final int monthlyCapWarningPercent,
       @JsonKey(name: 'hasAudioAds')
-          required final bool hasAudioAds}) = _$_AuthenticatedUser;
+          required final bool hasAudioAds,
+      @JsonKey(name: 'fullname', fromJson: readOptionalString, toJson: writeOptionalString)
+          final String? fullname,
+      @JsonKey(name: 'skipLimitBehavior')
+          final SkipLimitBehavior skipLimitBehavior,
+      @JsonKey(name: 'enableOnDemand', fromJson: readOptInBool, toJson: writeOptInBool)
+          required final bool enableOnDemand,
+      @JsonKey(name: 'isEligibleForOffline', fromJson: readOptInBool, toJson: writeOptInBool)
+          required final bool isEligibleForOffline,
+      @JsonKey(name: 'isEligibleForManualDownload', fromJson: readOptInBool, toJson: writeOptInBool)
+          required final bool isEligibleForManualDownload,
+      @JsonKey(name: 'pandoraBrandingType')
+          final PandoraBrandingType? pandoraBrandingType,
+      @JsonKey(name: 'canSellUserData', fromJson: readOptOutBool, toJson: writeOptOutBool)
+          required final bool canSellUserData}) = _$_AuthenticatedUser;
 
   factory _AuthenticatedUser.fromJson(Map<String, dynamic> json) =
       _$_AuthenticatedUser.fromJson;
@@ -1381,6 +1589,41 @@ abstract class _AuthenticatedUser implements AuthenticatedUser {
   @override
   @JsonKey(name: 'hasAudioAds')
   bool get hasAudioAds => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(
+      name: 'fullname',
+      fromJson: readOptionalString,
+      toJson: writeOptionalString)
+  String? get fullname => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: 'skipLimitBehavior')
+  SkipLimitBehavior get skipLimitBehavior => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(
+      name: 'enableOnDemand', fromJson: readOptInBool, toJson: writeOptInBool)
+  bool get enableOnDemand => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(
+      name: 'isEligibleForOffline',
+      fromJson: readOptInBool,
+      toJson: writeOptInBool)
+  bool get isEligibleForOffline => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(
+      name: 'isEligibleForManualDownload',
+      fromJson: readOptInBool,
+      toJson: writeOptInBool)
+  bool get isEligibleForManualDownload => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: 'pandoraBrandingType')
+  PandoraBrandingType? get pandoraBrandingType =>
+      throw _privateConstructorUsedError;
+  @override
+  @JsonKey(
+      name: 'canSellUserData',
+      fromJson: readOptOutBool,
+      toJson: writeOptOutBool)
+  bool get canSellUserData => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$$_AuthenticatedUserCopyWith<_$_AuthenticatedUser> get copyWith =>

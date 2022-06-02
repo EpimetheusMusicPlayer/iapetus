@@ -8,9 +8,9 @@ part 'image.g.dart';
 @freezed
 class SuperbrowseImage with _$SuperbrowseImage {
   const factory SuperbrowseImage({
-    @JsonKey(name: 'border', fromJson: readNullableBool, toJson: writeNullableBool)
+    @JsonKey(name: 'border', fromJson: readOptInBool, toJson: writeOptInBool)
         required bool border,
-    @JsonKey(name: 'circular', fromJson: readNullableBool, toJson: writeNullableBool)
+    @JsonKey(name: 'circular', fromJson: readOptInBool, toJson: writeOptInBool)
         required bool circular,
     @JsonKey(name: 'dominantColor', fromJson: readOptionalColor, toJson: writeOptionalColor)
         int? color,

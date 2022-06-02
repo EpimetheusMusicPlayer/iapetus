@@ -10,8 +10,8 @@ part of 'image.dart';
 
 _$_SuperbrowseImage _$$_SuperbrowseImageFromJson(Map<String, dynamic> json) =>
     _$_SuperbrowseImage(
-      border: readNullableBool(json['border'] as bool?),
-      circular: readNullableBool(json['circular'] as bool?),
+      border: readOptInBool(json['border'] as bool?),
+      circular: readOptInBool(json['circular'] as bool?),
       color: readOptionalColor(json['dominantColor'] as String?),
       fullUrl:
           json['fullUrl'] == null ? null : Uri.parse(json['fullUrl'] as String),
@@ -34,8 +34,8 @@ _$_SuperbrowseImage _$$_SuperbrowseImageFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_SuperbrowseImageToJson(_$_SuperbrowseImage instance) =>
     <String, dynamic>{
-      'border': writeNullableBool(instance.border),
-      'circular': writeNullableBool(instance.circular),
+      'border': writeOptInBool(instance.border),
+      'circular': writeOptInBool(instance.circular),
       'dominantColor': writeOptionalColor(instance.color),
       'fullUrl': instance.fullUrl?.toString(),
       'fullUrlDark': instance.fullUrlDark?.toString(),
