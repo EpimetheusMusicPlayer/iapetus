@@ -66,7 +66,7 @@ _$_AuthenticatedUser _$$_AuthenticatedUserFromJson(Map<String, dynamic> json) =>
       userstate: json['userstate'] as String,
       monthlyCapWarningPercent: json['monthlyCapWarningPercent'] as int,
       hasAudioAds: json['hasAudioAds'] as bool,
-      fullname: readOptionalString(json['fullname'] as String),
+      fullname: readOptionalString(json['fullname'] as String?),
       skipLimitBehavior: $enumDecodeNullable(
               _$SkipLimitBehaviorEnumMap, json['skipLimitBehavior']) ??
           SkipLimitBehavior.block,
