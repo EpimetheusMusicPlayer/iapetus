@@ -11,7 +11,7 @@ class CollectionListSegment with _$CollectionListSegment {
     @JsonKey(name: 'cursor') String? cursor,
     @JsonKey(name: 'limit') required int limit,
     @JsonKey(name: 'version') required int version,
-    @JsonKey(name: 'items') required List<CollectionItem> items,
+    @Default([]) @JsonKey(name: 'items') List<CollectionItem> items,
   }) = _CollectionListSegment;
 
   factory CollectionListSegment.fromJson(Map<String, dynamic> json) =>

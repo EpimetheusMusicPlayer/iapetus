@@ -161,7 +161,7 @@ class _$_CollectionListSegment implements _CollectionListSegment {
       @JsonKey(name: 'cursor') this.cursor,
       @JsonKey(name: 'limit') required this.limit,
       @JsonKey(name: 'version') required this.version,
-      @JsonKey(name: 'items') required final List<CollectionItem> items})
+      @JsonKey(name: 'items') final List<CollectionItem> items = const []})
       : _items = items;
 
   factory _$_CollectionListSegment.fromJson(Map<String, dynamic> json) =>
@@ -233,7 +233,7 @@ abstract class _CollectionListSegment implements CollectionListSegment {
           @JsonKey(name: 'cursor') final String? cursor,
           @JsonKey(name: 'limit') required final int limit,
           @JsonKey(name: 'version') required final int version,
-          @JsonKey(name: 'items') required final List<CollectionItem> items}) =
+          @JsonKey(name: 'items') final List<CollectionItem> items}) =
       _$_CollectionListSegment;
 
   factory _CollectionListSegment.fromJson(Map<String, dynamic> json) =

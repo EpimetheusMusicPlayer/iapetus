@@ -15,9 +15,10 @@ _$_CollectionListSegment _$$_CollectionListSegmentFromJson(
       cursor: json['cursor'] as String?,
       limit: json['limit'] as int,
       version: json['version'] as int,
-      items: (json['items'] as List<dynamic>)
-          .map((e) => CollectionItem.fromJson(e as Map<String, dynamic>))
-          .toList(),
+      items: (json['items'] as List<dynamic>?)
+              ?.map((e) => CollectionItem.fromJson(e as Map<String, dynamic>))
+              .toList() ??
+          const [],
     );
 
 Map<String, dynamic> _$$_CollectionListSegmentToJson(
