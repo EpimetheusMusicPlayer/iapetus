@@ -1,5 +1,8 @@
 library iapetus;
 
+export 'package:freezed_annotation/freezed_annotation.dart'
+    show CheckedFromJsonException;
+
 export 'src/autoplay/autoplay.dart';
 export 'src/collection/collection.dart';
 export 'src/common/common.dart';
