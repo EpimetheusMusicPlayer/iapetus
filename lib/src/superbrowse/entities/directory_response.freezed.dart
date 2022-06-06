@@ -22,10 +22,12 @@ DirectoryResponse _$DirectoryResponseFromJson(Map<String, dynamic> json) {
 mixin _$DirectoryResponse {
   @JsonKey(name: 'ttl', fromJson: readSeconds, toJson: writeSeconds)
   Duration get ttl => throw _privateConstructorUsedError;
+  @JsonKey(name: 'title')
+  String? get title => throw _privateConstructorUsedError;
   @JsonKey(name: 'checksum')
   String get checksum => throw _privateConstructorUsedError;
   @JsonKey(name: 'generation')
-  String get generation => throw _privateConstructorUsedError;
+  String? get generation => throw _privateConstructorUsedError;
   @JsonKey(name: 'sections')
   List<SuperbrowseSection> get sections => throw _privateConstructorUsedError;
   @JsonKey(name: 'preferCachedData')
@@ -48,10 +50,12 @@ abstract class $DirectoryResponseCopyWith<$Res> {
   $Res call(
       {@JsonKey(name: 'ttl', fromJson: readSeconds, toJson: writeSeconds)
           Duration ttl,
+      @JsonKey(name: 'title')
+          String? title,
       @JsonKey(name: 'checksum')
           String checksum,
       @JsonKey(name: 'generation')
-          String generation,
+          String? generation,
       @JsonKey(name: 'sections')
           List<SuperbrowseSection> sections,
       @JsonKey(name: 'preferCachedData')
@@ -72,6 +76,7 @@ class _$DirectoryResponseCopyWithImpl<$Res>
   @override
   $Res call({
     Object? ttl = freezed,
+    Object? title = freezed,
     Object? checksum = freezed,
     Object? generation = freezed,
     Object? sections = freezed,
@@ -83,6 +88,10 @@ class _$DirectoryResponseCopyWithImpl<$Res>
           ? _value.ttl
           : ttl // ignore: cast_nullable_to_non_nullable
               as Duration,
+      title: title == freezed
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String?,
       checksum: checksum == freezed
           ? _value.checksum
           : checksum // ignore: cast_nullable_to_non_nullable
@@ -90,7 +99,7 @@ class _$DirectoryResponseCopyWithImpl<$Res>
       generation: generation == freezed
           ? _value.generation
           : generation // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       sections: sections == freezed
           ? _value.sections
           : sections // ignore: cast_nullable_to_non_nullable
@@ -117,10 +126,12 @@ abstract class _$$_DirectoryResponseCopyWith<$Res>
   $Res call(
       {@JsonKey(name: 'ttl', fromJson: readSeconds, toJson: writeSeconds)
           Duration ttl,
+      @JsonKey(name: 'title')
+          String? title,
       @JsonKey(name: 'checksum')
           String checksum,
       @JsonKey(name: 'generation')
-          String generation,
+          String? generation,
       @JsonKey(name: 'sections')
           List<SuperbrowseSection> sections,
       @JsonKey(name: 'preferCachedData')
@@ -143,6 +154,7 @@ class __$$_DirectoryResponseCopyWithImpl<$Res>
   @override
   $Res call({
     Object? ttl = freezed,
+    Object? title = freezed,
     Object? checksum = freezed,
     Object? generation = freezed,
     Object? sections = freezed,
@@ -154,6 +166,10 @@ class __$$_DirectoryResponseCopyWithImpl<$Res>
           ? _value.ttl
           : ttl // ignore: cast_nullable_to_non_nullable
               as Duration,
+      title: title == freezed
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String?,
       checksum: checksum == freezed
           ? _value.checksum
           : checksum // ignore: cast_nullable_to_non_nullable
@@ -161,7 +177,7 @@ class __$$_DirectoryResponseCopyWithImpl<$Res>
       generation: generation == freezed
           ? _value.generation
           : generation // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       sections: sections == freezed
           ? _value._sections
           : sections // ignore: cast_nullable_to_non_nullable
@@ -184,10 +200,12 @@ class _$_DirectoryResponse implements _DirectoryResponse {
   const _$_DirectoryResponse(
       {@JsonKey(name: 'ttl', fromJson: readSeconds, toJson: writeSeconds)
           required this.ttl,
+      @JsonKey(name: 'title')
+          this.title,
       @JsonKey(name: 'checksum')
           required this.checksum,
       @JsonKey(name: 'generation')
-          required this.generation,
+          this.generation,
       @JsonKey(name: 'sections')
           required final List<SuperbrowseSection> sections,
       @JsonKey(name: 'preferCachedData')
@@ -205,11 +223,14 @@ class _$_DirectoryResponse implements _DirectoryResponse {
   @JsonKey(name: 'ttl', fromJson: readSeconds, toJson: writeSeconds)
   final Duration ttl;
   @override
+  @JsonKey(name: 'title')
+  final String? title;
+  @override
   @JsonKey(name: 'checksum')
   final String checksum;
   @override
   @JsonKey(name: 'generation')
-  final String generation;
+  final String? generation;
   final List<SuperbrowseSection> _sections;
   @override
   @JsonKey(name: 'sections')
@@ -231,7 +252,7 @@ class _$_DirectoryResponse implements _DirectoryResponse {
 
   @override
   String toString() {
-    return 'DirectoryResponse(ttl: $ttl, checksum: $checksum, generation: $generation, sections: $sections, preferCachedData: $preferCachedData, formFactorsByType: $formFactorsByType)';
+    return 'DirectoryResponse(ttl: $ttl, title: $title, checksum: $checksum, generation: $generation, sections: $sections, preferCachedData: $preferCachedData, formFactorsByType: $formFactorsByType)';
   }
 
   @override
@@ -240,6 +261,7 @@ class _$_DirectoryResponse implements _DirectoryResponse {
         (other.runtimeType == runtimeType &&
             other is _$_DirectoryResponse &&
             const DeepCollectionEquality().equals(other.ttl, ttl) &&
+            const DeepCollectionEquality().equals(other.title, title) &&
             const DeepCollectionEquality().equals(other.checksum, checksum) &&
             const DeepCollectionEquality()
                 .equals(other.generation, generation) &&
@@ -255,6 +277,7 @@ class _$_DirectoryResponse implements _DirectoryResponse {
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(ttl),
+      const DeepCollectionEquality().hash(title),
       const DeepCollectionEquality().hash(checksum),
       const DeepCollectionEquality().hash(generation),
       const DeepCollectionEquality().hash(_sections),
@@ -277,10 +300,12 @@ abstract class _DirectoryResponse implements DirectoryResponse {
   const factory _DirectoryResponse(
       {@JsonKey(name: 'ttl', fromJson: readSeconds, toJson: writeSeconds)
           required final Duration ttl,
+      @JsonKey(name: 'title')
+          final String? title,
       @JsonKey(name: 'checksum')
           required final String checksum,
       @JsonKey(name: 'generation')
-          required final String generation,
+          final String? generation,
       @JsonKey(name: 'sections')
           required final List<SuperbrowseSection> sections,
       @JsonKey(name: 'preferCachedData')
@@ -296,11 +321,14 @@ abstract class _DirectoryResponse implements DirectoryResponse {
   @JsonKey(name: 'ttl', fromJson: readSeconds, toJson: writeSeconds)
   Duration get ttl => throw _privateConstructorUsedError;
   @override
+  @JsonKey(name: 'title')
+  String? get title => throw _privateConstructorUsedError;
+  @override
   @JsonKey(name: 'checksum')
   String get checksum => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'generation')
-  String get generation => throw _privateConstructorUsedError;
+  String? get generation => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'sections')
   List<SuperbrowseSection> get sections => throw _privateConstructorUsedError;

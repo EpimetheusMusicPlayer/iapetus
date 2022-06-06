@@ -12,8 +12,9 @@ class DirectoryResponse with _$DirectoryResponse {
   const factory DirectoryResponse({
     @JsonKey(name: 'ttl', fromJson: readSeconds, toJson: writeSeconds)
         required Duration ttl,
+    @JsonKey(name: 'title') String? title,
     @JsonKey(name: 'checksum') required String checksum,
-    @JsonKey(name: 'generation') required String generation,
+    @JsonKey(name: 'generation') String? generation,
     @JsonKey(name: 'sections') required List<SuperbrowseSection> sections,
     @JsonKey(name: 'preferCachedData') required bool preferCachedData,
     @JsonKey(name: 'formFactorsByType')

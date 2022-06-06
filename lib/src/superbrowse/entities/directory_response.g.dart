@@ -11,8 +11,9 @@ part of 'directory_response.dart';
 _$_DirectoryResponse _$$_DirectoryResponseFromJson(Map<String, dynamic> json) =>
     _$_DirectoryResponse(
       ttl: readSeconds(json['ttl'] as int),
+      title: json['title'] as String?,
       checksum: json['checksum'] as String,
-      generation: json['generation'] as String,
+      generation: json['generation'] as String?,
       sections: (json['sections'] as List<dynamic>)
           .map((e) => SuperbrowseSection.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -28,6 +29,7 @@ Map<String, dynamic> _$$_DirectoryResponseToJson(
         _$_DirectoryResponse instance) =>
     <String, dynamic>{
       'ttl': writeSeconds(instance.ttl),
+      'title': instance.title,
       'checksum': instance.checksum,
       'generation': instance.generation,
       'sections': instance.sections,
