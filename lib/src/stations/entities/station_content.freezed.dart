@@ -21,7 +21,7 @@ StationContent _$StationContentFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$StationContent {
   @JsonKey(name: 'userSeed')
-  String get userSeed => throw _privateConstructorUsedError;
+  String? get userSeed => throw _privateConstructorUsedError;
   @JsonKey(name: 'allowBookmarkTrack')
   bool get allowBookmarkTrack => throw _privateConstructorUsedError;
   @JsonKey(name: 'albumExplorerUrl')
@@ -134,7 +134,7 @@ abstract class $StationContentCopyWith<$Res> {
       _$StationContentCopyWithImpl<$Res>;
   $Res call(
       {@JsonKey(name: 'userSeed')
-          String userSeed,
+          String? userSeed,
       @JsonKey(name: 'allowBookmarkTrack')
           bool allowBookmarkTrack,
       @JsonKey(name: 'albumExplorerUrl')
@@ -294,7 +294,7 @@ class _$StationContentCopyWithImpl<$Res>
       userSeed: userSeed == freezed
           ? _value.userSeed
           : userSeed // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       allowBookmarkTrack: allowBookmarkTrack == freezed
           ? _value.allowBookmarkTrack
           : allowBookmarkTrack // ignore: cast_nullable_to_non_nullable
@@ -504,7 +504,7 @@ abstract class _$$_StationContentCopyWith<$Res>
   @override
   $Res call(
       {@JsonKey(name: 'userSeed')
-          String userSeed,
+          String? userSeed,
       @JsonKey(name: 'allowBookmarkTrack')
           bool allowBookmarkTrack,
       @JsonKey(name: 'albumExplorerUrl')
@@ -667,7 +667,7 @@ class __$$_StationContentCopyWithImpl<$Res>
       userSeed: userSeed == freezed
           ? _value.userSeed
           : userSeed // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       allowBookmarkTrack: allowBookmarkTrack == freezed
           ? _value.allowBookmarkTrack
           : allowBookmarkTrack // ignore: cast_nullable_to_non_nullable
@@ -862,7 +862,7 @@ class __$$_StationContentCopyWithImpl<$Res>
 class _$_StationContent extends _StationContent {
   const _$_StationContent(
       {@JsonKey(name: 'userSeed')
-          required this.userSeed,
+          this.userSeed,
       @JsonKey(name: 'allowBookmarkTrack')
           required this.allowBookmarkTrack,
       @JsonKey(name: 'albumExplorerUrl')
@@ -963,7 +963,7 @@ class _$_StationContent extends _StationContent {
 
   @override
   @JsonKey(name: 'userSeed')
-  final String userSeed;
+  final String? userSeed;
   @override
   @JsonKey(name: 'allowBookmarkTrack')
   final bool allowBookmarkTrack;
@@ -1278,7 +1278,7 @@ class _$_StationContent extends _StationContent {
 abstract class _StationContent extends StationContent {
   const factory _StationContent(
       {@JsonKey(name: 'userSeed')
-          required final String userSeed,
+          final String? userSeed,
       @JsonKey(name: 'allowBookmarkTrack')
           required final bool allowBookmarkTrack,
       @JsonKey(name: 'albumExplorerUrl')
@@ -1378,7 +1378,7 @@ abstract class _StationContent extends StationContent {
 
   @override
   @JsonKey(name: 'userSeed')
-  String get userSeed => throw _privateConstructorUsedError;
+  String? get userSeed => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'allowBookmarkTrack')
   bool get allowBookmarkTrack => throw _privateConstructorUsedError;

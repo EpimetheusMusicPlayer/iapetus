@@ -50,7 +50,7 @@ class StationContent with _$StationContent implements PlayableMedia, Track {
   MediaRating get mediaRating => songRating;
 
   const factory StationContent({
-    @JsonKey(name: 'userSeed') required String userSeed,
+    @JsonKey(name: 'userSeed') String? userSeed,
     @JsonKey(name: 'allowBookmarkTrack') required bool allowBookmarkTrack,
     @JsonKey(name: 'albumExplorerUrl') required Uri albumExplorerUrl,
     @JsonKey(name: 'albumArtUrl') required Uri albumArtUrl,

@@ -10,7 +10,7 @@ part of 'station_content.dart';
 
 _$_StationContent _$$_StationContentFromJson(Map<String, dynamic> json) =>
     _$_StationContent(
-      userSeed: json['userSeed'] as String,
+      userSeed: json['userSeed'] as String?,
       allowBookmarkTrack: json['allowBookmarkTrack'] as bool,
       albumExplorerUrl: Uri.parse(json['albumExplorerUrl'] as String),
       albumArtUrl: Uri.parse(json['albumArtUrl'] as String),
