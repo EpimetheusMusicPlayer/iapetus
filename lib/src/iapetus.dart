@@ -16,7 +16,7 @@ import 'package:iapetus/src/core/device/repositories/device_info.dart';
 import 'package:iapetus/src/core/http/client_stub.dart'
     if (dart.library.html) 'package:iapetus/src/core/http/browser_client.dart'
     if (dart.library.io) 'package:iapetus/src/core/http/io_client.dart';
-import 'package:iapetus/src/core/pandora_api/data/error_codes.dart';
+import 'package:iapetus/src/core/pandora_api/data/error_code.dart';
 import 'package:iapetus/src/core/pandora_api/data/sync_time.dart';
 import 'package:iapetus/src/core/pandora_api/entities/pandora_api_response.dart';
 import 'package:iapetus/src/core/pandora_api/errors/location_exception.dart';

@@ -48,7 +48,7 @@ extension AuthenticationApi on Iapetus {
         requiresUser: false,
       );
     } on PandoraApiException catch (e) {
-      if (e.code == PandoraApiErrorCodes.invalidUserPassword) {
+      if (e.code == PandoraApiErrorCode.invalidLogin) {
         throw const IapetusAuthenticationException();
       } else {
         rethrow;
@@ -84,7 +84,7 @@ extension AuthenticationApi on Iapetus {
         requiresUser: false,
       );
     } on PandoraApiException catch (e) {
-      if (e.code == PandoraApiErrorCodes.deviceNotFound) {
+      if (e.code == PandoraApiErrorCode.deviceNotFound) {
         throw const IapetusAuthenticationException();
       }
       rethrow;

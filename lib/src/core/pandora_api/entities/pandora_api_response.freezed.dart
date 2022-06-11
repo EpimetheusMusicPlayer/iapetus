@@ -32,24 +32,33 @@ mixin _$PandoraApiResponse {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(@JsonKey(name: 'result') Object? result) ok,
-    required TResult Function(@JsonKey(name: 'code') int code,
-            @JsonKey(name: 'message') String message)
+    required TResult Function(
+            @JsonKey(name: 'code', fromJson: PandoraApiErrorCode.fromCode)
+                PandoraApiErrorCode code,
+            @JsonKey(name: 'message')
+                String message)
         fail,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function(@JsonKey(name: 'result') Object? result)? ok,
-    TResult Function(@JsonKey(name: 'code') int code,
-            @JsonKey(name: 'message') String message)?
+    TResult Function(
+            @JsonKey(name: 'code', fromJson: PandoraApiErrorCode.fromCode)
+                PandoraApiErrorCode code,
+            @JsonKey(name: 'message')
+                String message)?
         fail,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(@JsonKey(name: 'result') Object? result)? ok,
-    TResult Function(@JsonKey(name: 'code') int code,
-            @JsonKey(name: 'message') String message)?
+    TResult Function(
+            @JsonKey(name: 'code', fromJson: PandoraApiErrorCode.fromCode)
+                PandoraApiErrorCode code,
+            @JsonKey(name: 'message')
+                String message)?
         fail,
     required TResult orElse(),
   }) =>
@@ -170,8 +179,11 @@ class _$SuccessfulPandoraApiResponse implements SuccessfulPandoraApiResponse {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(@JsonKey(name: 'result') Object? result) ok,
-    required TResult Function(@JsonKey(name: 'code') int code,
-            @JsonKey(name: 'message') String message)
+    required TResult Function(
+            @JsonKey(name: 'code', fromJson: PandoraApiErrorCode.fromCode)
+                PandoraApiErrorCode code,
+            @JsonKey(name: 'message')
+                String message)
         fail,
   }) {
     return ok(result);
@@ -181,8 +193,11 @@ class _$SuccessfulPandoraApiResponse implements SuccessfulPandoraApiResponse {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function(@JsonKey(name: 'result') Object? result)? ok,
-    TResult Function(@JsonKey(name: 'code') int code,
-            @JsonKey(name: 'message') String message)?
+    TResult Function(
+            @JsonKey(name: 'code', fromJson: PandoraApiErrorCode.fromCode)
+                PandoraApiErrorCode code,
+            @JsonKey(name: 'message')
+                String message)?
         fail,
   }) {
     return ok?.call(result);
@@ -192,8 +207,11 @@ class _$SuccessfulPandoraApiResponse implements SuccessfulPandoraApiResponse {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(@JsonKey(name: 'result') Object? result)? ok,
-    TResult Function(@JsonKey(name: 'code') int code,
-            @JsonKey(name: 'message') String message)?
+    TResult Function(
+            @JsonKey(name: 'code', fromJson: PandoraApiErrorCode.fromCode)
+                PandoraApiErrorCode code,
+            @JsonKey(name: 'message')
+                String message)?
         fail,
     required TResult orElse(),
   }) {
@@ -261,8 +279,10 @@ abstract class _$$PandoraApiExceptionCopyWith<$Res> {
           $Res Function(_$PandoraApiException) then) =
       __$$PandoraApiExceptionCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(name: 'code') int code,
-      @JsonKey(name: 'message') String message});
+      {@JsonKey(name: 'code', fromJson: PandoraApiErrorCode.fromCode)
+          PandoraApiErrorCode code,
+      @JsonKey(name: 'message')
+          String message});
 }
 
 /// @nodoc
@@ -285,7 +305,7 @@ class __$$PandoraApiExceptionCopyWithImpl<$Res>
       code: code == freezed
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as int,
+              as PandoraApiErrorCode,
       message: message == freezed
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
@@ -298,8 +318,10 @@ class __$$PandoraApiExceptionCopyWithImpl<$Res>
 @JsonSerializable()
 class _$PandoraApiException implements PandoraApiException {
   const _$PandoraApiException(
-      {@JsonKey(name: 'code') required this.code,
-      @JsonKey(name: 'message') required this.message,
+      {@JsonKey(name: 'code', fromJson: PandoraApiErrorCode.fromCode)
+          required this.code,
+      @JsonKey(name: 'message')
+          required this.message,
       final String? $type})
       : $type = $type ?? 'fail';
 
@@ -307,8 +329,8 @@ class _$PandoraApiException implements PandoraApiException {
       _$$PandoraApiExceptionFromJson(json);
 
   @override
-  @JsonKey(name: 'code')
-  final int code;
+  @JsonKey(name: 'code', fromJson: PandoraApiErrorCode.fromCode)
+  final PandoraApiErrorCode code;
   @override
   @JsonKey(name: 'message')
   final String message;
@@ -347,8 +369,11 @@ class _$PandoraApiException implements PandoraApiException {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(@JsonKey(name: 'result') Object? result) ok,
-    required TResult Function(@JsonKey(name: 'code') int code,
-            @JsonKey(name: 'message') String message)
+    required TResult Function(
+            @JsonKey(name: 'code', fromJson: PandoraApiErrorCode.fromCode)
+                PandoraApiErrorCode code,
+            @JsonKey(name: 'message')
+                String message)
         fail,
   }) {
     return fail(code, message);
@@ -358,8 +383,11 @@ class _$PandoraApiException implements PandoraApiException {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function(@JsonKey(name: 'result') Object? result)? ok,
-    TResult Function(@JsonKey(name: 'code') int code,
-            @JsonKey(name: 'message') String message)?
+    TResult Function(
+            @JsonKey(name: 'code', fromJson: PandoraApiErrorCode.fromCode)
+                PandoraApiErrorCode code,
+            @JsonKey(name: 'message')
+                String message)?
         fail,
   }) {
     return fail?.call(code, message);
@@ -369,8 +397,11 @@ class _$PandoraApiException implements PandoraApiException {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(@JsonKey(name: 'result') Object? result)? ok,
-    TResult Function(@JsonKey(name: 'code') int code,
-            @JsonKey(name: 'message') String message)?
+    TResult Function(
+            @JsonKey(name: 'code', fromJson: PandoraApiErrorCode.fromCode)
+                PandoraApiErrorCode code,
+            @JsonKey(name: 'message')
+                String message)?
         fail,
     required TResult orElse(),
   }) {
@@ -419,15 +450,16 @@ class _$PandoraApiException implements PandoraApiException {
 
 abstract class PandoraApiException implements PandoraApiResponse, Exception {
   const factory PandoraApiException(
-          {@JsonKey(name: 'code') required final int code,
-          @JsonKey(name: 'message') required final String message}) =
-      _$PandoraApiException;
+      {@JsonKey(name: 'code', fromJson: PandoraApiErrorCode.fromCode)
+          required final PandoraApiErrorCode code,
+      @JsonKey(name: 'message')
+          required final String message}) = _$PandoraApiException;
 
   factory PandoraApiException.fromJson(Map<String, dynamic> json) =
       _$PandoraApiException.fromJson;
 
-  @JsonKey(name: 'code')
-  int get code => throw _privateConstructorUsedError;
+  @JsonKey(name: 'code', fromJson: PandoraApiErrorCode.fromCode)
+  PandoraApiErrorCode get code => throw _privateConstructorUsedError;
   @JsonKey(name: 'message')
   String get message => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)

@@ -1,4 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:iapetus/src/core/pandora_api/data/error_code.dart';
 
 part 'pandora_api_response.freezed.dart';
 part 'pandora_api_response.g.dart';
@@ -13,7 +14,8 @@ class PandoraApiResponse with _$PandoraApiResponse {
   @FreezedUnionValue('fail')
   @Implements<Exception>()
   const factory PandoraApiResponse.fail({
-    @JsonKey(name: 'code') required int code,
+    @JsonKey(name: 'code', fromJson: PandoraApiErrorCode.fromCode)
+        required PandoraApiErrorCode code,
     @JsonKey(name: 'message') required String message,
   }) = PandoraApiException;
 
