@@ -4,8 +4,12 @@ import 'package:iapetus/src/common/entities/pandora_entity.dart';
 import 'package:iapetus/src/common/entities/pandora_type.dart';
 import 'package:iapetus/src/media/entities/explicitness.dart';
 import 'package:iapetus/src/media/entities/icon.dart';
+import 'package:iapetus/src/media/entities/playlist_linked_type.dart';
 import 'package:iapetus/src/media/entities/rights_info.dart';
+import 'package:iapetus/src/media/entities/scope.dart';
 import 'package:iapetus/src/media/entities/types/track.dart';
+import 'package:iapetus/src/playlists/entities/listener_id_info.dart';
+import 'package:iapetus/src/playlists/entities/playlist_viewer_info.dart';
 
 part 'annotation.freezed.dart';
 part 'annotation.g.dart';
@@ -38,7 +42,7 @@ class MediaAnnotation with _$MediaAnnotation implements PandoraEntity {
     @JsonKey(name: 'slugPlusPandoraId') required String slugPlusPandoraId,
     @JsonKey(name: 'isrc') required String isrc,
     @JsonKey(name: 'pandoraId') required String pandoraId,
-    @JsonKey(name: 'scope') required String scope,
+    @JsonKey(name: 'scope') required Scope scope,
   }) = TrackAnnotation;
 
   @FreezedUnionValue('AR')
@@ -62,7 +66,7 @@ class MediaAnnotation with _$MediaAnnotation implements PandoraEntity {
     @JsonKey(name: 'megastar') required bool megastar,
     @JsonKey(name: 'hasTakeoverModes') required bool hasTakeoverModes,
     @JsonKey(name: 'pandoraId') required String pandoraId,
-    @JsonKey(name: 'scope') required String scope,
+    @JsonKey(name: 'scope') required Scope scope,
   }) = ArtistAnnotation;
 
   @FreezedUnionValue('AL')
@@ -90,7 +94,7 @@ class MediaAnnotation with _$MediaAnnotation implements PandoraEntity {
     @JsonKey(name: 'releaseType') required String releaseType,
     @JsonKey(name: 'listenerReleaseType') required String listenerReleaseType,
     @JsonKey(name: 'pandoraId') required String pandoraId,
-    @JsonKey(name: 'scope') required String scope,
+    @JsonKey(name: 'scope') required Scope scope,
   }) = AlbumAnnotation;
 
   @FreezedUnionValue('GE')
@@ -108,8 +112,43 @@ class MediaAnnotation with _$MediaAnnotation implements PandoraEntity {
     @JsonKey(name: 'hasTakeoverModes') required bool hasTakeoverModes,
     @JsonKey(name: 'hasCuratedModes') required bool hasCuratedModes,
     @JsonKey(name: 'pandoraId') required String pandoraId,
-    @JsonKey(name: 'scope') required String scope,
+    @JsonKey(name: 'scope') required Scope scope,
   }) = GenreAnnotation;
+
+  @FreezedUnionValue('PL')
+  const factory MediaAnnotation.playlist({
+    @JsonKey(name: 'name') required String name,
+    @JsonKey(name: 'allowFeedback', fromJson: readOptInBool, toJson: writeOptInBool)
+        required bool allowFeedback,
+    @JsonKey(name: 'autogenForListener') required bool autogenForListener,
+    @JsonKey(name: 'collectible') required bool collectible,
+    @JsonKey(name: 'description', fromJson: readOptionalString, toJson: writeOptionalString)
+        String? description,
+    @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
+        required Duration duration,
+    @JsonKey(name: 'includedTrackTypes')
+        required List<PandoraType> includedTrackTypes,
+    @JsonKey(name: 'isPrivate') required bool isPrivate,
+    @JsonKey(name: 'linkedType') required PlaylistLinkedType linkedType,
+    @JsonKey(name: 'listenerId') required int listenerId,
+    @JsonKey(name: 'listenerIdInfo') required ListenerIdInfo listenerIdInfo,
+    @JsonKey(name: 'listenerIdToken') required String listenerIdToken,
+    @JsonKey(name: 'listenerPandoraId') required String listenerPandoraId,
+    @JsonKey(name: 'secret') required bool secret,
+    @JsonKey(name: 'shareableUrlPath') required String shareableUrlPath,
+    @JsonKey(name: 'thorLayers') required String thorLayers,
+    @JsonKey(name: 'timeCreated', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
+        required DateTime timeCreated,
+    @JsonKey(name: 'timeLastPlayed', fromJson: readOptionalDateTimeMilliseconds, toJson: writeOptionalDateTimeMilliseconds)
+        DateTime? timeLastPlayed,
+    @JsonKey(name: 'timeLastUpdated', fromJson: readOptionalDateTimeMilliseconds, toJson: writeOptionalDateTimeMilliseconds)
+        DateTime? timeLastUpdated,
+    @JsonKey(name: 'totalTracks') required int totalTracks,
+    @JsonKey(name: 'unlocked') required bool unlocked,
+    @JsonKey(name: 'viewerInfo') PlaylistViewerInfo? viewerInfo,
+    @JsonKey(name: 'pandoraId') required String pandoraId,
+    @JsonKey(name: 'scope') required Scope scope,
+  }) = PlaylistAnnotation;
 
   @FreezedUnionValue('CO')
   const factory MediaAnnotation.composer({
@@ -145,6 +184,7 @@ class MediaAnnotation with _$MediaAnnotation implements PandoraEntity {
     if (this is ArtistAnnotation) return PandoraType.artist;
     if (this is AlbumAnnotation) return PandoraType.album;
     if (this is GenreAnnotation) return PandoraType.genre;
+    if (this is PlaylistAnnotation) return PandoraType.playlist;
     if (this is ComposerAnnotation) return PandoraType.composer;
     if (this is ListenerMediaAnnotation) return PandoraType.listener;
     throw FallThroughError();

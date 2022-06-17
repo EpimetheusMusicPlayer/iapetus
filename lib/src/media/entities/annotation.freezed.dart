@@ -24,6 +24,8 @@ MediaAnnotation _$MediaAnnotationFromJson(Map<String, dynamic> json) {
       return AlbumAnnotation.fromJson(json);
     case 'GE':
       return GenreAnnotation.fromJson(json);
+    case 'PL':
+      return PlaylistAnnotation.fromJson(json);
     case 'CO':
       return ComposerAnnotation.fromJson(json);
     case 'LI':
@@ -77,7 +79,7 @@ mixin _$MediaAnnotation {
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
             @JsonKey(name: 'scope')
-                String scope)
+                Scope scope)
         track,
     required TResult Function(
             @JsonKey(name: 'name')
@@ -113,7 +115,7 @@ mixin _$MediaAnnotation {
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
             @JsonKey(name: 'scope')
-                String scope)
+                Scope scope)
         artist,
     required TResult Function(
             @JsonKey(name: 'name')
@@ -155,7 +157,7 @@ mixin _$MediaAnnotation {
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
             @JsonKey(name: 'scope')
-                String scope)
+                Scope scope)
         album,
     required TResult Function(
             @JsonKey(name: 'name')
@@ -179,8 +181,58 @@ mixin _$MediaAnnotation {
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
             @JsonKey(name: 'scope')
-                String scope)
+                Scope scope)
         genre,
+    required TResult Function(
+            @JsonKey(name: 'name')
+                String name,
+            @JsonKey(name: 'allowFeedback', fromJson: readOptInBool, toJson: writeOptInBool)
+                bool allowFeedback,
+            @JsonKey(name: 'autogenForListener')
+                bool autogenForListener,
+            @JsonKey(name: 'collectible')
+                bool collectible,
+            @JsonKey(name: 'description', fromJson: readOptionalString, toJson: writeOptionalString)
+                String? description,
+            @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
+                Duration duration,
+            @JsonKey(name: 'includedTrackTypes')
+                List<PandoraType> includedTrackTypes,
+            @JsonKey(name: 'isPrivate')
+                bool isPrivate,
+            @JsonKey(name: 'linkedType')
+                PlaylistLinkedType linkedType,
+            @JsonKey(name: 'listenerId')
+                int listenerId,
+            @JsonKey(name: 'listenerIdInfo')
+                ListenerIdInfo listenerIdInfo,
+            @JsonKey(name: 'listenerIdToken')
+                String listenerIdToken,
+            @JsonKey(name: 'listenerPandoraId')
+                String listenerPandoraId,
+            @JsonKey(name: 'secret')
+                bool secret,
+            @JsonKey(name: 'shareableUrlPath')
+                String shareableUrlPath,
+            @JsonKey(name: 'thorLayers')
+                String thorLayers,
+            @JsonKey(name: 'timeCreated', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
+                DateTime timeCreated,
+            @JsonKey(name: 'timeLastPlayed', fromJson: readOptionalDateTimeMilliseconds, toJson: writeOptionalDateTimeMilliseconds)
+                DateTime? timeLastPlayed,
+            @JsonKey(name: 'timeLastUpdated', fromJson: readOptionalDateTimeMilliseconds, toJson: writeOptionalDateTimeMilliseconds)
+                DateTime? timeLastUpdated,
+            @JsonKey(name: 'totalTracks')
+                int totalTracks,
+            @JsonKey(name: 'unlocked')
+                bool unlocked,
+            @JsonKey(name: 'viewerInfo')
+                PlaylistViewerInfo? viewerInfo,
+            @JsonKey(name: 'pandoraId')
+                String pandoraId,
+            @JsonKey(name: 'scope')
+                Scope scope)
+        playlist,
     required TResult Function(
             @JsonKey(name: 'name')
                 String name,
@@ -252,7 +304,7 @@ mixin _$MediaAnnotation {
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
             @JsonKey(name: 'scope')
-                String scope)?
+                Scope scope)?
         track,
     TResult Function(
             @JsonKey(name: 'name')
@@ -288,7 +340,7 @@ mixin _$MediaAnnotation {
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
             @JsonKey(name: 'scope')
-                String scope)?
+                Scope scope)?
         artist,
     TResult Function(
             @JsonKey(name: 'name')
@@ -330,7 +382,7 @@ mixin _$MediaAnnotation {
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
             @JsonKey(name: 'scope')
-                String scope)?
+                Scope scope)?
         album,
     TResult Function(
             @JsonKey(name: 'name')
@@ -354,8 +406,58 @@ mixin _$MediaAnnotation {
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
             @JsonKey(name: 'scope')
-                String scope)?
+                Scope scope)?
         genre,
+    TResult Function(
+            @JsonKey(name: 'name')
+                String name,
+            @JsonKey(name: 'allowFeedback', fromJson: readOptInBool, toJson: writeOptInBool)
+                bool allowFeedback,
+            @JsonKey(name: 'autogenForListener')
+                bool autogenForListener,
+            @JsonKey(name: 'collectible')
+                bool collectible,
+            @JsonKey(name: 'description', fromJson: readOptionalString, toJson: writeOptionalString)
+                String? description,
+            @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
+                Duration duration,
+            @JsonKey(name: 'includedTrackTypes')
+                List<PandoraType> includedTrackTypes,
+            @JsonKey(name: 'isPrivate')
+                bool isPrivate,
+            @JsonKey(name: 'linkedType')
+                PlaylistLinkedType linkedType,
+            @JsonKey(name: 'listenerId')
+                int listenerId,
+            @JsonKey(name: 'listenerIdInfo')
+                ListenerIdInfo listenerIdInfo,
+            @JsonKey(name: 'listenerIdToken')
+                String listenerIdToken,
+            @JsonKey(name: 'listenerPandoraId')
+                String listenerPandoraId,
+            @JsonKey(name: 'secret')
+                bool secret,
+            @JsonKey(name: 'shareableUrlPath')
+                String shareableUrlPath,
+            @JsonKey(name: 'thorLayers')
+                String thorLayers,
+            @JsonKey(name: 'timeCreated', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
+                DateTime timeCreated,
+            @JsonKey(name: 'timeLastPlayed', fromJson: readOptionalDateTimeMilliseconds, toJson: writeOptionalDateTimeMilliseconds)
+                DateTime? timeLastPlayed,
+            @JsonKey(name: 'timeLastUpdated', fromJson: readOptionalDateTimeMilliseconds, toJson: writeOptionalDateTimeMilliseconds)
+                DateTime? timeLastUpdated,
+            @JsonKey(name: 'totalTracks')
+                int totalTracks,
+            @JsonKey(name: 'unlocked')
+                bool unlocked,
+            @JsonKey(name: 'viewerInfo')
+                PlaylistViewerInfo? viewerInfo,
+            @JsonKey(name: 'pandoraId')
+                String pandoraId,
+            @JsonKey(name: 'scope')
+                Scope scope)?
+        playlist,
     TResult Function(
             @JsonKey(name: 'name')
                 String name,
@@ -427,7 +529,7 @@ mixin _$MediaAnnotation {
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
             @JsonKey(name: 'scope')
-                String scope)?
+                Scope scope)?
         track,
     TResult Function(
             @JsonKey(name: 'name')
@@ -463,7 +565,7 @@ mixin _$MediaAnnotation {
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
             @JsonKey(name: 'scope')
-                String scope)?
+                Scope scope)?
         artist,
     TResult Function(
             @JsonKey(name: 'name')
@@ -505,7 +607,7 @@ mixin _$MediaAnnotation {
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
             @JsonKey(name: 'scope')
-                String scope)?
+                Scope scope)?
         album,
     TResult Function(
             @JsonKey(name: 'name')
@@ -529,8 +631,58 @@ mixin _$MediaAnnotation {
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
             @JsonKey(name: 'scope')
-                String scope)?
+                Scope scope)?
         genre,
+    TResult Function(
+            @JsonKey(name: 'name')
+                String name,
+            @JsonKey(name: 'allowFeedback', fromJson: readOptInBool, toJson: writeOptInBool)
+                bool allowFeedback,
+            @JsonKey(name: 'autogenForListener')
+                bool autogenForListener,
+            @JsonKey(name: 'collectible')
+                bool collectible,
+            @JsonKey(name: 'description', fromJson: readOptionalString, toJson: writeOptionalString)
+                String? description,
+            @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
+                Duration duration,
+            @JsonKey(name: 'includedTrackTypes')
+                List<PandoraType> includedTrackTypes,
+            @JsonKey(name: 'isPrivate')
+                bool isPrivate,
+            @JsonKey(name: 'linkedType')
+                PlaylistLinkedType linkedType,
+            @JsonKey(name: 'listenerId')
+                int listenerId,
+            @JsonKey(name: 'listenerIdInfo')
+                ListenerIdInfo listenerIdInfo,
+            @JsonKey(name: 'listenerIdToken')
+                String listenerIdToken,
+            @JsonKey(name: 'listenerPandoraId')
+                String listenerPandoraId,
+            @JsonKey(name: 'secret')
+                bool secret,
+            @JsonKey(name: 'shareableUrlPath')
+                String shareableUrlPath,
+            @JsonKey(name: 'thorLayers')
+                String thorLayers,
+            @JsonKey(name: 'timeCreated', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
+                DateTime timeCreated,
+            @JsonKey(name: 'timeLastPlayed', fromJson: readOptionalDateTimeMilliseconds, toJson: writeOptionalDateTimeMilliseconds)
+                DateTime? timeLastPlayed,
+            @JsonKey(name: 'timeLastUpdated', fromJson: readOptionalDateTimeMilliseconds, toJson: writeOptionalDateTimeMilliseconds)
+                DateTime? timeLastUpdated,
+            @JsonKey(name: 'totalTracks')
+                int totalTracks,
+            @JsonKey(name: 'unlocked')
+                bool unlocked,
+            @JsonKey(name: 'viewerInfo')
+                PlaylistViewerInfo? viewerInfo,
+            @JsonKey(name: 'pandoraId')
+                String pandoraId,
+            @JsonKey(name: 'scope')
+                Scope scope)?
+        playlist,
     TResult Function(
             @JsonKey(name: 'name')
                 String name,
@@ -571,6 +723,7 @@ mixin _$MediaAnnotation {
     required TResult Function(ArtistAnnotation value) artist,
     required TResult Function(AlbumAnnotation value) album,
     required TResult Function(GenreAnnotation value) genre,
+    required TResult Function(PlaylistAnnotation value) playlist,
     required TResult Function(ComposerAnnotation value) composer,
     required TResult Function(ListenerMediaAnnotation value) listener,
   }) =>
@@ -581,6 +734,7 @@ mixin _$MediaAnnotation {
     TResult Function(ArtistAnnotation value)? artist,
     TResult Function(AlbumAnnotation value)? album,
     TResult Function(GenreAnnotation value)? genre,
+    TResult Function(PlaylistAnnotation value)? playlist,
     TResult Function(ComposerAnnotation value)? composer,
     TResult Function(ListenerMediaAnnotation value)? listener,
   }) =>
@@ -591,6 +745,7 @@ mixin _$MediaAnnotation {
     TResult Function(ArtistAnnotation value)? artist,
     TResult Function(AlbumAnnotation value)? album,
     TResult Function(GenreAnnotation value)? genre,
+    TResult Function(PlaylistAnnotation value)? playlist,
     TResult Function(ComposerAnnotation value)? composer,
     TResult Function(ListenerMediaAnnotation value)? listener,
     required TResult orElse(),
@@ -675,7 +830,7 @@ abstract class _$$TrackAnnotationCopyWith<$Res>
       @JsonKey(name: 'pandoraId')
           String pandoraId,
       @JsonKey(name: 'scope')
-          String scope});
+          Scope scope});
 
   $MediaIconCopyWith<$Res>? get icon;
   $RightsInfoCopyWith<$Res> get rightsInfo;
@@ -785,7 +940,7 @@ class __$$TrackAnnotationCopyWithImpl<$Res>
       scope: scope == freezed
           ? _value.scope
           : scope // ignore: cast_nullable_to_non_nullable
-              as String,
+              as Scope,
     ));
   }
 
@@ -914,7 +1069,7 @@ class _$TrackAnnotation extends TrackAnnotation {
   final String pandoraId;
   @override
   @JsonKey(name: 'scope')
-  final String scope;
+  final Scope scope;
 
   @JsonKey(name: 'type')
   final String $type;
@@ -1024,7 +1179,7 @@ class _$TrackAnnotation extends TrackAnnotation {
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
             @JsonKey(name: 'scope')
-                String scope)
+                Scope scope)
         track,
     required TResult Function(
             @JsonKey(name: 'name')
@@ -1060,7 +1215,7 @@ class _$TrackAnnotation extends TrackAnnotation {
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
             @JsonKey(name: 'scope')
-                String scope)
+                Scope scope)
         artist,
     required TResult Function(
             @JsonKey(name: 'name')
@@ -1102,7 +1257,7 @@ class _$TrackAnnotation extends TrackAnnotation {
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
             @JsonKey(name: 'scope')
-                String scope)
+                Scope scope)
         album,
     required TResult Function(
             @JsonKey(name: 'name')
@@ -1126,8 +1281,58 @@ class _$TrackAnnotation extends TrackAnnotation {
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
             @JsonKey(name: 'scope')
-                String scope)
+                Scope scope)
         genre,
+    required TResult Function(
+            @JsonKey(name: 'name')
+                String name,
+            @JsonKey(name: 'allowFeedback', fromJson: readOptInBool, toJson: writeOptInBool)
+                bool allowFeedback,
+            @JsonKey(name: 'autogenForListener')
+                bool autogenForListener,
+            @JsonKey(name: 'collectible')
+                bool collectible,
+            @JsonKey(name: 'description', fromJson: readOptionalString, toJson: writeOptionalString)
+                String? description,
+            @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
+                Duration duration,
+            @JsonKey(name: 'includedTrackTypes')
+                List<PandoraType> includedTrackTypes,
+            @JsonKey(name: 'isPrivate')
+                bool isPrivate,
+            @JsonKey(name: 'linkedType')
+                PlaylistLinkedType linkedType,
+            @JsonKey(name: 'listenerId')
+                int listenerId,
+            @JsonKey(name: 'listenerIdInfo')
+                ListenerIdInfo listenerIdInfo,
+            @JsonKey(name: 'listenerIdToken')
+                String listenerIdToken,
+            @JsonKey(name: 'listenerPandoraId')
+                String listenerPandoraId,
+            @JsonKey(name: 'secret')
+                bool secret,
+            @JsonKey(name: 'shareableUrlPath')
+                String shareableUrlPath,
+            @JsonKey(name: 'thorLayers')
+                String thorLayers,
+            @JsonKey(name: 'timeCreated', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
+                DateTime timeCreated,
+            @JsonKey(name: 'timeLastPlayed', fromJson: readOptionalDateTimeMilliseconds, toJson: writeOptionalDateTimeMilliseconds)
+                DateTime? timeLastPlayed,
+            @JsonKey(name: 'timeLastUpdated', fromJson: readOptionalDateTimeMilliseconds, toJson: writeOptionalDateTimeMilliseconds)
+                DateTime? timeLastUpdated,
+            @JsonKey(name: 'totalTracks')
+                int totalTracks,
+            @JsonKey(name: 'unlocked')
+                bool unlocked,
+            @JsonKey(name: 'viewerInfo')
+                PlaylistViewerInfo? viewerInfo,
+            @JsonKey(name: 'pandoraId')
+                String pandoraId,
+            @JsonKey(name: 'scope')
+                Scope scope)
+        playlist,
     required TResult Function(
             @JsonKey(name: 'name')
                 String name,
@@ -1220,7 +1425,7 @@ class _$TrackAnnotation extends TrackAnnotation {
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
             @JsonKey(name: 'scope')
-                String scope)?
+                Scope scope)?
         track,
     TResult Function(
             @JsonKey(name: 'name')
@@ -1256,7 +1461,7 @@ class _$TrackAnnotation extends TrackAnnotation {
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
             @JsonKey(name: 'scope')
-                String scope)?
+                Scope scope)?
         artist,
     TResult Function(
             @JsonKey(name: 'name')
@@ -1298,7 +1503,7 @@ class _$TrackAnnotation extends TrackAnnotation {
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
             @JsonKey(name: 'scope')
-                String scope)?
+                Scope scope)?
         album,
     TResult Function(
             @JsonKey(name: 'name')
@@ -1322,8 +1527,58 @@ class _$TrackAnnotation extends TrackAnnotation {
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
             @JsonKey(name: 'scope')
-                String scope)?
+                Scope scope)?
         genre,
+    TResult Function(
+            @JsonKey(name: 'name')
+                String name,
+            @JsonKey(name: 'allowFeedback', fromJson: readOptInBool, toJson: writeOptInBool)
+                bool allowFeedback,
+            @JsonKey(name: 'autogenForListener')
+                bool autogenForListener,
+            @JsonKey(name: 'collectible')
+                bool collectible,
+            @JsonKey(name: 'description', fromJson: readOptionalString, toJson: writeOptionalString)
+                String? description,
+            @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
+                Duration duration,
+            @JsonKey(name: 'includedTrackTypes')
+                List<PandoraType> includedTrackTypes,
+            @JsonKey(name: 'isPrivate')
+                bool isPrivate,
+            @JsonKey(name: 'linkedType')
+                PlaylistLinkedType linkedType,
+            @JsonKey(name: 'listenerId')
+                int listenerId,
+            @JsonKey(name: 'listenerIdInfo')
+                ListenerIdInfo listenerIdInfo,
+            @JsonKey(name: 'listenerIdToken')
+                String listenerIdToken,
+            @JsonKey(name: 'listenerPandoraId')
+                String listenerPandoraId,
+            @JsonKey(name: 'secret')
+                bool secret,
+            @JsonKey(name: 'shareableUrlPath')
+                String shareableUrlPath,
+            @JsonKey(name: 'thorLayers')
+                String thorLayers,
+            @JsonKey(name: 'timeCreated', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
+                DateTime timeCreated,
+            @JsonKey(name: 'timeLastPlayed', fromJson: readOptionalDateTimeMilliseconds, toJson: writeOptionalDateTimeMilliseconds)
+                DateTime? timeLastPlayed,
+            @JsonKey(name: 'timeLastUpdated', fromJson: readOptionalDateTimeMilliseconds, toJson: writeOptionalDateTimeMilliseconds)
+                DateTime? timeLastUpdated,
+            @JsonKey(name: 'totalTracks')
+                int totalTracks,
+            @JsonKey(name: 'unlocked')
+                bool unlocked,
+            @JsonKey(name: 'viewerInfo')
+                PlaylistViewerInfo? viewerInfo,
+            @JsonKey(name: 'pandoraId')
+                String pandoraId,
+            @JsonKey(name: 'scope')
+                Scope scope)?
+        playlist,
     TResult Function(
             @JsonKey(name: 'name')
                 String name,
@@ -1416,7 +1671,7 @@ class _$TrackAnnotation extends TrackAnnotation {
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
             @JsonKey(name: 'scope')
-                String scope)?
+                Scope scope)?
         track,
     TResult Function(
             @JsonKey(name: 'name')
@@ -1452,7 +1707,7 @@ class _$TrackAnnotation extends TrackAnnotation {
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
             @JsonKey(name: 'scope')
-                String scope)?
+                Scope scope)?
         artist,
     TResult Function(
             @JsonKey(name: 'name')
@@ -1494,7 +1749,7 @@ class _$TrackAnnotation extends TrackAnnotation {
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
             @JsonKey(name: 'scope')
-                String scope)?
+                Scope scope)?
         album,
     TResult Function(
             @JsonKey(name: 'name')
@@ -1518,8 +1773,58 @@ class _$TrackAnnotation extends TrackAnnotation {
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
             @JsonKey(name: 'scope')
-                String scope)?
+                Scope scope)?
         genre,
+    TResult Function(
+            @JsonKey(name: 'name')
+                String name,
+            @JsonKey(name: 'allowFeedback', fromJson: readOptInBool, toJson: writeOptInBool)
+                bool allowFeedback,
+            @JsonKey(name: 'autogenForListener')
+                bool autogenForListener,
+            @JsonKey(name: 'collectible')
+                bool collectible,
+            @JsonKey(name: 'description', fromJson: readOptionalString, toJson: writeOptionalString)
+                String? description,
+            @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
+                Duration duration,
+            @JsonKey(name: 'includedTrackTypes')
+                List<PandoraType> includedTrackTypes,
+            @JsonKey(name: 'isPrivate')
+                bool isPrivate,
+            @JsonKey(name: 'linkedType')
+                PlaylistLinkedType linkedType,
+            @JsonKey(name: 'listenerId')
+                int listenerId,
+            @JsonKey(name: 'listenerIdInfo')
+                ListenerIdInfo listenerIdInfo,
+            @JsonKey(name: 'listenerIdToken')
+                String listenerIdToken,
+            @JsonKey(name: 'listenerPandoraId')
+                String listenerPandoraId,
+            @JsonKey(name: 'secret')
+                bool secret,
+            @JsonKey(name: 'shareableUrlPath')
+                String shareableUrlPath,
+            @JsonKey(name: 'thorLayers')
+                String thorLayers,
+            @JsonKey(name: 'timeCreated', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
+                DateTime timeCreated,
+            @JsonKey(name: 'timeLastPlayed', fromJson: readOptionalDateTimeMilliseconds, toJson: writeOptionalDateTimeMilliseconds)
+                DateTime? timeLastPlayed,
+            @JsonKey(name: 'timeLastUpdated', fromJson: readOptionalDateTimeMilliseconds, toJson: writeOptionalDateTimeMilliseconds)
+                DateTime? timeLastUpdated,
+            @JsonKey(name: 'totalTracks')
+                int totalTracks,
+            @JsonKey(name: 'unlocked')
+                bool unlocked,
+            @JsonKey(name: 'viewerInfo')
+                PlaylistViewerInfo? viewerInfo,
+            @JsonKey(name: 'pandoraId')
+                String pandoraId,
+            @JsonKey(name: 'scope')
+                Scope scope)?
+        playlist,
     TResult Function(
             @JsonKey(name: 'name')
                 String name,
@@ -1584,6 +1889,7 @@ class _$TrackAnnotation extends TrackAnnotation {
     required TResult Function(ArtistAnnotation value) artist,
     required TResult Function(AlbumAnnotation value) album,
     required TResult Function(GenreAnnotation value) genre,
+    required TResult Function(PlaylistAnnotation value) playlist,
     required TResult Function(ComposerAnnotation value) composer,
     required TResult Function(ListenerMediaAnnotation value) listener,
   }) {
@@ -1597,6 +1903,7 @@ class _$TrackAnnotation extends TrackAnnotation {
     TResult Function(ArtistAnnotation value)? artist,
     TResult Function(AlbumAnnotation value)? album,
     TResult Function(GenreAnnotation value)? genre,
+    TResult Function(PlaylistAnnotation value)? playlist,
     TResult Function(ComposerAnnotation value)? composer,
     TResult Function(ListenerMediaAnnotation value)? listener,
   }) {
@@ -1610,6 +1917,7 @@ class _$TrackAnnotation extends TrackAnnotation {
     TResult Function(ArtistAnnotation value)? artist,
     TResult Function(AlbumAnnotation value)? album,
     TResult Function(GenreAnnotation value)? genre,
+    TResult Function(PlaylistAnnotation value)? playlist,
     TResult Function(ComposerAnnotation value)? composer,
     TResult Function(ListenerMediaAnnotation value)? listener,
     required TResult orElse(),
@@ -1663,7 +1971,7 @@ abstract class TrackAnnotation extends MediaAnnotation implements Track {
       @JsonKey(name: 'pandoraId')
           required final String pandoraId,
       @JsonKey(name: 'scope')
-          required final String scope}) = _$TrackAnnotation;
+          required final Scope scope}) = _$TrackAnnotation;
   const TrackAnnotation._() : super._();
 
   factory TrackAnnotation.fromJson(Map<String, dynamic> json) =
@@ -1711,7 +2019,7 @@ abstract class TrackAnnotation extends MediaAnnotation implements Track {
   @JsonKey(name: 'pandoraId')
   String get pandoraId => throw _privateConstructorUsedError;
   @JsonKey(name: 'scope')
-  String get scope => throw _privateConstructorUsedError;
+  Scope get scope => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$$TrackAnnotationCopyWith<_$TrackAnnotation> get copyWith =>
@@ -1759,7 +2067,7 @@ abstract class _$$ArtistAnnotationCopyWith<$Res>
       @JsonKey(name: 'pandoraId')
           String pandoraId,
       @JsonKey(name: 'scope')
-          String scope});
+          Scope scope});
 
   $MediaIconCopyWith<$Res>? get icon;
 }
@@ -1863,7 +2171,7 @@ class __$$ArtistAnnotationCopyWithImpl<$Res>
       scope: scope == freezed
           ? _value.scope
           : scope // ignore: cast_nullable_to_non_nullable
-              as String,
+              as Scope,
     ));
   }
 
@@ -1986,7 +2294,7 @@ class _$ArtistAnnotation extends ArtistAnnotation {
   final String pandoraId;
   @override
   @JsonKey(name: 'scope')
-  final String scope;
+  final Scope scope;
 
   @JsonKey(name: 'type')
   final String $type;
@@ -2097,7 +2405,7 @@ class _$ArtistAnnotation extends ArtistAnnotation {
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
             @JsonKey(name: 'scope')
-                String scope)
+                Scope scope)
         track,
     required TResult Function(
             @JsonKey(name: 'name')
@@ -2133,7 +2441,7 @@ class _$ArtistAnnotation extends ArtistAnnotation {
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
             @JsonKey(name: 'scope')
-                String scope)
+                Scope scope)
         artist,
     required TResult Function(
             @JsonKey(name: 'name')
@@ -2175,7 +2483,7 @@ class _$ArtistAnnotation extends ArtistAnnotation {
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
             @JsonKey(name: 'scope')
-                String scope)
+                Scope scope)
         album,
     required TResult Function(
             @JsonKey(name: 'name')
@@ -2199,8 +2507,58 @@ class _$ArtistAnnotation extends ArtistAnnotation {
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
             @JsonKey(name: 'scope')
-                String scope)
+                Scope scope)
         genre,
+    required TResult Function(
+            @JsonKey(name: 'name')
+                String name,
+            @JsonKey(name: 'allowFeedback', fromJson: readOptInBool, toJson: writeOptInBool)
+                bool allowFeedback,
+            @JsonKey(name: 'autogenForListener')
+                bool autogenForListener,
+            @JsonKey(name: 'collectible')
+                bool collectible,
+            @JsonKey(name: 'description', fromJson: readOptionalString, toJson: writeOptionalString)
+                String? description,
+            @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
+                Duration duration,
+            @JsonKey(name: 'includedTrackTypes')
+                List<PandoraType> includedTrackTypes,
+            @JsonKey(name: 'isPrivate')
+                bool isPrivate,
+            @JsonKey(name: 'linkedType')
+                PlaylistLinkedType linkedType,
+            @JsonKey(name: 'listenerId')
+                int listenerId,
+            @JsonKey(name: 'listenerIdInfo')
+                ListenerIdInfo listenerIdInfo,
+            @JsonKey(name: 'listenerIdToken')
+                String listenerIdToken,
+            @JsonKey(name: 'listenerPandoraId')
+                String listenerPandoraId,
+            @JsonKey(name: 'secret')
+                bool secret,
+            @JsonKey(name: 'shareableUrlPath')
+                String shareableUrlPath,
+            @JsonKey(name: 'thorLayers')
+                String thorLayers,
+            @JsonKey(name: 'timeCreated', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
+                DateTime timeCreated,
+            @JsonKey(name: 'timeLastPlayed', fromJson: readOptionalDateTimeMilliseconds, toJson: writeOptionalDateTimeMilliseconds)
+                DateTime? timeLastPlayed,
+            @JsonKey(name: 'timeLastUpdated', fromJson: readOptionalDateTimeMilliseconds, toJson: writeOptionalDateTimeMilliseconds)
+                DateTime? timeLastUpdated,
+            @JsonKey(name: 'totalTracks')
+                int totalTracks,
+            @JsonKey(name: 'unlocked')
+                bool unlocked,
+            @JsonKey(name: 'viewerInfo')
+                PlaylistViewerInfo? viewerInfo,
+            @JsonKey(name: 'pandoraId')
+                String pandoraId,
+            @JsonKey(name: 'scope')
+                Scope scope)
+        playlist,
     required TResult Function(
             @JsonKey(name: 'name')
                 String name,
@@ -2292,7 +2650,7 @@ class _$ArtistAnnotation extends ArtistAnnotation {
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
             @JsonKey(name: 'scope')
-                String scope)?
+                Scope scope)?
         track,
     TResult Function(
             @JsonKey(name: 'name')
@@ -2328,7 +2686,7 @@ class _$ArtistAnnotation extends ArtistAnnotation {
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
             @JsonKey(name: 'scope')
-                String scope)?
+                Scope scope)?
         artist,
     TResult Function(
             @JsonKey(name: 'name')
@@ -2370,7 +2728,7 @@ class _$ArtistAnnotation extends ArtistAnnotation {
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
             @JsonKey(name: 'scope')
-                String scope)?
+                Scope scope)?
         album,
     TResult Function(
             @JsonKey(name: 'name')
@@ -2394,8 +2752,58 @@ class _$ArtistAnnotation extends ArtistAnnotation {
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
             @JsonKey(name: 'scope')
-                String scope)?
+                Scope scope)?
         genre,
+    TResult Function(
+            @JsonKey(name: 'name')
+                String name,
+            @JsonKey(name: 'allowFeedback', fromJson: readOptInBool, toJson: writeOptInBool)
+                bool allowFeedback,
+            @JsonKey(name: 'autogenForListener')
+                bool autogenForListener,
+            @JsonKey(name: 'collectible')
+                bool collectible,
+            @JsonKey(name: 'description', fromJson: readOptionalString, toJson: writeOptionalString)
+                String? description,
+            @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
+                Duration duration,
+            @JsonKey(name: 'includedTrackTypes')
+                List<PandoraType> includedTrackTypes,
+            @JsonKey(name: 'isPrivate')
+                bool isPrivate,
+            @JsonKey(name: 'linkedType')
+                PlaylistLinkedType linkedType,
+            @JsonKey(name: 'listenerId')
+                int listenerId,
+            @JsonKey(name: 'listenerIdInfo')
+                ListenerIdInfo listenerIdInfo,
+            @JsonKey(name: 'listenerIdToken')
+                String listenerIdToken,
+            @JsonKey(name: 'listenerPandoraId')
+                String listenerPandoraId,
+            @JsonKey(name: 'secret')
+                bool secret,
+            @JsonKey(name: 'shareableUrlPath')
+                String shareableUrlPath,
+            @JsonKey(name: 'thorLayers')
+                String thorLayers,
+            @JsonKey(name: 'timeCreated', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
+                DateTime timeCreated,
+            @JsonKey(name: 'timeLastPlayed', fromJson: readOptionalDateTimeMilliseconds, toJson: writeOptionalDateTimeMilliseconds)
+                DateTime? timeLastPlayed,
+            @JsonKey(name: 'timeLastUpdated', fromJson: readOptionalDateTimeMilliseconds, toJson: writeOptionalDateTimeMilliseconds)
+                DateTime? timeLastUpdated,
+            @JsonKey(name: 'totalTracks')
+                int totalTracks,
+            @JsonKey(name: 'unlocked')
+                bool unlocked,
+            @JsonKey(name: 'viewerInfo')
+                PlaylistViewerInfo? viewerInfo,
+            @JsonKey(name: 'pandoraId')
+                String pandoraId,
+            @JsonKey(name: 'scope')
+                Scope scope)?
+        playlist,
     TResult Function(
             @JsonKey(name: 'name')
                 String name,
@@ -2487,7 +2895,7 @@ class _$ArtistAnnotation extends ArtistAnnotation {
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
             @JsonKey(name: 'scope')
-                String scope)?
+                Scope scope)?
         track,
     TResult Function(
             @JsonKey(name: 'name')
@@ -2523,7 +2931,7 @@ class _$ArtistAnnotation extends ArtistAnnotation {
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
             @JsonKey(name: 'scope')
-                String scope)?
+                Scope scope)?
         artist,
     TResult Function(
             @JsonKey(name: 'name')
@@ -2565,7 +2973,7 @@ class _$ArtistAnnotation extends ArtistAnnotation {
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
             @JsonKey(name: 'scope')
-                String scope)?
+                Scope scope)?
         album,
     TResult Function(
             @JsonKey(name: 'name')
@@ -2589,8 +2997,58 @@ class _$ArtistAnnotation extends ArtistAnnotation {
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
             @JsonKey(name: 'scope')
-                String scope)?
+                Scope scope)?
         genre,
+    TResult Function(
+            @JsonKey(name: 'name')
+                String name,
+            @JsonKey(name: 'allowFeedback', fromJson: readOptInBool, toJson: writeOptInBool)
+                bool allowFeedback,
+            @JsonKey(name: 'autogenForListener')
+                bool autogenForListener,
+            @JsonKey(name: 'collectible')
+                bool collectible,
+            @JsonKey(name: 'description', fromJson: readOptionalString, toJson: writeOptionalString)
+                String? description,
+            @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
+                Duration duration,
+            @JsonKey(name: 'includedTrackTypes')
+                List<PandoraType> includedTrackTypes,
+            @JsonKey(name: 'isPrivate')
+                bool isPrivate,
+            @JsonKey(name: 'linkedType')
+                PlaylistLinkedType linkedType,
+            @JsonKey(name: 'listenerId')
+                int listenerId,
+            @JsonKey(name: 'listenerIdInfo')
+                ListenerIdInfo listenerIdInfo,
+            @JsonKey(name: 'listenerIdToken')
+                String listenerIdToken,
+            @JsonKey(name: 'listenerPandoraId')
+                String listenerPandoraId,
+            @JsonKey(name: 'secret')
+                bool secret,
+            @JsonKey(name: 'shareableUrlPath')
+                String shareableUrlPath,
+            @JsonKey(name: 'thorLayers')
+                String thorLayers,
+            @JsonKey(name: 'timeCreated', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
+                DateTime timeCreated,
+            @JsonKey(name: 'timeLastPlayed', fromJson: readOptionalDateTimeMilliseconds, toJson: writeOptionalDateTimeMilliseconds)
+                DateTime? timeLastPlayed,
+            @JsonKey(name: 'timeLastUpdated', fromJson: readOptionalDateTimeMilliseconds, toJson: writeOptionalDateTimeMilliseconds)
+                DateTime? timeLastUpdated,
+            @JsonKey(name: 'totalTracks')
+                int totalTracks,
+            @JsonKey(name: 'unlocked')
+                bool unlocked,
+            @JsonKey(name: 'viewerInfo')
+                PlaylistViewerInfo? viewerInfo,
+            @JsonKey(name: 'pandoraId')
+                String pandoraId,
+            @JsonKey(name: 'scope')
+                Scope scope)?
+        playlist,
     TResult Function(
             @JsonKey(name: 'name')
                 String name,
@@ -2654,6 +3112,7 @@ class _$ArtistAnnotation extends ArtistAnnotation {
     required TResult Function(ArtistAnnotation value) artist,
     required TResult Function(AlbumAnnotation value) album,
     required TResult Function(GenreAnnotation value) genre,
+    required TResult Function(PlaylistAnnotation value) playlist,
     required TResult Function(ComposerAnnotation value) composer,
     required TResult Function(ListenerMediaAnnotation value) listener,
   }) {
@@ -2667,6 +3126,7 @@ class _$ArtistAnnotation extends ArtistAnnotation {
     TResult Function(ArtistAnnotation value)? artist,
     TResult Function(AlbumAnnotation value)? album,
     TResult Function(GenreAnnotation value)? genre,
+    TResult Function(PlaylistAnnotation value)? playlist,
     TResult Function(ComposerAnnotation value)? composer,
     TResult Function(ListenerMediaAnnotation value)? listener,
   }) {
@@ -2680,6 +3140,7 @@ class _$ArtistAnnotation extends ArtistAnnotation {
     TResult Function(ArtistAnnotation value)? artist,
     TResult Function(AlbumAnnotation value)? album,
     TResult Function(GenreAnnotation value)? genre,
+    TResult Function(PlaylistAnnotation value)? playlist,
     TResult Function(ComposerAnnotation value)? composer,
     TResult Function(ListenerMediaAnnotation value)? listener,
     required TResult orElse(),
@@ -2731,7 +3192,7 @@ abstract class ArtistAnnotation extends MediaAnnotation {
       @JsonKey(name: 'pandoraId')
           required final String pandoraId,
       @JsonKey(name: 'scope')
-          required final String scope}) = _$ArtistAnnotation;
+          required final Scope scope}) = _$ArtistAnnotation;
   const ArtistAnnotation._() : super._();
 
   factory ArtistAnnotation.fromJson(Map<String, dynamic> json) =
@@ -2777,7 +3238,7 @@ abstract class ArtistAnnotation extends MediaAnnotation {
   @JsonKey(name: 'pandoraId')
   String get pandoraId => throw _privateConstructorUsedError;
   @JsonKey(name: 'scope')
-  String get scope => throw _privateConstructorUsedError;
+  Scope get scope => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$$ArtistAnnotationCopyWith<_$ArtistAnnotation> get copyWith =>
@@ -2831,7 +3292,7 @@ abstract class _$$AlbumAnnotationCopyWith<$Res>
       @JsonKey(name: 'pandoraId')
           String pandoraId,
       @JsonKey(name: 'scope')
-          String scope});
+          Scope scope});
 
   $MediaIconCopyWith<$Res>? get icon;
   $RightsInfoCopyWith<$Res> get rightsInfo;
@@ -2951,7 +3412,7 @@ class __$$AlbumAnnotationCopyWithImpl<$Res>
       scope: scope == freezed
           ? _value.scope
           : scope // ignore: cast_nullable_to_non_nullable
-              as String,
+              as Scope,
     ));
   }
 
@@ -3096,7 +3557,7 @@ class _$AlbumAnnotation extends AlbumAnnotation {
   final String pandoraId;
   @override
   @JsonKey(name: 'scope')
-  final String scope;
+  final Scope scope;
 
   @JsonKey(name: 'type')
   final String $type;
@@ -3215,7 +3676,7 @@ class _$AlbumAnnotation extends AlbumAnnotation {
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
             @JsonKey(name: 'scope')
-                String scope)
+                Scope scope)
         track,
     required TResult Function(
             @JsonKey(name: 'name')
@@ -3251,7 +3712,7 @@ class _$AlbumAnnotation extends AlbumAnnotation {
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
             @JsonKey(name: 'scope')
-                String scope)
+                Scope scope)
         artist,
     required TResult Function(
             @JsonKey(name: 'name')
@@ -3293,7 +3754,7 @@ class _$AlbumAnnotation extends AlbumAnnotation {
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
             @JsonKey(name: 'scope')
-                String scope)
+                Scope scope)
         album,
     required TResult Function(
             @JsonKey(name: 'name')
@@ -3317,8 +3778,58 @@ class _$AlbumAnnotation extends AlbumAnnotation {
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
             @JsonKey(name: 'scope')
-                String scope)
+                Scope scope)
         genre,
+    required TResult Function(
+            @JsonKey(name: 'name')
+                String name,
+            @JsonKey(name: 'allowFeedback', fromJson: readOptInBool, toJson: writeOptInBool)
+                bool allowFeedback,
+            @JsonKey(name: 'autogenForListener')
+                bool autogenForListener,
+            @JsonKey(name: 'collectible')
+                bool collectible,
+            @JsonKey(name: 'description', fromJson: readOptionalString, toJson: writeOptionalString)
+                String? description,
+            @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
+                Duration duration,
+            @JsonKey(name: 'includedTrackTypes')
+                List<PandoraType> includedTrackTypes,
+            @JsonKey(name: 'isPrivate')
+                bool isPrivate,
+            @JsonKey(name: 'linkedType')
+                PlaylistLinkedType linkedType,
+            @JsonKey(name: 'listenerId')
+                int listenerId,
+            @JsonKey(name: 'listenerIdInfo')
+                ListenerIdInfo listenerIdInfo,
+            @JsonKey(name: 'listenerIdToken')
+                String listenerIdToken,
+            @JsonKey(name: 'listenerPandoraId')
+                String listenerPandoraId,
+            @JsonKey(name: 'secret')
+                bool secret,
+            @JsonKey(name: 'shareableUrlPath')
+                String shareableUrlPath,
+            @JsonKey(name: 'thorLayers')
+                String thorLayers,
+            @JsonKey(name: 'timeCreated', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
+                DateTime timeCreated,
+            @JsonKey(name: 'timeLastPlayed', fromJson: readOptionalDateTimeMilliseconds, toJson: writeOptionalDateTimeMilliseconds)
+                DateTime? timeLastPlayed,
+            @JsonKey(name: 'timeLastUpdated', fromJson: readOptionalDateTimeMilliseconds, toJson: writeOptionalDateTimeMilliseconds)
+                DateTime? timeLastUpdated,
+            @JsonKey(name: 'totalTracks')
+                int totalTracks,
+            @JsonKey(name: 'unlocked')
+                bool unlocked,
+            @JsonKey(name: 'viewerInfo')
+                PlaylistViewerInfo? viewerInfo,
+            @JsonKey(name: 'pandoraId')
+                String pandoraId,
+            @JsonKey(name: 'scope')
+                Scope scope)
+        playlist,
     required TResult Function(
             @JsonKey(name: 'name')
                 String name,
@@ -3413,7 +3924,7 @@ class _$AlbumAnnotation extends AlbumAnnotation {
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
             @JsonKey(name: 'scope')
-                String scope)?
+                Scope scope)?
         track,
     TResult Function(
             @JsonKey(name: 'name')
@@ -3449,7 +3960,7 @@ class _$AlbumAnnotation extends AlbumAnnotation {
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
             @JsonKey(name: 'scope')
-                String scope)?
+                Scope scope)?
         artist,
     TResult Function(
             @JsonKey(name: 'name')
@@ -3491,7 +4002,7 @@ class _$AlbumAnnotation extends AlbumAnnotation {
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
             @JsonKey(name: 'scope')
-                String scope)?
+                Scope scope)?
         album,
     TResult Function(
             @JsonKey(name: 'name')
@@ -3515,8 +4026,58 @@ class _$AlbumAnnotation extends AlbumAnnotation {
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
             @JsonKey(name: 'scope')
-                String scope)?
+                Scope scope)?
         genre,
+    TResult Function(
+            @JsonKey(name: 'name')
+                String name,
+            @JsonKey(name: 'allowFeedback', fromJson: readOptInBool, toJson: writeOptInBool)
+                bool allowFeedback,
+            @JsonKey(name: 'autogenForListener')
+                bool autogenForListener,
+            @JsonKey(name: 'collectible')
+                bool collectible,
+            @JsonKey(name: 'description', fromJson: readOptionalString, toJson: writeOptionalString)
+                String? description,
+            @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
+                Duration duration,
+            @JsonKey(name: 'includedTrackTypes')
+                List<PandoraType> includedTrackTypes,
+            @JsonKey(name: 'isPrivate')
+                bool isPrivate,
+            @JsonKey(name: 'linkedType')
+                PlaylistLinkedType linkedType,
+            @JsonKey(name: 'listenerId')
+                int listenerId,
+            @JsonKey(name: 'listenerIdInfo')
+                ListenerIdInfo listenerIdInfo,
+            @JsonKey(name: 'listenerIdToken')
+                String listenerIdToken,
+            @JsonKey(name: 'listenerPandoraId')
+                String listenerPandoraId,
+            @JsonKey(name: 'secret')
+                bool secret,
+            @JsonKey(name: 'shareableUrlPath')
+                String shareableUrlPath,
+            @JsonKey(name: 'thorLayers')
+                String thorLayers,
+            @JsonKey(name: 'timeCreated', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
+                DateTime timeCreated,
+            @JsonKey(name: 'timeLastPlayed', fromJson: readOptionalDateTimeMilliseconds, toJson: writeOptionalDateTimeMilliseconds)
+                DateTime? timeLastPlayed,
+            @JsonKey(name: 'timeLastUpdated', fromJson: readOptionalDateTimeMilliseconds, toJson: writeOptionalDateTimeMilliseconds)
+                DateTime? timeLastUpdated,
+            @JsonKey(name: 'totalTracks')
+                int totalTracks,
+            @JsonKey(name: 'unlocked')
+                bool unlocked,
+            @JsonKey(name: 'viewerInfo')
+                PlaylistViewerInfo? viewerInfo,
+            @JsonKey(name: 'pandoraId')
+                String pandoraId,
+            @JsonKey(name: 'scope')
+                Scope scope)?
+        playlist,
     TResult Function(
             @JsonKey(name: 'name')
                 String name,
@@ -3611,7 +4172,7 @@ class _$AlbumAnnotation extends AlbumAnnotation {
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
             @JsonKey(name: 'scope')
-                String scope)?
+                Scope scope)?
         track,
     TResult Function(
             @JsonKey(name: 'name')
@@ -3647,7 +4208,7 @@ class _$AlbumAnnotation extends AlbumAnnotation {
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
             @JsonKey(name: 'scope')
-                String scope)?
+                Scope scope)?
         artist,
     TResult Function(
             @JsonKey(name: 'name')
@@ -3689,7 +4250,7 @@ class _$AlbumAnnotation extends AlbumAnnotation {
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
             @JsonKey(name: 'scope')
-                String scope)?
+                Scope scope)?
         album,
     TResult Function(
             @JsonKey(name: 'name')
@@ -3713,8 +4274,58 @@ class _$AlbumAnnotation extends AlbumAnnotation {
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
             @JsonKey(name: 'scope')
-                String scope)?
+                Scope scope)?
         genre,
+    TResult Function(
+            @JsonKey(name: 'name')
+                String name,
+            @JsonKey(name: 'allowFeedback', fromJson: readOptInBool, toJson: writeOptInBool)
+                bool allowFeedback,
+            @JsonKey(name: 'autogenForListener')
+                bool autogenForListener,
+            @JsonKey(name: 'collectible')
+                bool collectible,
+            @JsonKey(name: 'description', fromJson: readOptionalString, toJson: writeOptionalString)
+                String? description,
+            @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
+                Duration duration,
+            @JsonKey(name: 'includedTrackTypes')
+                List<PandoraType> includedTrackTypes,
+            @JsonKey(name: 'isPrivate')
+                bool isPrivate,
+            @JsonKey(name: 'linkedType')
+                PlaylistLinkedType linkedType,
+            @JsonKey(name: 'listenerId')
+                int listenerId,
+            @JsonKey(name: 'listenerIdInfo')
+                ListenerIdInfo listenerIdInfo,
+            @JsonKey(name: 'listenerIdToken')
+                String listenerIdToken,
+            @JsonKey(name: 'listenerPandoraId')
+                String listenerPandoraId,
+            @JsonKey(name: 'secret')
+                bool secret,
+            @JsonKey(name: 'shareableUrlPath')
+                String shareableUrlPath,
+            @JsonKey(name: 'thorLayers')
+                String thorLayers,
+            @JsonKey(name: 'timeCreated', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
+                DateTime timeCreated,
+            @JsonKey(name: 'timeLastPlayed', fromJson: readOptionalDateTimeMilliseconds, toJson: writeOptionalDateTimeMilliseconds)
+                DateTime? timeLastPlayed,
+            @JsonKey(name: 'timeLastUpdated', fromJson: readOptionalDateTimeMilliseconds, toJson: writeOptionalDateTimeMilliseconds)
+                DateTime? timeLastUpdated,
+            @JsonKey(name: 'totalTracks')
+                int totalTracks,
+            @JsonKey(name: 'unlocked')
+                bool unlocked,
+            @JsonKey(name: 'viewerInfo')
+                PlaylistViewerInfo? viewerInfo,
+            @JsonKey(name: 'pandoraId')
+                String pandoraId,
+            @JsonKey(name: 'scope')
+                Scope scope)?
+        playlist,
     TResult Function(
             @JsonKey(name: 'name')
                 String name,
@@ -3781,6 +4392,7 @@ class _$AlbumAnnotation extends AlbumAnnotation {
     required TResult Function(ArtistAnnotation value) artist,
     required TResult Function(AlbumAnnotation value) album,
     required TResult Function(GenreAnnotation value) genre,
+    required TResult Function(PlaylistAnnotation value) playlist,
     required TResult Function(ComposerAnnotation value) composer,
     required TResult Function(ListenerMediaAnnotation value) listener,
   }) {
@@ -3794,6 +4406,7 @@ class _$AlbumAnnotation extends AlbumAnnotation {
     TResult Function(ArtistAnnotation value)? artist,
     TResult Function(AlbumAnnotation value)? album,
     TResult Function(GenreAnnotation value)? genre,
+    TResult Function(PlaylistAnnotation value)? playlist,
     TResult Function(ComposerAnnotation value)? composer,
     TResult Function(ListenerMediaAnnotation value)? listener,
   }) {
@@ -3807,6 +4420,7 @@ class _$AlbumAnnotation extends AlbumAnnotation {
     TResult Function(ArtistAnnotation value)? artist,
     TResult Function(AlbumAnnotation value)? album,
     TResult Function(GenreAnnotation value)? genre,
+    TResult Function(PlaylistAnnotation value)? playlist,
     TResult Function(ComposerAnnotation value)? composer,
     TResult Function(ListenerMediaAnnotation value)? listener,
     required TResult orElse(),
@@ -3864,7 +4478,7 @@ abstract class AlbumAnnotation extends MediaAnnotation {
       @JsonKey(name: 'pandoraId')
           required final String pandoraId,
       @JsonKey(name: 'scope')
-          required final String scope}) = _$AlbumAnnotation;
+          required final Scope scope}) = _$AlbumAnnotation;
   const AlbumAnnotation._() : super._();
 
   factory AlbumAnnotation.fromJson(Map<String, dynamic> json) =
@@ -3916,7 +4530,7 @@ abstract class AlbumAnnotation extends MediaAnnotation {
   @JsonKey(name: 'pandoraId')
   String get pandoraId => throw _privateConstructorUsedError;
   @JsonKey(name: 'scope')
-  String get scope => throw _privateConstructorUsedError;
+  Scope get scope => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$$AlbumAnnotationCopyWith<_$AlbumAnnotation> get copyWith =>
@@ -3952,7 +4566,7 @@ abstract class _$$GenreAnnotationCopyWith<$Res>
       @JsonKey(name: 'pandoraId')
           String pandoraId,
       @JsonKey(name: 'scope')
-          String scope});
+          Scope scope});
 
   $MediaIconCopyWith<$Res>? get icon;
 }
@@ -4026,7 +4640,7 @@ class __$$GenreAnnotationCopyWithImpl<$Res>
       scope: scope == freezed
           ? _value.scope
           : scope // ignore: cast_nullable_to_non_nullable
-              as String,
+              as Scope,
     ));
   }
 
@@ -4114,7 +4728,7 @@ class _$GenreAnnotation extends GenreAnnotation {
   final String pandoraId;
   @override
   @JsonKey(name: 'scope')
-  final String scope;
+  final Scope scope;
 
   @JsonKey(name: 'type')
   final String $type;
@@ -4209,7 +4823,7 @@ class _$GenreAnnotation extends GenreAnnotation {
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
             @JsonKey(name: 'scope')
-                String scope)
+                Scope scope)
         track,
     required TResult Function(
             @JsonKey(name: 'name')
@@ -4245,7 +4859,7 @@ class _$GenreAnnotation extends GenreAnnotation {
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
             @JsonKey(name: 'scope')
-                String scope)
+                Scope scope)
         artist,
     required TResult Function(
             @JsonKey(name: 'name')
@@ -4287,7 +4901,7 @@ class _$GenreAnnotation extends GenreAnnotation {
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
             @JsonKey(name: 'scope')
-                String scope)
+                Scope scope)
         album,
     required TResult Function(
             @JsonKey(name: 'name')
@@ -4311,8 +4925,58 @@ class _$GenreAnnotation extends GenreAnnotation {
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
             @JsonKey(name: 'scope')
-                String scope)
+                Scope scope)
         genre,
+    required TResult Function(
+            @JsonKey(name: 'name')
+                String name,
+            @JsonKey(name: 'allowFeedback', fromJson: readOptInBool, toJson: writeOptInBool)
+                bool allowFeedback,
+            @JsonKey(name: 'autogenForListener')
+                bool autogenForListener,
+            @JsonKey(name: 'collectible')
+                bool collectible,
+            @JsonKey(name: 'description', fromJson: readOptionalString, toJson: writeOptionalString)
+                String? description,
+            @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
+                Duration duration,
+            @JsonKey(name: 'includedTrackTypes')
+                List<PandoraType> includedTrackTypes,
+            @JsonKey(name: 'isPrivate')
+                bool isPrivate,
+            @JsonKey(name: 'linkedType')
+                PlaylistLinkedType linkedType,
+            @JsonKey(name: 'listenerId')
+                int listenerId,
+            @JsonKey(name: 'listenerIdInfo')
+                ListenerIdInfo listenerIdInfo,
+            @JsonKey(name: 'listenerIdToken')
+                String listenerIdToken,
+            @JsonKey(name: 'listenerPandoraId')
+                String listenerPandoraId,
+            @JsonKey(name: 'secret')
+                bool secret,
+            @JsonKey(name: 'shareableUrlPath')
+                String shareableUrlPath,
+            @JsonKey(name: 'thorLayers')
+                String thorLayers,
+            @JsonKey(name: 'timeCreated', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
+                DateTime timeCreated,
+            @JsonKey(name: 'timeLastPlayed', fromJson: readOptionalDateTimeMilliseconds, toJson: writeOptionalDateTimeMilliseconds)
+                DateTime? timeLastPlayed,
+            @JsonKey(name: 'timeLastUpdated', fromJson: readOptionalDateTimeMilliseconds, toJson: writeOptionalDateTimeMilliseconds)
+                DateTime? timeLastUpdated,
+            @JsonKey(name: 'totalTracks')
+                int totalTracks,
+            @JsonKey(name: 'unlocked')
+                bool unlocked,
+            @JsonKey(name: 'viewerInfo')
+                PlaylistViewerInfo? viewerInfo,
+            @JsonKey(name: 'pandoraId')
+                String pandoraId,
+            @JsonKey(name: 'scope')
+                Scope scope)
+        playlist,
     required TResult Function(
             @JsonKey(name: 'name')
                 String name,
@@ -4398,7 +5062,7 @@ class _$GenreAnnotation extends GenreAnnotation {
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
             @JsonKey(name: 'scope')
-                String scope)?
+                Scope scope)?
         track,
     TResult Function(
             @JsonKey(name: 'name')
@@ -4434,7 +5098,7 @@ class _$GenreAnnotation extends GenreAnnotation {
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
             @JsonKey(name: 'scope')
-                String scope)?
+                Scope scope)?
         artist,
     TResult Function(
             @JsonKey(name: 'name')
@@ -4476,7 +5140,7 @@ class _$GenreAnnotation extends GenreAnnotation {
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
             @JsonKey(name: 'scope')
-                String scope)?
+                Scope scope)?
         album,
     TResult Function(
             @JsonKey(name: 'name')
@@ -4500,8 +5164,58 @@ class _$GenreAnnotation extends GenreAnnotation {
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
             @JsonKey(name: 'scope')
-                String scope)?
+                Scope scope)?
         genre,
+    TResult Function(
+            @JsonKey(name: 'name')
+                String name,
+            @JsonKey(name: 'allowFeedback', fromJson: readOptInBool, toJson: writeOptInBool)
+                bool allowFeedback,
+            @JsonKey(name: 'autogenForListener')
+                bool autogenForListener,
+            @JsonKey(name: 'collectible')
+                bool collectible,
+            @JsonKey(name: 'description', fromJson: readOptionalString, toJson: writeOptionalString)
+                String? description,
+            @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
+                Duration duration,
+            @JsonKey(name: 'includedTrackTypes')
+                List<PandoraType> includedTrackTypes,
+            @JsonKey(name: 'isPrivate')
+                bool isPrivate,
+            @JsonKey(name: 'linkedType')
+                PlaylistLinkedType linkedType,
+            @JsonKey(name: 'listenerId')
+                int listenerId,
+            @JsonKey(name: 'listenerIdInfo')
+                ListenerIdInfo listenerIdInfo,
+            @JsonKey(name: 'listenerIdToken')
+                String listenerIdToken,
+            @JsonKey(name: 'listenerPandoraId')
+                String listenerPandoraId,
+            @JsonKey(name: 'secret')
+                bool secret,
+            @JsonKey(name: 'shareableUrlPath')
+                String shareableUrlPath,
+            @JsonKey(name: 'thorLayers')
+                String thorLayers,
+            @JsonKey(name: 'timeCreated', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
+                DateTime timeCreated,
+            @JsonKey(name: 'timeLastPlayed', fromJson: readOptionalDateTimeMilliseconds, toJson: writeOptionalDateTimeMilliseconds)
+                DateTime? timeLastPlayed,
+            @JsonKey(name: 'timeLastUpdated', fromJson: readOptionalDateTimeMilliseconds, toJson: writeOptionalDateTimeMilliseconds)
+                DateTime? timeLastUpdated,
+            @JsonKey(name: 'totalTracks')
+                int totalTracks,
+            @JsonKey(name: 'unlocked')
+                bool unlocked,
+            @JsonKey(name: 'viewerInfo')
+                PlaylistViewerInfo? viewerInfo,
+            @JsonKey(name: 'pandoraId')
+                String pandoraId,
+            @JsonKey(name: 'scope')
+                Scope scope)?
+        playlist,
     TResult Function(
             @JsonKey(name: 'name')
                 String name,
@@ -4587,7 +5301,7 @@ class _$GenreAnnotation extends GenreAnnotation {
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
             @JsonKey(name: 'scope')
-                String scope)?
+                Scope scope)?
         track,
     TResult Function(
             @JsonKey(name: 'name')
@@ -4623,7 +5337,7 @@ class _$GenreAnnotation extends GenreAnnotation {
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
             @JsonKey(name: 'scope')
-                String scope)?
+                Scope scope)?
         artist,
     TResult Function(
             @JsonKey(name: 'name')
@@ -4665,7 +5379,7 @@ class _$GenreAnnotation extends GenreAnnotation {
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
             @JsonKey(name: 'scope')
-                String scope)?
+                Scope scope)?
         album,
     TResult Function(
             @JsonKey(name: 'name')
@@ -4689,8 +5403,58 @@ class _$GenreAnnotation extends GenreAnnotation {
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
             @JsonKey(name: 'scope')
-                String scope)?
+                Scope scope)?
         genre,
+    TResult Function(
+            @JsonKey(name: 'name')
+                String name,
+            @JsonKey(name: 'allowFeedback', fromJson: readOptInBool, toJson: writeOptInBool)
+                bool allowFeedback,
+            @JsonKey(name: 'autogenForListener')
+                bool autogenForListener,
+            @JsonKey(name: 'collectible')
+                bool collectible,
+            @JsonKey(name: 'description', fromJson: readOptionalString, toJson: writeOptionalString)
+                String? description,
+            @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
+                Duration duration,
+            @JsonKey(name: 'includedTrackTypes')
+                List<PandoraType> includedTrackTypes,
+            @JsonKey(name: 'isPrivate')
+                bool isPrivate,
+            @JsonKey(name: 'linkedType')
+                PlaylistLinkedType linkedType,
+            @JsonKey(name: 'listenerId')
+                int listenerId,
+            @JsonKey(name: 'listenerIdInfo')
+                ListenerIdInfo listenerIdInfo,
+            @JsonKey(name: 'listenerIdToken')
+                String listenerIdToken,
+            @JsonKey(name: 'listenerPandoraId')
+                String listenerPandoraId,
+            @JsonKey(name: 'secret')
+                bool secret,
+            @JsonKey(name: 'shareableUrlPath')
+                String shareableUrlPath,
+            @JsonKey(name: 'thorLayers')
+                String thorLayers,
+            @JsonKey(name: 'timeCreated', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
+                DateTime timeCreated,
+            @JsonKey(name: 'timeLastPlayed', fromJson: readOptionalDateTimeMilliseconds, toJson: writeOptionalDateTimeMilliseconds)
+                DateTime? timeLastPlayed,
+            @JsonKey(name: 'timeLastUpdated', fromJson: readOptionalDateTimeMilliseconds, toJson: writeOptionalDateTimeMilliseconds)
+                DateTime? timeLastUpdated,
+            @JsonKey(name: 'totalTracks')
+                int totalTracks,
+            @JsonKey(name: 'unlocked')
+                bool unlocked,
+            @JsonKey(name: 'viewerInfo')
+                PlaylistViewerInfo? viewerInfo,
+            @JsonKey(name: 'pandoraId')
+                String pandoraId,
+            @JsonKey(name: 'scope')
+                Scope scope)?
+        playlist,
     TResult Function(
             @JsonKey(name: 'name')
                 String name,
@@ -4748,6 +5512,7 @@ class _$GenreAnnotation extends GenreAnnotation {
     required TResult Function(ArtistAnnotation value) artist,
     required TResult Function(AlbumAnnotation value) album,
     required TResult Function(GenreAnnotation value) genre,
+    required TResult Function(PlaylistAnnotation value) playlist,
     required TResult Function(ComposerAnnotation value) composer,
     required TResult Function(ListenerMediaAnnotation value) listener,
   }) {
@@ -4761,6 +5526,7 @@ class _$GenreAnnotation extends GenreAnnotation {
     TResult Function(ArtistAnnotation value)? artist,
     TResult Function(AlbumAnnotation value)? album,
     TResult Function(GenreAnnotation value)? genre,
+    TResult Function(PlaylistAnnotation value)? playlist,
     TResult Function(ComposerAnnotation value)? composer,
     TResult Function(ListenerMediaAnnotation value)? listener,
   }) {
@@ -4774,6 +5540,7 @@ class _$GenreAnnotation extends GenreAnnotation {
     TResult Function(ArtistAnnotation value)? artist,
     TResult Function(AlbumAnnotation value)? album,
     TResult Function(GenreAnnotation value)? genre,
+    TResult Function(PlaylistAnnotation value)? playlist,
     TResult Function(ComposerAnnotation value)? composer,
     TResult Function(ListenerMediaAnnotation value)? listener,
     required TResult orElse(),
@@ -4813,7 +5580,7 @@ abstract class GenreAnnotation extends MediaAnnotation {
       @JsonKey(name: 'pandoraId')
           required final String pandoraId,
       @JsonKey(name: 'scope')
-          required final String scope}) = _$GenreAnnotation;
+          required final Scope scope}) = _$GenreAnnotation;
   const GenreAnnotation._() : super._();
 
   factory GenreAnnotation.fromJson(Map<String, dynamic> json) =
@@ -4848,10 +5615,1407 @@ abstract class GenreAnnotation extends MediaAnnotation {
   @JsonKey(name: 'pandoraId')
   String get pandoraId => throw _privateConstructorUsedError;
   @JsonKey(name: 'scope')
-  String get scope => throw _privateConstructorUsedError;
+  Scope get scope => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$$GenreAnnotationCopyWith<_$GenreAnnotation> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$PlaylistAnnotationCopyWith<$Res>
+    implements $MediaAnnotationCopyWith<$Res> {
+  factory _$$PlaylistAnnotationCopyWith(_$PlaylistAnnotation value,
+          $Res Function(_$PlaylistAnnotation) then) =
+      __$$PlaylistAnnotationCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {@JsonKey(name: 'name')
+          String name,
+      @JsonKey(name: 'allowFeedback', fromJson: readOptInBool, toJson: writeOptInBool)
+          bool allowFeedback,
+      @JsonKey(name: 'autogenForListener')
+          bool autogenForListener,
+      @JsonKey(name: 'collectible')
+          bool collectible,
+      @JsonKey(name: 'description', fromJson: readOptionalString, toJson: writeOptionalString)
+          String? description,
+      @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
+          Duration duration,
+      @JsonKey(name: 'includedTrackTypes')
+          List<PandoraType> includedTrackTypes,
+      @JsonKey(name: 'isPrivate')
+          bool isPrivate,
+      @JsonKey(name: 'linkedType')
+          PlaylistLinkedType linkedType,
+      @JsonKey(name: 'listenerId')
+          int listenerId,
+      @JsonKey(name: 'listenerIdInfo')
+          ListenerIdInfo listenerIdInfo,
+      @JsonKey(name: 'listenerIdToken')
+          String listenerIdToken,
+      @JsonKey(name: 'listenerPandoraId')
+          String listenerPandoraId,
+      @JsonKey(name: 'secret')
+          bool secret,
+      @JsonKey(name: 'shareableUrlPath')
+          String shareableUrlPath,
+      @JsonKey(name: 'thorLayers')
+          String thorLayers,
+      @JsonKey(name: 'timeCreated', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
+          DateTime timeCreated,
+      @JsonKey(name: 'timeLastPlayed', fromJson: readOptionalDateTimeMilliseconds, toJson: writeOptionalDateTimeMilliseconds)
+          DateTime? timeLastPlayed,
+      @JsonKey(name: 'timeLastUpdated', fromJson: readOptionalDateTimeMilliseconds, toJson: writeOptionalDateTimeMilliseconds)
+          DateTime? timeLastUpdated,
+      @JsonKey(name: 'totalTracks')
+          int totalTracks,
+      @JsonKey(name: 'unlocked')
+          bool unlocked,
+      @JsonKey(name: 'viewerInfo')
+          PlaylistViewerInfo? viewerInfo,
+      @JsonKey(name: 'pandoraId')
+          String pandoraId,
+      @JsonKey(name: 'scope')
+          Scope scope});
+
+  $ListenerIdInfoCopyWith<$Res> get listenerIdInfo;
+  $PlaylistViewerInfoCopyWith<$Res>? get viewerInfo;
+}
+
+/// @nodoc
+class __$$PlaylistAnnotationCopyWithImpl<$Res>
+    extends _$MediaAnnotationCopyWithImpl<$Res>
+    implements _$$PlaylistAnnotationCopyWith<$Res> {
+  __$$PlaylistAnnotationCopyWithImpl(
+      _$PlaylistAnnotation _value, $Res Function(_$PlaylistAnnotation) _then)
+      : super(_value, (v) => _then(v as _$PlaylistAnnotation));
+
+  @override
+  _$PlaylistAnnotation get _value => super._value as _$PlaylistAnnotation;
+
+  @override
+  $Res call({
+    Object? name = freezed,
+    Object? allowFeedback = freezed,
+    Object? autogenForListener = freezed,
+    Object? collectible = freezed,
+    Object? description = freezed,
+    Object? duration = freezed,
+    Object? includedTrackTypes = freezed,
+    Object? isPrivate = freezed,
+    Object? linkedType = freezed,
+    Object? listenerId = freezed,
+    Object? listenerIdInfo = freezed,
+    Object? listenerIdToken = freezed,
+    Object? listenerPandoraId = freezed,
+    Object? secret = freezed,
+    Object? shareableUrlPath = freezed,
+    Object? thorLayers = freezed,
+    Object? timeCreated = freezed,
+    Object? timeLastPlayed = freezed,
+    Object? timeLastUpdated = freezed,
+    Object? totalTracks = freezed,
+    Object? unlocked = freezed,
+    Object? viewerInfo = freezed,
+    Object? pandoraId = freezed,
+    Object? scope = freezed,
+  }) {
+    return _then(_$PlaylistAnnotation(
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      allowFeedback: allowFeedback == freezed
+          ? _value.allowFeedback
+          : allowFeedback // ignore: cast_nullable_to_non_nullable
+              as bool,
+      autogenForListener: autogenForListener == freezed
+          ? _value.autogenForListener
+          : autogenForListener // ignore: cast_nullable_to_non_nullable
+              as bool,
+      collectible: collectible == freezed
+          ? _value.collectible
+          : collectible // ignore: cast_nullable_to_non_nullable
+              as bool,
+      description: description == freezed
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as String?,
+      duration: duration == freezed
+          ? _value.duration
+          : duration // ignore: cast_nullable_to_non_nullable
+              as Duration,
+      includedTrackTypes: includedTrackTypes == freezed
+          ? _value._includedTrackTypes
+          : includedTrackTypes // ignore: cast_nullable_to_non_nullable
+              as List<PandoraType>,
+      isPrivate: isPrivate == freezed
+          ? _value.isPrivate
+          : isPrivate // ignore: cast_nullable_to_non_nullable
+              as bool,
+      linkedType: linkedType == freezed
+          ? _value.linkedType
+          : linkedType // ignore: cast_nullable_to_non_nullable
+              as PlaylistLinkedType,
+      listenerId: listenerId == freezed
+          ? _value.listenerId
+          : listenerId // ignore: cast_nullable_to_non_nullable
+              as int,
+      listenerIdInfo: listenerIdInfo == freezed
+          ? _value.listenerIdInfo
+          : listenerIdInfo // ignore: cast_nullable_to_non_nullable
+              as ListenerIdInfo,
+      listenerIdToken: listenerIdToken == freezed
+          ? _value.listenerIdToken
+          : listenerIdToken // ignore: cast_nullable_to_non_nullable
+              as String,
+      listenerPandoraId: listenerPandoraId == freezed
+          ? _value.listenerPandoraId
+          : listenerPandoraId // ignore: cast_nullable_to_non_nullable
+              as String,
+      secret: secret == freezed
+          ? _value.secret
+          : secret // ignore: cast_nullable_to_non_nullable
+              as bool,
+      shareableUrlPath: shareableUrlPath == freezed
+          ? _value.shareableUrlPath
+          : shareableUrlPath // ignore: cast_nullable_to_non_nullable
+              as String,
+      thorLayers: thorLayers == freezed
+          ? _value.thorLayers
+          : thorLayers // ignore: cast_nullable_to_non_nullable
+              as String,
+      timeCreated: timeCreated == freezed
+          ? _value.timeCreated
+          : timeCreated // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      timeLastPlayed: timeLastPlayed == freezed
+          ? _value.timeLastPlayed
+          : timeLastPlayed // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      timeLastUpdated: timeLastUpdated == freezed
+          ? _value.timeLastUpdated
+          : timeLastUpdated // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      totalTracks: totalTracks == freezed
+          ? _value.totalTracks
+          : totalTracks // ignore: cast_nullable_to_non_nullable
+              as int,
+      unlocked: unlocked == freezed
+          ? _value.unlocked
+          : unlocked // ignore: cast_nullable_to_non_nullable
+              as bool,
+      viewerInfo: viewerInfo == freezed
+          ? _value.viewerInfo
+          : viewerInfo // ignore: cast_nullable_to_non_nullable
+              as PlaylistViewerInfo?,
+      pandoraId: pandoraId == freezed
+          ? _value.pandoraId
+          : pandoraId // ignore: cast_nullable_to_non_nullable
+              as String,
+      scope: scope == freezed
+          ? _value.scope
+          : scope // ignore: cast_nullable_to_non_nullable
+              as Scope,
+    ));
+  }
+
+  @override
+  $ListenerIdInfoCopyWith<$Res> get listenerIdInfo {
+    return $ListenerIdInfoCopyWith<$Res>(_value.listenerIdInfo, (value) {
+      return _then(_value.copyWith(listenerIdInfo: value));
+    });
+  }
+
+  @override
+  $PlaylistViewerInfoCopyWith<$Res>? get viewerInfo {
+    if (_value.viewerInfo == null) {
+      return null;
+    }
+
+    return $PlaylistViewerInfoCopyWith<$Res>(_value.viewerInfo!, (value) {
+      return _then(_value.copyWith(viewerInfo: value));
+    });
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$PlaylistAnnotation extends PlaylistAnnotation {
+  const _$PlaylistAnnotation(
+      {@JsonKey(name: 'name')
+          required this.name,
+      @JsonKey(name: 'allowFeedback', fromJson: readOptInBool, toJson: writeOptInBool)
+          required this.allowFeedback,
+      @JsonKey(name: 'autogenForListener')
+          required this.autogenForListener,
+      @JsonKey(name: 'collectible')
+          required this.collectible,
+      @JsonKey(name: 'description', fromJson: readOptionalString, toJson: writeOptionalString)
+          this.description,
+      @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
+          required this.duration,
+      @JsonKey(name: 'includedTrackTypes')
+          required final List<PandoraType> includedTrackTypes,
+      @JsonKey(name: 'isPrivate')
+          required this.isPrivate,
+      @JsonKey(name: 'linkedType')
+          required this.linkedType,
+      @JsonKey(name: 'listenerId')
+          required this.listenerId,
+      @JsonKey(name: 'listenerIdInfo')
+          required this.listenerIdInfo,
+      @JsonKey(name: 'listenerIdToken')
+          required this.listenerIdToken,
+      @JsonKey(name: 'listenerPandoraId')
+          required this.listenerPandoraId,
+      @JsonKey(name: 'secret')
+          required this.secret,
+      @JsonKey(name: 'shareableUrlPath')
+          required this.shareableUrlPath,
+      @JsonKey(name: 'thorLayers')
+          required this.thorLayers,
+      @JsonKey(name: 'timeCreated', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
+          required this.timeCreated,
+      @JsonKey(name: 'timeLastPlayed', fromJson: readOptionalDateTimeMilliseconds, toJson: writeOptionalDateTimeMilliseconds)
+          this.timeLastPlayed,
+      @JsonKey(name: 'timeLastUpdated', fromJson: readOptionalDateTimeMilliseconds, toJson: writeOptionalDateTimeMilliseconds)
+          this.timeLastUpdated,
+      @JsonKey(name: 'totalTracks')
+          required this.totalTracks,
+      @JsonKey(name: 'unlocked')
+          required this.unlocked,
+      @JsonKey(name: 'viewerInfo')
+          this.viewerInfo,
+      @JsonKey(name: 'pandoraId')
+          required this.pandoraId,
+      @JsonKey(name: 'scope')
+          required this.scope,
+      final String? $type})
+      : _includedTrackTypes = includedTrackTypes,
+        $type = $type ?? 'PL',
+        super._();
+
+  factory _$PlaylistAnnotation.fromJson(Map<String, dynamic> json) =>
+      _$$PlaylistAnnotationFromJson(json);
+
+  @override
+  @JsonKey(name: 'name')
+  final String name;
+  @override
+  @JsonKey(
+      name: 'allowFeedback', fromJson: readOptInBool, toJson: writeOptInBool)
+  final bool allowFeedback;
+  @override
+  @JsonKey(name: 'autogenForListener')
+  final bool autogenForListener;
+  @override
+  @JsonKey(name: 'collectible')
+  final bool collectible;
+  @override
+  @JsonKey(
+      name: 'description',
+      fromJson: readOptionalString,
+      toJson: writeOptionalString)
+  final String? description;
+  @override
+  @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
+  final Duration duration;
+  final List<PandoraType> _includedTrackTypes;
+  @override
+  @JsonKey(name: 'includedTrackTypes')
+  List<PandoraType> get includedTrackTypes {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_includedTrackTypes);
+  }
+
+  @override
+  @JsonKey(name: 'isPrivate')
+  final bool isPrivate;
+  @override
+  @JsonKey(name: 'linkedType')
+  final PlaylistLinkedType linkedType;
+  @override
+  @JsonKey(name: 'listenerId')
+  final int listenerId;
+  @override
+  @JsonKey(name: 'listenerIdInfo')
+  final ListenerIdInfo listenerIdInfo;
+  @override
+  @JsonKey(name: 'listenerIdToken')
+  final String listenerIdToken;
+  @override
+  @JsonKey(name: 'listenerPandoraId')
+  final String listenerPandoraId;
+  @override
+  @JsonKey(name: 'secret')
+  final bool secret;
+  @override
+  @JsonKey(name: 'shareableUrlPath')
+  final String shareableUrlPath;
+  @override
+  @JsonKey(name: 'thorLayers')
+  final String thorLayers;
+  @override
+  @JsonKey(
+      name: 'timeCreated',
+      fromJson: readDateTimeMilliseconds,
+      toJson: writeDateTimeMilliseconds)
+  final DateTime timeCreated;
+  @override
+  @JsonKey(
+      name: 'timeLastPlayed',
+      fromJson: readOptionalDateTimeMilliseconds,
+      toJson: writeOptionalDateTimeMilliseconds)
+  final DateTime? timeLastPlayed;
+  @override
+  @JsonKey(
+      name: 'timeLastUpdated',
+      fromJson: readOptionalDateTimeMilliseconds,
+      toJson: writeOptionalDateTimeMilliseconds)
+  final DateTime? timeLastUpdated;
+  @override
+  @JsonKey(name: 'totalTracks')
+  final int totalTracks;
+  @override
+  @JsonKey(name: 'unlocked')
+  final bool unlocked;
+  @override
+  @JsonKey(name: 'viewerInfo')
+  final PlaylistViewerInfo? viewerInfo;
+  @override
+  @JsonKey(name: 'pandoraId')
+  final String pandoraId;
+  @override
+  @JsonKey(name: 'scope')
+  final Scope scope;
+
+  @JsonKey(name: 'type')
+  final String $type;
+
+  @override
+  String toString() {
+    return 'MediaAnnotation.playlist(name: $name, allowFeedback: $allowFeedback, autogenForListener: $autogenForListener, collectible: $collectible, description: $description, duration: $duration, includedTrackTypes: $includedTrackTypes, isPrivate: $isPrivate, linkedType: $linkedType, listenerId: $listenerId, listenerIdInfo: $listenerIdInfo, listenerIdToken: $listenerIdToken, listenerPandoraId: $listenerPandoraId, secret: $secret, shareableUrlPath: $shareableUrlPath, thorLayers: $thorLayers, timeCreated: $timeCreated, timeLastPlayed: $timeLastPlayed, timeLastUpdated: $timeLastUpdated, totalTracks: $totalTracks, unlocked: $unlocked, viewerInfo: $viewerInfo, pandoraId: $pandoraId, scope: $scope)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$PlaylistAnnotation &&
+            const DeepCollectionEquality().equals(other.name, name) &&
+            const DeepCollectionEquality()
+                .equals(other.allowFeedback, allowFeedback) &&
+            const DeepCollectionEquality()
+                .equals(other.autogenForListener, autogenForListener) &&
+            const DeepCollectionEquality()
+                .equals(other.collectible, collectible) &&
+            const DeepCollectionEquality()
+                .equals(other.description, description) &&
+            const DeepCollectionEquality().equals(other.duration, duration) &&
+            const DeepCollectionEquality()
+                .equals(other._includedTrackTypes, _includedTrackTypes) &&
+            const DeepCollectionEquality().equals(other.isPrivate, isPrivate) &&
+            const DeepCollectionEquality()
+                .equals(other.linkedType, linkedType) &&
+            const DeepCollectionEquality()
+                .equals(other.listenerId, listenerId) &&
+            const DeepCollectionEquality()
+                .equals(other.listenerIdInfo, listenerIdInfo) &&
+            const DeepCollectionEquality()
+                .equals(other.listenerIdToken, listenerIdToken) &&
+            const DeepCollectionEquality()
+                .equals(other.listenerPandoraId, listenerPandoraId) &&
+            const DeepCollectionEquality().equals(other.secret, secret) &&
+            const DeepCollectionEquality()
+                .equals(other.shareableUrlPath, shareableUrlPath) &&
+            const DeepCollectionEquality()
+                .equals(other.thorLayers, thorLayers) &&
+            const DeepCollectionEquality()
+                .equals(other.timeCreated, timeCreated) &&
+            const DeepCollectionEquality()
+                .equals(other.timeLastPlayed, timeLastPlayed) &&
+            const DeepCollectionEquality()
+                .equals(other.timeLastUpdated, timeLastUpdated) &&
+            const DeepCollectionEquality()
+                .equals(other.totalTracks, totalTracks) &&
+            const DeepCollectionEquality().equals(other.unlocked, unlocked) &&
+            const DeepCollectionEquality()
+                .equals(other.viewerInfo, viewerInfo) &&
+            const DeepCollectionEquality().equals(other.pandoraId, pandoraId) &&
+            const DeepCollectionEquality().equals(other.scope, scope));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hashAll([
+        runtimeType,
+        const DeepCollectionEquality().hash(name),
+        const DeepCollectionEquality().hash(allowFeedback),
+        const DeepCollectionEquality().hash(autogenForListener),
+        const DeepCollectionEquality().hash(collectible),
+        const DeepCollectionEquality().hash(description),
+        const DeepCollectionEquality().hash(duration),
+        const DeepCollectionEquality().hash(_includedTrackTypes),
+        const DeepCollectionEquality().hash(isPrivate),
+        const DeepCollectionEquality().hash(linkedType),
+        const DeepCollectionEquality().hash(listenerId),
+        const DeepCollectionEquality().hash(listenerIdInfo),
+        const DeepCollectionEquality().hash(listenerIdToken),
+        const DeepCollectionEquality().hash(listenerPandoraId),
+        const DeepCollectionEquality().hash(secret),
+        const DeepCollectionEquality().hash(shareableUrlPath),
+        const DeepCollectionEquality().hash(thorLayers),
+        const DeepCollectionEquality().hash(timeCreated),
+        const DeepCollectionEquality().hash(timeLastPlayed),
+        const DeepCollectionEquality().hash(timeLastUpdated),
+        const DeepCollectionEquality().hash(totalTracks),
+        const DeepCollectionEquality().hash(unlocked),
+        const DeepCollectionEquality().hash(viewerInfo),
+        const DeepCollectionEquality().hash(pandoraId),
+        const DeepCollectionEquality().hash(scope)
+      ]);
+
+  @JsonKey(ignore: true)
+  @override
+  _$$PlaylistAnnotationCopyWith<_$PlaylistAnnotation> get copyWith =>
+      __$$PlaylistAnnotationCopyWithImpl<_$PlaylistAnnotation>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(
+            @JsonKey(name: 'name')
+                String name,
+            @JsonKey(name: 'sortableName')
+                String sortableName,
+            @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
+                Duration duration,
+            @JsonKey(name: 'trackNumber')
+                int trackNumber,
+            @JsonKey(name: 'icon', fromJson: MediaIcon.optionalFromJson, toJson: MediaIcon.optionalToJson)
+                MediaIcon? icon,
+            @JsonKey(name: 'rightsInfo')
+                RightsInfo rightsInfo,
+            @JsonKey(name: 'albumId')
+                String albumId,
+            @JsonKey(name: 'albumName')
+                String albumName,
+            @JsonKey(name: 'artistId')
+                String artistId,
+            @JsonKey(name: 'artistName')
+                String artistName,
+            @JsonKey(name: 'explicitness')
+                Explicitness explicitness,
+            @JsonKey(name: 'shareableUrlPath')
+                String shareableUrlPath,
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
+                bool hasRadio,
+            @JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
+                DateTime modificationTime,
+            @JsonKey(name: 'slugPlusPandoraId')
+                String slugPlusPandoraId,
+            @JsonKey(name: 'isrc')
+                String isrc,
+            @JsonKey(name: 'pandoraId')
+                String pandoraId,
+            @JsonKey(name: 'scope')
+                Scope scope)
+        track,
+    required TResult Function(
+            @JsonKey(name: 'name')
+                String name,
+            @JsonKey(name: 'sortableName')
+                String sortableName,
+            @JsonKey(name: 'trackCount')
+                int trackCount,
+            @JsonKey(name: 'albumCount')
+                int albumCount,
+            @JsonKey(name: 'icon', fromJson: MediaIcon.optionalFromJson, toJson: MediaIcon.optionalToJson)
+                MediaIcon? icon,
+            @JsonKey(name: 'shareableUrlPath')
+                String shareableUrlPath,
+            @JsonKey(name: 'twitterHandle')
+                String? twitterHandle,
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
+                bool hasRadio,
+            @JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
+                DateTime modificationTime,
+            @JsonKey(name: 'slugPlusPandoraId')
+                String slugPlusPandoraId,
+            @JsonKey(name: 'collaboration')
+                bool collaboration,
+            @JsonKey(name: 'primaryArtists')
+                List<String> primaryArtistIds,
+            @JsonKey(name: 'variousArtist')
+                bool variousArtist,
+            @JsonKey(name: 'megastar')
+                bool megastar,
+            @JsonKey(name: 'hasTakeoverModes')
+                bool hasTakeoverModes,
+            @JsonKey(name: 'pandoraId')
+                String pandoraId,
+            @JsonKey(name: 'scope')
+                Scope scope)
+        artist,
+    required TResult Function(
+            @JsonKey(name: 'name')
+                String name,
+            @JsonKey(name: 'sortableName')
+                String sortableName,
+            @JsonKey(name: 'releaseDate')
+                DateTime releaseDate,
+            @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
+                Duration duration,
+            @JsonKey(name: 'trackCount')
+                int trackCount,
+            @JsonKey(name: 'isCompilation')
+                bool isCompilation,
+            @JsonKey(name: 'icon', fromJson: MediaIcon.optionalFromJson, toJson: MediaIcon.optionalToJson)
+                MediaIcon? icon,
+            @JsonKey(name: 'rightsInfo')
+                RightsInfo rightsInfo,
+            @JsonKey(name: 'tracks')
+                List<String> trackIds,
+            @JsonKey(name: 'artistId')
+                String artistId,
+            @JsonKey(name: 'artistName')
+                String artistName,
+            @JsonKey(name: 'explicitness')
+                Explicitness explicitness,
+            @JsonKey(name: 'shareableUrlPath')
+                String shareableUrlPath,
+            @JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
+                DateTime modificationTime,
+            @JsonKey(name: 'slugPlusPandoraId')
+                String slugPlusPandoraId,
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
+                bool hasRadio,
+            @JsonKey(name: 'releaseType')
+                String releaseType,
+            @JsonKey(name: 'listenerReleaseType')
+                String listenerReleaseType,
+            @JsonKey(name: 'pandoraId')
+                String pandoraId,
+            @JsonKey(name: 'scope')
+                Scope scope)
+        album,
+    required TResult Function(
+            @JsonKey(name: 'name')
+                String name,
+            @JsonKey(name: 'sortableName')
+                String sortableName,
+            @JsonKey(name: 'icon', fromJson: MediaIcon.optionalFromJson, toJson: MediaIcon.optionalToJson)
+                MediaIcon? icon,
+            @JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
+                DateTime modificationTime,
+            @JsonKey(name: 'description')
+                String description,
+            @JsonKey(name: 'stationListenerCount')
+                int stationListenerCount,
+            @JsonKey(name: 'shareableUrlPath')
+                String shareableUrlPath,
+            @JsonKey(name: 'hasTakeoverModes')
+                bool hasTakeoverModes,
+            @JsonKey(name: 'hasCuratedModes')
+                bool hasCuratedModes,
+            @JsonKey(name: 'pandoraId')
+                String pandoraId,
+            @JsonKey(name: 'scope')
+                Scope scope)
+        genre,
+    required TResult Function(
+            @JsonKey(name: 'name')
+                String name,
+            @JsonKey(name: 'allowFeedback', fromJson: readOptInBool, toJson: writeOptInBool)
+                bool allowFeedback,
+            @JsonKey(name: 'autogenForListener')
+                bool autogenForListener,
+            @JsonKey(name: 'collectible')
+                bool collectible,
+            @JsonKey(name: 'description', fromJson: readOptionalString, toJson: writeOptionalString)
+                String? description,
+            @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
+                Duration duration,
+            @JsonKey(name: 'includedTrackTypes')
+                List<PandoraType> includedTrackTypes,
+            @JsonKey(name: 'isPrivate')
+                bool isPrivate,
+            @JsonKey(name: 'linkedType')
+                PlaylistLinkedType linkedType,
+            @JsonKey(name: 'listenerId')
+                int listenerId,
+            @JsonKey(name: 'listenerIdInfo')
+                ListenerIdInfo listenerIdInfo,
+            @JsonKey(name: 'listenerIdToken')
+                String listenerIdToken,
+            @JsonKey(name: 'listenerPandoraId')
+                String listenerPandoraId,
+            @JsonKey(name: 'secret')
+                bool secret,
+            @JsonKey(name: 'shareableUrlPath')
+                String shareableUrlPath,
+            @JsonKey(name: 'thorLayers')
+                String thorLayers,
+            @JsonKey(name: 'timeCreated', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
+                DateTime timeCreated,
+            @JsonKey(name: 'timeLastPlayed', fromJson: readOptionalDateTimeMilliseconds, toJson: writeOptionalDateTimeMilliseconds)
+                DateTime? timeLastPlayed,
+            @JsonKey(name: 'timeLastUpdated', fromJson: readOptionalDateTimeMilliseconds, toJson: writeOptionalDateTimeMilliseconds)
+                DateTime? timeLastUpdated,
+            @JsonKey(name: 'totalTracks')
+                int totalTracks,
+            @JsonKey(name: 'unlocked')
+                bool unlocked,
+            @JsonKey(name: 'viewerInfo')
+                PlaylistViewerInfo? viewerInfo,
+            @JsonKey(name: 'pandoraId')
+                String pandoraId,
+            @JsonKey(name: 'scope')
+                Scope scope)
+        playlist,
+    required TResult Function(
+            @JsonKey(name: 'name')
+                String name,
+            @JsonKey(name: 'sortableName')
+                String sortableName,
+            @JsonKey(name: 'icon', fromJson: MediaIcon.optionalFromJson, toJson: MediaIcon.optionalToJson)
+                MediaIcon? icon,
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
+                bool hasRadio,
+            @JsonKey(name: 'albumCount')
+                int albumCount,
+            @JsonKey(name: 'trackCount')
+                int trackCount,
+            @JsonKey(name: 'shareableUrlPath')
+                String shareableUrlPath,
+            @JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
+                DateTime modificationTime,
+            @JsonKey(name: 'slugPlusPandoraId')
+                String slugPlusPandoraId,
+            @JsonKey(name: 'pandoraId')
+                String pandoraId,
+            @JsonKey(name: 'scope')
+                String scope)
+        composer,
+    required TResult Function(
+            @JsonKey(name: 'pandoraId') String pandoraId,
+            @JsonKey(name: 'listenerId') int listenerId,
+            @JsonKey(name: 'webname') String webname,
+            @JsonKey(name: 'fullname') String fullName,
+            @JsonKey(name: 'displayname') String displayName)
+        listener,
+  }) {
+    return playlist(
+        name,
+        allowFeedback,
+        autogenForListener,
+        collectible,
+        description,
+        duration,
+        includedTrackTypes,
+        isPrivate,
+        linkedType,
+        listenerId,
+        listenerIdInfo,
+        listenerIdToken,
+        listenerPandoraId,
+        secret,
+        shareableUrlPath,
+        thorLayers,
+        timeCreated,
+        timeLastPlayed,
+        timeLastUpdated,
+        totalTracks,
+        unlocked,
+        viewerInfo,
+        pandoraId,
+        scope);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(
+            @JsonKey(name: 'name')
+                String name,
+            @JsonKey(name: 'sortableName')
+                String sortableName,
+            @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
+                Duration duration,
+            @JsonKey(name: 'trackNumber')
+                int trackNumber,
+            @JsonKey(name: 'icon', fromJson: MediaIcon.optionalFromJson, toJson: MediaIcon.optionalToJson)
+                MediaIcon? icon,
+            @JsonKey(name: 'rightsInfo')
+                RightsInfo rightsInfo,
+            @JsonKey(name: 'albumId')
+                String albumId,
+            @JsonKey(name: 'albumName')
+                String albumName,
+            @JsonKey(name: 'artistId')
+                String artistId,
+            @JsonKey(name: 'artistName')
+                String artistName,
+            @JsonKey(name: 'explicitness')
+                Explicitness explicitness,
+            @JsonKey(name: 'shareableUrlPath')
+                String shareableUrlPath,
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
+                bool hasRadio,
+            @JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
+                DateTime modificationTime,
+            @JsonKey(name: 'slugPlusPandoraId')
+                String slugPlusPandoraId,
+            @JsonKey(name: 'isrc')
+                String isrc,
+            @JsonKey(name: 'pandoraId')
+                String pandoraId,
+            @JsonKey(name: 'scope')
+                Scope scope)?
+        track,
+    TResult Function(
+            @JsonKey(name: 'name')
+                String name,
+            @JsonKey(name: 'sortableName')
+                String sortableName,
+            @JsonKey(name: 'trackCount')
+                int trackCount,
+            @JsonKey(name: 'albumCount')
+                int albumCount,
+            @JsonKey(name: 'icon', fromJson: MediaIcon.optionalFromJson, toJson: MediaIcon.optionalToJson)
+                MediaIcon? icon,
+            @JsonKey(name: 'shareableUrlPath')
+                String shareableUrlPath,
+            @JsonKey(name: 'twitterHandle')
+                String? twitterHandle,
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
+                bool hasRadio,
+            @JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
+                DateTime modificationTime,
+            @JsonKey(name: 'slugPlusPandoraId')
+                String slugPlusPandoraId,
+            @JsonKey(name: 'collaboration')
+                bool collaboration,
+            @JsonKey(name: 'primaryArtists')
+                List<String> primaryArtistIds,
+            @JsonKey(name: 'variousArtist')
+                bool variousArtist,
+            @JsonKey(name: 'megastar')
+                bool megastar,
+            @JsonKey(name: 'hasTakeoverModes')
+                bool hasTakeoverModes,
+            @JsonKey(name: 'pandoraId')
+                String pandoraId,
+            @JsonKey(name: 'scope')
+                Scope scope)?
+        artist,
+    TResult Function(
+            @JsonKey(name: 'name')
+                String name,
+            @JsonKey(name: 'sortableName')
+                String sortableName,
+            @JsonKey(name: 'releaseDate')
+                DateTime releaseDate,
+            @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
+                Duration duration,
+            @JsonKey(name: 'trackCount')
+                int trackCount,
+            @JsonKey(name: 'isCompilation')
+                bool isCompilation,
+            @JsonKey(name: 'icon', fromJson: MediaIcon.optionalFromJson, toJson: MediaIcon.optionalToJson)
+                MediaIcon? icon,
+            @JsonKey(name: 'rightsInfo')
+                RightsInfo rightsInfo,
+            @JsonKey(name: 'tracks')
+                List<String> trackIds,
+            @JsonKey(name: 'artistId')
+                String artistId,
+            @JsonKey(name: 'artistName')
+                String artistName,
+            @JsonKey(name: 'explicitness')
+                Explicitness explicitness,
+            @JsonKey(name: 'shareableUrlPath')
+                String shareableUrlPath,
+            @JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
+                DateTime modificationTime,
+            @JsonKey(name: 'slugPlusPandoraId')
+                String slugPlusPandoraId,
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
+                bool hasRadio,
+            @JsonKey(name: 'releaseType')
+                String releaseType,
+            @JsonKey(name: 'listenerReleaseType')
+                String listenerReleaseType,
+            @JsonKey(name: 'pandoraId')
+                String pandoraId,
+            @JsonKey(name: 'scope')
+                Scope scope)?
+        album,
+    TResult Function(
+            @JsonKey(name: 'name')
+                String name,
+            @JsonKey(name: 'sortableName')
+                String sortableName,
+            @JsonKey(name: 'icon', fromJson: MediaIcon.optionalFromJson, toJson: MediaIcon.optionalToJson)
+                MediaIcon? icon,
+            @JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
+                DateTime modificationTime,
+            @JsonKey(name: 'description')
+                String description,
+            @JsonKey(name: 'stationListenerCount')
+                int stationListenerCount,
+            @JsonKey(name: 'shareableUrlPath')
+                String shareableUrlPath,
+            @JsonKey(name: 'hasTakeoverModes')
+                bool hasTakeoverModes,
+            @JsonKey(name: 'hasCuratedModes')
+                bool hasCuratedModes,
+            @JsonKey(name: 'pandoraId')
+                String pandoraId,
+            @JsonKey(name: 'scope')
+                Scope scope)?
+        genre,
+    TResult Function(
+            @JsonKey(name: 'name')
+                String name,
+            @JsonKey(name: 'allowFeedback', fromJson: readOptInBool, toJson: writeOptInBool)
+                bool allowFeedback,
+            @JsonKey(name: 'autogenForListener')
+                bool autogenForListener,
+            @JsonKey(name: 'collectible')
+                bool collectible,
+            @JsonKey(name: 'description', fromJson: readOptionalString, toJson: writeOptionalString)
+                String? description,
+            @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
+                Duration duration,
+            @JsonKey(name: 'includedTrackTypes')
+                List<PandoraType> includedTrackTypes,
+            @JsonKey(name: 'isPrivate')
+                bool isPrivate,
+            @JsonKey(name: 'linkedType')
+                PlaylistLinkedType linkedType,
+            @JsonKey(name: 'listenerId')
+                int listenerId,
+            @JsonKey(name: 'listenerIdInfo')
+                ListenerIdInfo listenerIdInfo,
+            @JsonKey(name: 'listenerIdToken')
+                String listenerIdToken,
+            @JsonKey(name: 'listenerPandoraId')
+                String listenerPandoraId,
+            @JsonKey(name: 'secret')
+                bool secret,
+            @JsonKey(name: 'shareableUrlPath')
+                String shareableUrlPath,
+            @JsonKey(name: 'thorLayers')
+                String thorLayers,
+            @JsonKey(name: 'timeCreated', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
+                DateTime timeCreated,
+            @JsonKey(name: 'timeLastPlayed', fromJson: readOptionalDateTimeMilliseconds, toJson: writeOptionalDateTimeMilliseconds)
+                DateTime? timeLastPlayed,
+            @JsonKey(name: 'timeLastUpdated', fromJson: readOptionalDateTimeMilliseconds, toJson: writeOptionalDateTimeMilliseconds)
+                DateTime? timeLastUpdated,
+            @JsonKey(name: 'totalTracks')
+                int totalTracks,
+            @JsonKey(name: 'unlocked')
+                bool unlocked,
+            @JsonKey(name: 'viewerInfo')
+                PlaylistViewerInfo? viewerInfo,
+            @JsonKey(name: 'pandoraId')
+                String pandoraId,
+            @JsonKey(name: 'scope')
+                Scope scope)?
+        playlist,
+    TResult Function(
+            @JsonKey(name: 'name')
+                String name,
+            @JsonKey(name: 'sortableName')
+                String sortableName,
+            @JsonKey(name: 'icon', fromJson: MediaIcon.optionalFromJson, toJson: MediaIcon.optionalToJson)
+                MediaIcon? icon,
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
+                bool hasRadio,
+            @JsonKey(name: 'albumCount')
+                int albumCount,
+            @JsonKey(name: 'trackCount')
+                int trackCount,
+            @JsonKey(name: 'shareableUrlPath')
+                String shareableUrlPath,
+            @JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
+                DateTime modificationTime,
+            @JsonKey(name: 'slugPlusPandoraId')
+                String slugPlusPandoraId,
+            @JsonKey(name: 'pandoraId')
+                String pandoraId,
+            @JsonKey(name: 'scope')
+                String scope)?
+        composer,
+    TResult Function(
+            @JsonKey(name: 'pandoraId') String pandoraId,
+            @JsonKey(name: 'listenerId') int listenerId,
+            @JsonKey(name: 'webname') String webname,
+            @JsonKey(name: 'fullname') String fullName,
+            @JsonKey(name: 'displayname') String displayName)?
+        listener,
+  }) {
+    return playlist?.call(
+        name,
+        allowFeedback,
+        autogenForListener,
+        collectible,
+        description,
+        duration,
+        includedTrackTypes,
+        isPrivate,
+        linkedType,
+        listenerId,
+        listenerIdInfo,
+        listenerIdToken,
+        listenerPandoraId,
+        secret,
+        shareableUrlPath,
+        thorLayers,
+        timeCreated,
+        timeLastPlayed,
+        timeLastUpdated,
+        totalTracks,
+        unlocked,
+        viewerInfo,
+        pandoraId,
+        scope);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(
+            @JsonKey(name: 'name')
+                String name,
+            @JsonKey(name: 'sortableName')
+                String sortableName,
+            @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
+                Duration duration,
+            @JsonKey(name: 'trackNumber')
+                int trackNumber,
+            @JsonKey(name: 'icon', fromJson: MediaIcon.optionalFromJson, toJson: MediaIcon.optionalToJson)
+                MediaIcon? icon,
+            @JsonKey(name: 'rightsInfo')
+                RightsInfo rightsInfo,
+            @JsonKey(name: 'albumId')
+                String albumId,
+            @JsonKey(name: 'albumName')
+                String albumName,
+            @JsonKey(name: 'artistId')
+                String artistId,
+            @JsonKey(name: 'artistName')
+                String artistName,
+            @JsonKey(name: 'explicitness')
+                Explicitness explicitness,
+            @JsonKey(name: 'shareableUrlPath')
+                String shareableUrlPath,
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
+                bool hasRadio,
+            @JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
+                DateTime modificationTime,
+            @JsonKey(name: 'slugPlusPandoraId')
+                String slugPlusPandoraId,
+            @JsonKey(name: 'isrc')
+                String isrc,
+            @JsonKey(name: 'pandoraId')
+                String pandoraId,
+            @JsonKey(name: 'scope')
+                Scope scope)?
+        track,
+    TResult Function(
+            @JsonKey(name: 'name')
+                String name,
+            @JsonKey(name: 'sortableName')
+                String sortableName,
+            @JsonKey(name: 'trackCount')
+                int trackCount,
+            @JsonKey(name: 'albumCount')
+                int albumCount,
+            @JsonKey(name: 'icon', fromJson: MediaIcon.optionalFromJson, toJson: MediaIcon.optionalToJson)
+                MediaIcon? icon,
+            @JsonKey(name: 'shareableUrlPath')
+                String shareableUrlPath,
+            @JsonKey(name: 'twitterHandle')
+                String? twitterHandle,
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
+                bool hasRadio,
+            @JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
+                DateTime modificationTime,
+            @JsonKey(name: 'slugPlusPandoraId')
+                String slugPlusPandoraId,
+            @JsonKey(name: 'collaboration')
+                bool collaboration,
+            @JsonKey(name: 'primaryArtists')
+                List<String> primaryArtistIds,
+            @JsonKey(name: 'variousArtist')
+                bool variousArtist,
+            @JsonKey(name: 'megastar')
+                bool megastar,
+            @JsonKey(name: 'hasTakeoverModes')
+                bool hasTakeoverModes,
+            @JsonKey(name: 'pandoraId')
+                String pandoraId,
+            @JsonKey(name: 'scope')
+                Scope scope)?
+        artist,
+    TResult Function(
+            @JsonKey(name: 'name')
+                String name,
+            @JsonKey(name: 'sortableName')
+                String sortableName,
+            @JsonKey(name: 'releaseDate')
+                DateTime releaseDate,
+            @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
+                Duration duration,
+            @JsonKey(name: 'trackCount')
+                int trackCount,
+            @JsonKey(name: 'isCompilation')
+                bool isCompilation,
+            @JsonKey(name: 'icon', fromJson: MediaIcon.optionalFromJson, toJson: MediaIcon.optionalToJson)
+                MediaIcon? icon,
+            @JsonKey(name: 'rightsInfo')
+                RightsInfo rightsInfo,
+            @JsonKey(name: 'tracks')
+                List<String> trackIds,
+            @JsonKey(name: 'artistId')
+                String artistId,
+            @JsonKey(name: 'artistName')
+                String artistName,
+            @JsonKey(name: 'explicitness')
+                Explicitness explicitness,
+            @JsonKey(name: 'shareableUrlPath')
+                String shareableUrlPath,
+            @JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
+                DateTime modificationTime,
+            @JsonKey(name: 'slugPlusPandoraId')
+                String slugPlusPandoraId,
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
+                bool hasRadio,
+            @JsonKey(name: 'releaseType')
+                String releaseType,
+            @JsonKey(name: 'listenerReleaseType')
+                String listenerReleaseType,
+            @JsonKey(name: 'pandoraId')
+                String pandoraId,
+            @JsonKey(name: 'scope')
+                Scope scope)?
+        album,
+    TResult Function(
+            @JsonKey(name: 'name')
+                String name,
+            @JsonKey(name: 'sortableName')
+                String sortableName,
+            @JsonKey(name: 'icon', fromJson: MediaIcon.optionalFromJson, toJson: MediaIcon.optionalToJson)
+                MediaIcon? icon,
+            @JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
+                DateTime modificationTime,
+            @JsonKey(name: 'description')
+                String description,
+            @JsonKey(name: 'stationListenerCount')
+                int stationListenerCount,
+            @JsonKey(name: 'shareableUrlPath')
+                String shareableUrlPath,
+            @JsonKey(name: 'hasTakeoverModes')
+                bool hasTakeoverModes,
+            @JsonKey(name: 'hasCuratedModes')
+                bool hasCuratedModes,
+            @JsonKey(name: 'pandoraId')
+                String pandoraId,
+            @JsonKey(name: 'scope')
+                Scope scope)?
+        genre,
+    TResult Function(
+            @JsonKey(name: 'name')
+                String name,
+            @JsonKey(name: 'allowFeedback', fromJson: readOptInBool, toJson: writeOptInBool)
+                bool allowFeedback,
+            @JsonKey(name: 'autogenForListener')
+                bool autogenForListener,
+            @JsonKey(name: 'collectible')
+                bool collectible,
+            @JsonKey(name: 'description', fromJson: readOptionalString, toJson: writeOptionalString)
+                String? description,
+            @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
+                Duration duration,
+            @JsonKey(name: 'includedTrackTypes')
+                List<PandoraType> includedTrackTypes,
+            @JsonKey(name: 'isPrivate')
+                bool isPrivate,
+            @JsonKey(name: 'linkedType')
+                PlaylistLinkedType linkedType,
+            @JsonKey(name: 'listenerId')
+                int listenerId,
+            @JsonKey(name: 'listenerIdInfo')
+                ListenerIdInfo listenerIdInfo,
+            @JsonKey(name: 'listenerIdToken')
+                String listenerIdToken,
+            @JsonKey(name: 'listenerPandoraId')
+                String listenerPandoraId,
+            @JsonKey(name: 'secret')
+                bool secret,
+            @JsonKey(name: 'shareableUrlPath')
+                String shareableUrlPath,
+            @JsonKey(name: 'thorLayers')
+                String thorLayers,
+            @JsonKey(name: 'timeCreated', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
+                DateTime timeCreated,
+            @JsonKey(name: 'timeLastPlayed', fromJson: readOptionalDateTimeMilliseconds, toJson: writeOptionalDateTimeMilliseconds)
+                DateTime? timeLastPlayed,
+            @JsonKey(name: 'timeLastUpdated', fromJson: readOptionalDateTimeMilliseconds, toJson: writeOptionalDateTimeMilliseconds)
+                DateTime? timeLastUpdated,
+            @JsonKey(name: 'totalTracks')
+                int totalTracks,
+            @JsonKey(name: 'unlocked')
+                bool unlocked,
+            @JsonKey(name: 'viewerInfo')
+                PlaylistViewerInfo? viewerInfo,
+            @JsonKey(name: 'pandoraId')
+                String pandoraId,
+            @JsonKey(name: 'scope')
+                Scope scope)?
+        playlist,
+    TResult Function(
+            @JsonKey(name: 'name')
+                String name,
+            @JsonKey(name: 'sortableName')
+                String sortableName,
+            @JsonKey(name: 'icon', fromJson: MediaIcon.optionalFromJson, toJson: MediaIcon.optionalToJson)
+                MediaIcon? icon,
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
+                bool hasRadio,
+            @JsonKey(name: 'albumCount')
+                int albumCount,
+            @JsonKey(name: 'trackCount')
+                int trackCount,
+            @JsonKey(name: 'shareableUrlPath')
+                String shareableUrlPath,
+            @JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
+                DateTime modificationTime,
+            @JsonKey(name: 'slugPlusPandoraId')
+                String slugPlusPandoraId,
+            @JsonKey(name: 'pandoraId')
+                String pandoraId,
+            @JsonKey(name: 'scope')
+                String scope)?
+        composer,
+    TResult Function(
+            @JsonKey(name: 'pandoraId') String pandoraId,
+            @JsonKey(name: 'listenerId') int listenerId,
+            @JsonKey(name: 'webname') String webname,
+            @JsonKey(name: 'fullname') String fullName,
+            @JsonKey(name: 'displayname') String displayName)?
+        listener,
+    required TResult orElse(),
+  }) {
+    if (playlist != null) {
+      return playlist(
+          name,
+          allowFeedback,
+          autogenForListener,
+          collectible,
+          description,
+          duration,
+          includedTrackTypes,
+          isPrivate,
+          linkedType,
+          listenerId,
+          listenerIdInfo,
+          listenerIdToken,
+          listenerPandoraId,
+          secret,
+          shareableUrlPath,
+          thorLayers,
+          timeCreated,
+          timeLastPlayed,
+          timeLastUpdated,
+          totalTracks,
+          unlocked,
+          viewerInfo,
+          pandoraId,
+          scope);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(TrackAnnotation value) track,
+    required TResult Function(ArtistAnnotation value) artist,
+    required TResult Function(AlbumAnnotation value) album,
+    required TResult Function(GenreAnnotation value) genre,
+    required TResult Function(PlaylistAnnotation value) playlist,
+    required TResult Function(ComposerAnnotation value) composer,
+    required TResult Function(ListenerMediaAnnotation value) listener,
+  }) {
+    return playlist(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(TrackAnnotation value)? track,
+    TResult Function(ArtistAnnotation value)? artist,
+    TResult Function(AlbumAnnotation value)? album,
+    TResult Function(GenreAnnotation value)? genre,
+    TResult Function(PlaylistAnnotation value)? playlist,
+    TResult Function(ComposerAnnotation value)? composer,
+    TResult Function(ListenerMediaAnnotation value)? listener,
+  }) {
+    return playlist?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(TrackAnnotation value)? track,
+    TResult Function(ArtistAnnotation value)? artist,
+    TResult Function(AlbumAnnotation value)? album,
+    TResult Function(GenreAnnotation value)? genre,
+    TResult Function(PlaylistAnnotation value)? playlist,
+    TResult Function(ComposerAnnotation value)? composer,
+    TResult Function(ListenerMediaAnnotation value)? listener,
+    required TResult orElse(),
+  }) {
+    if (playlist != null) {
+      return playlist(this);
+    }
+    return orElse();
+  }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$PlaylistAnnotationToJson(this);
+  }
+}
+
+abstract class PlaylistAnnotation extends MediaAnnotation {
+  const factory PlaylistAnnotation(
+      {@JsonKey(name: 'name')
+          required final String name,
+      @JsonKey(name: 'allowFeedback', fromJson: readOptInBool, toJson: writeOptInBool)
+          required final bool allowFeedback,
+      @JsonKey(name: 'autogenForListener')
+          required final bool autogenForListener,
+      @JsonKey(name: 'collectible')
+          required final bool collectible,
+      @JsonKey(name: 'description', fromJson: readOptionalString, toJson: writeOptionalString)
+          final String? description,
+      @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
+          required final Duration duration,
+      @JsonKey(name: 'includedTrackTypes')
+          required final List<PandoraType> includedTrackTypes,
+      @JsonKey(name: 'isPrivate')
+          required final bool isPrivate,
+      @JsonKey(name: 'linkedType')
+          required final PlaylistLinkedType linkedType,
+      @JsonKey(name: 'listenerId')
+          required final int listenerId,
+      @JsonKey(name: 'listenerIdInfo')
+          required final ListenerIdInfo listenerIdInfo,
+      @JsonKey(name: 'listenerIdToken')
+          required final String listenerIdToken,
+      @JsonKey(name: 'listenerPandoraId')
+          required final String listenerPandoraId,
+      @JsonKey(name: 'secret')
+          required final bool secret,
+      @JsonKey(name: 'shareableUrlPath')
+          required final String shareableUrlPath,
+      @JsonKey(name: 'thorLayers')
+          required final String thorLayers,
+      @JsonKey(name: 'timeCreated', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
+          required final DateTime timeCreated,
+      @JsonKey(name: 'timeLastPlayed', fromJson: readOptionalDateTimeMilliseconds, toJson: writeOptionalDateTimeMilliseconds)
+          final DateTime? timeLastPlayed,
+      @JsonKey(name: 'timeLastUpdated', fromJson: readOptionalDateTimeMilliseconds, toJson: writeOptionalDateTimeMilliseconds)
+          final DateTime? timeLastUpdated,
+      @JsonKey(name: 'totalTracks')
+          required final int totalTracks,
+      @JsonKey(name: 'unlocked')
+          required final bool unlocked,
+      @JsonKey(name: 'viewerInfo')
+          final PlaylistViewerInfo? viewerInfo,
+      @JsonKey(name: 'pandoraId')
+          required final String pandoraId,
+      @JsonKey(name: 'scope')
+          required final Scope scope}) = _$PlaylistAnnotation;
+  const PlaylistAnnotation._() : super._();
+
+  factory PlaylistAnnotation.fromJson(Map<String, dynamic> json) =
+      _$PlaylistAnnotation.fromJson;
+
+  @JsonKey(name: 'name')
+  String get name => throw _privateConstructorUsedError;
+  @JsonKey(
+      name: 'allowFeedback', fromJson: readOptInBool, toJson: writeOptInBool)
+  bool get allowFeedback => throw _privateConstructorUsedError;
+  @JsonKey(name: 'autogenForListener')
+  bool get autogenForListener => throw _privateConstructorUsedError;
+  @JsonKey(name: 'collectible')
+  bool get collectible => throw _privateConstructorUsedError;
+  @JsonKey(
+      name: 'description',
+      fromJson: readOptionalString,
+      toJson: writeOptionalString)
+  String? get description => throw _privateConstructorUsedError;
+  @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
+  Duration get duration => throw _privateConstructorUsedError;
+  @JsonKey(name: 'includedTrackTypes')
+  List<PandoraType> get includedTrackTypes =>
+      throw _privateConstructorUsedError;
+  @JsonKey(name: 'isPrivate')
+  bool get isPrivate => throw _privateConstructorUsedError;
+  @JsonKey(name: 'linkedType')
+  PlaylistLinkedType get linkedType => throw _privateConstructorUsedError;
+  @JsonKey(name: 'listenerId')
+  int get listenerId => throw _privateConstructorUsedError;
+  @JsonKey(name: 'listenerIdInfo')
+  ListenerIdInfo get listenerIdInfo => throw _privateConstructorUsedError;
+  @JsonKey(name: 'listenerIdToken')
+  String get listenerIdToken => throw _privateConstructorUsedError;
+  @JsonKey(name: 'listenerPandoraId')
+  String get listenerPandoraId => throw _privateConstructorUsedError;
+  @JsonKey(name: 'secret')
+  bool get secret => throw _privateConstructorUsedError;
+  @JsonKey(name: 'shareableUrlPath')
+  String get shareableUrlPath => throw _privateConstructorUsedError;
+  @JsonKey(name: 'thorLayers')
+  String get thorLayers => throw _privateConstructorUsedError;
+  @JsonKey(
+      name: 'timeCreated',
+      fromJson: readDateTimeMilliseconds,
+      toJson: writeDateTimeMilliseconds)
+  DateTime get timeCreated => throw _privateConstructorUsedError;
+  @JsonKey(
+      name: 'timeLastPlayed',
+      fromJson: readOptionalDateTimeMilliseconds,
+      toJson: writeOptionalDateTimeMilliseconds)
+  DateTime? get timeLastPlayed => throw _privateConstructorUsedError;
+  @JsonKey(
+      name: 'timeLastUpdated',
+      fromJson: readOptionalDateTimeMilliseconds,
+      toJson: writeOptionalDateTimeMilliseconds)
+  DateTime? get timeLastUpdated => throw _privateConstructorUsedError;
+  @JsonKey(name: 'totalTracks')
+  int get totalTracks => throw _privateConstructorUsedError;
+  @JsonKey(name: 'unlocked')
+  bool get unlocked => throw _privateConstructorUsedError;
+  @JsonKey(name: 'viewerInfo')
+  PlaylistViewerInfo? get viewerInfo => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: 'pandoraId')
+  String get pandoraId => throw _privateConstructorUsedError;
+  @JsonKey(name: 'scope')
+  Scope get scope => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(ignore: true)
+  _$$PlaylistAnnotationCopyWith<_$PlaylistAnnotation> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -5140,7 +7304,7 @@ class _$ComposerAnnotation extends ComposerAnnotation {
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
             @JsonKey(name: 'scope')
-                String scope)
+                Scope scope)
         track,
     required TResult Function(
             @JsonKey(name: 'name')
@@ -5176,7 +7340,7 @@ class _$ComposerAnnotation extends ComposerAnnotation {
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
             @JsonKey(name: 'scope')
-                String scope)
+                Scope scope)
         artist,
     required TResult Function(
             @JsonKey(name: 'name')
@@ -5218,7 +7382,7 @@ class _$ComposerAnnotation extends ComposerAnnotation {
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
             @JsonKey(name: 'scope')
-                String scope)
+                Scope scope)
         album,
     required TResult Function(
             @JsonKey(name: 'name')
@@ -5242,8 +7406,58 @@ class _$ComposerAnnotation extends ComposerAnnotation {
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
             @JsonKey(name: 'scope')
-                String scope)
+                Scope scope)
         genre,
+    required TResult Function(
+            @JsonKey(name: 'name')
+                String name,
+            @JsonKey(name: 'allowFeedback', fromJson: readOptInBool, toJson: writeOptInBool)
+                bool allowFeedback,
+            @JsonKey(name: 'autogenForListener')
+                bool autogenForListener,
+            @JsonKey(name: 'collectible')
+                bool collectible,
+            @JsonKey(name: 'description', fromJson: readOptionalString, toJson: writeOptionalString)
+                String? description,
+            @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
+                Duration duration,
+            @JsonKey(name: 'includedTrackTypes')
+                List<PandoraType> includedTrackTypes,
+            @JsonKey(name: 'isPrivate')
+                bool isPrivate,
+            @JsonKey(name: 'linkedType')
+                PlaylistLinkedType linkedType,
+            @JsonKey(name: 'listenerId')
+                int listenerId,
+            @JsonKey(name: 'listenerIdInfo')
+                ListenerIdInfo listenerIdInfo,
+            @JsonKey(name: 'listenerIdToken')
+                String listenerIdToken,
+            @JsonKey(name: 'listenerPandoraId')
+                String listenerPandoraId,
+            @JsonKey(name: 'secret')
+                bool secret,
+            @JsonKey(name: 'shareableUrlPath')
+                String shareableUrlPath,
+            @JsonKey(name: 'thorLayers')
+                String thorLayers,
+            @JsonKey(name: 'timeCreated', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
+                DateTime timeCreated,
+            @JsonKey(name: 'timeLastPlayed', fromJson: readOptionalDateTimeMilliseconds, toJson: writeOptionalDateTimeMilliseconds)
+                DateTime? timeLastPlayed,
+            @JsonKey(name: 'timeLastUpdated', fromJson: readOptionalDateTimeMilliseconds, toJson: writeOptionalDateTimeMilliseconds)
+                DateTime? timeLastUpdated,
+            @JsonKey(name: 'totalTracks')
+                int totalTracks,
+            @JsonKey(name: 'unlocked')
+                bool unlocked,
+            @JsonKey(name: 'viewerInfo')
+                PlaylistViewerInfo? viewerInfo,
+            @JsonKey(name: 'pandoraId')
+                String pandoraId,
+            @JsonKey(name: 'scope')
+                Scope scope)
+        playlist,
     required TResult Function(
             @JsonKey(name: 'name')
                 String name,
@@ -5329,7 +7543,7 @@ class _$ComposerAnnotation extends ComposerAnnotation {
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
             @JsonKey(name: 'scope')
-                String scope)?
+                Scope scope)?
         track,
     TResult Function(
             @JsonKey(name: 'name')
@@ -5365,7 +7579,7 @@ class _$ComposerAnnotation extends ComposerAnnotation {
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
             @JsonKey(name: 'scope')
-                String scope)?
+                Scope scope)?
         artist,
     TResult Function(
             @JsonKey(name: 'name')
@@ -5407,7 +7621,7 @@ class _$ComposerAnnotation extends ComposerAnnotation {
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
             @JsonKey(name: 'scope')
-                String scope)?
+                Scope scope)?
         album,
     TResult Function(
             @JsonKey(name: 'name')
@@ -5431,8 +7645,58 @@ class _$ComposerAnnotation extends ComposerAnnotation {
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
             @JsonKey(name: 'scope')
-                String scope)?
+                Scope scope)?
         genre,
+    TResult Function(
+            @JsonKey(name: 'name')
+                String name,
+            @JsonKey(name: 'allowFeedback', fromJson: readOptInBool, toJson: writeOptInBool)
+                bool allowFeedback,
+            @JsonKey(name: 'autogenForListener')
+                bool autogenForListener,
+            @JsonKey(name: 'collectible')
+                bool collectible,
+            @JsonKey(name: 'description', fromJson: readOptionalString, toJson: writeOptionalString)
+                String? description,
+            @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
+                Duration duration,
+            @JsonKey(name: 'includedTrackTypes')
+                List<PandoraType> includedTrackTypes,
+            @JsonKey(name: 'isPrivate')
+                bool isPrivate,
+            @JsonKey(name: 'linkedType')
+                PlaylistLinkedType linkedType,
+            @JsonKey(name: 'listenerId')
+                int listenerId,
+            @JsonKey(name: 'listenerIdInfo')
+                ListenerIdInfo listenerIdInfo,
+            @JsonKey(name: 'listenerIdToken')
+                String listenerIdToken,
+            @JsonKey(name: 'listenerPandoraId')
+                String listenerPandoraId,
+            @JsonKey(name: 'secret')
+                bool secret,
+            @JsonKey(name: 'shareableUrlPath')
+                String shareableUrlPath,
+            @JsonKey(name: 'thorLayers')
+                String thorLayers,
+            @JsonKey(name: 'timeCreated', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
+                DateTime timeCreated,
+            @JsonKey(name: 'timeLastPlayed', fromJson: readOptionalDateTimeMilliseconds, toJson: writeOptionalDateTimeMilliseconds)
+                DateTime? timeLastPlayed,
+            @JsonKey(name: 'timeLastUpdated', fromJson: readOptionalDateTimeMilliseconds, toJson: writeOptionalDateTimeMilliseconds)
+                DateTime? timeLastUpdated,
+            @JsonKey(name: 'totalTracks')
+                int totalTracks,
+            @JsonKey(name: 'unlocked')
+                bool unlocked,
+            @JsonKey(name: 'viewerInfo')
+                PlaylistViewerInfo? viewerInfo,
+            @JsonKey(name: 'pandoraId')
+                String pandoraId,
+            @JsonKey(name: 'scope')
+                Scope scope)?
+        playlist,
     TResult Function(
             @JsonKey(name: 'name')
                 String name,
@@ -5518,7 +7782,7 @@ class _$ComposerAnnotation extends ComposerAnnotation {
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
             @JsonKey(name: 'scope')
-                String scope)?
+                Scope scope)?
         track,
     TResult Function(
             @JsonKey(name: 'name')
@@ -5554,7 +7818,7 @@ class _$ComposerAnnotation extends ComposerAnnotation {
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
             @JsonKey(name: 'scope')
-                String scope)?
+                Scope scope)?
         artist,
     TResult Function(
             @JsonKey(name: 'name')
@@ -5596,7 +7860,7 @@ class _$ComposerAnnotation extends ComposerAnnotation {
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
             @JsonKey(name: 'scope')
-                String scope)?
+                Scope scope)?
         album,
     TResult Function(
             @JsonKey(name: 'name')
@@ -5620,8 +7884,58 @@ class _$ComposerAnnotation extends ComposerAnnotation {
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
             @JsonKey(name: 'scope')
-                String scope)?
+                Scope scope)?
         genre,
+    TResult Function(
+            @JsonKey(name: 'name')
+                String name,
+            @JsonKey(name: 'allowFeedback', fromJson: readOptInBool, toJson: writeOptInBool)
+                bool allowFeedback,
+            @JsonKey(name: 'autogenForListener')
+                bool autogenForListener,
+            @JsonKey(name: 'collectible')
+                bool collectible,
+            @JsonKey(name: 'description', fromJson: readOptionalString, toJson: writeOptionalString)
+                String? description,
+            @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
+                Duration duration,
+            @JsonKey(name: 'includedTrackTypes')
+                List<PandoraType> includedTrackTypes,
+            @JsonKey(name: 'isPrivate')
+                bool isPrivate,
+            @JsonKey(name: 'linkedType')
+                PlaylistLinkedType linkedType,
+            @JsonKey(name: 'listenerId')
+                int listenerId,
+            @JsonKey(name: 'listenerIdInfo')
+                ListenerIdInfo listenerIdInfo,
+            @JsonKey(name: 'listenerIdToken')
+                String listenerIdToken,
+            @JsonKey(name: 'listenerPandoraId')
+                String listenerPandoraId,
+            @JsonKey(name: 'secret')
+                bool secret,
+            @JsonKey(name: 'shareableUrlPath')
+                String shareableUrlPath,
+            @JsonKey(name: 'thorLayers')
+                String thorLayers,
+            @JsonKey(name: 'timeCreated', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
+                DateTime timeCreated,
+            @JsonKey(name: 'timeLastPlayed', fromJson: readOptionalDateTimeMilliseconds, toJson: writeOptionalDateTimeMilliseconds)
+                DateTime? timeLastPlayed,
+            @JsonKey(name: 'timeLastUpdated', fromJson: readOptionalDateTimeMilliseconds, toJson: writeOptionalDateTimeMilliseconds)
+                DateTime? timeLastUpdated,
+            @JsonKey(name: 'totalTracks')
+                int totalTracks,
+            @JsonKey(name: 'unlocked')
+                bool unlocked,
+            @JsonKey(name: 'viewerInfo')
+                PlaylistViewerInfo? viewerInfo,
+            @JsonKey(name: 'pandoraId')
+                String pandoraId,
+            @JsonKey(name: 'scope')
+                Scope scope)?
+        playlist,
     TResult Function(
             @JsonKey(name: 'name')
                 String name,
@@ -5679,6 +7993,7 @@ class _$ComposerAnnotation extends ComposerAnnotation {
     required TResult Function(ArtistAnnotation value) artist,
     required TResult Function(AlbumAnnotation value) album,
     required TResult Function(GenreAnnotation value) genre,
+    required TResult Function(PlaylistAnnotation value) playlist,
     required TResult Function(ComposerAnnotation value) composer,
     required TResult Function(ListenerMediaAnnotation value) listener,
   }) {
@@ -5692,6 +8007,7 @@ class _$ComposerAnnotation extends ComposerAnnotation {
     TResult Function(ArtistAnnotation value)? artist,
     TResult Function(AlbumAnnotation value)? album,
     TResult Function(GenreAnnotation value)? genre,
+    TResult Function(PlaylistAnnotation value)? playlist,
     TResult Function(ComposerAnnotation value)? composer,
     TResult Function(ListenerMediaAnnotation value)? listener,
   }) {
@@ -5705,6 +8021,7 @@ class _$ComposerAnnotation extends ComposerAnnotation {
     TResult Function(ArtistAnnotation value)? artist,
     TResult Function(AlbumAnnotation value)? album,
     TResult Function(GenreAnnotation value)? genre,
+    TResult Function(PlaylistAnnotation value)? playlist,
     TResult Function(ComposerAnnotation value)? composer,
     TResult Function(ListenerMediaAnnotation value)? listener,
     required TResult orElse(),
@@ -5954,7 +8271,7 @@ class _$ListenerMediaAnnotation extends ListenerMediaAnnotation {
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
             @JsonKey(name: 'scope')
-                String scope)
+                Scope scope)
         track,
     required TResult Function(
             @JsonKey(name: 'name')
@@ -5990,7 +8307,7 @@ class _$ListenerMediaAnnotation extends ListenerMediaAnnotation {
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
             @JsonKey(name: 'scope')
-                String scope)
+                Scope scope)
         artist,
     required TResult Function(
             @JsonKey(name: 'name')
@@ -6032,7 +8349,7 @@ class _$ListenerMediaAnnotation extends ListenerMediaAnnotation {
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
             @JsonKey(name: 'scope')
-                String scope)
+                Scope scope)
         album,
     required TResult Function(
             @JsonKey(name: 'name')
@@ -6056,8 +8373,58 @@ class _$ListenerMediaAnnotation extends ListenerMediaAnnotation {
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
             @JsonKey(name: 'scope')
-                String scope)
+                Scope scope)
         genre,
+    required TResult Function(
+            @JsonKey(name: 'name')
+                String name,
+            @JsonKey(name: 'allowFeedback', fromJson: readOptInBool, toJson: writeOptInBool)
+                bool allowFeedback,
+            @JsonKey(name: 'autogenForListener')
+                bool autogenForListener,
+            @JsonKey(name: 'collectible')
+                bool collectible,
+            @JsonKey(name: 'description', fromJson: readOptionalString, toJson: writeOptionalString)
+                String? description,
+            @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
+                Duration duration,
+            @JsonKey(name: 'includedTrackTypes')
+                List<PandoraType> includedTrackTypes,
+            @JsonKey(name: 'isPrivate')
+                bool isPrivate,
+            @JsonKey(name: 'linkedType')
+                PlaylistLinkedType linkedType,
+            @JsonKey(name: 'listenerId')
+                int listenerId,
+            @JsonKey(name: 'listenerIdInfo')
+                ListenerIdInfo listenerIdInfo,
+            @JsonKey(name: 'listenerIdToken')
+                String listenerIdToken,
+            @JsonKey(name: 'listenerPandoraId')
+                String listenerPandoraId,
+            @JsonKey(name: 'secret')
+                bool secret,
+            @JsonKey(name: 'shareableUrlPath')
+                String shareableUrlPath,
+            @JsonKey(name: 'thorLayers')
+                String thorLayers,
+            @JsonKey(name: 'timeCreated', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
+                DateTime timeCreated,
+            @JsonKey(name: 'timeLastPlayed', fromJson: readOptionalDateTimeMilliseconds, toJson: writeOptionalDateTimeMilliseconds)
+                DateTime? timeLastPlayed,
+            @JsonKey(name: 'timeLastUpdated', fromJson: readOptionalDateTimeMilliseconds, toJson: writeOptionalDateTimeMilliseconds)
+                DateTime? timeLastUpdated,
+            @JsonKey(name: 'totalTracks')
+                int totalTracks,
+            @JsonKey(name: 'unlocked')
+                bool unlocked,
+            @JsonKey(name: 'viewerInfo')
+                PlaylistViewerInfo? viewerInfo,
+            @JsonKey(name: 'pandoraId')
+                String pandoraId,
+            @JsonKey(name: 'scope')
+                Scope scope)
+        playlist,
     required TResult Function(
             @JsonKey(name: 'name')
                 String name,
@@ -6132,7 +8499,7 @@ class _$ListenerMediaAnnotation extends ListenerMediaAnnotation {
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
             @JsonKey(name: 'scope')
-                String scope)?
+                Scope scope)?
         track,
     TResult Function(
             @JsonKey(name: 'name')
@@ -6168,7 +8535,7 @@ class _$ListenerMediaAnnotation extends ListenerMediaAnnotation {
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
             @JsonKey(name: 'scope')
-                String scope)?
+                Scope scope)?
         artist,
     TResult Function(
             @JsonKey(name: 'name')
@@ -6210,7 +8577,7 @@ class _$ListenerMediaAnnotation extends ListenerMediaAnnotation {
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
             @JsonKey(name: 'scope')
-                String scope)?
+                Scope scope)?
         album,
     TResult Function(
             @JsonKey(name: 'name')
@@ -6234,8 +8601,58 @@ class _$ListenerMediaAnnotation extends ListenerMediaAnnotation {
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
             @JsonKey(name: 'scope')
-                String scope)?
+                Scope scope)?
         genre,
+    TResult Function(
+            @JsonKey(name: 'name')
+                String name,
+            @JsonKey(name: 'allowFeedback', fromJson: readOptInBool, toJson: writeOptInBool)
+                bool allowFeedback,
+            @JsonKey(name: 'autogenForListener')
+                bool autogenForListener,
+            @JsonKey(name: 'collectible')
+                bool collectible,
+            @JsonKey(name: 'description', fromJson: readOptionalString, toJson: writeOptionalString)
+                String? description,
+            @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
+                Duration duration,
+            @JsonKey(name: 'includedTrackTypes')
+                List<PandoraType> includedTrackTypes,
+            @JsonKey(name: 'isPrivate')
+                bool isPrivate,
+            @JsonKey(name: 'linkedType')
+                PlaylistLinkedType linkedType,
+            @JsonKey(name: 'listenerId')
+                int listenerId,
+            @JsonKey(name: 'listenerIdInfo')
+                ListenerIdInfo listenerIdInfo,
+            @JsonKey(name: 'listenerIdToken')
+                String listenerIdToken,
+            @JsonKey(name: 'listenerPandoraId')
+                String listenerPandoraId,
+            @JsonKey(name: 'secret')
+                bool secret,
+            @JsonKey(name: 'shareableUrlPath')
+                String shareableUrlPath,
+            @JsonKey(name: 'thorLayers')
+                String thorLayers,
+            @JsonKey(name: 'timeCreated', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
+                DateTime timeCreated,
+            @JsonKey(name: 'timeLastPlayed', fromJson: readOptionalDateTimeMilliseconds, toJson: writeOptionalDateTimeMilliseconds)
+                DateTime? timeLastPlayed,
+            @JsonKey(name: 'timeLastUpdated', fromJson: readOptionalDateTimeMilliseconds, toJson: writeOptionalDateTimeMilliseconds)
+                DateTime? timeLastUpdated,
+            @JsonKey(name: 'totalTracks')
+                int totalTracks,
+            @JsonKey(name: 'unlocked')
+                bool unlocked,
+            @JsonKey(name: 'viewerInfo')
+                PlaylistViewerInfo? viewerInfo,
+            @JsonKey(name: 'pandoraId')
+                String pandoraId,
+            @JsonKey(name: 'scope')
+                Scope scope)?
+        playlist,
     TResult Function(
             @JsonKey(name: 'name')
                 String name,
@@ -6311,7 +8728,7 @@ class _$ListenerMediaAnnotation extends ListenerMediaAnnotation {
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
             @JsonKey(name: 'scope')
-                String scope)?
+                Scope scope)?
         track,
     TResult Function(
             @JsonKey(name: 'name')
@@ -6347,7 +8764,7 @@ class _$ListenerMediaAnnotation extends ListenerMediaAnnotation {
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
             @JsonKey(name: 'scope')
-                String scope)?
+                Scope scope)?
         artist,
     TResult Function(
             @JsonKey(name: 'name')
@@ -6389,7 +8806,7 @@ class _$ListenerMediaAnnotation extends ListenerMediaAnnotation {
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
             @JsonKey(name: 'scope')
-                String scope)?
+                Scope scope)?
         album,
     TResult Function(
             @JsonKey(name: 'name')
@@ -6413,8 +8830,58 @@ class _$ListenerMediaAnnotation extends ListenerMediaAnnotation {
             @JsonKey(name: 'pandoraId')
                 String pandoraId,
             @JsonKey(name: 'scope')
-                String scope)?
+                Scope scope)?
         genre,
+    TResult Function(
+            @JsonKey(name: 'name')
+                String name,
+            @JsonKey(name: 'allowFeedback', fromJson: readOptInBool, toJson: writeOptInBool)
+                bool allowFeedback,
+            @JsonKey(name: 'autogenForListener')
+                bool autogenForListener,
+            @JsonKey(name: 'collectible')
+                bool collectible,
+            @JsonKey(name: 'description', fromJson: readOptionalString, toJson: writeOptionalString)
+                String? description,
+            @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
+                Duration duration,
+            @JsonKey(name: 'includedTrackTypes')
+                List<PandoraType> includedTrackTypes,
+            @JsonKey(name: 'isPrivate')
+                bool isPrivate,
+            @JsonKey(name: 'linkedType')
+                PlaylistLinkedType linkedType,
+            @JsonKey(name: 'listenerId')
+                int listenerId,
+            @JsonKey(name: 'listenerIdInfo')
+                ListenerIdInfo listenerIdInfo,
+            @JsonKey(name: 'listenerIdToken')
+                String listenerIdToken,
+            @JsonKey(name: 'listenerPandoraId')
+                String listenerPandoraId,
+            @JsonKey(name: 'secret')
+                bool secret,
+            @JsonKey(name: 'shareableUrlPath')
+                String shareableUrlPath,
+            @JsonKey(name: 'thorLayers')
+                String thorLayers,
+            @JsonKey(name: 'timeCreated', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
+                DateTime timeCreated,
+            @JsonKey(name: 'timeLastPlayed', fromJson: readOptionalDateTimeMilliseconds, toJson: writeOptionalDateTimeMilliseconds)
+                DateTime? timeLastPlayed,
+            @JsonKey(name: 'timeLastUpdated', fromJson: readOptionalDateTimeMilliseconds, toJson: writeOptionalDateTimeMilliseconds)
+                DateTime? timeLastUpdated,
+            @JsonKey(name: 'totalTracks')
+                int totalTracks,
+            @JsonKey(name: 'unlocked')
+                bool unlocked,
+            @JsonKey(name: 'viewerInfo')
+                PlaylistViewerInfo? viewerInfo,
+            @JsonKey(name: 'pandoraId')
+                String pandoraId,
+            @JsonKey(name: 'scope')
+                Scope scope)?
+        playlist,
     TResult Function(
             @JsonKey(name: 'name')
                 String name,
@@ -6461,6 +8928,7 @@ class _$ListenerMediaAnnotation extends ListenerMediaAnnotation {
     required TResult Function(ArtistAnnotation value) artist,
     required TResult Function(AlbumAnnotation value) album,
     required TResult Function(GenreAnnotation value) genre,
+    required TResult Function(PlaylistAnnotation value) playlist,
     required TResult Function(ComposerAnnotation value) composer,
     required TResult Function(ListenerMediaAnnotation value) listener,
   }) {
@@ -6474,6 +8942,7 @@ class _$ListenerMediaAnnotation extends ListenerMediaAnnotation {
     TResult Function(ArtistAnnotation value)? artist,
     TResult Function(AlbumAnnotation value)? album,
     TResult Function(GenreAnnotation value)? genre,
+    TResult Function(PlaylistAnnotation value)? playlist,
     TResult Function(ComposerAnnotation value)? composer,
     TResult Function(ListenerMediaAnnotation value)? listener,
   }) {
@@ -6487,6 +8956,7 @@ class _$ListenerMediaAnnotation extends ListenerMediaAnnotation {
     TResult Function(ArtistAnnotation value)? artist,
     TResult Function(AlbumAnnotation value)? album,
     TResult Function(GenreAnnotation value)? genre,
+    TResult Function(PlaylistAnnotation value)? playlist,
     TResult Function(ComposerAnnotation value)? composer,
     TResult Function(ListenerMediaAnnotation value)? listener,
     required TResult orElse(),

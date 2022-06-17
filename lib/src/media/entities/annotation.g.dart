@@ -29,7 +29,7 @@ _$TrackAnnotation _$$TrackAnnotationFromJson(Map<String, dynamic> json) =>
       slugPlusPandoraId: json['slugPlusPandoraId'] as String,
       isrc: json['isrc'] as String,
       pandoraId: json['pandoraId'] as String,
-      scope: json['scope'] as String,
+      scope: $enumDecode(_$ScopeEnumMap, json['scope']),
       $type: json['type'] as String?,
     );
 
@@ -52,7 +52,7 @@ Map<String, dynamic> _$$TrackAnnotationToJson(_$TrackAnnotation instance) =>
       'slugPlusPandoraId': instance.slugPlusPandoraId,
       'isrc': instance.isrc,
       'pandoraId': instance.pandoraId,
-      'scope': instance.scope,
+      'scope': _$ScopeEnumMap[instance.scope],
       'type': instance.$type,
     };
 
@@ -60,6 +60,11 @@ const _$ExplicitnessEnumMap = {
   Explicitness.clean: 'CLEAN',
   Explicitness.explicit: 'EXPLICIT',
   Explicitness.none: 'NONE',
+};
+
+const _$ScopeEnumMap = {
+  Scope.core: 'core',
+  Scope.details: 'details',
 };
 
 _$ArtistAnnotation _$$ArtistAnnotationFromJson(Map<String, dynamic> json) =>
@@ -83,7 +88,7 @@ _$ArtistAnnotation _$$ArtistAnnotationFromJson(Map<String, dynamic> json) =>
       megastar: json['megastar'] as bool,
       hasTakeoverModes: json['hasTakeoverModes'] as bool,
       pandoraId: json['pandoraId'] as String,
-      scope: json['scope'] as String,
+      scope: $enumDecode(_$ScopeEnumMap, json['scope']),
       $type: json['type'] as String?,
     );
 
@@ -105,7 +110,7 @@ Map<String, dynamic> _$$ArtistAnnotationToJson(_$ArtistAnnotation instance) =>
       'megastar': instance.megastar,
       'hasTakeoverModes': instance.hasTakeoverModes,
       'pandoraId': instance.pandoraId,
-      'scope': instance.scope,
+      'scope': _$ScopeEnumMap[instance.scope],
       'type': instance.$type,
     };
 
@@ -133,7 +138,7 @@ _$AlbumAnnotation _$$AlbumAnnotationFromJson(Map<String, dynamic> json) =>
       releaseType: json['releaseType'] as String,
       listenerReleaseType: json['listenerReleaseType'] as String,
       pandoraId: json['pandoraId'] as String,
-      scope: json['scope'] as String,
+      scope: $enumDecode(_$ScopeEnumMap, json['scope']),
       $type: json['type'] as String?,
     );
 
@@ -158,7 +163,7 @@ Map<String, dynamic> _$$AlbumAnnotationToJson(_$AlbumAnnotation instance) =>
       'releaseType': instance.releaseType,
       'listenerReleaseType': instance.listenerReleaseType,
       'pandoraId': instance.pandoraId,
-      'scope': instance.scope,
+      'scope': _$ScopeEnumMap[instance.scope],
       'type': instance.$type,
     };
 
@@ -175,7 +180,7 @@ _$GenreAnnotation _$$GenreAnnotationFromJson(Map<String, dynamic> json) =>
       hasTakeoverModes: json['hasTakeoverModes'] as bool,
       hasCuratedModes: json['hasCuratedModes'] as bool,
       pandoraId: json['pandoraId'] as String,
-      scope: json['scope'] as String,
+      scope: $enumDecode(_$ScopeEnumMap, json['scope']),
       $type: json['type'] as String?,
     );
 
@@ -191,9 +196,115 @@ Map<String, dynamic> _$$GenreAnnotationToJson(_$GenreAnnotation instance) =>
       'hasTakeoverModes': instance.hasTakeoverModes,
       'hasCuratedModes': instance.hasCuratedModes,
       'pandoraId': instance.pandoraId,
-      'scope': instance.scope,
+      'scope': _$ScopeEnumMap[instance.scope],
       'type': instance.$type,
     };
+
+_$PlaylistAnnotation _$$PlaylistAnnotationFromJson(Map<String, dynamic> json) =>
+    _$PlaylistAnnotation(
+      name: json['name'] as String,
+      allowFeedback: readOptInBool(json['allowFeedback'] as bool?),
+      autogenForListener: json['autogenForListener'] as bool,
+      collectible: json['collectible'] as bool,
+      description: readOptionalString(json['description'] as String?),
+      duration: readSeconds(json['duration'] as int),
+      includedTrackTypes: (json['includedTrackTypes'] as List<dynamic>)
+          .map((e) => $enumDecode(_$PandoraTypeEnumMap, e))
+          .toList(),
+      isPrivate: json['isPrivate'] as bool,
+      linkedType: $enumDecode(_$PlaylistLinkedTypeEnumMap, json['linkedType']),
+      listenerId: json['listenerId'] as int,
+      listenerIdInfo: ListenerIdInfo.fromJson(
+          json['listenerIdInfo'] as Map<String, dynamic>),
+      listenerIdToken: json['listenerIdToken'] as String,
+      listenerPandoraId: json['listenerPandoraId'] as String,
+      secret: json['secret'] as bool,
+      shareableUrlPath: json['shareableUrlPath'] as String,
+      thorLayers: json['thorLayers'] as String,
+      timeCreated: readDateTimeMilliseconds(json['timeCreated'] as int),
+      timeLastPlayed:
+          readOptionalDateTimeMilliseconds(json['timeLastPlayed'] as int?),
+      timeLastUpdated:
+          readOptionalDateTimeMilliseconds(json['timeLastUpdated'] as int?),
+      totalTracks: json['totalTracks'] as int,
+      unlocked: json['unlocked'] as bool,
+      viewerInfo: json['viewerInfo'] == null
+          ? null
+          : PlaylistViewerInfo.fromJson(
+              json['viewerInfo'] as Map<String, dynamic>),
+      pandoraId: json['pandoraId'] as String,
+      scope: $enumDecode(_$ScopeEnumMap, json['scope']),
+      $type: json['type'] as String?,
+    );
+
+Map<String, dynamic> _$$PlaylistAnnotationToJson(
+        _$PlaylistAnnotation instance) =>
+    <String, dynamic>{
+      'name': instance.name,
+      'allowFeedback': writeOptInBool(instance.allowFeedback),
+      'autogenForListener': instance.autogenForListener,
+      'collectible': instance.collectible,
+      'description': writeOptionalString(instance.description),
+      'duration': writeSeconds(instance.duration),
+      'includedTrackTypes': instance.includedTrackTypes
+          .map((e) => _$PandoraTypeEnumMap[e])
+          .toList(),
+      'isPrivate': instance.isPrivate,
+      'linkedType': _$PlaylistLinkedTypeEnumMap[instance.linkedType],
+      'listenerId': instance.listenerId,
+      'listenerIdInfo': instance.listenerIdInfo,
+      'listenerIdToken': instance.listenerIdToken,
+      'listenerPandoraId': instance.listenerPandoraId,
+      'secret': instance.secret,
+      'shareableUrlPath': instance.shareableUrlPath,
+      'thorLayers': instance.thorLayers,
+      'timeCreated': writeDateTimeMilliseconds(instance.timeCreated),
+      'timeLastPlayed':
+          writeOptionalDateTimeMilliseconds(instance.timeLastPlayed),
+      'timeLastUpdated':
+          writeOptionalDateTimeMilliseconds(instance.timeLastUpdated),
+      'totalTracks': instance.totalTracks,
+      'unlocked': instance.unlocked,
+      'viewerInfo': instance.viewerInfo,
+      'pandoraId': instance.pandoraId,
+      'scope': _$ScopeEnumMap[instance.scope],
+      'type': instance.$type,
+    };
+
+const _$PandoraTypeEnumMap = {
+  PandoraType.album: 'AL',
+  PandoraType.artist: 'AR',
+  PandoraType.artistAllSongs: 'AT',
+  PandoraType.artistTopSongs: 'AP',
+  PandoraType.autoplay: 'AU',
+  PandoraType.browseDirectory: 'BR',
+  PandoraType.collectedAlbumTracks: 'CA',
+  PandoraType.collectedTracks: 'CT',
+  PandoraType.composer: 'CO',
+  PandoraType.downloadedTracks: 'DT',
+  PandoraType.genre: 'GE',
+  PandoraType.playlist: 'PL',
+  PandoraType.podcast: 'PC',
+  PandoraType.podcastAutoplay: 'PA',
+  PandoraType.episode: 'PE',
+  PandoraType.song: 'TR',
+  PandoraType.station: 'ST',
+  PandoraType.stationSampleTracks: 'SS',
+  PandoraType.stationThumbUp: 'TU',
+  PandoraType.userStation: 'ST',
+  PandoraType.hybridStation: 'HS',
+  PandoraType.voiceTrack: 'AM',
+  PandoraType.listener: 'LI',
+  PandoraType.podcastCategory: 'TG',
+};
+
+const _$PlaylistLinkedTypeEnumMap = {
+  PlaylistLinkedType.none: 'NULL',
+  PlaylistLinkedType.myThumbsUp: 'MyThumbsUp',
+  PlaylistLinkedType.personalized: 'Personalized',
+  PlaylistLinkedType.sharedListening: 'SharedListening',
+  PlaylistLinkedType.stationThumbs: 'StationThumbs',
+};
 
 _$ComposerAnnotation _$$ComposerAnnotationFromJson(Map<String, dynamic> json) =>
     _$ComposerAnnotation(
