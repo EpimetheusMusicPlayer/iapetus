@@ -304,6 +304,7 @@ const _$PlaylistLinkedTypeEnumMap = {
   PlaylistLinkedType.personalized: 'Personalized',
   PlaylistLinkedType.sharedListening: 'SharedListening',
   PlaylistLinkedType.stationThumbs: 'StationThumbs',
+  PlaylistLinkedType.curated: 'Curated',
 };
 
 _$ComposerAnnotation _$$ComposerAnnotationFromJson(Map<String, dynamic> json) =>

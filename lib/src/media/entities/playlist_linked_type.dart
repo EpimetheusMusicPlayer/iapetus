@@ -11,4 +11,6 @@ enum PlaylistLinkedType {
   sharedListening,
   @JsonValue('StationThumbs')
   stationThumbs,
+  @JsonValue('Curated')
+  curated,
 }
