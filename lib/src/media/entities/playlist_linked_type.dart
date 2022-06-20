@@ -1,7 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 enum PlaylistLinkedType {
-  @JsonValue('NULL')
+  @JsonValue('None')
   none,
   @JsonValue('MyThumbsUp')
   myThumbsUp,
@@ -13,4 +13,6 @@ enum PlaylistLinkedType {
   stationThumbs,
   @JsonValue('Curated')
   curated,
+  @JsonValue('NULL')
+  unspecified,
 }

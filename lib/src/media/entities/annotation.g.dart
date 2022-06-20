@@ -299,12 +299,13 @@ const _$PandoraTypeEnumMap = {
 };
 
 const _$PlaylistLinkedTypeEnumMap = {
-  PlaylistLinkedType.none: 'NULL',
+  PlaylistLinkedType.none: 'None',
   PlaylistLinkedType.myThumbsUp: 'MyThumbsUp',
   PlaylistLinkedType.personalized: 'Personalized',
   PlaylistLinkedType.sharedListening: 'SharedListening',
   PlaylistLinkedType.stationThumbs: 'StationThumbs',
   PlaylistLinkedType.curated: 'Curated',
+  PlaylistLinkedType.unspecified: 'NULL',
 };
 
 _$ComposerAnnotation _$$ComposerAnnotationFromJson(Map<String, dynamic> json) =>
