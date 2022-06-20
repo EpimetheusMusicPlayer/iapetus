@@ -348,7 +348,7 @@ _$ListenerMediaAnnotation _$$ListenerMediaAnnotationFromJson(
       pandoraId: json['pandoraId'] as String,
       listenerId: json['listenerId'] as int,
       webname: json['webname'] as String,
-      fullName: json['fullname'] as String,
+      fullName: json['fullname'] as String?,
       displayName: json['displayname'] as String,
       $type: json['type'] as String?,
     );

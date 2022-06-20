@@ -173,7 +173,7 @@ class MediaAnnotation with _$MediaAnnotation implements PandoraEntity {
     @JsonKey(name: 'pandoraId') required String pandoraId,
     @JsonKey(name: 'listenerId') required int listenerId,
     @JsonKey(name: 'webname') required String webname,
-    @JsonKey(name: 'fullname') required String fullName,
+    @JsonKey(name: 'fullname') required String? fullName,
     @JsonKey(name: 'displayname') required String displayName,
     // TODO investigate bio and imageUrl fields
   }) = ListenerMediaAnnotation;

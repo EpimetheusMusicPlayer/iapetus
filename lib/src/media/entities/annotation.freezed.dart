@@ -261,7 +261,7 @@ mixin _$MediaAnnotation {
             @JsonKey(name: 'pandoraId') String pandoraId,
             @JsonKey(name: 'listenerId') int listenerId,
             @JsonKey(name: 'webname') String webname,
-            @JsonKey(name: 'fullname') String fullName,
+            @JsonKey(name: 'fullname') String? fullName,
             @JsonKey(name: 'displayname') String displayName)
         listener,
   }) =>
@@ -486,7 +486,7 @@ mixin _$MediaAnnotation {
             @JsonKey(name: 'pandoraId') String pandoraId,
             @JsonKey(name: 'listenerId') int listenerId,
             @JsonKey(name: 'webname') String webname,
-            @JsonKey(name: 'fullname') String fullName,
+            @JsonKey(name: 'fullname') String? fullName,
             @JsonKey(name: 'displayname') String displayName)?
         listener,
   }) =>
@@ -711,7 +711,7 @@ mixin _$MediaAnnotation {
             @JsonKey(name: 'pandoraId') String pandoraId,
             @JsonKey(name: 'listenerId') int listenerId,
             @JsonKey(name: 'webname') String webname,
-            @JsonKey(name: 'fullname') String fullName,
+            @JsonKey(name: 'fullname') String? fullName,
             @JsonKey(name: 'displayname') String displayName)?
         listener,
     required TResult orElse(),
@@ -1361,7 +1361,7 @@ class _$TrackAnnotation extends TrackAnnotation {
             @JsonKey(name: 'pandoraId') String pandoraId,
             @JsonKey(name: 'listenerId') int listenerId,
             @JsonKey(name: 'webname') String webname,
-            @JsonKey(name: 'fullname') String fullName,
+            @JsonKey(name: 'fullname') String? fullName,
             @JsonKey(name: 'displayname') String displayName)
         listener,
   }) {
@@ -1607,7 +1607,7 @@ class _$TrackAnnotation extends TrackAnnotation {
             @JsonKey(name: 'pandoraId') String pandoraId,
             @JsonKey(name: 'listenerId') int listenerId,
             @JsonKey(name: 'webname') String webname,
-            @JsonKey(name: 'fullname') String fullName,
+            @JsonKey(name: 'fullname') String? fullName,
             @JsonKey(name: 'displayname') String displayName)?
         listener,
   }) {
@@ -1853,7 +1853,7 @@ class _$TrackAnnotation extends TrackAnnotation {
             @JsonKey(name: 'pandoraId') String pandoraId,
             @JsonKey(name: 'listenerId') int listenerId,
             @JsonKey(name: 'webname') String webname,
-            @JsonKey(name: 'fullname') String fullName,
+            @JsonKey(name: 'fullname') String? fullName,
             @JsonKey(name: 'displayname') String displayName)?
         listener,
     required TResult orElse(),
@@ -2587,7 +2587,7 @@ class _$ArtistAnnotation extends ArtistAnnotation {
             @JsonKey(name: 'pandoraId') String pandoraId,
             @JsonKey(name: 'listenerId') int listenerId,
             @JsonKey(name: 'webname') String webname,
-            @JsonKey(name: 'fullname') String fullName,
+            @JsonKey(name: 'fullname') String? fullName,
             @JsonKey(name: 'displayname') String displayName)
         listener,
   }) {
@@ -2832,7 +2832,7 @@ class _$ArtistAnnotation extends ArtistAnnotation {
             @JsonKey(name: 'pandoraId') String pandoraId,
             @JsonKey(name: 'listenerId') int listenerId,
             @JsonKey(name: 'webname') String webname,
-            @JsonKey(name: 'fullname') String fullName,
+            @JsonKey(name: 'fullname') String? fullName,
             @JsonKey(name: 'displayname') String displayName)?
         listener,
   }) {
@@ -3077,7 +3077,7 @@ class _$ArtistAnnotation extends ArtistAnnotation {
             @JsonKey(name: 'pandoraId') String pandoraId,
             @JsonKey(name: 'listenerId') int listenerId,
             @JsonKey(name: 'webname') String webname,
-            @JsonKey(name: 'fullname') String fullName,
+            @JsonKey(name: 'fullname') String? fullName,
             @JsonKey(name: 'displayname') String displayName)?
         listener,
     required TResult orElse(),
@@ -3858,7 +3858,7 @@ class _$AlbumAnnotation extends AlbumAnnotation {
             @JsonKey(name: 'pandoraId') String pandoraId,
             @JsonKey(name: 'listenerId') int listenerId,
             @JsonKey(name: 'webname') String webname,
-            @JsonKey(name: 'fullname') String fullName,
+            @JsonKey(name: 'fullname') String? fullName,
             @JsonKey(name: 'displayname') String displayName)
         listener,
   }) {
@@ -4106,7 +4106,7 @@ class _$AlbumAnnotation extends AlbumAnnotation {
             @JsonKey(name: 'pandoraId') String pandoraId,
             @JsonKey(name: 'listenerId') int listenerId,
             @JsonKey(name: 'webname') String webname,
-            @JsonKey(name: 'fullname') String fullName,
+            @JsonKey(name: 'fullname') String? fullName,
             @JsonKey(name: 'displayname') String displayName)?
         listener,
   }) {
@@ -4354,7 +4354,7 @@ class _$AlbumAnnotation extends AlbumAnnotation {
             @JsonKey(name: 'pandoraId') String pandoraId,
             @JsonKey(name: 'listenerId') int listenerId,
             @JsonKey(name: 'webname') String webname,
-            @JsonKey(name: 'fullname') String fullName,
+            @JsonKey(name: 'fullname') String? fullName,
             @JsonKey(name: 'displayname') String displayName)?
         listener,
     required TResult orElse(),
@@ -5005,7 +5005,7 @@ class _$GenreAnnotation extends GenreAnnotation {
             @JsonKey(name: 'pandoraId') String pandoraId,
             @JsonKey(name: 'listenerId') int listenerId,
             @JsonKey(name: 'webname') String webname,
-            @JsonKey(name: 'fullname') String fullName,
+            @JsonKey(name: 'fullname') String? fullName,
             @JsonKey(name: 'displayname') String displayName)
         listener,
   }) {
@@ -5244,7 +5244,7 @@ class _$GenreAnnotation extends GenreAnnotation {
             @JsonKey(name: 'pandoraId') String pandoraId,
             @JsonKey(name: 'listenerId') int listenerId,
             @JsonKey(name: 'webname') String webname,
-            @JsonKey(name: 'fullname') String fullName,
+            @JsonKey(name: 'fullname') String? fullName,
             @JsonKey(name: 'displayname') String displayName)?
         listener,
   }) {
@@ -5483,7 +5483,7 @@ class _$GenreAnnotation extends GenreAnnotation {
             @JsonKey(name: 'pandoraId') String pandoraId,
             @JsonKey(name: 'listenerId') int listenerId,
             @JsonKey(name: 'webname') String webname,
-            @JsonKey(name: 'fullname') String fullName,
+            @JsonKey(name: 'fullname') String? fullName,
             @JsonKey(name: 'displayname') String displayName)?
         listener,
     required TResult orElse(),
@@ -6304,7 +6304,7 @@ class _$PlaylistAnnotation extends PlaylistAnnotation {
             @JsonKey(name: 'pandoraId') String pandoraId,
             @JsonKey(name: 'listenerId') int listenerId,
             @JsonKey(name: 'webname') String webname,
-            @JsonKey(name: 'fullname') String fullName,
+            @JsonKey(name: 'fullname') String? fullName,
             @JsonKey(name: 'displayname') String displayName)
         listener,
   }) {
@@ -6556,7 +6556,7 @@ class _$PlaylistAnnotation extends PlaylistAnnotation {
             @JsonKey(name: 'pandoraId') String pandoraId,
             @JsonKey(name: 'listenerId') int listenerId,
             @JsonKey(name: 'webname') String webname,
-            @JsonKey(name: 'fullname') String fullName,
+            @JsonKey(name: 'fullname') String? fullName,
             @JsonKey(name: 'displayname') String displayName)?
         listener,
   }) {
@@ -6808,7 +6808,7 @@ class _$PlaylistAnnotation extends PlaylistAnnotation {
             @JsonKey(name: 'pandoraId') String pandoraId,
             @JsonKey(name: 'listenerId') int listenerId,
             @JsonKey(name: 'webname') String webname,
-            @JsonKey(name: 'fullname') String fullName,
+            @JsonKey(name: 'fullname') String? fullName,
             @JsonKey(name: 'displayname') String displayName)?
         listener,
     required TResult orElse(),
@@ -7486,7 +7486,7 @@ class _$ComposerAnnotation extends ComposerAnnotation {
             @JsonKey(name: 'pandoraId') String pandoraId,
             @JsonKey(name: 'listenerId') int listenerId,
             @JsonKey(name: 'webname') String webname,
-            @JsonKey(name: 'fullname') String fullName,
+            @JsonKey(name: 'fullname') String? fullName,
             @JsonKey(name: 'displayname') String displayName)
         listener,
   }) {
@@ -7725,7 +7725,7 @@ class _$ComposerAnnotation extends ComposerAnnotation {
             @JsonKey(name: 'pandoraId') String pandoraId,
             @JsonKey(name: 'listenerId') int listenerId,
             @JsonKey(name: 'webname') String webname,
-            @JsonKey(name: 'fullname') String fullName,
+            @JsonKey(name: 'fullname') String? fullName,
             @JsonKey(name: 'displayname') String displayName)?
         listener,
   }) {
@@ -7964,7 +7964,7 @@ class _$ComposerAnnotation extends ComposerAnnotation {
             @JsonKey(name: 'pandoraId') String pandoraId,
             @JsonKey(name: 'listenerId') int listenerId,
             @JsonKey(name: 'webname') String webname,
-            @JsonKey(name: 'fullname') String fullName,
+            @JsonKey(name: 'fullname') String? fullName,
             @JsonKey(name: 'displayname') String displayName)?
         listener,
     required TResult orElse(),
@@ -8113,7 +8113,7 @@ abstract class _$$ListenerMediaAnnotationCopyWith<$Res>
       {@JsonKey(name: 'pandoraId') String pandoraId,
       @JsonKey(name: 'listenerId') int listenerId,
       @JsonKey(name: 'webname') String webname,
-      @JsonKey(name: 'fullname') String fullName,
+      @JsonKey(name: 'fullname') String? fullName,
       @JsonKey(name: 'displayname') String displayName});
 }
 
@@ -8153,7 +8153,7 @@ class __$$ListenerMediaAnnotationCopyWithImpl<$Res>
       fullName: fullName == freezed
           ? _value.fullName
           : fullName // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       displayName: displayName == freezed
           ? _value.displayName
           : displayName // ignore: cast_nullable_to_non_nullable
@@ -8189,7 +8189,7 @@ class _$ListenerMediaAnnotation extends ListenerMediaAnnotation {
   final String webname;
   @override
   @JsonKey(name: 'fullname')
-  final String fullName;
+  final String? fullName;
   @override
   @JsonKey(name: 'displayname')
   final String displayName;
@@ -8453,7 +8453,7 @@ class _$ListenerMediaAnnotation extends ListenerMediaAnnotation {
             @JsonKey(name: 'pandoraId') String pandoraId,
             @JsonKey(name: 'listenerId') int listenerId,
             @JsonKey(name: 'webname') String webname,
-            @JsonKey(name: 'fullname') String fullName,
+            @JsonKey(name: 'fullname') String? fullName,
             @JsonKey(name: 'displayname') String displayName)
         listener,
   }) {
@@ -8681,7 +8681,7 @@ class _$ListenerMediaAnnotation extends ListenerMediaAnnotation {
             @JsonKey(name: 'pandoraId') String pandoraId,
             @JsonKey(name: 'listenerId') int listenerId,
             @JsonKey(name: 'webname') String webname,
-            @JsonKey(name: 'fullname') String fullName,
+            @JsonKey(name: 'fullname') String? fullName,
             @JsonKey(name: 'displayname') String displayName)?
         listener,
   }) {
@@ -8910,7 +8910,7 @@ class _$ListenerMediaAnnotation extends ListenerMediaAnnotation {
             @JsonKey(name: 'pandoraId') String pandoraId,
             @JsonKey(name: 'listenerId') int listenerId,
             @JsonKey(name: 'webname') String webname,
-            @JsonKey(name: 'fullname') String fullName,
+            @JsonKey(name: 'fullname') String? fullName,
             @JsonKey(name: 'displayname') String displayName)?
         listener,
     required TResult orElse(),
@@ -8978,7 +8978,7 @@ abstract class ListenerMediaAnnotation extends MediaAnnotation {
           {@JsonKey(name: 'pandoraId') required final String pandoraId,
           @JsonKey(name: 'listenerId') required final int listenerId,
           @JsonKey(name: 'webname') required final String webname,
-          @JsonKey(name: 'fullname') required final String fullName,
+          @JsonKey(name: 'fullname') required final String? fullName,
           @JsonKey(name: 'displayname') required final String displayName}) =
       _$ListenerMediaAnnotation;
   const ListenerMediaAnnotation._() : super._();
@@ -8994,7 +8994,7 @@ abstract class ListenerMediaAnnotation extends MediaAnnotation {
   @JsonKey(name: 'webname')
   String get webname => throw _privateConstructorUsedError;
   @JsonKey(name: 'fullname')
-  String get fullName => throw _privateConstructorUsedError;
+  String? get fullName => throw _privateConstructorUsedError;
   @JsonKey(name: 'displayname')
   String get displayName => throw _privateConstructorUsedError;
   @override
