@@ -10,15 +10,28 @@ part of 'authenticated_partner.dart';
 
 _$_AuthenticatedPartner _$$_AuthenticatedPartnerFromJson(
         Map<String, dynamic> json) =>
-    _$_AuthenticatedPartner(
-      syncTime: decryptSyncTime(json['syncTime'] as String),
-      partnerAuthToken: json['partnerAuthToken'] as String,
-      partnerId: json['partnerId'] as String,
-      stationSkipUnit: json['stationSkipUnit'] as String,
-      stationSkipLimit: json['stationSkipLimit'] as int,
-      urls: (json['urls'] as Map<String, dynamic>).map(
-        (k, e) => MapEntry(k, Uri.parse(e as String)),
-      ),
+    $checkedCreate(
+      r'_$_AuthenticatedPartner',
+      json,
+      ($checkedConvert) {
+        final val = _$_AuthenticatedPartner(
+          syncTime:
+              $checkedConvert('syncTime', (v) => decryptSyncTime(v as String)),
+          partnerAuthToken:
+              $checkedConvert('partnerAuthToken', (v) => v as String),
+          partnerId: $checkedConvert('partnerId', (v) => v as String),
+          stationSkipUnit:
+              $checkedConvert('stationSkipUnit', (v) => v as String),
+          stationSkipLimit:
+              $checkedConvert('stationSkipLimit', (v) => v as int),
+          urls: $checkedConvert(
+              'urls',
+              (v) => (v as Map<String, dynamic>).map(
+                    (k, e) => MapEntry(k, Uri.parse(e as String)),
+                  )),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$_AuthenticatedPartnerToJson(

@@ -9,28 +9,42 @@ part of 'annotation.dart';
 // **************************************************************************
 
 _$TrackAnnotation _$$TrackAnnotationFromJson(Map<String, dynamic> json) =>
-    _$TrackAnnotation(
-      name: json['name'] as String,
-      sortableName: json['sortableName'] as String,
-      duration: readSeconds(json['duration'] as int),
-      trackNumber: json['trackNumber'] as int,
-      icon: MediaIcon.optionalFromJson(json['icon'] as Map<String, dynamic>),
-      rightsInfo:
-          RightsInfo.fromJson(json['rightsInfo'] as Map<String, dynamic>),
-      albumId: json['albumId'] as String,
-      albumName: json['albumName'] as String,
-      artistId: json['artistId'] as String,
-      artistName: json['artistName'] as String,
-      explicitness: $enumDecode(_$ExplicitnessEnumMap, json['explicitness']),
-      shareableUrlPath: json['shareableUrlPath'] as String,
-      hasRadio: readOptInBool(json['hasRadio'] as bool?),
-      modificationTime:
-          readDateTimeMilliseconds(json['modificationTime'] as int),
-      slugPlusPandoraId: json['slugPlusPandoraId'] as String,
-      isrc: json['isrc'] as String,
-      pandoraId: json['pandoraId'] as String,
-      scope: $enumDecode(_$ScopeEnumMap, json['scope']),
-      $type: json['type'] as String?,
+    $checkedCreate(
+      r'_$TrackAnnotation',
+      json,
+      ($checkedConvert) {
+        final val = _$TrackAnnotation(
+          name: $checkedConvert('name', (v) => v as String),
+          sortableName: $checkedConvert('sortableName', (v) => v as String),
+          duration: $checkedConvert('duration', (v) => readSeconds(v as int)),
+          trackNumber: $checkedConvert('trackNumber', (v) => v as int),
+          icon: $checkedConvert('icon',
+              (v) => MediaIcon.optionalFromJson(v as Map<String, dynamic>)),
+          rightsInfo: $checkedConvert('rightsInfo',
+              (v) => RightsInfo.fromJson(v as Map<String, dynamic>)),
+          albumId: $checkedConvert('albumId', (v) => v as String),
+          albumName: $checkedConvert('albumName', (v) => v as String),
+          artistId: $checkedConvert('artistId', (v) => v as String),
+          artistName: $checkedConvert('artistName', (v) => v as String),
+          explicitness: $checkedConvert(
+              'explicitness', (v) => $enumDecode(_$ExplicitnessEnumMap, v)),
+          shareableUrlPath:
+              $checkedConvert('shareableUrlPath', (v) => v as String),
+          hasRadio:
+              $checkedConvert('hasRadio', (v) => readOptInBool(v as bool?)),
+          modificationTime: $checkedConvert(
+              'modificationTime', (v) => readDateTimeMilliseconds(v as int)),
+          slugPlusPandoraId:
+              $checkedConvert('slugPlusPandoraId', (v) => v as String),
+          isrc: $checkedConvert('isrc', (v) => v as String),
+          pandoraId: $checkedConvert('pandoraId', (v) => v as String),
+          scope:
+              $checkedConvert('scope', (v) => $enumDecode(_$ScopeEnumMap, v)),
+          $type: $checkedConvert('type', (v) => v as String?),
+        );
+        return val;
+      },
+      fieldKeyMap: const {r'$type': 'type'},
     );
 
 Map<String, dynamic> _$$TrackAnnotationToJson(_$TrackAnnotation instance) =>
@@ -68,28 +82,44 @@ const _$ScopeEnumMap = {
 };
 
 _$ArtistAnnotation _$$ArtistAnnotationFromJson(Map<String, dynamic> json) =>
-    _$ArtistAnnotation(
-      name: json['name'] as String,
-      sortableName: json['sortableName'] as String,
-      trackCount: json['trackCount'] as int,
-      albumCount: json['albumCount'] as int,
-      icon: MediaIcon.optionalFromJson(json['icon'] as Map<String, dynamic>),
-      shareableUrlPath: json['shareableUrlPath'] as String,
-      twitterHandle: json['twitterHandle'] as String?,
-      hasRadio: readOptInBool(json['hasRadio'] as bool?),
-      modificationTime:
-          readDateTimeMilliseconds(json['modificationTime'] as int),
-      slugPlusPandoraId: json['slugPlusPandoraId'] as String,
-      collaboration: json['collaboration'] as bool,
-      primaryArtistIds: (json['primaryArtists'] as List<dynamic>)
-          .map((e) => e as String)
-          .toList(),
-      variousArtist: json['variousArtist'] as bool,
-      megastar: json['megastar'] as bool,
-      hasTakeoverModes: json['hasTakeoverModes'] as bool,
-      pandoraId: json['pandoraId'] as String,
-      scope: $enumDecode(_$ScopeEnumMap, json['scope']),
-      $type: json['type'] as String?,
+    $checkedCreate(
+      r'_$ArtistAnnotation',
+      json,
+      ($checkedConvert) {
+        final val = _$ArtistAnnotation(
+          name: $checkedConvert('name', (v) => v as String),
+          sortableName: $checkedConvert('sortableName', (v) => v as String),
+          trackCount: $checkedConvert('trackCount', (v) => v as int),
+          albumCount: $checkedConvert('albumCount', (v) => v as int),
+          icon: $checkedConvert('icon',
+              (v) => MediaIcon.optionalFromJson(v as Map<String, dynamic>)),
+          shareableUrlPath:
+              $checkedConvert('shareableUrlPath', (v) => v as String),
+          twitterHandle: $checkedConvert('twitterHandle', (v) => v as String?),
+          hasRadio:
+              $checkedConvert('hasRadio', (v) => readOptInBool(v as bool?)),
+          modificationTime: $checkedConvert(
+              'modificationTime', (v) => readDateTimeMilliseconds(v as int)),
+          slugPlusPandoraId:
+              $checkedConvert('slugPlusPandoraId', (v) => v as String),
+          collaboration: $checkedConvert('collaboration', (v) => v as bool),
+          primaryArtistIds: $checkedConvert('primaryArtists',
+              (v) => (v as List<dynamic>).map((e) => e as String).toList()),
+          variousArtist: $checkedConvert('variousArtist', (v) => v as bool),
+          megastar: $checkedConvert('megastar', (v) => v as bool),
+          hasTakeoverModes:
+              $checkedConvert('hasTakeoverModes', (v) => v as bool),
+          pandoraId: $checkedConvert('pandoraId', (v) => v as String),
+          scope:
+              $checkedConvert('scope', (v) => $enumDecode(_$ScopeEnumMap, v)),
+          $type: $checkedConvert('type', (v) => v as String?),
+        );
+        return val;
+      },
+      fieldKeyMap: const {
+        'primaryArtistIds': 'primaryArtists',
+        r'$type': 'type'
+      },
     );
 
 Map<String, dynamic> _$$ArtistAnnotationToJson(_$ArtistAnnotation instance) =>
@@ -115,31 +145,47 @@ Map<String, dynamic> _$$ArtistAnnotationToJson(_$ArtistAnnotation instance) =>
     };
 
 _$AlbumAnnotation _$$AlbumAnnotationFromJson(Map<String, dynamic> json) =>
-    _$AlbumAnnotation(
-      name: json['name'] as String,
-      sortableName: json['sortableName'] as String,
-      releaseDate: DateTime.parse(json['releaseDate'] as String),
-      duration: readSeconds(json['duration'] as int),
-      trackCount: json['trackCount'] as int,
-      isCompilation: json['isCompilation'] as bool,
-      icon: MediaIcon.optionalFromJson(json['icon'] as Map<String, dynamic>),
-      rightsInfo:
-          RightsInfo.fromJson(json['rightsInfo'] as Map<String, dynamic>),
-      trackIds:
-          (json['tracks'] as List<dynamic>).map((e) => e as String).toList(),
-      artistId: json['artistId'] as String,
-      artistName: json['artistName'] as String,
-      explicitness: $enumDecode(_$ExplicitnessEnumMap, json['explicitness']),
-      shareableUrlPath: json['shareableUrlPath'] as String,
-      modificationTime:
-          readDateTimeMilliseconds(json['modificationTime'] as int),
-      slugPlusPandoraId: json['slugPlusPandoraId'] as String,
-      hasRadio: readOptInBool(json['hasRadio'] as bool?),
-      releaseType: json['releaseType'] as String,
-      listenerReleaseType: json['listenerReleaseType'] as String,
-      pandoraId: json['pandoraId'] as String,
-      scope: $enumDecode(_$ScopeEnumMap, json['scope']),
-      $type: json['type'] as String?,
+    $checkedCreate(
+      r'_$AlbumAnnotation',
+      json,
+      ($checkedConvert) {
+        final val = _$AlbumAnnotation(
+          name: $checkedConvert('name', (v) => v as String),
+          sortableName: $checkedConvert('sortableName', (v) => v as String),
+          releaseDate: $checkedConvert(
+              'releaseDate', (v) => DateTime.parse(v as String)),
+          duration: $checkedConvert('duration', (v) => readSeconds(v as int)),
+          trackCount: $checkedConvert('trackCount', (v) => v as int),
+          isCompilation: $checkedConvert('isCompilation', (v) => v as bool),
+          icon: $checkedConvert('icon',
+              (v) => MediaIcon.optionalFromJson(v as Map<String, dynamic>)),
+          rightsInfo: $checkedConvert('rightsInfo',
+              (v) => RightsInfo.fromJson(v as Map<String, dynamic>)),
+          trackIds: $checkedConvert('tracks',
+              (v) => (v as List<dynamic>).map((e) => e as String).toList()),
+          artistId: $checkedConvert('artistId', (v) => v as String),
+          artistName: $checkedConvert('artistName', (v) => v as String),
+          explicitness: $checkedConvert(
+              'explicitness', (v) => $enumDecode(_$ExplicitnessEnumMap, v)),
+          shareableUrlPath:
+              $checkedConvert('shareableUrlPath', (v) => v as String),
+          modificationTime: $checkedConvert(
+              'modificationTime', (v) => readDateTimeMilliseconds(v as int)),
+          slugPlusPandoraId:
+              $checkedConvert('slugPlusPandoraId', (v) => v as String),
+          hasRadio:
+              $checkedConvert('hasRadio', (v) => readOptInBool(v as bool?)),
+          releaseType: $checkedConvert('releaseType', (v) => v as String),
+          listenerReleaseType:
+              $checkedConvert('listenerReleaseType', (v) => v as String),
+          pandoraId: $checkedConvert('pandoraId', (v) => v as String),
+          scope:
+              $checkedConvert('scope', (v) => $enumDecode(_$ScopeEnumMap, v)),
+          $type: $checkedConvert('type', (v) => v as String?),
+        );
+        return val;
+      },
+      fieldKeyMap: const {'trackIds': 'tracks', r'$type': 'type'},
     );
 
 Map<String, dynamic> _$$AlbumAnnotationToJson(_$AlbumAnnotation instance) =>
@@ -168,20 +214,33 @@ Map<String, dynamic> _$$AlbumAnnotationToJson(_$AlbumAnnotation instance) =>
     };
 
 _$GenreAnnotation _$$GenreAnnotationFromJson(Map<String, dynamic> json) =>
-    _$GenreAnnotation(
-      name: json['name'] as String,
-      sortableName: json['sortableName'] as String,
-      icon: MediaIcon.optionalFromJson(json['icon'] as Map<String, dynamic>),
-      modificationTime:
-          readDateTimeMilliseconds(json['modificationTime'] as int),
-      description: json['description'] as String,
-      stationListenerCount: json['stationListenerCount'] as int,
-      shareableUrlPath: json['shareableUrlPath'] as String,
-      hasTakeoverModes: json['hasTakeoverModes'] as bool,
-      hasCuratedModes: json['hasCuratedModes'] as bool,
-      pandoraId: json['pandoraId'] as String,
-      scope: $enumDecode(_$ScopeEnumMap, json['scope']),
-      $type: json['type'] as String?,
+    $checkedCreate(
+      r'_$GenreAnnotation',
+      json,
+      ($checkedConvert) {
+        final val = _$GenreAnnotation(
+          name: $checkedConvert('name', (v) => v as String),
+          sortableName: $checkedConvert('sortableName', (v) => v as String),
+          icon: $checkedConvert('icon',
+              (v) => MediaIcon.optionalFromJson(v as Map<String, dynamic>)),
+          modificationTime: $checkedConvert(
+              'modificationTime', (v) => readDateTimeMilliseconds(v as int)),
+          description: $checkedConvert('description', (v) => v as String),
+          stationListenerCount:
+              $checkedConvert('stationListenerCount', (v) => v as int),
+          shareableUrlPath:
+              $checkedConvert('shareableUrlPath', (v) => v as String),
+          hasTakeoverModes:
+              $checkedConvert('hasTakeoverModes', (v) => v as bool),
+          hasCuratedModes: $checkedConvert('hasCuratedModes', (v) => v as bool),
+          pandoraId: $checkedConvert('pandoraId', (v) => v as String),
+          scope:
+              $checkedConvert('scope', (v) => $enumDecode(_$ScopeEnumMap, v)),
+          $type: $checkedConvert('type', (v) => v as String?),
+        );
+        return val;
+      },
+      fieldKeyMap: const {r'$type': 'type'},
     );
 
 Map<String, dynamic> _$$GenreAnnotationToJson(_$GenreAnnotation instance) =>
@@ -201,40 +260,60 @@ Map<String, dynamic> _$$GenreAnnotationToJson(_$GenreAnnotation instance) =>
     };
 
 _$PlaylistAnnotation _$$PlaylistAnnotationFromJson(Map<String, dynamic> json) =>
-    _$PlaylistAnnotation(
-      name: json['name'] as String,
-      allowFeedback: readOptInBool(json['allowFeedback'] as bool?),
-      autogenForListener: json['autogenForListener'] as bool,
-      collectible: json['collectible'] as bool,
-      description: readOptionalString(json['description'] as String?),
-      duration: readSeconds(json['duration'] as int),
-      includedTrackTypes: (json['includedTrackTypes'] as List<dynamic>)
-          .map((e) => $enumDecode(_$PandoraTypeEnumMap, e))
-          .toList(),
-      isPrivate: json['isPrivate'] as bool,
-      linkedType: $enumDecode(_$PlaylistLinkedTypeEnumMap, json['linkedType']),
-      listenerId: json['listenerId'] as int,
-      listenerIdInfo: ListenerIdInfo.fromJson(
-          json['listenerIdInfo'] as Map<String, dynamic>),
-      listenerIdToken: json['listenerIdToken'] as String,
-      listenerPandoraId: json['listenerPandoraId'] as String,
-      secret: json['secret'] as bool,
-      shareableUrlPath: json['shareableUrlPath'] as String,
-      thorLayers: json['thorLayers'] as String,
-      timeCreated: readDateTimeMilliseconds(json['timeCreated'] as int),
-      timeLastPlayed:
-          readOptionalDateTimeMilliseconds(json['timeLastPlayed'] as int?),
-      timeLastUpdated:
-          readOptionalDateTimeMilliseconds(json['timeLastUpdated'] as int?),
-      totalTracks: json['totalTracks'] as int,
-      unlocked: json['unlocked'] as bool,
-      viewerInfo: json['viewerInfo'] == null
-          ? null
-          : PlaylistViewerInfo.fromJson(
-              json['viewerInfo'] as Map<String, dynamic>),
-      pandoraId: json['pandoraId'] as String,
-      scope: $enumDecode(_$ScopeEnumMap, json['scope']),
-      $type: json['type'] as String?,
+    $checkedCreate(
+      r'_$PlaylistAnnotation',
+      json,
+      ($checkedConvert) {
+        final val = _$PlaylistAnnotation(
+          name: $checkedConvert('name', (v) => v as String),
+          allowFeedback: $checkedConvert(
+              'allowFeedback', (v) => readOptInBool(v as bool?)),
+          autogenForListener:
+              $checkedConvert('autogenForListener', (v) => v as bool),
+          collectible: $checkedConvert('collectible', (v) => v as bool),
+          description: $checkedConvert(
+              'description', (v) => readOptionalString(v as String?)),
+          duration: $checkedConvert('duration', (v) => readSeconds(v as int)),
+          includedTrackTypes: $checkedConvert(
+              'includedTrackTypes',
+              (v) => (v as List<dynamic>)
+                  .map((e) => $enumDecode(_$PandoraTypeEnumMap, e))
+                  .toList()),
+          isPrivate: $checkedConvert('isPrivate', (v) => v as bool),
+          linkedType: $checkedConvert(
+              'linkedType', (v) => $enumDecode(_$PlaylistLinkedTypeEnumMap, v)),
+          listenerId: $checkedConvert('listenerId', (v) => v as int),
+          listenerIdInfo: $checkedConvert('listenerIdInfo',
+              (v) => ListenerIdInfo.fromJson(v as Map<String, dynamic>)),
+          listenerIdToken:
+              $checkedConvert('listenerIdToken', (v) => v as String),
+          listenerPandoraId:
+              $checkedConvert('listenerPandoraId', (v) => v as String),
+          secret: $checkedConvert('secret', (v) => v as bool),
+          shareableUrlPath:
+              $checkedConvert('shareableUrlPath', (v) => v as String),
+          thorLayers: $checkedConvert('thorLayers', (v) => v as String),
+          timeCreated: $checkedConvert(
+              'timeCreated', (v) => readDateTimeMilliseconds(v as int)),
+          timeLastPlayed: $checkedConvert('timeLastPlayed',
+              (v) => readOptionalDateTimeMilliseconds(v as int?)),
+          timeLastUpdated: $checkedConvert('timeLastUpdated',
+              (v) => readOptionalDateTimeMilliseconds(v as int?)),
+          totalTracks: $checkedConvert('totalTracks', (v) => v as int),
+          unlocked: $checkedConvert('unlocked', (v) => v as bool),
+          viewerInfo: $checkedConvert(
+              'viewerInfo',
+              (v) => v == null
+                  ? null
+                  : PlaylistViewerInfo.fromJson(v as Map<String, dynamic>)),
+          pandoraId: $checkedConvert('pandoraId', (v) => v as String),
+          scope:
+              $checkedConvert('scope', (v) => $enumDecode(_$ScopeEnumMap, v)),
+          $type: $checkedConvert('type', (v) => v as String?),
+        );
+        return val;
+      },
+      fieldKeyMap: const {r'$type': 'type'},
     );
 
 Map<String, dynamic> _$$PlaylistAnnotationToJson(
@@ -309,20 +388,32 @@ const _$PlaylistLinkedTypeEnumMap = {
 };
 
 _$ComposerAnnotation _$$ComposerAnnotationFromJson(Map<String, dynamic> json) =>
-    _$ComposerAnnotation(
-      name: json['name'] as String,
-      sortableName: json['sortableName'] as String,
-      icon: MediaIcon.optionalFromJson(json['icon'] as Map<String, dynamic>),
-      hasRadio: readOptInBool(json['hasRadio'] as bool?),
-      albumCount: json['albumCount'] as int,
-      trackCount: json['trackCount'] as int,
-      shareableUrlPath: json['shareableUrlPath'] as String,
-      modificationTime:
-          readDateTimeMilliseconds(json['modificationTime'] as int),
-      slugPlusPandoraId: json['slugPlusPandoraId'] as String,
-      pandoraId: json['pandoraId'] as String,
-      scope: json['scope'] as String,
-      $type: json['type'] as String?,
+    $checkedCreate(
+      r'_$ComposerAnnotation',
+      json,
+      ($checkedConvert) {
+        final val = _$ComposerAnnotation(
+          name: $checkedConvert('name', (v) => v as String),
+          sortableName: $checkedConvert('sortableName', (v) => v as String),
+          icon: $checkedConvert('icon',
+              (v) => MediaIcon.optionalFromJson(v as Map<String, dynamic>)),
+          hasRadio:
+              $checkedConvert('hasRadio', (v) => readOptInBool(v as bool?)),
+          albumCount: $checkedConvert('albumCount', (v) => v as int),
+          trackCount: $checkedConvert('trackCount', (v) => v as int),
+          shareableUrlPath:
+              $checkedConvert('shareableUrlPath', (v) => v as String),
+          modificationTime: $checkedConvert(
+              'modificationTime', (v) => readDateTimeMilliseconds(v as int)),
+          slugPlusPandoraId:
+              $checkedConvert('slugPlusPandoraId', (v) => v as String),
+          pandoraId: $checkedConvert('pandoraId', (v) => v as String),
+          scope: $checkedConvert('scope', (v) => v as String),
+          $type: $checkedConvert('type', (v) => v as String?),
+        );
+        return val;
+      },
+      fieldKeyMap: const {r'$type': 'type'},
     );
 
 Map<String, dynamic> _$$ComposerAnnotationToJson(
@@ -344,13 +435,25 @@ Map<String, dynamic> _$$ComposerAnnotationToJson(
 
 _$ListenerMediaAnnotation _$$ListenerMediaAnnotationFromJson(
         Map<String, dynamic> json) =>
-    _$ListenerMediaAnnotation(
-      pandoraId: json['pandoraId'] as String,
-      listenerId: json['listenerId'] as int,
-      webname: json['webname'] as String,
-      fullName: json['fullname'] as String?,
-      displayName: json['displayname'] as String,
-      $type: json['type'] as String?,
+    $checkedCreate(
+      r'_$ListenerMediaAnnotation',
+      json,
+      ($checkedConvert) {
+        final val = _$ListenerMediaAnnotation(
+          pandoraId: $checkedConvert('pandoraId', (v) => v as String),
+          listenerId: $checkedConvert('listenerId', (v) => v as int),
+          webname: $checkedConvert('webname', (v) => v as String),
+          fullName: $checkedConvert('fullname', (v) => v as String?),
+          displayName: $checkedConvert('displayname', (v) => v as String),
+          $type: $checkedConvert('type', (v) => v as String?),
+        );
+        return val;
+      },
+      fieldKeyMap: const {
+        'fullName': 'fullname',
+        'displayName': 'displayname',
+        r'$type': 'type'
+      },
     );
 
 Map<String, dynamic> _$$ListenerMediaAnnotationToJson(

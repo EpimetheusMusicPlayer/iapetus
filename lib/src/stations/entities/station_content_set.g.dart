@@ -9,15 +9,27 @@ part of 'station_content_set.dart';
 // **************************************************************************
 
 _$_StationContentSet _$$_StationContentSetFromJson(Map<String, dynamic> json) =>
-    _$_StationContentSet(
-      content: (json['content'] as Map<String, dynamic>).map(
-        (k, e) =>
-            MapEntry(k, StationContent.fromJson(e as Map<String, dynamic>)),
-      ),
-      contentTable: (json['contentTable'] as Map<String, dynamic>).map(
-        (k, e) => MapEntry($enumDecode(_$StationContentUseEnumMap, k),
-            (e as List<dynamic>).map((e) => e as String).toList()),
-      ),
+    $checkedCreate(
+      r'_$_StationContentSet',
+      json,
+      ($checkedConvert) {
+        final val = _$_StationContentSet(
+          content: $checkedConvert(
+              'content',
+              (v) => (v as Map<String, dynamic>).map(
+                    (k, e) => MapEntry(
+                        k, StationContent.fromJson(e as Map<String, dynamic>)),
+                  )),
+          contentTable: $checkedConvert(
+              'contentTable',
+              (v) => (v as Map<String, dynamic>).map(
+                    (k, e) => MapEntry(
+                        $enumDecode(_$StationContentUseEnumMap, k),
+                        (e as List<dynamic>).map((e) => e as String).toList()),
+                  )),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$_StationContentSetToJson(

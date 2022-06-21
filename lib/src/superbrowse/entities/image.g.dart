@@ -9,27 +9,39 @@ part of 'image.dart';
 // **************************************************************************
 
 _$_SuperbrowseImage _$$_SuperbrowseImageFromJson(Map<String, dynamic> json) =>
-    _$_SuperbrowseImage(
-      border: readOptInBool(json['border'] as bool?),
-      circular: readOptInBool(json['circular'] as bool?),
-      color: readOptionalColor(json['dominantColor'] as String?),
-      fullUrl:
-          json['fullUrl'] == null ? null : Uri.parse(json['fullUrl'] as String),
-      fullUrlDark: json['fullUrlDark'] == null
-          ? null
-          : Uri.parse(json['fullUrlDark'] as String),
-      scalableUrl: json['scalableUrl'] == null
-          ? null
-          : Uri.parse(json['scalableUrl'] as String),
-      sizedUrl: json['sizedUrl'] == null
-          ? null
-          : Uri.parse(json['sizedUrl'] as String),
-      sizedUrlDart: json['sizedUrlDark'] == null
-          ? null
-          : Uri.parse(json['sizedUrlDark'] as String),
-      sizes: (json['discreteSizes'] as List<dynamic>?)
-          ?.map((e) => ArtSize.fromJson(e as String))
-          .toList(),
+    $checkedCreate(
+      r'_$_SuperbrowseImage',
+      json,
+      ($checkedConvert) {
+        final val = _$_SuperbrowseImage(
+          border: $checkedConvert('border', (v) => readOptInBool(v as bool?)),
+          circular:
+              $checkedConvert('circular', (v) => readOptInBool(v as bool?)),
+          color: $checkedConvert(
+              'dominantColor', (v) => readOptionalColor(v as String?)),
+          fullUrl: $checkedConvert(
+              'fullUrl', (v) => v == null ? null : Uri.parse(v as String)),
+          fullUrlDark: $checkedConvert(
+              'fullUrlDark', (v) => v == null ? null : Uri.parse(v as String)),
+          scalableUrl: $checkedConvert(
+              'scalableUrl', (v) => v == null ? null : Uri.parse(v as String)),
+          sizedUrl: $checkedConvert(
+              'sizedUrl', (v) => v == null ? null : Uri.parse(v as String)),
+          sizedUrlDart: $checkedConvert(
+              'sizedUrlDark', (v) => v == null ? null : Uri.parse(v as String)),
+          sizes: $checkedConvert(
+              'discreteSizes',
+              (v) => (v as List<dynamic>?)
+                  ?.map((e) => ArtSize.fromJson(e as String))
+                  .toList()),
+        );
+        return val;
+      },
+      fieldKeyMap: const {
+        'color': 'dominantColor',
+        'sizedUrlDart': 'sizedUrlDark',
+        'sizes': 'discreteSizes'
+      },
     );
 
 Map<String, dynamic> _$$_SuperbrowseImageToJson(_$_SuperbrowseImage instance) =>

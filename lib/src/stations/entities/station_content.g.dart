@@ -9,67 +9,99 @@ part of 'station_content.dart';
 // **************************************************************************
 
 _$_StationContent _$$_StationContentFromJson(Map<String, dynamic> json) =>
-    _$_StationContent(
-      userSeed: json['userSeed'] as String?,
-      allowBookmarkTrack: json['allowBookmarkTrack'] as bool,
-      albumExplorerUrl: Uri.parse(json['albumExplorerUrl'] as String),
-      albumArtUrl: Uri.parse(json['albumArtUrl'] as String),
-      artistDetailUrl: Uri.parse(json['artistDetailUrl'] as String),
-      artistExplorerUrl: Uri.parse(json['artistExplorerUrl'] as String),
-      songDetailUrl: Uri.parse(json['songDetailUrl'] as String),
-      trackType: $enumDecode(_$TrackTypeEnumMap, json['trackType']),
-      nowPlayingStationAdUrl: json['nowPlayingStationAdUrl'] == null
-          ? null
-          : Uri.parse(json['nowPlayingStationAdUrl'] as String),
-      allowStartStationFromTrack: json['allowStartStationFromTrack'] as bool,
-      nowPlayingStationAdTargeting:
-          json['nowPlayingStationAdTargeting'] as String?,
-      nowPlayingStationPremiumAdTargeting:
-          json['nowPlayingStationPremiumAdTargeting'] as String?,
-      allowShareTrack: json['allowShareTrack'] as bool,
-      pandoraType: $enumDecode(_$PandoraTypeEnumMap, json['pandoraType']),
-      songIdentity: json['songIdentity'] as String,
-      nowPlayingStationPremiumAdUrl:
-          json['nowPlayingStationPremiumAdUrl'] == null
-              ? null
-              : Uri.parse(json['nowPlayingStationPremiumAdUrl'] as String),
-      allowFeedback: json['allowFeedback'] as bool,
-      musicId: json['musicId'] as String,
-      categoryDescriptor: json['categoryDescriptor'] as String,
-      isFeatured: json['isFeatured'] as bool,
-      disableTrackDetail: json['disableTrackDetail'] as bool,
-      songName: json['songName'] as String,
-      allowTiredOfTrack: json['allowTiredOfTrack'] as bool,
-      programDescriptor: json['programDescriptor'] as String,
-      artistName: json['artistName'] as String,
-      trackLength: readSeconds(json['trackLength'] as int),
-      trackToken: json['trackToken'] as String,
-      allowBuyTrack: json['allowBuyTrack'] as bool,
-      albumDetailUrl: Uri.parse(json['albumDetailUrl'] as String),
-      audioUrlMap: (json['audioUrlMap'] as Map<String, dynamic>).map(
-        (k, e) => MapEntry($enumDecode(_$AudioUrlQualityEnumMap, k),
-            AudioUrlData.fromJson(e as Map<String, dynamic>)),
-      ),
-      albumIdentity: json['albumIdentity'] as String,
-      trackGain: readNum(json['trackGain'] as String),
-      albumName: json['albumName'] as String,
-      amazonAlbumUrl: Uri.parse(json['amazonAlbumUrl'] as String),
-      shareLandingUrl: Uri.parse(json['shareLandingUrl'] as String),
-      songExplorerUrl: Uri.parse(json['songExplorerUrl'] as String),
-      nowPlayingStationPremiumAdUnit:
-          json['nowPlayingStationPremiumAdUnit'] as String?,
-      songRating: $enumDecode(_$MediaRatingEnumMap, json['songRating']),
-      trackKey: json['trackKey'] == null
-          ? null
-          : TrackKey.fromJson(json['trackKey'] as Map<String, dynamic>),
-      nowPlayingStationAdUnit: json['nowPlayingStationAdUnit'] as String?,
-      requestedModeId: json['requestedModeId'] as int,
-      stationId: json['stationId'] as String,
-      pandoraId: json['pandoraId'] as String,
-      allowSkipTrackWithoutLimit: json['allowSkipTrackWithoutLimit'] as bool,
-      itunesSongUrl: Uri.parse(json['itunesSongUrl'] as String),
-      disableSkipButton: json['disableSkipButton'] as bool,
-      modeId: json['modeId'] as int,
+    $checkedCreate(
+      r'_$_StationContent',
+      json,
+      ($checkedConvert) {
+        final val = _$_StationContent(
+          userSeed: $checkedConvert('userSeed', (v) => v as String?),
+          allowBookmarkTrack:
+              $checkedConvert('allowBookmarkTrack', (v) => v as bool),
+          albumExplorerUrl: $checkedConvert(
+              'albumExplorerUrl', (v) => Uri.parse(v as String)),
+          albumArtUrl:
+              $checkedConvert('albumArtUrl', (v) => Uri.parse(v as String)),
+          artistDetailUrl:
+              $checkedConvert('artistDetailUrl', (v) => Uri.parse(v as String)),
+          artistExplorerUrl: $checkedConvert(
+              'artistExplorerUrl', (v) => Uri.parse(v as String)),
+          songDetailUrl:
+              $checkedConvert('songDetailUrl', (v) => Uri.parse(v as String)),
+          trackType: $checkedConvert(
+              'trackType', (v) => $enumDecode(_$TrackTypeEnumMap, v)),
+          nowPlayingStationAdUrl: $checkedConvert('nowPlayingStationAdUrl',
+              (v) => v == null ? null : Uri.parse(v as String)),
+          allowStartStationFromTrack:
+              $checkedConvert('allowStartStationFromTrack', (v) => v as bool),
+          nowPlayingStationAdTargeting: $checkedConvert(
+              'nowPlayingStationAdTargeting', (v) => v as String?),
+          nowPlayingStationPremiumAdTargeting: $checkedConvert(
+              'nowPlayingStationPremiumAdTargeting', (v) => v as String?),
+          allowShareTrack: $checkedConvert('allowShareTrack', (v) => v as bool),
+          pandoraType: $checkedConvert(
+              'pandoraType', (v) => $enumDecode(_$PandoraTypeEnumMap, v)),
+          songIdentity: $checkedConvert('songIdentity', (v) => v as String),
+          nowPlayingStationPremiumAdUrl: $checkedConvert(
+              'nowPlayingStationPremiumAdUrl',
+              (v) => v == null ? null : Uri.parse(v as String)),
+          allowFeedback: $checkedConvert('allowFeedback', (v) => v as bool),
+          musicId: $checkedConvert('musicId', (v) => v as String),
+          categoryDescriptor:
+              $checkedConvert('categoryDescriptor', (v) => v as String),
+          isFeatured: $checkedConvert('isFeatured', (v) => v as bool),
+          disableTrackDetail:
+              $checkedConvert('disableTrackDetail', (v) => v as bool),
+          songName: $checkedConvert('songName', (v) => v as String),
+          allowTiredOfTrack:
+              $checkedConvert('allowTiredOfTrack', (v) => v as bool),
+          programDescriptor:
+              $checkedConvert('programDescriptor', (v) => v as String),
+          artistName: $checkedConvert('artistName', (v) => v as String),
+          trackLength:
+              $checkedConvert('trackLength', (v) => readSeconds(v as int)),
+          trackToken: $checkedConvert('trackToken', (v) => v as String),
+          allowBuyTrack: $checkedConvert('allowBuyTrack', (v) => v as bool),
+          albumDetailUrl:
+              $checkedConvert('albumDetailUrl', (v) => Uri.parse(v as String)),
+          audioUrlMap: $checkedConvert(
+              'audioUrlMap',
+              (v) => (v as Map<String, dynamic>).map(
+                    (k, e) => MapEntry($enumDecode(_$AudioUrlQualityEnumMap, k),
+                        AudioUrlData.fromJson(e as Map<String, dynamic>)),
+                  )),
+          albumIdentity: $checkedConvert('albumIdentity', (v) => v as String),
+          trackGain: $checkedConvert('trackGain', (v) => readNum(v as String)),
+          albumName: $checkedConvert('albumName', (v) => v as String),
+          amazonAlbumUrl:
+              $checkedConvert('amazonAlbumUrl', (v) => Uri.parse(v as String)),
+          shareLandingUrl:
+              $checkedConvert('shareLandingUrl', (v) => Uri.parse(v as String)),
+          songExplorerUrl:
+              $checkedConvert('songExplorerUrl', (v) => Uri.parse(v as String)),
+          nowPlayingStationPremiumAdUnit: $checkedConvert(
+              'nowPlayingStationPremiumAdUnit', (v) => v as String?),
+          songRating: $checkedConvert(
+              'songRating', (v) => $enumDecode(_$MediaRatingEnumMap, v)),
+          trackKey: $checkedConvert(
+              'trackKey',
+              (v) => v == null
+                  ? null
+                  : TrackKey.fromJson(v as Map<String, dynamic>)),
+          nowPlayingStationAdUnit:
+              $checkedConvert('nowPlayingStationAdUnit', (v) => v as String?),
+          requestedModeId: $checkedConvert('requestedModeId', (v) => v as int),
+          stationId: $checkedConvert('stationId', (v) => v as String),
+          pandoraId: $checkedConvert('pandoraId', (v) => v as String),
+          allowSkipTrackWithoutLimit:
+              $checkedConvert('allowSkipTrackWithoutLimit', (v) => v as bool),
+          itunesSongUrl:
+              $checkedConvert('itunesSongUrl', (v) => Uri.parse(v as String)),
+          disableSkipButton:
+              $checkedConvert('disableSkipButton', (v) => v as bool),
+          modeId: $checkedConvert('modeId', (v) => v as int),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$_StationContentToJson(_$_StationContent instance) =>

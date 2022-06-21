@@ -9,11 +9,21 @@ part of 'button.dart';
 // **************************************************************************
 
 _$_SuperbrowseButton _$$_SuperbrowseButtonFromJson(Map<String, dynamic> json) =>
-    _$_SuperbrowseButton(
-      action: json['action'] == null
-          ? null
-          : SuperbrowseAction.fromJson(json['action'] as Map<String, dynamic>),
-      type: $enumDecode(_$ButtonTypeEnumMap, json['type']),
+    $checkedCreate(
+      r'_$_SuperbrowseButton',
+      json,
+      ($checkedConvert) {
+        final val = _$_SuperbrowseButton(
+          action: $checkedConvert(
+              'action',
+              (v) => v == null
+                  ? null
+                  : SuperbrowseAction.fromJson(v as Map<String, dynamic>)),
+          type: $checkedConvert(
+              'type', (v) => $enumDecode(_$ButtonTypeEnumMap, v)),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$_SuperbrowseButtonToJson(

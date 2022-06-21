@@ -9,14 +9,23 @@ part of 'action.dart';
 // **************************************************************************
 
 _$_SuperbrowseAction _$$_SuperbrowseActionFromJson(Map<String, dynamic> json) =>
-    _$_SuperbrowseAction(
-      type: $enumDecode(_$ActionTypeEnumMap, json['type']),
-      pandoraId: json['pandoraId'] as String?,
-      sourceId: json['sourceId'] as String?,
-      title: json['title'] as String?,
-      loadingScreen: $enumDecodeNullable(
-          _$LoadingScreenTypeEnumMap, json['loadingScreen']),
-      url: json['url'] == null ? null : Uri.parse(json['url'] as String),
+    $checkedCreate(
+      r'_$_SuperbrowseAction',
+      json,
+      ($checkedConvert) {
+        final val = _$_SuperbrowseAction(
+          type: $checkedConvert(
+              'type', (v) => $enumDecode(_$ActionTypeEnumMap, v)),
+          pandoraId: $checkedConvert('pandoraId', (v) => v as String?),
+          sourceId: $checkedConvert('sourceId', (v) => v as String?),
+          title: $checkedConvert('title', (v) => v as String?),
+          loadingScreen: $checkedConvert('loadingScreen',
+              (v) => $enumDecodeNullable(_$LoadingScreenTypeEnumMap, v)),
+          url: $checkedConvert(
+              'url', (v) => v == null ? null : Uri.parse(v as String)),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$_SuperbrowseActionToJson(

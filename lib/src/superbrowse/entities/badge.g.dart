@@ -9,9 +9,17 @@ part of 'badge.dart';
 // **************************************************************************
 
 _$_SuperbrowseBadge _$$_SuperbrowseBadgeFromJson(Map<String, dynamic> json) =>
-    _$_SuperbrowseBadge(
-      type: $enumDecode(_$BadgeTypeEnumMap, json['type']),
-      data: json['data'] as String?,
+    $checkedCreate(
+      r'_$_SuperbrowseBadge',
+      json,
+      ($checkedConvert) {
+        final val = _$_SuperbrowseBadge(
+          type: $checkedConvert(
+              'type', (v) => $enumDecode(_$BadgeTypeEnumMap, v)),
+          data: $checkedConvert('data', (v) => v as String?),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$_SuperbrowseBadgeToJson(_$_SuperbrowseBadge instance) =>

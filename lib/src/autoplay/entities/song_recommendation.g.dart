@@ -10,13 +10,24 @@ part of 'song_recommendation.dart';
 
 _$_SongRecommendation _$$_SongRecommendationFromJson(
         Map<String, dynamic> json) =>
-    _$_SongRecommendation(
-      pandoraId: json['musicId'] as String,
-      autoplaySourceId: json['autoplaySourceId'] as String?,
-      token: json['token'] as String,
-      songRating:
-          $enumDecodeNullable(_$MediaRatingEnumMap, json['songRating']) ??
-              MediaRating.none,
+    $checkedCreate(
+      r'_$_SongRecommendation',
+      json,
+      ($checkedConvert) {
+        final val = _$_SongRecommendation(
+          pandoraId: $checkedConvert('musicId', (v) => v as String),
+          autoplaySourceId:
+              $checkedConvert('autoplaySourceId', (v) => v as String?),
+          token: $checkedConvert('token', (v) => v as String),
+          songRating: $checkedConvert(
+              'songRating',
+              (v) =>
+                  $enumDecodeNullable(_$MediaRatingEnumMap, v) ??
+                  MediaRating.none),
+        );
+        return val;
+      },
+      fieldKeyMap: const {'pandoraId': 'musicId'},
     );
 
 Map<String, dynamic> _$$_SongRecommendationToJson(

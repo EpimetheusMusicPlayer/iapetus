@@ -8,9 +8,21 @@ part of 'credits.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Credits _$$_CreditsFromJson(Map<String, dynamic> json) => _$_Credits(
-      creditsSnippetHtml: json['creditsSnippet'] as String,
-      fullCreditsHtml: json['fullCredits'] as String,
+_$_Credits _$$_CreditsFromJson(Map<String, dynamic> json) => $checkedCreate(
+      r'_$_Credits',
+      json,
+      ($checkedConvert) {
+        final val = _$_Credits(
+          creditsSnippetHtml:
+              $checkedConvert('creditsSnippet', (v) => v as String),
+          fullCreditsHtml: $checkedConvert('fullCredits', (v) => v as String),
+        );
+        return val;
+      },
+      fieldKeyMap: const {
+        'creditsSnippetHtml': 'creditsSnippet',
+        'fullCreditsHtml': 'fullCredits'
+      },
     );
 
 Map<String, dynamic> _$$_CreditsToJson(_$_Credits instance) =>

@@ -9,20 +9,33 @@ part of 'directory_response.dart';
 // **************************************************************************
 
 _$_DirectoryResponse _$$_DirectoryResponseFromJson(Map<String, dynamic> json) =>
-    _$_DirectoryResponse(
-      ttl: readSeconds(json['ttl'] as int),
-      title: json['title'] as String?,
-      checksum: json['checksum'] as String,
-      generation: json['generation'] as String?,
-      sections: (json['sections'] as List<dynamic>)
-          .map((e) => SuperbrowseSection.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      preferCachedData: json['preferCachedData'] as bool,
-      formFactorsByType:
-          (json['formFactorsByType'] as Map<String, dynamic>).map(
-        (k, e) => MapEntry($enumDecode(_$SuperbrowseItemTypeEnumMap, k),
-            FormFactors.fromJson(e as Map<String, dynamic>)),
-      ),
+    $checkedCreate(
+      r'_$_DirectoryResponse',
+      json,
+      ($checkedConvert) {
+        final val = _$_DirectoryResponse(
+          ttl: $checkedConvert('ttl', (v) => readSeconds(v as int)),
+          title: $checkedConvert('title', (v) => v as String?),
+          checksum: $checkedConvert('checksum', (v) => v as String),
+          generation: $checkedConvert('generation', (v) => v as String?),
+          sections: $checkedConvert(
+              'sections',
+              (v) => (v as List<dynamic>)
+                  .map((e) =>
+                      SuperbrowseSection.fromJson(e as Map<String, dynamic>))
+                  .toList()),
+          preferCachedData:
+              $checkedConvert('preferCachedData', (v) => v as bool),
+          formFactorsByType: $checkedConvert(
+              'formFactorsByType',
+              (v) => (v as Map<String, dynamic>).map(
+                    (k, e) => MapEntry(
+                        $enumDecode(_$SuperbrowseItemTypeEnumMap, k),
+                        FormFactors.fromJson(e as Map<String, dynamic>)),
+                  )),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$_DirectoryResponseToJson(

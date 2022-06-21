@@ -9,10 +9,19 @@ part of 'listener_id_info.dart';
 // **************************************************************************
 
 _$_ListenerIdInfo _$$_ListenerIdInfoFromJson(Map<String, dynamic> json) =>
-    _$_ListenerIdInfo(
-      listenerId: json['listenerId'] as int,
-      listenerPandoraId: json['listenerPandoraId'] as String,
-      listenerIdToken: json['listenerIdToken'] as String,
+    $checkedCreate(
+      r'_$_ListenerIdInfo',
+      json,
+      ($checkedConvert) {
+        final val = _$_ListenerIdInfo(
+          listenerId: $checkedConvert('listenerId', (v) => v as int),
+          listenerPandoraId:
+              $checkedConvert('listenerPandoraId', (v) => v as String),
+          listenerIdToken:
+              $checkedConvert('listenerIdToken', (v) => v as String),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$_ListenerIdInfoToJson(_$_ListenerIdInfo instance) =>

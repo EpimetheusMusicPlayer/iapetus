@@ -10,52 +10,89 @@ part of 'get_station_content.dart';
 
 GetStationContentRequest _$GetStationContentRequestFromJson(
         Map<String, dynamic> json) =>
-    GetStationContentRequest(
-      includeTrackOptions: json['includeTrackOptions'] as bool,
-      includePremiumAdUrl: json['includePremiumAdUrl'] as bool,
-      isMicReady: json['isMicReady'] as bool,
-      includeFlexParams: json['includeFlexParams'] as bool,
-      includeAudioReceiptUrl: json['includeAudioReceiptUrl'] as bool,
-      includeAdVersion: json['includeAdVersion'] as bool,
-      includeCompetitiveSepIndicator:
-          json['includeCompetitiveSepIndicator'] as bool,
-      previousTrackList: json['previousTrackList'],
-      includeListeningHours: json['includeListeningHours'] as bool,
-      flexCapable: json['flexCapable'] as bool,
-      includeMRAIDIsViewableSupport:
-          json['includeMRAIDIsViewableSupport'] as bool,
-      includeListenerUpsellCheck: json['includeListenerUpsellCheck'] as bool,
-      includeTrackLength: json['includeTrackLength'] as bool,
-      stationId: json['stationId'] as String,
-      includeBingeSkippingInfo: json['includeBingeSkippingInfo'] as bool,
-      includeSharingAdUrl: json['includeSharingAdUrl'] as bool,
-      includeSocialAdUrl: json['includeSocialAdUrl'] as bool,
-      stationToken: json['stationToken'] as String,
-      includeFlexReplayAdUrl: json['includeFlexReplayAdUrl'] as bool,
-      xplatformAdCapable: json['xplatformAdCapable'] as bool,
-      testCreativeIdString: json['testCreativeIdString'] as String?,
-      supportedTrackTypes: (json['supportedTrackTypes'] as List<dynamic>)
-          .map((e) => $enumDecode(_$TrackTypeEnumMap, e))
-          .toList(),
-      includeFlexThumbsDownAdUrl: json['includeFlexThumbsDownAdUrl'] as bool,
-      includeAudioToken: json['includeAudioToken'] as bool,
-      getPlaylistReason:
-          $enumDecode(_$GetPlaylistReasonEnumMap, json['getPlaylistReason']),
-      audioAdPodCapable: json['audioAdPodCapable'] as bool,
-      includeBackstageAdUrl: json['includeBackstageAdUrl'] as bool,
-      includeVoiceTrack: json['includeVoiceTrack'] as bool,
-      includeAudioSkipUrl: json['includeAudioSkipUrl'] as bool,
-      includeFlexSkipAdUrl: json['includeFlexSkipAdUrl'] as bool,
-      stationIsStarting: json['stationIsStarting'] as bool,
-      testLineIdString: json['testLineIdString'] as String?,
-      requestHighQuality: json['requestHighQuality'] as bool,
-      includeChronosAdTokens: json['includeChronosAdTokens'] as bool,
-      currentTrack: json['currentTrack'],
-      includeExtraParams: json['includeExtraParams'] as bool,
-      includeArtistMessages: json['includeArtistMessages'] as bool,
-      includeCompletePlaylist: json['includeCompletePlaylist'] as bool,
-      includeBannerAd: json['includeBannerAd'] as bool,
-      testMode: json['testMode'] as String?,
+    $checkedCreate(
+      'GetStationContentRequest',
+      json,
+      ($checkedConvert) {
+        final val = GetStationContentRequest(
+          includeTrackOptions:
+              $checkedConvert('includeTrackOptions', (v) => v as bool),
+          includePremiumAdUrl:
+              $checkedConvert('includePremiumAdUrl', (v) => v as bool),
+          isMicReady: $checkedConvert('isMicReady', (v) => v as bool),
+          includeFlexParams:
+              $checkedConvert('includeFlexParams', (v) => v as bool),
+          includeAudioReceiptUrl:
+              $checkedConvert('includeAudioReceiptUrl', (v) => v as bool),
+          includeAdVersion:
+              $checkedConvert('includeAdVersion', (v) => v as bool),
+          includeCompetitiveSepIndicator: $checkedConvert(
+              'includeCompetitiveSepIndicator', (v) => v as bool),
+          previousTrackList: $checkedConvert('previousTrackList', (v) => v),
+          includeListeningHours:
+              $checkedConvert('includeListeningHours', (v) => v as bool),
+          flexCapable: $checkedConvert('flexCapable', (v) => v as bool),
+          includeMRAIDIsViewableSupport: $checkedConvert(
+              'includeMRAIDIsViewableSupport', (v) => v as bool),
+          includeListenerUpsellCheck:
+              $checkedConvert('includeListenerUpsellCheck', (v) => v as bool),
+          includeTrackLength:
+              $checkedConvert('includeTrackLength', (v) => v as bool),
+          stationId: $checkedConvert('stationId', (v) => v as String),
+          includeBingeSkippingInfo:
+              $checkedConvert('includeBingeSkippingInfo', (v) => v as bool),
+          includeSharingAdUrl:
+              $checkedConvert('includeSharingAdUrl', (v) => v as bool),
+          includeSocialAdUrl:
+              $checkedConvert('includeSocialAdUrl', (v) => v as bool),
+          stationToken: $checkedConvert('stationToken', (v) => v as String),
+          includeFlexReplayAdUrl:
+              $checkedConvert('includeFlexReplayAdUrl', (v) => v as bool),
+          xplatformAdCapable:
+              $checkedConvert('xplatformAdCapable', (v) => v as bool),
+          testCreativeIdString:
+              $checkedConvert('testCreativeIdString', (v) => v as String?),
+          supportedTrackTypes: $checkedConvert(
+              'supportedTrackTypes',
+              (v) => (v as List<dynamic>)
+                  .map((e) => $enumDecode(_$TrackTypeEnumMap, e))
+                  .toList()),
+          includeFlexThumbsDownAdUrl:
+              $checkedConvert('includeFlexThumbsDownAdUrl', (v) => v as bool),
+          includeAudioToken:
+              $checkedConvert('includeAudioToken', (v) => v as bool),
+          getPlaylistReason: $checkedConvert('getPlaylistReason',
+              (v) => $enumDecode(_$GetPlaylistReasonEnumMap, v)),
+          audioAdPodCapable:
+              $checkedConvert('audioAdPodCapable', (v) => v as bool),
+          includeBackstageAdUrl:
+              $checkedConvert('includeBackstageAdUrl', (v) => v as bool),
+          includeVoiceTrack:
+              $checkedConvert('includeVoiceTrack', (v) => v as bool),
+          includeAudioSkipUrl:
+              $checkedConvert('includeAudioSkipUrl', (v) => v as bool),
+          includeFlexSkipAdUrl:
+              $checkedConvert('includeFlexSkipAdUrl', (v) => v as bool),
+          stationIsStarting:
+              $checkedConvert('stationIsStarting', (v) => v as bool),
+          testLineIdString:
+              $checkedConvert('testLineIdString', (v) => v as String?),
+          requestHighQuality:
+              $checkedConvert('requestHighQuality', (v) => v as bool),
+          includeChronosAdTokens:
+              $checkedConvert('includeChronosAdTokens', (v) => v as bool),
+          currentTrack: $checkedConvert('currentTrack', (v) => v),
+          includeExtraParams:
+              $checkedConvert('includeExtraParams', (v) => v as bool),
+          includeArtistMessages:
+              $checkedConvert('includeArtistMessages', (v) => v as bool),
+          includeCompletePlaylist:
+              $checkedConvert('includeCompletePlaylist', (v) => v as bool),
+          includeBannerAd: $checkedConvert('includeBannerAd', (v) => v as bool),
+          testMode: $checkedConvert('testMode', (v) => v as String?),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$GetStationContentRequestToJson(

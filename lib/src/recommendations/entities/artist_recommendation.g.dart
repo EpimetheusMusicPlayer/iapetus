@@ -10,15 +10,22 @@ part of 'artist_recommendation.dart';
 
 _$_ArtistRecommendation _$$_ArtistRecommendationFromJson(
         Map<String, dynamic> json) =>
-    _$_ArtistRecommendation(
-      artistName: json['artistName'] as String,
-      score: readScore(json['score'] as Object),
-      likelyMatch: json['likelyMatch'] as bool,
-      artUrl:
-          json['artUrl'] == null ? null : Uri.parse(json['artUrl'] as String),
-      musicToken: json['musicToken'] as String,
-      pandoraId: json['pandoraId'] as String,
-      explanation: json['explanation'] as String,
+    $checkedCreate(
+      r'_$_ArtistRecommendation',
+      json,
+      ($checkedConvert) {
+        final val = _$_ArtistRecommendation(
+          artistName: $checkedConvert('artistName', (v) => v as String),
+          score: $checkedConvert('score', (v) => readScore(v as Object)),
+          likelyMatch: $checkedConvert('likelyMatch', (v) => v as bool),
+          artUrl: $checkedConvert(
+              'artUrl', (v) => v == null ? null : Uri.parse(v as String)),
+          musicToken: $checkedConvert('musicToken', (v) => v as String),
+          pandoraId: $checkedConvert('pandoraId', (v) => v as String),
+          explanation: $checkedConvert('explanation', (v) => v as String),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$_ArtistRecommendationToJson(

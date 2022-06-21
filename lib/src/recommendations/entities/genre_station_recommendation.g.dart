@@ -10,13 +10,20 @@ part of 'genre_station_recommendation.dart';
 
 _$_GenreStationRecommendation _$$_GenreStationRecommendationFromJson(
         Map<String, dynamic> json) =>
-    _$_GenreStationRecommendation(
-      musicToken: json['musicToken'] as String,
-      explanation: json['explanation'] as String,
-      artUrl:
-          json['artUrl'] == null ? null : Uri.parse(json['artUrl'] as String),
-      stationName: json['stationName'] as String,
-      score: readScore(json['score'] as Object),
+    $checkedCreate(
+      r'_$_GenreStationRecommendation',
+      json,
+      ($checkedConvert) {
+        final val = _$_GenreStationRecommendation(
+          musicToken: $checkedConvert('musicToken', (v) => v as String),
+          explanation: $checkedConvert('explanation', (v) => v as String),
+          artUrl: $checkedConvert(
+              'artUrl', (v) => v == null ? null : Uri.parse(v as String)),
+          stationName: $checkedConvert('stationName', (v) => v as String),
+          score: $checkedConvert('score', (v) => readScore(v as Object)),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$_GenreStationRecommendationToJson(

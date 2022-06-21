@@ -10,16 +10,29 @@ part of 'song_recommendation_set.dart';
 
 _$_SongRecommendationSet _$$_SongRecommendationSetFromJson(
         Map<String, dynamic> json) =>
-    _$_SongRecommendationSet(
-      requestId: json['requestId'] as String,
-      songRecommendations: (json['songRecommendations'] as List<dynamic>)
-          .map((e) => SongRecommendation.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      annotations: (json['annotations'] as Map<String, dynamic>?)?.map(
-            (k, e) => MapEntry(
-                k, MediaAnnotation.fromJson(e as Map<String, dynamic>)),
-          ) ??
-          const {},
+    $checkedCreate(
+      r'_$_SongRecommendationSet',
+      json,
+      ($checkedConvert) {
+        final val = _$_SongRecommendationSet(
+          requestId: $checkedConvert('requestId', (v) => v as String),
+          songRecommendations: $checkedConvert(
+              'songRecommendations',
+              (v) => (v as List<dynamic>)
+                  .map((e) =>
+                      SongRecommendation.fromJson(e as Map<String, dynamic>))
+                  .toList()),
+          annotations: $checkedConvert(
+              'annotations',
+              (v) =>
+                  (v as Map<String, dynamic>?)?.map(
+                    (k, e) => MapEntry(
+                        k, MediaAnnotation.fromJson(e as Map<String, dynamic>)),
+                  ) ??
+                  const {}),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$_SongRecommendationSetToJson(

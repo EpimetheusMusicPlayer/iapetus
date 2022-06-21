@@ -9,9 +9,18 @@ part of 'form_factors.dart';
 // **************************************************************************
 
 _$_FormFactors _$$_FormFactorsFromJson(Map<String, dynamic> json) =>
-    _$_FormFactors(
-      portrait: FormFactor.fromJson(json['portrait'] as Map<String, dynamic>),
-      landscape: FormFactor.fromJson(json['landscape'] as Map<String, dynamic>),
+    $checkedCreate(
+      r'_$_FormFactors',
+      json,
+      ($checkedConvert) {
+        final val = _$_FormFactors(
+          portrait: $checkedConvert('portrait',
+              (v) => FormFactor.fromJson(v as Map<String, dynamic>)),
+          landscape: $checkedConvert('landscape',
+              (v) => FormFactor.fromJson(v as Map<String, dynamic>)),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$_FormFactorsToJson(_$_FormFactors instance) =>

@@ -10,15 +10,26 @@ part of 'collection_list_segment.dart';
 
 _$_CollectionListSegment _$$_CollectionListSegmentFromJson(
         Map<String, dynamic> json) =>
-    _$_CollectionListSegment(
-      listenerId: json['listenerId'] as int,
-      cursor: json['cursor'] as String?,
-      limit: json['limit'] as int,
-      version: json['version'] as int,
-      items: (json['items'] as List<dynamic>?)
-              ?.map((e) => CollectionItem.fromJson(e as Map<String, dynamic>))
-              .toList() ??
-          const [],
+    $checkedCreate(
+      r'_$_CollectionListSegment',
+      json,
+      ($checkedConvert) {
+        final val = _$_CollectionListSegment(
+          listenerId: $checkedConvert('listenerId', (v) => v as int),
+          cursor: $checkedConvert('cursor', (v) => v as String?),
+          limit: $checkedConvert('limit', (v) => v as int),
+          version: $checkedConvert('version', (v) => v as int),
+          items: $checkedConvert(
+              'items',
+              (v) =>
+                  (v as List<dynamic>?)
+                      ?.map((e) =>
+                          CollectionItem.fromJson(e as Map<String, dynamic>))
+                      .toList() ??
+                  const []),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$_CollectionListSegmentToJson(

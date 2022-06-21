@@ -9,43 +9,65 @@ part of 'playlist_segment.dart';
 // **************************************************************************
 
 _$_PlaylistSegment _$$_PlaylistSegmentFromJson(Map<String, dynamic> json) =>
-    _$_PlaylistSegment(
-      pandoraId: json['pandoraId'] as String,
-      annotations: (json['annotations'] as Map<String, dynamic>).map(
-        (k, e) =>
-            MapEntry(k, MediaAnnotation.fromJson(e as Map<String, dynamic>)),
-      ),
-      tracks: (json['tracks'] as List<dynamic>)
-          .map((e) => PlaylistTrack.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      version: json['version'] as int,
-      name: json['name'] as String,
-      description: json['description'] as String,
-      timeCreated: readDateTimeMilliseconds(json['timeCreated'] as int),
-      timeLastUpdated: readDateTimeMilliseconds(json['timeLastUpdated'] as int),
-      timeLastRefreshed:
-          readOptionalDateTimeMilliseconds(json['timeLastRefreshed'] as int?),
-      private: json['isPrivate'] as bool,
-      secret: json['secret'] as bool,
-      linkedType: json['linkedType'] as String,
-      linkedSourceId: json['linkedSourceId'] as String?,
-      totalTracks: json['totalTracks'] as int,
-      shareableUrlPath: Uri.parse(json['shareableUrlPath'] as String),
-      thorLayers: json['thorLayers'] as String,
-      duration: readSeconds(json['duration'] as int),
-      unlocked: json['unlocked'] as bool,
-      viewerInfo: PlaylistViewerInfo.fromJson(
-          json['viewerInfo'] as Map<String, dynamic>),
-      autogenForListener: json['autogenForListener'] as bool,
-      includedTrackTypes: (json['includedTrackTypes'] as List<dynamic>)
-          .map((e) => $enumDecode(_$PandoraTypeEnumMap, e))
-          .toList(),
-      allowFeedback: readOptInBool(json['allowFeedback'] as bool?),
-      collectible: json['collectible'] as bool,
-      notModified: json['notModified'] as bool,
-      listenerId: json['listenerId'] as int,
-      listenerPandoraId: json['listenerPandoraId'] as String,
-      listenerIdToken: json['listenerIdToken'] as String,
+    $checkedCreate(
+      r'_$_PlaylistSegment',
+      json,
+      ($checkedConvert) {
+        final val = _$_PlaylistSegment(
+          pandoraId: $checkedConvert('pandoraId', (v) => v as String),
+          annotations: $checkedConvert(
+              'annotations',
+              (v) => (v as Map<String, dynamic>).map(
+                    (k, e) => MapEntry(
+                        k, MediaAnnotation.fromJson(e as Map<String, dynamic>)),
+                  )),
+          tracks: $checkedConvert(
+              'tracks',
+              (v) => (v as List<dynamic>)
+                  .map((e) => PlaylistTrack.fromJson(e as Map<String, dynamic>))
+                  .toList()),
+          version: $checkedConvert('version', (v) => v as int),
+          name: $checkedConvert('name', (v) => v as String),
+          description: $checkedConvert('description', (v) => v as String),
+          timeCreated: $checkedConvert(
+              'timeCreated', (v) => readDateTimeMilliseconds(v as int)),
+          timeLastUpdated: $checkedConvert(
+              'timeLastUpdated', (v) => readDateTimeMilliseconds(v as int)),
+          timeLastRefreshed: $checkedConvert('timeLastRefreshed',
+              (v) => readOptionalDateTimeMilliseconds(v as int?)),
+          private: $checkedConvert('isPrivate', (v) => v as bool),
+          secret: $checkedConvert('secret', (v) => v as bool),
+          linkedType: $checkedConvert('linkedType', (v) => v as String),
+          linkedSourceId:
+              $checkedConvert('linkedSourceId', (v) => v as String?),
+          totalTracks: $checkedConvert('totalTracks', (v) => v as int),
+          shareableUrlPath: $checkedConvert(
+              'shareableUrlPath', (v) => Uri.parse(v as String)),
+          thorLayers: $checkedConvert('thorLayers', (v) => v as String),
+          duration: $checkedConvert('duration', (v) => readSeconds(v as int)),
+          unlocked: $checkedConvert('unlocked', (v) => v as bool),
+          viewerInfo: $checkedConvert('viewerInfo',
+              (v) => PlaylistViewerInfo.fromJson(v as Map<String, dynamic>)),
+          autogenForListener:
+              $checkedConvert('autogenForListener', (v) => v as bool),
+          includedTrackTypes: $checkedConvert(
+              'includedTrackTypes',
+              (v) => (v as List<dynamic>)
+                  .map((e) => $enumDecode(_$PandoraTypeEnumMap, e))
+                  .toList()),
+          allowFeedback: $checkedConvert(
+              'allowFeedback', (v) => readOptInBool(v as bool?)),
+          collectible: $checkedConvert('collectible', (v) => v as bool),
+          notModified: $checkedConvert('notModified', (v) => v as bool),
+          listenerId: $checkedConvert('listenerId', (v) => v as int),
+          listenerPandoraId:
+              $checkedConvert('listenerPandoraId', (v) => v as String),
+          listenerIdToken:
+              $checkedConvert('listenerIdToken', (v) => v as String),
+        );
+        return val;
+      },
+      fieldKeyMap: const {'private': 'isPrivate'},
     );
 
 Map<String, dynamic> _$$_PlaylistSegmentToJson(_$_PlaylistSegment instance) =>

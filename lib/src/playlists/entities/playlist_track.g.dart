@@ -9,12 +9,21 @@ part of 'playlist_track.dart';
 // **************************************************************************
 
 _$_PlaylistTrack _$$_PlaylistTrackFromJson(Map<String, dynamic> json) =>
-    _$_PlaylistTrack(
-      pandoraId: json['pandoraId'] as String,
-      itemId: json['itemId'] as int,
-      addedTimestamp: readDateTimeMilliseconds(json['addedTimestamp'] as int),
-      duration: readOptionalSeconds(json['duration'] as int?),
-      trackPandoraId: json['trackPandoraId'] as String,
+    $checkedCreate(
+      r'_$_PlaylistTrack',
+      json,
+      ($checkedConvert) {
+        final val = _$_PlaylistTrack(
+          pandoraId: $checkedConvert('pandoraId', (v) => v as String),
+          itemId: $checkedConvert('itemId', (v) => v as int),
+          addedTimestamp: $checkedConvert(
+              'addedTimestamp', (v) => readDateTimeMilliseconds(v as int)),
+          duration: $checkedConvert(
+              'duration', (v) => readOptionalSeconds(v as int?)),
+          trackPandoraId: $checkedConvert('trackPandoraId', (v) => v as String),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$_PlaylistTrackToJson(_$_PlaylistTrack instance) =>

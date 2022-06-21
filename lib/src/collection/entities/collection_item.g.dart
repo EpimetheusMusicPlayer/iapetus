@@ -9,13 +9,24 @@ part of 'collection_item.dart';
 // **************************************************************************
 
 _$_CollectionItem _$$_CollectionItemFromJson(Map<String, dynamic> json) =>
-    _$_CollectionItem(
-      pandoraId: json['pandoraId'] as String,
-      pandoraType: $enumDecode(_$PandoraTypeEnumMap, json['pandoraType']),
-      addedTime: readDateTimeMilliseconds(json['addedTime'] as int),
-      updatedTime: readDateTimeMilliseconds(json['updatedTime'] as int),
-      ownerId: json['ownerId'] as int?,
-      ownerPandoraId: json['ownerPandoraId'] as String?,
+    $checkedCreate(
+      r'_$_CollectionItem',
+      json,
+      ($checkedConvert) {
+        final val = _$_CollectionItem(
+          pandoraId: $checkedConvert('pandoraId', (v) => v as String),
+          pandoraType: $checkedConvert(
+              'pandoraType', (v) => $enumDecode(_$PandoraTypeEnumMap, v)),
+          addedTime: $checkedConvert(
+              'addedTime', (v) => readDateTimeMilliseconds(v as int)),
+          updatedTime: $checkedConvert(
+              'updatedTime', (v) => readDateTimeMilliseconds(v as int)),
+          ownerId: $checkedConvert('ownerId', (v) => v as int?),
+          ownerPandoraId:
+              $checkedConvert('ownerPandoraId', (v) => v as String?),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$_CollectionItemToJson(_$_CollectionItem instance) =>

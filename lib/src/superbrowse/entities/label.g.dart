@@ -9,14 +9,24 @@ part of 'label.dart';
 // **************************************************************************
 
 _$_SuperbrowseLabel _$$_SuperbrowseLabelFromJson(Map<String, dynamic> json) =>
-    _$_SuperbrowseLabel(
-      text: json['text'] as String,
-      style: $enumDecode(_$LabelStyleEnumMap, json['style']),
-      alignment: $enumDecodeNullable(_$TextAlignmentEnumMap, json['alignment']),
-      maxLines: json['maxLines'] as int?,
-      bold: readOptInBool(json['bold'] as bool?),
-      italic: readOptInBool(json['italic'] as bool?),
-      underlined: readOptInBool(json['underlined'] as bool?),
+    $checkedCreate(
+      r'_$_SuperbrowseLabel',
+      json,
+      ($checkedConvert) {
+        final val = _$_SuperbrowseLabel(
+          text: $checkedConvert('text', (v) => v as String),
+          style: $checkedConvert(
+              'style', (v) => $enumDecode(_$LabelStyleEnumMap, v)),
+          alignment: $checkedConvert('alignment',
+              (v) => $enumDecodeNullable(_$TextAlignmentEnumMap, v)),
+          maxLines: $checkedConvert('maxLines', (v) => v as int?),
+          bold: $checkedConvert('bold', (v) => readOptInBool(v as bool?)),
+          italic: $checkedConvert('italic', (v) => readOptInBool(v as bool?)),
+          underlined:
+              $checkedConvert('underlined', (v) => readOptInBool(v as bool?)),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$_SuperbrowseLabelToJson(_$_SuperbrowseLabel instance) =>

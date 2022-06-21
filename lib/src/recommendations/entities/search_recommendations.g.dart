@@ -10,14 +10,26 @@ part of 'search_recommendations.dart';
 
 _$_SearchRecommendations _$$_SearchRecommendationsFromJson(
         Map<String, dynamic> json) =>
-    _$_SearchRecommendations(
-      artists: (json['artists'] as List<dynamic>)
-          .map((e) => ArtistRecommendation.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      genreStations: (json['genreStations'] as List<dynamic>)
-          .map((e) =>
-              GenreStationRecommendation.fromJson(e as Map<String, dynamic>))
-          .toList(),
+    $checkedCreate(
+      r'_$_SearchRecommendations',
+      json,
+      ($checkedConvert) {
+        final val = _$_SearchRecommendations(
+          artists: $checkedConvert(
+              'artists',
+              (v) => (v as List<dynamic>)
+                  .map((e) =>
+                      ArtistRecommendation.fromJson(e as Map<String, dynamic>))
+                  .toList()),
+          genreStations: $checkedConvert(
+              'genreStations',
+              (v) => (v as List<dynamic>)
+                  .map((e) => GenreStationRecommendation.fromJson(
+                      e as Map<String, dynamic>))
+                  .toList()),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$_SearchRecommendationsToJson(

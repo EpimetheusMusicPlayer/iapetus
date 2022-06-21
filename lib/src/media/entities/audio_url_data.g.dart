@@ -9,11 +9,18 @@ part of 'audio_url_data.dart';
 // **************************************************************************
 
 _$_AudioUrlData _$$_AudioUrlDataFromJson(Map<String, dynamic> json) =>
-    _$_AudioUrlData(
-      audioToken: json['audioToken'] as String,
-      bitrate: json['bitrate'] as String,
-      encoding: json['encoding'] as String,
-      audioUrl: Uri.parse(json['audioUrl'] as String),
+    $checkedCreate(
+      r'_$_AudioUrlData',
+      json,
+      ($checkedConvert) {
+        final val = _$_AudioUrlData(
+          audioToken: $checkedConvert('audioToken', (v) => v as String),
+          bitrate: $checkedConvert('bitrate', (v) => v as String),
+          encoding: $checkedConvert('encoding', (v) => v as String),
+          audioUrl: $checkedConvert('audioUrl', (v) => Uri.parse(v as String)),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$_AudioUrlDataToJson(_$_AudioUrlData instance) =>

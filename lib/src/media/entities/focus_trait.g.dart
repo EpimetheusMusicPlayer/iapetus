@@ -9,10 +9,18 @@ part of 'focus_trait.dart';
 // **************************************************************************
 
 _$_FocusTrait _$$_FocusTraitFromJson(Map<String, dynamic> json) =>
-    _$_FocusTrait(
-      name: json['name'] as String,
-      focusTraitSet: json['focusTraitSet'] as String,
-      focusTraitSetType: json['focusTraitSetType'] as String,
+    $checkedCreate(
+      r'_$_FocusTrait',
+      json,
+      ($checkedConvert) {
+        final val = _$_FocusTrait(
+          name: $checkedConvert('name', (v) => v as String),
+          focusTraitSet: $checkedConvert('focusTraitSet', (v) => v as String),
+          focusTraitSetType:
+              $checkedConvert('focusTraitSetType', (v) => v as String),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$_FocusTraitToJson(_$_FocusTrait instance) =>

@@ -9,14 +9,24 @@ part of 'details.dart';
 // **************************************************************************
 
 _$TrackDetailsSet _$$TrackDetailsSetFromJson(Map<String, dynamic> json) =>
-    _$TrackDetailsSet(
-      annotations: (json['annotations'] as Map<String, dynamic>).map(
-        (k, e) =>
-            MapEntry(k, MediaAnnotation.fromJson(e as Map<String, dynamic>)),
-      ),
-      details:
-          TrackDetails.fromJson(json['trackDetails'] as Map<String, dynamic>),
-      $type: json['runtimeType'] as String?,
+    $checkedCreate(
+      r'_$TrackDetailsSet',
+      json,
+      ($checkedConvert) {
+        final val = _$TrackDetailsSet(
+          annotations: $checkedConvert(
+              'annotations',
+              (v) => (v as Map<String, dynamic>).map(
+                    (k, e) => MapEntry(
+                        k, MediaAnnotation.fromJson(e as Map<String, dynamic>)),
+                  )),
+          details: $checkedConvert('trackDetails',
+              (v) => TrackDetails.fromJson(v as Map<String, dynamic>)),
+          $type: $checkedConvert('runtimeType', (v) => v as String?),
+        );
+        return val;
+      },
+      fieldKeyMap: const {'details': 'trackDetails', r'$type': 'runtimeType'},
     );
 
 Map<String, dynamic> _$$TrackDetailsSetToJson(_$TrackDetailsSet instance) =>
@@ -27,14 +37,24 @@ Map<String, dynamic> _$$TrackDetailsSetToJson(_$TrackDetailsSet instance) =>
     };
 
 _$GenreDetailsSet _$$GenreDetailsSetFromJson(Map<String, dynamic> json) =>
-    _$GenreDetailsSet(
-      annotations: (json['annotations'] as Map<String, dynamic>).map(
-        (k, e) =>
-            MapEntry(k, MediaAnnotation.fromJson(e as Map<String, dynamic>)),
-      ),
-      details:
-          GenreDetails.fromJson(json['genreDetails'] as Map<String, dynamic>),
-      $type: json['runtimeType'] as String?,
+    $checkedCreate(
+      r'_$GenreDetailsSet',
+      json,
+      ($checkedConvert) {
+        final val = _$GenreDetailsSet(
+          annotations: $checkedConvert(
+              'annotations',
+              (v) => (v as Map<String, dynamic>).map(
+                    (k, e) => MapEntry(
+                        k, MediaAnnotation.fromJson(e as Map<String, dynamic>)),
+                  )),
+          details: $checkedConvert('genreDetails',
+              (v) => GenreDetails.fromJson(v as Map<String, dynamic>)),
+          $type: $checkedConvert('runtimeType', (v) => v as String?),
+        );
+        return val;
+      },
+      fieldKeyMap: const {'details': 'genreDetails', r'$type': 'runtimeType'},
     );
 
 Map<String, dynamic> _$$GenreDetailsSetToJson(_$GenreDetailsSet instance) =>
@@ -45,35 +65,57 @@ Map<String, dynamic> _$$GenreDetailsSetToJson(_$GenreDetailsSet instance) =>
     };
 
 _$TrackDetails _$$TrackDetailsFromJson(Map<String, dynamic> json) =>
-    _$TrackDetails(
-      trackTags:
-          (json['trackTags'] as List<dynamic>).map((e) => e as String).toList(),
-      lyricData: json['lyricData'] == null
-          ? null
-          : MediaLyricData.fromJson(json['lyricData'] as Map<String, dynamic>),
-      cleanLyricData: json['cleanLyricData'] == null
-          ? null
-          : MediaLyricData.fromJson(
-              json['cleanLyricData'] as Map<String, dynamic>),
-      releaseDate: DateTime.parse(json['releaseDate'] as String),
-      copyrightHtml: json['copyright'] as String,
-      shareableUrlPath: json['shareableUrlPath'] as String,
-      modificationTime:
-          readDateTimeMilliseconds(json['modificationTime'] as int),
-      similarTrackIds: (json['similarTracks'] as List<dynamic>)
-          .map((e) => e as String)
-          .toList(),
-      focusTraits: (json['focusTraits'] as List<dynamic>)
-          .map((e) => FocusTrait.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      credits: json['credits'] == null
-          ? null
-          : Credits.fromJson(json['credits'] as Map<String, dynamic>),
-      featured: json['featured'] as bool,
-      pandoraId: json['pandoraId'] as String,
-      pandoraType: $enumDecode(_$PandoraTypeEnumMap, json['type']),
-      scope: json['scope'] as String,
-      $type: json['runtimeType'] as String?,
+    $checkedCreate(
+      r'_$TrackDetails',
+      json,
+      ($checkedConvert) {
+        final val = _$TrackDetails(
+          trackTags: $checkedConvert('trackTags',
+              (v) => (v as List<dynamic>).map((e) => e as String).toList()),
+          lyricData: $checkedConvert(
+              'lyricData',
+              (v) => v == null
+                  ? null
+                  : MediaLyricData.fromJson(v as Map<String, dynamic>)),
+          cleanLyricData: $checkedConvert(
+              'cleanLyricData',
+              (v) => v == null
+                  ? null
+                  : MediaLyricData.fromJson(v as Map<String, dynamic>)),
+          releaseDate: $checkedConvert(
+              'releaseDate', (v) => DateTime.parse(v as String)),
+          copyrightHtml: $checkedConvert('copyright', (v) => v as String),
+          shareableUrlPath:
+              $checkedConvert('shareableUrlPath', (v) => v as String),
+          modificationTime: $checkedConvert(
+              'modificationTime', (v) => readDateTimeMilliseconds(v as int)),
+          similarTrackIds: $checkedConvert('similarTracks',
+              (v) => (v as List<dynamic>).map((e) => e as String).toList()),
+          focusTraits: $checkedConvert(
+              'focusTraits',
+              (v) => (v as List<dynamic>)
+                  .map((e) => FocusTrait.fromJson(e as Map<String, dynamic>))
+                  .toList()),
+          credits: $checkedConvert(
+              'credits',
+              (v) => v == null
+                  ? null
+                  : Credits.fromJson(v as Map<String, dynamic>)),
+          featured: $checkedConvert('featured', (v) => v as bool),
+          pandoraId: $checkedConvert('pandoraId', (v) => v as String),
+          pandoraType: $checkedConvert(
+              'type', (v) => $enumDecode(_$PandoraTypeEnumMap, v)),
+          scope: $checkedConvert('scope', (v) => v as String),
+          $type: $checkedConvert('runtimeType', (v) => v as String?),
+        );
+        return val;
+      },
+      fieldKeyMap: const {
+        'copyrightHtml': 'copyright',
+        'similarTrackIds': 'similarTracks',
+        'pandoraType': 'type',
+        r'$type': 'runtimeType'
+      },
     );
 
 Map<String, dynamic> _$$TrackDetailsToJson(_$TrackDetails instance) =>
@@ -123,24 +165,38 @@ const _$PandoraTypeEnumMap = {
 };
 
 _$GenreDetails _$$GenreDetailsFromJson(Map<String, dynamic> json) =>
-    _$GenreDetails(
-      modificationTime:
-          readDateTimeMilliseconds(json['modificationTime'] as int),
-      sampleArtistIds: (json['sampleArtists'] as List<dynamic>)
-          .map((e) => e as String)
-          .toList(),
-      sampleTrackIds: (json['sampleTracks'] as List<dynamic>)
-          .map((e) => e as String)
-          .toList(),
-      focusTraits: (json['focusTraits'] as List<dynamic>)
-          .map((e) => FocusTrait.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      isRedirect: json['isRedirect'] as bool,
-      curatorId: json['curatorId'] as String,
-      pandoraId: json['pandoraId'] as String,
-      pandoraType: $enumDecode(_$PandoraTypeEnumMap, json['type']),
-      scope: json['scope'] as String,
-      $type: json['runtimeType'] as String?,
+    $checkedCreate(
+      r'_$GenreDetails',
+      json,
+      ($checkedConvert) {
+        final val = _$GenreDetails(
+          modificationTime: $checkedConvert(
+              'modificationTime', (v) => readDateTimeMilliseconds(v as int)),
+          sampleArtistIds: $checkedConvert('sampleArtists',
+              (v) => (v as List<dynamic>).map((e) => e as String).toList()),
+          sampleTrackIds: $checkedConvert('sampleTracks',
+              (v) => (v as List<dynamic>).map((e) => e as String).toList()),
+          focusTraits: $checkedConvert(
+              'focusTraits',
+              (v) => (v as List<dynamic>)
+                  .map((e) => FocusTrait.fromJson(e as Map<String, dynamic>))
+                  .toList()),
+          isRedirect: $checkedConvert('isRedirect', (v) => v as bool),
+          curatorId: $checkedConvert('curatorId', (v) => v as String),
+          pandoraId: $checkedConvert('pandoraId', (v) => v as String),
+          pandoraType: $checkedConvert(
+              'type', (v) => $enumDecode(_$PandoraTypeEnumMap, v)),
+          scope: $checkedConvert('scope', (v) => v as String),
+          $type: $checkedConvert('runtimeType', (v) => v as String?),
+        );
+        return val;
+      },
+      fieldKeyMap: const {
+        'sampleArtistIds': 'sampleArtists',
+        'sampleTrackIds': 'sampleTracks',
+        'pandoraType': 'type',
+        r'$type': 'runtimeType'
+      },
     );
 
 Map<String, dynamic> _$$GenreDetailsToJson(_$GenreDetails instance) =>

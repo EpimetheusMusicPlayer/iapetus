@@ -10,9 +10,17 @@ part of 'pandora_api_response.dart';
 
 _$SuccessfulPandoraApiResponse _$$SuccessfulPandoraApiResponseFromJson(
         Map<String, dynamic> json) =>
-    _$SuccessfulPandoraApiResponse(
-      result: json['result'],
-      $type: json['stat'] as String?,
+    $checkedCreate(
+      r'_$SuccessfulPandoraApiResponse',
+      json,
+      ($checkedConvert) {
+        final val = _$SuccessfulPandoraApiResponse(
+          result: $checkedConvert('result', (v) => v),
+          $type: $checkedConvert('stat', (v) => v as String?),
+        );
+        return val;
+      },
+      fieldKeyMap: const {r'$type': 'stat'},
     );
 
 Map<String, dynamic> _$$SuccessfulPandoraApiResponseToJson(
@@ -24,10 +32,19 @@ Map<String, dynamic> _$$SuccessfulPandoraApiResponseToJson(
 
 _$PandoraApiException _$$PandoraApiExceptionFromJson(
         Map<String, dynamic> json) =>
-    _$PandoraApiException(
-      code: PandoraApiErrorCode.fromCode(json['code'] as int),
-      message: json['message'] as String,
-      $type: json['stat'] as String?,
+    $checkedCreate(
+      r'_$PandoraApiException',
+      json,
+      ($checkedConvert) {
+        final val = _$PandoraApiException(
+          code: $checkedConvert(
+              'code', (v) => PandoraApiErrorCode.fromCode(v as int)),
+          message: $checkedConvert('message', (v) => v as String),
+          $type: $checkedConvert('stat', (v) => v as String?),
+        );
+        return val;
+      },
+      fieldKeyMap: const {r'$type': 'stat'},
     );
 
 Map<String, dynamic> _$$PandoraApiExceptionToJson(

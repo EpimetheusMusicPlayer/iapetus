@@ -10,18 +10,32 @@ part of 'section.dart';
 
 _$_SuperbrowseSection _$$_SuperbrowseSectionFromJson(
         Map<String, dynamic> json) =>
-    _$_SuperbrowseSection(
-      id: json['id'] as String,
-      header: json['title'] == null
-          ? null
-          : SuperbrowseItem.fromJson(json['title'] as Map<String, dynamic>),
-      footer: json['viewAll'] == null
-          ? null
-          : SuperbrowseItem.fromJson(json['viewAll'] as Map<String, dynamic>),
-      subsections: (json['subsections'] as List<dynamic>?)
-          ?.map(
-              (e) => SuperbrowseSubsection.fromJson(e as Map<String, dynamic>))
-          .toList(),
+    $checkedCreate(
+      r'_$_SuperbrowseSection',
+      json,
+      ($checkedConvert) {
+        final val = _$_SuperbrowseSection(
+          id: $checkedConvert('id', (v) => v as String),
+          header: $checkedConvert(
+              'title',
+              (v) => v == null
+                  ? null
+                  : SuperbrowseItem.fromJson(v as Map<String, dynamic>)),
+          footer: $checkedConvert(
+              'viewAll',
+              (v) => v == null
+                  ? null
+                  : SuperbrowseItem.fromJson(v as Map<String, dynamic>)),
+          subsections: $checkedConvert(
+              'subsections',
+              (v) => (v as List<dynamic>?)
+                  ?.map((e) =>
+                      SuperbrowseSubsection.fromJson(e as Map<String, dynamic>))
+                  .toList()),
+        );
+        return val;
+      },
+      fieldKeyMap: const {'header': 'title', 'footer': 'viewAll'},
     );
 
 Map<String, dynamic> _$$_SuperbrowseSectionToJson(

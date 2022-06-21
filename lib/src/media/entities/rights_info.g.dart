@@ -9,13 +9,23 @@ part of 'rights_info.dart';
 // **************************************************************************
 
 _$_RightsInfo _$$_RightsInfoFromJson(Map<String, dynamic> json) =>
-    _$_RightsInfo(
-      hasInteractive: json['hasInteractive'] as bool,
-      hasOffline: json['hasOffline'] as bool,
-      hasNonInteractive: json['hasNonInteractive'] as bool,
-      hasStatutory: json['hasStatutory'] as bool,
-      hasRadioRights: json['hasRadioRights'] as bool,
-      expiresIn: readMilliseconds(json['expirationTime'] as int),
+    $checkedCreate(
+      r'_$_RightsInfo',
+      json,
+      ($checkedConvert) {
+        final val = _$_RightsInfo(
+          hasInteractive: $checkedConvert('hasInteractive', (v) => v as bool),
+          hasOffline: $checkedConvert('hasOffline', (v) => v as bool),
+          hasNonInteractive:
+              $checkedConvert('hasNonInteractive', (v) => v as bool),
+          hasStatutory: $checkedConvert('hasStatutory', (v) => v as bool),
+          hasRadioRights: $checkedConvert('hasRadioRights', (v) => v as bool),
+          expiresIn: $checkedConvert(
+              'expirationTime', (v) => readMilliseconds(v as int)),
+        );
+        return val;
+      },
+      fieldKeyMap: const {'expiresIn': 'expirationTime'},
     );
 
 Map<String, dynamic> _$$_RightsInfoToJson(_$_RightsInfo instance) =>

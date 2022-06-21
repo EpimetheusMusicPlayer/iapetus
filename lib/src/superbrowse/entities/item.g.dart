@@ -10,16 +10,29 @@ part of 'item.dart';
 
 _$BannerSuperbrowseItem _$$BannerSuperbrowseItemFromJson(
         Map<String, dynamic> json) =>
-    _$BannerSuperbrowseItem(
-      pandoraId: json['pandoraId'] as String?,
-      analyticsToken: json['analyticsToken'] as String,
-      labels: (json['labels'] as List<dynamic>)
-          .map((e) => SuperbrowseLabel.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      image: json['image'] == null
-          ? null
-          : SuperbrowseImage.fromJson(json['image'] as Map<String, dynamic>),
-      $type: json['type'] as String?,
+    $checkedCreate(
+      r'_$BannerSuperbrowseItem',
+      json,
+      ($checkedConvert) {
+        final val = _$BannerSuperbrowseItem(
+          pandoraId: $checkedConvert('pandoraId', (v) => v as String?),
+          analyticsToken: $checkedConvert('analyticsToken', (v) => v as String),
+          labels: $checkedConvert(
+              'labels',
+              (v) => (v as List<dynamic>)
+                  .map((e) =>
+                      SuperbrowseLabel.fromJson(e as Map<String, dynamic>))
+                  .toList()),
+          image: $checkedConvert(
+              'image',
+              (v) => v == null
+                  ? null
+                  : SuperbrowseImage.fromJson(v as Map<String, dynamic>)),
+          $type: $checkedConvert('type', (v) => v as String?),
+        );
+        return val;
+      },
+      fieldKeyMap: const {r'$type': 'type'},
     );
 
 Map<String, dynamic> _$$BannerSuperbrowseItemToJson(
@@ -34,22 +47,37 @@ Map<String, dynamic> _$$BannerSuperbrowseItemToJson(
 
 _$BeltSuperbrowseItem _$$BeltSuperbrowseItemFromJson(
         Map<String, dynamic> json) =>
-    _$BeltSuperbrowseItem(
-      pandoraId: json['pandoraId'] as String?,
-      analyticsToken: json['analyticsToken'] as String,
-      labels: (json['labels'] as List<dynamic>?)
-          ?.map((e) => SuperbrowseLabel.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      image: SuperbrowseImage.fromJson(json['image'] as Map<String, dynamic>),
-      action: json['action'] == null
-          ? null
-          : SuperbrowseAction.fromJson(json['action'] as Map<String, dynamic>),
-      longPressAction: json['longPressAction'] == null
-          ? null
-          : SuperbrowseAction.fromJson(
-              json['longPressAction'] as Map<String, dynamic>),
-      voiceText: json['voiceText'] as String?,
-      $type: json['type'] as String?,
+    $checkedCreate(
+      r'_$BeltSuperbrowseItem',
+      json,
+      ($checkedConvert) {
+        final val = _$BeltSuperbrowseItem(
+          pandoraId: $checkedConvert('pandoraId', (v) => v as String?),
+          analyticsToken: $checkedConvert('analyticsToken', (v) => v as String),
+          labels: $checkedConvert(
+              'labels',
+              (v) => (v as List<dynamic>?)
+                  ?.map((e) =>
+                      SuperbrowseLabel.fromJson(e as Map<String, dynamic>))
+                  .toList()),
+          image: $checkedConvert('image',
+              (v) => SuperbrowseImage.fromJson(v as Map<String, dynamic>)),
+          action: $checkedConvert(
+              'action',
+              (v) => v == null
+                  ? null
+                  : SuperbrowseAction.fromJson(v as Map<String, dynamic>)),
+          longPressAction: $checkedConvert(
+              'longPressAction',
+              (v) => v == null
+                  ? null
+                  : SuperbrowseAction.fromJson(v as Map<String, dynamic>)),
+          voiceText: $checkedConvert('voiceText', (v) => v as String?),
+          $type: $checkedConvert('type', (v) => v as String?),
+        );
+        return val;
+      },
+      fieldKeyMap: const {r'$type': 'type'},
     );
 
 Map<String, dynamic> _$$BeltSuperbrowseItemToJson(
@@ -67,24 +95,42 @@ Map<String, dynamic> _$$BeltSuperbrowseItemToJson(
 
 _$FeaturedSuperbrowseItem _$$FeaturedSuperbrowseItemFromJson(
         Map<String, dynamic> json) =>
-    _$FeaturedSuperbrowseItem(
-      pandoraId: json['pandoraId'] as String?,
-      analyticsToken: json['analyticsToken'] as String,
-      labels: (json['labels'] as List<dynamic>)
-          .map((e) => SuperbrowseLabel.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      image: SuperbrowseImage.fromJson(json['image'] as Map<String, dynamic>),
-      action: json['action'] == null
-          ? null
-          : SuperbrowseAction.fromJson(json['action'] as Map<String, dynamic>),
-      longPressAction: json['longPressAction'] == null
-          ? null
-          : SuperbrowseAction.fromJson(
-              json['longPressAction'] as Map<String, dynamic>),
-      badges: (json['badges'] as List<dynamic>?)
-          ?.map((e) => SuperbrowseBadge.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      $type: json['type'] as String?,
+    $checkedCreate(
+      r'_$FeaturedSuperbrowseItem',
+      json,
+      ($checkedConvert) {
+        final val = _$FeaturedSuperbrowseItem(
+          pandoraId: $checkedConvert('pandoraId', (v) => v as String?),
+          analyticsToken: $checkedConvert('analyticsToken', (v) => v as String),
+          labels: $checkedConvert(
+              'labels',
+              (v) => (v as List<dynamic>)
+                  .map((e) =>
+                      SuperbrowseLabel.fromJson(e as Map<String, dynamic>))
+                  .toList()),
+          image: $checkedConvert('image',
+              (v) => SuperbrowseImage.fromJson(v as Map<String, dynamic>)),
+          action: $checkedConvert(
+              'action',
+              (v) => v == null
+                  ? null
+                  : SuperbrowseAction.fromJson(v as Map<String, dynamic>)),
+          longPressAction: $checkedConvert(
+              'longPressAction',
+              (v) => v == null
+                  ? null
+                  : SuperbrowseAction.fromJson(v as Map<String, dynamic>)),
+          badges: $checkedConvert(
+              'badges',
+              (v) => (v as List<dynamic>?)
+                  ?.map((e) =>
+                      SuperbrowseBadge.fromJson(e as Map<String, dynamic>))
+                  .toList()),
+          $type: $checkedConvert('type', (v) => v as String?),
+        );
+        return val;
+      },
+      fieldKeyMap: const {r'$type': 'type'},
     );
 
 Map<String, dynamic> _$$FeaturedSuperbrowseItemToJson(
@@ -102,23 +148,39 @@ Map<String, dynamic> _$$FeaturedSuperbrowseItemToJson(
 
 _$FooterSuperbrowseItem _$$FooterSuperbrowseItemFromJson(
         Map<String, dynamic> json) =>
-    _$FooterSuperbrowseItem(
-      pandoraId: json['pandoraId'] as String?,
-      analyticsToken: json['analyticsToken'] as String,
-      labels: (json['labels'] as List<dynamic>)
-          .map((e) => SuperbrowseLabel.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      button: json['button'] == null
-          ? null
-          : SuperbrowseButton.fromJson(json['button'] as Map<String, dynamic>),
-      action: json['action'] == null
-          ? null
-          : SuperbrowseAction.fromJson(json['action'] as Map<String, dynamic>),
-      longPressAction: json['longPressAction'] == null
-          ? null
-          : SuperbrowseAction.fromJson(
-              json['longPressAction'] as Map<String, dynamic>),
-      $type: json['type'] as String?,
+    $checkedCreate(
+      r'_$FooterSuperbrowseItem',
+      json,
+      ($checkedConvert) {
+        final val = _$FooterSuperbrowseItem(
+          pandoraId: $checkedConvert('pandoraId', (v) => v as String?),
+          analyticsToken: $checkedConvert('analyticsToken', (v) => v as String),
+          labels: $checkedConvert(
+              'labels',
+              (v) => (v as List<dynamic>)
+                  .map((e) =>
+                      SuperbrowseLabel.fromJson(e as Map<String, dynamic>))
+                  .toList()),
+          button: $checkedConvert(
+              'button',
+              (v) => v == null
+                  ? null
+                  : SuperbrowseButton.fromJson(v as Map<String, dynamic>)),
+          action: $checkedConvert(
+              'action',
+              (v) => v == null
+                  ? null
+                  : SuperbrowseAction.fromJson(v as Map<String, dynamic>)),
+          longPressAction: $checkedConvert(
+              'longPressAction',
+              (v) => v == null
+                  ? null
+                  : SuperbrowseAction.fromJson(v as Map<String, dynamic>)),
+          $type: $checkedConvert('type', (v) => v as String?),
+        );
+        return val;
+      },
+      fieldKeyMap: const {r'$type': 'type'},
     );
 
 Map<String, dynamic> _$$FooterSuperbrowseItemToJson(
@@ -135,25 +197,44 @@ Map<String, dynamic> _$$FooterSuperbrowseItemToJson(
 
 _$GridSuperbrowseItem _$$GridSuperbrowseItemFromJson(
         Map<String, dynamic> json) =>
-    _$GridSuperbrowseItem(
-      pandoraId: json['pandoraId'] as String?,
-      analyticsToken: json['analyticsToken'] as String,
-      labels: (json['labels'] as List<dynamic>)
-          .map((e) => SuperbrowseLabel.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      image: SuperbrowseImage.fromJson(json['image'] as Map<String, dynamic>),
-      action: json['action'] == null
-          ? null
-          : SuperbrowseAction.fromJson(json['action'] as Map<String, dynamic>),
-      longPressAction: json['longPressAction'] == null
-          ? null
-          : SuperbrowseAction.fromJson(
-              json['longPressAction'] as Map<String, dynamic>),
-      badges: (json['badges'] as List<dynamic>?)
-          ?.map((e) => SuperbrowseBadge.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      timestamp: readOptionalDateTimeMilliseconds(json['timeStamp'] as int?),
-      $type: json['type'] as String?,
+    $checkedCreate(
+      r'_$GridSuperbrowseItem',
+      json,
+      ($checkedConvert) {
+        final val = _$GridSuperbrowseItem(
+          pandoraId: $checkedConvert('pandoraId', (v) => v as String?),
+          analyticsToken: $checkedConvert('analyticsToken', (v) => v as String),
+          labels: $checkedConvert(
+              'labels',
+              (v) => (v as List<dynamic>)
+                  .map((e) =>
+                      SuperbrowseLabel.fromJson(e as Map<String, dynamic>))
+                  .toList()),
+          image: $checkedConvert('image',
+              (v) => SuperbrowseImage.fromJson(v as Map<String, dynamic>)),
+          action: $checkedConvert(
+              'action',
+              (v) => v == null
+                  ? null
+                  : SuperbrowseAction.fromJson(v as Map<String, dynamic>)),
+          longPressAction: $checkedConvert(
+              'longPressAction',
+              (v) => v == null
+                  ? null
+                  : SuperbrowseAction.fromJson(v as Map<String, dynamic>)),
+          badges: $checkedConvert(
+              'badges',
+              (v) => (v as List<dynamic>?)
+                  ?.map((e) =>
+                      SuperbrowseBadge.fromJson(e as Map<String, dynamic>))
+                  .toList()),
+          timestamp: $checkedConvert(
+              'timeStamp', (v) => readOptionalDateTimeMilliseconds(v as int?)),
+          $type: $checkedConvert('type', (v) => v as String?),
+        );
+        return val;
+      },
+      fieldKeyMap: const {'timestamp': 'timeStamp', r'$type': 'type'},
     );
 
 Map<String, dynamic> _$$GridSuperbrowseItemToJson(
@@ -172,23 +253,39 @@ Map<String, dynamic> _$$GridSuperbrowseItemToJson(
 
 _$HeaderSuperbrowseItem _$$HeaderSuperbrowseItemFromJson(
         Map<String, dynamic> json) =>
-    _$HeaderSuperbrowseItem(
-      pandoraId: json['pandoraId'] as String?,
-      analyticsToken: json['analyticsToken'] as String,
-      labels: (json['labels'] as List<dynamic>)
-          .map((e) => SuperbrowseLabel.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      image: json['image'] == null
-          ? null
-          : SuperbrowseImage.fromJson(json['image'] as Map<String, dynamic>),
-      action: json['action'] == null
-          ? null
-          : SuperbrowseAction.fromJson(json['action'] as Map<String, dynamic>),
-      longPressAction: json['longPressAction'] == null
-          ? null
-          : SuperbrowseAction.fromJson(
-              json['longPressAction'] as Map<String, dynamic>),
-      $type: json['type'] as String?,
+    $checkedCreate(
+      r'_$HeaderSuperbrowseItem',
+      json,
+      ($checkedConvert) {
+        final val = _$HeaderSuperbrowseItem(
+          pandoraId: $checkedConvert('pandoraId', (v) => v as String?),
+          analyticsToken: $checkedConvert('analyticsToken', (v) => v as String),
+          labels: $checkedConvert(
+              'labels',
+              (v) => (v as List<dynamic>)
+                  .map((e) =>
+                      SuperbrowseLabel.fromJson(e as Map<String, dynamic>))
+                  .toList()),
+          image: $checkedConvert(
+              'image',
+              (v) => v == null
+                  ? null
+                  : SuperbrowseImage.fromJson(v as Map<String, dynamic>)),
+          action: $checkedConvert(
+              'action',
+              (v) => v == null
+                  ? null
+                  : SuperbrowseAction.fromJson(v as Map<String, dynamic>)),
+          longPressAction: $checkedConvert(
+              'longPressAction',
+              (v) => v == null
+                  ? null
+                  : SuperbrowseAction.fromJson(v as Map<String, dynamic>)),
+          $type: $checkedConvert('type', (v) => v as String?),
+        );
+        return val;
+      },
+      fieldKeyMap: const {r'$type': 'type'},
     );
 
 Map<String, dynamic> _$$HeaderSuperbrowseItemToJson(
@@ -205,27 +302,47 @@ Map<String, dynamic> _$$HeaderSuperbrowseItemToJson(
 
 _$HeroSuperbrowseItem _$$HeroSuperbrowseItemFromJson(
         Map<String, dynamic> json) =>
-    _$HeroSuperbrowseItem(
-      pandoraId: json['pandoraId'] as String?,
-      analyticsToken: json['analyticsToken'] as String,
-      labels: (json['labels'] as List<dynamic>)
-          .map((e) => SuperbrowseLabel.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      image: SuperbrowseImage.fromJson(json['image'] as Map<String, dynamic>),
-      action: json['action'] == null
-          ? null
-          : SuperbrowseAction.fromJson(json['action'] as Map<String, dynamic>),
-      longPressAction: json['longPressAction'] == null
-          ? null
-          : SuperbrowseAction.fromJson(
-              json['longPressAction'] as Map<String, dynamic>),
-      badges: (json['badges'] as List<dynamic>?)
-          ?.map((e) => SuperbrowseBadge.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      formFactors: json['formFactors'] == null
-          ? null
-          : FormFactors.fromJson(json['formFactors'] as Map<String, dynamic>),
-      $type: json['type'] as String?,
+    $checkedCreate(
+      r'_$HeroSuperbrowseItem',
+      json,
+      ($checkedConvert) {
+        final val = _$HeroSuperbrowseItem(
+          pandoraId: $checkedConvert('pandoraId', (v) => v as String?),
+          analyticsToken: $checkedConvert('analyticsToken', (v) => v as String),
+          labels: $checkedConvert(
+              'labels',
+              (v) => (v as List<dynamic>)
+                  .map((e) =>
+                      SuperbrowseLabel.fromJson(e as Map<String, dynamic>))
+                  .toList()),
+          image: $checkedConvert('image',
+              (v) => SuperbrowseImage.fromJson(v as Map<String, dynamic>)),
+          action: $checkedConvert(
+              'action',
+              (v) => v == null
+                  ? null
+                  : SuperbrowseAction.fromJson(v as Map<String, dynamic>)),
+          longPressAction: $checkedConvert(
+              'longPressAction',
+              (v) => v == null
+                  ? null
+                  : SuperbrowseAction.fromJson(v as Map<String, dynamic>)),
+          badges: $checkedConvert(
+              'badges',
+              (v) => (v as List<dynamic>?)
+                  ?.map((e) =>
+                      SuperbrowseBadge.fromJson(e as Map<String, dynamic>))
+                  .toList()),
+          formFactors: $checkedConvert(
+              'formFactors',
+              (v) => v == null
+                  ? null
+                  : FormFactors.fromJson(v as Map<String, dynamic>)),
+          $type: $checkedConvert('type', (v) => v as String?),
+        );
+        return val;
+      },
+      fieldKeyMap: const {r'$type': 'type'},
     );
 
 Map<String, dynamic> _$$HeroSuperbrowseItemToJson(
@@ -244,31 +361,54 @@ Map<String, dynamic> _$$HeroSuperbrowseItemToJson(
 
 _$LargeRowSuperbrowseItem _$$LargeRowSuperbrowseItemFromJson(
         Map<String, dynamic> json) =>
-    _$LargeRowSuperbrowseItem(
-      pandoraId: json['pandoraId'] as String?,
-      analyticsToken: json['analyticsToken'] as String,
-      labels: (json['labels'] as List<dynamic>?)
-          ?.map((e) => SuperbrowseLabel.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      button: json['button'] == null
-          ? null
-          : SuperbrowseButton.fromJson(json['button'] as Map<String, dynamic>),
-      action: json['action'] == null
-          ? null
-          : SuperbrowseAction.fromJson(json['action'] as Map<String, dynamic>),
-      image: SuperbrowseImage.fromJson(json['image'] as Map<String, dynamic>),
-      rank: json['rank'] == null
-          ? null
-          : SuperbrowseLabel.fromJson(json['rank'] as Map<String, dynamic>),
-      longPressAction: json['longPressAction'] == null
-          ? null
-          : SuperbrowseAction.fromJson(
-              json['longPressAction'] as Map<String, dynamic>),
-      badges: (json['badges'] as List<dynamic>?)
-          ?.map((e) => SuperbrowseBadge.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      separatorBelow: readOptInBool(json['separatorBelow'] as bool?),
-      $type: json['type'] as String?,
+    $checkedCreate(
+      r'_$LargeRowSuperbrowseItem',
+      json,
+      ($checkedConvert) {
+        final val = _$LargeRowSuperbrowseItem(
+          pandoraId: $checkedConvert('pandoraId', (v) => v as String?),
+          analyticsToken: $checkedConvert('analyticsToken', (v) => v as String),
+          labels: $checkedConvert(
+              'labels',
+              (v) => (v as List<dynamic>?)
+                  ?.map((e) =>
+                      SuperbrowseLabel.fromJson(e as Map<String, dynamic>))
+                  .toList()),
+          button: $checkedConvert(
+              'button',
+              (v) => v == null
+                  ? null
+                  : SuperbrowseButton.fromJson(v as Map<String, dynamic>)),
+          action: $checkedConvert(
+              'action',
+              (v) => v == null
+                  ? null
+                  : SuperbrowseAction.fromJson(v as Map<String, dynamic>)),
+          image: $checkedConvert('image',
+              (v) => SuperbrowseImage.fromJson(v as Map<String, dynamic>)),
+          rank: $checkedConvert(
+              'rank',
+              (v) => v == null
+                  ? null
+                  : SuperbrowseLabel.fromJson(v as Map<String, dynamic>)),
+          longPressAction: $checkedConvert(
+              'longPressAction',
+              (v) => v == null
+                  ? null
+                  : SuperbrowseAction.fromJson(v as Map<String, dynamic>)),
+          badges: $checkedConvert(
+              'badges',
+              (v) => (v as List<dynamic>?)
+                  ?.map((e) =>
+                      SuperbrowseBadge.fromJson(e as Map<String, dynamic>))
+                  .toList()),
+          separatorBelow: $checkedConvert(
+              'separatorBelow', (v) => readOptInBool(v as bool?)),
+          $type: $checkedConvert('type', (v) => v as String?),
+        );
+        return val;
+      },
+      fieldKeyMap: const {r'$type': 'type'},
     );
 
 Map<String, dynamic> _$$LargeRowSuperbrowseItemToJson(
@@ -289,23 +429,39 @@ Map<String, dynamic> _$$LargeRowSuperbrowseItemToJson(
 
 _$SmallRowSuperbrowseItem _$$SmallRowSuperbrowseItemFromJson(
         Map<String, dynamic> json) =>
-    _$SmallRowSuperbrowseItem(
-      pandoraId: json['pandoraId'] as String?,
-      analyticsToken: json['analyticsToken'] as String,
-      labels: (json['labels'] as List<dynamic>)
-          .map((e) => SuperbrowseLabel.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      button: json['button'] == null
-          ? null
-          : SuperbrowseButton.fromJson(json['button'] as Map<String, dynamic>),
-      action: json['action'] == null
-          ? null
-          : SuperbrowseAction.fromJson(json['action'] as Map<String, dynamic>),
-      longPressAction: json['longPressAction'] == null
-          ? null
-          : SuperbrowseAction.fromJson(
-              json['longPressAction'] as Map<String, dynamic>),
-      $type: json['type'] as String?,
+    $checkedCreate(
+      r'_$SmallRowSuperbrowseItem',
+      json,
+      ($checkedConvert) {
+        final val = _$SmallRowSuperbrowseItem(
+          pandoraId: $checkedConvert('pandoraId', (v) => v as String?),
+          analyticsToken: $checkedConvert('analyticsToken', (v) => v as String),
+          labels: $checkedConvert(
+              'labels',
+              (v) => (v as List<dynamic>)
+                  .map((e) =>
+                      SuperbrowseLabel.fromJson(e as Map<String, dynamic>))
+                  .toList()),
+          button: $checkedConvert(
+              'button',
+              (v) => v == null
+                  ? null
+                  : SuperbrowseButton.fromJson(v as Map<String, dynamic>)),
+          action: $checkedConvert(
+              'action',
+              (v) => v == null
+                  ? null
+                  : SuperbrowseAction.fromJson(v as Map<String, dynamic>)),
+          longPressAction: $checkedConvert(
+              'longPressAction',
+              (v) => v == null
+                  ? null
+                  : SuperbrowseAction.fromJson(v as Map<String, dynamic>)),
+          $type: $checkedConvert('type', (v) => v as String?),
+        );
+        return val;
+      },
+      fieldKeyMap: const {r'$type': 'type'},
     );
 
 Map<String, dynamic> _$$SmallRowSuperbrowseItemToJson(
@@ -322,24 +478,42 @@ Map<String, dynamic> _$$SmallRowSuperbrowseItemToJson(
 
 _$SplitSuperbrowseItem _$$SplitSuperbrowseItemFromJson(
         Map<String, dynamic> json) =>
-    _$SplitSuperbrowseItem(
-      pandoraId: json['pandoraId'] as String?,
-      analyticsToken: json['analyticsToken'] as String,
-      labels: (json['labels'] as List<dynamic>)
-          .map((e) => SuperbrowseLabel.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      image: SuperbrowseImage.fromJson(json['image'] as Map<String, dynamic>),
-      action: json['action'] == null
-          ? null
-          : SuperbrowseAction.fromJson(json['action'] as Map<String, dynamic>),
-      longPressAction: json['longPressAction'] == null
-          ? null
-          : SuperbrowseAction.fromJson(
-              json['longPressAction'] as Map<String, dynamic>),
-      badges: (json['badges'] as List<dynamic>?)
-          ?.map((e) => SuperbrowseBadge.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      $type: json['type'] as String?,
+    $checkedCreate(
+      r'_$SplitSuperbrowseItem',
+      json,
+      ($checkedConvert) {
+        final val = _$SplitSuperbrowseItem(
+          pandoraId: $checkedConvert('pandoraId', (v) => v as String?),
+          analyticsToken: $checkedConvert('analyticsToken', (v) => v as String),
+          labels: $checkedConvert(
+              'labels',
+              (v) => (v as List<dynamic>)
+                  .map((e) =>
+                      SuperbrowseLabel.fromJson(e as Map<String, dynamic>))
+                  .toList()),
+          image: $checkedConvert('image',
+              (v) => SuperbrowseImage.fromJson(v as Map<String, dynamic>)),
+          action: $checkedConvert(
+              'action',
+              (v) => v == null
+                  ? null
+                  : SuperbrowseAction.fromJson(v as Map<String, dynamic>)),
+          longPressAction: $checkedConvert(
+              'longPressAction',
+              (v) => v == null
+                  ? null
+                  : SuperbrowseAction.fromJson(v as Map<String, dynamic>)),
+          badges: $checkedConvert(
+              'badges',
+              (v) => (v as List<dynamic>?)
+                  ?.map((e) =>
+                      SuperbrowseBadge.fromJson(e as Map<String, dynamic>))
+                  .toList()),
+          $type: $checkedConvert('type', (v) => v as String?),
+        );
+        return val;
+      },
+      fieldKeyMap: const {r'$type': 'type'},
     );
 
 Map<String, dynamic> _$$SplitSuperbrowseItemToJson(
@@ -357,22 +531,37 @@ Map<String, dynamic> _$$SplitSuperbrowseItemToJson(
 
 _$TileSuperbrowseItem _$$TileSuperbrowseItemFromJson(
         Map<String, dynamic> json) =>
-    _$TileSuperbrowseItem(
-      pandoraId: json['pandoraId'] as String?,
-      analyticsToken: json['analyticsToken'] as String,
-      labels: (json['labels'] as List<dynamic>?)
-          ?.map((e) => SuperbrowseLabel.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      image: SuperbrowseImage.fromJson(json['image'] as Map<String, dynamic>),
-      action: json['action'] == null
-          ? null
-          : SuperbrowseAction.fromJson(json['action'] as Map<String, dynamic>),
-      longPressAction: json['longPressAction'] == null
-          ? null
-          : SuperbrowseAction.fromJson(
-              json['longPressAction'] as Map<String, dynamic>),
-      voiceText: json['voiceText'] as String?,
-      $type: json['type'] as String?,
+    $checkedCreate(
+      r'_$TileSuperbrowseItem',
+      json,
+      ($checkedConvert) {
+        final val = _$TileSuperbrowseItem(
+          pandoraId: $checkedConvert('pandoraId', (v) => v as String?),
+          analyticsToken: $checkedConvert('analyticsToken', (v) => v as String),
+          labels: $checkedConvert(
+              'labels',
+              (v) => (v as List<dynamic>?)
+                  ?.map((e) =>
+                      SuperbrowseLabel.fromJson(e as Map<String, dynamic>))
+                  .toList()),
+          image: $checkedConvert('image',
+              (v) => SuperbrowseImage.fromJson(v as Map<String, dynamic>)),
+          action: $checkedConvert(
+              'action',
+              (v) => v == null
+                  ? null
+                  : SuperbrowseAction.fromJson(v as Map<String, dynamic>)),
+          longPressAction: $checkedConvert(
+              'longPressAction',
+              (v) => v == null
+                  ? null
+                  : SuperbrowseAction.fromJson(v as Map<String, dynamic>)),
+          voiceText: $checkedConvert('voiceText', (v) => v as String?),
+          $type: $checkedConvert('type', (v) => v as String?),
+        );
+        return val;
+      },
+      fieldKeyMap: const {r'$type': 'type'},
     );
 
 Map<String, dynamic> _$$TileSuperbrowseItemToJson(
