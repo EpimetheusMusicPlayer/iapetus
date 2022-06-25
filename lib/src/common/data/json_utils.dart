@@ -22,6 +22,18 @@ Map<String, dynamic> writeDateTimeJsonObject(DateTime dateTime) => {
       // 'month': dateTime.month - 1,
     };
 
+DateTime readDateTimeMicroseconds(int microseconds) =>
+    DateTime.fromMicrosecondsSinceEpoch(microseconds, isUtc: true);
+
+int writeDateTimeMicroseconds(DateTime dateTime) =>
+    dateTime.microsecondsSinceEpoch;
+
+DateTime? readOptionalDateTimeMicroseconds(int? microseconds) =>
+    microseconds == null ? null : readDateTimeMicroseconds(microseconds);
+
+int? writeOptionalDateTimeMicroseconds(DateTime? dateTime) =>
+    dateTime == null ? null : writeDateTimeMicroseconds(dateTime);
+
 DateTime readDateTimeMilliseconds(int milliseconds) =>
     DateTime.fromMillisecondsSinceEpoch(milliseconds, isUtc: true);
 
@@ -33,6 +45,21 @@ DateTime? readOptionalDateTimeMilliseconds(int? milliseconds) =>
 
 int? writeOptionalDateTimeMilliseconds(DateTime? dateTime) =>
     dateTime == null ? null : writeDateTimeMilliseconds(dateTime);
+
+DateTime readDateTimeSeconds(int seconds) =>
+    DateTime.fromMillisecondsSinceEpoch(
+      seconds * Duration.millisecondsPerSecond,
+      isUtc: true,
+    );
+
+int writeDateTimeSeconds(DateTime dateTime) =>
+    dateTime.millisecondsSinceEpoch ~/ Duration.millisecondsPerSecond;
+
+DateTime? readOptionalDateTimeSeconds(int? seconds) =>
+    seconds == null ? null : readDateTimeSeconds(seconds);
+
+int? writeOptionalDateTimeSeconds(DateTime? dateTime) =>
+    dateTime == null ? null : writeDateTimeSeconds(dateTime);
 
 Duration readSeconds(int seconds) => Duration(seconds: seconds);
 
