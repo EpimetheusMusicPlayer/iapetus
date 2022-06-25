@@ -80,6 +80,17 @@ DateTime? readOptionalDateTimeSeconds(int? seconds) =>
 int? writeOptionalDateTimeSeconds(DateTime? dateTime) =>
     _writeOptional(dateTime, writeDateTimeSeconds);
 
+DateTime readDateTimeDateString(String dateString) =>
+    DateTime.parse(dateString);
+
+String writeDateTimeDateString(DateTime dateTime) => dateTime.toIso8601String();
+
+DateTime? readOptionalDateTimeDateString(String? dateString) =>
+    _readOptional(dateString, readDateTimeDateString);
+
+String? writeOptionalDateTimeDateString(DateTime? dateTime) =>
+    _writeOptional(dateTime, writeDateTimeDateString);
+
 Duration readSeconds(int seconds) => Duration(seconds: seconds);
 
 int writeSeconds(Duration duration) => duration.inSeconds;
