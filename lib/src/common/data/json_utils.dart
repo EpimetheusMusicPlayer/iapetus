@@ -13,8 +13,7 @@ DateTime readDateTimeJsonObject(Map<String, dynamic> json) {
 /// Writes a date/time JSON object.
 ///
 /// TODO This function is currently incomplete!
-Map<String, dynamic> writeDateTimeJsonObject(DateTime dateTime) =>
-    {
+Map<String, dynamic> writeDateTimeJsonObject(DateTime dateTime) => {
       'time': dateTime.millisecondsSinceEpoch,
       // 'date': dateTime.day,
       // 'hours':
@@ -33,7 +32,7 @@ DateTime? readOptionalDateTimeMilliseconds(int? milliseconds) =>
     milliseconds == null ? null : readDateTimeMilliseconds(milliseconds);
 
 int? writeOptionalDateTimeMilliseconds(DateTime? dateTime) =>
-    dateTime == null ? null : writeOptionalDateTimeMilliseconds(dateTime);
+    dateTime == null ? null : writeDateTimeMilliseconds(dateTime);
 
 Duration readSeconds(int seconds) => Duration(seconds: seconds);
 
@@ -54,15 +53,13 @@ num readNum(String value) => num.parse(value);
 
 String writeNum(num value) => value.toString();
 
-int? readOptionalColor(String? color) =>
-    color == null || color.isEmpty
-        ? null
-        : int.parse(color, radix: 16) | 0xFF000000;
+int? readOptionalColor(String? color) => color == null || color.isEmpty
+    ? null
+    : int.parse(color, radix: 16) | 0xFF000000;
 
-String? writeOptionalColor(int? color) =>
-    color == null
-        ? null
-        : (color & 0x00FFFFFF).toRadixString(16).padLeft(6, '0');
+String? writeOptionalColor(int? color) => color == null
+    ? null
+    : (color & 0x00FFFFFF).toRadixString(16).padLeft(6, '0');
 
 Uri? readOptionalUri(String uri) => uri.isEmpty ? null : Uri.parse(uri);
 
