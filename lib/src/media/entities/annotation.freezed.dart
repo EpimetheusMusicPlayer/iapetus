@@ -192,7 +192,7 @@ mixin _$MediaAnnotation {
                 bool autogenForListener,
             @JsonKey(name: 'collectible')
                 bool collectible,
-            @JsonKey(name: 'description', fromJson: readOptionalString, toJson: writeOptionalString)
+            @JsonKey(name: 'description', fromJson: readOptionalOptionallyEmptyString, toJson: writeOptionallyEmptyString)
                 String? description,
             @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
                 Duration duration,
@@ -417,7 +417,7 @@ mixin _$MediaAnnotation {
                 bool autogenForListener,
             @JsonKey(name: 'collectible')
                 bool collectible,
-            @JsonKey(name: 'description', fromJson: readOptionalString, toJson: writeOptionalString)
+            @JsonKey(name: 'description', fromJson: readOptionalOptionallyEmptyString, toJson: writeOptionallyEmptyString)
                 String? description,
             @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
                 Duration duration,
@@ -642,7 +642,7 @@ mixin _$MediaAnnotation {
                 bool autogenForListener,
             @JsonKey(name: 'collectible')
                 bool collectible,
-            @JsonKey(name: 'description', fromJson: readOptionalString, toJson: writeOptionalString)
+            @JsonKey(name: 'description', fromJson: readOptionalOptionallyEmptyString, toJson: writeOptionallyEmptyString)
                 String? description,
             @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
                 Duration duration,
@@ -1292,7 +1292,7 @@ class _$TrackAnnotation extends TrackAnnotation {
                 bool autogenForListener,
             @JsonKey(name: 'collectible')
                 bool collectible,
-            @JsonKey(name: 'description', fromJson: readOptionalString, toJson: writeOptionalString)
+            @JsonKey(name: 'description', fromJson: readOptionalOptionallyEmptyString, toJson: writeOptionallyEmptyString)
                 String? description,
             @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
                 Duration duration,
@@ -1538,7 +1538,7 @@ class _$TrackAnnotation extends TrackAnnotation {
                 bool autogenForListener,
             @JsonKey(name: 'collectible')
                 bool collectible,
-            @JsonKey(name: 'description', fromJson: readOptionalString, toJson: writeOptionalString)
+            @JsonKey(name: 'description', fromJson: readOptionalOptionallyEmptyString, toJson: writeOptionallyEmptyString)
                 String? description,
             @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
                 Duration duration,
@@ -1784,7 +1784,7 @@ class _$TrackAnnotation extends TrackAnnotation {
                 bool autogenForListener,
             @JsonKey(name: 'collectible')
                 bool collectible,
-            @JsonKey(name: 'description', fromJson: readOptionalString, toJson: writeOptionalString)
+            @JsonKey(name: 'description', fromJson: readOptionalOptionallyEmptyString, toJson: writeOptionallyEmptyString)
                 String? description,
             @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
                 Duration duration,
@@ -2518,7 +2518,7 @@ class _$ArtistAnnotation extends ArtistAnnotation {
                 bool autogenForListener,
             @JsonKey(name: 'collectible')
                 bool collectible,
-            @JsonKey(name: 'description', fromJson: readOptionalString, toJson: writeOptionalString)
+            @JsonKey(name: 'description', fromJson: readOptionalOptionallyEmptyString, toJson: writeOptionallyEmptyString)
                 String? description,
             @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
                 Duration duration,
@@ -2763,7 +2763,7 @@ class _$ArtistAnnotation extends ArtistAnnotation {
                 bool autogenForListener,
             @JsonKey(name: 'collectible')
                 bool collectible,
-            @JsonKey(name: 'description', fromJson: readOptionalString, toJson: writeOptionalString)
+            @JsonKey(name: 'description', fromJson: readOptionalOptionallyEmptyString, toJson: writeOptionallyEmptyString)
                 String? description,
             @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
                 Duration duration,
@@ -3008,7 +3008,7 @@ class _$ArtistAnnotation extends ArtistAnnotation {
                 bool autogenForListener,
             @JsonKey(name: 'collectible')
                 bool collectible,
-            @JsonKey(name: 'description', fromJson: readOptionalString, toJson: writeOptionalString)
+            @JsonKey(name: 'description', fromJson: readOptionalOptionallyEmptyString, toJson: writeOptionallyEmptyString)
                 String? description,
             @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
                 Duration duration,
@@ -3789,7 +3789,7 @@ class _$AlbumAnnotation extends AlbumAnnotation {
                 bool autogenForListener,
             @JsonKey(name: 'collectible')
                 bool collectible,
-            @JsonKey(name: 'description', fromJson: readOptionalString, toJson: writeOptionalString)
+            @JsonKey(name: 'description', fromJson: readOptionalOptionallyEmptyString, toJson: writeOptionallyEmptyString)
                 String? description,
             @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
                 Duration duration,
@@ -4037,7 +4037,7 @@ class _$AlbumAnnotation extends AlbumAnnotation {
                 bool autogenForListener,
             @JsonKey(name: 'collectible')
                 bool collectible,
-            @JsonKey(name: 'description', fromJson: readOptionalString, toJson: writeOptionalString)
+            @JsonKey(name: 'description', fromJson: readOptionalOptionallyEmptyString, toJson: writeOptionallyEmptyString)
                 String? description,
             @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
                 Duration duration,
@@ -4285,7 +4285,7 @@ class _$AlbumAnnotation extends AlbumAnnotation {
                 bool autogenForListener,
             @JsonKey(name: 'collectible')
                 bool collectible,
-            @JsonKey(name: 'description', fromJson: readOptionalString, toJson: writeOptionalString)
+            @JsonKey(name: 'description', fromJson: readOptionalOptionallyEmptyString, toJson: writeOptionallyEmptyString)
                 String? description,
             @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
                 Duration duration,
@@ -4936,7 +4936,7 @@ class _$GenreAnnotation extends GenreAnnotation {
                 bool autogenForListener,
             @JsonKey(name: 'collectible')
                 bool collectible,
-            @JsonKey(name: 'description', fromJson: readOptionalString, toJson: writeOptionalString)
+            @JsonKey(name: 'description', fromJson: readOptionalOptionallyEmptyString, toJson: writeOptionallyEmptyString)
                 String? description,
             @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
                 Duration duration,
@@ -5175,7 +5175,7 @@ class _$GenreAnnotation extends GenreAnnotation {
                 bool autogenForListener,
             @JsonKey(name: 'collectible')
                 bool collectible,
-            @JsonKey(name: 'description', fromJson: readOptionalString, toJson: writeOptionalString)
+            @JsonKey(name: 'description', fromJson: readOptionalOptionallyEmptyString, toJson: writeOptionallyEmptyString)
                 String? description,
             @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
                 Duration duration,
@@ -5414,7 +5414,7 @@ class _$GenreAnnotation extends GenreAnnotation {
                 bool autogenForListener,
             @JsonKey(name: 'collectible')
                 bool collectible,
-            @JsonKey(name: 'description', fromJson: readOptionalString, toJson: writeOptionalString)
+            @JsonKey(name: 'description', fromJson: readOptionalOptionallyEmptyString, toJson: writeOptionallyEmptyString)
                 String? description,
             @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
                 Duration duration,
@@ -5638,7 +5638,7 @@ abstract class _$$PlaylistAnnotationCopyWith<$Res>
           bool autogenForListener,
       @JsonKey(name: 'collectible')
           bool collectible,
-      @JsonKey(name: 'description', fromJson: readOptionalString, toJson: writeOptionalString)
+      @JsonKey(name: 'description', fromJson: readOptionalOptionallyEmptyString, toJson: writeOptionallyEmptyString)
           String? description,
       @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
           Duration duration,
@@ -5852,7 +5852,7 @@ class _$PlaylistAnnotation extends PlaylistAnnotation {
           required this.autogenForListener,
       @JsonKey(name: 'collectible')
           required this.collectible,
-      @JsonKey(name: 'description', fromJson: readOptionalString, toJson: writeOptionalString)
+      @JsonKey(name: 'description', fromJson: readOptionalOptionallyEmptyString, toJson: writeOptionallyEmptyString)
           this.description,
       @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
           required this.duration,
@@ -5916,8 +5916,8 @@ class _$PlaylistAnnotation extends PlaylistAnnotation {
   @override
   @JsonKey(
       name: 'description',
-      fromJson: readOptionalString,
-      toJson: writeOptionalString)
+      fromJson: readOptionalOptionallyEmptyString,
+      toJson: writeOptionallyEmptyString)
   final String? description;
   @override
   @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
@@ -6235,7 +6235,7 @@ class _$PlaylistAnnotation extends PlaylistAnnotation {
                 bool autogenForListener,
             @JsonKey(name: 'collectible')
                 bool collectible,
-            @JsonKey(name: 'description', fromJson: readOptionalString, toJson: writeOptionalString)
+            @JsonKey(name: 'description', fromJson: readOptionalOptionallyEmptyString, toJson: writeOptionallyEmptyString)
                 String? description,
             @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
                 Duration duration,
@@ -6487,7 +6487,7 @@ class _$PlaylistAnnotation extends PlaylistAnnotation {
                 bool autogenForListener,
             @JsonKey(name: 'collectible')
                 bool collectible,
-            @JsonKey(name: 'description', fromJson: readOptionalString, toJson: writeOptionalString)
+            @JsonKey(name: 'description', fromJson: readOptionalOptionallyEmptyString, toJson: writeOptionallyEmptyString)
                 String? description,
             @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
                 Duration duration,
@@ -6739,7 +6739,7 @@ class _$PlaylistAnnotation extends PlaylistAnnotation {
                 bool autogenForListener,
             @JsonKey(name: 'collectible')
                 bool collectible,
-            @JsonKey(name: 'description', fromJson: readOptionalString, toJson: writeOptionalString)
+            @JsonKey(name: 'description', fromJson: readOptionalOptionallyEmptyString, toJson: writeOptionallyEmptyString)
                 String? description,
             @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
                 Duration duration,
@@ -6905,7 +6905,7 @@ abstract class PlaylistAnnotation extends MediaAnnotation {
           required final bool autogenForListener,
       @JsonKey(name: 'collectible')
           required final bool collectible,
-      @JsonKey(name: 'description', fromJson: readOptionalString, toJson: writeOptionalString)
+      @JsonKey(name: 'description', fromJson: readOptionalOptionallyEmptyString, toJson: writeOptionallyEmptyString)
           final String? description,
       @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
           required final Duration duration,
@@ -6961,8 +6961,8 @@ abstract class PlaylistAnnotation extends MediaAnnotation {
   bool get collectible => throw _privateConstructorUsedError;
   @JsonKey(
       name: 'description',
-      fromJson: readOptionalString,
-      toJson: writeOptionalString)
+      fromJson: readOptionalOptionallyEmptyString,
+      toJson: writeOptionallyEmptyString)
   String? get description => throw _privateConstructorUsedError;
   @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
   Duration get duration => throw _privateConstructorUsedError;
@@ -7417,7 +7417,7 @@ class _$ComposerAnnotation extends ComposerAnnotation {
                 bool autogenForListener,
             @JsonKey(name: 'collectible')
                 bool collectible,
-            @JsonKey(name: 'description', fromJson: readOptionalString, toJson: writeOptionalString)
+            @JsonKey(name: 'description', fromJson: readOptionalOptionallyEmptyString, toJson: writeOptionallyEmptyString)
                 String? description,
             @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
                 Duration duration,
@@ -7656,7 +7656,7 @@ class _$ComposerAnnotation extends ComposerAnnotation {
                 bool autogenForListener,
             @JsonKey(name: 'collectible')
                 bool collectible,
-            @JsonKey(name: 'description', fromJson: readOptionalString, toJson: writeOptionalString)
+            @JsonKey(name: 'description', fromJson: readOptionalOptionallyEmptyString, toJson: writeOptionallyEmptyString)
                 String? description,
             @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
                 Duration duration,
@@ -7895,7 +7895,7 @@ class _$ComposerAnnotation extends ComposerAnnotation {
                 bool autogenForListener,
             @JsonKey(name: 'collectible')
                 bool collectible,
-            @JsonKey(name: 'description', fromJson: readOptionalString, toJson: writeOptionalString)
+            @JsonKey(name: 'description', fromJson: readOptionalOptionallyEmptyString, toJson: writeOptionallyEmptyString)
                 String? description,
             @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
                 Duration duration,
@@ -8384,7 +8384,7 @@ class _$ListenerMediaAnnotation extends ListenerMediaAnnotation {
                 bool autogenForListener,
             @JsonKey(name: 'collectible')
                 bool collectible,
-            @JsonKey(name: 'description', fromJson: readOptionalString, toJson: writeOptionalString)
+            @JsonKey(name: 'description', fromJson: readOptionalOptionallyEmptyString, toJson: writeOptionallyEmptyString)
                 String? description,
             @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
                 Duration duration,
@@ -8612,7 +8612,7 @@ class _$ListenerMediaAnnotation extends ListenerMediaAnnotation {
                 bool autogenForListener,
             @JsonKey(name: 'collectible')
                 bool collectible,
-            @JsonKey(name: 'description', fromJson: readOptionalString, toJson: writeOptionalString)
+            @JsonKey(name: 'description', fromJson: readOptionalOptionallyEmptyString, toJson: writeOptionallyEmptyString)
                 String? description,
             @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
                 Duration duration,
@@ -8841,7 +8841,7 @@ class _$ListenerMediaAnnotation extends ListenerMediaAnnotation {
                 bool autogenForListener,
             @JsonKey(name: 'collectible')
                 bool collectible,
-            @JsonKey(name: 'description', fromJson: readOptionalString, toJson: writeOptionalString)
+            @JsonKey(name: 'description', fromJson: readOptionalOptionallyEmptyString, toJson: writeOptionallyEmptyString)
                 String? description,
             @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
                 Duration duration,

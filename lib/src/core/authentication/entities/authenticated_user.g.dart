@@ -83,8 +83,8 @@ _$_AuthenticatedUser _$$_AuthenticatedUserFromJson(Map<String, dynamic> json) =>
           monthlyCapWarningPercent:
               $checkedConvert('monthlyCapWarningPercent', (v) => v as int),
           hasAudioAds: $checkedConvert('hasAudioAds', (v) => v as bool),
-          fullname: $checkedConvert(
-              'fullname', (v) => readOptionalString(v as String?)),
+          fullname: $checkedConvert('fullname',
+              (v) => readOptionalOptionallyEmptyString(v as String?)),
           skipLimitBehavior: $checkedConvert(
               'skipLimitBehavior',
               (v) =>
@@ -159,7 +159,7 @@ Map<String, dynamic> _$$_AuthenticatedUserToJson(
       'userstate': instance.userstate,
       'monthlyCapWarningPercent': instance.monthlyCapWarningPercent,
       'hasAudioAds': instance.hasAudioAds,
-      'fullname': writeOptionalString(instance.fullname),
+      'fullname': writeOptionallyEmptyString(instance.fullname),
       'skipLimitBehavior':
           _$SkipLimitBehaviorEnumMap[instance.skipLimitBehavior],
       'enableOnDemand': writeOptInBool(instance.enableOnDemand),

@@ -11,7 +11,7 @@ class MediaIcon with _$MediaIcon {
     @JsonKey(name: 'dominantColor', fromJson: readOptionalColor, toJson: writeOptionalColor)
         required int? dominantColor,
     @JsonKey(name: 'artId') required String artId,
-    @JsonKey(name: 'artUrl', fromJson: readOptionalUri, toJson: writeOptionalUri)
+    @JsonKey(name: 'artUrl', fromJson: readOptionallyEmptyUri, toJson: writeOptionallyEmptyUri)
         required Uri? artUrl,
   }) = _MediaIcon;
 

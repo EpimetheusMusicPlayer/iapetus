@@ -122,7 +122,7 @@ class MediaAnnotation with _$MediaAnnotation implements PandoraEntity {
         required bool allowFeedback,
     @JsonKey(name: 'autogenForListener') required bool autogenForListener,
     @JsonKey(name: 'collectible') required bool collectible,
-    @JsonKey(name: 'description', fromJson: readOptionalString, toJson: writeOptionalString)
+    @JsonKey(name: 'description', fromJson: readOptionalOptionallyEmptyString, toJson: writeOptionallyEmptyString)
         String? description,
     @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
         required Duration duration,

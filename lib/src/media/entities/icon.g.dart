@@ -16,8 +16,8 @@ _$_MediaIcon _$$_MediaIconFromJson(Map<String, dynamic> json) => $checkedCreate(
           dominantColor: $checkedConvert(
               'dominantColor', (v) => readOptionalColor(v as String?)),
           artId: $checkedConvert('artId', (v) => v as String),
-          artUrl:
-              $checkedConvert('artUrl', (v) => readOptionalUri(v as String)),
+          artUrl: $checkedConvert(
+              'artUrl', (v) => readOptionallyEmptyUri(v as String)),
         );
         return val;
       },
@@ -27,5 +27,5 @@ Map<String, dynamic> _$$_MediaIconToJson(_$_MediaIcon instance) =>
     <String, dynamic>{
       'dominantColor': writeOptionalColor(instance.dominantColor),
       'artId': instance.artId,
-      'artUrl': writeOptionalUri(instance.artUrl),
+      'artUrl': writeOptionallyEmptyUri(instance.artUrl),
     };

@@ -271,8 +271,8 @@ _$PlaylistAnnotation _$$PlaylistAnnotationFromJson(Map<String, dynamic> json) =>
           autogenForListener:
               $checkedConvert('autogenForListener', (v) => v as bool),
           collectible: $checkedConvert('collectible', (v) => v as bool),
-          description: $checkedConvert(
-              'description', (v) => readOptionalString(v as String?)),
+          description: $checkedConvert('description',
+              (v) => readOptionalOptionallyEmptyString(v as String?)),
           duration: $checkedConvert('duration', (v) => readSeconds(v as int)),
           includedTrackTypes: $checkedConvert(
               'includedTrackTypes',
@@ -323,7 +323,7 @@ Map<String, dynamic> _$$PlaylistAnnotationToJson(
       'allowFeedback': writeOptInBool(instance.allowFeedback),
       'autogenForListener': instance.autogenForListener,
       'collectible': instance.collectible,
-      'description': writeOptionalString(instance.description),
+      'description': writeOptionallyEmptyString(instance.description),
       'duration': writeSeconds(instance.duration),
       'includedTrackTypes': instance.includedTrackTypes
           .map((e) => _$PandoraTypeEnumMap[e])

@@ -72,7 +72,7 @@ class AuthenticatedUser with _$AuthenticatedUser {
     @JsonKey(name: 'monthlyCapWarningPercent')
         required int monthlyCapWarningPercent,
     @JsonKey(name: 'hasAudioAds') required bool hasAudioAds,
-    @JsonKey(name: 'fullname', fromJson: readOptionalString, toJson: writeOptionalString)
+    @JsonKey(name: 'fullname', fromJson: readOptionalOptionallyEmptyString, toJson: writeOptionallyEmptyString)
         String? fullname,
     @JsonKey(name: 'skipLimitBehavior')
     @Default(SkipLimitBehavior.block)

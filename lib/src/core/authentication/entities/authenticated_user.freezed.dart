@@ -118,8 +118,8 @@ mixin _$AuthenticatedUser {
   bool get hasAudioAds => throw _privateConstructorUsedError;
   @JsonKey(
       name: 'fullname',
-      fromJson: readOptionalString,
-      toJson: writeOptionalString)
+      fromJson: readOptionalOptionallyEmptyString,
+      toJson: writeOptionallyEmptyString)
   String? get fullname => throw _privateConstructorUsedError;
   @JsonKey(name: 'skipLimitBehavior')
   SkipLimitBehavior get skipLimitBehavior => throw _privateConstructorUsedError;
@@ -241,7 +241,7 @@ abstract class $AuthenticatedUserCopyWith<$Res> {
           int monthlyCapWarningPercent,
       @JsonKey(name: 'hasAudioAds')
           bool hasAudioAds,
-      @JsonKey(name: 'fullname', fromJson: readOptionalString, toJson: writeOptionalString)
+      @JsonKey(name: 'fullname', fromJson: readOptionalOptionallyEmptyString, toJson: writeOptionallyEmptyString)
           String? fullname,
       @JsonKey(name: 'skipLimitBehavior')
           SkipLimitBehavior skipLimitBehavior,
@@ -611,7 +611,7 @@ abstract class _$$_AuthenticatedUserCopyWith<$Res>
           int monthlyCapWarningPercent,
       @JsonKey(name: 'hasAudioAds')
           bool hasAudioAds,
-      @JsonKey(name: 'fullname', fromJson: readOptionalString, toJson: writeOptionalString)
+      @JsonKey(name: 'fullname', fromJson: readOptionalOptionallyEmptyString, toJson: writeOptionallyEmptyString)
           String? fullname,
       @JsonKey(name: 'skipLimitBehavior')
           SkipLimitBehavior skipLimitBehavior,
@@ -979,7 +979,7 @@ class _$_AuthenticatedUser implements _AuthenticatedUser {
           required this.monthlyCapWarningPercent,
       @JsonKey(name: 'hasAudioAds')
           required this.hasAudioAds,
-      @JsonKey(name: 'fullname', fromJson: readOptionalString, toJson: writeOptionalString)
+      @JsonKey(name: 'fullname', fromJson: readOptionalOptionallyEmptyString, toJson: writeOptionallyEmptyString)
           this.fullname,
       @JsonKey(name: 'skipLimitBehavior')
           this.skipLimitBehavior = SkipLimitBehavior.block,
@@ -1144,8 +1144,8 @@ class _$_AuthenticatedUser implements _AuthenticatedUser {
   @override
   @JsonKey(
       name: 'fullname',
-      fromJson: readOptionalString,
-      toJson: writeOptionalString)
+      fromJson: readOptionalOptionallyEmptyString,
+      toJson: writeOptionallyEmptyString)
   final String? fullname;
   @override
   @JsonKey(name: 'skipLimitBehavior')
@@ -1433,7 +1433,7 @@ abstract class _AuthenticatedUser implements AuthenticatedUser {
           required final int monthlyCapWarningPercent,
       @JsonKey(name: 'hasAudioAds')
           required final bool hasAudioAds,
-      @JsonKey(name: 'fullname', fromJson: readOptionalString, toJson: writeOptionalString)
+      @JsonKey(name: 'fullname', fromJson: readOptionalOptionallyEmptyString, toJson: writeOptionallyEmptyString)
           final String? fullname,
       @JsonKey(name: 'skipLimitBehavior')
           final SkipLimitBehavior skipLimitBehavior,
@@ -1592,8 +1592,8 @@ abstract class _AuthenticatedUser implements AuthenticatedUser {
   @override
   @JsonKey(
       name: 'fullname',
-      fromJson: readOptionalString,
-      toJson: writeOptionalString)
+      fromJson: readOptionalOptionallyEmptyString,
+      toJson: writeOptionallyEmptyString)
   String? get fullname => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'skipLimitBehavior')

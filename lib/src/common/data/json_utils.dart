@@ -1,3 +1,22 @@
+D? _readOptional<D, J>(J? value, D Function(J value) read, [J? nullValue]) =>
+    value == nullValue ? null : read(value as J);
+
+J? _writeOptional<D, J>(
+  D? value,
+  J Function(D value) write, [
+  J? nullValue,
+]) =>
+    value == null ? nullValue : write(value);
+
+D? _readOptionallyEmpty<D>(String value, D Function(String value) read) =>
+    _readOptional(value.isEmpty ? null : value, read);
+
+String _writeOptionallyEmpty<J>(
+  J? value,
+  String Function(J value) write,
+) =>
+    _writeOptional(value, write, '')!;
+
 /// Reads a date/time JSON object, found in the station list for example.
 DateTime readDateTimeJsonObject(Map<String, dynamic> json) {
   final time = json['time'];
@@ -29,10 +48,10 @@ int writeDateTimeMicroseconds(DateTime dateTime) =>
     dateTime.microsecondsSinceEpoch;
 
 DateTime? readOptionalDateTimeMicroseconds(int? microseconds) =>
-    microseconds == null ? null : readDateTimeMicroseconds(microseconds);
+    _readOptional(microseconds, readDateTimeMicroseconds);
 
 int? writeOptionalDateTimeMicroseconds(DateTime? dateTime) =>
-    dateTime == null ? null : writeDateTimeMicroseconds(dateTime);
+    _writeOptional(dateTime, writeDateTimeMicroseconds);
 
 DateTime readDateTimeMilliseconds(int milliseconds) =>
     DateTime.fromMillisecondsSinceEpoch(milliseconds, isUtc: true);
@@ -41,10 +60,10 @@ int writeDateTimeMilliseconds(DateTime dateTime) =>
     dateTime.millisecondsSinceEpoch;
 
 DateTime? readOptionalDateTimeMilliseconds(int? milliseconds) =>
-    milliseconds == null ? null : readDateTimeMilliseconds(milliseconds);
+    _readOptional(milliseconds, readDateTimeMilliseconds);
 
 int? writeOptionalDateTimeMilliseconds(DateTime? dateTime) =>
-    dateTime == null ? null : writeDateTimeMilliseconds(dateTime);
+    _writeOptional(dateTime, writeDateTimeMilliseconds);
 
 DateTime readDateTimeSeconds(int seconds) =>
     DateTime.fromMillisecondsSinceEpoch(
@@ -56,41 +75,65 @@ int writeDateTimeSeconds(DateTime dateTime) =>
     dateTime.millisecondsSinceEpoch ~/ Duration.millisecondsPerSecond;
 
 DateTime? readOptionalDateTimeSeconds(int? seconds) =>
-    seconds == null ? null : readDateTimeSeconds(seconds);
+    _readOptional(seconds, readDateTimeSeconds);
 
 int? writeOptionalDateTimeSeconds(DateTime? dateTime) =>
-    dateTime == null ? null : writeDateTimeSeconds(dateTime);
+    _writeOptional(dateTime, writeDateTimeSeconds);
 
 Duration readSeconds(int seconds) => Duration(seconds: seconds);
 
 int writeSeconds(Duration duration) => duration.inSeconds;
 
 Duration? readOptionalSeconds(int? seconds) =>
-    seconds == null ? null : readSeconds(seconds);
+    _readOptional(seconds, readSeconds);
 
 int? writeOptionalSeconds(Duration? duration) =>
-    duration == null ? null : writeSeconds(duration);
+    _writeOptional(duration, writeSeconds);
 
 Duration readMilliseconds(int milliseconds) =>
     Duration(milliseconds: milliseconds);
 
 int writeMilliseconds(Duration duration) => duration.inMilliseconds;
 
+Duration? readOptionalMilliseconds(int? milliseconds) =>
+    _readOptional(milliseconds, readMilliseconds);
+
+int? writeOptionalMilliseconds(Duration? duration) =>
+    _writeOptional(duration, writeMilliseconds);
+
 num readNum(String value) => num.parse(value);
 
 String writeNum(num value) => value.toString();
 
-int? readOptionalColor(String? color) => color == null || color.isEmpty
-    ? null
-    : int.parse(color, radix: 16) | 0xFF000000;
+num? readOptionalNum(String? value) => _readOptional(value, readNum);
 
-String? writeOptionalColor(int? color) => color == null
-    ? null
-    : (color & 0x00FFFFFF).toRadixString(16).padLeft(6, '0');
+String? writeOptionalNum(num? value) => _writeOptional(value, writeNum);
 
-Uri? readOptionalUri(String uri) => uri.isEmpty ? null : Uri.parse(uri);
+int readColor(String color) => int.parse(color, radix: 16) | 0xFF000000;
 
-String writeOptionalUri(Uri? uri) => uri?.toString() ?? '';
+String writeColor(int color) =>
+    (color & 0x00FFFFFF).toRadixString(16).padLeft(6, '0');
+
+int? readOptionalColor(String? color) =>
+    _readOptional((color?.isEmpty ?? true) ? null : color, readColor);
+
+String? writeOptionalColor(int? color) => _writeOptional(color, writeColor);
+
+Uri readUri(String uri) => Uri.parse(uri);
+
+String writeUri(Uri uri) => uri.toString();
+
+Uri? readOptionalUri(String? uri) => _readOptional(uri, readUri);
+
+String? writeOptionalUri(Uri? uri) => _writeOptional(uri, writeUri);
+
+Uri? readOptionallyEmptyUri(String uri) => _readOptionallyEmpty(uri, Uri.parse);
+
+String writeOptionallyEmptyUri(Uri? uri) =>
+    _writeOptionallyEmpty<Uri>(uri, (uri) => uri.toString());
+
+Uri? readOptionalOptionallyEmptyUri(String? uri) =>
+    _readOptional<Uri?, String>(uri, readOptionallyEmptyUri);
 
 List<String> readEscapedLineBreakString(String value) => value.split(r'\n');
 
@@ -108,7 +151,11 @@ bool readOptOutBool(bool? value) => value ?? true;
 // ignore: avoid_positional_boolean_parameters
 bool? writeOptOutBool(bool value) => value ? null : false;
 
-String? readOptionalString(String? value) =>
-    value?.isEmpty ?? true ? null : value;
+String? readOptionallyEmptyString(String value) =>
+    _readOptionallyEmpty(value, (value) => value);
 
-String writeOptionalString(String? value) => value ?? '';
+String writeOptionallyEmptyString(String? value) =>
+    _writeOptionallyEmpty<String>(value, (value) => value);
+
+String? readOptionalOptionallyEmptyString(String? value) =>
+    _readOptional<String?, String>(value, readOptionallyEmptyString);

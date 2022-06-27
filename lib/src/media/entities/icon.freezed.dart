@@ -28,7 +28,10 @@ mixin _$MediaIcon {
   int? get dominantColor => throw _privateConstructorUsedError;
   @JsonKey(name: 'artId')
   String get artId => throw _privateConstructorUsedError;
-  @JsonKey(name: 'artUrl', fromJson: readOptionalUri, toJson: writeOptionalUri)
+  @JsonKey(
+      name: 'artUrl',
+      fromJson: readOptionallyEmptyUri,
+      toJson: writeOptionallyEmptyUri)
   Uri? get artUrl => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -46,7 +49,7 @@ abstract class $MediaIconCopyWith<$Res> {
           int? dominantColor,
       @JsonKey(name: 'artId')
           String artId,
-      @JsonKey(name: 'artUrl', fromJson: readOptionalUri, toJson: writeOptionalUri)
+      @JsonKey(name: 'artUrl', fromJson: readOptionallyEmptyUri, toJson: writeOptionallyEmptyUri)
           Uri? artUrl});
 }
 
@@ -92,7 +95,7 @@ abstract class _$$_MediaIconCopyWith<$Res> implements $MediaIconCopyWith<$Res> {
           int? dominantColor,
       @JsonKey(name: 'artId')
           String artId,
-      @JsonKey(name: 'artUrl', fromJson: readOptionalUri, toJson: writeOptionalUri)
+      @JsonKey(name: 'artUrl', fromJson: readOptionallyEmptyUri, toJson: writeOptionallyEmptyUri)
           Uri? artUrl});
 }
 
@@ -137,7 +140,7 @@ class _$_MediaIcon implements _MediaIcon {
           required this.dominantColor,
       @JsonKey(name: 'artId')
           required this.artId,
-      @JsonKey(name: 'artUrl', fromJson: readOptionalUri, toJson: writeOptionalUri)
+      @JsonKey(name: 'artUrl', fromJson: readOptionallyEmptyUri, toJson: writeOptionallyEmptyUri)
           required this.artUrl});
 
   factory _$_MediaIcon.fromJson(Map<String, dynamic> json) =>
@@ -154,7 +157,10 @@ class _$_MediaIcon implements _MediaIcon {
   @JsonKey(name: 'artId')
   final String artId;
   @override
-  @JsonKey(name: 'artUrl', fromJson: readOptionalUri, toJson: writeOptionalUri)
+  @JsonKey(
+      name: 'artUrl',
+      fromJson: readOptionallyEmptyUri,
+      toJson: writeOptionallyEmptyUri)
   final Uri? artUrl;
 
   @override
@@ -198,7 +204,7 @@ abstract class _MediaIcon implements MediaIcon {
           required final int? dominantColor,
       @JsonKey(name: 'artId')
           required final String artId,
-      @JsonKey(name: 'artUrl', fromJson: readOptionalUri, toJson: writeOptionalUri)
+      @JsonKey(name: 'artUrl', fromJson: readOptionallyEmptyUri, toJson: writeOptionallyEmptyUri)
           required final Uri? artUrl}) = _$_MediaIcon;
 
   factory _MediaIcon.fromJson(Map<String, dynamic> json) =
@@ -216,7 +222,10 @@ abstract class _MediaIcon implements MediaIcon {
   @JsonKey(name: 'artId')
   String get artId => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'artUrl', fromJson: readOptionalUri, toJson: writeOptionalUri)
+  @JsonKey(
+      name: 'artUrl',
+      fromJson: readOptionallyEmptyUri,
+      toJson: writeOptionallyEmptyUri)
   Uri? get artUrl => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
