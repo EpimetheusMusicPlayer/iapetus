@@ -5,7 +5,6 @@ part 'pandora_type.g.dart';
 /// Pandora entity types.
 @JsonEnum(alwaysCreate: true)
 enum PandoraType {
-  // Core
   @JsonValue('AL')
   album,
   @JsonValue('AR')
@@ -50,12 +49,40 @@ enum PandoraType {
   hybridStation,
   @JsonValue('AM')
   voiceTrack,
-
-  // Extra
   @JsonValue('LI')
   listener,
+  @JsonValue('CU')
+  curator,
   @JsonValue('TG')
   podcastCategory,
+  @JsonValue('CP')
+  podcastPublisher,
+  @JsonValue('SF')
+  stationFactory,
+
+  // Unknown
+  @JsonValue('AE')
+  ae,
+  @JsonValue('BN')
+  bn,
+  @JsonValue('CG')
+  cg,
+  @JsonValue('LE')
+  le,
+  @JsonValue('MO')
+  mo,
+  @JsonValue('LC')
+  lc,
+  @JsonValue('SC')
+  sc,
+  @JsonValue('SH')
+  sh,
+  @JsonValue('SP')
+  sp,
+  @JsonValue('VE')
+  ve,
+  @JsonValue('XC')
+  xc,
 }
 
 const pandoraTypeEnumMap = _$PandoraTypeEnumMap;
