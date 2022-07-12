@@ -161,7 +161,7 @@ Map<String, dynamic> _$$_AuthenticatedUserToJson(
       'hasAudioAds': instance.hasAudioAds,
       'fullname': writeOptionallyEmptyString(instance.fullname),
       'skipLimitBehavior':
-          _$SkipLimitBehaviorEnumMap[instance.skipLimitBehavior],
+          _$SkipLimitBehaviorEnumMap[instance.skipLimitBehavior]!,
       'enableOnDemand': writeOptInBool(instance.enableOnDemand),
       'isEligibleForOffline': writeOptInBool(instance.isEligibleForOffline),
       'isEligibleForManualDownload':

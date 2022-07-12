@@ -875,97 +875,95 @@ abstract class _PlaylistSegment extends PlaylistSegment {
 
   @override
   @JsonKey(name: 'pandoraId')
-  String get pandoraId => throw _privateConstructorUsedError;
+  String get pandoraId;
   @override
   @JsonKey(name: 'annotations')
-  Map<String, MediaAnnotation> get annotations =>
-      throw _privateConstructorUsedError;
+  Map<String, MediaAnnotation> get annotations;
   @override
   @JsonKey(name: 'tracks')
-  List<PlaylistTrack> get tracks => throw _privateConstructorUsedError;
+  List<PlaylistTrack> get tracks;
   @override
   @JsonKey(name: 'version')
-  int get version => throw _privateConstructorUsedError;
+  int get version;
   @override
   @JsonKey(name: 'name')
-  String get name => throw _privateConstructorUsedError;
+  String get name;
   @override
   @JsonKey(name: 'description')
-  String get description => throw _privateConstructorUsedError;
+  String get description;
   @override
   @JsonKey(
       name: 'timeCreated',
       fromJson: readDateTimeMilliseconds,
       toJson: writeDateTimeMilliseconds)
-  DateTime get timeCreated => throw _privateConstructorUsedError;
+  DateTime get timeCreated;
   @override
   @JsonKey(
       name: 'timeLastUpdated',
       fromJson: readDateTimeMilliseconds,
       toJson: writeDateTimeMilliseconds)
-  DateTime get timeLastUpdated => throw _privateConstructorUsedError;
+  DateTime get timeLastUpdated;
   @override
   @JsonKey(
       name: 'timeLastRefreshed',
       fromJson: readOptionalDateTimeMilliseconds,
       toJson: writeOptionalDateTimeMilliseconds)
-  DateTime? get timeLastRefreshed => throw _privateConstructorUsedError;
+  DateTime? get timeLastRefreshed;
   @override
   @JsonKey(name: 'isPrivate')
-  bool get private => throw _privateConstructorUsedError;
+  bool get private;
   @override
   @JsonKey(name: 'secret')
-  bool get secret => throw _privateConstructorUsedError;
+  bool get secret;
   @override
   @JsonKey(name: 'linkedType')
-  String get linkedType => throw _privateConstructorUsedError;
+  String get linkedType;
   @override
   @JsonKey(name: 'linkedSourceId')
-  String? get linkedSourceId => throw _privateConstructorUsedError;
+  String? get linkedSourceId;
   @override
   @JsonKey(name: 'totalTracks')
-  int get totalTracks => throw _privateConstructorUsedError;
+  int get totalTracks;
   @override
   @JsonKey(name: 'shareableUrlPath')
-  Uri get shareableUrlPath => throw _privateConstructorUsedError;
+  Uri get shareableUrlPath;
   @override
   @JsonKey(name: 'thorLayers')
-  String get thorLayers => throw _privateConstructorUsedError;
+  String get thorLayers;
   @override
   @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
-  Duration get duration => throw _privateConstructorUsedError;
+  Duration get duration;
   @override
   @JsonKey(name: 'unlocked')
-  bool get unlocked => throw _privateConstructorUsedError;
+  bool get unlocked;
   @override
   @JsonKey(name: 'viewerInfo')
-  PlaylistViewerInfo get viewerInfo => throw _privateConstructorUsedError;
+  PlaylistViewerInfo get viewerInfo;
   @override
   @JsonKey(name: 'autogenForListener')
-  bool get autogenForListener => throw _privateConstructorUsedError;
+  bool get autogenForListener;
   @override
   @JsonKey(name: 'includedTrackTypes')
-  List<PandoraType> get includedTrackTypes =>
-      throw _privateConstructorUsedError;
+  List<PandoraType> get includedTrackTypes;
   @override
   @JsonKey(
       name: 'allowFeedback', fromJson: readOptInBool, toJson: writeOptInBool)
-  bool get allowFeedback => throw _privateConstructorUsedError;
+  bool get allowFeedback;
   @override
   @JsonKey(name: 'collectible')
-  bool get collectible => throw _privateConstructorUsedError;
+  bool get collectible;
   @override
   @JsonKey(name: 'notModified')
-  bool get notModified => throw _privateConstructorUsedError;
+  bool get notModified;
   @override
   @JsonKey(name: 'listenerId')
-  int get listenerId => throw _privateConstructorUsedError;
+  int get listenerId;
   @override
   @JsonKey(name: 'listenerPandoraId')
-  String get listenerPandoraId => throw _privateConstructorUsedError;
+  String get listenerPandoraId;
   @override
   @JsonKey(name: 'listenerIdToken')
-  String get listenerIdToken => throw _privateConstructorUsedError;
+  String get listenerIdToken;
   @override
   @JsonKey(ignore: true)
   _$$_PlaylistSegmentCopyWith<_$_PlaylistSegment> get copyWith =>

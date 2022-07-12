@@ -146,7 +146,7 @@ abstract class _PlaylistViewerInfo implements PlaylistViewerInfo {
 
   @override
   @JsonKey(name: 'editable')
-  bool get editable => throw _privateConstructorUsedError;
+  bool get editable;
   @override
   @JsonKey(ignore: true)
   _$$_PlaylistViewerInfoCopyWith<_$_PlaylistViewerInfo> get copyWith =>

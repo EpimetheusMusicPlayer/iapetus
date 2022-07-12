@@ -26,7 +26,7 @@ _$_TrackKey _$$_TrackKeyFromJson(Map<String, dynamic> json) => $checkedCreate(
 Map<String, dynamic> _$$_TrackKeyToJson(_$_TrackKey instance) =>
     <String, dynamic>{
       'trackId': instance.trackId,
-      'trackType': _$TrackTypeEnumMap[instance.trackType],
+      'trackType': _$TrackTypeEnumMap[instance.trackType]!,
       'trackSubtype': instance.trackSubtype,
       'spinId': instance.spinId,
     };

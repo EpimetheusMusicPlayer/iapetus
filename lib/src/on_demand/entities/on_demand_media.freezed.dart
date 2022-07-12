@@ -236,17 +236,16 @@ abstract class _OnDemandMedia implements OnDemandMedia {
 
   @override
   @JsonKey(name: 'audioSkipUrl')
-  Uri get audioSkipUrl => throw _privateConstructorUsedError;
+  Uri get audioSkipUrl;
   @override
   @JsonKey(name: 'audioReceiptUrl')
-  Uri get audioReceiptUrl => throw _privateConstructorUsedError;
+  Uri get audioReceiptUrl;
   @override
   @JsonKey(name: 'audioUrlMap')
-  Map<AudioUrlQuality, AudioUrlData> get audioUrlMap =>
-      throw _privateConstructorUsedError;
+  Map<AudioUrlQuality, AudioUrlData> get audioUrlMap;
   @override
   @JsonKey(name: 'trackGain', fromJson: double.parse, toJson: writeNum)
-  double get trackGain => throw _privateConstructorUsedError;
+  double get trackGain;
   @override
   @JsonKey(ignore: true)
   _$$_OnDemandMediaCopyWith<_$_OnDemandMedia> get copyWith =>

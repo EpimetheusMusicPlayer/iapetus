@@ -564,58 +564,58 @@ abstract class _Station implements Station {
 
   @override
   @JsonKey(name: 'suppressVideoAds')
-  bool? get suppressVideoAds => throw _privateConstructorUsedError;
+  bool? get suppressVideoAds;
   @override
   @JsonKey(name: 'stationId')
-  String get stationId => throw _privateConstructorUsedError;
+  String get stationId;
   @override
   @JsonKey(name: 'allowAddMusic')
-  bool get allowAddMusic => throw _privateConstructorUsedError;
+  bool get allowAddMusic;
   @override
   @JsonKey(
       name: 'dateCreated',
       fromJson: readDateTimeJsonObject,
       toJson: writeDateTimeJsonObject)
-  DateTime get dateCreated => throw _privateConstructorUsedError;
+  DateTime get dateCreated;
   @override
   @JsonKey(name: 'stationDetailUrl')
-  Uri get stationDetailUrl => throw _privateConstructorUsedError;
+  Uri get stationDetailUrl;
   @override
   @JsonKey(name: 'artUrl')
-  Uri get artUrl => throw _privateConstructorUsedError;
+  Uri get artUrl;
   @override
   @JsonKey(name: 'allowEditDescription')
-  bool get allowEditDescription => throw _privateConstructorUsedError;
+  bool get allowEditDescription;
   @override
   @JsonKey(name: 'requiresCleanAds')
-  bool? get requiresCleanAds => throw _privateConstructorUsedError;
+  bool? get requiresCleanAds;
   @override
   @JsonKey(name: 'isGenreStation')
-  bool get isGenreStation => throw _privateConstructorUsedError;
+  bool get isGenreStation;
   @override
   @JsonKey(name: 'stationToken')
-  String get stationToken => throw _privateConstructorUsedError;
+  String get stationToken;
   @override
   @JsonKey(name: 'stationName')
-  String get stationName => throw _privateConstructorUsedError;
+  String get stationName;
   @override
   @JsonKey(name: 'hasTakeoverModes')
-  bool get hasTakeoverModes => throw _privateConstructorUsedError;
+  bool get hasTakeoverModes;
   @override
   @JsonKey(name: 'isShared')
-  bool get isShared => throw _privateConstructorUsedError;
+  bool get isShared;
   @override
   @JsonKey(name: 'hasCuratedModes')
-  bool get hasCuratedModes => throw _privateConstructorUsedError;
+  bool get hasCuratedModes;
   @override
   @JsonKey(name: 'allowDelete')
-  bool get allowDelete => throw _privateConstructorUsedError;
+  bool get allowDelete;
   @override
   @JsonKey(name: 'allowRename')
-  bool get allowRename => throw _privateConstructorUsedError;
+  bool get allowRename;
   @override
   @JsonKey(name: 'stationSharingUrl')
-  Uri get stationSharingUrl => throw _privateConstructorUsedError;
+  Uri get stationSharingUrl;
   @override
   @JsonKey(ignore: true)
   _$$_StationCopyWith<_$_Station> get copyWith =>

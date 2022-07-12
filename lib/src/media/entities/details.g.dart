@@ -132,7 +132,7 @@ Map<String, dynamic> _$$TrackDetailsToJson(_$TrackDetails instance) =>
       'credits': instance.credits,
       'featured': instance.featured,
       'pandoraId': instance.pandoraId,
-      'type': _$PandoraTypeEnumMap[instance.pandoraType],
+      'type': _$PandoraTypeEnumMap[instance.pandoraType]!,
       'scope': instance.scope,
       'runtimeType': instance.$type,
     };
@@ -222,7 +222,7 @@ Map<String, dynamic> _$$GenreDetailsToJson(_$GenreDetails instance) =>
       'isRedirect': instance.isRedirect,
       'curatorId': instance.curatorId,
       'pandoraId': instance.pandoraId,
-      'type': _$PandoraTypeEnumMap[instance.pandoraType],
+      'type': _$PandoraTypeEnumMap[instance.pandoraType]!,
       'scope': instance.scope,
       'runtimeType': instance.$type,
     };

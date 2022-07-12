@@ -50,7 +50,7 @@ _$PandoraApiException _$$PandoraApiExceptionFromJson(
 Map<String, dynamic> _$$PandoraApiExceptionToJson(
         _$PandoraApiException instance) =>
     <String, dynamic>{
-      'code': _$PandoraApiErrorCodeEnumMap[instance.code],
+      'code': _$PandoraApiErrorCodeEnumMap[instance.code]!,
       'message': instance.message,
       'stat': instance.$type,
     };

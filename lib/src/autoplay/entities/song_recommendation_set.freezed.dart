@@ -220,15 +220,13 @@ abstract class _SongRecommendationSet implements SongRecommendationSet {
 
   @override
   @JsonKey(name: 'requestId')
-  String get requestId => throw _privateConstructorUsedError;
+  String get requestId;
   @override
   @JsonKey(name: 'songRecommendations')
-  List<SongRecommendation> get songRecommendations =>
-      throw _privateConstructorUsedError;
+  List<SongRecommendation> get songRecommendations;
   @override
   @JsonKey(name: 'annotations')
-  Map<String, MediaAnnotation> get annotations =>
-      throw _privateConstructorUsedError;
+  Map<String, MediaAnnotation> get annotations;
   @override
   @JsonKey(ignore: true)
   _$$_SongRecommendationSetCopyWith<_$_SongRecommendationSet> get copyWith =>

@@ -1409,14 +1409,14 @@ abstract class BannerSuperbrowseItem implements SuperbrowseItem {
 
   @override
   @JsonKey(name: 'pandoraId')
-  String? get pandoraId => throw _privateConstructorUsedError;
+  String? get pandoraId;
   @override
   @JsonKey(name: 'analyticsToken')
-  String get analyticsToken => throw _privateConstructorUsedError;
+  String get analyticsToken;
   @JsonKey(name: 'labels')
-  List<SuperbrowseLabel> get labels => throw _privateConstructorUsedError;
+  List<SuperbrowseLabel> get labels;
   @JsonKey(name: 'image')
-  SuperbrowseImage? get image => throw _privateConstructorUsedError;
+  SuperbrowseImage? get image;
   @override
   @JsonKey(ignore: true)
   _$$BannerSuperbrowseItemCopyWith<_$BannerSuperbrowseItem> get copyWith =>
@@ -2240,20 +2240,20 @@ abstract class BeltSuperbrowseItem implements SuperbrowseItem {
 
   @override
   @JsonKey(name: 'pandoraId')
-  String? get pandoraId => throw _privateConstructorUsedError;
+  String? get pandoraId;
   @override
   @JsonKey(name: 'analyticsToken')
-  String get analyticsToken => throw _privateConstructorUsedError;
+  String get analyticsToken;
   @JsonKey(name: 'labels')
-  List<SuperbrowseLabel>? get labels => throw _privateConstructorUsedError;
+  List<SuperbrowseLabel>? get labels;
   @JsonKey(name: 'image')
-  SuperbrowseImage get image => throw _privateConstructorUsedError;
+  SuperbrowseImage get image;
   @JsonKey(name: 'action')
-  SuperbrowseAction? get action => throw _privateConstructorUsedError;
+  SuperbrowseAction? get action;
   @JsonKey(name: 'longPressAction')
-  SuperbrowseAction? get longPressAction => throw _privateConstructorUsedError;
+  SuperbrowseAction? get longPressAction;
   @JsonKey(name: 'voiceText')
-  String? get voiceText => throw _privateConstructorUsedError;
+  String? get voiceText;
   @override
   @JsonKey(ignore: true)
   _$$BeltSuperbrowseItemCopyWith<_$BeltSuperbrowseItem> get copyWith =>
@@ -3083,20 +3083,20 @@ abstract class FeaturedSuperbrowseItem implements SuperbrowseItem {
 
   @override
   @JsonKey(name: 'pandoraId')
-  String? get pandoraId => throw _privateConstructorUsedError;
+  String? get pandoraId;
   @override
   @JsonKey(name: 'analyticsToken')
-  String get analyticsToken => throw _privateConstructorUsedError;
+  String get analyticsToken;
   @JsonKey(name: 'labels')
-  List<SuperbrowseLabel> get labels => throw _privateConstructorUsedError;
+  List<SuperbrowseLabel> get labels;
   @JsonKey(name: 'image')
-  SuperbrowseImage get image => throw _privateConstructorUsedError;
+  SuperbrowseImage get image;
   @JsonKey(name: 'action')
-  SuperbrowseAction? get action => throw _privateConstructorUsedError;
+  SuperbrowseAction? get action;
   @JsonKey(name: 'longPressAction')
-  SuperbrowseAction? get longPressAction => throw _privateConstructorUsedError;
+  SuperbrowseAction? get longPressAction;
   @JsonKey(name: 'badges')
-  List<SuperbrowseBadge>? get badges => throw _privateConstructorUsedError;
+  List<SuperbrowseBadge>? get badges;
   @override
   @JsonKey(ignore: true)
   _$$FeaturedSuperbrowseItemCopyWith<_$FeaturedSuperbrowseItem> get copyWith =>
@@ -3908,18 +3908,18 @@ abstract class FooterSuperbrowseItem implements SuperbrowseItem {
 
   @override
   @JsonKey(name: 'pandoraId')
-  String? get pandoraId => throw _privateConstructorUsedError;
+  String? get pandoraId;
   @override
   @JsonKey(name: 'analyticsToken')
-  String get analyticsToken => throw _privateConstructorUsedError;
+  String get analyticsToken;
   @JsonKey(name: 'labels')
-  List<SuperbrowseLabel> get labels => throw _privateConstructorUsedError;
+  List<SuperbrowseLabel> get labels;
   @JsonKey(name: 'button')
-  SuperbrowseButton? get button => throw _privateConstructorUsedError;
+  SuperbrowseButton? get button;
   @JsonKey(name: 'action')
-  SuperbrowseAction? get action => throw _privateConstructorUsedError;
+  SuperbrowseAction? get action;
   @JsonKey(name: 'longPressAction')
-  SuperbrowseAction? get longPressAction => throw _privateConstructorUsedError;
+  SuperbrowseAction? get longPressAction;
   @override
   @JsonKey(ignore: true)
   _$$FooterSuperbrowseItemCopyWith<_$FooterSuperbrowseItem> get copyWith =>
@@ -4782,25 +4782,25 @@ abstract class GridSuperbrowseItem implements SuperbrowseItem {
 
   @override
   @JsonKey(name: 'pandoraId')
-  String? get pandoraId => throw _privateConstructorUsedError;
+  String? get pandoraId;
   @override
   @JsonKey(name: 'analyticsToken')
-  String get analyticsToken => throw _privateConstructorUsedError;
+  String get analyticsToken;
   @JsonKey(name: 'labels')
-  List<SuperbrowseLabel> get labels => throw _privateConstructorUsedError;
+  List<SuperbrowseLabel> get labels;
   @JsonKey(name: 'image')
-  SuperbrowseImage get image => throw _privateConstructorUsedError;
+  SuperbrowseImage get image;
   @JsonKey(name: 'action')
-  SuperbrowseAction? get action => throw _privateConstructorUsedError;
+  SuperbrowseAction? get action;
   @JsonKey(name: 'longPressAction')
-  SuperbrowseAction? get longPressAction => throw _privateConstructorUsedError;
+  SuperbrowseAction? get longPressAction;
   @JsonKey(name: 'badges')
-  List<SuperbrowseBadge>? get badges => throw _privateConstructorUsedError;
+  List<SuperbrowseBadge>? get badges;
   @JsonKey(
       name: 'timeStamp',
       fromJson: readOptionalDateTimeMilliseconds,
       toJson: writeOptionalDateTimeMilliseconds)
-  DateTime? get timestamp => throw _privateConstructorUsedError;
+  DateTime? get timestamp;
   @override
   @JsonKey(ignore: true)
   _$$GridSuperbrowseItemCopyWith<_$GridSuperbrowseItem> get copyWith =>
@@ -5612,18 +5612,18 @@ abstract class HeaderSuperbrowseItem implements SuperbrowseItem {
 
   @override
   @JsonKey(name: 'pandoraId')
-  String? get pandoraId => throw _privateConstructorUsedError;
+  String? get pandoraId;
   @override
   @JsonKey(name: 'analyticsToken')
-  String get analyticsToken => throw _privateConstructorUsedError;
+  String get analyticsToken;
   @JsonKey(name: 'labels')
-  List<SuperbrowseLabel> get labels => throw _privateConstructorUsedError;
+  List<SuperbrowseLabel> get labels;
   @JsonKey(name: 'image')
-  SuperbrowseImage? get image => throw _privateConstructorUsedError;
+  SuperbrowseImage? get image;
   @JsonKey(name: 'action')
-  SuperbrowseAction? get action => throw _privateConstructorUsedError;
+  SuperbrowseAction? get action;
   @JsonKey(name: 'longPressAction')
-  SuperbrowseAction? get longPressAction => throw _privateConstructorUsedError;
+  SuperbrowseAction? get longPressAction;
   @override
   @JsonKey(ignore: true)
   _$$HeaderSuperbrowseItemCopyWith<_$HeaderSuperbrowseItem> get copyWith =>
@@ -6480,22 +6480,22 @@ abstract class HeroSuperbrowseItem implements SuperbrowseItem {
 
   @override
   @JsonKey(name: 'pandoraId')
-  String? get pandoraId => throw _privateConstructorUsedError;
+  String? get pandoraId;
   @override
   @JsonKey(name: 'analyticsToken')
-  String get analyticsToken => throw _privateConstructorUsedError;
+  String get analyticsToken;
   @JsonKey(name: 'labels')
-  List<SuperbrowseLabel> get labels => throw _privateConstructorUsedError;
+  List<SuperbrowseLabel> get labels;
   @JsonKey(name: 'image')
-  SuperbrowseImage get image => throw _privateConstructorUsedError;
+  SuperbrowseImage get image;
   @JsonKey(name: 'action')
-  SuperbrowseAction? get action => throw _privateConstructorUsedError;
+  SuperbrowseAction? get action;
   @JsonKey(name: 'longPressAction')
-  SuperbrowseAction? get longPressAction => throw _privateConstructorUsedError;
+  SuperbrowseAction? get longPressAction;
   @JsonKey(name: 'badges')
-  List<SuperbrowseBadge>? get badges => throw _privateConstructorUsedError;
+  List<SuperbrowseBadge>? get badges;
   @JsonKey(name: 'formFactors')
-  FormFactors? get formFactors => throw _privateConstructorUsedError;
+  FormFactors? get formFactors;
   @override
   @JsonKey(ignore: true)
   _$$HeroSuperbrowseItemCopyWith<_$HeroSuperbrowseItem> get copyWith =>
@@ -7416,27 +7416,27 @@ abstract class LargeRowSuperbrowseItem implements SuperbrowseItem {
 
   @override
   @JsonKey(name: 'pandoraId')
-  String? get pandoraId => throw _privateConstructorUsedError;
+  String? get pandoraId;
   @override
   @JsonKey(name: 'analyticsToken')
-  String get analyticsToken => throw _privateConstructorUsedError;
+  String get analyticsToken;
   @JsonKey(name: 'labels')
-  List<SuperbrowseLabel>? get labels => throw _privateConstructorUsedError;
+  List<SuperbrowseLabel>? get labels;
   @JsonKey(name: 'button')
-  SuperbrowseButton? get button => throw _privateConstructorUsedError;
+  SuperbrowseButton? get button;
   @JsonKey(name: 'action')
-  SuperbrowseAction? get action => throw _privateConstructorUsedError;
+  SuperbrowseAction? get action;
   @JsonKey(name: 'image')
-  SuperbrowseImage get image => throw _privateConstructorUsedError;
+  SuperbrowseImage get image;
   @JsonKey(name: 'rank')
-  SuperbrowseLabel? get rank => throw _privateConstructorUsedError;
+  SuperbrowseLabel? get rank;
   @JsonKey(name: 'longPressAction')
-  SuperbrowseAction? get longPressAction => throw _privateConstructorUsedError;
+  SuperbrowseAction? get longPressAction;
   @JsonKey(name: 'badges')
-  List<SuperbrowseBadge>? get badges => throw _privateConstructorUsedError;
+  List<SuperbrowseBadge>? get badges;
   @JsonKey(
       name: 'separatorBelow', fromJson: readOptInBool, toJson: writeOptInBool)
-  bool get separatorBelow => throw _privateConstructorUsedError;
+  bool get separatorBelow;
   @override
   @JsonKey(ignore: true)
   _$$LargeRowSuperbrowseItemCopyWith<_$LargeRowSuperbrowseItem> get copyWith =>
@@ -8250,18 +8250,18 @@ abstract class SmallRowSuperbrowseItem implements SuperbrowseItem {
 
   @override
   @JsonKey(name: 'pandoraId')
-  String? get pandoraId => throw _privateConstructorUsedError;
+  String? get pandoraId;
   @override
   @JsonKey(name: 'analyticsToken')
-  String get analyticsToken => throw _privateConstructorUsedError;
+  String get analyticsToken;
   @JsonKey(name: 'labels')
-  List<SuperbrowseLabel> get labels => throw _privateConstructorUsedError;
+  List<SuperbrowseLabel> get labels;
   @JsonKey(name: 'button')
-  SuperbrowseButton? get button => throw _privateConstructorUsedError;
+  SuperbrowseButton? get button;
   @JsonKey(name: 'action')
-  SuperbrowseAction? get action => throw _privateConstructorUsedError;
+  SuperbrowseAction? get action;
   @JsonKey(name: 'longPressAction')
-  SuperbrowseAction? get longPressAction => throw _privateConstructorUsedError;
+  SuperbrowseAction? get longPressAction;
   @override
   @JsonKey(ignore: true)
   _$$SmallRowSuperbrowseItemCopyWith<_$SmallRowSuperbrowseItem> get copyWith =>
@@ -9090,20 +9090,20 @@ abstract class SplitSuperbrowseItem implements SuperbrowseItem {
 
   @override
   @JsonKey(name: 'pandoraId')
-  String? get pandoraId => throw _privateConstructorUsedError;
+  String? get pandoraId;
   @override
   @JsonKey(name: 'analyticsToken')
-  String get analyticsToken => throw _privateConstructorUsedError;
+  String get analyticsToken;
   @JsonKey(name: 'labels')
-  List<SuperbrowseLabel> get labels => throw _privateConstructorUsedError;
+  List<SuperbrowseLabel> get labels;
   @JsonKey(name: 'image')
-  SuperbrowseImage get image => throw _privateConstructorUsedError;
+  SuperbrowseImage get image;
   @JsonKey(name: 'action')
-  SuperbrowseAction? get action => throw _privateConstructorUsedError;
+  SuperbrowseAction? get action;
   @JsonKey(name: 'longPressAction')
-  SuperbrowseAction? get longPressAction => throw _privateConstructorUsedError;
+  SuperbrowseAction? get longPressAction;
   @JsonKey(name: 'badges')
-  List<SuperbrowseBadge>? get badges => throw _privateConstructorUsedError;
+  List<SuperbrowseBadge>? get badges;
   @override
   @JsonKey(ignore: true)
   _$$SplitSuperbrowseItemCopyWith<_$SplitSuperbrowseItem> get copyWith =>
@@ -9927,20 +9927,20 @@ abstract class TileSuperbrowseItem implements SuperbrowseItem {
 
   @override
   @JsonKey(name: 'pandoraId')
-  String? get pandoraId => throw _privateConstructorUsedError;
+  String? get pandoraId;
   @override
   @JsonKey(name: 'analyticsToken')
-  String get analyticsToken => throw _privateConstructorUsedError;
+  String get analyticsToken;
   @JsonKey(name: 'labels')
-  List<SuperbrowseLabel>? get labels => throw _privateConstructorUsedError;
+  List<SuperbrowseLabel>? get labels;
   @JsonKey(name: 'image')
-  SuperbrowseImage get image => throw _privateConstructorUsedError;
+  SuperbrowseImage get image;
   @JsonKey(name: 'action')
-  SuperbrowseAction? get action => throw _privateConstructorUsedError;
+  SuperbrowseAction? get action;
   @JsonKey(name: 'longPressAction')
-  SuperbrowseAction? get longPressAction => throw _privateConstructorUsedError;
+  SuperbrowseAction? get longPressAction;
   @JsonKey(name: 'voiceText')
-  String? get voiceText => throw _privateConstructorUsedError;
+  String? get voiceText;
   @override
   @JsonKey(ignore: true)
   _$$TileSuperbrowseItemCopyWith<_$TileSuperbrowseItem> get copyWith =>

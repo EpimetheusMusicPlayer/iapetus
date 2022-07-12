@@ -166,10 +166,10 @@ abstract class _SuperbrowseBadge implements SuperbrowseBadge {
 
   @override
   @JsonValue('type')
-  BadgeType get type => throw _privateConstructorUsedError;
+  BadgeType get type;
   @override
   @JsonKey(name: 'data')
-  String? get data => throw _privateConstructorUsedError;
+  String? get data;
   @override
   @JsonKey(ignore: true)
   _$$_SuperbrowseBadgeCopyWith<_$_SuperbrowseBadge> get copyWith =>

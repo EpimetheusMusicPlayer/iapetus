@@ -241,19 +241,19 @@ abstract class _CollectionListSegment implements CollectionListSegment {
 
   @override
   @JsonKey(name: 'listenerId')
-  int get listenerId => throw _privateConstructorUsedError;
+  int get listenerId;
   @override
   @JsonKey(name: 'cursor')
-  String? get cursor => throw _privateConstructorUsedError;
+  String? get cursor;
   @override
   @JsonKey(name: 'limit')
-  int get limit => throw _privateConstructorUsedError;
+  int get limit;
   @override
   @JsonKey(name: 'version')
-  int get version => throw _privateConstructorUsedError;
+  int get version;
   @override
   @JsonKey(name: 'items')
-  List<CollectionItem> get items => throw _privateConstructorUsedError;
+  List<CollectionItem> get items;
   @override
   @JsonKey(ignore: true)
   _$$_CollectionListSegmentCopyWith<_$_CollectionListSegment> get copyWith =>

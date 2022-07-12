@@ -1978,48 +1978,48 @@ abstract class TrackAnnotation extends MediaAnnotation implements Track {
       _$TrackAnnotation.fromJson;
 
   @JsonKey(name: 'name')
-  String get name => throw _privateConstructorUsedError;
+  String get name;
   @JsonKey(name: 'sortableName')
-  String get sortableName => throw _privateConstructorUsedError;
+  String get sortableName;
   @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
-  Duration get duration => throw _privateConstructorUsedError;
+  Duration get duration;
   @JsonKey(name: 'trackNumber')
-  int get trackNumber => throw _privateConstructorUsedError;
+  int get trackNumber;
   @JsonKey(
       name: 'icon',
       fromJson: MediaIcon.optionalFromJson,
       toJson: MediaIcon.optionalToJson)
-  MediaIcon? get icon => throw _privateConstructorUsedError;
+  MediaIcon? get icon;
   @JsonKey(name: 'rightsInfo')
-  RightsInfo get rightsInfo => throw _privateConstructorUsedError;
+  RightsInfo get rightsInfo;
   @JsonKey(name: 'albumId')
-  String get albumId => throw _privateConstructorUsedError;
+  String get albumId;
   @JsonKey(name: 'albumName')
-  String get albumName => throw _privateConstructorUsedError;
+  String get albumName;
   @JsonKey(name: 'artistId')
-  String get artistId => throw _privateConstructorUsedError;
+  String get artistId;
   @JsonKey(name: 'artistName')
-  String get artistName => throw _privateConstructorUsedError;
+  String get artistName;
   @JsonKey(name: 'explicitness')
-  Explicitness get explicitness => throw _privateConstructorUsedError;
+  Explicitness get explicitness;
   @JsonKey(name: 'shareableUrlPath')
-  String get shareableUrlPath => throw _privateConstructorUsedError;
+  String get shareableUrlPath;
   @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
-  bool get hasRadio => throw _privateConstructorUsedError;
+  bool get hasRadio;
   @JsonKey(
       name: 'modificationTime',
       fromJson: readDateTimeMilliseconds,
       toJson: writeDateTimeMilliseconds)
-  DateTime get modificationTime => throw _privateConstructorUsedError;
+  DateTime get modificationTime;
   @JsonKey(name: 'slugPlusPandoraId')
-  String get slugPlusPandoraId => throw _privateConstructorUsedError;
+  String get slugPlusPandoraId;
   @JsonKey(name: 'isrc')
-  String get isrc => throw _privateConstructorUsedError;
+  String get isrc;
   @override
   @JsonKey(name: 'pandoraId')
-  String get pandoraId => throw _privateConstructorUsedError;
+  String get pandoraId;
   @JsonKey(name: 'scope')
-  Scope get scope => throw _privateConstructorUsedError;
+  Scope get scope;
   @override
   @JsonKey(ignore: true)
   _$$TrackAnnotationCopyWith<_$TrackAnnotation> get copyWith =>
@@ -3199,46 +3199,46 @@ abstract class ArtistAnnotation extends MediaAnnotation {
       _$ArtistAnnotation.fromJson;
 
   @JsonKey(name: 'name')
-  String get name => throw _privateConstructorUsedError;
+  String get name;
   @JsonKey(name: 'sortableName')
-  String get sortableName => throw _privateConstructorUsedError;
+  String get sortableName;
   @JsonKey(name: 'trackCount')
-  int get trackCount => throw _privateConstructorUsedError;
+  int get trackCount;
   @JsonKey(name: 'albumCount')
-  int get albumCount => throw _privateConstructorUsedError;
+  int get albumCount;
   @JsonKey(
       name: 'icon',
       fromJson: MediaIcon.optionalFromJson,
       toJson: MediaIcon.optionalToJson)
-  MediaIcon? get icon => throw _privateConstructorUsedError;
+  MediaIcon? get icon;
   @JsonKey(name: 'shareableUrlPath')
-  String get shareableUrlPath => throw _privateConstructorUsedError;
+  String get shareableUrlPath;
   @JsonKey(name: 'twitterHandle')
-  String? get twitterHandle => throw _privateConstructorUsedError;
+  String? get twitterHandle;
   @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
-  bool get hasRadio => throw _privateConstructorUsedError;
+  bool get hasRadio;
   @JsonKey(
       name: 'modificationTime',
       fromJson: readDateTimeMilliseconds,
       toJson: writeDateTimeMilliseconds)
-  DateTime get modificationTime => throw _privateConstructorUsedError;
+  DateTime get modificationTime;
   @JsonKey(name: 'slugPlusPandoraId')
-  String get slugPlusPandoraId => throw _privateConstructorUsedError;
+  String get slugPlusPandoraId;
   @JsonKey(name: 'collaboration')
-  bool get collaboration => throw _privateConstructorUsedError;
+  bool get collaboration;
   @JsonKey(name: 'primaryArtists')
-  List<String> get primaryArtistIds => throw _privateConstructorUsedError;
+  List<String> get primaryArtistIds;
   @JsonKey(name: 'variousArtist')
-  bool get variousArtist => throw _privateConstructorUsedError;
+  bool get variousArtist;
   @JsonKey(name: 'megastar')
-  bool get megastar => throw _privateConstructorUsedError;
+  bool get megastar;
   @JsonKey(name: 'hasTakeoverModes')
-  bool get hasTakeoverModes => throw _privateConstructorUsedError;
+  bool get hasTakeoverModes;
   @override
   @JsonKey(name: 'pandoraId')
-  String get pandoraId => throw _privateConstructorUsedError;
+  String get pandoraId;
   @JsonKey(name: 'scope')
-  Scope get scope => throw _privateConstructorUsedError;
+  Scope get scope;
   @override
   @JsonKey(ignore: true)
   _$$ArtistAnnotationCopyWith<_$ArtistAnnotation> get copyWith =>
@@ -4485,52 +4485,52 @@ abstract class AlbumAnnotation extends MediaAnnotation {
       _$AlbumAnnotation.fromJson;
 
   @JsonKey(name: 'name')
-  String get name => throw _privateConstructorUsedError;
+  String get name;
   @JsonKey(name: 'sortableName')
-  String get sortableName => throw _privateConstructorUsedError;
+  String get sortableName;
   @JsonKey(name: 'releaseDate')
-  DateTime get releaseDate => throw _privateConstructorUsedError;
+  DateTime get releaseDate;
   @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
-  Duration get duration => throw _privateConstructorUsedError;
+  Duration get duration;
   @JsonKey(name: 'trackCount')
-  int get trackCount => throw _privateConstructorUsedError;
+  int get trackCount;
   @JsonKey(name: 'isCompilation')
-  bool get isCompilation => throw _privateConstructorUsedError;
+  bool get isCompilation;
   @JsonKey(
       name: 'icon',
       fromJson: MediaIcon.optionalFromJson,
       toJson: MediaIcon.optionalToJson)
-  MediaIcon? get icon => throw _privateConstructorUsedError;
+  MediaIcon? get icon;
   @JsonKey(name: 'rightsInfo')
-  RightsInfo get rightsInfo => throw _privateConstructorUsedError;
+  RightsInfo get rightsInfo;
   @JsonKey(name: 'tracks')
-  List<String> get trackIds => throw _privateConstructorUsedError;
+  List<String> get trackIds;
   @JsonKey(name: 'artistId')
-  String get artistId => throw _privateConstructorUsedError;
+  String get artistId;
   @JsonKey(name: 'artistName')
-  String get artistName => throw _privateConstructorUsedError;
+  String get artistName;
   @JsonKey(name: 'explicitness')
-  Explicitness get explicitness => throw _privateConstructorUsedError;
+  Explicitness get explicitness;
   @JsonKey(name: 'shareableUrlPath')
-  String get shareableUrlPath => throw _privateConstructorUsedError;
+  String get shareableUrlPath;
   @JsonKey(
       name: 'modificationTime',
       fromJson: readDateTimeMilliseconds,
       toJson: writeDateTimeMilliseconds)
-  DateTime get modificationTime => throw _privateConstructorUsedError;
+  DateTime get modificationTime;
   @JsonKey(name: 'slugPlusPandoraId')
-  String get slugPlusPandoraId => throw _privateConstructorUsedError;
+  String get slugPlusPandoraId;
   @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
-  bool get hasRadio => throw _privateConstructorUsedError;
+  bool get hasRadio;
   @JsonKey(name: 'releaseType')
-  String get releaseType => throw _privateConstructorUsedError;
+  String get releaseType;
   @JsonKey(name: 'listenerReleaseType')
-  String get listenerReleaseType => throw _privateConstructorUsedError;
+  String get listenerReleaseType;
   @override
   @JsonKey(name: 'pandoraId')
-  String get pandoraId => throw _privateConstructorUsedError;
+  String get pandoraId;
   @JsonKey(name: 'scope')
-  Scope get scope => throw _privateConstructorUsedError;
+  Scope get scope;
   @override
   @JsonKey(ignore: true)
   _$$AlbumAnnotationCopyWith<_$AlbumAnnotation> get copyWith =>
@@ -5587,35 +5587,34 @@ abstract class GenreAnnotation extends MediaAnnotation {
       _$GenreAnnotation.fromJson;
 
   @JsonKey(name: 'name')
-  String get name => throw _privateConstructorUsedError;
+  String get name;
   @JsonKey(name: 'sortableName')
-  String get sortableName => throw _privateConstructorUsedError;
+  String get sortableName;
   @JsonKey(
       name: 'icon',
       fromJson: MediaIcon.optionalFromJson,
       toJson: MediaIcon.optionalToJson)
-  MediaIcon? get icon => throw _privateConstructorUsedError;
+  MediaIcon? get icon;
   @JsonKey(
       name: 'modificationTime',
       fromJson: readDateTimeMilliseconds,
       toJson: writeDateTimeMilliseconds)
-  DateTime get modificationTime => throw _privateConstructorUsedError;
+  DateTime get modificationTime;
   @JsonKey(name: 'description')
-  String get description => throw _privateConstructorUsedError;
+  String get description;
   @JsonKey(name: 'stationListenerCount')
-  int get stationListenerCount => throw _privateConstructorUsedError;
+  int get stationListenerCount;
   @JsonKey(name: 'shareableUrlPath')
-  String get shareableUrlPath =>
-      throw _privateConstructorUsedError; // TODO work out exclusivityGroups list type
+  String get shareableUrlPath; // TODO work out exclusivityGroups list type
   @JsonKey(name: 'hasTakeoverModes')
-  bool get hasTakeoverModes => throw _privateConstructorUsedError;
+  bool get hasTakeoverModes;
   @JsonKey(name: 'hasCuratedModes')
-  bool get hasCuratedModes => throw _privateConstructorUsedError;
+  bool get hasCuratedModes;
   @override
   @JsonKey(name: 'pandoraId')
-  String get pandoraId => throw _privateConstructorUsedError;
+  String get pandoraId;
   @JsonKey(name: 'scope')
-  Scope get scope => throw _privateConstructorUsedError;
+  Scope get scope;
   @override
   @JsonKey(ignore: true)
   _$$GenreAnnotationCopyWith<_$GenreAnnotation> get copyWith =>
@@ -6951,68 +6950,67 @@ abstract class PlaylistAnnotation extends MediaAnnotation {
       _$PlaylistAnnotation.fromJson;
 
   @JsonKey(name: 'name')
-  String get name => throw _privateConstructorUsedError;
+  String get name;
   @JsonKey(
       name: 'allowFeedback', fromJson: readOptInBool, toJson: writeOptInBool)
-  bool get allowFeedback => throw _privateConstructorUsedError;
+  bool get allowFeedback;
   @JsonKey(name: 'autogenForListener')
-  bool get autogenForListener => throw _privateConstructorUsedError;
+  bool get autogenForListener;
   @JsonKey(name: 'collectible')
-  bool get collectible => throw _privateConstructorUsedError;
+  bool get collectible;
   @JsonKey(
       name: 'description',
       fromJson: readOptionalOptionallyEmptyString,
       toJson: writeOptionallyEmptyString)
-  String? get description => throw _privateConstructorUsedError;
+  String? get description;
   @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
-  Duration get duration => throw _privateConstructorUsedError;
+  Duration get duration;
   @JsonKey(name: 'includedTrackTypes')
-  List<PandoraType> get includedTrackTypes =>
-      throw _privateConstructorUsedError;
+  List<PandoraType> get includedTrackTypes;
   @JsonKey(name: 'isPrivate')
-  bool get isPrivate => throw _privateConstructorUsedError;
+  bool get isPrivate;
   @JsonKey(name: 'linkedType')
-  PlaylistLinkedType get linkedType => throw _privateConstructorUsedError;
+  PlaylistLinkedType get linkedType;
   @JsonKey(name: 'listenerId')
-  int get listenerId => throw _privateConstructorUsedError;
+  int get listenerId;
   @JsonKey(name: 'listenerIdInfo')
-  ListenerIdInfo get listenerIdInfo => throw _privateConstructorUsedError;
+  ListenerIdInfo get listenerIdInfo;
   @JsonKey(name: 'listenerIdToken')
-  String get listenerIdToken => throw _privateConstructorUsedError;
+  String get listenerIdToken;
   @JsonKey(name: 'listenerPandoraId')
-  String get listenerPandoraId => throw _privateConstructorUsedError;
+  String get listenerPandoraId;
   @JsonKey(name: 'secret')
-  bool get secret => throw _privateConstructorUsedError;
+  bool get secret;
   @JsonKey(name: 'shareableUrlPath')
-  String get shareableUrlPath => throw _privateConstructorUsedError;
+  String get shareableUrlPath;
   @JsonKey(name: 'thorLayers')
-  String get thorLayers => throw _privateConstructorUsedError;
+  String get thorLayers;
   @JsonKey(
       name: 'timeCreated',
       fromJson: readDateTimeMilliseconds,
       toJson: writeDateTimeMilliseconds)
-  DateTime get timeCreated => throw _privateConstructorUsedError;
+  DateTime get timeCreated;
   @JsonKey(
       name: 'timeLastPlayed',
       fromJson: readOptionalDateTimeMilliseconds,
       toJson: writeOptionalDateTimeMilliseconds)
-  DateTime? get timeLastPlayed => throw _privateConstructorUsedError;
+  DateTime? get timeLastPlayed;
   @JsonKey(
       name: 'timeLastUpdated',
       fromJson: readOptionalDateTimeMilliseconds,
       toJson: writeOptionalDateTimeMilliseconds)
-  DateTime? get timeLastUpdated => throw _privateConstructorUsedError;
+  DateTime? get timeLastUpdated;
   @JsonKey(name: 'totalTracks')
-  int get totalTracks => throw _privateConstructorUsedError;
+  int get totalTracks;
   @JsonKey(name: 'unlocked')
-  bool get unlocked => throw _privateConstructorUsedError;
+  bool get unlocked;
   @JsonKey(name: 'viewerInfo')
-  PlaylistViewerInfo? get viewerInfo => throw _privateConstructorUsedError;
+  PlaylistViewerInfo? get viewerInfo;
   @override
   @JsonKey(name: 'pandoraId')
-  String get pandoraId => throw _privateConstructorUsedError;
+  String get pandoraId;
   @JsonKey(name: 'scope')
-  Scope get scope => throw _privateConstructorUsedError;
+  Scope get scope;
   @override
   @JsonKey(ignore: true)
   _$$PlaylistAnnotationCopyWith<_$PlaylistAnnotation> get copyWith =>
@@ -8068,34 +8066,34 @@ abstract class ComposerAnnotation extends MediaAnnotation {
       _$ComposerAnnotation.fromJson;
 
   @JsonKey(name: 'name')
-  String get name => throw _privateConstructorUsedError;
+  String get name;
   @JsonKey(name: 'sortableName')
-  String get sortableName => throw _privateConstructorUsedError;
+  String get sortableName;
   @JsonKey(
       name: 'icon',
       fromJson: MediaIcon.optionalFromJson,
       toJson: MediaIcon.optionalToJson)
-  MediaIcon? get icon => throw _privateConstructorUsedError;
+  MediaIcon? get icon;
   @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
-  bool get hasRadio => throw _privateConstructorUsedError;
+  bool get hasRadio;
   @JsonKey(name: 'albumCount')
-  int get albumCount => throw _privateConstructorUsedError;
+  int get albumCount;
   @JsonKey(name: 'trackCount')
-  int get trackCount => throw _privateConstructorUsedError;
+  int get trackCount;
   @JsonKey(name: 'shareableUrlPath')
-  String get shareableUrlPath => throw _privateConstructorUsedError;
+  String get shareableUrlPath;
   @JsonKey(
       name: 'modificationTime',
       fromJson: readDateTimeMilliseconds,
       toJson: writeDateTimeMilliseconds)
-  DateTime get modificationTime => throw _privateConstructorUsedError;
+  DateTime get modificationTime;
   @JsonKey(name: 'slugPlusPandoraId')
-  String get slugPlusPandoraId => throw _privateConstructorUsedError;
+  String get slugPlusPandoraId;
   @override
   @JsonKey(name: 'pandoraId')
-  String get pandoraId => throw _privateConstructorUsedError;
+  String get pandoraId;
   @JsonKey(name: 'scope')
-  String get scope => throw _privateConstructorUsedError;
+  String get scope;
   @override
   @JsonKey(ignore: true)
   _$$ComposerAnnotationCopyWith<_$ComposerAnnotation> get copyWith =>
@@ -8988,15 +8986,15 @@ abstract class ListenerMediaAnnotation extends MediaAnnotation {
 
   @override
   @JsonKey(name: 'pandoraId')
-  String get pandoraId => throw _privateConstructorUsedError;
+  String get pandoraId;
   @JsonKey(name: 'listenerId')
-  int get listenerId => throw _privateConstructorUsedError;
+  int get listenerId;
   @JsonKey(name: 'webname')
-  String get webname => throw _privateConstructorUsedError;
+  String get webname;
   @JsonKey(name: 'fullname')
-  String? get fullName => throw _privateConstructorUsedError;
+  String? get fullName;
   @JsonKey(name: 'displayname')
-  String get displayName => throw _privateConstructorUsedError;
+  String get displayName;
   @override
   @JsonKey(ignore: true)
   _$$ListenerMediaAnnotationCopyWith<_$ListenerMediaAnnotation> get copyWith =>

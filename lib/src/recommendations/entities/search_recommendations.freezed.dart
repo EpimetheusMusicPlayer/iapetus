@@ -193,11 +193,10 @@ abstract class _SearchRecommendations implements SearchRecommendations {
 
   @override
   @JsonKey(name: 'artists')
-  List<ArtistRecommendation> get artists => throw _privateConstructorUsedError;
+  List<ArtistRecommendation> get artists;
   @override
   @JsonKey(name: 'genreStations')
-  List<GenreStationRecommendation> get genreStations =>
-      throw _privateConstructorUsedError;
+  List<GenreStationRecommendation> get genreStations;
   @override
   @JsonKey(ignore: true)
   _$$_SearchRecommendationsCopyWith<_$_SearchRecommendations> get copyWith =>

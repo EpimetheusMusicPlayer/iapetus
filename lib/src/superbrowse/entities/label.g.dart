@@ -32,7 +32,7 @@ _$_SuperbrowseLabel _$$_SuperbrowseLabelFromJson(Map<String, dynamic> json) =>
 Map<String, dynamic> _$$_SuperbrowseLabelToJson(_$_SuperbrowseLabel instance) =>
     <String, dynamic>{
       'text': instance.text,
-      'style': _$LabelStyleEnumMap[instance.style],
+      'style': _$LabelStyleEnumMap[instance.style]!,
       'alignment': _$TextAlignmentEnumMap[instance.alignment],
       'maxLines': instance.maxLines,
       'bold': writeOptInBool(instance.bold),

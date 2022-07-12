@@ -190,11 +190,10 @@ abstract class _StationList implements StationList {
 
   @override
   @JsonKey(name: 'stations')
-  List<Station> get stations => throw _privateConstructorUsedError;
+  List<Station> get stations;
   @override
   @JsonKey(name: 'recommendations')
-  SearchRecommendations get recommendations =>
-      throw _privateConstructorUsedError;
+  SearchRecommendations get recommendations;
   @override
   @JsonKey(ignore: true)
   _$$_StationListCopyWith<_$_StationList> get copyWith =>

@@ -267,25 +267,25 @@ abstract class _PlaylistTrack extends PlaylistTrack {
 
   @override
   @JsonKey(name: 'pandoraId')
-  String get pandoraId => throw _privateConstructorUsedError;
+  String get pandoraId;
   @override
   @JsonKey(name: 'itemId')
-  int get itemId => throw _privateConstructorUsedError;
+  int get itemId;
   @override
   @JsonKey(
       name: 'addedTimestamp',
       fromJson: readDateTimeMilliseconds,
       toJson: writeDateTimeMilliseconds)
-  DateTime get addedTimestamp => throw _privateConstructorUsedError;
+  DateTime get addedTimestamp;
   @override
   @JsonKey(
       name: 'duration',
       fromJson: readOptionalSeconds,
       toJson: writeOptionalSeconds)
-  Duration? get duration => throw _privateConstructorUsedError;
+  Duration? get duration;
   @override
   @JsonKey(name: 'trackPandoraId')
-  String get trackPandoraId => throw _privateConstructorUsedError;
+  String get trackPandoraId;
   @override
   @JsonKey(ignore: true)
   _$$_PlaylistTrackCopyWith<_$_PlaylistTrack> get copyWith =>

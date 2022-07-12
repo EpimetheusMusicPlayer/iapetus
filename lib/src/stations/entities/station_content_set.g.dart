@@ -37,7 +37,7 @@ Map<String, dynamic> _$$_StationContentSetToJson(
     <String, dynamic>{
       'content': instance.content,
       'contentTable': instance.contentTable
-          .map((k, e) => MapEntry(_$StationContentUseEnumMap[k], e)),
+          .map((k, e) => MapEntry(_$StationContentUseEnumMap[k]!, e)),
     };
 
 const _$StationContentUseEnumMap = {

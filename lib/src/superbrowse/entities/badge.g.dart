@@ -24,7 +24,7 @@ _$_SuperbrowseBadge _$$_SuperbrowseBadgeFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_SuperbrowseBadgeToJson(_$_SuperbrowseBadge instance) =>
     <String, dynamic>{
-      'type': _$BadgeTypeEnumMap[instance.type],
+      'type': _$BadgeTypeEnumMap[instance.type]!,
       'data': instance.data,
     };
 

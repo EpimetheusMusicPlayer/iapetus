@@ -314,29 +314,29 @@ abstract class _ArtistRecommendation implements ArtistRecommendation {
 
   @override
   @JsonKey(name: 'artistName')
-  String get artistName => throw _privateConstructorUsedError;
+  String get artistName;
   @override
   @JsonKey(
       name: 'score',
       fromJson: readScore,
       toJson: writeScore,
       includeIfNull: true)
-  int? get score => throw _privateConstructorUsedError;
+  int? get score;
   @override
   @JsonKey(name: 'likelyMatch')
-  bool get likelyMatch => throw _privateConstructorUsedError;
+  bool get likelyMatch;
   @override
   @JsonKey(name: 'artUrl')
-  Uri? get artUrl => throw _privateConstructorUsedError;
+  Uri? get artUrl;
   @override
   @JsonKey(name: 'musicToken')
-  String get musicToken => throw _privateConstructorUsedError;
+  String get musicToken;
   @override
   @JsonKey(name: 'pandoraId')
-  String get pandoraId => throw _privateConstructorUsedError;
+  String get pandoraId;
   @override
   @JsonKey(name: 'explanation')
-  String get explanation => throw _privateConstructorUsedError;
+  String get explanation;
   @override
   @JsonKey(ignore: true)
   _$$_ArtistRecommendationCopyWith<_$_ArtistRecommendation> get copyWith =>

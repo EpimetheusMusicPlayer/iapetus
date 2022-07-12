@@ -268,23 +268,23 @@ abstract class _GenreStationRecommendation
 
   @override
   @JsonKey(name: 'musicToken')
-  String get musicToken => throw _privateConstructorUsedError;
+  String get musicToken;
   @override
   @JsonKey(name: 'explanation')
-  String get explanation => throw _privateConstructorUsedError;
+  String get explanation;
   @override
   @JsonKey(name: 'artUrl')
-  Uri? get artUrl => throw _privateConstructorUsedError;
+  Uri? get artUrl;
   @override
   @JsonKey(name: 'stationName')
-  String get stationName => throw _privateConstructorUsedError;
+  String get stationName;
   @override
   @JsonKey(
       name: 'score',
       fromJson: readScore,
       toJson: writeScore,
       includeIfNull: true)
-  int? get score => throw _privateConstructorUsedError;
+  int? get score;
   @override
   @JsonKey(ignore: true)
   _$$_GenreStationRecommendationCopyWith<_$_GenreStationRecommendation>

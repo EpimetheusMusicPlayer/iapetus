@@ -186,10 +186,10 @@ abstract class _SuperbrowseButton implements SuperbrowseButton {
 
   @override
   @JsonKey(name: 'action')
-  SuperbrowseAction? get action => throw _privateConstructorUsedError;
+  SuperbrowseAction? get action;
   @override
   @JsonKey(name: 'type')
-  ButtonType get type => throw _privateConstructorUsedError;
+  ButtonType get type;
   @override
   @JsonKey(ignore: true)
   _$$_SuperbrowseButtonCopyWith<_$_SuperbrowseButton> get copyWith =>

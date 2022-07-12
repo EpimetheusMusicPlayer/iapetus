@@ -345,10 +345,9 @@ abstract class TrackDetailsSet implements MediaDetailsSet {
 
   @override
   @JsonKey(name: 'annotations')
-  Map<String, MediaAnnotation> get annotations =>
-      throw _privateConstructorUsedError;
+  Map<String, MediaAnnotation> get annotations;
   @JsonKey(name: 'trackDetails')
-  TrackDetails get details => throw _privateConstructorUsedError;
+  TrackDetails get details;
   @override
   @JsonKey(ignore: true)
   _$$TrackDetailsSetCopyWith<_$TrackDetailsSet> get copyWith =>
@@ -563,10 +562,9 @@ abstract class GenreDetailsSet implements MediaDetailsSet {
 
   @override
   @JsonKey(name: 'annotations')
-  Map<String, MediaAnnotation> get annotations =>
-      throw _privateConstructorUsedError;
+  Map<String, MediaAnnotation> get annotations;
   @JsonKey(name: 'genreDetails')
-  GenreDetails get details => throw _privateConstructorUsedError;
+  GenreDetails get details;
   @override
   @JsonKey(ignore: true)
   _$$GenreDetailsSetCopyWith<_$GenreDetailsSet> get copyWith =>
@@ -1467,41 +1465,41 @@ abstract class TrackDetails implements MediaDetails, Track {
       _$TrackDetails.fromJson;
 
   @JsonKey(name: 'trackTags')
-  List<String> get trackTags => throw _privateConstructorUsedError;
+  List<String> get trackTags;
   @JsonKey(name: 'lyricData')
-  MediaLyricData? get lyricData => throw _privateConstructorUsedError;
+  MediaLyricData? get lyricData;
   @JsonKey(name: 'cleanLyricData')
-  MediaLyricData? get cleanLyricData => throw _privateConstructorUsedError;
+  MediaLyricData? get cleanLyricData;
   @JsonKey(name: 'releaseDate')
-  DateTime get releaseDate => throw _privateConstructorUsedError;
+  DateTime get releaseDate;
   @JsonKey(name: 'copyright')
-  String get copyrightHtml => throw _privateConstructorUsedError;
+  String get copyrightHtml;
   @JsonKey(name: 'shareableUrlPath')
-  String get shareableUrlPath => throw _privateConstructorUsedError;
+  String get shareableUrlPath;
   @override
   @JsonKey(
       name: 'modificationTime',
       fromJson: readDateTimeMilliseconds,
       toJson: writeDateTimeMilliseconds)
-  DateTime get modificationTime => throw _privateConstructorUsedError;
+  DateTime get modificationTime;
   @JsonKey(name: 'similarTracks')
-  List<String> get similarTrackIds => throw _privateConstructorUsedError;
+  List<String> get similarTrackIds;
   @override
   @JsonKey(name: 'focusTraits')
-  List<FocusTrait> get focusTraits => throw _privateConstructorUsedError;
+  List<FocusTrait> get focusTraits;
   @JsonKey(name: 'credits')
-  Credits? get credits => throw _privateConstructorUsedError;
+  Credits? get credits;
   @JsonKey(name: 'featured')
-  bool get featured => throw _privateConstructorUsedError;
+  bool get featured;
   @override
   @JsonKey(name: 'pandoraId')
-  String get pandoraId => throw _privateConstructorUsedError;
+  String get pandoraId;
   @override
   @JsonKey(name: 'type')
-  PandoraType get pandoraType => throw _privateConstructorUsedError;
+  PandoraType get pandoraType;
   @override
   @JsonKey(name: 'scope')
-  String get scope => throw _privateConstructorUsedError;
+  String get scope;
   @override
   @JsonKey(ignore: true)
   _$$TrackDetailsCopyWith<_$TrackDetails> get copyWith =>
@@ -1970,27 +1968,27 @@ abstract class GenreDetails implements MediaDetails {
       name: 'modificationTime',
       fromJson: readDateTimeMilliseconds,
       toJson: writeDateTimeMilliseconds)
-  DateTime get modificationTime => throw _privateConstructorUsedError;
+  DateTime get modificationTime;
   @JsonKey(name: 'sampleArtists')
-  List<String> get sampleArtistIds => throw _privateConstructorUsedError;
+  List<String> get sampleArtistIds;
   @JsonKey(name: 'sampleTracks')
-  List<String> get sampleTrackIds => throw _privateConstructorUsedError;
+  List<String> get sampleTrackIds;
   @override
   @JsonKey(name: 'focusTraits')
-  List<FocusTrait> get focusTraits => throw _privateConstructorUsedError;
+  List<FocusTrait> get focusTraits;
   @JsonKey(name: 'isRedirect')
-  bool get isRedirect => throw _privateConstructorUsedError;
+  bool get isRedirect;
   @JsonKey(name: 'curatorId')
-  String get curatorId => throw _privateConstructorUsedError;
+  String get curatorId;
   @override
   @JsonKey(name: 'pandoraId')
-  String get pandoraId => throw _privateConstructorUsedError;
+  String get pandoraId;
   @override
   @JsonKey(name: 'type')
-  PandoraType get pandoraType => throw _privateConstructorUsedError;
+  PandoraType get pandoraType;
   @override
   @JsonKey(name: 'scope')
-  String get scope => throw _privateConstructorUsedError;
+  String get scope;
   @override
   @JsonKey(ignore: true)
   _$$GenreDetailsCopyWith<_$GenreDetails> get copyWith =>

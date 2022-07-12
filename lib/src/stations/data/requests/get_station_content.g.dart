@@ -120,12 +120,12 @@ Map<String, dynamic> _$GetStationContentRequestToJson(
       'xplatformAdCapable': instance.xplatformAdCapable,
       'testCreativeIdString': instance.testCreativeIdString,
       'supportedTrackTypes': instance.supportedTrackTypes
-          .map((e) => _$TrackTypeEnumMap[e])
+          .map((e) => _$TrackTypeEnumMap[e]!)
           .toList(),
       'includeFlexThumbsDownAdUrl': instance.includeFlexThumbsDownAdUrl,
       'includeAudioToken': instance.includeAudioToken,
       'getPlaylistReason':
-          _$GetPlaylistReasonEnumMap[instance.getPlaylistReason],
+          _$GetPlaylistReasonEnumMap[instance.getPlaylistReason]!,
       'audioAdPodCapable': instance.audioAdPodCapable,
       'includeBackstageAdUrl': instance.includeBackstageAdUrl,
       'includeVoiceTrack': instance.includeVoiceTrack,

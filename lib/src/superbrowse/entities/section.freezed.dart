@@ -259,17 +259,16 @@ abstract class _SuperbrowseSection implements SuperbrowseSection {
 
   @override
   @JsonKey(name: 'id')
-  String get id => throw _privateConstructorUsedError;
+  String get id;
   @override
   @JsonKey(name: 'title')
-  SuperbrowseItem? get header => throw _privateConstructorUsedError;
+  SuperbrowseItem? get header;
   @override
   @JsonKey(name: 'viewAll')
-  SuperbrowseItem? get footer => throw _privateConstructorUsedError;
+  SuperbrowseItem? get footer;
   @override
   @JsonKey(name: 'subsections')
-  List<SuperbrowseSubsection>? get subsections =>
-      throw _privateConstructorUsedError;
+  List<SuperbrowseSubsection>? get subsections;
   @override
   @JsonKey(ignore: true)
   _$$_SuperbrowseSectionCopyWith<_$_SuperbrowseSection> get copyWith =>

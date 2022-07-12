@@ -211,16 +211,16 @@ abstract class _AudioUrlData implements AudioUrlData {
 
   @override
   @JsonKey(name: 'audioToken')
-  String get audioToken => throw _privateConstructorUsedError;
+  String get audioToken;
   @override
   @JsonKey(name: 'bitrate')
-  String get bitrate => throw _privateConstructorUsedError;
+  String get bitrate;
   @override
   @JsonKey(name: 'encoding')
-  String get encoding => throw _privateConstructorUsedError;
+  String get encoding;
   @override
   @JsonKey(name: 'audioUrl')
-  Uri get audioUrl => throw _privateConstructorUsedError;
+  Uri get audioUrl;
   @override
   @JsonKey(ignore: true)
   _$$_AudioUrlDataCopyWith<_$_AudioUrlData> get copyWith =>

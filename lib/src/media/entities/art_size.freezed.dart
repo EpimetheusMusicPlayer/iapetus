@@ -133,9 +133,9 @@ abstract class _ArtSize extends ArtSize {
   const _ArtSize._() : super._();
 
   @override
-  int get width => throw _privateConstructorUsedError;
+  int get width;
   @override
-  int get height => throw _privateConstructorUsedError;
+  int get height;
   @override
   @JsonKey(ignore: true)
   _$$_ArtSizeCopyWith<_$_ArtSize> get copyWith =>

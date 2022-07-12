@@ -674,14 +674,14 @@ abstract class HorizontalScrollSuperbrowseSubsection
 
   @override
   @JsonKey(name: SuperbrowseSubsection._sectionIdKey)
-  String get sectionId => throw _privateConstructorUsedError;
+  String get sectionId;
   @JsonKey(name: SuperbrowseSubsection._scrollTypeKey)
-  ScrollType? get scrollType => throw _privateConstructorUsedError;
+  ScrollType? get scrollType;
   @JsonKey(name: SuperbrowseSubsection._formFactorsKey)
-  FormFactors get formFactors => throw _privateConstructorUsedError;
+  FormFactors get formFactors;
   @override
   @JsonKey(name: SuperbrowseSubsection._itemsKey)
-  List<SuperbrowseItem> get items => throw _privateConstructorUsedError;
+  List<SuperbrowseItem> get items;
   @override
   @JsonKey(ignore: true)
   _$$HorizontalScrollSuperbrowseSubsectionCopyWith<
@@ -1140,21 +1140,20 @@ abstract class RecentlyPlayedSuperbrowseSubsection
 
   @override
   @JsonKey(name: SuperbrowseSubsection._sectionIdKey)
-  String get sectionId => throw _privateConstructorUsedError;
+  String get sectionId;
   @JsonKey(name: SuperbrowseSubsection._scrollTypeKey)
-  ScrollType? get scrollType => throw _privateConstructorUsedError;
+  ScrollType? get scrollType;
   @JsonKey(name: SuperbrowseSubsection._formFactorsKey)
-  FormFactors get formFactors => throw _privateConstructorUsedError;
+  FormFactors get formFactors;
   @override
   @JsonKey(name: SuperbrowseSubsection._itemsKey)
-  List<SuperbrowseItem> get items => throw _privateConstructorUsedError;
+  List<SuperbrowseItem> get items;
   @JsonKey(name: 'newItemTemplate')
-  Map<String, SuperbrowseItem>? get newItemTemplate =>
-      throw _privateConstructorUsedError;
+  Map<String, SuperbrowseItem>? get newItemTemplate;
   @JsonKey(name: 'minRequired')
-  int? get minRequired => throw _privateConstructorUsedError;
+  int? get minRequired;
   @JsonKey(name: 'maxRequired')
-  int? get maxRequired => throw _privateConstructorUsedError;
+  int? get maxRequired;
   @override
   @JsonKey(ignore: true)
   _$$RecentlyPlayedSuperbrowseSubsectionCopyWith<
@@ -1535,12 +1534,12 @@ abstract class SingletonSuperbrowseSubsection implements SuperbrowseSubsection {
 
   @override
   @JsonKey(name: SuperbrowseSubsection._sectionIdKey)
-  String get sectionId => throw _privateConstructorUsedError;
+  String get sectionId;
   @JsonKey(name: SuperbrowseSubsection._formFactorsKey)
-  FormFactors? get formFactors => throw _privateConstructorUsedError;
+  FormFactors? get formFactors;
   @override
   @JsonKey(name: SuperbrowseSubsection._itemsKey)
-  List<SuperbrowseItem> get items => throw _privateConstructorUsedError;
+  List<SuperbrowseItem> get items;
   @override
   @JsonKey(ignore: true)
   _$$SingletonSuperbrowseSubsectionCopyWith<_$SingletonSuperbrowseSubsection>
@@ -1922,12 +1921,12 @@ abstract class VerticalListSuperbrowseSubsection
 
   @override
   @JsonKey(name: SuperbrowseSubsection._sectionIdKey)
-  String get sectionId => throw _privateConstructorUsedError;
+  String get sectionId;
   @JsonKey(name: SuperbrowseSubsection._formFactorsKey)
-  FormFactors? get formFactors => throw _privateConstructorUsedError;
+  FormFactors? get formFactors;
   @override
   @JsonKey(name: SuperbrowseSubsection._itemsKey)
-  List<SuperbrowseItem> get items => throw _privateConstructorUsedError;
+  List<SuperbrowseItem> get items;
   @override
   @JsonKey(ignore: true)
   _$$VerticalListSuperbrowseSubsectionCopyWith<
@@ -2304,12 +2303,12 @@ abstract class DisplayAdSuperbrowseSubsection implements SuperbrowseSubsection {
 
   @override
   @JsonKey(name: SuperbrowseSubsection._sectionIdKey)
-  String get sectionId => throw _privateConstructorUsedError;
+  String get sectionId;
   @JsonKey(name: SuperbrowseSubsection._formFactorsKey)
-  FormFactors get formFactors => throw _privateConstructorUsedError;
+  FormFactors get formFactors;
   @override
   @JsonKey(name: SuperbrowseSubsection._itemsKey)
-  List<SuperbrowseItem> get items => throw _privateConstructorUsedError;
+  List<SuperbrowseItem> get items;
   @override
   @JsonKey(ignore: true)
   _$$DisplayAdSuperbrowseSubsectionCopyWith<_$DisplayAdSuperbrowseSubsection>

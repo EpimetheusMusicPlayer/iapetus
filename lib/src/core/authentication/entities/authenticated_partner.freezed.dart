@@ -287,22 +287,22 @@ abstract class _AuthenticatedPartner extends AuthenticatedPartner {
 
   @override
   @JsonKey(name: 'syncTime', fromJson: decryptSyncTime, toJson: encryptSyncTime)
-  DateTime get syncTime => throw _privateConstructorUsedError;
+  DateTime get syncTime;
   @override
   @JsonKey(name: 'partnerAuthToken')
-  String get partnerAuthToken => throw _privateConstructorUsedError;
+  String get partnerAuthToken;
   @override
   @JsonKey(name: 'partnerId')
-  String get partnerId => throw _privateConstructorUsedError;
+  String get partnerId;
   @override
   @JsonKey(name: 'stationSkipUnit')
-  String get stationSkipUnit => throw _privateConstructorUsedError;
+  String get stationSkipUnit;
   @override
   @JsonKey(name: 'stationSkipLimit')
-  int get stationSkipLimit => throw _privateConstructorUsedError;
+  int get stationSkipLimit;
   @override
   @JsonKey(name: 'urls')
-  Map<String, Uri> get urls => throw _privateConstructorUsedError;
+  Map<String, Uri> get urls;
   @override
   @JsonKey(ignore: true)
   _$$_AuthenticatedPartnerCopyWith<_$_AuthenticatedPartner> get copyWith =>

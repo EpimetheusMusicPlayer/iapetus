@@ -165,10 +165,10 @@ abstract class _Credits implements Credits {
 
   @override
   @JsonKey(name: 'creditsSnippet')
-  String get creditsSnippetHtml => throw _privateConstructorUsedError;
+  String get creditsSnippetHtml;
   @override
   @JsonKey(name: 'fullCredits')
-  String get fullCreditsHtml => throw _privateConstructorUsedError;
+  String get fullCreditsHtml;
   @override
   @JsonKey(ignore: true)
   _$$_CreditsCopyWith<_$_Credits> get copyWith =>

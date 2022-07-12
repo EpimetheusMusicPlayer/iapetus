@@ -189,10 +189,10 @@ abstract class _FormFactors implements FormFactors {
 
   @override
   @JsonKey(name: 'portrait')
-  FormFactor get portrait => throw _privateConstructorUsedError;
+  FormFactor get portrait;
   @override
   @JsonKey(name: 'landscape')
-  FormFactor get landscape => throw _privateConstructorUsedError;
+  FormFactor get landscape;
   @override
   @JsonKey(ignore: true)
   _$$_FormFactorsCopyWith<_$_FormFactors> get copyWith =>

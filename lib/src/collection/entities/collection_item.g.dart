@@ -32,7 +32,7 @@ _$_CollectionItem _$$_CollectionItemFromJson(Map<String, dynamic> json) =>
 Map<String, dynamic> _$$_CollectionItemToJson(_$_CollectionItem instance) =>
     <String, dynamic>{
       'pandoraId': instance.pandoraId,
-      'pandoraType': _$PandoraTypeEnumMap[instance.pandoraType],
+      'pandoraType': _$PandoraTypeEnumMap[instance.pandoraType]!,
       'addedTime': writeDateTimeMilliseconds(instance.addedTime),
       'updatedTime': writeDateTimeMilliseconds(instance.updatedTime),
       'ownerId': instance.ownerId,

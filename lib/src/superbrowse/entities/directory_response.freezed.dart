@@ -319,26 +319,25 @@ abstract class _DirectoryResponse implements DirectoryResponse {
 
   @override
   @JsonKey(name: 'ttl', fromJson: readSeconds, toJson: writeSeconds)
-  Duration get ttl => throw _privateConstructorUsedError;
+  Duration get ttl;
   @override
   @JsonKey(name: 'title')
-  String? get title => throw _privateConstructorUsedError;
+  String? get title;
   @override
   @JsonKey(name: 'checksum')
-  String get checksum => throw _privateConstructorUsedError;
+  String get checksum;
   @override
   @JsonKey(name: 'generation')
-  String? get generation => throw _privateConstructorUsedError;
+  String? get generation;
   @override
   @JsonKey(name: 'sections')
-  List<SuperbrowseSection> get sections => throw _privateConstructorUsedError;
+  List<SuperbrowseSection> get sections;
   @override
   @JsonKey(name: 'preferCachedData')
-  bool get preferCachedData => throw _privateConstructorUsedError;
+  bool get preferCachedData;
   @override
   @JsonKey(name: 'formFactorsByType')
-  Map<SuperbrowseItemType, FormFactors> get formFactorsByType =>
-      throw _privateConstructorUsedError;
+  Map<SuperbrowseItemType, FormFactors> get formFactorsByType;
   @override
   @JsonKey(ignore: true)
   _$$_DirectoryResponseCopyWith<_$_DirectoryResponse> get copyWith =>

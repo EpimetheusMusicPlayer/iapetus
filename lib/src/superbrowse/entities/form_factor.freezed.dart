@@ -190,13 +190,13 @@ abstract class _FormFactor implements FormFactor {
 
   @override
   @JsonKey(name: 'numRows')
-  int? get rowCount => throw _privateConstructorUsedError;
+  int? get rowCount;
   @override
   @JsonKey(name: 'numCols')
-  int? get columnCount => throw _privateConstructorUsedError;
+  int? get columnCount;
   @override
   @JsonKey(name: 'fractionSize')
-  double? get fractionSize => throw _privateConstructorUsedError;
+  double? get fractionSize;
   @override
   @JsonKey(ignore: true)
   _$$_FormFactorCopyWith<_$_FormFactor> get copyWith =>

@@ -216,16 +216,16 @@ abstract class _SongRecommendation extends SongRecommendation {
 
   @override
   @JsonKey(name: 'musicId')
-  String get pandoraId => throw _privateConstructorUsedError;
+  String get pandoraId;
   @override
   @JsonKey(name: 'autoplaySourceId')
-  String? get autoplaySourceId => throw _privateConstructorUsedError;
+  String? get autoplaySourceId;
   @override
   @JsonKey(name: 'token')
-  String get token => throw _privateConstructorUsedError;
+  String get token;
   @override
   @JsonKey(name: 'songRating')
-  MediaRating get songRating => throw _privateConstructorUsedError;
+  MediaRating get songRating;
   @override
   @JsonKey(ignore: true)
   _$$_SongRecommendationCopyWith<_$_SongRecommendation> get copyWith =>

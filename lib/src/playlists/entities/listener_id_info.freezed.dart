@@ -197,13 +197,13 @@ abstract class _ListenerIdInfo extends ListenerIdInfo {
 
   @override
   @JsonKey(name: 'listenerId')
-  int get listenerId => throw _privateConstructorUsedError;
+  int get listenerId;
   @override
   @JsonKey(name: 'listenerPandoraId')
-  String get listenerPandoraId => throw _privateConstructorUsedError;
+  String get listenerPandoraId;
   @override
   @JsonKey(name: 'listenerIdToken')
-  String get listenerIdToken => throw _privateConstructorUsedError;
+  String get listenerIdToken;
   @override
   @JsonKey(ignore: true)
   _$$_ListenerIdInfoCopyWith<_$_ListenerIdInfo> get copyWith =>

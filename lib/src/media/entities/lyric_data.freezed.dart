@@ -196,13 +196,13 @@ abstract class _IapetusMediaLyricData implements MediaLyricData {
 
   @override
   @JsonKey(name: 'lyricId')
-  String get lyricId => throw _privateConstructorUsedError;
+  String get lyricId;
   @override
   @JsonKey(name: 'lyricSnippet')
-  String get lyricSnippetHtml => throw _privateConstructorUsedError;
+  String get lyricSnippetHtml;
   @override
   @JsonKey(name: 'lyricCredits')
-  String get lyricCreditsHtml => throw _privateConstructorUsedError;
+  String get lyricCreditsHtml;
   @override
   @JsonKey(ignore: true)
   _$$_IapetusMediaLyricDataCopyWith<_$_IapetusMediaLyricData> get copyWith =>

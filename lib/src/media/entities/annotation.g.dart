@@ -59,14 +59,14 @@ Map<String, dynamic> _$$TrackAnnotationToJson(_$TrackAnnotation instance) =>
       'albumName': instance.albumName,
       'artistId': instance.artistId,
       'artistName': instance.artistName,
-      'explicitness': _$ExplicitnessEnumMap[instance.explicitness],
+      'explicitness': _$ExplicitnessEnumMap[instance.explicitness]!,
       'shareableUrlPath': instance.shareableUrlPath,
       'hasRadio': writeOptInBool(instance.hasRadio),
       'modificationTime': writeDateTimeMilliseconds(instance.modificationTime),
       'slugPlusPandoraId': instance.slugPlusPandoraId,
       'isrc': instance.isrc,
       'pandoraId': instance.pandoraId,
-      'scope': _$ScopeEnumMap[instance.scope],
+      'scope': _$ScopeEnumMap[instance.scope]!,
       'type': instance.$type,
     };
 
@@ -140,7 +140,7 @@ Map<String, dynamic> _$$ArtistAnnotationToJson(_$ArtistAnnotation instance) =>
       'megastar': instance.megastar,
       'hasTakeoverModes': instance.hasTakeoverModes,
       'pandoraId': instance.pandoraId,
-      'scope': _$ScopeEnumMap[instance.scope],
+      'scope': _$ScopeEnumMap[instance.scope]!,
       'type': instance.$type,
     };
 
@@ -201,7 +201,7 @@ Map<String, dynamic> _$$AlbumAnnotationToJson(_$AlbumAnnotation instance) =>
       'tracks': instance.trackIds,
       'artistId': instance.artistId,
       'artistName': instance.artistName,
-      'explicitness': _$ExplicitnessEnumMap[instance.explicitness],
+      'explicitness': _$ExplicitnessEnumMap[instance.explicitness]!,
       'shareableUrlPath': instance.shareableUrlPath,
       'modificationTime': writeDateTimeMilliseconds(instance.modificationTime),
       'slugPlusPandoraId': instance.slugPlusPandoraId,
@@ -209,7 +209,7 @@ Map<String, dynamic> _$$AlbumAnnotationToJson(_$AlbumAnnotation instance) =>
       'releaseType': instance.releaseType,
       'listenerReleaseType': instance.listenerReleaseType,
       'pandoraId': instance.pandoraId,
-      'scope': _$ScopeEnumMap[instance.scope],
+      'scope': _$ScopeEnumMap[instance.scope]!,
       'type': instance.$type,
     };
 
@@ -255,7 +255,7 @@ Map<String, dynamic> _$$GenreAnnotationToJson(_$GenreAnnotation instance) =>
       'hasTakeoverModes': instance.hasTakeoverModes,
       'hasCuratedModes': instance.hasCuratedModes,
       'pandoraId': instance.pandoraId,
-      'scope': _$ScopeEnumMap[instance.scope],
+      'scope': _$ScopeEnumMap[instance.scope]!,
       'type': instance.$type,
     };
 
@@ -326,10 +326,10 @@ Map<String, dynamic> _$$PlaylistAnnotationToJson(
       'description': writeOptionallyEmptyString(instance.description),
       'duration': writeSeconds(instance.duration),
       'includedTrackTypes': instance.includedTrackTypes
-          .map((e) => _$PandoraTypeEnumMap[e])
+          .map((e) => _$PandoraTypeEnumMap[e]!)
           .toList(),
       'isPrivate': instance.isPrivate,
-      'linkedType': _$PlaylistLinkedTypeEnumMap[instance.linkedType],
+      'linkedType': _$PlaylistLinkedTypeEnumMap[instance.linkedType]!,
       'listenerId': instance.listenerId,
       'listenerIdInfo': instance.listenerIdInfo,
       'listenerIdToken': instance.listenerIdToken,
@@ -346,7 +346,7 @@ Map<String, dynamic> _$$PlaylistAnnotationToJson(
       'unlocked': instance.unlocked,
       'viewerInfo': instance.viewerInfo,
       'pandoraId': instance.pandoraId,
-      'scope': _$ScopeEnumMap[instance.scope],
+      'scope': _$ScopeEnumMap[instance.scope]!,
       'type': instance.$type,
     };
 

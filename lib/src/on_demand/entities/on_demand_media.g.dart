@@ -36,7 +36,7 @@ Map<String, dynamic> _$$_OnDemandMediaToJson(_$_OnDemandMedia instance) =>
       'audioSkipUrl': instance.audioSkipUrl.toString(),
       'audioReceiptUrl': instance.audioReceiptUrl.toString(),
       'audioUrlMap': instance.audioUrlMap
-          .map((k, e) => MapEntry(_$AudioUrlQualityEnumMap[k], e)),
+          .map((k, e) => MapEntry(_$AudioUrlQualityEnumMap[k]!, e)),
       'trackGain': writeNum(instance.trackGain),
     };
 

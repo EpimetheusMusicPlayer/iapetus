@@ -291,28 +291,28 @@ abstract class _CollectionItem implements CollectionItem {
 
   @override
   @JsonKey(name: 'pandoraId')
-  String get pandoraId => throw _privateConstructorUsedError;
+  String get pandoraId;
   @override
   @JsonKey(name: 'pandoraType')
-  PandoraType get pandoraType => throw _privateConstructorUsedError;
+  PandoraType get pandoraType;
   @override
   @JsonKey(
       name: 'addedTime',
       fromJson: readDateTimeMilliseconds,
       toJson: writeDateTimeMilliseconds)
-  DateTime get addedTime => throw _privateConstructorUsedError;
+  DateTime get addedTime;
   @override
   @JsonKey(
       name: 'updatedTime',
       fromJson: readDateTimeMilliseconds,
       toJson: writeDateTimeMilliseconds)
-  DateTime get updatedTime => throw _privateConstructorUsedError;
+  DateTime get updatedTime;
   @override
   @JsonKey(name: 'ownerId')
-  int? get ownerId => throw _privateConstructorUsedError;
+  int? get ownerId;
   @override
   @JsonKey(name: 'ownerPandoraId')
-  String? get ownerPandoraId => throw _privateConstructorUsedError;
+  String? get ownerPandoraId;
   @override
   @JsonKey(ignore: true)
   _$$_CollectionItemCopyWith<_$_CollectionItem> get copyWith =>

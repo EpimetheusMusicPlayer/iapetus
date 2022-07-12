@@ -254,22 +254,22 @@ abstract class _SuperbrowseAction implements SuperbrowseAction {
 
   @override
   @JsonKey(name: 'type')
-  ActionType get type => throw _privateConstructorUsedError;
+  ActionType get type;
   @override
   @JsonKey(name: 'pandoraId')
-  String? get pandoraId => throw _privateConstructorUsedError;
+  String? get pandoraId;
   @override
   @JsonKey(name: 'sourceId')
-  String? get sourceId => throw _privateConstructorUsedError;
+  String? get sourceId;
   @override
   @JsonKey(name: 'title')
-  String? get title => throw _privateConstructorUsedError;
+  String? get title;
   @override
   @JsonKey(name: 'loadingScreen')
-  LoadingScreenType? get loadingScreen => throw _privateConstructorUsedError;
+  LoadingScreenType? get loadingScreen;
   @override
   @JsonKey(name: 'url')
-  Uri? get url => throw _privateConstructorUsedError;
+  Uri? get url;
   @override
   @JsonKey(ignore: true)
   _$$_SuperbrowseActionCopyWith<_$_SuperbrowseAction> get copyWith =>

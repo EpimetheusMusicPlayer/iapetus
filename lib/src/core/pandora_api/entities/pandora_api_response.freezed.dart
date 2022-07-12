@@ -267,7 +267,7 @@ abstract class SuccessfulPandoraApiResponse implements PandoraApiResponse {
       _$SuccessfulPandoraApiResponse.fromJson;
 
   @JsonKey(name: 'result')
-  Object? get result => throw _privateConstructorUsedError;
+  Object? get result;
   @JsonKey(ignore: true)
   _$$SuccessfulPandoraApiResponseCopyWith<_$SuccessfulPandoraApiResponse>
       get copyWith => throw _privateConstructorUsedError;
@@ -459,9 +459,9 @@ abstract class PandoraApiException implements PandoraApiResponse, Exception {
       _$PandoraApiException.fromJson;
 
   @JsonKey(name: 'code', fromJson: PandoraApiErrorCode.fromCode)
-  PandoraApiErrorCode get code => throw _privateConstructorUsedError;
+  PandoraApiErrorCode get code;
   @JsonKey(name: 'message')
-  String get message => throw _privateConstructorUsedError;
+  String get message;
   @JsonKey(ignore: true)
   _$$PandoraApiExceptionCopyWith<_$PandoraApiException> get copyWith =>
       throw _privateConstructorUsedError;

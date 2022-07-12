@@ -36,7 +36,7 @@ Map<String, dynamic> _$$_SongRecommendationToJson(
       'musicId': instance.pandoraId,
       'autoplaySourceId': instance.autoplaySourceId,
       'token': instance.token,
-      'songRating': _$MediaRatingEnumMap[instance.songRating],
+      'songRating': _$MediaRatingEnumMap[instance.songRating]!,
     };
 
 const _$MediaRatingEnumMap = {

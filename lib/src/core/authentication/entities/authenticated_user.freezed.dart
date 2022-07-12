@@ -1453,177 +1453,176 @@ abstract class _AuthenticatedUser implements AuthenticatedUser {
 
   @override
   @JsonKey(name: 'isMonthlyPayer')
-  bool get isMonthlyPayer => throw _privateConstructorUsedError;
+  bool get isMonthlyPayer;
   @override
   @JsonKey(name: 'dailySkipLimitSubscriber')
-  int get dailySkipLimitSubscriber => throw _privateConstructorUsedError;
+  int get dailySkipLimitSubscriber;
   @override
   @JsonKey(name: 'minimumAdRefreshInterval')
-  int? get minimumAdRefreshInterval => throw _privateConstructorUsedError;
+  int? get minimumAdRefreshInterval;
   @override
 
   /// The listener's age, in years.
   @JsonKey(name: 'age')
-  int get age => throw _privateConstructorUsedError;
+  int get age;
   @override
   @JsonKey(
       name: 'facebookPermissions',
       fromJson: AuthenticatedUser._readCommaSeparatedList,
       toJson: AuthenticatedUser._writeCommaSeparatedList)
-  List<String> get facebookPermissions => throw _privateConstructorUsedError;
+  List<String> get facebookPermissions;
   @override
   @JsonKey(name: 'splashScreenAdUrl')
-  Uri? get splashScreenAdUrl => throw _privateConstructorUsedError;
+  Uri? get splashScreenAdUrl;
   @override
   @JsonKey(name: 'userProfileUrl')
-  Uri get userProfileUrl => throw _privateConstructorUsedError;
+  Uri get userProfileUrl;
   @override
   @JsonKey(name: 'canListen')
-  bool get canListen => throw _privateConstructorUsedError;
+  bool get canListen;
   @override
   @JsonKey(name: 'hasUsedTrial')
-  bool get hasUsedTrial => throw _privateConstructorUsedError;
+  bool get hasUsedTrial;
   @override
   @JsonKey(name: 'facebookAppId')
-  String get facebookAppId => throw _privateConstructorUsedError;
+  String get facebookAppId;
   @override
   @JsonKey(name: 'maxStationsAllowed')
-  int get maxStationsAllowed => throw _privateConstructorUsedError;
+  int get maxStationsAllowed;
   @override
   @JsonKey(name: 'userId')
-  String get userId => throw _privateConstructorUsedError;
+  String get userId;
   @override
   @JsonKey(name: 'accountMonthlyListening')
-  int get accountMonthlyListening => throw _privateConstructorUsedError;
+  int get accountMonthlyListening;
   @override
   @JsonKey(name: 'zeroVolumeAutoPauseEnabledFlag')
-  bool get zeroVolumeAutoPauseEnabledFlag => throw _privateConstructorUsedError;
+  bool get zeroVolumeAutoPauseEnabledFlag;
   @override
   @JsonKey(name: 'isSubscriber')
-  bool get isSubscriber => throw _privateConstructorUsedError;
+  bool get isSubscriber;
   @override
   @JsonKey(name: 'stationHourlySkipLimit')
-  int get stationHourlySkipLimit => throw _privateConstructorUsedError;
+  int get stationHourlySkipLimit;
   @override
   @JsonKey(
       name: 'listeningTimeoutMinutes',
       fromJson: AuthenticatedUser._readMinuteString,
       toJson: AuthenticatedUser._writeMinuteString)
-  Duration get listeningTimeout => throw _privateConstructorUsedError;
+  Duration get listeningTimeout;
   @override
   @JsonKey(name: 'deviceMonthlyListening')
-  int get deviceMonthlyListening => throw _privateConstructorUsedError;
+  int get deviceMonthlyListening;
   @override
   @JsonKey(name: 'zip')
-  String get zip => throw _privateConstructorUsedError;
+  String get zip;
   @override
   @JsonKey(name: 'stationCreationAdUrl')
-  Uri? get stationCreationAdUrl => throw _privateConstructorUsedError;
+  Uri? get stationCreationAdUrl;
   @override
   @JsonKey(name: 'accountMessageUrl')
-  Uri? get accountMessageUrl => throw _privateConstructorUsedError;
+  Uri? get accountMessageUrl;
   @override
   @JsonKey(name: 'isCapped')
-  bool get isCapped => throw _privateConstructorUsedError;
+  bool get isCapped;
   @override
   @JsonKey(name: 'googleplayApiKey')
-  String get googleplayApiKey => throw _privateConstructorUsedError;
+  String get googleplayApiKey;
   @override
   @JsonKey(name: 'dailySkipLimitNonSubscriber')
-  int get dailySkipLimitNonSubscriber => throw _privateConstructorUsedError;
+  int get dailySkipLimitNonSubscriber;
   @override
   @JsonKey(name: 'collectTrackLifetimeStats')
-  bool get collectTrackLifetimeStats => throw _privateConstructorUsedError;
+  bool get collectTrackLifetimeStats;
   @override
   @JsonKey(name: 'subscriptionHasExpired')
-  bool get subscriptionHasExpired => throw _privateConstructorUsedError;
+  bool get subscriptionHasExpired;
   @override
   @JsonKey(name: 'userAuthToken')
-  String get userAuthToken => throw _privateConstructorUsedError;
+  String get userAuthToken;
   @override
   @JsonKey(name: 'username')
-  String get username => throw _privateConstructorUsedError;
+  String get username;
   @override
   @JsonKey(name: 'googleplayMonthlySku')
-  String get googleplayMonthlySku => throw _privateConstructorUsedError;
+  String get googleplayMonthlySku;
   @override
   @JsonKey(name: 'listeningTimeoutAlertMsgUri')
-  Uri get listeningTimeoutAlertMsgUri => throw _privateConstructorUsedError;
+  Uri get listeningTimeoutAlertMsgUri;
   @override
   @JsonKey(name: 'monthlyCapWarningRepeatPercent')
-  int get monthlyCapWarningRepeatPercent => throw _privateConstructorUsedError;
+  int get monthlyCapWarningRepeatPercent;
   @override
   @JsonKey(name: 'videoAdUrl')
-  Uri? get videoAdUrl => throw _privateConstructorUsedError;
+  Uri? get videoAdUrl;
   @override
   @JsonKey(name: 'zeroVolumeNumMutedTracks')
-  int get zeroVolumeNumMutedTracks => throw _privateConstructorUsedError;
+  int get zeroVolumeNumMutedTracks;
   @override
   @JsonKey(
       name: 'skipDelayMillisecondsAfterTrackStart',
       fromJson: AuthenticatedUser._readNullableMilliseconds,
       toJson: AuthenticatedUser._writeNullableMilliseconds)
-  Duration? get skipDelayAfterTrackStart => throw _privateConstructorUsedError;
+  Duration? get skipDelayAfterTrackStart;
   @override
   @JsonKey(name: 'accountMessageKey')
-  String? get accountMessageKey => throw _privateConstructorUsedError;
+  String? get accountMessageKey;
   @override
   @JsonKey(name: 'dailySkipLimit')
-  int get dailySkipLimit => throw _privateConstructorUsedError;
+  int get dailySkipLimit;
   @override
   @JsonKey(name: 'monthlyCapHours')
-  int get monthlyCapHours => throw _privateConstructorUsedError;
+  int get monthlyCapHours;
   @override
   @JsonKey(name: 'webname')
-  String get webname => throw _privateConstructorUsedError;
+  String get webname;
   @override
   @JsonKey(
       name: 'gender', fromJson: genderFromApiString, toJson: genderToApiString)
-  Gender get gender => throw _privateConstructorUsedError;
+  Gender get gender;
   @override
   @JsonKey(name: 'userstate')
-  String get userstate => throw _privateConstructorUsedError;
+  String get userstate;
   @override
   @JsonKey(name: 'monthlyCapWarningPercent')
-  int get monthlyCapWarningPercent => throw _privateConstructorUsedError;
+  int get monthlyCapWarningPercent;
   @override
   @JsonKey(name: 'hasAudioAds')
-  bool get hasAudioAds => throw _privateConstructorUsedError;
+  bool get hasAudioAds;
   @override
   @JsonKey(
       name: 'fullname',
       fromJson: readOptionalOptionallyEmptyString,
       toJson: writeOptionallyEmptyString)
-  String? get fullname => throw _privateConstructorUsedError;
+  String? get fullname;
   @override
   @JsonKey(name: 'skipLimitBehavior')
-  SkipLimitBehavior get skipLimitBehavior => throw _privateConstructorUsedError;
+  SkipLimitBehavior get skipLimitBehavior;
   @override
   @JsonKey(
       name: 'enableOnDemand', fromJson: readOptInBool, toJson: writeOptInBool)
-  bool get enableOnDemand => throw _privateConstructorUsedError;
+  bool get enableOnDemand;
   @override
   @JsonKey(
       name: 'isEligibleForOffline',
       fromJson: readOptInBool,
       toJson: writeOptInBool)
-  bool get isEligibleForOffline => throw _privateConstructorUsedError;
+  bool get isEligibleForOffline;
   @override
   @JsonKey(
       name: 'isEligibleForManualDownload',
       fromJson: readOptInBool,
       toJson: writeOptInBool)
-  bool get isEligibleForManualDownload => throw _privateConstructorUsedError;
+  bool get isEligibleForManualDownload;
   @override
   @JsonKey(name: 'pandoraBrandingType')
-  PandoraBrandingType? get pandoraBrandingType =>
-      throw _privateConstructorUsedError;
+  PandoraBrandingType? get pandoraBrandingType;
   @override
   @JsonKey(
       name: 'canSellUserData',
       fromJson: readOptOutBool,
       toJson: writeOptOutBool)
-  bool get canSellUserData => throw _privateConstructorUsedError;
+  bool get canSellUserData;
   @override
   @JsonKey(ignore: true)
   _$$_AuthenticatedUserCopyWith<_$_AuthenticatedUser> get copyWith =>

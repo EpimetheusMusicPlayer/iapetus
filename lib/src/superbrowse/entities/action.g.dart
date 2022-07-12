@@ -31,7 +31,7 @@ _$_SuperbrowseAction _$$_SuperbrowseActionFromJson(Map<String, dynamic> json) =>
 Map<String, dynamic> _$$_SuperbrowseActionToJson(
         _$_SuperbrowseAction instance) =>
     <String, dynamic>{
-      'type': _$ActionTypeEnumMap[instance.type],
+      'type': _$ActionTypeEnumMap[instance.type]!,
       'pandoraId': instance.pandoraId,
       'sourceId': instance.sourceId,
       'title': instance.title,

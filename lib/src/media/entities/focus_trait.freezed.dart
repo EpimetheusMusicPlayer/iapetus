@@ -192,13 +192,13 @@ abstract class _FocusTrait implements FocusTrait {
 
   @override
   @JsonKey(name: 'name')
-  String get name => throw _privateConstructorUsedError;
+  String get name;
   @override
   @JsonKey(name: 'focusTraitSet')
-  String get focusTraitSet => throw _privateConstructorUsedError;
+  String get focusTraitSet;
   @override
   @JsonKey(name: 'focusTraitSetType')
-  String get focusTraitSetType => throw _privateConstructorUsedError;
+  String get focusTraitSetType;
   @override
   @JsonKey(ignore: true)
   _$$_FocusTraitCopyWith<_$_FocusTrait> get copyWith =>

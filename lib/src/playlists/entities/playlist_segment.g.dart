@@ -94,7 +94,7 @@ Map<String, dynamic> _$$_PlaylistSegmentToJson(_$_PlaylistSegment instance) =>
       'viewerInfo': instance.viewerInfo,
       'autogenForListener': instance.autogenForListener,
       'includedTrackTypes': instance.includedTrackTypes
-          .map((e) => _$PandoraTypeEnumMap[e])
+          .map((e) => _$PandoraTypeEnumMap[e]!)
           .toList(),
       'allowFeedback': writeOptInBool(instance.allowFeedback),
       'collectible': instance.collectible,

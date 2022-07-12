@@ -30,7 +30,7 @@ Map<String, dynamic> _$$_SuperbrowseButtonToJson(
         _$_SuperbrowseButton instance) =>
     <String, dynamic>{
       'action': instance.action,
-      'type': _$ButtonTypeEnumMap[instance.type],
+      'type': _$ButtonTypeEnumMap[instance.type]!,
     };
 
 const _$ButtonTypeEnumMap = {

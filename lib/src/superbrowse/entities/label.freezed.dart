@@ -302,25 +302,25 @@ abstract class _SuperbrowseLabel implements SuperbrowseLabel {
 
   @override
   @JsonKey(name: 'text')
-  String get text => throw _privateConstructorUsedError;
+  String get text;
   @override
   @JsonKey(name: 'style')
-  LabelStyle get style => throw _privateConstructorUsedError;
+  LabelStyle get style;
   @override
   @JsonKey(name: 'alignment')
-  TextAlignment? get alignment => throw _privateConstructorUsedError;
+  TextAlignment? get alignment;
   @override
   @JsonKey(name: 'maxLines')
-  int? get maxLines => throw _privateConstructorUsedError;
+  int? get maxLines;
   @override
   @JsonKey(name: 'bold', fromJson: readOptInBool, toJson: writeOptInBool)
-  bool get bold => throw _privateConstructorUsedError;
+  bool get bold;
   @override
   @JsonKey(name: 'italic', fromJson: readOptInBool, toJson: writeOptInBool)
-  bool get italic => throw _privateConstructorUsedError;
+  bool get italic;
   @override
   @JsonKey(name: 'underlined', fromJson: readOptInBool, toJson: writeOptInBool)
-  bool get underlined => throw _privateConstructorUsedError;
+  bool get underlined;
   @override
   @JsonKey(ignore: true)
   _$$_SuperbrowseLabelCopyWith<_$_SuperbrowseLabel> get copyWith =>

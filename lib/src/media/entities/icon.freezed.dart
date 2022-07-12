@@ -217,16 +217,16 @@ abstract class _MediaIcon implements MediaIcon {
       name: 'dominantColor',
       fromJson: readOptionalColor,
       toJson: writeOptionalColor)
-  int? get dominantColor => throw _privateConstructorUsedError;
+  int? get dominantColor;
   @override
   @JsonKey(name: 'artId')
-  String get artId => throw _privateConstructorUsedError;
+  String get artId;
   @override
   @JsonKey(
       name: 'artUrl',
       fromJson: readOptionallyEmptyUri,
       toJson: writeOptionallyEmptyUri)
-  Uri? get artUrl => throw _privateConstructorUsedError;
+  Uri? get artUrl;
   @override
   @JsonKey(ignore: true)
   _$$_MediaIconCopyWith<_$_MediaIcon> get copyWith =>

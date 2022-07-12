@@ -369,34 +369,34 @@ abstract class _SuperbrowseImage extends SuperbrowseImage {
 
   @override
   @JsonKey(name: 'border', fromJson: readOptInBool, toJson: writeOptInBool)
-  bool get border => throw _privateConstructorUsedError;
+  bool get border;
   @override
   @JsonKey(name: 'circular', fromJson: readOptInBool, toJson: writeOptInBool)
-  bool get circular => throw _privateConstructorUsedError;
+  bool get circular;
   @override
   @JsonKey(
       name: 'dominantColor',
       fromJson: readOptionalColor,
       toJson: writeOptionalColor)
-  int? get color => throw _privateConstructorUsedError;
+  int? get color;
   @override
   @JsonKey(name: 'fullUrl')
-  Uri? get fullUrl => throw _privateConstructorUsedError;
+  Uri? get fullUrl;
   @override
   @JsonKey(name: 'fullUrlDark')
-  Uri? get fullUrlDark => throw _privateConstructorUsedError;
+  Uri? get fullUrlDark;
   @override
   @JsonKey(name: 'scalableUrl')
-  Uri? get scalableUrl => throw _privateConstructorUsedError;
+  Uri? get scalableUrl;
   @override
   @JsonKey(name: 'sizedUrl')
-  Uri? get sizedUrl => throw _privateConstructorUsedError;
+  Uri? get sizedUrl;
   @override
   @JsonKey(name: 'sizedUrlDark')
-  Uri? get sizedUrlDart => throw _privateConstructorUsedError;
+  Uri? get sizedUrlDart;
   @override
   @JsonKey(name: 'discreteSizes')
-  List<ArtSize>? get sizes => throw _privateConstructorUsedError;
+  List<ArtSize>? get sizes;
   @override
   @JsonKey(ignore: true)
   _$$_SuperbrowseImageCopyWith<_$_SuperbrowseImage> get copyWith =>

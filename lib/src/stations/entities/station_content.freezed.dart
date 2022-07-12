@@ -1378,151 +1378,147 @@ abstract class _StationContent extends StationContent {
 
   @override
   @JsonKey(name: 'userSeed')
-  String? get userSeed => throw _privateConstructorUsedError;
+  String? get userSeed;
   @override
   @JsonKey(name: 'allowBookmarkTrack')
-  bool get allowBookmarkTrack => throw _privateConstructorUsedError;
+  bool get allowBookmarkTrack;
   @override
   @JsonKey(name: 'albumExplorerUrl')
-  Uri get albumExplorerUrl => throw _privateConstructorUsedError;
+  Uri get albumExplorerUrl;
   @override
   @JsonKey(name: 'albumArtUrl')
-  Uri get albumArtUrl => throw _privateConstructorUsedError;
+  Uri get albumArtUrl;
   @override
   @JsonKey(name: 'artistDetailUrl')
-  Uri get artistDetailUrl => throw _privateConstructorUsedError;
+  Uri get artistDetailUrl;
   @override
   @JsonKey(name: 'artistExplorerUrl')
-  Uri get artistExplorerUrl => throw _privateConstructorUsedError;
+  Uri get artistExplorerUrl;
   @override
   @JsonKey(name: 'songDetailUrl')
-  Uri get songDetailUrl => throw _privateConstructorUsedError;
+  Uri get songDetailUrl;
   @override
   @JsonKey(name: 'trackType')
-  TrackType get trackType => throw _privateConstructorUsedError;
+  TrackType get trackType;
   @override
   @JsonKey(name: 'nowPlayingStationAdUrl')
-  Uri? get nowPlayingStationAdUrl => throw _privateConstructorUsedError;
+  Uri? get nowPlayingStationAdUrl;
   @override
   @JsonKey(name: 'allowStartStationFromTrack')
-  bool get allowStartStationFromTrack => throw _privateConstructorUsedError;
+  bool get allowStartStationFromTrack;
   @override
   @JsonKey(name: 'nowPlayingStationAdTargeting')
-  String? get nowPlayingStationAdTargeting =>
-      throw _privateConstructorUsedError;
+  String? get nowPlayingStationAdTargeting;
   @override
   @JsonKey(name: 'nowPlayingStationPremiumAdTargeting')
-  String? get nowPlayingStationPremiumAdTargeting =>
-      throw _privateConstructorUsedError;
+  String? get nowPlayingStationPremiumAdTargeting;
   @override
   @JsonKey(name: 'allowShareTrack')
-  bool get allowShareTrack => throw _privateConstructorUsedError;
+  bool get allowShareTrack;
   @override
   @JsonKey(name: 'pandoraType')
-  PandoraType get pandoraType => throw _privateConstructorUsedError;
+  PandoraType get pandoraType;
   @override
 
   /// Used for remote applications, like Sonos.
   @JsonKey(name: 'songIdentity')
-  String get songIdentity => throw _privateConstructorUsedError;
+  String get songIdentity;
   @override
   @JsonKey(name: 'nowPlayingStationPremiumAdUrl')
-  Uri? get nowPlayingStationPremiumAdUrl => throw _privateConstructorUsedError;
+  Uri? get nowPlayingStationPremiumAdUrl;
   @override
   @JsonKey(name: 'allowFeedback')
-  bool get allowFeedback => throw _privateConstructorUsedError;
+  bool get allowFeedback;
   @override
   @JsonKey(name: 'musicId')
-  String get musicId => throw _privateConstructorUsedError;
+  String get musicId;
   @override
   @JsonKey(name: 'categoryDescriptor')
-  String get categoryDescriptor => throw _privateConstructorUsedError;
+  String get categoryDescriptor;
   @override
   @JsonKey(name: 'isFeatured')
-  bool get isFeatured => throw _privateConstructorUsedError;
+  bool get isFeatured;
   @override
   @JsonKey(name: 'disableTrackDetail')
-  bool get disableTrackDetail => throw _privateConstructorUsedError;
+  bool get disableTrackDetail;
   @override
   @JsonKey(name: 'songName')
-  String get songName => throw _privateConstructorUsedError;
+  String get songName;
   @override
   @JsonKey(name: 'allowTiredOfTrack')
-  bool get allowTiredOfTrack => throw _privateConstructorUsedError;
+  bool get allowTiredOfTrack;
   @override
   @JsonKey(name: 'programDescriptor')
-  String get programDescriptor => throw _privateConstructorUsedError;
+  String get programDescriptor;
   @override
   @JsonKey(name: 'artistName')
-  String get artistName => throw _privateConstructorUsedError;
+  String get artistName;
   @override
   @JsonKey(name: 'trackLength', fromJson: readSeconds, toJson: writeSeconds)
-  Duration get trackLength => throw _privateConstructorUsedError;
+  Duration get trackLength;
   @override
   @JsonKey(name: 'trackToken')
-  String get trackToken => throw _privateConstructorUsedError;
+  String get trackToken;
   @override
   @JsonKey(name: 'allowBuyTrack')
-  bool get allowBuyTrack => throw _privateConstructorUsedError;
+  bool get allowBuyTrack;
   @override
   @JsonKey(name: 'albumDetailUrl')
-  Uri get albumDetailUrl => throw _privateConstructorUsedError;
+  Uri get albumDetailUrl;
   @override
   @JsonKey(name: 'audioUrlMap')
-  Map<AudioUrlQuality, AudioUrlData> get audioUrlMap =>
-      throw _privateConstructorUsedError;
+  Map<AudioUrlQuality, AudioUrlData> get audioUrlMap;
   @override
   @JsonKey(name: 'albumIdentity')
-  String get albumIdentity => throw _privateConstructorUsedError;
+  String get albumIdentity;
   @override
   @JsonKey(name: 'trackGain', fromJson: readNum, toJson: writeNum)
-  num get trackGain => throw _privateConstructorUsedError;
+  num get trackGain;
   @override
   @JsonKey(name: 'albumName')
-  String get albumName => throw _privateConstructorUsedError;
+  String get albumName;
   @override
   @JsonKey(name: 'amazonAlbumUrl')
-  Uri get amazonAlbumUrl => throw _privateConstructorUsedError;
+  Uri get amazonAlbumUrl;
   @override
   @JsonKey(name: 'shareLandingUrl')
-  Uri get shareLandingUrl => throw _privateConstructorUsedError;
+  Uri get shareLandingUrl;
   @override
   @JsonKey(name: 'songExplorerUrl')
-  Uri get songExplorerUrl => throw _privateConstructorUsedError;
+  Uri get songExplorerUrl;
   @override
   @JsonKey(name: 'nowPlayingStationPremiumAdUnit')
-  String? get nowPlayingStationPremiumAdUnit =>
-      throw _privateConstructorUsedError;
+  String? get nowPlayingStationPremiumAdUnit;
   @override
   @JsonKey(name: 'songRating')
-  MediaRating get songRating => throw _privateConstructorUsedError;
+  MediaRating get songRating;
   @override
   @JsonKey(name: 'trackKey')
-  TrackKey? get trackKey => throw _privateConstructorUsedError;
+  TrackKey? get trackKey;
   @override
   @JsonKey(name: 'nowPlayingStationAdUnit')
-  String? get nowPlayingStationAdUnit => throw _privateConstructorUsedError;
+  String? get nowPlayingStationAdUnit;
   @override
   @JsonKey(name: 'requestedModeId')
-  int get requestedModeId => throw _privateConstructorUsedError;
+  int get requestedModeId;
   @override
   @JsonKey(name: 'stationId')
-  String get stationId => throw _privateConstructorUsedError;
+  String get stationId;
   @override
   @JsonKey(name: 'pandoraId')
-  String get pandoraId => throw _privateConstructorUsedError;
+  String get pandoraId;
   @override
   @JsonKey(name: 'allowSkipTrackWithoutLimit')
-  bool get allowSkipTrackWithoutLimit => throw _privateConstructorUsedError;
+  bool get allowSkipTrackWithoutLimit;
   @override
   @JsonKey(name: 'itunesSongUrl')
-  Uri get itunesSongUrl => throw _privateConstructorUsedError;
+  Uri get itunesSongUrl;
   @override
   @JsonKey(name: 'disableSkipButton')
-  bool get disableSkipButton => throw _privateConstructorUsedError;
+  bool get disableSkipButton;
   @override
   @JsonKey(name: 'modeId')
-  int get modeId => throw _privateConstructorUsedError;
+  int get modeId;
   @override
   @JsonKey(ignore: true)
   _$$_StationContentCopyWith<_$_StationContent> get copyWith =>

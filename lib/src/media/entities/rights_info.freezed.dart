@@ -285,25 +285,25 @@ abstract class _RightsInfo implements RightsInfo {
 
   @override
   @JsonKey(name: 'hasInteractive')
-  bool get hasInteractive => throw _privateConstructorUsedError;
+  bool get hasInteractive;
   @override
   @JsonKey(name: 'hasOffline')
-  bool get hasOffline => throw _privateConstructorUsedError;
+  bool get hasOffline;
   @override
   @JsonKey(name: 'hasNonInteractive')
-  bool get hasNonInteractive => throw _privateConstructorUsedError;
+  bool get hasNonInteractive;
   @override
   @JsonKey(name: 'hasStatutory')
-  bool get hasStatutory => throw _privateConstructorUsedError;
+  bool get hasStatutory;
   @override
   @JsonKey(name: 'hasRadioRights')
-  bool get hasRadioRights => throw _privateConstructorUsedError;
+  bool get hasRadioRights;
   @override
   @JsonKey(
       name: 'expirationTime',
       fromJson: readMilliseconds,
       toJson: writeMilliseconds)
-  Duration get expiresIn => throw _privateConstructorUsedError;
+  Duration get expiresIn;
   @override
   @JsonKey(ignore: true)
   _$$_RightsInfoCopyWith<_$_RightsInfo> get copyWith =>

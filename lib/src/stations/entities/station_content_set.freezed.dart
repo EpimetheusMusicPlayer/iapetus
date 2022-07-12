@@ -193,11 +193,10 @@ abstract class _StationContentSet extends StationContentSet {
 
   @override
   @JsonKey(name: 'content')
-  Map<String, StationContent> get content => throw _privateConstructorUsedError;
+  Map<String, StationContent> get content;
   @override
   @JsonKey(name: 'contentTable')
-  Map<StationContentUse, List<String>> get contentTable =>
-      throw _privateConstructorUsedError;
+  Map<StationContentUse, List<String>> get contentTable;
   @override
   @JsonKey(ignore: true)
   _$$_StationContentSetCopyWith<_$_StationContentSet> get copyWith =>

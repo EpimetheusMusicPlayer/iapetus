@@ -206,16 +206,16 @@ abstract class _TrackKey implements TrackKey {
 
   @override
   @JsonKey(name: 'trackId')
-  String get trackId => throw _privateConstructorUsedError;
+  String get trackId;
   @override
   @JsonKey(name: 'trackType')
-  TrackType get trackType => throw _privateConstructorUsedError;
+  TrackType get trackType;
   @override
   @JsonKey(name: 'trackSubtype')
-  String get trackSubtype => throw _privateConstructorUsedError;
+  String get trackSubtype;
   @override
   @JsonKey(name: 'spinId')
-  String get spinId => throw _privateConstructorUsedError;
+  String get spinId;
   @override
   @JsonKey(ignore: true)
   _$$_TrackKeyCopyWith<_$_TrackKey> get copyWith =>

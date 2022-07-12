@@ -48,7 +48,7 @@ Map<String, dynamic> _$$_DirectoryResponseToJson(
       'sections': instance.sections,
       'preferCachedData': instance.preferCachedData,
       'formFactorsByType': instance.formFactorsByType
-          .map((k, e) => MapEntry(_$SuperbrowseItemTypeEnumMap[k], e)),
+          .map((k, e) => MapEntry(_$SuperbrowseItemTypeEnumMap[k]!, e)),
     };
 
 const _$SuperbrowseItemTypeEnumMap = {
