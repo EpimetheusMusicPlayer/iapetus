@@ -150,6 +150,22 @@ class MediaAnnotation with _$MediaAnnotation implements PandoraEntity {
     @JsonKey(name: 'scope') required Scope scope,
   }) = PlaylistAnnotation;
 
+  @FreezedUnionValue('ST')
+  const factory MediaAnnotation.station({
+    @JsonKey(name: 'stationName') required final String name,
+    @JsonKey(name: 'stationId') required final String stationId,
+    @JsonKey(name: 'listenerId') required final int listenerId,
+    @JsonKey(name: 'listenerPandoraId') required final String listenerPandoraId,
+    @JsonKey(name: 'initialSeedId') required final String initialSeedId,
+    @JsonKey(name: 'isQuickMix') required final bool isQuickMix,
+    @JsonKey(name: 'isThumbprint') required final bool isThumbprint,
+    @JsonKey(name: 'hasCuratedModes', fromJson: readOptInBool, toJson: writeOptInBool)
+        required final bool hasCuratedModes,
+    @JsonKey(name: 'icon', fromJson: MediaIcon.optionalFromJson, toJson: MediaIcon.optionalToJson)
+        required MediaIcon? icon,
+    @JsonKey(name: 'pandoraId') required String pandoraId,
+  }) = StationMediaAnnotation;
+
   @FreezedUnionValue('CO')
   const factory MediaAnnotation.composer({
     @JsonKey(name: 'name') required String name,
@@ -179,16 +195,16 @@ class MediaAnnotation with _$MediaAnnotation implements PandoraEntity {
   }) = ListenerMediaAnnotation;
 
   @override
-  PandoraType get pandoraType {
-    if (this is TrackAnnotation) return PandoraType.song;
-    if (this is ArtistAnnotation) return PandoraType.artist;
-    if (this is AlbumAnnotation) return PandoraType.album;
-    if (this is GenreAnnotation) return PandoraType.genre;
-    if (this is PlaylistAnnotation) return PandoraType.playlist;
-    if (this is ComposerAnnotation) return PandoraType.composer;
-    if (this is ListenerMediaAnnotation) return PandoraType.listener;
-    throw FallThroughError();
-  }
+  PandoraType get pandoraType => map(
+        track: (_) => PandoraType.song,
+        artist: (_) => PandoraType.artist,
+        album: (_) => PandoraType.album,
+        genre: (_) => PandoraType.genre,
+        playlist: (_) => PandoraType.playlist,
+        station: (_) => PandoraType.station,
+        composer: (_) => PandoraType.composer,
+        listener: (_) => PandoraType.listener,
+      );
 
   factory MediaAnnotation.fromJson(Map<String, dynamic> json) =>
       _$MediaAnnotationFromJson(json);

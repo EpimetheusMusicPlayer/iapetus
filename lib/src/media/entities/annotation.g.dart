@@ -401,6 +401,49 @@ const _$PlaylistLinkedTypeEnumMap = {
   PlaylistLinkedType.unspecified: 'NULL',
 };
 
+_$StationMediaAnnotation _$$StationMediaAnnotationFromJson(
+        Map<String, dynamic> json) =>
+    $checkedCreate(
+      r'_$StationMediaAnnotation',
+      json,
+      ($checkedConvert) {
+        final val = _$StationMediaAnnotation(
+          name: $checkedConvert('stationName', (v) => v as String),
+          stationId: $checkedConvert('stationId', (v) => v as String),
+          listenerId: $checkedConvert('listenerId', (v) => v as int),
+          listenerPandoraId:
+              $checkedConvert('listenerPandoraId', (v) => v as String),
+          initialSeedId: $checkedConvert('initialSeedId', (v) => v as String),
+          isQuickMix: $checkedConvert('isQuickMix', (v) => v as bool),
+          isThumbprint: $checkedConvert('isThumbprint', (v) => v as bool),
+          hasCuratedModes: $checkedConvert(
+              'hasCuratedModes', (v) => readOptInBool(v as bool?)),
+          icon: $checkedConvert('icon',
+              (v) => MediaIcon.optionalFromJson(v as Map<String, dynamic>)),
+          pandoraId: $checkedConvert('pandoraId', (v) => v as String),
+          $type: $checkedConvert('type', (v) => v as String?),
+        );
+        return val;
+      },
+      fieldKeyMap: const {'name': 'stationName', r'$type': 'type'},
+    );
+
+Map<String, dynamic> _$$StationMediaAnnotationToJson(
+        _$StationMediaAnnotation instance) =>
+    <String, dynamic>{
+      'stationName': instance.name,
+      'stationId': instance.stationId,
+      'listenerId': instance.listenerId,
+      'listenerPandoraId': instance.listenerPandoraId,
+      'initialSeedId': instance.initialSeedId,
+      'isQuickMix': instance.isQuickMix,
+      'isThumbprint': instance.isThumbprint,
+      'hasCuratedModes': writeOptInBool(instance.hasCuratedModes),
+      'icon': MediaIcon.optionalToJson(instance.icon),
+      'pandoraId': instance.pandoraId,
+      'type': instance.$type,
+    };
+
 _$ComposerAnnotation _$$ComposerAnnotationFromJson(Map<String, dynamic> json) =>
     $checkedCreate(
       r'_$ComposerAnnotation',

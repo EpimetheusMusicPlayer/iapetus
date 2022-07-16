@@ -26,6 +26,8 @@ MediaAnnotation _$MediaAnnotationFromJson(Map<String, dynamic> json) {
       return GenreAnnotation.fromJson(json);
     case 'PL':
       return PlaylistAnnotation.fromJson(json);
+    case 'ST':
+      return StationMediaAnnotation.fromJson(json);
     case 'CO':
       return ComposerAnnotation.fromJson(json);
     case 'LI':
@@ -233,6 +235,28 @@ mixin _$MediaAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)
         playlist,
+    required TResult Function(
+            @JsonKey(name: 'stationName')
+                String name,
+            @JsonKey(name: 'stationId')
+                String stationId,
+            @JsonKey(name: 'listenerId')
+                int listenerId,
+            @JsonKey(name: 'listenerPandoraId')
+                String listenerPandoraId,
+            @JsonKey(name: 'initialSeedId')
+                String initialSeedId,
+            @JsonKey(name: 'isQuickMix')
+                bool isQuickMix,
+            @JsonKey(name: 'isThumbprint')
+                bool isThumbprint,
+            @JsonKey(name: 'hasCuratedModes', fromJson: readOptInBool, toJson: writeOptInBool)
+                bool hasCuratedModes,
+            @JsonKey(name: 'icon', fromJson: MediaIcon.optionalFromJson, toJson: MediaIcon.optionalToJson)
+                MediaIcon? icon,
+            @JsonKey(name: 'pandoraId')
+                String pandoraId)
+        station,
     required TResult Function(
             @JsonKey(name: 'name')
                 String name,
@@ -459,6 +483,28 @@ mixin _$MediaAnnotation {
                 Scope scope)?
         playlist,
     TResult Function(
+            @JsonKey(name: 'stationName')
+                String name,
+            @JsonKey(name: 'stationId')
+                String stationId,
+            @JsonKey(name: 'listenerId')
+                int listenerId,
+            @JsonKey(name: 'listenerPandoraId')
+                String listenerPandoraId,
+            @JsonKey(name: 'initialSeedId')
+                String initialSeedId,
+            @JsonKey(name: 'isQuickMix')
+                bool isQuickMix,
+            @JsonKey(name: 'isThumbprint')
+                bool isThumbprint,
+            @JsonKey(name: 'hasCuratedModes', fromJson: readOptInBool, toJson: writeOptInBool)
+                bool hasCuratedModes,
+            @JsonKey(name: 'icon', fromJson: MediaIcon.optionalFromJson, toJson: MediaIcon.optionalToJson)
+                MediaIcon? icon,
+            @JsonKey(name: 'pandoraId')
+                String pandoraId)?
+        station,
+    TResult Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -684,6 +730,28 @@ mixin _$MediaAnnotation {
                 Scope scope)?
         playlist,
     TResult Function(
+            @JsonKey(name: 'stationName')
+                String name,
+            @JsonKey(name: 'stationId')
+                String stationId,
+            @JsonKey(name: 'listenerId')
+                int listenerId,
+            @JsonKey(name: 'listenerPandoraId')
+                String listenerPandoraId,
+            @JsonKey(name: 'initialSeedId')
+                String initialSeedId,
+            @JsonKey(name: 'isQuickMix')
+                bool isQuickMix,
+            @JsonKey(name: 'isThumbprint')
+                bool isThumbprint,
+            @JsonKey(name: 'hasCuratedModes', fromJson: readOptInBool, toJson: writeOptInBool)
+                bool hasCuratedModes,
+            @JsonKey(name: 'icon', fromJson: MediaIcon.optionalFromJson, toJson: MediaIcon.optionalToJson)
+                MediaIcon? icon,
+            @JsonKey(name: 'pandoraId')
+                String pandoraId)?
+        station,
+    TResult Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -724,6 +792,7 @@ mixin _$MediaAnnotation {
     required TResult Function(AlbumAnnotation value) album,
     required TResult Function(GenreAnnotation value) genre,
     required TResult Function(PlaylistAnnotation value) playlist,
+    required TResult Function(StationMediaAnnotation value) station,
     required TResult Function(ComposerAnnotation value) composer,
     required TResult Function(ListenerMediaAnnotation value) listener,
   }) =>
@@ -735,6 +804,7 @@ mixin _$MediaAnnotation {
     TResult Function(AlbumAnnotation value)? album,
     TResult Function(GenreAnnotation value)? genre,
     TResult Function(PlaylistAnnotation value)? playlist,
+    TResult Function(StationMediaAnnotation value)? station,
     TResult Function(ComposerAnnotation value)? composer,
     TResult Function(ListenerMediaAnnotation value)? listener,
   }) =>
@@ -746,6 +816,7 @@ mixin _$MediaAnnotation {
     TResult Function(AlbumAnnotation value)? album,
     TResult Function(GenreAnnotation value)? genre,
     TResult Function(PlaylistAnnotation value)? playlist,
+    TResult Function(StationMediaAnnotation value)? station,
     TResult Function(ComposerAnnotation value)? composer,
     TResult Function(ListenerMediaAnnotation value)? listener,
     required TResult orElse(),
@@ -1334,6 +1405,28 @@ class _$TrackAnnotation extends TrackAnnotation {
                 Scope scope)
         playlist,
     required TResult Function(
+            @JsonKey(name: 'stationName')
+                String name,
+            @JsonKey(name: 'stationId')
+                String stationId,
+            @JsonKey(name: 'listenerId')
+                int listenerId,
+            @JsonKey(name: 'listenerPandoraId')
+                String listenerPandoraId,
+            @JsonKey(name: 'initialSeedId')
+                String initialSeedId,
+            @JsonKey(name: 'isQuickMix')
+                bool isQuickMix,
+            @JsonKey(name: 'isThumbprint')
+                bool isThumbprint,
+            @JsonKey(name: 'hasCuratedModes', fromJson: readOptInBool, toJson: writeOptInBool)
+                bool hasCuratedModes,
+            @JsonKey(name: 'icon', fromJson: MediaIcon.optionalFromJson, toJson: MediaIcon.optionalToJson)
+                MediaIcon? icon,
+            @JsonKey(name: 'pandoraId')
+                String pandoraId)
+        station,
+    required TResult Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -1579,6 +1672,28 @@ class _$TrackAnnotation extends TrackAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         playlist,
+    TResult Function(
+            @JsonKey(name: 'stationName')
+                String name,
+            @JsonKey(name: 'stationId')
+                String stationId,
+            @JsonKey(name: 'listenerId')
+                int listenerId,
+            @JsonKey(name: 'listenerPandoraId')
+                String listenerPandoraId,
+            @JsonKey(name: 'initialSeedId')
+                String initialSeedId,
+            @JsonKey(name: 'isQuickMix')
+                bool isQuickMix,
+            @JsonKey(name: 'isThumbprint')
+                bool isThumbprint,
+            @JsonKey(name: 'hasCuratedModes', fromJson: readOptInBool, toJson: writeOptInBool)
+                bool hasCuratedModes,
+            @JsonKey(name: 'icon', fromJson: MediaIcon.optionalFromJson, toJson: MediaIcon.optionalToJson)
+                MediaIcon? icon,
+            @JsonKey(name: 'pandoraId')
+                String pandoraId)?
+        station,
     TResult Function(
             @JsonKey(name: 'name')
                 String name,
@@ -1826,6 +1941,28 @@ class _$TrackAnnotation extends TrackAnnotation {
                 Scope scope)?
         playlist,
     TResult Function(
+            @JsonKey(name: 'stationName')
+                String name,
+            @JsonKey(name: 'stationId')
+                String stationId,
+            @JsonKey(name: 'listenerId')
+                int listenerId,
+            @JsonKey(name: 'listenerPandoraId')
+                String listenerPandoraId,
+            @JsonKey(name: 'initialSeedId')
+                String initialSeedId,
+            @JsonKey(name: 'isQuickMix')
+                bool isQuickMix,
+            @JsonKey(name: 'isThumbprint')
+                bool isThumbprint,
+            @JsonKey(name: 'hasCuratedModes', fromJson: readOptInBool, toJson: writeOptInBool)
+                bool hasCuratedModes,
+            @JsonKey(name: 'icon', fromJson: MediaIcon.optionalFromJson, toJson: MediaIcon.optionalToJson)
+                MediaIcon? icon,
+            @JsonKey(name: 'pandoraId')
+                String pandoraId)?
+        station,
+    TResult Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -1890,6 +2027,7 @@ class _$TrackAnnotation extends TrackAnnotation {
     required TResult Function(AlbumAnnotation value) album,
     required TResult Function(GenreAnnotation value) genre,
     required TResult Function(PlaylistAnnotation value) playlist,
+    required TResult Function(StationMediaAnnotation value) station,
     required TResult Function(ComposerAnnotation value) composer,
     required TResult Function(ListenerMediaAnnotation value) listener,
   }) {
@@ -1904,6 +2042,7 @@ class _$TrackAnnotation extends TrackAnnotation {
     TResult Function(AlbumAnnotation value)? album,
     TResult Function(GenreAnnotation value)? genre,
     TResult Function(PlaylistAnnotation value)? playlist,
+    TResult Function(StationMediaAnnotation value)? station,
     TResult Function(ComposerAnnotation value)? composer,
     TResult Function(ListenerMediaAnnotation value)? listener,
   }) {
@@ -1918,6 +2057,7 @@ class _$TrackAnnotation extends TrackAnnotation {
     TResult Function(AlbumAnnotation value)? album,
     TResult Function(GenreAnnotation value)? genre,
     TResult Function(PlaylistAnnotation value)? playlist,
+    TResult Function(StationMediaAnnotation value)? station,
     TResult Function(ComposerAnnotation value)? composer,
     TResult Function(ListenerMediaAnnotation value)? listener,
     required TResult orElse(),
@@ -2562,6 +2702,28 @@ class _$ArtistAnnotation extends ArtistAnnotation {
                 Scope scope)
         playlist,
     required TResult Function(
+            @JsonKey(name: 'stationName')
+                String name,
+            @JsonKey(name: 'stationId')
+                String stationId,
+            @JsonKey(name: 'listenerId')
+                int listenerId,
+            @JsonKey(name: 'listenerPandoraId')
+                String listenerPandoraId,
+            @JsonKey(name: 'initialSeedId')
+                String initialSeedId,
+            @JsonKey(name: 'isQuickMix')
+                bool isQuickMix,
+            @JsonKey(name: 'isThumbprint')
+                bool isThumbprint,
+            @JsonKey(name: 'hasCuratedModes', fromJson: readOptInBool, toJson: writeOptInBool)
+                bool hasCuratedModes,
+            @JsonKey(name: 'icon', fromJson: MediaIcon.optionalFromJson, toJson: MediaIcon.optionalToJson)
+                MediaIcon? icon,
+            @JsonKey(name: 'pandoraId')
+                String pandoraId)
+        station,
+    required TResult Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -2806,6 +2968,28 @@ class _$ArtistAnnotation extends ArtistAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         playlist,
+    TResult Function(
+            @JsonKey(name: 'stationName')
+                String name,
+            @JsonKey(name: 'stationId')
+                String stationId,
+            @JsonKey(name: 'listenerId')
+                int listenerId,
+            @JsonKey(name: 'listenerPandoraId')
+                String listenerPandoraId,
+            @JsonKey(name: 'initialSeedId')
+                String initialSeedId,
+            @JsonKey(name: 'isQuickMix')
+                bool isQuickMix,
+            @JsonKey(name: 'isThumbprint')
+                bool isThumbprint,
+            @JsonKey(name: 'hasCuratedModes', fromJson: readOptInBool, toJson: writeOptInBool)
+                bool hasCuratedModes,
+            @JsonKey(name: 'icon', fromJson: MediaIcon.optionalFromJson, toJson: MediaIcon.optionalToJson)
+                MediaIcon? icon,
+            @JsonKey(name: 'pandoraId')
+                String pandoraId)?
+        station,
     TResult Function(
             @JsonKey(name: 'name')
                 String name,
@@ -3052,6 +3236,28 @@ class _$ArtistAnnotation extends ArtistAnnotation {
                 Scope scope)?
         playlist,
     TResult Function(
+            @JsonKey(name: 'stationName')
+                String name,
+            @JsonKey(name: 'stationId')
+                String stationId,
+            @JsonKey(name: 'listenerId')
+                int listenerId,
+            @JsonKey(name: 'listenerPandoraId')
+                String listenerPandoraId,
+            @JsonKey(name: 'initialSeedId')
+                String initialSeedId,
+            @JsonKey(name: 'isQuickMix')
+                bool isQuickMix,
+            @JsonKey(name: 'isThumbprint')
+                bool isThumbprint,
+            @JsonKey(name: 'hasCuratedModes', fromJson: readOptInBool, toJson: writeOptInBool)
+                bool hasCuratedModes,
+            @JsonKey(name: 'icon', fromJson: MediaIcon.optionalFromJson, toJson: MediaIcon.optionalToJson)
+                MediaIcon? icon,
+            @JsonKey(name: 'pandoraId')
+                String pandoraId)?
+        station,
+    TResult Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -3115,6 +3321,7 @@ class _$ArtistAnnotation extends ArtistAnnotation {
     required TResult Function(AlbumAnnotation value) album,
     required TResult Function(GenreAnnotation value) genre,
     required TResult Function(PlaylistAnnotation value) playlist,
+    required TResult Function(StationMediaAnnotation value) station,
     required TResult Function(ComposerAnnotation value) composer,
     required TResult Function(ListenerMediaAnnotation value) listener,
   }) {
@@ -3129,6 +3336,7 @@ class _$ArtistAnnotation extends ArtistAnnotation {
     TResult Function(AlbumAnnotation value)? album,
     TResult Function(GenreAnnotation value)? genre,
     TResult Function(PlaylistAnnotation value)? playlist,
+    TResult Function(StationMediaAnnotation value)? station,
     TResult Function(ComposerAnnotation value)? composer,
     TResult Function(ListenerMediaAnnotation value)? listener,
   }) {
@@ -3143,6 +3351,7 @@ class _$ArtistAnnotation extends ArtistAnnotation {
     TResult Function(AlbumAnnotation value)? album,
     TResult Function(GenreAnnotation value)? genre,
     TResult Function(PlaylistAnnotation value)? playlist,
+    TResult Function(StationMediaAnnotation value)? station,
     TResult Function(ComposerAnnotation value)? composer,
     TResult Function(ListenerMediaAnnotation value)? listener,
     required TResult orElse(),
@@ -3835,6 +4044,28 @@ class _$AlbumAnnotation extends AlbumAnnotation {
                 Scope scope)
         playlist,
     required TResult Function(
+            @JsonKey(name: 'stationName')
+                String name,
+            @JsonKey(name: 'stationId')
+                String stationId,
+            @JsonKey(name: 'listenerId')
+                int listenerId,
+            @JsonKey(name: 'listenerPandoraId')
+                String listenerPandoraId,
+            @JsonKey(name: 'initialSeedId')
+                String initialSeedId,
+            @JsonKey(name: 'isQuickMix')
+                bool isQuickMix,
+            @JsonKey(name: 'isThumbprint')
+                bool isThumbprint,
+            @JsonKey(name: 'hasCuratedModes', fromJson: readOptInBool, toJson: writeOptInBool)
+                bool hasCuratedModes,
+            @JsonKey(name: 'icon', fromJson: MediaIcon.optionalFromJson, toJson: MediaIcon.optionalToJson)
+                MediaIcon? icon,
+            @JsonKey(name: 'pandoraId')
+                String pandoraId)
+        station,
+    required TResult Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -4082,6 +4313,28 @@ class _$AlbumAnnotation extends AlbumAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         playlist,
+    TResult Function(
+            @JsonKey(name: 'stationName')
+                String name,
+            @JsonKey(name: 'stationId')
+                String stationId,
+            @JsonKey(name: 'listenerId')
+                int listenerId,
+            @JsonKey(name: 'listenerPandoraId')
+                String listenerPandoraId,
+            @JsonKey(name: 'initialSeedId')
+                String initialSeedId,
+            @JsonKey(name: 'isQuickMix')
+                bool isQuickMix,
+            @JsonKey(name: 'isThumbprint')
+                bool isThumbprint,
+            @JsonKey(name: 'hasCuratedModes', fromJson: readOptInBool, toJson: writeOptInBool)
+                bool hasCuratedModes,
+            @JsonKey(name: 'icon', fromJson: MediaIcon.optionalFromJson, toJson: MediaIcon.optionalToJson)
+                MediaIcon? icon,
+            @JsonKey(name: 'pandoraId')
+                String pandoraId)?
+        station,
     TResult Function(
             @JsonKey(name: 'name')
                 String name,
@@ -4331,6 +4584,28 @@ class _$AlbumAnnotation extends AlbumAnnotation {
                 Scope scope)?
         playlist,
     TResult Function(
+            @JsonKey(name: 'stationName')
+                String name,
+            @JsonKey(name: 'stationId')
+                String stationId,
+            @JsonKey(name: 'listenerId')
+                int listenerId,
+            @JsonKey(name: 'listenerPandoraId')
+                String listenerPandoraId,
+            @JsonKey(name: 'initialSeedId')
+                String initialSeedId,
+            @JsonKey(name: 'isQuickMix')
+                bool isQuickMix,
+            @JsonKey(name: 'isThumbprint')
+                bool isThumbprint,
+            @JsonKey(name: 'hasCuratedModes', fromJson: readOptInBool, toJson: writeOptInBool)
+                bool hasCuratedModes,
+            @JsonKey(name: 'icon', fromJson: MediaIcon.optionalFromJson, toJson: MediaIcon.optionalToJson)
+                MediaIcon? icon,
+            @JsonKey(name: 'pandoraId')
+                String pandoraId)?
+        station,
+    TResult Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -4397,6 +4672,7 @@ class _$AlbumAnnotation extends AlbumAnnotation {
     required TResult Function(AlbumAnnotation value) album,
     required TResult Function(GenreAnnotation value) genre,
     required TResult Function(PlaylistAnnotation value) playlist,
+    required TResult Function(StationMediaAnnotation value) station,
     required TResult Function(ComposerAnnotation value) composer,
     required TResult Function(ListenerMediaAnnotation value) listener,
   }) {
@@ -4411,6 +4687,7 @@ class _$AlbumAnnotation extends AlbumAnnotation {
     TResult Function(AlbumAnnotation value)? album,
     TResult Function(GenreAnnotation value)? genre,
     TResult Function(PlaylistAnnotation value)? playlist,
+    TResult Function(StationMediaAnnotation value)? station,
     TResult Function(ComposerAnnotation value)? composer,
     TResult Function(ListenerMediaAnnotation value)? listener,
   }) {
@@ -4425,6 +4702,7 @@ class _$AlbumAnnotation extends AlbumAnnotation {
     TResult Function(AlbumAnnotation value)? album,
     TResult Function(GenreAnnotation value)? genre,
     TResult Function(PlaylistAnnotation value)? playlist,
+    TResult Function(StationMediaAnnotation value)? station,
     TResult Function(ComposerAnnotation value)? composer,
     TResult Function(ListenerMediaAnnotation value)? listener,
     required TResult orElse(),
@@ -4984,6 +5262,28 @@ class _$GenreAnnotation extends GenreAnnotation {
                 Scope scope)
         playlist,
     required TResult Function(
+            @JsonKey(name: 'stationName')
+                String name,
+            @JsonKey(name: 'stationId')
+                String stationId,
+            @JsonKey(name: 'listenerId')
+                int listenerId,
+            @JsonKey(name: 'listenerPandoraId')
+                String listenerPandoraId,
+            @JsonKey(name: 'initialSeedId')
+                String initialSeedId,
+            @JsonKey(name: 'isQuickMix')
+                bool isQuickMix,
+            @JsonKey(name: 'isThumbprint')
+                bool isThumbprint,
+            @JsonKey(name: 'hasCuratedModes', fromJson: readOptInBool, toJson: writeOptInBool)
+                bool hasCuratedModes,
+            @JsonKey(name: 'icon', fromJson: MediaIcon.optionalFromJson, toJson: MediaIcon.optionalToJson)
+                MediaIcon? icon,
+            @JsonKey(name: 'pandoraId')
+                String pandoraId)
+        station,
+    required TResult Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -5222,6 +5522,28 @@ class _$GenreAnnotation extends GenreAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         playlist,
+    TResult Function(
+            @JsonKey(name: 'stationName')
+                String name,
+            @JsonKey(name: 'stationId')
+                String stationId,
+            @JsonKey(name: 'listenerId')
+                int listenerId,
+            @JsonKey(name: 'listenerPandoraId')
+                String listenerPandoraId,
+            @JsonKey(name: 'initialSeedId')
+                String initialSeedId,
+            @JsonKey(name: 'isQuickMix')
+                bool isQuickMix,
+            @JsonKey(name: 'isThumbprint')
+                bool isThumbprint,
+            @JsonKey(name: 'hasCuratedModes', fromJson: readOptInBool, toJson: writeOptInBool)
+                bool hasCuratedModes,
+            @JsonKey(name: 'icon', fromJson: MediaIcon.optionalFromJson, toJson: MediaIcon.optionalToJson)
+                MediaIcon? icon,
+            @JsonKey(name: 'pandoraId')
+                String pandoraId)?
+        station,
     TResult Function(
             @JsonKey(name: 'name')
                 String name,
@@ -5462,6 +5784,28 @@ class _$GenreAnnotation extends GenreAnnotation {
                 Scope scope)?
         playlist,
     TResult Function(
+            @JsonKey(name: 'stationName')
+                String name,
+            @JsonKey(name: 'stationId')
+                String stationId,
+            @JsonKey(name: 'listenerId')
+                int listenerId,
+            @JsonKey(name: 'listenerPandoraId')
+                String listenerPandoraId,
+            @JsonKey(name: 'initialSeedId')
+                String initialSeedId,
+            @JsonKey(name: 'isQuickMix')
+                bool isQuickMix,
+            @JsonKey(name: 'isThumbprint')
+                bool isThumbprint,
+            @JsonKey(name: 'hasCuratedModes', fromJson: readOptInBool, toJson: writeOptInBool)
+                bool hasCuratedModes,
+            @JsonKey(name: 'icon', fromJson: MediaIcon.optionalFromJson, toJson: MediaIcon.optionalToJson)
+                MediaIcon? icon,
+            @JsonKey(name: 'pandoraId')
+                String pandoraId)?
+        station,
+    TResult Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -5519,6 +5863,7 @@ class _$GenreAnnotation extends GenreAnnotation {
     required TResult Function(AlbumAnnotation value) album,
     required TResult Function(GenreAnnotation value) genre,
     required TResult Function(PlaylistAnnotation value) playlist,
+    required TResult Function(StationMediaAnnotation value) station,
     required TResult Function(ComposerAnnotation value) composer,
     required TResult Function(ListenerMediaAnnotation value) listener,
   }) {
@@ -5533,6 +5878,7 @@ class _$GenreAnnotation extends GenreAnnotation {
     TResult Function(AlbumAnnotation value)? album,
     TResult Function(GenreAnnotation value)? genre,
     TResult Function(PlaylistAnnotation value)? playlist,
+    TResult Function(StationMediaAnnotation value)? station,
     TResult Function(ComposerAnnotation value)? composer,
     TResult Function(ListenerMediaAnnotation value)? listener,
   }) {
@@ -5547,6 +5893,7 @@ class _$GenreAnnotation extends GenreAnnotation {
     TResult Function(AlbumAnnotation value)? album,
     TResult Function(GenreAnnotation value)? genre,
     TResult Function(PlaylistAnnotation value)? playlist,
+    TResult Function(StationMediaAnnotation value)? station,
     TResult Function(ComposerAnnotation value)? composer,
     TResult Function(ListenerMediaAnnotation value)? listener,
     required TResult orElse(),
@@ -6284,6 +6631,28 @@ class _$PlaylistAnnotation extends PlaylistAnnotation {
                 Scope scope)
         playlist,
     required TResult Function(
+            @JsonKey(name: 'stationName')
+                String name,
+            @JsonKey(name: 'stationId')
+                String stationId,
+            @JsonKey(name: 'listenerId')
+                int listenerId,
+            @JsonKey(name: 'listenerPandoraId')
+                String listenerPandoraId,
+            @JsonKey(name: 'initialSeedId')
+                String initialSeedId,
+            @JsonKey(name: 'isQuickMix')
+                bool isQuickMix,
+            @JsonKey(name: 'isThumbprint')
+                bool isThumbprint,
+            @JsonKey(name: 'hasCuratedModes', fromJson: readOptInBool, toJson: writeOptInBool)
+                bool hasCuratedModes,
+            @JsonKey(name: 'icon', fromJson: MediaIcon.optionalFromJson, toJson: MediaIcon.optionalToJson)
+                MediaIcon? icon,
+            @JsonKey(name: 'pandoraId')
+                String pandoraId)
+        station,
+    required TResult Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -6535,6 +6904,28 @@ class _$PlaylistAnnotation extends PlaylistAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         playlist,
+    TResult Function(
+            @JsonKey(name: 'stationName')
+                String name,
+            @JsonKey(name: 'stationId')
+                String stationId,
+            @JsonKey(name: 'listenerId')
+                int listenerId,
+            @JsonKey(name: 'listenerPandoraId')
+                String listenerPandoraId,
+            @JsonKey(name: 'initialSeedId')
+                String initialSeedId,
+            @JsonKey(name: 'isQuickMix')
+                bool isQuickMix,
+            @JsonKey(name: 'isThumbprint')
+                bool isThumbprint,
+            @JsonKey(name: 'hasCuratedModes', fromJson: readOptInBool, toJson: writeOptInBool)
+                bool hasCuratedModes,
+            @JsonKey(name: 'icon', fromJson: MediaIcon.optionalFromJson, toJson: MediaIcon.optionalToJson)
+                MediaIcon? icon,
+            @JsonKey(name: 'pandoraId')
+                String pandoraId)?
+        station,
     TResult Function(
             @JsonKey(name: 'name')
                 String name,
@@ -6788,6 +7179,28 @@ class _$PlaylistAnnotation extends PlaylistAnnotation {
                 Scope scope)?
         playlist,
     TResult Function(
+            @JsonKey(name: 'stationName')
+                String name,
+            @JsonKey(name: 'stationId')
+                String stationId,
+            @JsonKey(name: 'listenerId')
+                int listenerId,
+            @JsonKey(name: 'listenerPandoraId')
+                String listenerPandoraId,
+            @JsonKey(name: 'initialSeedId')
+                String initialSeedId,
+            @JsonKey(name: 'isQuickMix')
+                bool isQuickMix,
+            @JsonKey(name: 'isThumbprint')
+                bool isThumbprint,
+            @JsonKey(name: 'hasCuratedModes', fromJson: readOptInBool, toJson: writeOptInBool)
+                bool hasCuratedModes,
+            @JsonKey(name: 'icon', fromJson: MediaIcon.optionalFromJson, toJson: MediaIcon.optionalToJson)
+                MediaIcon? icon,
+            @JsonKey(name: 'pandoraId')
+                String pandoraId)?
+        station,
+    TResult Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -6858,6 +7271,7 @@ class _$PlaylistAnnotation extends PlaylistAnnotation {
     required TResult Function(AlbumAnnotation value) album,
     required TResult Function(GenreAnnotation value) genre,
     required TResult Function(PlaylistAnnotation value) playlist,
+    required TResult Function(StationMediaAnnotation value) station,
     required TResult Function(ComposerAnnotation value) composer,
     required TResult Function(ListenerMediaAnnotation value) listener,
   }) {
@@ -6872,6 +7286,7 @@ class _$PlaylistAnnotation extends PlaylistAnnotation {
     TResult Function(AlbumAnnotation value)? album,
     TResult Function(GenreAnnotation value)? genre,
     TResult Function(PlaylistAnnotation value)? playlist,
+    TResult Function(StationMediaAnnotation value)? station,
     TResult Function(ComposerAnnotation value)? composer,
     TResult Function(ListenerMediaAnnotation value)? listener,
   }) {
@@ -6886,6 +7301,7 @@ class _$PlaylistAnnotation extends PlaylistAnnotation {
     TResult Function(AlbumAnnotation value)? album,
     TResult Function(GenreAnnotation value)? genre,
     TResult Function(PlaylistAnnotation value)? playlist,
+    TResult Function(StationMediaAnnotation value)? station,
     TResult Function(ComposerAnnotation value)? composer,
     TResult Function(ListenerMediaAnnotation value)? listener,
     required TResult orElse(),
@@ -7024,6 +7440,1136 @@ abstract class PlaylistAnnotation extends MediaAnnotation {
   @override
   @JsonKey(ignore: true)
   _$$PlaylistAnnotationCopyWith<_$PlaylistAnnotation> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$StationMediaAnnotationCopyWith<$Res>
+    implements $MediaAnnotationCopyWith<$Res> {
+  factory _$$StationMediaAnnotationCopyWith(_$StationMediaAnnotation value,
+          $Res Function(_$StationMediaAnnotation) then) =
+      __$$StationMediaAnnotationCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {@JsonKey(name: 'stationName')
+          String name,
+      @JsonKey(name: 'stationId')
+          String stationId,
+      @JsonKey(name: 'listenerId')
+          int listenerId,
+      @JsonKey(name: 'listenerPandoraId')
+          String listenerPandoraId,
+      @JsonKey(name: 'initialSeedId')
+          String initialSeedId,
+      @JsonKey(name: 'isQuickMix')
+          bool isQuickMix,
+      @JsonKey(name: 'isThumbprint')
+          bool isThumbprint,
+      @JsonKey(name: 'hasCuratedModes', fromJson: readOptInBool, toJson: writeOptInBool)
+          bool hasCuratedModes,
+      @JsonKey(name: 'icon', fromJson: MediaIcon.optionalFromJson, toJson: MediaIcon.optionalToJson)
+          MediaIcon? icon,
+      @JsonKey(name: 'pandoraId')
+          String pandoraId});
+
+  $MediaIconCopyWith<$Res>? get icon;
+}
+
+/// @nodoc
+class __$$StationMediaAnnotationCopyWithImpl<$Res>
+    extends _$MediaAnnotationCopyWithImpl<$Res>
+    implements _$$StationMediaAnnotationCopyWith<$Res> {
+  __$$StationMediaAnnotationCopyWithImpl(_$StationMediaAnnotation _value,
+      $Res Function(_$StationMediaAnnotation) _then)
+      : super(_value, (v) => _then(v as _$StationMediaAnnotation));
+
+  @override
+  _$StationMediaAnnotation get _value =>
+      super._value as _$StationMediaAnnotation;
+
+  @override
+  $Res call({
+    Object? name = freezed,
+    Object? stationId = freezed,
+    Object? listenerId = freezed,
+    Object? listenerPandoraId = freezed,
+    Object? initialSeedId = freezed,
+    Object? isQuickMix = freezed,
+    Object? isThumbprint = freezed,
+    Object? hasCuratedModes = freezed,
+    Object? icon = freezed,
+    Object? pandoraId = freezed,
+  }) {
+    return _then(_$StationMediaAnnotation(
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      stationId: stationId == freezed
+          ? _value.stationId
+          : stationId // ignore: cast_nullable_to_non_nullable
+              as String,
+      listenerId: listenerId == freezed
+          ? _value.listenerId
+          : listenerId // ignore: cast_nullable_to_non_nullable
+              as int,
+      listenerPandoraId: listenerPandoraId == freezed
+          ? _value.listenerPandoraId
+          : listenerPandoraId // ignore: cast_nullable_to_non_nullable
+              as String,
+      initialSeedId: initialSeedId == freezed
+          ? _value.initialSeedId
+          : initialSeedId // ignore: cast_nullable_to_non_nullable
+              as String,
+      isQuickMix: isQuickMix == freezed
+          ? _value.isQuickMix
+          : isQuickMix // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isThumbprint: isThumbprint == freezed
+          ? _value.isThumbprint
+          : isThumbprint // ignore: cast_nullable_to_non_nullable
+              as bool,
+      hasCuratedModes: hasCuratedModes == freezed
+          ? _value.hasCuratedModes
+          : hasCuratedModes // ignore: cast_nullable_to_non_nullable
+              as bool,
+      icon: icon == freezed
+          ? _value.icon
+          : icon // ignore: cast_nullable_to_non_nullable
+              as MediaIcon?,
+      pandoraId: pandoraId == freezed
+          ? _value.pandoraId
+          : pandoraId // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+
+  @override
+  $MediaIconCopyWith<$Res>? get icon {
+    if (_value.icon == null) {
+      return null;
+    }
+
+    return $MediaIconCopyWith<$Res>(_value.icon!, (value) {
+      return _then(_value.copyWith(icon: value));
+    });
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$StationMediaAnnotation extends StationMediaAnnotation {
+  const _$StationMediaAnnotation(
+      {@JsonKey(name: 'stationName')
+          required this.name,
+      @JsonKey(name: 'stationId')
+          required this.stationId,
+      @JsonKey(name: 'listenerId')
+          required this.listenerId,
+      @JsonKey(name: 'listenerPandoraId')
+          required this.listenerPandoraId,
+      @JsonKey(name: 'initialSeedId')
+          required this.initialSeedId,
+      @JsonKey(name: 'isQuickMix')
+          required this.isQuickMix,
+      @JsonKey(name: 'isThumbprint')
+          required this.isThumbprint,
+      @JsonKey(name: 'hasCuratedModes', fromJson: readOptInBool, toJson: writeOptInBool)
+          required this.hasCuratedModes,
+      @JsonKey(name: 'icon', fromJson: MediaIcon.optionalFromJson, toJson: MediaIcon.optionalToJson)
+          required this.icon,
+      @JsonKey(name: 'pandoraId')
+          required this.pandoraId,
+      final String? $type})
+      : $type = $type ?? 'ST',
+        super._();
+
+  factory _$StationMediaAnnotation.fromJson(Map<String, dynamic> json) =>
+      _$$StationMediaAnnotationFromJson(json);
+
+  @override
+  @JsonKey(name: 'stationName')
+  final String name;
+  @override
+  @JsonKey(name: 'stationId')
+  final String stationId;
+  @override
+  @JsonKey(name: 'listenerId')
+  final int listenerId;
+  @override
+  @JsonKey(name: 'listenerPandoraId')
+  final String listenerPandoraId;
+  @override
+  @JsonKey(name: 'initialSeedId')
+  final String initialSeedId;
+  @override
+  @JsonKey(name: 'isQuickMix')
+  final bool isQuickMix;
+  @override
+  @JsonKey(name: 'isThumbprint')
+  final bool isThumbprint;
+  @override
+  @JsonKey(
+      name: 'hasCuratedModes', fromJson: readOptInBool, toJson: writeOptInBool)
+  final bool hasCuratedModes;
+  @override
+  @JsonKey(
+      name: 'icon',
+      fromJson: MediaIcon.optionalFromJson,
+      toJson: MediaIcon.optionalToJson)
+  final MediaIcon? icon;
+  @override
+  @JsonKey(name: 'pandoraId')
+  final String pandoraId;
+
+  @JsonKey(name: 'type')
+  final String $type;
+
+  @override
+  String toString() {
+    return 'MediaAnnotation.station(name: $name, stationId: $stationId, listenerId: $listenerId, listenerPandoraId: $listenerPandoraId, initialSeedId: $initialSeedId, isQuickMix: $isQuickMix, isThumbprint: $isThumbprint, hasCuratedModes: $hasCuratedModes, icon: $icon, pandoraId: $pandoraId)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$StationMediaAnnotation &&
+            const DeepCollectionEquality().equals(other.name, name) &&
+            const DeepCollectionEquality().equals(other.stationId, stationId) &&
+            const DeepCollectionEquality()
+                .equals(other.listenerId, listenerId) &&
+            const DeepCollectionEquality()
+                .equals(other.listenerPandoraId, listenerPandoraId) &&
+            const DeepCollectionEquality()
+                .equals(other.initialSeedId, initialSeedId) &&
+            const DeepCollectionEquality()
+                .equals(other.isQuickMix, isQuickMix) &&
+            const DeepCollectionEquality()
+                .equals(other.isThumbprint, isThumbprint) &&
+            const DeepCollectionEquality()
+                .equals(other.hasCuratedModes, hasCuratedModes) &&
+            const DeepCollectionEquality().equals(other.icon, icon) &&
+            const DeepCollectionEquality().equals(other.pandoraId, pandoraId));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(name),
+      const DeepCollectionEquality().hash(stationId),
+      const DeepCollectionEquality().hash(listenerId),
+      const DeepCollectionEquality().hash(listenerPandoraId),
+      const DeepCollectionEquality().hash(initialSeedId),
+      const DeepCollectionEquality().hash(isQuickMix),
+      const DeepCollectionEquality().hash(isThumbprint),
+      const DeepCollectionEquality().hash(hasCuratedModes),
+      const DeepCollectionEquality().hash(icon),
+      const DeepCollectionEquality().hash(pandoraId));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$StationMediaAnnotationCopyWith<_$StationMediaAnnotation> get copyWith =>
+      __$$StationMediaAnnotationCopyWithImpl<_$StationMediaAnnotation>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(
+            @JsonKey(name: 'name')
+                String name,
+            @JsonKey(name: 'sortableName')
+                String sortableName,
+            @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
+                Duration duration,
+            @JsonKey(name: 'trackNumber')
+                int trackNumber,
+            @JsonKey(name: 'icon', fromJson: MediaIcon.optionalFromJson, toJson: MediaIcon.optionalToJson)
+                MediaIcon? icon,
+            @JsonKey(name: 'rightsInfo')
+                RightsInfo rightsInfo,
+            @JsonKey(name: 'albumId')
+                String albumId,
+            @JsonKey(name: 'albumName')
+                String albumName,
+            @JsonKey(name: 'artistId')
+                String artistId,
+            @JsonKey(name: 'artistName')
+                String artistName,
+            @JsonKey(name: 'explicitness')
+                Explicitness explicitness,
+            @JsonKey(name: 'shareableUrlPath')
+                String shareableUrlPath,
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
+                bool hasRadio,
+            @JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
+                DateTime modificationTime,
+            @JsonKey(name: 'slugPlusPandoraId')
+                String slugPlusPandoraId,
+            @JsonKey(name: 'isrc')
+                String isrc,
+            @JsonKey(name: 'pandoraId')
+                String pandoraId,
+            @JsonKey(name: 'scope')
+                Scope scope)
+        track,
+    required TResult Function(
+            @JsonKey(name: 'name')
+                String name,
+            @JsonKey(name: 'sortableName')
+                String sortableName,
+            @JsonKey(name: 'trackCount')
+                int trackCount,
+            @JsonKey(name: 'albumCount')
+                int albumCount,
+            @JsonKey(name: 'icon', fromJson: MediaIcon.optionalFromJson, toJson: MediaIcon.optionalToJson)
+                MediaIcon? icon,
+            @JsonKey(name: 'shareableUrlPath')
+                String shareableUrlPath,
+            @JsonKey(name: 'twitterHandle')
+                String? twitterHandle,
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
+                bool hasRadio,
+            @JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
+                DateTime modificationTime,
+            @JsonKey(name: 'slugPlusPandoraId')
+                String slugPlusPandoraId,
+            @JsonKey(name: 'collaboration')
+                bool collaboration,
+            @JsonKey(name: 'primaryArtists')
+                List<String> primaryArtistIds,
+            @JsonKey(name: 'variousArtist')
+                bool variousArtist,
+            @JsonKey(name: 'megastar')
+                bool megastar,
+            @JsonKey(name: 'hasTakeoverModes')
+                bool hasTakeoverModes,
+            @JsonKey(name: 'pandoraId')
+                String pandoraId,
+            @JsonKey(name: 'scope')
+                Scope scope)
+        artist,
+    required TResult Function(
+            @JsonKey(name: 'name')
+                String name,
+            @JsonKey(name: 'sortableName')
+                String sortableName,
+            @JsonKey(name: 'releaseDate')
+                DateTime releaseDate,
+            @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
+                Duration duration,
+            @JsonKey(name: 'trackCount')
+                int trackCount,
+            @JsonKey(name: 'isCompilation')
+                bool isCompilation,
+            @JsonKey(name: 'icon', fromJson: MediaIcon.optionalFromJson, toJson: MediaIcon.optionalToJson)
+                MediaIcon? icon,
+            @JsonKey(name: 'rightsInfo')
+                RightsInfo rightsInfo,
+            @JsonKey(name: 'tracks')
+                List<String> trackIds,
+            @JsonKey(name: 'artistId')
+                String artistId,
+            @JsonKey(name: 'artistName')
+                String artistName,
+            @JsonKey(name: 'explicitness')
+                Explicitness explicitness,
+            @JsonKey(name: 'shareableUrlPath')
+                String shareableUrlPath,
+            @JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
+                DateTime modificationTime,
+            @JsonKey(name: 'slugPlusPandoraId')
+                String slugPlusPandoraId,
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
+                bool hasRadio,
+            @JsonKey(name: 'releaseType')
+                String releaseType,
+            @JsonKey(name: 'listenerReleaseType')
+                String listenerReleaseType,
+            @JsonKey(name: 'pandoraId')
+                String pandoraId,
+            @JsonKey(name: 'scope')
+                Scope scope)
+        album,
+    required TResult Function(
+            @JsonKey(name: 'name')
+                String name,
+            @JsonKey(name: 'sortableName')
+                String sortableName,
+            @JsonKey(name: 'icon', fromJson: MediaIcon.optionalFromJson, toJson: MediaIcon.optionalToJson)
+                MediaIcon? icon,
+            @JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
+                DateTime modificationTime,
+            @JsonKey(name: 'description')
+                String description,
+            @JsonKey(name: 'stationListenerCount')
+                int stationListenerCount,
+            @JsonKey(name: 'shareableUrlPath')
+                String shareableUrlPath,
+            @JsonKey(name: 'hasTakeoverModes')
+                bool hasTakeoverModes,
+            @JsonKey(name: 'hasCuratedModes')
+                bool hasCuratedModes,
+            @JsonKey(name: 'pandoraId')
+                String pandoraId,
+            @JsonKey(name: 'scope')
+                Scope scope)
+        genre,
+    required TResult Function(
+            @JsonKey(name: 'name')
+                String name,
+            @JsonKey(name: 'allowFeedback', fromJson: readOptInBool, toJson: writeOptInBool)
+                bool allowFeedback,
+            @JsonKey(name: 'autogenForListener')
+                bool autogenForListener,
+            @JsonKey(name: 'collectible')
+                bool collectible,
+            @JsonKey(name: 'description', fromJson: readOptionalOptionallyEmptyString, toJson: writeOptionallyEmptyString)
+                String? description,
+            @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
+                Duration duration,
+            @JsonKey(name: 'includedTrackTypes')
+                List<PandoraType> includedTrackTypes,
+            @JsonKey(name: 'isPrivate')
+                bool isPrivate,
+            @JsonKey(name: 'linkedType')
+                PlaylistLinkedType linkedType,
+            @JsonKey(name: 'listenerId')
+                int listenerId,
+            @JsonKey(name: 'listenerIdInfo')
+                ListenerIdInfo listenerIdInfo,
+            @JsonKey(name: 'listenerIdToken')
+                String listenerIdToken,
+            @JsonKey(name: 'listenerPandoraId')
+                String listenerPandoraId,
+            @JsonKey(name: 'secret')
+                bool secret,
+            @JsonKey(name: 'shareableUrlPath')
+                String shareableUrlPath,
+            @JsonKey(name: 'thorLayers')
+                String thorLayers,
+            @JsonKey(name: 'timeCreated', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
+                DateTime timeCreated,
+            @JsonKey(name: 'timeLastPlayed', fromJson: readOptionalDateTimeMilliseconds, toJson: writeOptionalDateTimeMilliseconds)
+                DateTime? timeLastPlayed,
+            @JsonKey(name: 'timeLastUpdated', fromJson: readOptionalDateTimeMilliseconds, toJson: writeOptionalDateTimeMilliseconds)
+                DateTime? timeLastUpdated,
+            @JsonKey(name: 'totalTracks')
+                int totalTracks,
+            @JsonKey(name: 'unlocked')
+                bool unlocked,
+            @JsonKey(name: 'viewerInfo')
+                PlaylistViewerInfo? viewerInfo,
+            @JsonKey(name: 'pandoraId')
+                String pandoraId,
+            @JsonKey(name: 'scope')
+                Scope scope)
+        playlist,
+    required TResult Function(
+            @JsonKey(name: 'stationName')
+                String name,
+            @JsonKey(name: 'stationId')
+                String stationId,
+            @JsonKey(name: 'listenerId')
+                int listenerId,
+            @JsonKey(name: 'listenerPandoraId')
+                String listenerPandoraId,
+            @JsonKey(name: 'initialSeedId')
+                String initialSeedId,
+            @JsonKey(name: 'isQuickMix')
+                bool isQuickMix,
+            @JsonKey(name: 'isThumbprint')
+                bool isThumbprint,
+            @JsonKey(name: 'hasCuratedModes', fromJson: readOptInBool, toJson: writeOptInBool)
+                bool hasCuratedModes,
+            @JsonKey(name: 'icon', fromJson: MediaIcon.optionalFromJson, toJson: MediaIcon.optionalToJson)
+                MediaIcon? icon,
+            @JsonKey(name: 'pandoraId')
+                String pandoraId)
+        station,
+    required TResult Function(
+            @JsonKey(name: 'name')
+                String name,
+            @JsonKey(name: 'sortableName')
+                String sortableName,
+            @JsonKey(name: 'icon', fromJson: MediaIcon.optionalFromJson, toJson: MediaIcon.optionalToJson)
+                MediaIcon? icon,
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
+                bool hasRadio,
+            @JsonKey(name: 'albumCount')
+                int albumCount,
+            @JsonKey(name: 'trackCount')
+                int trackCount,
+            @JsonKey(name: 'shareableUrlPath')
+                String shareableUrlPath,
+            @JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
+                DateTime modificationTime,
+            @JsonKey(name: 'slugPlusPandoraId')
+                String slugPlusPandoraId,
+            @JsonKey(name: 'pandoraId')
+                String pandoraId,
+            @JsonKey(name: 'scope')
+                String scope)
+        composer,
+    required TResult Function(
+            @JsonKey(name: 'pandoraId') String pandoraId,
+            @JsonKey(name: 'listenerId') int listenerId,
+            @JsonKey(name: 'webname') String webname,
+            @JsonKey(name: 'fullname') String? fullName,
+            @JsonKey(name: 'displayname') String displayName)
+        listener,
+  }) {
+    return station(
+        name,
+        stationId,
+        listenerId,
+        listenerPandoraId,
+        initialSeedId,
+        isQuickMix,
+        isThumbprint,
+        hasCuratedModes,
+        icon,
+        pandoraId);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(
+            @JsonKey(name: 'name')
+                String name,
+            @JsonKey(name: 'sortableName')
+                String sortableName,
+            @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
+                Duration duration,
+            @JsonKey(name: 'trackNumber')
+                int trackNumber,
+            @JsonKey(name: 'icon', fromJson: MediaIcon.optionalFromJson, toJson: MediaIcon.optionalToJson)
+                MediaIcon? icon,
+            @JsonKey(name: 'rightsInfo')
+                RightsInfo rightsInfo,
+            @JsonKey(name: 'albumId')
+                String albumId,
+            @JsonKey(name: 'albumName')
+                String albumName,
+            @JsonKey(name: 'artistId')
+                String artistId,
+            @JsonKey(name: 'artistName')
+                String artistName,
+            @JsonKey(name: 'explicitness')
+                Explicitness explicitness,
+            @JsonKey(name: 'shareableUrlPath')
+                String shareableUrlPath,
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
+                bool hasRadio,
+            @JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
+                DateTime modificationTime,
+            @JsonKey(name: 'slugPlusPandoraId')
+                String slugPlusPandoraId,
+            @JsonKey(name: 'isrc')
+                String isrc,
+            @JsonKey(name: 'pandoraId')
+                String pandoraId,
+            @JsonKey(name: 'scope')
+                Scope scope)?
+        track,
+    TResult Function(
+            @JsonKey(name: 'name')
+                String name,
+            @JsonKey(name: 'sortableName')
+                String sortableName,
+            @JsonKey(name: 'trackCount')
+                int trackCount,
+            @JsonKey(name: 'albumCount')
+                int albumCount,
+            @JsonKey(name: 'icon', fromJson: MediaIcon.optionalFromJson, toJson: MediaIcon.optionalToJson)
+                MediaIcon? icon,
+            @JsonKey(name: 'shareableUrlPath')
+                String shareableUrlPath,
+            @JsonKey(name: 'twitterHandle')
+                String? twitterHandle,
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
+                bool hasRadio,
+            @JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
+                DateTime modificationTime,
+            @JsonKey(name: 'slugPlusPandoraId')
+                String slugPlusPandoraId,
+            @JsonKey(name: 'collaboration')
+                bool collaboration,
+            @JsonKey(name: 'primaryArtists')
+                List<String> primaryArtistIds,
+            @JsonKey(name: 'variousArtist')
+                bool variousArtist,
+            @JsonKey(name: 'megastar')
+                bool megastar,
+            @JsonKey(name: 'hasTakeoverModes')
+                bool hasTakeoverModes,
+            @JsonKey(name: 'pandoraId')
+                String pandoraId,
+            @JsonKey(name: 'scope')
+                Scope scope)?
+        artist,
+    TResult Function(
+            @JsonKey(name: 'name')
+                String name,
+            @JsonKey(name: 'sortableName')
+                String sortableName,
+            @JsonKey(name: 'releaseDate')
+                DateTime releaseDate,
+            @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
+                Duration duration,
+            @JsonKey(name: 'trackCount')
+                int trackCount,
+            @JsonKey(name: 'isCompilation')
+                bool isCompilation,
+            @JsonKey(name: 'icon', fromJson: MediaIcon.optionalFromJson, toJson: MediaIcon.optionalToJson)
+                MediaIcon? icon,
+            @JsonKey(name: 'rightsInfo')
+                RightsInfo rightsInfo,
+            @JsonKey(name: 'tracks')
+                List<String> trackIds,
+            @JsonKey(name: 'artistId')
+                String artistId,
+            @JsonKey(name: 'artistName')
+                String artistName,
+            @JsonKey(name: 'explicitness')
+                Explicitness explicitness,
+            @JsonKey(name: 'shareableUrlPath')
+                String shareableUrlPath,
+            @JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
+                DateTime modificationTime,
+            @JsonKey(name: 'slugPlusPandoraId')
+                String slugPlusPandoraId,
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
+                bool hasRadio,
+            @JsonKey(name: 'releaseType')
+                String releaseType,
+            @JsonKey(name: 'listenerReleaseType')
+                String listenerReleaseType,
+            @JsonKey(name: 'pandoraId')
+                String pandoraId,
+            @JsonKey(name: 'scope')
+                Scope scope)?
+        album,
+    TResult Function(
+            @JsonKey(name: 'name')
+                String name,
+            @JsonKey(name: 'sortableName')
+                String sortableName,
+            @JsonKey(name: 'icon', fromJson: MediaIcon.optionalFromJson, toJson: MediaIcon.optionalToJson)
+                MediaIcon? icon,
+            @JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
+                DateTime modificationTime,
+            @JsonKey(name: 'description')
+                String description,
+            @JsonKey(name: 'stationListenerCount')
+                int stationListenerCount,
+            @JsonKey(name: 'shareableUrlPath')
+                String shareableUrlPath,
+            @JsonKey(name: 'hasTakeoverModes')
+                bool hasTakeoverModes,
+            @JsonKey(name: 'hasCuratedModes')
+                bool hasCuratedModes,
+            @JsonKey(name: 'pandoraId')
+                String pandoraId,
+            @JsonKey(name: 'scope')
+                Scope scope)?
+        genre,
+    TResult Function(
+            @JsonKey(name: 'name')
+                String name,
+            @JsonKey(name: 'allowFeedback', fromJson: readOptInBool, toJson: writeOptInBool)
+                bool allowFeedback,
+            @JsonKey(name: 'autogenForListener')
+                bool autogenForListener,
+            @JsonKey(name: 'collectible')
+                bool collectible,
+            @JsonKey(name: 'description', fromJson: readOptionalOptionallyEmptyString, toJson: writeOptionallyEmptyString)
+                String? description,
+            @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
+                Duration duration,
+            @JsonKey(name: 'includedTrackTypes')
+                List<PandoraType> includedTrackTypes,
+            @JsonKey(name: 'isPrivate')
+                bool isPrivate,
+            @JsonKey(name: 'linkedType')
+                PlaylistLinkedType linkedType,
+            @JsonKey(name: 'listenerId')
+                int listenerId,
+            @JsonKey(name: 'listenerIdInfo')
+                ListenerIdInfo listenerIdInfo,
+            @JsonKey(name: 'listenerIdToken')
+                String listenerIdToken,
+            @JsonKey(name: 'listenerPandoraId')
+                String listenerPandoraId,
+            @JsonKey(name: 'secret')
+                bool secret,
+            @JsonKey(name: 'shareableUrlPath')
+                String shareableUrlPath,
+            @JsonKey(name: 'thorLayers')
+                String thorLayers,
+            @JsonKey(name: 'timeCreated', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
+                DateTime timeCreated,
+            @JsonKey(name: 'timeLastPlayed', fromJson: readOptionalDateTimeMilliseconds, toJson: writeOptionalDateTimeMilliseconds)
+                DateTime? timeLastPlayed,
+            @JsonKey(name: 'timeLastUpdated', fromJson: readOptionalDateTimeMilliseconds, toJson: writeOptionalDateTimeMilliseconds)
+                DateTime? timeLastUpdated,
+            @JsonKey(name: 'totalTracks')
+                int totalTracks,
+            @JsonKey(name: 'unlocked')
+                bool unlocked,
+            @JsonKey(name: 'viewerInfo')
+                PlaylistViewerInfo? viewerInfo,
+            @JsonKey(name: 'pandoraId')
+                String pandoraId,
+            @JsonKey(name: 'scope')
+                Scope scope)?
+        playlist,
+    TResult Function(
+            @JsonKey(name: 'stationName')
+                String name,
+            @JsonKey(name: 'stationId')
+                String stationId,
+            @JsonKey(name: 'listenerId')
+                int listenerId,
+            @JsonKey(name: 'listenerPandoraId')
+                String listenerPandoraId,
+            @JsonKey(name: 'initialSeedId')
+                String initialSeedId,
+            @JsonKey(name: 'isQuickMix')
+                bool isQuickMix,
+            @JsonKey(name: 'isThumbprint')
+                bool isThumbprint,
+            @JsonKey(name: 'hasCuratedModes', fromJson: readOptInBool, toJson: writeOptInBool)
+                bool hasCuratedModes,
+            @JsonKey(name: 'icon', fromJson: MediaIcon.optionalFromJson, toJson: MediaIcon.optionalToJson)
+                MediaIcon? icon,
+            @JsonKey(name: 'pandoraId')
+                String pandoraId)?
+        station,
+    TResult Function(
+            @JsonKey(name: 'name')
+                String name,
+            @JsonKey(name: 'sortableName')
+                String sortableName,
+            @JsonKey(name: 'icon', fromJson: MediaIcon.optionalFromJson, toJson: MediaIcon.optionalToJson)
+                MediaIcon? icon,
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
+                bool hasRadio,
+            @JsonKey(name: 'albumCount')
+                int albumCount,
+            @JsonKey(name: 'trackCount')
+                int trackCount,
+            @JsonKey(name: 'shareableUrlPath')
+                String shareableUrlPath,
+            @JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
+                DateTime modificationTime,
+            @JsonKey(name: 'slugPlusPandoraId')
+                String slugPlusPandoraId,
+            @JsonKey(name: 'pandoraId')
+                String pandoraId,
+            @JsonKey(name: 'scope')
+                String scope)?
+        composer,
+    TResult Function(
+            @JsonKey(name: 'pandoraId') String pandoraId,
+            @JsonKey(name: 'listenerId') int listenerId,
+            @JsonKey(name: 'webname') String webname,
+            @JsonKey(name: 'fullname') String? fullName,
+            @JsonKey(name: 'displayname') String displayName)?
+        listener,
+  }) {
+    return station?.call(
+        name,
+        stationId,
+        listenerId,
+        listenerPandoraId,
+        initialSeedId,
+        isQuickMix,
+        isThumbprint,
+        hasCuratedModes,
+        icon,
+        pandoraId);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(
+            @JsonKey(name: 'name')
+                String name,
+            @JsonKey(name: 'sortableName')
+                String sortableName,
+            @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
+                Duration duration,
+            @JsonKey(name: 'trackNumber')
+                int trackNumber,
+            @JsonKey(name: 'icon', fromJson: MediaIcon.optionalFromJson, toJson: MediaIcon.optionalToJson)
+                MediaIcon? icon,
+            @JsonKey(name: 'rightsInfo')
+                RightsInfo rightsInfo,
+            @JsonKey(name: 'albumId')
+                String albumId,
+            @JsonKey(name: 'albumName')
+                String albumName,
+            @JsonKey(name: 'artistId')
+                String artistId,
+            @JsonKey(name: 'artistName')
+                String artistName,
+            @JsonKey(name: 'explicitness')
+                Explicitness explicitness,
+            @JsonKey(name: 'shareableUrlPath')
+                String shareableUrlPath,
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
+                bool hasRadio,
+            @JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
+                DateTime modificationTime,
+            @JsonKey(name: 'slugPlusPandoraId')
+                String slugPlusPandoraId,
+            @JsonKey(name: 'isrc')
+                String isrc,
+            @JsonKey(name: 'pandoraId')
+                String pandoraId,
+            @JsonKey(name: 'scope')
+                Scope scope)?
+        track,
+    TResult Function(
+            @JsonKey(name: 'name')
+                String name,
+            @JsonKey(name: 'sortableName')
+                String sortableName,
+            @JsonKey(name: 'trackCount')
+                int trackCount,
+            @JsonKey(name: 'albumCount')
+                int albumCount,
+            @JsonKey(name: 'icon', fromJson: MediaIcon.optionalFromJson, toJson: MediaIcon.optionalToJson)
+                MediaIcon? icon,
+            @JsonKey(name: 'shareableUrlPath')
+                String shareableUrlPath,
+            @JsonKey(name: 'twitterHandle')
+                String? twitterHandle,
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
+                bool hasRadio,
+            @JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
+                DateTime modificationTime,
+            @JsonKey(name: 'slugPlusPandoraId')
+                String slugPlusPandoraId,
+            @JsonKey(name: 'collaboration')
+                bool collaboration,
+            @JsonKey(name: 'primaryArtists')
+                List<String> primaryArtistIds,
+            @JsonKey(name: 'variousArtist')
+                bool variousArtist,
+            @JsonKey(name: 'megastar')
+                bool megastar,
+            @JsonKey(name: 'hasTakeoverModes')
+                bool hasTakeoverModes,
+            @JsonKey(name: 'pandoraId')
+                String pandoraId,
+            @JsonKey(name: 'scope')
+                Scope scope)?
+        artist,
+    TResult Function(
+            @JsonKey(name: 'name')
+                String name,
+            @JsonKey(name: 'sortableName')
+                String sortableName,
+            @JsonKey(name: 'releaseDate')
+                DateTime releaseDate,
+            @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
+                Duration duration,
+            @JsonKey(name: 'trackCount')
+                int trackCount,
+            @JsonKey(name: 'isCompilation')
+                bool isCompilation,
+            @JsonKey(name: 'icon', fromJson: MediaIcon.optionalFromJson, toJson: MediaIcon.optionalToJson)
+                MediaIcon? icon,
+            @JsonKey(name: 'rightsInfo')
+                RightsInfo rightsInfo,
+            @JsonKey(name: 'tracks')
+                List<String> trackIds,
+            @JsonKey(name: 'artistId')
+                String artistId,
+            @JsonKey(name: 'artistName')
+                String artistName,
+            @JsonKey(name: 'explicitness')
+                Explicitness explicitness,
+            @JsonKey(name: 'shareableUrlPath')
+                String shareableUrlPath,
+            @JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
+                DateTime modificationTime,
+            @JsonKey(name: 'slugPlusPandoraId')
+                String slugPlusPandoraId,
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
+                bool hasRadio,
+            @JsonKey(name: 'releaseType')
+                String releaseType,
+            @JsonKey(name: 'listenerReleaseType')
+                String listenerReleaseType,
+            @JsonKey(name: 'pandoraId')
+                String pandoraId,
+            @JsonKey(name: 'scope')
+                Scope scope)?
+        album,
+    TResult Function(
+            @JsonKey(name: 'name')
+                String name,
+            @JsonKey(name: 'sortableName')
+                String sortableName,
+            @JsonKey(name: 'icon', fromJson: MediaIcon.optionalFromJson, toJson: MediaIcon.optionalToJson)
+                MediaIcon? icon,
+            @JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
+                DateTime modificationTime,
+            @JsonKey(name: 'description')
+                String description,
+            @JsonKey(name: 'stationListenerCount')
+                int stationListenerCount,
+            @JsonKey(name: 'shareableUrlPath')
+                String shareableUrlPath,
+            @JsonKey(name: 'hasTakeoverModes')
+                bool hasTakeoverModes,
+            @JsonKey(name: 'hasCuratedModes')
+                bool hasCuratedModes,
+            @JsonKey(name: 'pandoraId')
+                String pandoraId,
+            @JsonKey(name: 'scope')
+                Scope scope)?
+        genre,
+    TResult Function(
+            @JsonKey(name: 'name')
+                String name,
+            @JsonKey(name: 'allowFeedback', fromJson: readOptInBool, toJson: writeOptInBool)
+                bool allowFeedback,
+            @JsonKey(name: 'autogenForListener')
+                bool autogenForListener,
+            @JsonKey(name: 'collectible')
+                bool collectible,
+            @JsonKey(name: 'description', fromJson: readOptionalOptionallyEmptyString, toJson: writeOptionallyEmptyString)
+                String? description,
+            @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
+                Duration duration,
+            @JsonKey(name: 'includedTrackTypes')
+                List<PandoraType> includedTrackTypes,
+            @JsonKey(name: 'isPrivate')
+                bool isPrivate,
+            @JsonKey(name: 'linkedType')
+                PlaylistLinkedType linkedType,
+            @JsonKey(name: 'listenerId')
+                int listenerId,
+            @JsonKey(name: 'listenerIdInfo')
+                ListenerIdInfo listenerIdInfo,
+            @JsonKey(name: 'listenerIdToken')
+                String listenerIdToken,
+            @JsonKey(name: 'listenerPandoraId')
+                String listenerPandoraId,
+            @JsonKey(name: 'secret')
+                bool secret,
+            @JsonKey(name: 'shareableUrlPath')
+                String shareableUrlPath,
+            @JsonKey(name: 'thorLayers')
+                String thorLayers,
+            @JsonKey(name: 'timeCreated', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
+                DateTime timeCreated,
+            @JsonKey(name: 'timeLastPlayed', fromJson: readOptionalDateTimeMilliseconds, toJson: writeOptionalDateTimeMilliseconds)
+                DateTime? timeLastPlayed,
+            @JsonKey(name: 'timeLastUpdated', fromJson: readOptionalDateTimeMilliseconds, toJson: writeOptionalDateTimeMilliseconds)
+                DateTime? timeLastUpdated,
+            @JsonKey(name: 'totalTracks')
+                int totalTracks,
+            @JsonKey(name: 'unlocked')
+                bool unlocked,
+            @JsonKey(name: 'viewerInfo')
+                PlaylistViewerInfo? viewerInfo,
+            @JsonKey(name: 'pandoraId')
+                String pandoraId,
+            @JsonKey(name: 'scope')
+                Scope scope)?
+        playlist,
+    TResult Function(
+            @JsonKey(name: 'stationName')
+                String name,
+            @JsonKey(name: 'stationId')
+                String stationId,
+            @JsonKey(name: 'listenerId')
+                int listenerId,
+            @JsonKey(name: 'listenerPandoraId')
+                String listenerPandoraId,
+            @JsonKey(name: 'initialSeedId')
+                String initialSeedId,
+            @JsonKey(name: 'isQuickMix')
+                bool isQuickMix,
+            @JsonKey(name: 'isThumbprint')
+                bool isThumbprint,
+            @JsonKey(name: 'hasCuratedModes', fromJson: readOptInBool, toJson: writeOptInBool)
+                bool hasCuratedModes,
+            @JsonKey(name: 'icon', fromJson: MediaIcon.optionalFromJson, toJson: MediaIcon.optionalToJson)
+                MediaIcon? icon,
+            @JsonKey(name: 'pandoraId')
+                String pandoraId)?
+        station,
+    TResult Function(
+            @JsonKey(name: 'name')
+                String name,
+            @JsonKey(name: 'sortableName')
+                String sortableName,
+            @JsonKey(name: 'icon', fromJson: MediaIcon.optionalFromJson, toJson: MediaIcon.optionalToJson)
+                MediaIcon? icon,
+            @JsonKey(name: 'hasRadio', fromJson: readOptInBool, toJson: writeOptInBool)
+                bool hasRadio,
+            @JsonKey(name: 'albumCount')
+                int albumCount,
+            @JsonKey(name: 'trackCount')
+                int trackCount,
+            @JsonKey(name: 'shareableUrlPath')
+                String shareableUrlPath,
+            @JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
+                DateTime modificationTime,
+            @JsonKey(name: 'slugPlusPandoraId')
+                String slugPlusPandoraId,
+            @JsonKey(name: 'pandoraId')
+                String pandoraId,
+            @JsonKey(name: 'scope')
+                String scope)?
+        composer,
+    TResult Function(
+            @JsonKey(name: 'pandoraId') String pandoraId,
+            @JsonKey(name: 'listenerId') int listenerId,
+            @JsonKey(name: 'webname') String webname,
+            @JsonKey(name: 'fullname') String? fullName,
+            @JsonKey(name: 'displayname') String displayName)?
+        listener,
+    required TResult orElse(),
+  }) {
+    if (station != null) {
+      return station(
+          name,
+          stationId,
+          listenerId,
+          listenerPandoraId,
+          initialSeedId,
+          isQuickMix,
+          isThumbprint,
+          hasCuratedModes,
+          icon,
+          pandoraId);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(TrackAnnotation value) track,
+    required TResult Function(ArtistAnnotation value) artist,
+    required TResult Function(AlbumAnnotation value) album,
+    required TResult Function(GenreAnnotation value) genre,
+    required TResult Function(PlaylistAnnotation value) playlist,
+    required TResult Function(StationMediaAnnotation value) station,
+    required TResult Function(ComposerAnnotation value) composer,
+    required TResult Function(ListenerMediaAnnotation value) listener,
+  }) {
+    return station(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(TrackAnnotation value)? track,
+    TResult Function(ArtistAnnotation value)? artist,
+    TResult Function(AlbumAnnotation value)? album,
+    TResult Function(GenreAnnotation value)? genre,
+    TResult Function(PlaylistAnnotation value)? playlist,
+    TResult Function(StationMediaAnnotation value)? station,
+    TResult Function(ComposerAnnotation value)? composer,
+    TResult Function(ListenerMediaAnnotation value)? listener,
+  }) {
+    return station?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(TrackAnnotation value)? track,
+    TResult Function(ArtistAnnotation value)? artist,
+    TResult Function(AlbumAnnotation value)? album,
+    TResult Function(GenreAnnotation value)? genre,
+    TResult Function(PlaylistAnnotation value)? playlist,
+    TResult Function(StationMediaAnnotation value)? station,
+    TResult Function(ComposerAnnotation value)? composer,
+    TResult Function(ListenerMediaAnnotation value)? listener,
+    required TResult orElse(),
+  }) {
+    if (station != null) {
+      return station(this);
+    }
+    return orElse();
+  }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$StationMediaAnnotationToJson(
+      this,
+    );
+  }
+}
+
+abstract class StationMediaAnnotation extends MediaAnnotation {
+  const factory StationMediaAnnotation(
+      {@JsonKey(name: 'stationName')
+          required final String name,
+      @JsonKey(name: 'stationId')
+          required final String stationId,
+      @JsonKey(name: 'listenerId')
+          required final int listenerId,
+      @JsonKey(name: 'listenerPandoraId')
+          required final String listenerPandoraId,
+      @JsonKey(name: 'initialSeedId')
+          required final String initialSeedId,
+      @JsonKey(name: 'isQuickMix')
+          required final bool isQuickMix,
+      @JsonKey(name: 'isThumbprint')
+          required final bool isThumbprint,
+      @JsonKey(name: 'hasCuratedModes', fromJson: readOptInBool, toJson: writeOptInBool)
+          required final bool hasCuratedModes,
+      @JsonKey(name: 'icon', fromJson: MediaIcon.optionalFromJson, toJson: MediaIcon.optionalToJson)
+          required final MediaIcon? icon,
+      @JsonKey(name: 'pandoraId')
+          required final String pandoraId}) = _$StationMediaAnnotation;
+  const StationMediaAnnotation._() : super._();
+
+  factory StationMediaAnnotation.fromJson(Map<String, dynamic> json) =
+      _$StationMediaAnnotation.fromJson;
+
+  @JsonKey(name: 'stationName')
+  String get name;
+  @JsonKey(name: 'stationId')
+  String get stationId;
+  @JsonKey(name: 'listenerId')
+  int get listenerId;
+  @JsonKey(name: 'listenerPandoraId')
+  String get listenerPandoraId;
+  @JsonKey(name: 'initialSeedId')
+  String get initialSeedId;
+  @JsonKey(name: 'isQuickMix')
+  bool get isQuickMix;
+  @JsonKey(name: 'isThumbprint')
+  bool get isThumbprint;
+  @JsonKey(
+      name: 'hasCuratedModes', fromJson: readOptInBool, toJson: writeOptInBool)
+  bool get hasCuratedModes;
+  @JsonKey(
+      name: 'icon',
+      fromJson: MediaIcon.optionalFromJson,
+      toJson: MediaIcon.optionalToJson)
+  MediaIcon? get icon;
+  @override
+  @JsonKey(name: 'pandoraId')
+  String get pandoraId;
+  @override
+  @JsonKey(ignore: true)
+  _$$StationMediaAnnotationCopyWith<_$StationMediaAnnotation> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -7467,6 +9013,28 @@ class _$ComposerAnnotation extends ComposerAnnotation {
                 Scope scope)
         playlist,
     required TResult Function(
+            @JsonKey(name: 'stationName')
+                String name,
+            @JsonKey(name: 'stationId')
+                String stationId,
+            @JsonKey(name: 'listenerId')
+                int listenerId,
+            @JsonKey(name: 'listenerPandoraId')
+                String listenerPandoraId,
+            @JsonKey(name: 'initialSeedId')
+                String initialSeedId,
+            @JsonKey(name: 'isQuickMix')
+                bool isQuickMix,
+            @JsonKey(name: 'isThumbprint')
+                bool isThumbprint,
+            @JsonKey(name: 'hasCuratedModes', fromJson: readOptInBool, toJson: writeOptInBool)
+                bool hasCuratedModes,
+            @JsonKey(name: 'icon', fromJson: MediaIcon.optionalFromJson, toJson: MediaIcon.optionalToJson)
+                MediaIcon? icon,
+            @JsonKey(name: 'pandoraId')
+                String pandoraId)
+        station,
+    required TResult Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -7705,6 +9273,28 @@ class _$ComposerAnnotation extends ComposerAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         playlist,
+    TResult Function(
+            @JsonKey(name: 'stationName')
+                String name,
+            @JsonKey(name: 'stationId')
+                String stationId,
+            @JsonKey(name: 'listenerId')
+                int listenerId,
+            @JsonKey(name: 'listenerPandoraId')
+                String listenerPandoraId,
+            @JsonKey(name: 'initialSeedId')
+                String initialSeedId,
+            @JsonKey(name: 'isQuickMix')
+                bool isQuickMix,
+            @JsonKey(name: 'isThumbprint')
+                bool isThumbprint,
+            @JsonKey(name: 'hasCuratedModes', fromJson: readOptInBool, toJson: writeOptInBool)
+                bool hasCuratedModes,
+            @JsonKey(name: 'icon', fromJson: MediaIcon.optionalFromJson, toJson: MediaIcon.optionalToJson)
+                MediaIcon? icon,
+            @JsonKey(name: 'pandoraId')
+                String pandoraId)?
+        station,
     TResult Function(
             @JsonKey(name: 'name')
                 String name,
@@ -7945,6 +9535,28 @@ class _$ComposerAnnotation extends ComposerAnnotation {
                 Scope scope)?
         playlist,
     TResult Function(
+            @JsonKey(name: 'stationName')
+                String name,
+            @JsonKey(name: 'stationId')
+                String stationId,
+            @JsonKey(name: 'listenerId')
+                int listenerId,
+            @JsonKey(name: 'listenerPandoraId')
+                String listenerPandoraId,
+            @JsonKey(name: 'initialSeedId')
+                String initialSeedId,
+            @JsonKey(name: 'isQuickMix')
+                bool isQuickMix,
+            @JsonKey(name: 'isThumbprint')
+                bool isThumbprint,
+            @JsonKey(name: 'hasCuratedModes', fromJson: readOptInBool, toJson: writeOptInBool)
+                bool hasCuratedModes,
+            @JsonKey(name: 'icon', fromJson: MediaIcon.optionalFromJson, toJson: MediaIcon.optionalToJson)
+                MediaIcon? icon,
+            @JsonKey(name: 'pandoraId')
+                String pandoraId)?
+        station,
+    TResult Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -8002,6 +9614,7 @@ class _$ComposerAnnotation extends ComposerAnnotation {
     required TResult Function(AlbumAnnotation value) album,
     required TResult Function(GenreAnnotation value) genre,
     required TResult Function(PlaylistAnnotation value) playlist,
+    required TResult Function(StationMediaAnnotation value) station,
     required TResult Function(ComposerAnnotation value) composer,
     required TResult Function(ListenerMediaAnnotation value) listener,
   }) {
@@ -8016,6 +9629,7 @@ class _$ComposerAnnotation extends ComposerAnnotation {
     TResult Function(AlbumAnnotation value)? album,
     TResult Function(GenreAnnotation value)? genre,
     TResult Function(PlaylistAnnotation value)? playlist,
+    TResult Function(StationMediaAnnotation value)? station,
     TResult Function(ComposerAnnotation value)? composer,
     TResult Function(ListenerMediaAnnotation value)? listener,
   }) {
@@ -8030,6 +9644,7 @@ class _$ComposerAnnotation extends ComposerAnnotation {
     TResult Function(AlbumAnnotation value)? album,
     TResult Function(GenreAnnotation value)? genre,
     TResult Function(PlaylistAnnotation value)? playlist,
+    TResult Function(StationMediaAnnotation value)? station,
     TResult Function(ComposerAnnotation value)? composer,
     TResult Function(ListenerMediaAnnotation value)? listener,
     required TResult orElse(),
@@ -8436,6 +10051,28 @@ class _$ListenerMediaAnnotation extends ListenerMediaAnnotation {
                 Scope scope)
         playlist,
     required TResult Function(
+            @JsonKey(name: 'stationName')
+                String name,
+            @JsonKey(name: 'stationId')
+                String stationId,
+            @JsonKey(name: 'listenerId')
+                int listenerId,
+            @JsonKey(name: 'listenerPandoraId')
+                String listenerPandoraId,
+            @JsonKey(name: 'initialSeedId')
+                String initialSeedId,
+            @JsonKey(name: 'isQuickMix')
+                bool isQuickMix,
+            @JsonKey(name: 'isThumbprint')
+                bool isThumbprint,
+            @JsonKey(name: 'hasCuratedModes', fromJson: readOptInBool, toJson: writeOptInBool)
+                bool hasCuratedModes,
+            @JsonKey(name: 'icon', fromJson: MediaIcon.optionalFromJson, toJson: MediaIcon.optionalToJson)
+                MediaIcon? icon,
+            @JsonKey(name: 'pandoraId')
+                String pandoraId)
+        station,
+    required TResult Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -8663,6 +10300,28 @@ class _$ListenerMediaAnnotation extends ListenerMediaAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         playlist,
+    TResult Function(
+            @JsonKey(name: 'stationName')
+                String name,
+            @JsonKey(name: 'stationId')
+                String stationId,
+            @JsonKey(name: 'listenerId')
+                int listenerId,
+            @JsonKey(name: 'listenerPandoraId')
+                String listenerPandoraId,
+            @JsonKey(name: 'initialSeedId')
+                String initialSeedId,
+            @JsonKey(name: 'isQuickMix')
+                bool isQuickMix,
+            @JsonKey(name: 'isThumbprint')
+                bool isThumbprint,
+            @JsonKey(name: 'hasCuratedModes', fromJson: readOptInBool, toJson: writeOptInBool)
+                bool hasCuratedModes,
+            @JsonKey(name: 'icon', fromJson: MediaIcon.optionalFromJson, toJson: MediaIcon.optionalToJson)
+                MediaIcon? icon,
+            @JsonKey(name: 'pandoraId')
+                String pandoraId)?
+        station,
     TResult Function(
             @JsonKey(name: 'name')
                 String name,
@@ -8893,6 +10552,28 @@ class _$ListenerMediaAnnotation extends ListenerMediaAnnotation {
                 Scope scope)?
         playlist,
     TResult Function(
+            @JsonKey(name: 'stationName')
+                String name,
+            @JsonKey(name: 'stationId')
+                String stationId,
+            @JsonKey(name: 'listenerId')
+                int listenerId,
+            @JsonKey(name: 'listenerPandoraId')
+                String listenerPandoraId,
+            @JsonKey(name: 'initialSeedId')
+                String initialSeedId,
+            @JsonKey(name: 'isQuickMix')
+                bool isQuickMix,
+            @JsonKey(name: 'isThumbprint')
+                bool isThumbprint,
+            @JsonKey(name: 'hasCuratedModes', fromJson: readOptInBool, toJson: writeOptInBool)
+                bool hasCuratedModes,
+            @JsonKey(name: 'icon', fromJson: MediaIcon.optionalFromJson, toJson: MediaIcon.optionalToJson)
+                MediaIcon? icon,
+            @JsonKey(name: 'pandoraId')
+                String pandoraId)?
+        station,
+    TResult Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -8939,6 +10620,7 @@ class _$ListenerMediaAnnotation extends ListenerMediaAnnotation {
     required TResult Function(AlbumAnnotation value) album,
     required TResult Function(GenreAnnotation value) genre,
     required TResult Function(PlaylistAnnotation value) playlist,
+    required TResult Function(StationMediaAnnotation value) station,
     required TResult Function(ComposerAnnotation value) composer,
     required TResult Function(ListenerMediaAnnotation value) listener,
   }) {
@@ -8953,6 +10635,7 @@ class _$ListenerMediaAnnotation extends ListenerMediaAnnotation {
     TResult Function(AlbumAnnotation value)? album,
     TResult Function(GenreAnnotation value)? genre,
     TResult Function(PlaylistAnnotation value)? playlist,
+    TResult Function(StationMediaAnnotation value)? station,
     TResult Function(ComposerAnnotation value)? composer,
     TResult Function(ListenerMediaAnnotation value)? listener,
   }) {
@@ -8967,6 +10650,7 @@ class _$ListenerMediaAnnotation extends ListenerMediaAnnotation {
     TResult Function(AlbumAnnotation value)? album,
     TResult Function(GenreAnnotation value)? genre,
     TResult Function(PlaylistAnnotation value)? playlist,
+    TResult Function(StationMediaAnnotation value)? station,
     TResult Function(ComposerAnnotation value)? composer,
     TResult Function(ListenerMediaAnnotation value)? listener,
     required TResult orElse(),
