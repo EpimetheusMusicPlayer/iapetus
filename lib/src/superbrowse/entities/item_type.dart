@@ -49,4 +49,8 @@ enum SuperbrowseItemType {
 
   @JsonValue('button')
   button,
+
+  // Unknown
+  @JsonValue('search_bar')
+  searchBar,
 }

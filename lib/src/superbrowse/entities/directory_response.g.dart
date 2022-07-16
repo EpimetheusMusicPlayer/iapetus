@@ -67,4 +67,5 @@ const _$SuperbrowseItemTypeEnumMap = {
   SuperbrowseItemType.card: 'card',
   SuperbrowseItemType.empty: 'empty',
   SuperbrowseItemType.button: 'button',
+  SuperbrowseItemType.searchBar: 'search_bar',
 };
