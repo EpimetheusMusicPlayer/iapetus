@@ -27,6 +27,9 @@ Future<void> main(List<String> arguments) async {
     registerDevice: false,
   );
 
+  // Retrieve the user's profile.
+  final profile = await iapetus.getFullProfile();
+
   // Retrieve the station list.
   final stationList = await iapetus.getStations();
   final station = stationList.stations[0];

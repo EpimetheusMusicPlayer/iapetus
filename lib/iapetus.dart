@@ -17,6 +17,7 @@ export 'src/iapetus.dart';
 export 'src/media/media.dart';
 export 'src/on_demand/on_demand.dart';
 export 'src/playlists/playlists.dart';
+export 'src/profile/profile.dart';
 export 'src/recommendations/recommendations.dart';
 export 'src/stations/stations.dart';
 export 'src/superbrowse/superbrowse.dart';
