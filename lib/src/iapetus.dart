@@ -35,10 +35,15 @@ class Iapetus {
   final IapetusSecureStorage secureStorage;
   final DeviceInfo deviceInfo;
 
+  /// Creates an [Iapetus] client.
+  ///
+  /// The given [proxyHost] and [proxyPort] will not be used on the Web.
   Iapetus({
     required this.fastStorage,
     required this.secureStorage,
-  })  : _httpClient = createClient(),
+    String? proxyHost,
+    int? proxyPort,
+  })  : _httpClient = createClient(proxyHost, proxyPort),
         deviceInfo = DeviceInfo(secureStorage);
 
   AuthenticatedPartner? _partner;
