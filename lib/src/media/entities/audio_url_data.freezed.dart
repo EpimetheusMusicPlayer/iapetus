@@ -194,7 +194,9 @@ class _$_AudioUrlData implements _AudioUrlData {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_AudioUrlDataToJson(this);
+    return _$$_AudioUrlDataToJson(
+      this,
+    );
   }
 }
 

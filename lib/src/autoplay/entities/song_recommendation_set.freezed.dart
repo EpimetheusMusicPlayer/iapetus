@@ -201,7 +201,9 @@ class _$_SongRecommendationSet implements _SongRecommendationSet {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SongRecommendationSetToJson(this);
+    return _$$_SongRecommendationSetToJson(
+      this,
+    );
   }
 }
 

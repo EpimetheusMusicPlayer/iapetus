@@ -292,7 +292,9 @@ class _$_DirectoryResponse implements _DirectoryResponse {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DirectoryResponseToJson(this);
+    return _$$_DirectoryResponseToJson(
+      this,
+    );
   }
 }
 

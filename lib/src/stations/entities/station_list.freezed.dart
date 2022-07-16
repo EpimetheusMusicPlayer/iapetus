@@ -173,7 +173,9 @@ class _$_StationList implements _StationList {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_StationListToJson(this);
+    return _$$_StationListToJson(
+      this,
+    );
   }
 }
 

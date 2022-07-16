@@ -1930,7 +1930,9 @@ class _$TrackAnnotation extends TrackAnnotation {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$TrackAnnotationToJson(this);
+    return _$$TrackAnnotationToJson(
+      this,
+    );
   }
 }
 
@@ -3153,7 +3155,9 @@ class _$ArtistAnnotation extends ArtistAnnotation {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ArtistAnnotationToJson(this);
+    return _$$ArtistAnnotationToJson(
+      this,
+    );
   }
 }
 
@@ -4433,7 +4437,9 @@ class _$AlbumAnnotation extends AlbumAnnotation {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$AlbumAnnotationToJson(this);
+    return _$$AlbumAnnotationToJson(
+      this,
+    );
   }
 }
 
@@ -5553,7 +5559,9 @@ class _$GenreAnnotation extends GenreAnnotation {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$GenreAnnotationToJson(this);
+    return _$$GenreAnnotationToJson(
+      this,
+    );
   }
 }
 
@@ -6890,7 +6898,9 @@ class _$PlaylistAnnotation extends PlaylistAnnotation {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$PlaylistAnnotationToJson(this);
+    return _$$PlaylistAnnotationToJson(
+      this,
+    );
   }
 }
 
@@ -8032,7 +8042,9 @@ class _$ComposerAnnotation extends ComposerAnnotation {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ComposerAnnotationToJson(this);
+    return _$$ComposerAnnotationToJson(
+      this,
+    );
   }
 }
 
@@ -8967,7 +8979,9 @@ class _$ListenerMediaAnnotation extends ListenerMediaAnnotation {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ListenerMediaAnnotationToJson(this);
+    return _$$ListenerMediaAnnotationToJson(
+      this,
+    );
   }
 }
 

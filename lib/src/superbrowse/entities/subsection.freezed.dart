@@ -651,7 +651,9 @@ class _$HorizontalScrollSuperbrowseSubsection
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$HorizontalScrollSuperbrowseSubsectionToJson(this);
+    return _$$HorizontalScrollSuperbrowseSubsectionToJson(
+      this,
+    );
   }
 }
 
@@ -1112,7 +1114,9 @@ class _$RecentlyPlayedSuperbrowseSubsection
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$RecentlyPlayedSuperbrowseSubsectionToJson(this);
+    return _$$RecentlyPlayedSuperbrowseSubsectionToJson(
+      this,
+    );
   }
 }
 
@@ -1515,7 +1519,9 @@ class _$SingletonSuperbrowseSubsection
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$SingletonSuperbrowseSubsectionToJson(this);
+    return _$$SingletonSuperbrowseSubsectionToJson(
+      this,
+    );
   }
 }
 
@@ -1901,7 +1907,9 @@ class _$VerticalListSuperbrowseSubsection
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$VerticalListSuperbrowseSubsectionToJson(this);
+    return _$$VerticalListSuperbrowseSubsectionToJson(
+      this,
+    );
   }
 }
 
@@ -2284,7 +2292,9 @@ class _$DisplayAdSuperbrowseSubsection
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$DisplayAdSuperbrowseSubsectionToJson(this);
+    return _$$DisplayAdSuperbrowseSubsectionToJson(
+      this,
+    );
   }
 }
 

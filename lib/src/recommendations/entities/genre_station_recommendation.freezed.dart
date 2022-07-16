@@ -245,7 +245,9 @@ class _$_GenreStationRecommendation implements _GenreStationRecommendation {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GenreStationRecommendationToJson(this);
+    return _$$_GenreStationRecommendationToJson(
+      this,
+    );
   }
 }
 

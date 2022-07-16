@@ -1343,7 +1343,9 @@ class _$_AuthenticatedUser implements _AuthenticatedUser {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_AuthenticatedUserToJson(this);
+    return _$$_AuthenticatedUserToJson(
+      this,
+    );
   }
 }
 

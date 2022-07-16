@@ -338,7 +338,9 @@ class _$_SuperbrowseImage extends _SuperbrowseImage {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SuperbrowseImageToJson(this);
+    return _$$_SuperbrowseImageToJson(
+      this,
+    );
   }
 }
 

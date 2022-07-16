@@ -150,7 +150,9 @@ class _$_Credits implements _Credits {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CreditsToJson(this);
+    return _$$_CreditsToJson(
+      this,
+    );
   }
 }
 

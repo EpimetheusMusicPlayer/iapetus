@@ -519,7 +519,9 @@ class _$_Station implements _Station {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_StationToJson(this);
+    return _$$_StationToJson(
+      this,
+    );
   }
 }
 

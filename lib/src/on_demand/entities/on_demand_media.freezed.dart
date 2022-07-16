@@ -216,7 +216,9 @@ class _$_OnDemandMedia implements _OnDemandMedia {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_OnDemandMediaToJson(this);
+    return _$$_OnDemandMediaToJson(
+      this,
+    );
   }
 }
 

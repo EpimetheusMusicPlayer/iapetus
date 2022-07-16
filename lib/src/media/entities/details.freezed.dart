@@ -329,7 +329,9 @@ class _$TrackDetailsSet implements TrackDetailsSet {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$TrackDetailsSetToJson(this);
+    return _$$TrackDetailsSetToJson(
+      this,
+    );
   }
 }
 
@@ -546,7 +548,9 @@ class _$GenreDetailsSet implements GenreDetailsSet {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$GenreDetailsSetToJson(this);
+    return _$$GenreDetailsSetToJson(
+      this,
+    );
   }
 }
 
@@ -1426,7 +1430,9 @@ class _$TrackDetails implements TrackDetails {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$TrackDetailsToJson(this);
+    return _$$TrackDetailsToJson(
+      this,
+    );
   }
 }
 
@@ -1935,7 +1941,9 @@ class _$GenreDetails implements GenreDetails {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$GenreDetailsToJson(this);
+    return _$$GenreDetailsToJson(
+      this,
+    );
   }
 }
 

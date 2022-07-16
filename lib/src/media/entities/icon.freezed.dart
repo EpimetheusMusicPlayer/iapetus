@@ -194,7 +194,9 @@ class _$_MediaIcon implements _MediaIcon {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MediaIconToJson(this);
+    return _$$_MediaIconToJson(
+      this,
+    );
   }
 }
 

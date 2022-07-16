@@ -191,7 +191,9 @@ class _$_TrackKey implements _TrackKey {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_TrackKeyToJson(this);
+    return _$$_TrackKeyToJson(
+      this,
+    );
   }
 }
 

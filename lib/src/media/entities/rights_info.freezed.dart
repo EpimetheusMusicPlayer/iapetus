@@ -261,7 +261,9 @@ class _$_RightsInfo implements _RightsInfo {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_RightsInfoToJson(this);
+    return _$$_RightsInfoToJson(
+      this,
+    );
   }
 }
 

@@ -132,7 +132,9 @@ class _$_PlaylistViewerInfo implements _PlaylistViewerInfo {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PlaylistViewerInfoToJson(this);
+    return _$$_PlaylistViewerInfoToJson(
+      this,
+    );
   }
 }
 

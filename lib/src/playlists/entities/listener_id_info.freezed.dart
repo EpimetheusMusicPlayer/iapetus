@@ -178,7 +178,9 @@ class _$_ListenerIdInfo extends _ListenerIdInfo {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ListenerIdInfoToJson(this);
+    return _$$_ListenerIdInfoToJson(
+      this,
+    );
   }
 }
 

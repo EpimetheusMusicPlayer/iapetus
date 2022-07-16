@@ -262,7 +262,9 @@ class _$_AuthenticatedPartner extends _AuthenticatedPartner {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_AuthenticatedPartnerToJson(this);
+    return _$$_AuthenticatedPartnerToJson(
+      this,
+    );
   }
 }
 

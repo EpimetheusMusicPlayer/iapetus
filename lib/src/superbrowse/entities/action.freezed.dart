@@ -236,7 +236,9 @@ class _$_SuperbrowseAction implements _SuperbrowseAction {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SuperbrowseActionToJson(this);
+    return _$$_SuperbrowseActionToJson(
+      this,
+    );
   }
 }
 

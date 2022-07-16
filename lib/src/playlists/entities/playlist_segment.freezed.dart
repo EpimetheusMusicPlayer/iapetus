@@ -808,7 +808,9 @@ class _$_PlaylistSegment extends _PlaylistSegment {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PlaylistSegmentToJson(this);
+    return _$$_PlaylistSegmentToJson(
+      this,
+    );
   }
 }
 

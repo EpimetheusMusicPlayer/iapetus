@@ -223,7 +223,9 @@ class _$_CollectionListSegment implements _CollectionListSegment {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CollectionListSegmentToJson(this);
+    return _$$_CollectionListSegmentToJson(
+      this,
+    );
   }
 }
 

@@ -267,7 +267,9 @@ class _$_CollectionItem implements _CollectionItem {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CollectionItemToJson(this);
+    return _$$_CollectionItemToJson(
+      this,
+    );
   }
 }
 

@@ -238,7 +238,9 @@ class _$_SuperbrowseSection implements _SuperbrowseSection {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SuperbrowseSectionToJson(this);
+    return _$$_SuperbrowseSectionToJson(
+      this,
+    );
   }
 }
 

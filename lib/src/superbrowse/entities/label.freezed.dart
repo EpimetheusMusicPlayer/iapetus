@@ -276,7 +276,9 @@ class _$_SuperbrowseLabel implements _SuperbrowseLabel {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SuperbrowseLabelToJson(this);
+    return _$$_SuperbrowseLabelToJson(
+      this,
+    );
   }
 }
 

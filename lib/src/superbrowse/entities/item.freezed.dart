@@ -1392,7 +1392,9 @@ class _$BannerSuperbrowseItem implements BannerSuperbrowseItem {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$BannerSuperbrowseItemToJson(this);
+    return _$$BannerSuperbrowseItemToJson(
+      this,
+    );
   }
 }
 
@@ -2214,7 +2216,9 @@ class _$BeltSuperbrowseItem implements BeltSuperbrowseItem {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$BeltSuperbrowseItemToJson(this);
+    return _$$BeltSuperbrowseItemToJson(
+      this,
+    );
   }
 }
 
@@ -3057,7 +3061,9 @@ class _$FeaturedSuperbrowseItem implements FeaturedSuperbrowseItem {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$FeaturedSuperbrowseItemToJson(this);
+    return _$$FeaturedSuperbrowseItemToJson(
+      this,
+    );
   }
 }
 
@@ -3884,7 +3890,9 @@ class _$FooterSuperbrowseItem implements FooterSuperbrowseItem {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$FooterSuperbrowseItemToJson(this);
+    return _$$FooterSuperbrowseItemToJson(
+      this,
+    );
   }
 }
 
@@ -4754,7 +4762,9 @@ class _$GridSuperbrowseItem implements GridSuperbrowseItem {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$GridSuperbrowseItemToJson(this);
+    return _$$GridSuperbrowseItemToJson(
+      this,
+    );
   }
 }
 
@@ -5588,7 +5598,9 @@ class _$HeaderSuperbrowseItem implements HeaderSuperbrowseItem {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$HeaderSuperbrowseItemToJson(this);
+    return _$$HeaderSuperbrowseItemToJson(
+      this,
+    );
   }
 }
 
@@ -6452,7 +6464,9 @@ class _$HeroSuperbrowseItem implements HeroSuperbrowseItem {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$HeroSuperbrowseItemToJson(this);
+    return _$$HeroSuperbrowseItemToJson(
+      this,
+    );
   }
 }
 
@@ -7384,7 +7398,9 @@ class _$LargeRowSuperbrowseItem implements LargeRowSuperbrowseItem {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$LargeRowSuperbrowseItemToJson(this);
+    return _$$LargeRowSuperbrowseItemToJson(
+      this,
+    );
   }
 }
 
@@ -8225,7 +8241,9 @@ class _$SmallRowSuperbrowseItem implements SmallRowSuperbrowseItem {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$SmallRowSuperbrowseItemToJson(this);
+    return _$$SmallRowSuperbrowseItemToJson(
+      this,
+    );
   }
 }
 
@@ -9064,7 +9082,9 @@ class _$SplitSuperbrowseItem implements SplitSuperbrowseItem {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$SplitSuperbrowseItemToJson(this);
+    return _$$SplitSuperbrowseItemToJson(
+      this,
+    );
   }
 }
 
@@ -9901,7 +9921,9 @@ class _$TileSuperbrowseItem implements TileSuperbrowseItem {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$TileSuperbrowseItemToJson(this);
+    return _$$TileSuperbrowseItemToJson(
+      this,
+    );
   }
 }
 

@@ -174,7 +174,9 @@ class _$_FormFactors implements _FormFactors {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_FormFactorsToJson(this);
+    return _$$_FormFactorsToJson(
+      this,
+    );
   }
 }
 

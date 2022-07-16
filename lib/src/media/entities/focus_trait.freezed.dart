@@ -174,7 +174,9 @@ class _$_FocusTrait implements _FocusTrait {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_FocusTraitToJson(this);
+    return _$$_FocusTraitToJson(
+      this,
+    );
   }
 }
 

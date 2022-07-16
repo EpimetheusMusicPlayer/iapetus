@@ -288,7 +288,9 @@ class _$_ArtistRecommendation implements _ArtistRecommendation {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ArtistRecommendationToJson(this);
+    return _$$_ArtistRecommendationToJson(
+      this,
+    );
   }
 }
 

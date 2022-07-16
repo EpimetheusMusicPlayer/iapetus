@@ -178,7 +178,9 @@ class _$_IapetusMediaLyricData implements _IapetusMediaLyricData {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_IapetusMediaLyricDataToJson(this);
+    return _$$_IapetusMediaLyricDataToJson(
+      this,
+    );
   }
 }
 

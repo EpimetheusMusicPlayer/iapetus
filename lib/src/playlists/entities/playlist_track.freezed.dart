@@ -244,7 +244,9 @@ class _$_PlaylistTrack extends _PlaylistTrack {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PlaylistTrackToJson(this);
+    return _$$_PlaylistTrackToJson(
+      this,
+    );
   }
 }
 

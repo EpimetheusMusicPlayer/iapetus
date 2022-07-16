@@ -152,7 +152,9 @@ class _$_SuperbrowseBadge implements _SuperbrowseBadge {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SuperbrowseBadgeToJson(this);
+    return _$$_SuperbrowseBadgeToJson(
+      this,
+    );
   }
 }
 

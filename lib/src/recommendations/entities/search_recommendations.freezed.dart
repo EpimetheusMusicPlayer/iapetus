@@ -176,7 +176,9 @@ class _$_SearchRecommendations implements _SearchRecommendations {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SearchRecommendationsToJson(this);
+    return _$$_SearchRecommendationsToJson(
+      this,
+    );
   }
 }
 

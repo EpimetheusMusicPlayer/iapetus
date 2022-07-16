@@ -175,7 +175,9 @@ class _$_StationContentSet extends _StationContentSet {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_StationContentSetToJson(this);
+    return _$$_StationContentSetToJson(
+      this,
+    );
   }
 }
 

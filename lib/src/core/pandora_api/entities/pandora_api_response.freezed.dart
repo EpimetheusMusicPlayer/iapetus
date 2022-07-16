@@ -254,7 +254,9 @@ class _$SuccessfulPandoraApiResponse implements SuccessfulPandoraApiResponse {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$SuccessfulPandoraApiResponseToJson(this);
+    return _$$SuccessfulPandoraApiResponseToJson(
+      this,
+    );
   }
 }
 
@@ -444,7 +446,9 @@ class _$PandoraApiException implements PandoraApiException {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$PandoraApiExceptionToJson(this);
+    return _$$PandoraApiExceptionToJson(
+      this,
+    );
   }
 }
 

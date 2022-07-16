@@ -171,7 +171,9 @@ class _$_SuperbrowseButton implements _SuperbrowseButton {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SuperbrowseButtonToJson(this);
+    return _$$_SuperbrowseButtonToJson(
+      this,
+    );
   }
 }
 

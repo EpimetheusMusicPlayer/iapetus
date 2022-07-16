@@ -198,7 +198,9 @@ class _$_SongRecommendation extends _SongRecommendation {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SongRecommendationToJson(this);
+    return _$$_SongRecommendationToJson(
+      this,
+    );
   }
 }
 
