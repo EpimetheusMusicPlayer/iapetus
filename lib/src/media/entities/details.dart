@@ -5,6 +5,7 @@ import 'package:iapetus/src/common/entities/pandora_type.dart';
 import 'package:iapetus/src/media/entities/annotation.dart';
 import 'package:iapetus/src/media/entities/credits.dart';
 import 'package:iapetus/src/media/entities/focus_trait.dart';
+import 'package:iapetus/src/media/entities/interfaces/annotated.dart';
 import 'package:iapetus/src/media/entities/lyric_data.dart';
 import 'package:iapetus/src/media/entities/types/track.dart';
 
@@ -12,7 +13,7 @@ part 'details.freezed.dart';
 part 'details.g.dart';
 
 @freezed
-class MediaDetailsSet with _$MediaDetailsSet {
+class MediaDetailsSet with _$MediaDetailsSet implements Annotated {
   const factory MediaDetailsSet.track({
     @JsonKey(name: 'annotations')
         required Map<String, MediaAnnotation> annotations,

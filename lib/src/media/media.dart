@@ -8,6 +8,7 @@ export 'entities/details.dart';
 export 'entities/explicitness.dart';
 export 'entities/focus_trait.dart';
 export 'entities/icon.dart';
+export 'entities/interfaces/annotated.dart';
 export 'entities/lyric_data.dart';
 export 'entities/playable_media.dart';
 export 'entities/rating.dart';

@@ -3,6 +3,7 @@ import 'package:iapetus/src/common/data/json_utils.dart';
 import 'package:iapetus/src/common/entities/pandora_entity.dart';
 import 'package:iapetus/src/common/entities/pandora_type.dart';
 import 'package:iapetus/src/media/entities/annotation.dart';
+import 'package:iapetus/src/media/entities/interfaces/annotated.dart';
 import 'package:iapetus/src/playlists/entities/playlist_track.dart';
 import 'package:iapetus/src/playlists/entities/playlist_viewer_info.dart';
 
@@ -10,7 +11,9 @@ part 'playlist_segment.freezed.dart';
 part 'playlist_segment.g.dart';
 
 @freezed
-class PlaylistSegment with _$PlaylistSegment implements PandoraEntity {
+class PlaylistSegment
+    with _$PlaylistSegment
+    implements PandoraEntity, Annotated {
   const PlaylistSegment._();
 
   const factory PlaylistSegment({

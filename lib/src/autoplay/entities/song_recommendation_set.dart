@@ -1,12 +1,13 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:iapetus/src/autoplay/entities/song_recommendation.dart';
 import 'package:iapetus/src/media/entities/annotation.dart';
+import 'package:iapetus/src/media/entities/interfaces/annotated.dart';
 
 part 'song_recommendation_set.freezed.dart';
 part 'song_recommendation_set.g.dart';
 
 @freezed
-class SongRecommendationSet with _$SongRecommendationSet {
+class SongRecommendationSet with _$SongRecommendationSet implements Annotated {
   const factory SongRecommendationSet({
     @JsonKey(name: 'requestId') required String requestId,
     @JsonKey(name: 'songRecommendations')
