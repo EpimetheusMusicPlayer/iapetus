@@ -13,9 +13,10 @@ import 'package:iapetus/src/core/authentication/errors/authentication.dart';
 import 'package:iapetus/src/core/authentication/errors/registration.dart';
 import 'package:iapetus/src/core/crypto/data/crypto.dart';
 import 'package:iapetus/src/core/device/repositories/device_info.dart';
-import 'package:iapetus/src/core/http/client_stub.dart'
-    if (dart.library.html) 'package:iapetus/src/core/http/browser_client.dart'
-    if (dart.library.io) 'package:iapetus/src/core/http/io_client.dart';
+import 'package:iapetus/src/core/http/entities/iapetus_network_config.dart';
+import 'package:iapetus/src/core/http/io/client_stub.dart'
+    if (dart.library.html) 'package:iapetus/src/core/http/io/browser_client.dart'
+    if (dart.library.io) 'package:iapetus/src/core/http/io/io_client.dart';
 import 'package:iapetus/src/core/pandora_api/data/error_code.dart';
 import 'package:iapetus/src/core/pandora_api/data/sync_time.dart';
 import 'package:iapetus/src/core/pandora_api/entities/pandora_api_response.dart';
@@ -41,9 +42,8 @@ class Iapetus {
   Iapetus({
     required this.fastStorage,
     required this.secureStorage,
-    String? proxyHost,
-    int? proxyPort,
-  })  : _httpClient = createClient(proxyHost, proxyPort),
+    IapetusNetworkConfig networkConfig = const IapetusNetworkConfig(),
+  })  : _httpClient = createClient(networkConfig),
         deviceInfo = DeviceInfo(secureStorage);
 
   AuthenticatedPartner? _partner;
