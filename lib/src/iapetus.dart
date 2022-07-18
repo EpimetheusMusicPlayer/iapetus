@@ -14,6 +14,7 @@ import 'package:iapetus/src/core/authentication/errors/registration.dart';
 import 'package:iapetus/src/core/crypto/data/crypto.dart';
 import 'package:iapetus/src/core/device/repositories/device_info.dart';
 import 'package:iapetus/src/core/http/entities/iapetus_network_config.dart';
+import 'package:iapetus/src/core/http/errors/network.dart';
 import 'package:iapetus/src/core/http/io/client_stub.dart'
     if (dart.library.html) 'package:iapetus/src/core/http/io/browser_client.dart'
     if (dart.library.io) 'package:iapetus/src/core/http/io/io_client.dart';

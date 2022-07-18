@@ -45,18 +45,27 @@ extension PandoraApi on Iapetus {
 
     // Send the request (encrypting the post data if required) and store the
     // response.
-    final responseData = (await _httpClient.post(
-      uri,
-      body: encrypt ? pandoraEncryptRequest(postData) : postData,
-      headers: encrypt
-          ? null
-          : const {HttpHeaders.contentTypeHeader: 'application/json'},
-    ))
-        .body;
+    final String responseText;
+    try {
+      responseText = (await _httpClient.post(
+        uri,
+        body: encrypt ? pandoraEncryptRequest(postData) : postData,
+        headers: encrypt
+            ? null
+            : const {HttpHeaders.contentTypeHeader: 'application/json'},
+      ))
+          .body;
+    } catch (e) {
+      if (e is ClientException || e is IOException) {
+        throw IapetusNetworkException(e as Exception);
+      } else {
+        rethrow;
+      }
+    }
 
     // Decrypt the response (if required), and decode the JSON.
     final responseJson = jsonDecode(
-      decrypt ? pandoraDecryptResponse(responseData) : responseData,
+      decrypt ? pandoraDecryptResponse(responseText) : responseText,
     );
 
     // Make sure that the response is a JSON object declaration.
