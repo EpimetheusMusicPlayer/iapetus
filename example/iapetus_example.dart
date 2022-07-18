@@ -29,6 +29,7 @@ Future<void> main(List<String> arguments) async {
 
   // Retrieve the user's profile.
   final profile = await iapetus.getFullProfile();
+  final profilePictureUrl = profile.listenerAnnotation.imageUrl;
 
   // Retrieve the station list.
   final stationList = await iapetus.getStations();

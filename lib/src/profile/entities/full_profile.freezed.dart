@@ -321,7 +321,7 @@ class __$$_FullProfileCopyWithImpl<$Res> extends _$FullProfileCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_FullProfile implements _FullProfile {
+class _$_FullProfile extends _FullProfile {
   const _$_FullProfile(
       {@JsonKey(name: 'ownerPandoraId')
           required this.ownerPandoraId,
@@ -360,7 +360,8 @@ class _$_FullProfile implements _FullProfile {
       : _recentFavoritePandoraIds = recentFavoritePandoraIds,
         _topArtistPandoraIds = topArtistPandoraIds,
         _playlistPandoraIds = playlistPandoraIds,
-        _annotations = annotations;
+        _annotations = annotations,
+        super._();
 
   factory _$_FullProfile.fromJson(Map<String, dynamic> json) =>
       _$$_FullProfileFromJson(json);
@@ -516,7 +517,7 @@ class _$_FullProfile implements _FullProfile {
   }
 }
 
-abstract class _FullProfile implements FullProfile {
+abstract class _FullProfile extends FullProfile {
   const factory _FullProfile(
           {@JsonKey(name: 'ownerPandoraId')
               required final String ownerPandoraId,
@@ -553,6 +554,7 @@ abstract class _FullProfile implements FullProfile {
           @JsonKey(name: 'annotations')
               required final Map<String, MediaAnnotation> annotations}) =
       _$_FullProfile;
+  const _FullProfile._() : super._();
 
   factory _FullProfile.fromJson(Map<String, dynamic> json) =
       _$_FullProfile.fromJson;

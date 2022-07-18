@@ -1,11 +1,14 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:iapetus/src/media/entities/annotation.dart';
+import 'package:iapetus/src/media/entities/interfaces/annotated.dart';
 
 part 'full_profile.freezed.dart';
 part 'full_profile.g.dart';
 
 @freezed
-class FullProfile with _$FullProfile {
+class FullProfile with _$FullProfile implements Annotated {
+  const FullProfile._();
+
   const factory FullProfile({
     @JsonKey(name: 'ownerPandoraId') required String ownerPandoraId,
     @JsonKey(name: 'ownerListenerId') required int ownerListenerId,
@@ -27,6 +30,10 @@ class FullProfile with _$FullProfile {
     @JsonKey(name: 'annotations')
         required Map<String, MediaAnnotation> annotations,
   }) = _FullProfile;
+
+  ListenerMediaAnnotation get listenerAnnotation =>
+      (annotations[ownerPandoraId] as ListenerMediaAnnotation?) ??
+      (throw StateError('No listener annotation exists!'));
 
   factory FullProfile.fromJson(Map<String, dynamic> json) =>
       _$FullProfileFromJson(json);
