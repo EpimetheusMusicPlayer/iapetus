@@ -497,11 +497,16 @@ _$ListenerMediaAnnotation _$$ListenerMediaAnnotationFromJson(
       json,
       ($checkedConvert) {
         final val = _$ListenerMediaAnnotation(
-          pandoraId: $checkedConvert('pandoraId', (v) => v as String),
           listenerId: $checkedConvert('listenerId', (v) => v as int),
           webname: $checkedConvert('webname', (v) => v as String),
           fullName: $checkedConvert('fullname', (v) => v as String?),
           displayName: $checkedConvert('displayname', (v) => v as String),
+          biography: $checkedConvert('bio', (v) => v as String?),
+          defaultImageUrl: $checkedConvert('defaultImageUrl',
+              (v) => v == null ? null : Uri.parse(v as String)),
+          imageUrl: $checkedConvert(
+              'imageUrl', (v) => v == null ? null : Uri.parse(v as String)),
+          pandoraId: $checkedConvert('pandoraId', (v) => v as String),
           $type: $checkedConvert('type', (v) => v as String?),
         );
         return val;
@@ -509,6 +514,7 @@ _$ListenerMediaAnnotation _$$ListenerMediaAnnotationFromJson(
       fieldKeyMap: const {
         'fullName': 'fullname',
         'displayName': 'displayname',
+        'biography': 'bio',
         r'$type': 'type'
       },
     );
@@ -516,10 +522,13 @@ _$ListenerMediaAnnotation _$$ListenerMediaAnnotationFromJson(
 Map<String, dynamic> _$$ListenerMediaAnnotationToJson(
         _$ListenerMediaAnnotation instance) =>
     <String, dynamic>{
-      'pandoraId': instance.pandoraId,
       'listenerId': instance.listenerId,
       'webname': instance.webname,
       'fullname': instance.fullName,
       'displayname': instance.displayName,
+      'bio': instance.biography,
+      'defaultImageUrl': instance.defaultImageUrl?.toString(),
+      'imageUrl': instance.imageUrl?.toString(),
+      'pandoraId': instance.pandoraId,
       'type': instance.$type,
     };

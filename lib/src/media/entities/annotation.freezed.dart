@@ -282,11 +282,14 @@ mixin _$MediaAnnotation {
                 String scope)
         composer,
     required TResult Function(
-            @JsonKey(name: 'pandoraId') String pandoraId,
             @JsonKey(name: 'listenerId') int listenerId,
             @JsonKey(name: 'webname') String webname,
             @JsonKey(name: 'fullname') String? fullName,
-            @JsonKey(name: 'displayname') String displayName)
+            @JsonKey(name: 'displayname') String displayName,
+            @JsonKey(name: 'bio') String? biography,
+            @JsonKey(name: 'defaultImageUrl') Uri? defaultImageUrl,
+            @JsonKey(name: 'imageUrl') Uri? imageUrl,
+            @JsonKey(name: 'pandoraId') String pandoraId)
         listener,
   }) =>
       throw _privateConstructorUsedError;
@@ -529,11 +532,14 @@ mixin _$MediaAnnotation {
                 String scope)?
         composer,
     TResult Function(
-            @JsonKey(name: 'pandoraId') String pandoraId,
             @JsonKey(name: 'listenerId') int listenerId,
             @JsonKey(name: 'webname') String webname,
             @JsonKey(name: 'fullname') String? fullName,
-            @JsonKey(name: 'displayname') String displayName)?
+            @JsonKey(name: 'displayname') String displayName,
+            @JsonKey(name: 'bio') String? biography,
+            @JsonKey(name: 'defaultImageUrl') Uri? defaultImageUrl,
+            @JsonKey(name: 'imageUrl') Uri? imageUrl,
+            @JsonKey(name: 'pandoraId') String pandoraId)?
         listener,
   }) =>
       throw _privateConstructorUsedError;
@@ -776,11 +782,14 @@ mixin _$MediaAnnotation {
                 String scope)?
         composer,
     TResult Function(
-            @JsonKey(name: 'pandoraId') String pandoraId,
             @JsonKey(name: 'listenerId') int listenerId,
             @JsonKey(name: 'webname') String webname,
             @JsonKey(name: 'fullname') String? fullName,
-            @JsonKey(name: 'displayname') String displayName)?
+            @JsonKey(name: 'displayname') String displayName,
+            @JsonKey(name: 'bio') String? biography,
+            @JsonKey(name: 'defaultImageUrl') Uri? defaultImageUrl,
+            @JsonKey(name: 'imageUrl') Uri? imageUrl,
+            @JsonKey(name: 'pandoraId') String pandoraId)?
         listener,
     required TResult orElse(),
   }) =>
@@ -1451,11 +1460,14 @@ class _$TrackAnnotation extends TrackAnnotation {
                 String scope)
         composer,
     required TResult Function(
-            @JsonKey(name: 'pandoraId') String pandoraId,
             @JsonKey(name: 'listenerId') int listenerId,
             @JsonKey(name: 'webname') String webname,
             @JsonKey(name: 'fullname') String? fullName,
-            @JsonKey(name: 'displayname') String displayName)
+            @JsonKey(name: 'displayname') String displayName,
+            @JsonKey(name: 'bio') String? biography,
+            @JsonKey(name: 'defaultImageUrl') Uri? defaultImageUrl,
+            @JsonKey(name: 'imageUrl') Uri? imageUrl,
+            @JsonKey(name: 'pandoraId') String pandoraId)
         listener,
   }) {
     return track(
@@ -1719,11 +1731,14 @@ class _$TrackAnnotation extends TrackAnnotation {
                 String scope)?
         composer,
     TResult Function(
-            @JsonKey(name: 'pandoraId') String pandoraId,
             @JsonKey(name: 'listenerId') int listenerId,
             @JsonKey(name: 'webname') String webname,
             @JsonKey(name: 'fullname') String? fullName,
-            @JsonKey(name: 'displayname') String displayName)?
+            @JsonKey(name: 'displayname') String displayName,
+            @JsonKey(name: 'bio') String? biography,
+            @JsonKey(name: 'defaultImageUrl') Uri? defaultImageUrl,
+            @JsonKey(name: 'imageUrl') Uri? imageUrl,
+            @JsonKey(name: 'pandoraId') String pandoraId)?
         listener,
   }) {
     return track?.call(
@@ -1987,11 +2002,14 @@ class _$TrackAnnotation extends TrackAnnotation {
                 String scope)?
         composer,
     TResult Function(
-            @JsonKey(name: 'pandoraId') String pandoraId,
             @JsonKey(name: 'listenerId') int listenerId,
             @JsonKey(name: 'webname') String webname,
             @JsonKey(name: 'fullname') String? fullName,
-            @JsonKey(name: 'displayname') String displayName)?
+            @JsonKey(name: 'displayname') String displayName,
+            @JsonKey(name: 'bio') String? biography,
+            @JsonKey(name: 'defaultImageUrl') Uri? defaultImageUrl,
+            @JsonKey(name: 'imageUrl') Uri? imageUrl,
+            @JsonKey(name: 'pandoraId') String pandoraId)?
         listener,
     required TResult orElse(),
   }) {
@@ -2748,11 +2766,14 @@ class _$ArtistAnnotation extends ArtistAnnotation {
                 String scope)
         composer,
     required TResult Function(
-            @JsonKey(name: 'pandoraId') String pandoraId,
             @JsonKey(name: 'listenerId') int listenerId,
             @JsonKey(name: 'webname') String webname,
             @JsonKey(name: 'fullname') String? fullName,
-            @JsonKey(name: 'displayname') String displayName)
+            @JsonKey(name: 'displayname') String displayName,
+            @JsonKey(name: 'bio') String? biography,
+            @JsonKey(name: 'defaultImageUrl') Uri? defaultImageUrl,
+            @JsonKey(name: 'imageUrl') Uri? imageUrl,
+            @JsonKey(name: 'pandoraId') String pandoraId)
         listener,
   }) {
     return artist(
@@ -3015,11 +3036,14 @@ class _$ArtistAnnotation extends ArtistAnnotation {
                 String scope)?
         composer,
     TResult Function(
-            @JsonKey(name: 'pandoraId') String pandoraId,
             @JsonKey(name: 'listenerId') int listenerId,
             @JsonKey(name: 'webname') String webname,
             @JsonKey(name: 'fullname') String? fullName,
-            @JsonKey(name: 'displayname') String displayName)?
+            @JsonKey(name: 'displayname') String displayName,
+            @JsonKey(name: 'bio') String? biography,
+            @JsonKey(name: 'defaultImageUrl') Uri? defaultImageUrl,
+            @JsonKey(name: 'imageUrl') Uri? imageUrl,
+            @JsonKey(name: 'pandoraId') String pandoraId)?
         listener,
   }) {
     return artist?.call(
@@ -3282,11 +3306,14 @@ class _$ArtistAnnotation extends ArtistAnnotation {
                 String scope)?
         composer,
     TResult Function(
-            @JsonKey(name: 'pandoraId') String pandoraId,
             @JsonKey(name: 'listenerId') int listenerId,
             @JsonKey(name: 'webname') String webname,
             @JsonKey(name: 'fullname') String? fullName,
-            @JsonKey(name: 'displayname') String displayName)?
+            @JsonKey(name: 'displayname') String displayName,
+            @JsonKey(name: 'bio') String? biography,
+            @JsonKey(name: 'defaultImageUrl') Uri? defaultImageUrl,
+            @JsonKey(name: 'imageUrl') Uri? imageUrl,
+            @JsonKey(name: 'pandoraId') String pandoraId)?
         listener,
     required TResult orElse(),
   }) {
@@ -4090,11 +4117,14 @@ class _$AlbumAnnotation extends AlbumAnnotation {
                 String scope)
         composer,
     required TResult Function(
-            @JsonKey(name: 'pandoraId') String pandoraId,
             @JsonKey(name: 'listenerId') int listenerId,
             @JsonKey(name: 'webname') String webname,
             @JsonKey(name: 'fullname') String? fullName,
-            @JsonKey(name: 'displayname') String displayName)
+            @JsonKey(name: 'displayname') String displayName,
+            @JsonKey(name: 'bio') String? biography,
+            @JsonKey(name: 'defaultImageUrl') Uri? defaultImageUrl,
+            @JsonKey(name: 'imageUrl') Uri? imageUrl,
+            @JsonKey(name: 'pandoraId') String pandoraId)
         listener,
   }) {
     return album(
@@ -4360,11 +4390,14 @@ class _$AlbumAnnotation extends AlbumAnnotation {
                 String scope)?
         composer,
     TResult Function(
-            @JsonKey(name: 'pandoraId') String pandoraId,
             @JsonKey(name: 'listenerId') int listenerId,
             @JsonKey(name: 'webname') String webname,
             @JsonKey(name: 'fullname') String? fullName,
-            @JsonKey(name: 'displayname') String displayName)?
+            @JsonKey(name: 'displayname') String displayName,
+            @JsonKey(name: 'bio') String? biography,
+            @JsonKey(name: 'defaultImageUrl') Uri? defaultImageUrl,
+            @JsonKey(name: 'imageUrl') Uri? imageUrl,
+            @JsonKey(name: 'pandoraId') String pandoraId)?
         listener,
   }) {
     return album?.call(
@@ -4630,11 +4663,14 @@ class _$AlbumAnnotation extends AlbumAnnotation {
                 String scope)?
         composer,
     TResult Function(
-            @JsonKey(name: 'pandoraId') String pandoraId,
             @JsonKey(name: 'listenerId') int listenerId,
             @JsonKey(name: 'webname') String webname,
             @JsonKey(name: 'fullname') String? fullName,
-            @JsonKey(name: 'displayname') String displayName)?
+            @JsonKey(name: 'displayname') String displayName,
+            @JsonKey(name: 'bio') String? biography,
+            @JsonKey(name: 'defaultImageUrl') Uri? defaultImageUrl,
+            @JsonKey(name: 'imageUrl') Uri? imageUrl,
+            @JsonKey(name: 'pandoraId') String pandoraId)?
         listener,
     required TResult orElse(),
   }) {
@@ -5308,11 +5344,14 @@ class _$GenreAnnotation extends GenreAnnotation {
                 String scope)
         composer,
     required TResult Function(
-            @JsonKey(name: 'pandoraId') String pandoraId,
             @JsonKey(name: 'listenerId') int listenerId,
             @JsonKey(name: 'webname') String webname,
             @JsonKey(name: 'fullname') String? fullName,
-            @JsonKey(name: 'displayname') String displayName)
+            @JsonKey(name: 'displayname') String displayName,
+            @JsonKey(name: 'bio') String? biography,
+            @JsonKey(name: 'defaultImageUrl') Uri? defaultImageUrl,
+            @JsonKey(name: 'imageUrl') Uri? imageUrl,
+            @JsonKey(name: 'pandoraId') String pandoraId)
         listener,
   }) {
     return genre(
@@ -5569,11 +5608,14 @@ class _$GenreAnnotation extends GenreAnnotation {
                 String scope)?
         composer,
     TResult Function(
-            @JsonKey(name: 'pandoraId') String pandoraId,
             @JsonKey(name: 'listenerId') int listenerId,
             @JsonKey(name: 'webname') String webname,
             @JsonKey(name: 'fullname') String? fullName,
-            @JsonKey(name: 'displayname') String displayName)?
+            @JsonKey(name: 'displayname') String displayName,
+            @JsonKey(name: 'bio') String? biography,
+            @JsonKey(name: 'defaultImageUrl') Uri? defaultImageUrl,
+            @JsonKey(name: 'imageUrl') Uri? imageUrl,
+            @JsonKey(name: 'pandoraId') String pandoraId)?
         listener,
   }) {
     return genre?.call(
@@ -5830,11 +5872,14 @@ class _$GenreAnnotation extends GenreAnnotation {
                 String scope)?
         composer,
     TResult Function(
-            @JsonKey(name: 'pandoraId') String pandoraId,
             @JsonKey(name: 'listenerId') int listenerId,
             @JsonKey(name: 'webname') String webname,
             @JsonKey(name: 'fullname') String? fullName,
-            @JsonKey(name: 'displayname') String displayName)?
+            @JsonKey(name: 'displayname') String displayName,
+            @JsonKey(name: 'bio') String? biography,
+            @JsonKey(name: 'defaultImageUrl') Uri? defaultImageUrl,
+            @JsonKey(name: 'imageUrl') Uri? imageUrl,
+            @JsonKey(name: 'pandoraId') String pandoraId)?
         listener,
     required TResult orElse(),
   }) {
@@ -6677,11 +6722,14 @@ class _$PlaylistAnnotation extends PlaylistAnnotation {
                 String scope)
         composer,
     required TResult Function(
-            @JsonKey(name: 'pandoraId') String pandoraId,
             @JsonKey(name: 'listenerId') int listenerId,
             @JsonKey(name: 'webname') String webname,
             @JsonKey(name: 'fullname') String? fullName,
-            @JsonKey(name: 'displayname') String displayName)
+            @JsonKey(name: 'displayname') String displayName,
+            @JsonKey(name: 'bio') String? biography,
+            @JsonKey(name: 'defaultImageUrl') Uri? defaultImageUrl,
+            @JsonKey(name: 'imageUrl') Uri? imageUrl,
+            @JsonKey(name: 'pandoraId') String pandoraId)
         listener,
   }) {
     return playlist(
@@ -6951,11 +6999,14 @@ class _$PlaylistAnnotation extends PlaylistAnnotation {
                 String scope)?
         composer,
     TResult Function(
-            @JsonKey(name: 'pandoraId') String pandoraId,
             @JsonKey(name: 'listenerId') int listenerId,
             @JsonKey(name: 'webname') String webname,
             @JsonKey(name: 'fullname') String? fullName,
-            @JsonKey(name: 'displayname') String displayName)?
+            @JsonKey(name: 'displayname') String displayName,
+            @JsonKey(name: 'bio') String? biography,
+            @JsonKey(name: 'defaultImageUrl') Uri? defaultImageUrl,
+            @JsonKey(name: 'imageUrl') Uri? imageUrl,
+            @JsonKey(name: 'pandoraId') String pandoraId)?
         listener,
   }) {
     return playlist?.call(
@@ -7225,11 +7276,14 @@ class _$PlaylistAnnotation extends PlaylistAnnotation {
                 String scope)?
         composer,
     TResult Function(
-            @JsonKey(name: 'pandoraId') String pandoraId,
             @JsonKey(name: 'listenerId') int listenerId,
             @JsonKey(name: 'webname') String webname,
             @JsonKey(name: 'fullname') String? fullName,
-            @JsonKey(name: 'displayname') String displayName)?
+            @JsonKey(name: 'displayname') String displayName,
+            @JsonKey(name: 'bio') String? biography,
+            @JsonKey(name: 'defaultImageUrl') Uri? defaultImageUrl,
+            @JsonKey(name: 'imageUrl') Uri? imageUrl,
+            @JsonKey(name: 'pandoraId') String pandoraId)?
         listener,
     required TResult orElse(),
   }) {
@@ -7914,11 +7968,14 @@ class _$StationMediaAnnotation extends StationMediaAnnotation {
                 String scope)
         composer,
     required TResult Function(
-            @JsonKey(name: 'pandoraId') String pandoraId,
             @JsonKey(name: 'listenerId') int listenerId,
             @JsonKey(name: 'webname') String webname,
             @JsonKey(name: 'fullname') String? fullName,
-            @JsonKey(name: 'displayname') String displayName)
+            @JsonKey(name: 'displayname') String displayName,
+            @JsonKey(name: 'bio') String? biography,
+            @JsonKey(name: 'defaultImageUrl') Uri? defaultImageUrl,
+            @JsonKey(name: 'imageUrl') Uri? imageUrl,
+            @JsonKey(name: 'pandoraId') String pandoraId)
         listener,
   }) {
     return station(
@@ -8174,11 +8231,14 @@ class _$StationMediaAnnotation extends StationMediaAnnotation {
                 String scope)?
         composer,
     TResult Function(
-            @JsonKey(name: 'pandoraId') String pandoraId,
             @JsonKey(name: 'listenerId') int listenerId,
             @JsonKey(name: 'webname') String webname,
             @JsonKey(name: 'fullname') String? fullName,
-            @JsonKey(name: 'displayname') String displayName)?
+            @JsonKey(name: 'displayname') String displayName,
+            @JsonKey(name: 'bio') String? biography,
+            @JsonKey(name: 'defaultImageUrl') Uri? defaultImageUrl,
+            @JsonKey(name: 'imageUrl') Uri? imageUrl,
+            @JsonKey(name: 'pandoraId') String pandoraId)?
         listener,
   }) {
     return station?.call(
@@ -8434,11 +8494,14 @@ class _$StationMediaAnnotation extends StationMediaAnnotation {
                 String scope)?
         composer,
     TResult Function(
-            @JsonKey(name: 'pandoraId') String pandoraId,
             @JsonKey(name: 'listenerId') int listenerId,
             @JsonKey(name: 'webname') String webname,
             @JsonKey(name: 'fullname') String? fullName,
-            @JsonKey(name: 'displayname') String displayName)?
+            @JsonKey(name: 'displayname') String displayName,
+            @JsonKey(name: 'bio') String? biography,
+            @JsonKey(name: 'defaultImageUrl') Uri? defaultImageUrl,
+            @JsonKey(name: 'imageUrl') Uri? imageUrl,
+            @JsonKey(name: 'pandoraId') String pandoraId)?
         listener,
     required TResult orElse(),
   }) {
@@ -9059,11 +9122,14 @@ class _$ComposerAnnotation extends ComposerAnnotation {
                 String scope)
         composer,
     required TResult Function(
-            @JsonKey(name: 'pandoraId') String pandoraId,
             @JsonKey(name: 'listenerId') int listenerId,
             @JsonKey(name: 'webname') String webname,
             @JsonKey(name: 'fullname') String? fullName,
-            @JsonKey(name: 'displayname') String displayName)
+            @JsonKey(name: 'displayname') String displayName,
+            @JsonKey(name: 'bio') String? biography,
+            @JsonKey(name: 'defaultImageUrl') Uri? defaultImageUrl,
+            @JsonKey(name: 'imageUrl') Uri? imageUrl,
+            @JsonKey(name: 'pandoraId') String pandoraId)
         listener,
   }) {
     return composer(
@@ -9320,11 +9386,14 @@ class _$ComposerAnnotation extends ComposerAnnotation {
                 String scope)?
         composer,
     TResult Function(
-            @JsonKey(name: 'pandoraId') String pandoraId,
             @JsonKey(name: 'listenerId') int listenerId,
             @JsonKey(name: 'webname') String webname,
             @JsonKey(name: 'fullname') String? fullName,
-            @JsonKey(name: 'displayname') String displayName)?
+            @JsonKey(name: 'displayname') String displayName,
+            @JsonKey(name: 'bio') String? biography,
+            @JsonKey(name: 'defaultImageUrl') Uri? defaultImageUrl,
+            @JsonKey(name: 'imageUrl') Uri? imageUrl,
+            @JsonKey(name: 'pandoraId') String pandoraId)?
         listener,
   }) {
     return composer?.call(
@@ -9581,11 +9650,14 @@ class _$ComposerAnnotation extends ComposerAnnotation {
                 String scope)?
         composer,
     TResult Function(
-            @JsonKey(name: 'pandoraId') String pandoraId,
             @JsonKey(name: 'listenerId') int listenerId,
             @JsonKey(name: 'webname') String webname,
             @JsonKey(name: 'fullname') String? fullName,
-            @JsonKey(name: 'displayname') String displayName)?
+            @JsonKey(name: 'displayname') String displayName,
+            @JsonKey(name: 'bio') String? biography,
+            @JsonKey(name: 'defaultImageUrl') Uri? defaultImageUrl,
+            @JsonKey(name: 'imageUrl') Uri? imageUrl,
+            @JsonKey(name: 'pandoraId') String pandoraId)?
         listener,
     required TResult orElse(),
   }) {
@@ -9735,11 +9807,14 @@ abstract class _$$ListenerMediaAnnotationCopyWith<$Res>
       __$$ListenerMediaAnnotationCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(name: 'pandoraId') String pandoraId,
-      @JsonKey(name: 'listenerId') int listenerId,
+      {@JsonKey(name: 'listenerId') int listenerId,
       @JsonKey(name: 'webname') String webname,
       @JsonKey(name: 'fullname') String? fullName,
-      @JsonKey(name: 'displayname') String displayName});
+      @JsonKey(name: 'displayname') String displayName,
+      @JsonKey(name: 'bio') String? biography,
+      @JsonKey(name: 'defaultImageUrl') Uri? defaultImageUrl,
+      @JsonKey(name: 'imageUrl') Uri? imageUrl,
+      @JsonKey(name: 'pandoraId') String pandoraId});
 }
 
 /// @nodoc
@@ -9756,17 +9831,16 @@ class __$$ListenerMediaAnnotationCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? pandoraId = freezed,
     Object? listenerId = freezed,
     Object? webname = freezed,
     Object? fullName = freezed,
     Object? displayName = freezed,
+    Object? biography = freezed,
+    Object? defaultImageUrl = freezed,
+    Object? imageUrl = freezed,
+    Object? pandoraId = freezed,
   }) {
     return _then(_$ListenerMediaAnnotation(
-      pandoraId: pandoraId == freezed
-          ? _value.pandoraId
-          : pandoraId // ignore: cast_nullable_to_non_nullable
-              as String,
       listenerId: listenerId == freezed
           ? _value.listenerId
           : listenerId // ignore: cast_nullable_to_non_nullable
@@ -9783,6 +9857,22 @@ class __$$ListenerMediaAnnotationCopyWithImpl<$Res>
           ? _value.displayName
           : displayName // ignore: cast_nullable_to_non_nullable
               as String,
+      biography: biography == freezed
+          ? _value.biography
+          : biography // ignore: cast_nullable_to_non_nullable
+              as String?,
+      defaultImageUrl: defaultImageUrl == freezed
+          ? _value.defaultImageUrl
+          : defaultImageUrl // ignore: cast_nullable_to_non_nullable
+              as Uri?,
+      imageUrl: imageUrl == freezed
+          ? _value.imageUrl
+          : imageUrl // ignore: cast_nullable_to_non_nullable
+              as Uri?,
+      pandoraId: pandoraId == freezed
+          ? _value.pandoraId
+          : pandoraId // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -9791,11 +9881,14 @@ class __$$ListenerMediaAnnotationCopyWithImpl<$Res>
 @JsonSerializable()
 class _$ListenerMediaAnnotation extends ListenerMediaAnnotation {
   const _$ListenerMediaAnnotation(
-      {@JsonKey(name: 'pandoraId') required this.pandoraId,
-      @JsonKey(name: 'listenerId') required this.listenerId,
+      {@JsonKey(name: 'listenerId') required this.listenerId,
       @JsonKey(name: 'webname') required this.webname,
       @JsonKey(name: 'fullname') required this.fullName,
       @JsonKey(name: 'displayname') required this.displayName,
+      @JsonKey(name: 'bio') this.biography,
+      @JsonKey(name: 'defaultImageUrl') this.defaultImageUrl,
+      @JsonKey(name: 'imageUrl') this.imageUrl,
+      @JsonKey(name: 'pandoraId') required this.pandoraId,
       final String? $type})
       : $type = $type ?? 'LI',
         super._();
@@ -9803,9 +9896,6 @@ class _$ListenerMediaAnnotation extends ListenerMediaAnnotation {
   factory _$ListenerMediaAnnotation.fromJson(Map<String, dynamic> json) =>
       _$$ListenerMediaAnnotationFromJson(json);
 
-  @override
-  @JsonKey(name: 'pandoraId')
-  final String pandoraId;
   @override
   @JsonKey(name: 'listenerId')
   final int listenerId;
@@ -9818,13 +9908,31 @@ class _$ListenerMediaAnnotation extends ListenerMediaAnnotation {
   @override
   @JsonKey(name: 'displayname')
   final String displayName;
+  @override
+  @JsonKey(name: 'bio')
+  final String? biography;
+
+  /// The default profile picture URL used by Pandora.
+  @override
+  @JsonKey(name: 'defaultImageUrl')
+  final Uri? defaultImageUrl;
+
+  /// The profile picture URL as set by the listener.
+  ///
+  /// This URL may be a Facebook profile picture URL.
+  @override
+  @JsonKey(name: 'imageUrl')
+  final Uri? imageUrl;
+  @override
+  @JsonKey(name: 'pandoraId')
+  final String pandoraId;
 
   @JsonKey(name: 'type')
   final String $type;
 
   @override
   String toString() {
-    return 'MediaAnnotation.listener(pandoraId: $pandoraId, listenerId: $listenerId, webname: $webname, fullName: $fullName, displayName: $displayName)';
+    return 'MediaAnnotation.listener(listenerId: $listenerId, webname: $webname, fullName: $fullName, displayName: $displayName, biography: $biography, defaultImageUrl: $defaultImageUrl, imageUrl: $imageUrl, pandoraId: $pandoraId)';
   }
 
   @override
@@ -9832,24 +9940,31 @@ class _$ListenerMediaAnnotation extends ListenerMediaAnnotation {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ListenerMediaAnnotation &&
-            const DeepCollectionEquality().equals(other.pandoraId, pandoraId) &&
             const DeepCollectionEquality()
                 .equals(other.listenerId, listenerId) &&
             const DeepCollectionEquality().equals(other.webname, webname) &&
             const DeepCollectionEquality().equals(other.fullName, fullName) &&
             const DeepCollectionEquality()
-                .equals(other.displayName, displayName));
+                .equals(other.displayName, displayName) &&
+            const DeepCollectionEquality().equals(other.biography, biography) &&
+            const DeepCollectionEquality()
+                .equals(other.defaultImageUrl, defaultImageUrl) &&
+            const DeepCollectionEquality().equals(other.imageUrl, imageUrl) &&
+            const DeepCollectionEquality().equals(other.pandoraId, pandoraId));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(pandoraId),
       const DeepCollectionEquality().hash(listenerId),
       const DeepCollectionEquality().hash(webname),
       const DeepCollectionEquality().hash(fullName),
-      const DeepCollectionEquality().hash(displayName));
+      const DeepCollectionEquality().hash(displayName),
+      const DeepCollectionEquality().hash(biography),
+      const DeepCollectionEquality().hash(defaultImageUrl),
+      const DeepCollectionEquality().hash(imageUrl),
+      const DeepCollectionEquality().hash(pandoraId));
 
   @JsonKey(ignore: true)
   @override
@@ -10097,14 +10212,18 @@ class _$ListenerMediaAnnotation extends ListenerMediaAnnotation {
                 String scope)
         composer,
     required TResult Function(
-            @JsonKey(name: 'pandoraId') String pandoraId,
             @JsonKey(name: 'listenerId') int listenerId,
             @JsonKey(name: 'webname') String webname,
             @JsonKey(name: 'fullname') String? fullName,
-            @JsonKey(name: 'displayname') String displayName)
+            @JsonKey(name: 'displayname') String displayName,
+            @JsonKey(name: 'bio') String? biography,
+            @JsonKey(name: 'defaultImageUrl') Uri? defaultImageUrl,
+            @JsonKey(name: 'imageUrl') Uri? imageUrl,
+            @JsonKey(name: 'pandoraId') String pandoraId)
         listener,
   }) {
-    return listener(pandoraId, listenerId, webname, fullName, displayName);
+    return listener(listenerId, webname, fullName, displayName, biography,
+        defaultImageUrl, imageUrl, pandoraId);
   }
 
   @override
@@ -10347,15 +10466,18 @@ class _$ListenerMediaAnnotation extends ListenerMediaAnnotation {
                 String scope)?
         composer,
     TResult Function(
-            @JsonKey(name: 'pandoraId') String pandoraId,
             @JsonKey(name: 'listenerId') int listenerId,
             @JsonKey(name: 'webname') String webname,
             @JsonKey(name: 'fullname') String? fullName,
-            @JsonKey(name: 'displayname') String displayName)?
+            @JsonKey(name: 'displayname') String displayName,
+            @JsonKey(name: 'bio') String? biography,
+            @JsonKey(name: 'defaultImageUrl') Uri? defaultImageUrl,
+            @JsonKey(name: 'imageUrl') Uri? imageUrl,
+            @JsonKey(name: 'pandoraId') String pandoraId)?
         listener,
   }) {
-    return listener?.call(
-        pandoraId, listenerId, webname, fullName, displayName);
+    return listener?.call(listenerId, webname, fullName, displayName, biography,
+        defaultImageUrl, imageUrl, pandoraId);
   }
 
   @override
@@ -10598,16 +10720,20 @@ class _$ListenerMediaAnnotation extends ListenerMediaAnnotation {
                 String scope)?
         composer,
     TResult Function(
-            @JsonKey(name: 'pandoraId') String pandoraId,
             @JsonKey(name: 'listenerId') int listenerId,
             @JsonKey(name: 'webname') String webname,
             @JsonKey(name: 'fullname') String? fullName,
-            @JsonKey(name: 'displayname') String displayName)?
+            @JsonKey(name: 'displayname') String displayName,
+            @JsonKey(name: 'bio') String? biography,
+            @JsonKey(name: 'defaultImageUrl') Uri? defaultImageUrl,
+            @JsonKey(name: 'imageUrl') Uri? imageUrl,
+            @JsonKey(name: 'pandoraId') String pandoraId)?
         listener,
     required TResult orElse(),
   }) {
     if (listener != null) {
-      return listener(pandoraId, listenerId, webname, fullName, displayName);
+      return listener(listenerId, webname, fullName, displayName, biography,
+          defaultImageUrl, imageUrl, pandoraId);
     }
     return orElse();
   }
@@ -10671,20 +10797,20 @@ class _$ListenerMediaAnnotation extends ListenerMediaAnnotation {
 
 abstract class ListenerMediaAnnotation extends MediaAnnotation {
   const factory ListenerMediaAnnotation(
-          {@JsonKey(name: 'pandoraId') required final String pandoraId,
-          @JsonKey(name: 'listenerId') required final int listenerId,
+          {@JsonKey(name: 'listenerId') required final int listenerId,
           @JsonKey(name: 'webname') required final String webname,
           @JsonKey(name: 'fullname') required final String? fullName,
-          @JsonKey(name: 'displayname') required final String displayName}) =
+          @JsonKey(name: 'displayname') required final String displayName,
+          @JsonKey(name: 'bio') final String? biography,
+          @JsonKey(name: 'defaultImageUrl') final Uri? defaultImageUrl,
+          @JsonKey(name: 'imageUrl') final Uri? imageUrl,
+          @JsonKey(name: 'pandoraId') required final String pandoraId}) =
       _$ListenerMediaAnnotation;
   const ListenerMediaAnnotation._() : super._();
 
   factory ListenerMediaAnnotation.fromJson(Map<String, dynamic> json) =
       _$ListenerMediaAnnotation.fromJson;
 
-  @override
-  @JsonKey(name: 'pandoraId')
-  String get pandoraId;
   @JsonKey(name: 'listenerId')
   int get listenerId;
   @JsonKey(name: 'webname')
@@ -10693,6 +10819,21 @@ abstract class ListenerMediaAnnotation extends MediaAnnotation {
   String? get fullName;
   @JsonKey(name: 'displayname')
   String get displayName;
+  @JsonKey(name: 'bio')
+  String? get biography;
+
+  /// The default profile picture URL used by Pandora.
+  @JsonKey(name: 'defaultImageUrl')
+  Uri? get defaultImageUrl;
+
+  /// The profile picture URL as set by the listener.
+  ///
+  /// This URL may be a Facebook profile picture URL.
+  @JsonKey(name: 'imageUrl')
+  Uri? get imageUrl;
+  @override
+  @JsonKey(name: 'pandoraId')
+  String get pandoraId;
   @override
   @JsonKey(ignore: true)
   _$$ListenerMediaAnnotationCopyWith<_$ListenerMediaAnnotation> get copyWith =>

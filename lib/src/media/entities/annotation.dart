@@ -186,12 +186,20 @@ class MediaAnnotation with _$MediaAnnotation implements PandoraEntity {
 
   @FreezedUnionValue('LI')
   const factory MediaAnnotation.listener({
-    @JsonKey(name: 'pandoraId') required String pandoraId,
     @JsonKey(name: 'listenerId') required int listenerId,
     @JsonKey(name: 'webname') required String webname,
     @JsonKey(name: 'fullname') required String? fullName,
     @JsonKey(name: 'displayname') required String displayName,
-    // TODO investigate bio and imageUrl fields
+    @JsonKey(name: 'bio') String? biography,
+
+    /// The default profile picture URL used by Pandora.
+    @JsonKey(name: 'defaultImageUrl') Uri? defaultImageUrl,
+
+    /// The profile picture URL as set by the listener.
+    ///
+    /// This URL may be a Facebook profile picture URL.
+    @JsonKey(name: 'imageUrl') Uri? imageUrl,
+    @JsonKey(name: 'pandoraId') required String pandoraId,
   }) = ListenerMediaAnnotation;
 
   @override
