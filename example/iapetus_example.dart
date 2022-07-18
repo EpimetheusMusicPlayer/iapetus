@@ -3,6 +3,7 @@
 import 'dart:io';
 
 import 'package:iapetus/iapetus.dart';
+import 'package:iapetus/src/settings/api/settings.dart';
 
 Future<void> main(List<String> arguments) async {
   // Read the email and password from arguments.
@@ -30,6 +31,9 @@ Future<void> main(List<String> arguments) async {
   // Retrieve the user's profile.
   final profile = await iapetus.getFullProfile();
   final profilePictureUrl = profile.listenerAnnotation.imageUrl;
+
+  // Retrieve the user's settings.
+  final settings = await iapetus.getUserSettings();
 
   // Retrieve the station list.
   final stationList = await iapetus.getStations();
