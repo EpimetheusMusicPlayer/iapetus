@@ -1,6 +1,10 @@
 part of 'package:iapetus/src/iapetus.dart';
 
 extension AuthenticationApi on Iapetus {
+  /// Authenticates the partner with Pandora.
+  ///
+  /// This function may be called more than once; the latest response will be
+  /// used for future operations.
   Future<void> partnerLogin() async {
     assert(!loggedIn);
     final response = await makeApiRequest<Map<String, dynamic>>(
@@ -92,6 +96,12 @@ extension AuthenticationApi on Iapetus {
     _user = AuthenticatedUser.fromJson(response);
   }
 
+  /// Logs out of Pandora, removing the device association if it exists.
+  Future<void> userLogout() async {
+    await _disassociateDevice();
+    _user = null;
+  }
+
   /// Updates the authentication token in the [user].
   ///
   /// This is intended for use by other parts of the package, as some API
@@ -112,5 +122,20 @@ extension AuthenticationApi on Iapetus {
       },
     );
     await secureStorage.setDeviceRegistered(true);
+  }
+
+  /// Disassociates a device from a user.
+  ///
+  /// If the device is not already associated, this does nothing.
+  Future<void> _disassociateDevice() async {
+    // ignore: prefer_void_to_null
+    await makeApiRequest<Null>(
+      'device.disassociateDevice',
+      data: {
+        'partnerAuthToken': _partner!.partnerAuthToken,
+        'deviceId': await deviceInfo.getDeviceId(),
+      },
+    );
+    await secureStorage.setDeviceRegistered(false);
   }
 }
