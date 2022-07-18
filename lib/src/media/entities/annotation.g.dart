@@ -413,7 +413,7 @@ _$StationMediaAnnotation _$$StationMediaAnnotationFromJson(
           listenerId: $checkedConvert('listenerId', (v) => v as int),
           listenerPandoraId:
               $checkedConvert('listenerPandoraId', (v) => v as String),
-          initialSeedId: $checkedConvert('initialSeedId', (v) => v as String),
+          initialSeedId: $checkedConvert('initialSeedId', (v) => v as String?),
           isQuickMix: $checkedConvert('isQuickMix', (v) => v as bool),
           isThumbprint: $checkedConvert('isThumbprint', (v) => v as bool),
           hasCuratedModes: $checkedConvert(

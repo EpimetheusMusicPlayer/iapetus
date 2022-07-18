@@ -245,7 +245,7 @@ mixin _$MediaAnnotation {
             @JsonKey(name: 'listenerPandoraId')
                 String listenerPandoraId,
             @JsonKey(name: 'initialSeedId')
-                String initialSeedId,
+                String? initialSeedId,
             @JsonKey(name: 'isQuickMix')
                 bool isQuickMix,
             @JsonKey(name: 'isThumbprint')
@@ -495,7 +495,7 @@ mixin _$MediaAnnotation {
             @JsonKey(name: 'listenerPandoraId')
                 String listenerPandoraId,
             @JsonKey(name: 'initialSeedId')
-                String initialSeedId,
+                String? initialSeedId,
             @JsonKey(name: 'isQuickMix')
                 bool isQuickMix,
             @JsonKey(name: 'isThumbprint')
@@ -745,7 +745,7 @@ mixin _$MediaAnnotation {
             @JsonKey(name: 'listenerPandoraId')
                 String listenerPandoraId,
             @JsonKey(name: 'initialSeedId')
-                String initialSeedId,
+                String? initialSeedId,
             @JsonKey(name: 'isQuickMix')
                 bool isQuickMix,
             @JsonKey(name: 'isThumbprint')
@@ -1423,7 +1423,7 @@ class _$TrackAnnotation extends TrackAnnotation {
             @JsonKey(name: 'listenerPandoraId')
                 String listenerPandoraId,
             @JsonKey(name: 'initialSeedId')
-                String initialSeedId,
+                String? initialSeedId,
             @JsonKey(name: 'isQuickMix')
                 bool isQuickMix,
             @JsonKey(name: 'isThumbprint')
@@ -1694,7 +1694,7 @@ class _$TrackAnnotation extends TrackAnnotation {
             @JsonKey(name: 'listenerPandoraId')
                 String listenerPandoraId,
             @JsonKey(name: 'initialSeedId')
-                String initialSeedId,
+                String? initialSeedId,
             @JsonKey(name: 'isQuickMix')
                 bool isQuickMix,
             @JsonKey(name: 'isThumbprint')
@@ -1965,7 +1965,7 @@ class _$TrackAnnotation extends TrackAnnotation {
             @JsonKey(name: 'listenerPandoraId')
                 String listenerPandoraId,
             @JsonKey(name: 'initialSeedId')
-                String initialSeedId,
+                String? initialSeedId,
             @JsonKey(name: 'isQuickMix')
                 bool isQuickMix,
             @JsonKey(name: 'isThumbprint')
@@ -2729,7 +2729,7 @@ class _$ArtistAnnotation extends ArtistAnnotation {
             @JsonKey(name: 'listenerPandoraId')
                 String listenerPandoraId,
             @JsonKey(name: 'initialSeedId')
-                String initialSeedId,
+                String? initialSeedId,
             @JsonKey(name: 'isQuickMix')
                 bool isQuickMix,
             @JsonKey(name: 'isThumbprint')
@@ -2999,7 +2999,7 @@ class _$ArtistAnnotation extends ArtistAnnotation {
             @JsonKey(name: 'listenerPandoraId')
                 String listenerPandoraId,
             @JsonKey(name: 'initialSeedId')
-                String initialSeedId,
+                String? initialSeedId,
             @JsonKey(name: 'isQuickMix')
                 bool isQuickMix,
             @JsonKey(name: 'isThumbprint')
@@ -3269,7 +3269,7 @@ class _$ArtistAnnotation extends ArtistAnnotation {
             @JsonKey(name: 'listenerPandoraId')
                 String listenerPandoraId,
             @JsonKey(name: 'initialSeedId')
-                String initialSeedId,
+                String? initialSeedId,
             @JsonKey(name: 'isQuickMix')
                 bool isQuickMix,
             @JsonKey(name: 'isThumbprint')
@@ -4080,7 +4080,7 @@ class _$AlbumAnnotation extends AlbumAnnotation {
             @JsonKey(name: 'listenerPandoraId')
                 String listenerPandoraId,
             @JsonKey(name: 'initialSeedId')
-                String initialSeedId,
+                String? initialSeedId,
             @JsonKey(name: 'isQuickMix')
                 bool isQuickMix,
             @JsonKey(name: 'isThumbprint')
@@ -4353,7 +4353,7 @@ class _$AlbumAnnotation extends AlbumAnnotation {
             @JsonKey(name: 'listenerPandoraId')
                 String listenerPandoraId,
             @JsonKey(name: 'initialSeedId')
-                String initialSeedId,
+                String? initialSeedId,
             @JsonKey(name: 'isQuickMix')
                 bool isQuickMix,
             @JsonKey(name: 'isThumbprint')
@@ -4626,7 +4626,7 @@ class _$AlbumAnnotation extends AlbumAnnotation {
             @JsonKey(name: 'listenerPandoraId')
                 String listenerPandoraId,
             @JsonKey(name: 'initialSeedId')
-                String initialSeedId,
+                String? initialSeedId,
             @JsonKey(name: 'isQuickMix')
                 bool isQuickMix,
             @JsonKey(name: 'isThumbprint')
@@ -5307,7 +5307,7 @@ class _$GenreAnnotation extends GenreAnnotation {
             @JsonKey(name: 'listenerPandoraId')
                 String listenerPandoraId,
             @JsonKey(name: 'initialSeedId')
-                String initialSeedId,
+                String? initialSeedId,
             @JsonKey(name: 'isQuickMix')
                 bool isQuickMix,
             @JsonKey(name: 'isThumbprint')
@@ -5571,7 +5571,7 @@ class _$GenreAnnotation extends GenreAnnotation {
             @JsonKey(name: 'listenerPandoraId')
                 String listenerPandoraId,
             @JsonKey(name: 'initialSeedId')
-                String initialSeedId,
+                String? initialSeedId,
             @JsonKey(name: 'isQuickMix')
                 bool isQuickMix,
             @JsonKey(name: 'isThumbprint')
@@ -5835,7 +5835,7 @@ class _$GenreAnnotation extends GenreAnnotation {
             @JsonKey(name: 'listenerPandoraId')
                 String listenerPandoraId,
             @JsonKey(name: 'initialSeedId')
-                String initialSeedId,
+                String? initialSeedId,
             @JsonKey(name: 'isQuickMix')
                 bool isQuickMix,
             @JsonKey(name: 'isThumbprint')
@@ -6685,7 +6685,7 @@ class _$PlaylistAnnotation extends PlaylistAnnotation {
             @JsonKey(name: 'listenerPandoraId')
                 String listenerPandoraId,
             @JsonKey(name: 'initialSeedId')
-                String initialSeedId,
+                String? initialSeedId,
             @JsonKey(name: 'isQuickMix')
                 bool isQuickMix,
             @JsonKey(name: 'isThumbprint')
@@ -6962,7 +6962,7 @@ class _$PlaylistAnnotation extends PlaylistAnnotation {
             @JsonKey(name: 'listenerPandoraId')
                 String listenerPandoraId,
             @JsonKey(name: 'initialSeedId')
-                String initialSeedId,
+                String? initialSeedId,
             @JsonKey(name: 'isQuickMix')
                 bool isQuickMix,
             @JsonKey(name: 'isThumbprint')
@@ -7239,7 +7239,7 @@ class _$PlaylistAnnotation extends PlaylistAnnotation {
             @JsonKey(name: 'listenerPandoraId')
                 String listenerPandoraId,
             @JsonKey(name: 'initialSeedId')
-                String initialSeedId,
+                String? initialSeedId,
             @JsonKey(name: 'isQuickMix')
                 bool isQuickMix,
             @JsonKey(name: 'isThumbprint')
@@ -7514,7 +7514,7 @@ abstract class _$$StationMediaAnnotationCopyWith<$Res>
       @JsonKey(name: 'listenerPandoraId')
           String listenerPandoraId,
       @JsonKey(name: 'initialSeedId')
-          String initialSeedId,
+          String? initialSeedId,
       @JsonKey(name: 'isQuickMix')
           bool isQuickMix,
       @JsonKey(name: 'isThumbprint')
@@ -7574,7 +7574,7 @@ class __$$StationMediaAnnotationCopyWithImpl<$Res>
       initialSeedId: initialSeedId == freezed
           ? _value.initialSeedId
           : initialSeedId // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       isQuickMix: isQuickMix == freezed
           ? _value.isQuickMix
           : isQuickMix // ignore: cast_nullable_to_non_nullable
@@ -7623,7 +7623,7 @@ class _$StationMediaAnnotation extends StationMediaAnnotation {
       @JsonKey(name: 'listenerPandoraId')
           required this.listenerPandoraId,
       @JsonKey(name: 'initialSeedId')
-          required this.initialSeedId,
+          this.initialSeedId,
       @JsonKey(name: 'isQuickMix')
           required this.isQuickMix,
       @JsonKey(name: 'isThumbprint')
@@ -7655,7 +7655,7 @@ class _$StationMediaAnnotation extends StationMediaAnnotation {
   final String listenerPandoraId;
   @override
   @JsonKey(name: 'initialSeedId')
-  final String initialSeedId;
+  final String? initialSeedId;
   @override
   @JsonKey(name: 'isQuickMix')
   final bool isQuickMix;
@@ -7931,7 +7931,7 @@ class _$StationMediaAnnotation extends StationMediaAnnotation {
             @JsonKey(name: 'listenerPandoraId')
                 String listenerPandoraId,
             @JsonKey(name: 'initialSeedId')
-                String initialSeedId,
+                String? initialSeedId,
             @JsonKey(name: 'isQuickMix')
                 bool isQuickMix,
             @JsonKey(name: 'isThumbprint')
@@ -8194,7 +8194,7 @@ class _$StationMediaAnnotation extends StationMediaAnnotation {
             @JsonKey(name: 'listenerPandoraId')
                 String listenerPandoraId,
             @JsonKey(name: 'initialSeedId')
-                String initialSeedId,
+                String? initialSeedId,
             @JsonKey(name: 'isQuickMix')
                 bool isQuickMix,
             @JsonKey(name: 'isThumbprint')
@@ -8457,7 +8457,7 @@ class _$StationMediaAnnotation extends StationMediaAnnotation {
             @JsonKey(name: 'listenerPandoraId')
                 String listenerPandoraId,
             @JsonKey(name: 'initialSeedId')
-                String initialSeedId,
+                String? initialSeedId,
             @JsonKey(name: 'isQuickMix')
                 bool isQuickMix,
             @JsonKey(name: 'isThumbprint')
@@ -8589,7 +8589,7 @@ abstract class StationMediaAnnotation extends MediaAnnotation {
       @JsonKey(name: 'listenerPandoraId')
           required final String listenerPandoraId,
       @JsonKey(name: 'initialSeedId')
-          required final String initialSeedId,
+          final String? initialSeedId,
       @JsonKey(name: 'isQuickMix')
           required final bool isQuickMix,
       @JsonKey(name: 'isThumbprint')
@@ -8614,7 +8614,7 @@ abstract class StationMediaAnnotation extends MediaAnnotation {
   @JsonKey(name: 'listenerPandoraId')
   String get listenerPandoraId;
   @JsonKey(name: 'initialSeedId')
-  String get initialSeedId;
+  String? get initialSeedId;
   @JsonKey(name: 'isQuickMix')
   bool get isQuickMix;
   @JsonKey(name: 'isThumbprint')
@@ -9085,7 +9085,7 @@ class _$ComposerAnnotation extends ComposerAnnotation {
             @JsonKey(name: 'listenerPandoraId')
                 String listenerPandoraId,
             @JsonKey(name: 'initialSeedId')
-                String initialSeedId,
+                String? initialSeedId,
             @JsonKey(name: 'isQuickMix')
                 bool isQuickMix,
             @JsonKey(name: 'isThumbprint')
@@ -9349,7 +9349,7 @@ class _$ComposerAnnotation extends ComposerAnnotation {
             @JsonKey(name: 'listenerPandoraId')
                 String listenerPandoraId,
             @JsonKey(name: 'initialSeedId')
-                String initialSeedId,
+                String? initialSeedId,
             @JsonKey(name: 'isQuickMix')
                 bool isQuickMix,
             @JsonKey(name: 'isThumbprint')
@@ -9613,7 +9613,7 @@ class _$ComposerAnnotation extends ComposerAnnotation {
             @JsonKey(name: 'listenerPandoraId')
                 String listenerPandoraId,
             @JsonKey(name: 'initialSeedId')
-                String initialSeedId,
+                String? initialSeedId,
             @JsonKey(name: 'isQuickMix')
                 bool isQuickMix,
             @JsonKey(name: 'isThumbprint')
@@ -10175,7 +10175,7 @@ class _$ListenerMediaAnnotation extends ListenerMediaAnnotation {
             @JsonKey(name: 'listenerPandoraId')
                 String listenerPandoraId,
             @JsonKey(name: 'initialSeedId')
-                String initialSeedId,
+                String? initialSeedId,
             @JsonKey(name: 'isQuickMix')
                 bool isQuickMix,
             @JsonKey(name: 'isThumbprint')
@@ -10429,7 +10429,7 @@ class _$ListenerMediaAnnotation extends ListenerMediaAnnotation {
             @JsonKey(name: 'listenerPandoraId')
                 String listenerPandoraId,
             @JsonKey(name: 'initialSeedId')
-                String initialSeedId,
+                String? initialSeedId,
             @JsonKey(name: 'isQuickMix')
                 bool isQuickMix,
             @JsonKey(name: 'isThumbprint')
@@ -10683,7 +10683,7 @@ class _$ListenerMediaAnnotation extends ListenerMediaAnnotation {
             @JsonKey(name: 'listenerPandoraId')
                 String listenerPandoraId,
             @JsonKey(name: 'initialSeedId')
-                String initialSeedId,
+                String? initialSeedId,
             @JsonKey(name: 'isQuickMix')
                 bool isQuickMix,
             @JsonKey(name: 'isThumbprint')

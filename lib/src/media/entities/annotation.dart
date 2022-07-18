@@ -156,7 +156,7 @@ class MediaAnnotation with _$MediaAnnotation implements PandoraEntity {
     @JsonKey(name: 'stationId') required final String stationId,
     @JsonKey(name: 'listenerId') required final int listenerId,
     @JsonKey(name: 'listenerPandoraId') required final String listenerPandoraId,
-    @JsonKey(name: 'initialSeedId') required final String initialSeedId,
+    @JsonKey(name: 'initialSeedId') final String? initialSeedId,
     @JsonKey(name: 'isQuickMix') required final bool isQuickMix,
     @JsonKey(name: 'isThumbprint') required final bool isThumbprint,
     @JsonKey(name: 'hasCuratedModes', fromJson: readOptInBool, toJson: writeOptInBool)
