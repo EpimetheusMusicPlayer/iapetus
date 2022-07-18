@@ -89,6 +89,7 @@ extension PandoraApi on Iapetus {
               decrypt: decrypt,
             );
           case PandoraApiErrorCode.licensingRestrictions:
+          case PandoraApiErrorCode.invalidCountryCode:
             throw const IapetusLocationException();
           default:
             throw apiException;
