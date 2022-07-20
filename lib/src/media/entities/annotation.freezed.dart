@@ -23,19 +23,19 @@ MediaAnnotation _$MediaAnnotationFromJson(Map<String, dynamic> json) {
     case 'AL':
       return AlbumAnnotation.fromJson(json);
     case 'AM':
-      return ArtistMessageMediaAnnotation.fromJson(json);
+      return ArtistMessageAnnotation.fromJson(json);
     case 'GE':
       return GenreAnnotation.fromJson(json);
     case 'PL':
       return PlaylistAnnotation.fromJson(json);
     case 'ST':
-      return StationMediaAnnotation.fromJson(json);
+      return StationAnnotation.fromJson(json);
     case 'curator':
-      return CuratorMediaAnnotation.fromJson(json);
+      return CuratorAnnotation.fromJson(json);
     case 'CO':
       return ComposerAnnotation.fromJson(json);
     case 'LI':
-      return ListenerMediaAnnotation.fromJson(json);
+      return ListenerAnnotation.fromJson(json);
 
     default:
       throw CheckedFromJsonException(json, 'type', 'MediaAnnotation',
@@ -941,13 +941,13 @@ mixin _$MediaAnnotation {
     required TResult Function(TrackAnnotation value) track,
     required TResult Function(ArtistAnnotation value) artist,
     required TResult Function(AlbumAnnotation value) album,
-    required TResult Function(ArtistMessageMediaAnnotation value) artistMessage,
+    required TResult Function(ArtistMessageAnnotation value) artistMessage,
     required TResult Function(GenreAnnotation value) genre,
     required TResult Function(PlaylistAnnotation value) playlist,
-    required TResult Function(StationMediaAnnotation value) station,
-    required TResult Function(CuratorMediaAnnotation value) curator,
+    required TResult Function(StationAnnotation value) station,
+    required TResult Function(CuratorAnnotation value) curator,
     required TResult Function(ComposerAnnotation value) composer,
-    required TResult Function(ListenerMediaAnnotation value) listener,
+    required TResult Function(ListenerAnnotation value) listener,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -955,13 +955,13 @@ mixin _$MediaAnnotation {
     TResult Function(TrackAnnotation value)? track,
     TResult Function(ArtistAnnotation value)? artist,
     TResult Function(AlbumAnnotation value)? album,
-    TResult Function(ArtistMessageMediaAnnotation value)? artistMessage,
+    TResult Function(ArtistMessageAnnotation value)? artistMessage,
     TResult Function(GenreAnnotation value)? genre,
     TResult Function(PlaylistAnnotation value)? playlist,
-    TResult Function(StationMediaAnnotation value)? station,
-    TResult Function(CuratorMediaAnnotation value)? curator,
+    TResult Function(StationAnnotation value)? station,
+    TResult Function(CuratorAnnotation value)? curator,
     TResult Function(ComposerAnnotation value)? composer,
-    TResult Function(ListenerMediaAnnotation value)? listener,
+    TResult Function(ListenerAnnotation value)? listener,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -969,13 +969,13 @@ mixin _$MediaAnnotation {
     TResult Function(TrackAnnotation value)? track,
     TResult Function(ArtistAnnotation value)? artist,
     TResult Function(AlbumAnnotation value)? album,
-    TResult Function(ArtistMessageMediaAnnotation value)? artistMessage,
+    TResult Function(ArtistMessageAnnotation value)? artistMessage,
     TResult Function(GenreAnnotation value)? genre,
     TResult Function(PlaylistAnnotation value)? playlist,
-    TResult Function(StationMediaAnnotation value)? station,
-    TResult Function(CuratorMediaAnnotation value)? curator,
+    TResult Function(StationAnnotation value)? station,
+    TResult Function(CuratorAnnotation value)? curator,
     TResult Function(ComposerAnnotation value)? composer,
-    TResult Function(ListenerMediaAnnotation value)? listener,
+    TResult Function(ListenerAnnotation value)? listener,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -2329,13 +2329,13 @@ class _$TrackAnnotation extends TrackAnnotation {
     required TResult Function(TrackAnnotation value) track,
     required TResult Function(ArtistAnnotation value) artist,
     required TResult Function(AlbumAnnotation value) album,
-    required TResult Function(ArtistMessageMediaAnnotation value) artistMessage,
+    required TResult Function(ArtistMessageAnnotation value) artistMessage,
     required TResult Function(GenreAnnotation value) genre,
     required TResult Function(PlaylistAnnotation value) playlist,
-    required TResult Function(StationMediaAnnotation value) station,
-    required TResult Function(CuratorMediaAnnotation value) curator,
+    required TResult Function(StationAnnotation value) station,
+    required TResult Function(CuratorAnnotation value) curator,
     required TResult Function(ComposerAnnotation value) composer,
-    required TResult Function(ListenerMediaAnnotation value) listener,
+    required TResult Function(ListenerAnnotation value) listener,
   }) {
     return track(this);
   }
@@ -2346,13 +2346,13 @@ class _$TrackAnnotation extends TrackAnnotation {
     TResult Function(TrackAnnotation value)? track,
     TResult Function(ArtistAnnotation value)? artist,
     TResult Function(AlbumAnnotation value)? album,
-    TResult Function(ArtistMessageMediaAnnotation value)? artistMessage,
+    TResult Function(ArtistMessageAnnotation value)? artistMessage,
     TResult Function(GenreAnnotation value)? genre,
     TResult Function(PlaylistAnnotation value)? playlist,
-    TResult Function(StationMediaAnnotation value)? station,
-    TResult Function(CuratorMediaAnnotation value)? curator,
+    TResult Function(StationAnnotation value)? station,
+    TResult Function(CuratorAnnotation value)? curator,
     TResult Function(ComposerAnnotation value)? composer,
-    TResult Function(ListenerMediaAnnotation value)? listener,
+    TResult Function(ListenerAnnotation value)? listener,
   }) {
     return track?.call(this);
   }
@@ -2363,13 +2363,13 @@ class _$TrackAnnotation extends TrackAnnotation {
     TResult Function(TrackAnnotation value)? track,
     TResult Function(ArtistAnnotation value)? artist,
     TResult Function(AlbumAnnotation value)? album,
-    TResult Function(ArtistMessageMediaAnnotation value)? artistMessage,
+    TResult Function(ArtistMessageAnnotation value)? artistMessage,
     TResult Function(GenreAnnotation value)? genre,
     TResult Function(PlaylistAnnotation value)? playlist,
-    TResult Function(StationMediaAnnotation value)? station,
-    TResult Function(CuratorMediaAnnotation value)? curator,
+    TResult Function(StationAnnotation value)? station,
+    TResult Function(CuratorAnnotation value)? curator,
     TResult Function(ComposerAnnotation value)? composer,
-    TResult Function(ListenerMediaAnnotation value)? listener,
+    TResult Function(ListenerAnnotation value)? listener,
     required TResult orElse(),
   }) {
     if (track != null) {
@@ -3776,13 +3776,13 @@ class _$ArtistAnnotation extends ArtistAnnotation {
     required TResult Function(TrackAnnotation value) track,
     required TResult Function(ArtistAnnotation value) artist,
     required TResult Function(AlbumAnnotation value) album,
-    required TResult Function(ArtistMessageMediaAnnotation value) artistMessage,
+    required TResult Function(ArtistMessageAnnotation value) artistMessage,
     required TResult Function(GenreAnnotation value) genre,
     required TResult Function(PlaylistAnnotation value) playlist,
-    required TResult Function(StationMediaAnnotation value) station,
-    required TResult Function(CuratorMediaAnnotation value) curator,
+    required TResult Function(StationAnnotation value) station,
+    required TResult Function(CuratorAnnotation value) curator,
     required TResult Function(ComposerAnnotation value) composer,
-    required TResult Function(ListenerMediaAnnotation value) listener,
+    required TResult Function(ListenerAnnotation value) listener,
   }) {
     return artist(this);
   }
@@ -3793,13 +3793,13 @@ class _$ArtistAnnotation extends ArtistAnnotation {
     TResult Function(TrackAnnotation value)? track,
     TResult Function(ArtistAnnotation value)? artist,
     TResult Function(AlbumAnnotation value)? album,
-    TResult Function(ArtistMessageMediaAnnotation value)? artistMessage,
+    TResult Function(ArtistMessageAnnotation value)? artistMessage,
     TResult Function(GenreAnnotation value)? genre,
     TResult Function(PlaylistAnnotation value)? playlist,
-    TResult Function(StationMediaAnnotation value)? station,
-    TResult Function(CuratorMediaAnnotation value)? curator,
+    TResult Function(StationAnnotation value)? station,
+    TResult Function(CuratorAnnotation value)? curator,
     TResult Function(ComposerAnnotation value)? composer,
-    TResult Function(ListenerMediaAnnotation value)? listener,
+    TResult Function(ListenerAnnotation value)? listener,
   }) {
     return artist?.call(this);
   }
@@ -3810,13 +3810,13 @@ class _$ArtistAnnotation extends ArtistAnnotation {
     TResult Function(TrackAnnotation value)? track,
     TResult Function(ArtistAnnotation value)? artist,
     TResult Function(AlbumAnnotation value)? album,
-    TResult Function(ArtistMessageMediaAnnotation value)? artistMessage,
+    TResult Function(ArtistMessageAnnotation value)? artistMessage,
     TResult Function(GenreAnnotation value)? genre,
     TResult Function(PlaylistAnnotation value)? playlist,
-    TResult Function(StationMediaAnnotation value)? station,
-    TResult Function(CuratorMediaAnnotation value)? curator,
+    TResult Function(StationAnnotation value)? station,
+    TResult Function(CuratorAnnotation value)? curator,
     TResult Function(ComposerAnnotation value)? composer,
-    TResult Function(ListenerMediaAnnotation value)? listener,
+    TResult Function(ListenerAnnotation value)? listener,
     required TResult orElse(),
   }) {
     if (artist != null) {
@@ -5280,13 +5280,13 @@ class _$AlbumAnnotation extends AlbumAnnotation {
     required TResult Function(TrackAnnotation value) track,
     required TResult Function(ArtistAnnotation value) artist,
     required TResult Function(AlbumAnnotation value) album,
-    required TResult Function(ArtistMessageMediaAnnotation value) artistMessage,
+    required TResult Function(ArtistMessageAnnotation value) artistMessage,
     required TResult Function(GenreAnnotation value) genre,
     required TResult Function(PlaylistAnnotation value) playlist,
-    required TResult Function(StationMediaAnnotation value) station,
-    required TResult Function(CuratorMediaAnnotation value) curator,
+    required TResult Function(StationAnnotation value) station,
+    required TResult Function(CuratorAnnotation value) curator,
     required TResult Function(ComposerAnnotation value) composer,
-    required TResult Function(ListenerMediaAnnotation value) listener,
+    required TResult Function(ListenerAnnotation value) listener,
   }) {
     return album(this);
   }
@@ -5297,13 +5297,13 @@ class _$AlbumAnnotation extends AlbumAnnotation {
     TResult Function(TrackAnnotation value)? track,
     TResult Function(ArtistAnnotation value)? artist,
     TResult Function(AlbumAnnotation value)? album,
-    TResult Function(ArtistMessageMediaAnnotation value)? artistMessage,
+    TResult Function(ArtistMessageAnnotation value)? artistMessage,
     TResult Function(GenreAnnotation value)? genre,
     TResult Function(PlaylistAnnotation value)? playlist,
-    TResult Function(StationMediaAnnotation value)? station,
-    TResult Function(CuratorMediaAnnotation value)? curator,
+    TResult Function(StationAnnotation value)? station,
+    TResult Function(CuratorAnnotation value)? curator,
     TResult Function(ComposerAnnotation value)? composer,
-    TResult Function(ListenerMediaAnnotation value)? listener,
+    TResult Function(ListenerAnnotation value)? listener,
   }) {
     return album?.call(this);
   }
@@ -5314,13 +5314,13 @@ class _$AlbumAnnotation extends AlbumAnnotation {
     TResult Function(TrackAnnotation value)? track,
     TResult Function(ArtistAnnotation value)? artist,
     TResult Function(AlbumAnnotation value)? album,
-    TResult Function(ArtistMessageMediaAnnotation value)? artistMessage,
+    TResult Function(ArtistMessageAnnotation value)? artistMessage,
     TResult Function(GenreAnnotation value)? genre,
     TResult Function(PlaylistAnnotation value)? playlist,
-    TResult Function(StationMediaAnnotation value)? station,
-    TResult Function(CuratorMediaAnnotation value)? curator,
+    TResult Function(StationAnnotation value)? station,
+    TResult Function(CuratorAnnotation value)? curator,
     TResult Function(ComposerAnnotation value)? composer,
-    TResult Function(ListenerMediaAnnotation value)? listener,
+    TResult Function(ListenerAnnotation value)? listener,
     required TResult orElse(),
   }) {
     if (album != null) {
@@ -5438,12 +5438,11 @@ abstract class AlbumAnnotation extends MediaAnnotation {
 }
 
 /// @nodoc
-abstract class _$$ArtistMessageMediaAnnotationCopyWith<$Res>
+abstract class _$$ArtistMessageAnnotationCopyWith<$Res>
     implements $MediaAnnotationCopyWith<$Res> {
-  factory _$$ArtistMessageMediaAnnotationCopyWith(
-          _$ArtistMessageMediaAnnotation value,
-          $Res Function(_$ArtistMessageMediaAnnotation) then) =
-      __$$ArtistMessageMediaAnnotationCopyWithImpl<$Res>;
+  factory _$$ArtistMessageAnnotationCopyWith(_$ArtistMessageAnnotation value,
+          $Res Function(_$ArtistMessageAnnotation) then) =
+      __$$ArtistMessageAnnotationCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(name: 'name')
@@ -5481,17 +5480,16 @@ abstract class _$$ArtistMessageMediaAnnotationCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$ArtistMessageMediaAnnotationCopyWithImpl<$Res>
+class __$$ArtistMessageAnnotationCopyWithImpl<$Res>
     extends _$MediaAnnotationCopyWithImpl<$Res>
-    implements _$$ArtistMessageMediaAnnotationCopyWith<$Res> {
-  __$$ArtistMessageMediaAnnotationCopyWithImpl(
-      _$ArtistMessageMediaAnnotation _value,
-      $Res Function(_$ArtistMessageMediaAnnotation) _then)
-      : super(_value, (v) => _then(v as _$ArtistMessageMediaAnnotation));
+    implements _$$ArtistMessageAnnotationCopyWith<$Res> {
+  __$$ArtistMessageAnnotationCopyWithImpl(_$ArtistMessageAnnotation _value,
+      $Res Function(_$ArtistMessageAnnotation) _then)
+      : super(_value, (v) => _then(v as _$ArtistMessageAnnotation));
 
   @override
-  _$ArtistMessageMediaAnnotation get _value =>
-      super._value as _$ArtistMessageMediaAnnotation;
+  _$ArtistMessageAnnotation get _value =>
+      super._value as _$ArtistMessageAnnotation;
 
   @override
   $Res call({
@@ -5510,7 +5508,7 @@ class __$$ArtistMessageMediaAnnotationCopyWithImpl<$Res>
     Object? pandoraId = freezed,
     Object? scope = freezed,
   }) {
-    return _then(_$ArtistMessageMediaAnnotation(
+    return _then(_$ArtistMessageAnnotation(
       name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -5602,8 +5600,8 @@ class __$$ArtistMessageMediaAnnotationCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$ArtistMessageMediaAnnotation extends ArtistMessageMediaAnnotation {
-  const _$ArtistMessageMediaAnnotation(
+class _$ArtistMessageAnnotation extends ArtistMessageAnnotation {
+  const _$ArtistMessageAnnotation(
       {@JsonKey(name: 'name')
           required this.name,
       @JsonKey(name: 'sortableName')
@@ -5636,8 +5634,8 @@ class _$ArtistMessageMediaAnnotation extends ArtistMessageMediaAnnotation {
       : $type = $type ?? 'AM',
         super._();
 
-  factory _$ArtistMessageMediaAnnotation.fromJson(Map<String, dynamic> json) =>
-      _$$ArtistMessageMediaAnnotationFromJson(json);
+  factory _$ArtistMessageAnnotation.fromJson(Map<String, dynamic> json) =>
+      _$$ArtistMessageAnnotationFromJson(json);
 
   @override
   @JsonKey(name: 'name')
@@ -5703,7 +5701,7 @@ class _$ArtistMessageMediaAnnotation extends ArtistMessageMediaAnnotation {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$ArtistMessageMediaAnnotation &&
+            other is _$ArtistMessageAnnotation &&
             const DeepCollectionEquality().equals(other.name, name) &&
             const DeepCollectionEquality()
                 .equals(other.sortableName, sortableName) &&
@@ -5748,9 +5746,9 @@ class _$ArtistMessageMediaAnnotation extends ArtistMessageMediaAnnotation {
 
   @JsonKey(ignore: true)
   @override
-  _$$ArtistMessageMediaAnnotationCopyWith<_$ArtistMessageMediaAnnotation>
-      get copyWith => __$$ArtistMessageMediaAnnotationCopyWithImpl<
-          _$ArtistMessageMediaAnnotation>(this, _$identity);
+  _$$ArtistMessageAnnotationCopyWith<_$ArtistMessageAnnotation> get copyWith =>
+      __$$ArtistMessageAnnotationCopyWithImpl<_$ArtistMessageAnnotation>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -6701,13 +6699,13 @@ class _$ArtistMessageMediaAnnotation extends ArtistMessageMediaAnnotation {
     required TResult Function(TrackAnnotation value) track,
     required TResult Function(ArtistAnnotation value) artist,
     required TResult Function(AlbumAnnotation value) album,
-    required TResult Function(ArtistMessageMediaAnnotation value) artistMessage,
+    required TResult Function(ArtistMessageAnnotation value) artistMessage,
     required TResult Function(GenreAnnotation value) genre,
     required TResult Function(PlaylistAnnotation value) playlist,
-    required TResult Function(StationMediaAnnotation value) station,
-    required TResult Function(CuratorMediaAnnotation value) curator,
+    required TResult Function(StationAnnotation value) station,
+    required TResult Function(CuratorAnnotation value) curator,
     required TResult Function(ComposerAnnotation value) composer,
-    required TResult Function(ListenerMediaAnnotation value) listener,
+    required TResult Function(ListenerAnnotation value) listener,
   }) {
     return artistMessage(this);
   }
@@ -6718,13 +6716,13 @@ class _$ArtistMessageMediaAnnotation extends ArtistMessageMediaAnnotation {
     TResult Function(TrackAnnotation value)? track,
     TResult Function(ArtistAnnotation value)? artist,
     TResult Function(AlbumAnnotation value)? album,
-    TResult Function(ArtistMessageMediaAnnotation value)? artistMessage,
+    TResult Function(ArtistMessageAnnotation value)? artistMessage,
     TResult Function(GenreAnnotation value)? genre,
     TResult Function(PlaylistAnnotation value)? playlist,
-    TResult Function(StationMediaAnnotation value)? station,
-    TResult Function(CuratorMediaAnnotation value)? curator,
+    TResult Function(StationAnnotation value)? station,
+    TResult Function(CuratorAnnotation value)? curator,
     TResult Function(ComposerAnnotation value)? composer,
-    TResult Function(ListenerMediaAnnotation value)? listener,
+    TResult Function(ListenerAnnotation value)? listener,
   }) {
     return artistMessage?.call(this);
   }
@@ -6735,13 +6733,13 @@ class _$ArtistMessageMediaAnnotation extends ArtistMessageMediaAnnotation {
     TResult Function(TrackAnnotation value)? track,
     TResult Function(ArtistAnnotation value)? artist,
     TResult Function(AlbumAnnotation value)? album,
-    TResult Function(ArtistMessageMediaAnnotation value)? artistMessage,
+    TResult Function(ArtistMessageAnnotation value)? artistMessage,
     TResult Function(GenreAnnotation value)? genre,
     TResult Function(PlaylistAnnotation value)? playlist,
-    TResult Function(StationMediaAnnotation value)? station,
-    TResult Function(CuratorMediaAnnotation value)? curator,
+    TResult Function(StationAnnotation value)? station,
+    TResult Function(CuratorAnnotation value)? curator,
     TResult Function(ComposerAnnotation value)? composer,
-    TResult Function(ListenerMediaAnnotation value)? listener,
+    TResult Function(ListenerAnnotation value)? listener,
     required TResult orElse(),
   }) {
     if (artistMessage != null) {
@@ -6752,14 +6750,14 @@ class _$ArtistMessageMediaAnnotation extends ArtistMessageMediaAnnotation {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ArtistMessageMediaAnnotationToJson(
+    return _$$ArtistMessageAnnotationToJson(
       this,
     );
   }
 }
 
-abstract class ArtistMessageMediaAnnotation extends MediaAnnotation {
-  const factory ArtistMessageMediaAnnotation(
+abstract class ArtistMessageAnnotation extends MediaAnnotation {
+  const factory ArtistMessageAnnotation(
       {@JsonKey(name: 'name')
           required final String name,
       @JsonKey(name: 'sortableName')
@@ -6787,11 +6785,11 @@ abstract class ArtistMessageMediaAnnotation extends MediaAnnotation {
       @JsonKey(name: 'pandoraId')
           required final String pandoraId,
       @JsonKey(name: 'scope')
-          required final Scope scope}) = _$ArtistMessageMediaAnnotation;
-  const ArtistMessageMediaAnnotation._() : super._();
+          required final Scope scope}) = _$ArtistMessageAnnotation;
+  const ArtistMessageAnnotation._() : super._();
 
-  factory ArtistMessageMediaAnnotation.fromJson(Map<String, dynamic> json) =
-      _$ArtistMessageMediaAnnotation.fromJson;
+  factory ArtistMessageAnnotation.fromJson(Map<String, dynamic> json) =
+      _$ArtistMessageAnnotation.fromJson;
 
   @JsonKey(name: 'name')
   String get name;
@@ -6833,8 +6831,8 @@ abstract class ArtistMessageMediaAnnotation extends MediaAnnotation {
   Scope get scope;
   @override
   @JsonKey(ignore: true)
-  _$$ArtistMessageMediaAnnotationCopyWith<_$ArtistMessageMediaAnnotation>
-      get copyWith => throw _privateConstructorUsedError;
+  _$$ArtistMessageAnnotationCopyWith<_$ArtistMessageAnnotation> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -8024,13 +8022,13 @@ class _$GenreAnnotation extends GenreAnnotation {
     required TResult Function(TrackAnnotation value) track,
     required TResult Function(ArtistAnnotation value) artist,
     required TResult Function(AlbumAnnotation value) album,
-    required TResult Function(ArtistMessageMediaAnnotation value) artistMessage,
+    required TResult Function(ArtistMessageAnnotation value) artistMessage,
     required TResult Function(GenreAnnotation value) genre,
     required TResult Function(PlaylistAnnotation value) playlist,
-    required TResult Function(StationMediaAnnotation value) station,
-    required TResult Function(CuratorMediaAnnotation value) curator,
+    required TResult Function(StationAnnotation value) station,
+    required TResult Function(CuratorAnnotation value) curator,
     required TResult Function(ComposerAnnotation value) composer,
-    required TResult Function(ListenerMediaAnnotation value) listener,
+    required TResult Function(ListenerAnnotation value) listener,
   }) {
     return genre(this);
   }
@@ -8041,13 +8039,13 @@ class _$GenreAnnotation extends GenreAnnotation {
     TResult Function(TrackAnnotation value)? track,
     TResult Function(ArtistAnnotation value)? artist,
     TResult Function(AlbumAnnotation value)? album,
-    TResult Function(ArtistMessageMediaAnnotation value)? artistMessage,
+    TResult Function(ArtistMessageAnnotation value)? artistMessage,
     TResult Function(GenreAnnotation value)? genre,
     TResult Function(PlaylistAnnotation value)? playlist,
-    TResult Function(StationMediaAnnotation value)? station,
-    TResult Function(CuratorMediaAnnotation value)? curator,
+    TResult Function(StationAnnotation value)? station,
+    TResult Function(CuratorAnnotation value)? curator,
     TResult Function(ComposerAnnotation value)? composer,
-    TResult Function(ListenerMediaAnnotation value)? listener,
+    TResult Function(ListenerAnnotation value)? listener,
   }) {
     return genre?.call(this);
   }
@@ -8058,13 +8056,13 @@ class _$GenreAnnotation extends GenreAnnotation {
     TResult Function(TrackAnnotation value)? track,
     TResult Function(ArtistAnnotation value)? artist,
     TResult Function(AlbumAnnotation value)? album,
-    TResult Function(ArtistMessageMediaAnnotation value)? artistMessage,
+    TResult Function(ArtistMessageAnnotation value)? artistMessage,
     TResult Function(GenreAnnotation value)? genre,
     TResult Function(PlaylistAnnotation value)? playlist,
-    TResult Function(StationMediaAnnotation value)? station,
-    TResult Function(CuratorMediaAnnotation value)? curator,
+    TResult Function(StationAnnotation value)? station,
+    TResult Function(CuratorAnnotation value)? curator,
     TResult Function(ComposerAnnotation value)? composer,
-    TResult Function(ListenerMediaAnnotation value)? listener,
+    TResult Function(ListenerAnnotation value)? listener,
     required TResult orElse(),
   }) {
     if (genre != null) {
@@ -9585,13 +9583,13 @@ class _$PlaylistAnnotation extends PlaylistAnnotation {
     required TResult Function(TrackAnnotation value) track,
     required TResult Function(ArtistAnnotation value) artist,
     required TResult Function(AlbumAnnotation value) album,
-    required TResult Function(ArtistMessageMediaAnnotation value) artistMessage,
+    required TResult Function(ArtistMessageAnnotation value) artistMessage,
     required TResult Function(GenreAnnotation value) genre,
     required TResult Function(PlaylistAnnotation value) playlist,
-    required TResult Function(StationMediaAnnotation value) station,
-    required TResult Function(CuratorMediaAnnotation value) curator,
+    required TResult Function(StationAnnotation value) station,
+    required TResult Function(CuratorAnnotation value) curator,
     required TResult Function(ComposerAnnotation value) composer,
-    required TResult Function(ListenerMediaAnnotation value) listener,
+    required TResult Function(ListenerAnnotation value) listener,
   }) {
     return playlist(this);
   }
@@ -9602,13 +9600,13 @@ class _$PlaylistAnnotation extends PlaylistAnnotation {
     TResult Function(TrackAnnotation value)? track,
     TResult Function(ArtistAnnotation value)? artist,
     TResult Function(AlbumAnnotation value)? album,
-    TResult Function(ArtistMessageMediaAnnotation value)? artistMessage,
+    TResult Function(ArtistMessageAnnotation value)? artistMessage,
     TResult Function(GenreAnnotation value)? genre,
     TResult Function(PlaylistAnnotation value)? playlist,
-    TResult Function(StationMediaAnnotation value)? station,
-    TResult Function(CuratorMediaAnnotation value)? curator,
+    TResult Function(StationAnnotation value)? station,
+    TResult Function(CuratorAnnotation value)? curator,
     TResult Function(ComposerAnnotation value)? composer,
-    TResult Function(ListenerMediaAnnotation value)? listener,
+    TResult Function(ListenerAnnotation value)? listener,
   }) {
     return playlist?.call(this);
   }
@@ -9619,13 +9617,13 @@ class _$PlaylistAnnotation extends PlaylistAnnotation {
     TResult Function(TrackAnnotation value)? track,
     TResult Function(ArtistAnnotation value)? artist,
     TResult Function(AlbumAnnotation value)? album,
-    TResult Function(ArtistMessageMediaAnnotation value)? artistMessage,
+    TResult Function(ArtistMessageAnnotation value)? artistMessage,
     TResult Function(GenreAnnotation value)? genre,
     TResult Function(PlaylistAnnotation value)? playlist,
-    TResult Function(StationMediaAnnotation value)? station,
-    TResult Function(CuratorMediaAnnotation value)? curator,
+    TResult Function(StationAnnotation value)? station,
+    TResult Function(CuratorAnnotation value)? curator,
     TResult Function(ComposerAnnotation value)? composer,
-    TResult Function(ListenerMediaAnnotation value)? listener,
+    TResult Function(ListenerAnnotation value)? listener,
     required TResult orElse(),
   }) {
     if (playlist != null) {
@@ -9766,11 +9764,11 @@ abstract class PlaylistAnnotation extends MediaAnnotation {
 }
 
 /// @nodoc
-abstract class _$$StationMediaAnnotationCopyWith<$Res>
+abstract class _$$StationAnnotationCopyWith<$Res>
     implements $MediaAnnotationCopyWith<$Res> {
-  factory _$$StationMediaAnnotationCopyWith(_$StationMediaAnnotation value,
-          $Res Function(_$StationMediaAnnotation) then) =
-      __$$StationMediaAnnotationCopyWithImpl<$Res>;
+  factory _$$StationAnnotationCopyWith(
+          _$StationAnnotation value, $Res Function(_$StationAnnotation) then) =
+      __$$StationAnnotationCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(name: 'stationName')
@@ -9798,16 +9796,15 @@ abstract class _$$StationMediaAnnotationCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$StationMediaAnnotationCopyWithImpl<$Res>
+class __$$StationAnnotationCopyWithImpl<$Res>
     extends _$MediaAnnotationCopyWithImpl<$Res>
-    implements _$$StationMediaAnnotationCopyWith<$Res> {
-  __$$StationMediaAnnotationCopyWithImpl(_$StationMediaAnnotation _value,
-      $Res Function(_$StationMediaAnnotation) _then)
-      : super(_value, (v) => _then(v as _$StationMediaAnnotation));
+    implements _$$StationAnnotationCopyWith<$Res> {
+  __$$StationAnnotationCopyWithImpl(
+      _$StationAnnotation _value, $Res Function(_$StationAnnotation) _then)
+      : super(_value, (v) => _then(v as _$StationAnnotation));
 
   @override
-  _$StationMediaAnnotation get _value =>
-      super._value as _$StationMediaAnnotation;
+  _$StationAnnotation get _value => super._value as _$StationAnnotation;
 
   @override
   $Res call({
@@ -9822,7 +9819,7 @@ class __$$StationMediaAnnotationCopyWithImpl<$Res>
     Object? icon = freezed,
     Object? pandoraId = freezed,
   }) {
-    return _then(_$StationMediaAnnotation(
+    return _then(_$StationAnnotation(
       name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -9880,8 +9877,8 @@ class __$$StationMediaAnnotationCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$StationMediaAnnotation extends StationMediaAnnotation {
-  const _$StationMediaAnnotation(
+class _$StationAnnotation extends StationAnnotation {
+  const _$StationAnnotation(
       {@JsonKey(name: 'stationName')
           required this.name,
       @JsonKey(name: 'stationId')
@@ -9906,8 +9903,8 @@ class _$StationMediaAnnotation extends StationMediaAnnotation {
       : $type = $type ?? 'ST',
         super._();
 
-  factory _$StationMediaAnnotation.fromJson(Map<String, dynamic> json) =>
-      _$$StationMediaAnnotationFromJson(json);
+  factory _$StationAnnotation.fromJson(Map<String, dynamic> json) =>
+      _$$StationAnnotationFromJson(json);
 
   @override
   @JsonKey(name: 'stationName')
@@ -9956,7 +9953,7 @@ class _$StationMediaAnnotation extends StationMediaAnnotation {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$StationMediaAnnotation &&
+            other is _$StationAnnotation &&
             const DeepCollectionEquality().equals(other.name, name) &&
             const DeepCollectionEquality().equals(other.stationId, stationId) &&
             const DeepCollectionEquality()
@@ -9992,9 +9989,8 @@ class _$StationMediaAnnotation extends StationMediaAnnotation {
 
   @JsonKey(ignore: true)
   @override
-  _$$StationMediaAnnotationCopyWith<_$StationMediaAnnotation> get copyWith =>
-      __$$StationMediaAnnotationCopyWithImpl<_$StationMediaAnnotation>(
-          this, _$identity);
+  _$$StationAnnotationCopyWith<_$StationAnnotation> get copyWith =>
+      __$$StationAnnotationCopyWithImpl<_$StationAnnotation>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -10933,13 +10929,13 @@ class _$StationMediaAnnotation extends StationMediaAnnotation {
     required TResult Function(TrackAnnotation value) track,
     required TResult Function(ArtistAnnotation value) artist,
     required TResult Function(AlbumAnnotation value) album,
-    required TResult Function(ArtistMessageMediaAnnotation value) artistMessage,
+    required TResult Function(ArtistMessageAnnotation value) artistMessage,
     required TResult Function(GenreAnnotation value) genre,
     required TResult Function(PlaylistAnnotation value) playlist,
-    required TResult Function(StationMediaAnnotation value) station,
-    required TResult Function(CuratorMediaAnnotation value) curator,
+    required TResult Function(StationAnnotation value) station,
+    required TResult Function(CuratorAnnotation value) curator,
     required TResult Function(ComposerAnnotation value) composer,
-    required TResult Function(ListenerMediaAnnotation value) listener,
+    required TResult Function(ListenerAnnotation value) listener,
   }) {
     return station(this);
   }
@@ -10950,13 +10946,13 @@ class _$StationMediaAnnotation extends StationMediaAnnotation {
     TResult Function(TrackAnnotation value)? track,
     TResult Function(ArtistAnnotation value)? artist,
     TResult Function(AlbumAnnotation value)? album,
-    TResult Function(ArtistMessageMediaAnnotation value)? artistMessage,
+    TResult Function(ArtistMessageAnnotation value)? artistMessage,
     TResult Function(GenreAnnotation value)? genre,
     TResult Function(PlaylistAnnotation value)? playlist,
-    TResult Function(StationMediaAnnotation value)? station,
-    TResult Function(CuratorMediaAnnotation value)? curator,
+    TResult Function(StationAnnotation value)? station,
+    TResult Function(CuratorAnnotation value)? curator,
     TResult Function(ComposerAnnotation value)? composer,
-    TResult Function(ListenerMediaAnnotation value)? listener,
+    TResult Function(ListenerAnnotation value)? listener,
   }) {
     return station?.call(this);
   }
@@ -10967,13 +10963,13 @@ class _$StationMediaAnnotation extends StationMediaAnnotation {
     TResult Function(TrackAnnotation value)? track,
     TResult Function(ArtistAnnotation value)? artist,
     TResult Function(AlbumAnnotation value)? album,
-    TResult Function(ArtistMessageMediaAnnotation value)? artistMessage,
+    TResult Function(ArtistMessageAnnotation value)? artistMessage,
     TResult Function(GenreAnnotation value)? genre,
     TResult Function(PlaylistAnnotation value)? playlist,
-    TResult Function(StationMediaAnnotation value)? station,
-    TResult Function(CuratorMediaAnnotation value)? curator,
+    TResult Function(StationAnnotation value)? station,
+    TResult Function(CuratorAnnotation value)? curator,
     TResult Function(ComposerAnnotation value)? composer,
-    TResult Function(ListenerMediaAnnotation value)? listener,
+    TResult Function(ListenerAnnotation value)? listener,
     required TResult orElse(),
   }) {
     if (station != null) {
@@ -10984,14 +10980,14 @@ class _$StationMediaAnnotation extends StationMediaAnnotation {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$StationMediaAnnotationToJson(
+    return _$$StationAnnotationToJson(
       this,
     );
   }
 }
 
-abstract class StationMediaAnnotation extends MediaAnnotation {
-  const factory StationMediaAnnotation(
+abstract class StationAnnotation extends MediaAnnotation {
+  const factory StationAnnotation(
       {@JsonKey(name: 'stationName')
           required final String name,
       @JsonKey(name: 'stationId')
@@ -11011,11 +11007,11 @@ abstract class StationMediaAnnotation extends MediaAnnotation {
       @JsonKey(name: 'icon', fromJson: MediaIcon.optionalFromJson, toJson: MediaIcon.optionalToJson)
           required final MediaIcon? icon,
       @JsonKey(name: 'pandoraId')
-          required final String pandoraId}) = _$StationMediaAnnotation;
-  const StationMediaAnnotation._() : super._();
+          required final String pandoraId}) = _$StationAnnotation;
+  const StationAnnotation._() : super._();
 
-  factory StationMediaAnnotation.fromJson(Map<String, dynamic> json) =
-      _$StationMediaAnnotation.fromJson;
+  factory StationAnnotation.fromJson(Map<String, dynamic> json) =
+      _$StationAnnotation.fromJson;
 
   @JsonKey(name: 'stationName')
   String get name;
@@ -11044,16 +11040,16 @@ abstract class StationMediaAnnotation extends MediaAnnotation {
   String get pandoraId;
   @override
   @JsonKey(ignore: true)
-  _$$StationMediaAnnotationCopyWith<_$StationMediaAnnotation> get copyWith =>
+  _$$StationAnnotationCopyWith<_$StationAnnotation> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$CuratorMediaAnnotationCopyWith<$Res>
+abstract class _$$CuratorAnnotationCopyWith<$Res>
     implements $MediaAnnotationCopyWith<$Res> {
-  factory _$$CuratorMediaAnnotationCopyWith(_$CuratorMediaAnnotation value,
-          $Res Function(_$CuratorMediaAnnotation) then) =
-      __$$CuratorMediaAnnotationCopyWithImpl<$Res>;
+  factory _$$CuratorAnnotationCopyWith(
+          _$CuratorAnnotation value, $Res Function(_$CuratorAnnotation) then) =
+      __$$CuratorAnnotationCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(name: 'name')
@@ -11075,16 +11071,15 @@ abstract class _$$CuratorMediaAnnotationCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$CuratorMediaAnnotationCopyWithImpl<$Res>
+class __$$CuratorAnnotationCopyWithImpl<$Res>
     extends _$MediaAnnotationCopyWithImpl<$Res>
-    implements _$$CuratorMediaAnnotationCopyWith<$Res> {
-  __$$CuratorMediaAnnotationCopyWithImpl(_$CuratorMediaAnnotation _value,
-      $Res Function(_$CuratorMediaAnnotation) _then)
-      : super(_value, (v) => _then(v as _$CuratorMediaAnnotation));
+    implements _$$CuratorAnnotationCopyWith<$Res> {
+  __$$CuratorAnnotationCopyWithImpl(
+      _$CuratorAnnotation _value, $Res Function(_$CuratorAnnotation) _then)
+      : super(_value, (v) => _then(v as _$CuratorAnnotation));
 
   @override
-  _$CuratorMediaAnnotation get _value =>
-      super._value as _$CuratorMediaAnnotation;
+  _$CuratorAnnotation get _value => super._value as _$CuratorAnnotation;
 
   @override
   $Res call({
@@ -11096,7 +11091,7 @@ class __$$CuratorMediaAnnotationCopyWithImpl<$Res>
     Object? pandoraId = freezed,
     Object? scope = freezed,
   }) {
-    return _then(_$CuratorMediaAnnotation(
+    return _then(_$CuratorAnnotation(
       name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -11142,8 +11137,8 @@ class __$$CuratorMediaAnnotationCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$CuratorMediaAnnotation extends CuratorMediaAnnotation {
-  const _$CuratorMediaAnnotation(
+class _$CuratorAnnotation extends CuratorAnnotation {
+  const _$CuratorAnnotation(
       {@JsonKey(name: 'name')
           required this.name,
       @JsonKey(name: 'sortableName')
@@ -11162,8 +11157,8 @@ class _$CuratorMediaAnnotation extends CuratorMediaAnnotation {
       : $type = $type ?? 'curator',
         super._();
 
-  factory _$CuratorMediaAnnotation.fromJson(Map<String, dynamic> json) =>
-      _$$CuratorMediaAnnotationFromJson(json);
+  factory _$CuratorAnnotation.fromJson(Map<String, dynamic> json) =>
+      _$$CuratorAnnotationFromJson(json);
 
   @override
   @JsonKey(name: 'name')
@@ -11202,7 +11197,7 @@ class _$CuratorMediaAnnotation extends CuratorMediaAnnotation {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$CuratorMediaAnnotation &&
+            other is _$CuratorAnnotation &&
             const DeepCollectionEquality().equals(other.name, name) &&
             const DeepCollectionEquality()
                 .equals(other.sortableName, sortableName) &&
@@ -11229,9 +11224,8 @@ class _$CuratorMediaAnnotation extends CuratorMediaAnnotation {
 
   @JsonKey(ignore: true)
   @override
-  _$$CuratorMediaAnnotationCopyWith<_$CuratorMediaAnnotation> get copyWith =>
-      __$$CuratorMediaAnnotationCopyWithImpl<_$CuratorMediaAnnotation>(
-          this, _$identity);
+  _$$CuratorAnnotationCopyWith<_$CuratorAnnotation> get copyWith =>
+      __$$CuratorAnnotationCopyWithImpl<_$CuratorAnnotation>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -12143,13 +12137,13 @@ class _$CuratorMediaAnnotation extends CuratorMediaAnnotation {
     required TResult Function(TrackAnnotation value) track,
     required TResult Function(ArtistAnnotation value) artist,
     required TResult Function(AlbumAnnotation value) album,
-    required TResult Function(ArtistMessageMediaAnnotation value) artistMessage,
+    required TResult Function(ArtistMessageAnnotation value) artistMessage,
     required TResult Function(GenreAnnotation value) genre,
     required TResult Function(PlaylistAnnotation value) playlist,
-    required TResult Function(StationMediaAnnotation value) station,
-    required TResult Function(CuratorMediaAnnotation value) curator,
+    required TResult Function(StationAnnotation value) station,
+    required TResult Function(CuratorAnnotation value) curator,
     required TResult Function(ComposerAnnotation value) composer,
-    required TResult Function(ListenerMediaAnnotation value) listener,
+    required TResult Function(ListenerAnnotation value) listener,
   }) {
     return curator(this);
   }
@@ -12160,13 +12154,13 @@ class _$CuratorMediaAnnotation extends CuratorMediaAnnotation {
     TResult Function(TrackAnnotation value)? track,
     TResult Function(ArtistAnnotation value)? artist,
     TResult Function(AlbumAnnotation value)? album,
-    TResult Function(ArtistMessageMediaAnnotation value)? artistMessage,
+    TResult Function(ArtistMessageAnnotation value)? artistMessage,
     TResult Function(GenreAnnotation value)? genre,
     TResult Function(PlaylistAnnotation value)? playlist,
-    TResult Function(StationMediaAnnotation value)? station,
-    TResult Function(CuratorMediaAnnotation value)? curator,
+    TResult Function(StationAnnotation value)? station,
+    TResult Function(CuratorAnnotation value)? curator,
     TResult Function(ComposerAnnotation value)? composer,
-    TResult Function(ListenerMediaAnnotation value)? listener,
+    TResult Function(ListenerAnnotation value)? listener,
   }) {
     return curator?.call(this);
   }
@@ -12177,13 +12171,13 @@ class _$CuratorMediaAnnotation extends CuratorMediaAnnotation {
     TResult Function(TrackAnnotation value)? track,
     TResult Function(ArtistAnnotation value)? artist,
     TResult Function(AlbumAnnotation value)? album,
-    TResult Function(ArtistMessageMediaAnnotation value)? artistMessage,
+    TResult Function(ArtistMessageAnnotation value)? artistMessage,
     TResult Function(GenreAnnotation value)? genre,
     TResult Function(PlaylistAnnotation value)? playlist,
-    TResult Function(StationMediaAnnotation value)? station,
-    TResult Function(CuratorMediaAnnotation value)? curator,
+    TResult Function(StationAnnotation value)? station,
+    TResult Function(CuratorAnnotation value)? curator,
     TResult Function(ComposerAnnotation value)? composer,
-    TResult Function(ListenerMediaAnnotation value)? listener,
+    TResult Function(ListenerAnnotation value)? listener,
     required TResult orElse(),
   }) {
     if (curator != null) {
@@ -12194,14 +12188,14 @@ class _$CuratorMediaAnnotation extends CuratorMediaAnnotation {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$CuratorMediaAnnotationToJson(
+    return _$$CuratorAnnotationToJson(
       this,
     );
   }
 }
 
-abstract class CuratorMediaAnnotation extends MediaAnnotation {
-  const factory CuratorMediaAnnotation(
+abstract class CuratorAnnotation extends MediaAnnotation {
+  const factory CuratorAnnotation(
       {@JsonKey(name: 'name')
           required final String name,
       @JsonKey(name: 'sortableName')
@@ -12215,11 +12209,11 @@ abstract class CuratorMediaAnnotation extends MediaAnnotation {
       @JsonKey(name: 'pandoraId')
           required final String pandoraId,
       @JsonKey(name: 'scope')
-          required final String scope}) = _$CuratorMediaAnnotation;
-  const CuratorMediaAnnotation._() : super._();
+          required final String scope}) = _$CuratorAnnotation;
+  const CuratorAnnotation._() : super._();
 
-  factory CuratorMediaAnnotation.fromJson(Map<String, dynamic> json) =
-      _$CuratorMediaAnnotation.fromJson;
+  factory CuratorAnnotation.fromJson(Map<String, dynamic> json) =
+      _$CuratorAnnotation.fromJson;
 
   @JsonKey(name: 'name')
   String get name;
@@ -12241,7 +12235,7 @@ abstract class CuratorMediaAnnotation extends MediaAnnotation {
   String get scope;
   @override
   @JsonKey(ignore: true)
-  _$$CuratorMediaAnnotationCopyWith<_$CuratorMediaAnnotation> get copyWith =>
+  _$$CuratorAnnotationCopyWith<_$CuratorAnnotation> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -13431,13 +13425,13 @@ class _$ComposerAnnotation extends ComposerAnnotation {
     required TResult Function(TrackAnnotation value) track,
     required TResult Function(ArtistAnnotation value) artist,
     required TResult Function(AlbumAnnotation value) album,
-    required TResult Function(ArtistMessageMediaAnnotation value) artistMessage,
+    required TResult Function(ArtistMessageAnnotation value) artistMessage,
     required TResult Function(GenreAnnotation value) genre,
     required TResult Function(PlaylistAnnotation value) playlist,
-    required TResult Function(StationMediaAnnotation value) station,
-    required TResult Function(CuratorMediaAnnotation value) curator,
+    required TResult Function(StationAnnotation value) station,
+    required TResult Function(CuratorAnnotation value) curator,
     required TResult Function(ComposerAnnotation value) composer,
-    required TResult Function(ListenerMediaAnnotation value) listener,
+    required TResult Function(ListenerAnnotation value) listener,
   }) {
     return composer(this);
   }
@@ -13448,13 +13442,13 @@ class _$ComposerAnnotation extends ComposerAnnotation {
     TResult Function(TrackAnnotation value)? track,
     TResult Function(ArtistAnnotation value)? artist,
     TResult Function(AlbumAnnotation value)? album,
-    TResult Function(ArtistMessageMediaAnnotation value)? artistMessage,
+    TResult Function(ArtistMessageAnnotation value)? artistMessage,
     TResult Function(GenreAnnotation value)? genre,
     TResult Function(PlaylistAnnotation value)? playlist,
-    TResult Function(StationMediaAnnotation value)? station,
-    TResult Function(CuratorMediaAnnotation value)? curator,
+    TResult Function(StationAnnotation value)? station,
+    TResult Function(CuratorAnnotation value)? curator,
     TResult Function(ComposerAnnotation value)? composer,
-    TResult Function(ListenerMediaAnnotation value)? listener,
+    TResult Function(ListenerAnnotation value)? listener,
   }) {
     return composer?.call(this);
   }
@@ -13465,13 +13459,13 @@ class _$ComposerAnnotation extends ComposerAnnotation {
     TResult Function(TrackAnnotation value)? track,
     TResult Function(ArtistAnnotation value)? artist,
     TResult Function(AlbumAnnotation value)? album,
-    TResult Function(ArtistMessageMediaAnnotation value)? artistMessage,
+    TResult Function(ArtistMessageAnnotation value)? artistMessage,
     TResult Function(GenreAnnotation value)? genre,
     TResult Function(PlaylistAnnotation value)? playlist,
-    TResult Function(StationMediaAnnotation value)? station,
-    TResult Function(CuratorMediaAnnotation value)? curator,
+    TResult Function(StationAnnotation value)? station,
+    TResult Function(CuratorAnnotation value)? curator,
     TResult Function(ComposerAnnotation value)? composer,
-    TResult Function(ListenerMediaAnnotation value)? listener,
+    TResult Function(ListenerAnnotation value)? listener,
     required TResult orElse(),
   }) {
     if (composer != null) {
@@ -13553,11 +13547,11 @@ abstract class ComposerAnnotation extends MediaAnnotation {
 }
 
 /// @nodoc
-abstract class _$$ListenerMediaAnnotationCopyWith<$Res>
+abstract class _$$ListenerAnnotationCopyWith<$Res>
     implements $MediaAnnotationCopyWith<$Res> {
-  factory _$$ListenerMediaAnnotationCopyWith(_$ListenerMediaAnnotation value,
-          $Res Function(_$ListenerMediaAnnotation) then) =
-      __$$ListenerMediaAnnotationCopyWithImpl<$Res>;
+  factory _$$ListenerAnnotationCopyWith(_$ListenerAnnotation value,
+          $Res Function(_$ListenerAnnotation) then) =
+      __$$ListenerAnnotationCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(name: 'listenerId') int listenerId,
@@ -13571,16 +13565,15 @@ abstract class _$$ListenerMediaAnnotationCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$ListenerMediaAnnotationCopyWithImpl<$Res>
+class __$$ListenerAnnotationCopyWithImpl<$Res>
     extends _$MediaAnnotationCopyWithImpl<$Res>
-    implements _$$ListenerMediaAnnotationCopyWith<$Res> {
-  __$$ListenerMediaAnnotationCopyWithImpl(_$ListenerMediaAnnotation _value,
-      $Res Function(_$ListenerMediaAnnotation) _then)
-      : super(_value, (v) => _then(v as _$ListenerMediaAnnotation));
+    implements _$$ListenerAnnotationCopyWith<$Res> {
+  __$$ListenerAnnotationCopyWithImpl(
+      _$ListenerAnnotation _value, $Res Function(_$ListenerAnnotation) _then)
+      : super(_value, (v) => _then(v as _$ListenerAnnotation));
 
   @override
-  _$ListenerMediaAnnotation get _value =>
-      super._value as _$ListenerMediaAnnotation;
+  _$ListenerAnnotation get _value => super._value as _$ListenerAnnotation;
 
   @override
   $Res call({
@@ -13593,7 +13586,7 @@ class __$$ListenerMediaAnnotationCopyWithImpl<$Res>
     Object? imageUrl = freezed,
     Object? pandoraId = freezed,
   }) {
-    return _then(_$ListenerMediaAnnotation(
+    return _then(_$ListenerAnnotation(
       listenerId: listenerId == freezed
           ? _value.listenerId
           : listenerId // ignore: cast_nullable_to_non_nullable
@@ -13632,8 +13625,8 @@ class __$$ListenerMediaAnnotationCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$ListenerMediaAnnotation extends ListenerMediaAnnotation {
-  const _$ListenerMediaAnnotation(
+class _$ListenerAnnotation extends ListenerAnnotation {
+  const _$ListenerAnnotation(
       {@JsonKey(name: 'listenerId') required this.listenerId,
       @JsonKey(name: 'webname') required this.webname,
       @JsonKey(name: 'fullname') required this.fullName,
@@ -13646,8 +13639,8 @@ class _$ListenerMediaAnnotation extends ListenerMediaAnnotation {
       : $type = $type ?? 'LI',
         super._();
 
-  factory _$ListenerMediaAnnotation.fromJson(Map<String, dynamic> json) =>
-      _$$ListenerMediaAnnotationFromJson(json);
+  factory _$ListenerAnnotation.fromJson(Map<String, dynamic> json) =>
+      _$$ListenerAnnotationFromJson(json);
 
   @override
   @JsonKey(name: 'listenerId')
@@ -13692,7 +13685,7 @@ class _$ListenerMediaAnnotation extends ListenerMediaAnnotation {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$ListenerMediaAnnotation &&
+            other is _$ListenerAnnotation &&
             const DeepCollectionEquality()
                 .equals(other.listenerId, listenerId) &&
             const DeepCollectionEquality().equals(other.webname, webname) &&
@@ -13721,8 +13714,8 @@ class _$ListenerMediaAnnotation extends ListenerMediaAnnotation {
 
   @JsonKey(ignore: true)
   @override
-  _$$ListenerMediaAnnotationCopyWith<_$ListenerMediaAnnotation> get copyWith =>
-      __$$ListenerMediaAnnotationCopyWithImpl<_$ListenerMediaAnnotation>(
+  _$$ListenerAnnotationCopyWith<_$ListenerAnnotation> get copyWith =>
+      __$$ListenerAnnotationCopyWithImpl<_$ListenerAnnotation>(
           this, _$identity);
 
   @override
@@ -14635,13 +14628,13 @@ class _$ListenerMediaAnnotation extends ListenerMediaAnnotation {
     required TResult Function(TrackAnnotation value) track,
     required TResult Function(ArtistAnnotation value) artist,
     required TResult Function(AlbumAnnotation value) album,
-    required TResult Function(ArtistMessageMediaAnnotation value) artistMessage,
+    required TResult Function(ArtistMessageAnnotation value) artistMessage,
     required TResult Function(GenreAnnotation value) genre,
     required TResult Function(PlaylistAnnotation value) playlist,
-    required TResult Function(StationMediaAnnotation value) station,
-    required TResult Function(CuratorMediaAnnotation value) curator,
+    required TResult Function(StationAnnotation value) station,
+    required TResult Function(CuratorAnnotation value) curator,
     required TResult Function(ComposerAnnotation value) composer,
-    required TResult Function(ListenerMediaAnnotation value) listener,
+    required TResult Function(ListenerAnnotation value) listener,
   }) {
     return listener(this);
   }
@@ -14652,13 +14645,13 @@ class _$ListenerMediaAnnotation extends ListenerMediaAnnotation {
     TResult Function(TrackAnnotation value)? track,
     TResult Function(ArtistAnnotation value)? artist,
     TResult Function(AlbumAnnotation value)? album,
-    TResult Function(ArtistMessageMediaAnnotation value)? artistMessage,
+    TResult Function(ArtistMessageAnnotation value)? artistMessage,
     TResult Function(GenreAnnotation value)? genre,
     TResult Function(PlaylistAnnotation value)? playlist,
-    TResult Function(StationMediaAnnotation value)? station,
-    TResult Function(CuratorMediaAnnotation value)? curator,
+    TResult Function(StationAnnotation value)? station,
+    TResult Function(CuratorAnnotation value)? curator,
     TResult Function(ComposerAnnotation value)? composer,
-    TResult Function(ListenerMediaAnnotation value)? listener,
+    TResult Function(ListenerAnnotation value)? listener,
   }) {
     return listener?.call(this);
   }
@@ -14669,13 +14662,13 @@ class _$ListenerMediaAnnotation extends ListenerMediaAnnotation {
     TResult Function(TrackAnnotation value)? track,
     TResult Function(ArtistAnnotation value)? artist,
     TResult Function(AlbumAnnotation value)? album,
-    TResult Function(ArtistMessageMediaAnnotation value)? artistMessage,
+    TResult Function(ArtistMessageAnnotation value)? artistMessage,
     TResult Function(GenreAnnotation value)? genre,
     TResult Function(PlaylistAnnotation value)? playlist,
-    TResult Function(StationMediaAnnotation value)? station,
-    TResult Function(CuratorMediaAnnotation value)? curator,
+    TResult Function(StationAnnotation value)? station,
+    TResult Function(CuratorAnnotation value)? curator,
     TResult Function(ComposerAnnotation value)? composer,
-    TResult Function(ListenerMediaAnnotation value)? listener,
+    TResult Function(ListenerAnnotation value)? listener,
     required TResult orElse(),
   }) {
     if (listener != null) {
@@ -14686,14 +14679,14 @@ class _$ListenerMediaAnnotation extends ListenerMediaAnnotation {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ListenerMediaAnnotationToJson(
+    return _$$ListenerAnnotationToJson(
       this,
     );
   }
 }
 
-abstract class ListenerMediaAnnotation extends MediaAnnotation {
-  const factory ListenerMediaAnnotation(
+abstract class ListenerAnnotation extends MediaAnnotation {
+  const factory ListenerAnnotation(
           {@JsonKey(name: 'listenerId') required final int listenerId,
           @JsonKey(name: 'webname') required final String webname,
           @JsonKey(name: 'fullname') required final String? fullName,
@@ -14702,11 +14695,11 @@ abstract class ListenerMediaAnnotation extends MediaAnnotation {
           @JsonKey(name: 'defaultImageUrl') final Uri? defaultImageUrl,
           @JsonKey(name: 'imageUrl') final Uri? imageUrl,
           @JsonKey(name: 'pandoraId') required final String pandoraId}) =
-      _$ListenerMediaAnnotation;
-  const ListenerMediaAnnotation._() : super._();
+      _$ListenerAnnotation;
+  const ListenerAnnotation._() : super._();
 
-  factory ListenerMediaAnnotation.fromJson(Map<String, dynamic> json) =
-      _$ListenerMediaAnnotation.fromJson;
+  factory ListenerAnnotation.fromJson(Map<String, dynamic> json) =
+      _$ListenerAnnotation.fromJson;
 
   @JsonKey(name: 'listenerId')
   int get listenerId;
@@ -14733,6 +14726,6 @@ abstract class ListenerMediaAnnotation extends MediaAnnotation {
   String get pandoraId;
   @override
   @JsonKey(ignore: true)
-  _$$ListenerMediaAnnotationCopyWith<_$ListenerMediaAnnotation> get copyWith =>
+  _$$ListenerAnnotationCopyWith<_$ListenerAnnotation> get copyWith =>
       throw _privateConstructorUsedError;
 }

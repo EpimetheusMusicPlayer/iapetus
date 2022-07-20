@@ -119,7 +119,7 @@ class MediaAnnotation with _$MediaAnnotation implements PandoraEntity {
     @JsonKey(name: 'contentState') required ContentState contentState,
     @JsonKey(name: 'pandoraId') required String pandoraId,
     @JsonKey(name: 'scope') required Scope scope,
-  }) = ArtistMessageMediaAnnotation;
+  }) = ArtistMessageAnnotation;
 
   @FreezedUnionValue('GE')
   const factory MediaAnnotation.genre({
@@ -188,7 +188,7 @@ class MediaAnnotation with _$MediaAnnotation implements PandoraEntity {
     @JsonKey(name: 'icon', fromJson: MediaIcon.optionalFromJson, toJson: MediaIcon.optionalToJson)
         required MediaIcon? icon,
     @JsonKey(name: 'pandoraId') required String pandoraId,
-  }) = StationMediaAnnotation;
+  }) = StationAnnotation;
 
   const factory MediaAnnotation.curator({
     @JsonKey(name: 'name') required String name,
@@ -199,7 +199,7 @@ class MediaAnnotation with _$MediaAnnotation implements PandoraEntity {
     @JsonKey(name: 'listenerPandoraId') required String listenerPandoraId,
     @JsonKey(name: 'pandoraId') required String pandoraId,
     @JsonKey(name: 'scope') required String scope,
-  }) = CuratorMediaAnnotation;
+  }) = CuratorAnnotation;
 
   @FreezedUnionValue('CO')
   const factory MediaAnnotation.composer({
@@ -235,7 +235,7 @@ class MediaAnnotation with _$MediaAnnotation implements PandoraEntity {
     /// This URL may be a Facebook profile picture URL.
     @JsonKey(name: 'imageUrl') Uri? imageUrl,
     @JsonKey(name: 'pandoraId') required String pandoraId,
-  }) = ListenerMediaAnnotation;
+  }) = ListenerAnnotation;
 
   @override
   PandoraType get pandoraType => map(

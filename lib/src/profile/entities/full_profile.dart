@@ -31,8 +31,8 @@ class FullProfile with _$FullProfile implements Annotated {
         required Map<String, MediaAnnotation> annotations,
   }) = _FullProfile;
 
-  ListenerMediaAnnotation get listenerAnnotation =>
-      (annotations[ownerPandoraId] as ListenerMediaAnnotation?) ??
+  ListenerAnnotation get listenerAnnotation =>
+      (annotations[ownerPandoraId] as ListenerAnnotation?) ??
       (throw StateError('No listener annotation exists!'));
 
   factory FullProfile.fromJson(Map<String, dynamic> json) =>

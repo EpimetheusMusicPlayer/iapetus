@@ -213,13 +213,13 @@ Map<String, dynamic> _$$AlbumAnnotationToJson(_$AlbumAnnotation instance) =>
       'type': instance.$type,
     };
 
-_$ArtistMessageMediaAnnotation _$$ArtistMessageMediaAnnotationFromJson(
+_$ArtistMessageAnnotation _$$ArtistMessageAnnotationFromJson(
         Map<String, dynamic> json) =>
     $checkedCreate(
-      r'_$ArtistMessageMediaAnnotation',
+      r'_$ArtistMessageAnnotation',
       json,
       ($checkedConvert) {
-        final val = _$ArtistMessageMediaAnnotation(
+        final val = _$ArtistMessageAnnotation(
           name: $checkedConvert('name', (v) => v as String),
           sortableName: $checkedConvert('sortableName', (v) => v as String),
           duration: $checkedConvert('duration', (v) => readSeconds(v as int)),
@@ -252,8 +252,8 @@ _$ArtistMessageMediaAnnotation _$$ArtistMessageMediaAnnotationFromJson(
       },
     );
 
-Map<String, dynamic> _$$ArtistMessageMediaAnnotationToJson(
-        _$ArtistMessageMediaAnnotation instance) =>
+Map<String, dynamic> _$$ArtistMessageAnnotationToJson(
+        _$ArtistMessageAnnotation instance) =>
     <String, dynamic>{
       'name': instance.name,
       'sortableName': instance.sortableName,
@@ -472,13 +472,12 @@ const _$PlaylistLinkedTypeEnumMap = {
   PlaylistLinkedType.unspecified: 'NULL',
 };
 
-_$StationMediaAnnotation _$$StationMediaAnnotationFromJson(
-        Map<String, dynamic> json) =>
+_$StationAnnotation _$$StationAnnotationFromJson(Map<String, dynamic> json) =>
     $checkedCreate(
-      r'_$StationMediaAnnotation',
+      r'_$StationAnnotation',
       json,
       ($checkedConvert) {
-        final val = _$StationMediaAnnotation(
+        final val = _$StationAnnotation(
           name: $checkedConvert('stationName', (v) => v as String),
           stationId: $checkedConvert('stationId', (v) => v as String),
           listenerId: $checkedConvert('listenerId', (v) => v as int),
@@ -499,8 +498,7 @@ _$StationMediaAnnotation _$$StationMediaAnnotationFromJson(
       fieldKeyMap: const {'name': 'stationName', r'$type': 'type'},
     );
 
-Map<String, dynamic> _$$StationMediaAnnotationToJson(
-        _$StationMediaAnnotation instance) =>
+Map<String, dynamic> _$$StationAnnotationToJson(_$StationAnnotation instance) =>
     <String, dynamic>{
       'stationName': instance.name,
       'stationId': instance.stationId,
@@ -515,13 +513,12 @@ Map<String, dynamic> _$$StationMediaAnnotationToJson(
       'type': instance.$type,
     };
 
-_$CuratorMediaAnnotation _$$CuratorMediaAnnotationFromJson(
-        Map<String, dynamic> json) =>
+_$CuratorAnnotation _$$CuratorAnnotationFromJson(Map<String, dynamic> json) =>
     $checkedCreate(
-      r'_$CuratorMediaAnnotation',
+      r'_$CuratorAnnotation',
       json,
       ($checkedConvert) {
-        final val = _$CuratorMediaAnnotation(
+        final val = _$CuratorAnnotation(
           name: $checkedConvert('name', (v) => v as String),
           sortableName: $checkedConvert('sortableName', (v) => v as String),
           icon: $checkedConvert('icon',
@@ -538,8 +535,7 @@ _$CuratorMediaAnnotation _$$CuratorMediaAnnotationFromJson(
       fieldKeyMap: const {r'$type': 'type'},
     );
 
-Map<String, dynamic> _$$CuratorMediaAnnotationToJson(
-        _$CuratorMediaAnnotation instance) =>
+Map<String, dynamic> _$$CuratorAnnotationToJson(_$CuratorAnnotation instance) =>
     <String, dynamic>{
       'name': instance.name,
       'sortableName': instance.sortableName,
@@ -597,13 +593,12 @@ Map<String, dynamic> _$$ComposerAnnotationToJson(
       'type': instance.$type,
     };
 
-_$ListenerMediaAnnotation _$$ListenerMediaAnnotationFromJson(
-        Map<String, dynamic> json) =>
+_$ListenerAnnotation _$$ListenerAnnotationFromJson(Map<String, dynamic> json) =>
     $checkedCreate(
-      r'_$ListenerMediaAnnotation',
+      r'_$ListenerAnnotation',
       json,
       ($checkedConvert) {
-        final val = _$ListenerMediaAnnotation(
+        final val = _$ListenerAnnotation(
           listenerId: $checkedConvert('listenerId', (v) => v as int),
           webname: $checkedConvert('webname', (v) => v as String),
           fullName: $checkedConvert('fullname', (v) => v as String?),
@@ -626,8 +621,8 @@ _$ListenerMediaAnnotation _$$ListenerMediaAnnotationFromJson(
       },
     );
 
-Map<String, dynamic> _$$ListenerMediaAnnotationToJson(
-        _$ListenerMediaAnnotation instance) =>
+Map<String, dynamic> _$$ListenerAnnotationToJson(
+        _$ListenerAnnotation instance) =>
     <String, dynamic>{
       'listenerId': instance.listenerId,
       'webname': instance.webname,
