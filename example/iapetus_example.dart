@@ -3,7 +3,6 @@
 import 'dart:io';
 
 import 'package:iapetus/iapetus.dart';
-import 'package:iapetus/src/settings/api/settings.dart';
 
 Future<void> main(List<String> arguments) async {
   // Read the email and password from arguments.
