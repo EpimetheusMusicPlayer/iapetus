@@ -2,6 +2,8 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:iapetus/src/common/data/json_utils.dart';
 import 'package:iapetus/src/common/entities/pandora_entity.dart';
 import 'package:iapetus/src/common/entities/pandora_type.dart';
+import 'package:iapetus/src/media/entities/content_state.dart';
+import 'package:iapetus/src/media/entities/delivery_type.dart';
 import 'package:iapetus/src/media/entities/explicitness.dart';
 import 'package:iapetus/src/media/entities/icon.dart';
 import 'package:iapetus/src/media/entities/playlist_linked_type.dart';
@@ -97,6 +99,28 @@ class MediaAnnotation with _$MediaAnnotation implements PandoraEntity {
     @JsonKey(name: 'scope') required Scope scope,
   }) = AlbumAnnotation;
 
+  @FreezedUnionValue('AM')
+  const factory MediaAnnotation.artistMessage({
+    @JsonKey(name: 'name') required String name,
+    @JsonKey(name: 'sortableName') required String sortableName,
+    @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
+        required Duration duration,
+    @JsonKey(name: 'icon', fromJson: MediaIcon.optionalFromJson, toJson: MediaIcon.optionalToJson)
+        required MediaIcon? icon,
+    @JsonKey(name: 'tileIcon', fromJson: MediaIcon.optionalFromJson, toJson: MediaIcon.optionalToJson)
+        required MediaIcon? tileIcon,
+    @JsonKey(name: 'authorId') required String authorId,
+    @JsonKey(name: 'authorName') required String authorName,
+    @JsonKey(name: 'rightsInfo') required RightsInfo rightsInfo,
+    @JsonKey(name: 'deliveryType') required DeliveryType deliveryType,
+    @JsonKey(name: 'playsWithTrackPandoraId') String? playsWithTrackId,
+    @JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
+        required DateTime modificationTime,
+    @JsonKey(name: 'contentState') required ContentState contentState,
+    @JsonKey(name: 'pandoraId') required String pandoraId,
+    @JsonKey(name: 'scope') required Scope scope,
+  }) = ArtistMessageMediaAnnotation;
+
   @FreezedUnionValue('GE')
   const factory MediaAnnotation.genre({
     @JsonKey(name: 'name') required String name,
@@ -166,6 +190,17 @@ class MediaAnnotation with _$MediaAnnotation implements PandoraEntity {
     @JsonKey(name: 'pandoraId') required String pandoraId,
   }) = StationMediaAnnotation;
 
+  const factory MediaAnnotation.curator({
+    @JsonKey(name: 'name') required String name,
+    @JsonKey(name: 'sortableName') required String sortableName,
+    @JsonKey(name: 'icon', fromJson: MediaIcon.optionalFromJson, toJson: MediaIcon.optionalToJson)
+        required MediaIcon? icon,
+    @JsonKey(name: 'listenerId') required int listenerId,
+    @JsonKey(name: 'listenerPandoraId') required String listenerPandoraId,
+    @JsonKey(name: 'pandoraId') required String pandoraId,
+    @JsonKey(name: 'scope') required String scope,
+  }) = CuratorMediaAnnotation;
+
   @FreezedUnionValue('CO')
   const factory MediaAnnotation.composer({
     @JsonKey(name: 'name') required String name,
@@ -207,9 +242,11 @@ class MediaAnnotation with _$MediaAnnotation implements PandoraEntity {
         track: (_) => PandoraType.song,
         artist: (_) => PandoraType.artist,
         album: (_) => PandoraType.album,
+        artistMessage: (_) => PandoraType.artistMessage,
         genre: (_) => PandoraType.genre,
         playlist: (_) => PandoraType.playlist,
         station: (_) => PandoraType.station,
+        curator: (_) => PandoraType.curator,
         composer: (_) => PandoraType.composer,
         listener: (_) => PandoraType.listener,
       );

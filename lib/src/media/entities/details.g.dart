@@ -159,7 +159,7 @@ const _$PandoraTypeEnumMap = {
   PandoraType.stationThumbUp: 'TU',
   PandoraType.userStation: 'ST',
   PandoraType.hybridStation: 'HS',
-  PandoraType.voiceTrack: 'AM',
+  PandoraType.artistMessage: 'AM',
   PandoraType.listener: 'LI',
   PandoraType.curator: 'CU',
   PandoraType.podcastCategory: 'TG',

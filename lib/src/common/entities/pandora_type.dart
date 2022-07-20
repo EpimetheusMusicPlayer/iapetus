@@ -48,7 +48,7 @@ enum PandoraType {
   @JsonValue('HS')
   hybridStation,
   @JsonValue('AM')
-  voiceTrack,
+  artistMessage,
   @JsonValue('LI')
   listener,
   @JsonValue('CU')

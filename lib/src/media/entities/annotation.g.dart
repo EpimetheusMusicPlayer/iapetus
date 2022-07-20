@@ -213,6 +213,77 @@ Map<String, dynamic> _$$AlbumAnnotationToJson(_$AlbumAnnotation instance) =>
       'type': instance.$type,
     };
 
+_$ArtistMessageMediaAnnotation _$$ArtistMessageMediaAnnotationFromJson(
+        Map<String, dynamic> json) =>
+    $checkedCreate(
+      r'_$ArtistMessageMediaAnnotation',
+      json,
+      ($checkedConvert) {
+        final val = _$ArtistMessageMediaAnnotation(
+          name: $checkedConvert('name', (v) => v as String),
+          sortableName: $checkedConvert('sortableName', (v) => v as String),
+          duration: $checkedConvert('duration', (v) => readSeconds(v as int)),
+          icon: $checkedConvert('icon',
+              (v) => MediaIcon.optionalFromJson(v as Map<String, dynamic>)),
+          tileIcon: $checkedConvert('tileIcon',
+              (v) => MediaIcon.optionalFromJson(v as Map<String, dynamic>)),
+          authorId: $checkedConvert('authorId', (v) => v as String),
+          authorName: $checkedConvert('authorName', (v) => v as String),
+          rightsInfo: $checkedConvert('rightsInfo',
+              (v) => RightsInfo.fromJson(v as Map<String, dynamic>)),
+          deliveryType: $checkedConvert(
+              'deliveryType', (v) => $enumDecode(_$DeliveryTypeEnumMap, v)),
+          playsWithTrackId:
+              $checkedConvert('playsWithTrackPandoraId', (v) => v as String?),
+          modificationTime: $checkedConvert(
+              'modificationTime', (v) => readDateTimeMilliseconds(v as int)),
+          contentState: $checkedConvert(
+              'contentState', (v) => $enumDecode(_$ContentStateEnumMap, v)),
+          pandoraId: $checkedConvert('pandoraId', (v) => v as String),
+          scope:
+              $checkedConvert('scope', (v) => $enumDecode(_$ScopeEnumMap, v)),
+          $type: $checkedConvert('type', (v) => v as String?),
+        );
+        return val;
+      },
+      fieldKeyMap: const {
+        'playsWithTrackId': 'playsWithTrackPandoraId',
+        r'$type': 'type'
+      },
+    );
+
+Map<String, dynamic> _$$ArtistMessageMediaAnnotationToJson(
+        _$ArtistMessageMediaAnnotation instance) =>
+    <String, dynamic>{
+      'name': instance.name,
+      'sortableName': instance.sortableName,
+      'duration': writeSeconds(instance.duration),
+      'icon': MediaIcon.optionalToJson(instance.icon),
+      'tileIcon': MediaIcon.optionalToJson(instance.tileIcon),
+      'authorId': instance.authorId,
+      'authorName': instance.authorName,
+      'rightsInfo': instance.rightsInfo,
+      'deliveryType': _$DeliveryTypeEnumMap[instance.deliveryType]!,
+      'playsWithTrackPandoraId': instance.playsWithTrackId,
+      'modificationTime': writeDateTimeMilliseconds(instance.modificationTime),
+      'contentState': _$ContentStateEnumMap[instance.contentState]!,
+      'pandoraId': instance.pandoraId,
+      'scope': _$ScopeEnumMap[instance.scope]!,
+      'type': instance.$type,
+    };
+
+const _$DeliveryTypeEnumMap = {
+  DeliveryType.intro: 'INTRO',
+  DeliveryType.before: 'BEFORE',
+  DeliveryType.after: 'AFTER_TRACK',
+};
+
+const _$ContentStateEnumMap = {
+  ContentState.available: 'AVAILABLE',
+  ContentState.retired: 'RETIRED',
+  ContentState.removed: 'REMOVED',
+};
+
 _$GenreAnnotation _$$GenreAnnotationFromJson(Map<String, dynamic> json) =>
     $checkedCreate(
       r'_$GenreAnnotation',
@@ -372,7 +443,7 @@ const _$PandoraTypeEnumMap = {
   PandoraType.stationThumbUp: 'TU',
   PandoraType.userStation: 'ST',
   PandoraType.hybridStation: 'HS',
-  PandoraType.voiceTrack: 'AM',
+  PandoraType.artistMessage: 'AM',
   PandoraType.listener: 'LI',
   PandoraType.curator: 'CU',
   PandoraType.podcastCategory: 'TG',
@@ -441,6 +512,42 @@ Map<String, dynamic> _$$StationMediaAnnotationToJson(
       'hasCuratedModes': writeOptInBool(instance.hasCuratedModes),
       'icon': MediaIcon.optionalToJson(instance.icon),
       'pandoraId': instance.pandoraId,
+      'type': instance.$type,
+    };
+
+_$CuratorMediaAnnotation _$$CuratorMediaAnnotationFromJson(
+        Map<String, dynamic> json) =>
+    $checkedCreate(
+      r'_$CuratorMediaAnnotation',
+      json,
+      ($checkedConvert) {
+        final val = _$CuratorMediaAnnotation(
+          name: $checkedConvert('name', (v) => v as String),
+          sortableName: $checkedConvert('sortableName', (v) => v as String),
+          icon: $checkedConvert('icon',
+              (v) => MediaIcon.optionalFromJson(v as Map<String, dynamic>)),
+          listenerId: $checkedConvert('listenerId', (v) => v as int),
+          listenerPandoraId:
+              $checkedConvert('listenerPandoraId', (v) => v as String),
+          pandoraId: $checkedConvert('pandoraId', (v) => v as String),
+          scope: $checkedConvert('scope', (v) => v as String),
+          $type: $checkedConvert('type', (v) => v as String?),
+        );
+        return val;
+      },
+      fieldKeyMap: const {r'$type': 'type'},
+    );
+
+Map<String, dynamic> _$$CuratorMediaAnnotationToJson(
+        _$CuratorMediaAnnotation instance) =>
+    <String, dynamic>{
+      'name': instance.name,
+      'sortableName': instance.sortableName,
+      'icon': MediaIcon.optionalToJson(instance.icon),
+      'listenerId': instance.listenerId,
+      'listenerPandoraId': instance.listenerPandoraId,
+      'pandoraId': instance.pandoraId,
+      'scope': instance.scope,
       'type': instance.$type,
     };
 
