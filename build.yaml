@@ -6,5 +6,12 @@ targets:
           ignore_for_file:
             - type=lint
       json_serializable:
+        generate_for:
+          - '**/entities/**.dart'
+          - '**/data/**.dart'
         options:
           checked: true
+      freezed:
+        generate_for:
+          - '**/entities/**.dart'
+          - '**/data/**.dart'
