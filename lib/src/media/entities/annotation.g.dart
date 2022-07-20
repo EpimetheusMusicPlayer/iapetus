@@ -513,6 +513,178 @@ Map<String, dynamic> _$$StationAnnotationToJson(_$StationAnnotation instance) =>
       'type': instance.$type,
     };
 
+_$PodcastAnnotation _$$PodcastAnnotationFromJson(Map<String, dynamic> json) =>
+    $checkedCreate(
+      r'_$PodcastAnnotation',
+      json,
+      ($checkedConvert) {
+        final val = _$PodcastAnnotation(
+          name: $checkedConvert('name', (v) => v as String),
+          sortableName: $checkedConvert('sortableName', (v) => v as String),
+          icon: $checkedConvert('icon',
+              (v) => MediaIcon.optionalFromJson(v as Map<String, dynamic>)),
+          modificationTime: $checkedConvert(
+              'modificationTime', (v) => readDateTimeMilliseconds(v as int)),
+          publisherName: $checkedConvert('publisherName', (v) => v as String),
+          publisherId: $checkedConvert('publisherId', (v) => v as String),
+          ordering: $checkedConvert('ordering', (v) => v as String),
+          episodeCount: $checkedConvert('episodeCount', (v) => v as int),
+          shelfLife: $checkedConvert('shelfLife', (v) => v as String),
+          categoryPandoraIds: $checkedConvert('categories',
+              (v) => (v as List<dynamic>).map((e) => e as String).toList()),
+          shareableUrlPath:
+              $checkedConvert('shareableUrlPath', (v) => v as String),
+          slugPlusPandoraId:
+              $checkedConvert('slugPlusPandoraId', (v) => v as String),
+          contentState: $checkedConvert(
+              'contentState', (v) => $enumDecode(_$ContentStateEnumMap, v)),
+          rightsInfo: $checkedConvert('rightsInfo',
+              (v) => RightsInfo.fromJson(v as Map<String, dynamic>)),
+          sxmEnabled: $checkedConvert('sxmEnabled', (v) => v as bool),
+          sxmChannelId: $checkedConvert('sxmChannelId', (v) => v as String?),
+          latestEpisodePandoraId:
+              $checkedConvert('latestEpisodeId', (v) => v as String?),
+          exclusivityGroups: $checkedConvert('exclusivityGroups',
+              (v) => (v as List<dynamic>).map((e) => e as Object).toList()),
+          pandoraId: $checkedConvert('pandoraId', (v) => v as String),
+          scope:
+              $checkedConvert('scope', (v) => $enumDecode(_$ScopeEnumMap, v)),
+          $type: $checkedConvert('type', (v) => v as String?),
+        );
+        return val;
+      },
+      fieldKeyMap: const {
+        'categoryPandoraIds': 'categories',
+        'latestEpisodePandoraId': 'latestEpisodeId',
+        r'$type': 'type'
+      },
+    );
+
+Map<String, dynamic> _$$PodcastAnnotationToJson(_$PodcastAnnotation instance) =>
+    <String, dynamic>{
+      'name': instance.name,
+      'sortableName': instance.sortableName,
+      'icon': MediaIcon.optionalToJson(instance.icon),
+      'modificationTime': writeDateTimeMilliseconds(instance.modificationTime),
+      'publisherName': instance.publisherName,
+      'publisherId': instance.publisherId,
+      'ordering': instance.ordering,
+      'episodeCount': instance.episodeCount,
+      'shelfLife': instance.shelfLife,
+      'categories': instance.categoryPandoraIds,
+      'shareableUrlPath': instance.shareableUrlPath,
+      'slugPlusPandoraId': instance.slugPlusPandoraId,
+      'contentState': _$ContentStateEnumMap[instance.contentState]!,
+      'rightsInfo': instance.rightsInfo,
+      'sxmEnabled': instance.sxmEnabled,
+      'sxmChannelId': instance.sxmChannelId,
+      'latestEpisodeId': instance.latestEpisodePandoraId,
+      'exclusivityGroups': instance.exclusivityGroups,
+      'pandoraId': instance.pandoraId,
+      'scope': _$ScopeEnumMap[instance.scope]!,
+      'type': instance.$type,
+    };
+
+_$PodcastCategoryAnnotation _$$PodcastCategoryAnnotationFromJson(
+        Map<String, dynamic> json) =>
+    $checkedCreate(
+      r'_$PodcastCategoryAnnotation',
+      json,
+      ($checkedConvert) {
+        final val = _$PodcastCategoryAnnotation(
+          name: $checkedConvert('name', (v) => v as String),
+          aliases: $checkedConvert('aliases',
+              (v) => (v as List<dynamic>).map((e) => e as String).toList()),
+          icon: $checkedConvert('icon',
+              (v) => MediaIcon.optionalFromJson(v as Map<String, dynamic>)),
+          modificationTime: $checkedConvert(
+              'modificationTime', (v) => readDateTimeMilliseconds(v as int)),
+          pandoraId: $checkedConvert('pandoraId', (v) => v as String),
+          scope: $checkedConvert('scope', (v) => v as String),
+          $type: $checkedConvert('type', (v) => v as String?),
+        );
+        return val;
+      },
+      fieldKeyMap: const {r'$type': 'type'},
+    );
+
+Map<String, dynamic> _$$PodcastCategoryAnnotationToJson(
+        _$PodcastCategoryAnnotation instance) =>
+    <String, dynamic>{
+      'name': instance.name,
+      'aliases': instance.aliases,
+      'icon': MediaIcon.optionalToJson(instance.icon),
+      'modificationTime': writeDateTimeMilliseconds(instance.modificationTime),
+      'pandoraId': instance.pandoraId,
+      'scope': instance.scope,
+      'type': instance.$type,
+    };
+
+_$EpisodeAnnotation _$$EpisodeAnnotationFromJson(Map<String, dynamic> json) =>
+    $checkedCreate(
+      r'_$EpisodeAnnotation',
+      json,
+      ($checkedConvert) {
+        final val = _$EpisodeAnnotation(
+          name: $checkedConvert('name', (v) => v as String),
+          sortableName: $checkedConvert('sortableName', (v) => v as String),
+          icon: $checkedConvert('icon',
+              (v) => MediaIcon.optionalFromJson(v as Map<String, dynamic>)),
+          modificationTime: $checkedConvert(
+              'modificationTime', (v) => readDateTimeMilliseconds(v as int)),
+          programName: $checkedConvert('programName', (v) => v as String),
+          summary: $checkedConvert('summary', (v) => v as String),
+          releaseDate: $checkedConvert('releaseDate',
+              (v) => v == null ? null : DateTime.parse(v as String)),
+          podcastPandoraId: $checkedConvert('podcastId', (v) => v as String),
+          duration: $checkedConvert('duration', (v) => readSeconds(v as int)),
+          rightsInfo: $checkedConvert('rightsInfo',
+              (v) => RightsInfo.fromJson(v as Map<String, dynamic>)),
+          explicitness: $checkedConvert(
+              'explicitness', (v) => $enumDecode(_$ExplicitnessEnumMap, v)),
+          shareableUrlPath:
+              $checkedConvert('shareableUrlPath', (v) => v as String),
+          slugPlusPandoraId:
+              $checkedConvert('slugPlusPandoraId', (v) => v as String),
+          contentState: $checkedConvert(
+              'contentState', (v) => $enumDecode(_$ContentStateEnumMap, v)),
+          adBreaks: $checkedConvert('adBreaks',
+              (v) => (v as List<dynamic>).map((e) => e as Object).toList()),
+          exclusivityGroups: $checkedConvert('exclusivityGroups',
+              (v) => (v as List<dynamic>).map((e) => e as Object).toList()),
+          pandoraId: $checkedConvert('pandoraId', (v) => v as String),
+          scope:
+              $checkedConvert('scope', (v) => $enumDecode(_$ScopeEnumMap, v)),
+          $type: $checkedConvert('type', (v) => v as String?),
+        );
+        return val;
+      },
+      fieldKeyMap: const {'podcastPandoraId': 'podcastId', r'$type': 'type'},
+    );
+
+Map<String, dynamic> _$$EpisodeAnnotationToJson(_$EpisodeAnnotation instance) =>
+    <String, dynamic>{
+      'name': instance.name,
+      'sortableName': instance.sortableName,
+      'icon': MediaIcon.optionalToJson(instance.icon),
+      'modificationTime': writeDateTimeMilliseconds(instance.modificationTime),
+      'programName': instance.programName,
+      'summary': instance.summary,
+      'releaseDate': instance.releaseDate?.toIso8601String(),
+      'podcastId': instance.podcastPandoraId,
+      'duration': writeSeconds(instance.duration),
+      'rightsInfo': instance.rightsInfo,
+      'explicitness': _$ExplicitnessEnumMap[instance.explicitness]!,
+      'shareableUrlPath': instance.shareableUrlPath,
+      'slugPlusPandoraId': instance.slugPlusPandoraId,
+      'contentState': _$ContentStateEnumMap[instance.contentState]!,
+      'adBreaks': instance.adBreaks,
+      'exclusivityGroups': instance.exclusivityGroups,
+      'pandoraId': instance.pandoraId,
+      'scope': _$ScopeEnumMap[instance.scope]!,
+      'type': instance.$type,
+    };
+
 _$CuratorAnnotation _$$CuratorAnnotationFromJson(Map<String, dynamic> json) =>
     $checkedCreate(
       r'_$CuratorAnnotation',

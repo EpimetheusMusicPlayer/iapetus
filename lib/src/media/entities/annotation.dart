@@ -190,6 +190,70 @@ class MediaAnnotation with _$MediaAnnotation implements PandoraEntity {
     @JsonKey(name: 'pandoraId') required String pandoraId,
   }) = StationAnnotation;
 
+  @FreezedUnionValue('PC')
+  const factory MediaAnnotation.podcast({
+    @JsonKey(name: 'name') required String name,
+    @JsonKey(name: 'sortableName') required String sortableName,
+    @JsonKey(name: 'icon', fromJson: MediaIcon.optionalFromJson, toJson: MediaIcon.optionalToJson)
+        required MediaIcon? icon,
+    @JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
+        required DateTime modificationTime,
+    @JsonKey(name: 'publisherName') required String publisherName,
+    @JsonKey(name: 'publisherId') required String publisherId,
+    @JsonKey(name: 'ordering') required String ordering,
+    @JsonKey(name: 'episodeCount') required int episodeCount,
+    @JsonKey(name: 'shelfLife') required String shelfLife,
+    @JsonKey(name: 'categories') required List<String> categoryPandoraIds,
+    @JsonKey(name: 'shareableUrlPath') required String shareableUrlPath,
+    @JsonKey(name: 'slugPlusPandoraId') required String slugPlusPandoraId,
+    @JsonKey(name: 'contentState') required ContentState contentState,
+    @JsonKey(name: 'rightsInfo') required RightsInfo rightsInfo,
+    @JsonKey(name: 'sxmEnabled') required bool sxmEnabled,
+    @JsonKey(name: 'sxmChannelId') String? sxmChannelId,
+    @JsonKey(name: 'latestEpisodeId') String? latestEpisodePandoraId,
+    @JsonKey(name: 'exclusivityGroups') required List<Object> exclusivityGroups,
+    @JsonKey(name: 'pandoraId') required String pandoraId,
+    @JsonKey(name: 'scope') required Scope scope,
+  }) = PodcastAnnotation;
+
+  @FreezedUnionValue('TG')
+  const factory MediaAnnotation.podcastCategory({
+    @JsonKey(name: 'name') required String name,
+    @JsonKey(name: 'aliases') required List<String> aliases,
+    @JsonKey(name: 'icon', fromJson: MediaIcon.optionalFromJson, toJson: MediaIcon.optionalToJson)
+        required MediaIcon? icon,
+    @JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
+        required DateTime modificationTime,
+    @JsonKey(name: 'pandoraId') required String pandoraId,
+    @JsonKey(name: 'scope') required String scope,
+  }) = PodcastCategoryAnnotation;
+
+  @FreezedUnionValue('PE')
+  const factory MediaAnnotation.episode({
+    @JsonKey(name: 'name') required String name,
+    @JsonKey(name: 'sortableName') required String sortableName,
+    @JsonKey(name: 'icon', fromJson: MediaIcon.optionalFromJson, toJson: MediaIcon.optionalToJson)
+        required MediaIcon? icon,
+    @JsonKey(name: 'modificationTime', fromJson: readDateTimeMilliseconds, toJson: writeDateTimeMilliseconds)
+        required DateTime modificationTime,
+    @JsonKey(name: 'programName') required String programName,
+    @JsonKey(name: 'summary') required String summary,
+    @JsonKey(name: 'releaseDate') DateTime? releaseDate,
+    @JsonKey(name: 'podcastId') required String podcastPandoraId,
+    @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
+        required Duration duration,
+    @JsonKey(name: 'rightsInfo') required RightsInfo rightsInfo,
+    @JsonKey(name: 'explicitness') required Explicitness explicitness,
+    @JsonKey(name: 'shareableUrlPath') required String shareableUrlPath,
+    @JsonKey(name: 'slugPlusPandoraId') required String slugPlusPandoraId,
+    @JsonKey(name: 'contentState') required ContentState contentState,
+    @JsonKey(name: 'adBreaks') required List<Object> adBreaks,
+    @JsonKey(name: 'exclusivityGroups') required List<Object> exclusivityGroups,
+    @JsonKey(name: 'pandoraId') required String pandoraId,
+    @JsonKey(name: 'scope') required Scope scope,
+  }) = EpisodeAnnotation;
+
+  @FreezedUnionValue('CU')
   const factory MediaAnnotation.curator({
     @JsonKey(name: 'name') required String name,
     @JsonKey(name: 'sortableName') required String sortableName,
@@ -246,6 +310,9 @@ class MediaAnnotation with _$MediaAnnotation implements PandoraEntity {
         genre: (_) => PandoraType.genre,
         playlist: (_) => PandoraType.playlist,
         station: (_) => PandoraType.station,
+        podcast: (_) => PandoraType.podcast,
+        podcastCategory: (_) => PandoraType.podcastCategory,
+        episode: (_) => PandoraType.episode,
         curator: (_) => PandoraType.curator,
         composer: (_) => PandoraType.composer,
         listener: (_) => PandoraType.listener,
