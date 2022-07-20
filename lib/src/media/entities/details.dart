@@ -7,7 +7,6 @@ import 'package:iapetus/src/media/entities/credits.dart';
 import 'package:iapetus/src/media/entities/focus_trait.dart';
 import 'package:iapetus/src/media/entities/interfaces/annotated.dart';
 import 'package:iapetus/src/media/entities/lyric_data.dart';
-import 'package:iapetus/src/media/entities/types/track.dart';
 
 part 'details.freezed.dart';
 part 'details.g.dart';
@@ -32,7 +31,6 @@ class MediaDetailsSet with _$MediaDetailsSet implements Annotated {
 
 @freezed
 class MediaDetails with _$MediaDetails implements PandoraEntity {
-  @Implements<Track>()
   @Assert(
     // language=Dart
     '(lyricData == null && cleanLyricData == null) || (lyricData != null && cleanLyricData != null)',

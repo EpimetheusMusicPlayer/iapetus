@@ -2,15 +2,12 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:iapetus/src/common/entities/pandora_entity.dart';
 import 'package:iapetus/src/common/entities/pandora_type.dart';
 import 'package:iapetus/src/media/entities/rating.dart';
-import 'package:iapetus/src/media/entities/types/track.dart';
 
 part 'song_recommendation.freezed.dart';
 part 'song_recommendation.g.dart';
 
 @freezed
-class SongRecommendation
-    with _$SongRecommendation
-    implements PandoraEntity, Track {
+class SongRecommendation with _$SongRecommendation implements PandoraEntity {
   const SongRecommendation._();
 
   const factory SongRecommendation({

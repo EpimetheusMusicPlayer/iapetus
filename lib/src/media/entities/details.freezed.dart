@@ -1436,7 +1436,7 @@ class _$TrackDetails implements TrackDetails {
   }
 }
 
-abstract class TrackDetails implements MediaDetails, Track {
+abstract class TrackDetails implements MediaDetails {
   const factory TrackDetails(
       {@JsonKey(name: 'trackTags')
           required final List<String> trackTags,

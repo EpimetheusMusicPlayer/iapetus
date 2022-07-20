@@ -9,7 +9,6 @@ import 'package:iapetus/src/media/entities/icon.dart';
 import 'package:iapetus/src/media/entities/playlist_linked_type.dart';
 import 'package:iapetus/src/media/entities/rights_info.dart';
 import 'package:iapetus/src/media/entities/scope.dart';
-import 'package:iapetus/src/media/entities/types/track.dart';
 import 'package:iapetus/src/playlists/entities/listener_id_info.dart';
 import 'package:iapetus/src/playlists/entities/playlist_viewer_info.dart';
 
@@ -21,7 +20,6 @@ class MediaAnnotation with _$MediaAnnotation implements PandoraEntity {
   const MediaAnnotation._();
 
   @FreezedUnionValue('TR')
-  @Implements<Track>()
   const factory MediaAnnotation.track({
     @JsonKey(name: 'name') required String name,
     @JsonKey(name: 'sortableName') required String sortableName,

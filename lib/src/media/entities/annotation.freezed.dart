@@ -2974,7 +2974,7 @@ class _$TrackAnnotation extends TrackAnnotation {
   }
 }
 
-abstract class TrackAnnotation extends MediaAnnotation implements Track {
+abstract class TrackAnnotation extends MediaAnnotation {
   const factory TrackAnnotation(
       {@JsonKey(name: 'name')
           required final String name,

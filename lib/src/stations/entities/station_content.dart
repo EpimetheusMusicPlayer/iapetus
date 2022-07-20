@@ -1,11 +1,11 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:iapetus/src/common/data/json_utils.dart';
+import 'package:iapetus/src/common/entities/pandora_entity.dart';
 import 'package:iapetus/src/common/entities/pandora_type.dart';
 import 'package:iapetus/src/media/entities/audio_url_data.dart';
 import 'package:iapetus/src/media/entities/audio_url_quality.dart';
 import 'package:iapetus/src/media/entities/playable_media.dart';
 import 'package:iapetus/src/media/entities/rating.dart';
-import 'package:iapetus/src/media/entities/types/track.dart';
 import 'package:iapetus/src/stations/entities/track_key.dart';
 import 'package:iapetus/src/stations/entities/track_type.dart';
 
@@ -13,7 +13,9 @@ part 'station_content.freezed.dart';
 part 'station_content.g.dart';
 
 @freezed
-class StationContent with _$StationContent implements PlayableMedia, Track {
+class StationContent
+    with _$StationContent
+    implements PandoraEntity, PlayableMedia {
   const StationContent._();
 
   @override

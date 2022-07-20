@@ -1,7 +1,7 @@
 import 'package:iapetus/src/common/entities/pandora_entity.dart';
+import 'package:iapetus/src/common/entities/pandora_type.dart';
 import 'package:iapetus/src/iapetus.dart';
 import 'package:iapetus/src/media/entities/details.dart';
-import 'package:iapetus/src/media/entities/types/track.dart';
 
 extension DetailsApi on Iapetus {
   Future<Map<String, dynamic>> _getDetailsJson(PandoraEntity pandoraEntity) =>
@@ -11,7 +11,8 @@ extension DetailsApi on Iapetus {
         encrypt: false,
       );
 
-  Future<TrackDetailsSet> getTrackDetails(Track track) async {
+  Future<TrackDetailsSet> getTrackDetails(PandoraEntity track) async {
+    assert(track.pandoraType == PandoraType.song);
     final detailsJson = await _getDetailsJson(track);
     return TrackDetailsSet.fromJson(detailsJson);
   }

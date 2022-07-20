@@ -15,4 +15,3 @@ export 'entities/lyric_data.dart';
 export 'entities/playable_media.dart';
 export 'entities/rating.dart';
 export 'entities/rights_info.dart';
-export 'entities/types/track.dart';

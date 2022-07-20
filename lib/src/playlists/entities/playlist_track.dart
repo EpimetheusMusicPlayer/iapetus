@@ -2,13 +2,12 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:iapetus/src/common/data/json_utils.dart';
 import 'package:iapetus/src/common/entities/pandora_entity.dart';
 import 'package:iapetus/src/common/entities/pandora_type.dart';
-import 'package:iapetus/src/media/entities/types/track.dart';
 
 part 'playlist_track.freezed.dart';
 part 'playlist_track.g.dart';
 
 @freezed
-class PlaylistTrack with _$PlaylistTrack implements PandoraEntity, Track {
+class PlaylistTrack with _$PlaylistTrack implements PandoraEntity {
   const PlaylistTrack._();
 
   const factory PlaylistTrack({
