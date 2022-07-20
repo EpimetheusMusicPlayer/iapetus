@@ -129,7 +129,7 @@ mixin _$MediaAnnotation {
             @JsonKey(name: 'sortableName')
                 String sortableName,
             @JsonKey(name: 'releaseDate')
-                DateTime releaseDate,
+                DateTime? releaseDate,
             @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
                 Duration duration,
             @JsonKey(name: 'trackCount')
@@ -425,7 +425,7 @@ mixin _$MediaAnnotation {
             @JsonKey(name: 'sortableName')
                 String sortableName,
             @JsonKey(name: 'releaseDate')
-                DateTime releaseDate,
+                DateTime? releaseDate,
             @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
                 Duration duration,
             @JsonKey(name: 'trackCount')
@@ -721,7 +721,7 @@ mixin _$MediaAnnotation {
             @JsonKey(name: 'sortableName')
                 String sortableName,
             @JsonKey(name: 'releaseDate')
-                DateTime releaseDate,
+                DateTime? releaseDate,
             @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
                 Duration duration,
             @JsonKey(name: 'trackCount')
@@ -1451,7 +1451,7 @@ class _$TrackAnnotation extends TrackAnnotation {
             @JsonKey(name: 'sortableName')
                 String sortableName,
             @JsonKey(name: 'releaseDate')
-                DateTime releaseDate,
+                DateTime? releaseDate,
             @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
                 Duration duration,
             @JsonKey(name: 'trackCount')
@@ -1768,7 +1768,7 @@ class _$TrackAnnotation extends TrackAnnotation {
             @JsonKey(name: 'sortableName')
                 String sortableName,
             @JsonKey(name: 'releaseDate')
-                DateTime releaseDate,
+                DateTime? releaseDate,
             @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
                 Duration duration,
             @JsonKey(name: 'trackCount')
@@ -2085,7 +2085,7 @@ class _$TrackAnnotation extends TrackAnnotation {
             @JsonKey(name: 'sortableName')
                 String sortableName,
             @JsonKey(name: 'releaseDate')
-                DateTime releaseDate,
+                DateTime? releaseDate,
             @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
                 Duration duration,
             @JsonKey(name: 'trackCount')
@@ -2901,7 +2901,7 @@ class _$ArtistAnnotation extends ArtistAnnotation {
             @JsonKey(name: 'sortableName')
                 String sortableName,
             @JsonKey(name: 'releaseDate')
-                DateTime releaseDate,
+                DateTime? releaseDate,
             @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
                 Duration duration,
             @JsonKey(name: 'trackCount')
@@ -3217,7 +3217,7 @@ class _$ArtistAnnotation extends ArtistAnnotation {
             @JsonKey(name: 'sortableName')
                 String sortableName,
             @JsonKey(name: 'releaseDate')
-                DateTime releaseDate,
+                DateTime? releaseDate,
             @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
                 Duration duration,
             @JsonKey(name: 'trackCount')
@@ -3533,7 +3533,7 @@ class _$ArtistAnnotation extends ArtistAnnotation {
             @JsonKey(name: 'sortableName')
                 String sortableName,
             @JsonKey(name: 'releaseDate')
-                DateTime releaseDate,
+                DateTime? releaseDate,
             @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
                 Duration duration,
             @JsonKey(name: 'trackCount')
@@ -3934,7 +3934,7 @@ abstract class _$$AlbumAnnotationCopyWith<$Res>
       @JsonKey(name: 'sortableName')
           String sortableName,
       @JsonKey(name: 'releaseDate')
-          DateTime releaseDate,
+          DateTime? releaseDate,
       @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
           Duration duration,
       @JsonKey(name: 'trackCount')
@@ -4020,7 +4020,7 @@ class __$$AlbumAnnotationCopyWithImpl<$Res>
       releaseDate: releaseDate == freezed
           ? _value.releaseDate
           : releaseDate // ignore: cast_nullable_to_non_nullable
-              as DateTime,
+              as DateTime?,
       duration: duration == freezed
           ? _value.duration
           : duration // ignore: cast_nullable_to_non_nullable
@@ -4120,7 +4120,7 @@ class _$AlbumAnnotation extends AlbumAnnotation {
       @JsonKey(name: 'sortableName')
           required this.sortableName,
       @JsonKey(name: 'releaseDate')
-          required this.releaseDate,
+          this.releaseDate,
       @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
           required this.duration,
       @JsonKey(name: 'trackCount')
@@ -4171,7 +4171,7 @@ class _$AlbumAnnotation extends AlbumAnnotation {
   final String sortableName;
   @override
   @JsonKey(name: 'releaseDate')
-  final DateTime releaseDate;
+  final DateTime? releaseDate;
   @override
   @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
   final Duration duration;
@@ -4396,7 +4396,7 @@ class _$AlbumAnnotation extends AlbumAnnotation {
             @JsonKey(name: 'sortableName')
                 String sortableName,
             @JsonKey(name: 'releaseDate')
-                DateTime releaseDate,
+                DateTime? releaseDate,
             @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
                 Duration duration,
             @JsonKey(name: 'trackCount')
@@ -4715,7 +4715,7 @@ class _$AlbumAnnotation extends AlbumAnnotation {
             @JsonKey(name: 'sortableName')
                 String sortableName,
             @JsonKey(name: 'releaseDate')
-                DateTime releaseDate,
+                DateTime? releaseDate,
             @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
                 Duration duration,
             @JsonKey(name: 'trackCount')
@@ -5034,7 +5034,7 @@ class _$AlbumAnnotation extends AlbumAnnotation {
             @JsonKey(name: 'sortableName')
                 String sortableName,
             @JsonKey(name: 'releaseDate')
-                DateTime releaseDate,
+                DateTime? releaseDate,
             @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
                 Duration duration,
             @JsonKey(name: 'trackCount')
@@ -5344,7 +5344,7 @@ abstract class AlbumAnnotation extends MediaAnnotation {
       @JsonKey(name: 'sortableName')
           required final String sortableName,
       @JsonKey(name: 'releaseDate')
-          required final DateTime releaseDate,
+          final DateTime? releaseDate,
       @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
           required final Duration duration,
       @JsonKey(name: 'trackCount')
@@ -5389,7 +5389,7 @@ abstract class AlbumAnnotation extends MediaAnnotation {
   @JsonKey(name: 'sortableName')
   String get sortableName;
   @JsonKey(name: 'releaseDate')
-  DateTime get releaseDate;
+  DateTime? get releaseDate;
   @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
   Duration get duration;
   @JsonKey(name: 'trackCount')
@@ -5835,7 +5835,7 @@ class _$ArtistMessageMediaAnnotation extends ArtistMessageMediaAnnotation {
             @JsonKey(name: 'sortableName')
                 String sortableName,
             @JsonKey(name: 'releaseDate')
-                DateTime releaseDate,
+                DateTime? releaseDate,
             @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
                 Duration duration,
             @JsonKey(name: 'trackCount')
@@ -6148,7 +6148,7 @@ class _$ArtistMessageMediaAnnotation extends ArtistMessageMediaAnnotation {
             @JsonKey(name: 'sortableName')
                 String sortableName,
             @JsonKey(name: 'releaseDate')
-                DateTime releaseDate,
+                DateTime? releaseDate,
             @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
                 Duration duration,
             @JsonKey(name: 'trackCount')
@@ -6461,7 +6461,7 @@ class _$ArtistMessageMediaAnnotation extends ArtistMessageMediaAnnotation {
             @JsonKey(name: 'sortableName')
                 String sortableName,
             @JsonKey(name: 'releaseDate')
-                DateTime releaseDate,
+                DateTime? releaseDate,
             @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
                 Duration duration,
             @JsonKey(name: 'trackCount')
@@ -7167,7 +7167,7 @@ class _$GenreAnnotation extends GenreAnnotation {
             @JsonKey(name: 'sortableName')
                 String sortableName,
             @JsonKey(name: 'releaseDate')
-                DateTime releaseDate,
+                DateTime? releaseDate,
             @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
                 Duration duration,
             @JsonKey(name: 'trackCount')
@@ -7477,7 +7477,7 @@ class _$GenreAnnotation extends GenreAnnotation {
             @JsonKey(name: 'sortableName')
                 String sortableName,
             @JsonKey(name: 'releaseDate')
-                DateTime releaseDate,
+                DateTime? releaseDate,
             @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
                 Duration duration,
             @JsonKey(name: 'trackCount')
@@ -7787,7 +7787,7 @@ class _$GenreAnnotation extends GenreAnnotation {
             @JsonKey(name: 'sortableName')
                 String sortableName,
             @JsonKey(name: 'releaseDate')
-                DateTime releaseDate,
+                DateTime? releaseDate,
             @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
                 Duration duration,
             @JsonKey(name: 'trackCount')
@@ -8689,7 +8689,7 @@ class _$PlaylistAnnotation extends PlaylistAnnotation {
             @JsonKey(name: 'sortableName')
                 String sortableName,
             @JsonKey(name: 'releaseDate')
-                DateTime releaseDate,
+                DateTime? releaseDate,
             @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
                 Duration duration,
             @JsonKey(name: 'trackCount')
@@ -9012,7 +9012,7 @@ class _$PlaylistAnnotation extends PlaylistAnnotation {
             @JsonKey(name: 'sortableName')
                 String sortableName,
             @JsonKey(name: 'releaseDate')
-                DateTime releaseDate,
+                DateTime? releaseDate,
             @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
                 Duration duration,
             @JsonKey(name: 'trackCount')
@@ -9335,7 +9335,7 @@ class _$PlaylistAnnotation extends PlaylistAnnotation {
             @JsonKey(name: 'sortableName')
                 String sortableName,
             @JsonKey(name: 'releaseDate')
-                DateTime releaseDate,
+                DateTime? releaseDate,
             @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
                 Duration duration,
             @JsonKey(name: 'trackCount')
@@ -10079,7 +10079,7 @@ class _$StationMediaAnnotation extends StationMediaAnnotation {
             @JsonKey(name: 'sortableName')
                 String sortableName,
             @JsonKey(name: 'releaseDate')
-                DateTime releaseDate,
+                DateTime? releaseDate,
             @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
                 Duration duration,
             @JsonKey(name: 'trackCount')
@@ -10388,7 +10388,7 @@ class _$StationMediaAnnotation extends StationMediaAnnotation {
             @JsonKey(name: 'sortableName')
                 String sortableName,
             @JsonKey(name: 'releaseDate')
-                DateTime releaseDate,
+                DateTime? releaseDate,
             @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
                 Duration duration,
             @JsonKey(name: 'trackCount')
@@ -10697,7 +10697,7 @@ class _$StationMediaAnnotation extends StationMediaAnnotation {
             @JsonKey(name: 'sortableName')
                 String sortableName,
             @JsonKey(name: 'releaseDate')
-                DateTime releaseDate,
+                DateTime? releaseDate,
             @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
                 Duration duration,
             @JsonKey(name: 'trackCount')
@@ -11316,7 +11316,7 @@ class _$CuratorMediaAnnotation extends CuratorMediaAnnotation {
             @JsonKey(name: 'sortableName')
                 String sortableName,
             @JsonKey(name: 'releaseDate')
-                DateTime releaseDate,
+                DateTime? releaseDate,
             @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
                 Duration duration,
             @JsonKey(name: 'trackCount')
@@ -11616,7 +11616,7 @@ class _$CuratorMediaAnnotation extends CuratorMediaAnnotation {
             @JsonKey(name: 'sortableName')
                 String sortableName,
             @JsonKey(name: 'releaseDate')
-                DateTime releaseDate,
+                DateTime? releaseDate,
             @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
                 Duration duration,
             @JsonKey(name: 'trackCount')
@@ -11916,7 +11916,7 @@ class _$CuratorMediaAnnotation extends CuratorMediaAnnotation {
             @JsonKey(name: 'sortableName')
                 String sortableName,
             @JsonKey(name: 'releaseDate')
-                DateTime releaseDate,
+                DateTime? releaseDate,
             @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
                 Duration duration,
             @JsonKey(name: 'trackCount')
@@ -12574,7 +12574,7 @@ class _$ComposerAnnotation extends ComposerAnnotation {
             @JsonKey(name: 'sortableName')
                 String sortableName,
             @JsonKey(name: 'releaseDate')
-                DateTime releaseDate,
+                DateTime? releaseDate,
             @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
                 Duration duration,
             @JsonKey(name: 'trackCount')
@@ -12884,7 +12884,7 @@ class _$ComposerAnnotation extends ComposerAnnotation {
             @JsonKey(name: 'sortableName')
                 String sortableName,
             @JsonKey(name: 'releaseDate')
-                DateTime releaseDate,
+                DateTime? releaseDate,
             @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
                 Duration duration,
             @JsonKey(name: 'trackCount')
@@ -13194,7 +13194,7 @@ class _$ComposerAnnotation extends ComposerAnnotation {
             @JsonKey(name: 'sortableName')
                 String sortableName,
             @JsonKey(name: 'releaseDate')
-                DateTime releaseDate,
+                DateTime? releaseDate,
             @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
                 Duration duration,
             @JsonKey(name: 'trackCount')
@@ -13808,7 +13808,7 @@ class _$ListenerMediaAnnotation extends ListenerMediaAnnotation {
             @JsonKey(name: 'sortableName')
                 String sortableName,
             @JsonKey(name: 'releaseDate')
-                DateTime releaseDate,
+                DateTime? releaseDate,
             @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
                 Duration duration,
             @JsonKey(name: 'trackCount')
@@ -14108,7 +14108,7 @@ class _$ListenerMediaAnnotation extends ListenerMediaAnnotation {
             @JsonKey(name: 'sortableName')
                 String sortableName,
             @JsonKey(name: 'releaseDate')
-                DateTime releaseDate,
+                DateTime? releaseDate,
             @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
                 Duration duration,
             @JsonKey(name: 'trackCount')
@@ -14408,7 +14408,7 @@ class _$ListenerMediaAnnotation extends ListenerMediaAnnotation {
             @JsonKey(name: 'sortableName')
                 String sortableName,
             @JsonKey(name: 'releaseDate')
-                DateTime releaseDate,
+                DateTime? releaseDate,
             @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
                 Duration duration,
             @JsonKey(name: 'trackCount')

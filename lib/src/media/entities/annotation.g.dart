@@ -152,8 +152,8 @@ _$AlbumAnnotation _$$AlbumAnnotationFromJson(Map<String, dynamic> json) =>
         final val = _$AlbumAnnotation(
           name: $checkedConvert('name', (v) => v as String),
           sortableName: $checkedConvert('sortableName', (v) => v as String),
-          releaseDate: $checkedConvert(
-              'releaseDate', (v) => DateTime.parse(v as String)),
+          releaseDate: $checkedConvert('releaseDate',
+              (v) => v == null ? null : DateTime.parse(v as String)),
           duration: $checkedConvert('duration', (v) => readSeconds(v as int)),
           trackCount: $checkedConvert('trackCount', (v) => v as int),
           isCompilation: $checkedConvert('isCompilation', (v) => v as bool),
@@ -192,7 +192,7 @@ Map<String, dynamic> _$$AlbumAnnotationToJson(_$AlbumAnnotation instance) =>
     <String, dynamic>{
       'name': instance.name,
       'sortableName': instance.sortableName,
-      'releaseDate': instance.releaseDate.toIso8601String(),
+      'releaseDate': instance.releaseDate?.toIso8601String(),
       'duration': writeSeconds(instance.duration),
       'trackCount': instance.trackCount,
       'isCompilation': instance.isCompilation,

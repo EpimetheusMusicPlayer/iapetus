@@ -75,7 +75,7 @@ class MediaAnnotation with _$MediaAnnotation implements PandoraEntity {
   const factory MediaAnnotation.album({
     @JsonKey(name: 'name') required String name,
     @JsonKey(name: 'sortableName') required String sortableName,
-    @JsonKey(name: 'releaseDate') required DateTime releaseDate,
+    @JsonKey(name: 'releaseDate') DateTime? releaseDate,
     @JsonKey(name: 'duration', fromJson: readSeconds, toJson: writeSeconds)
         required Duration duration,
     @JsonKey(name: 'trackCount') required int trackCount,
