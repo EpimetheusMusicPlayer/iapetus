@@ -79,15 +79,19 @@ extension PandoraApi on Iapetus {
         switch (apiException.code) {
           case PandoraApiErrorCode.invalidAuthToken:
             // If the authentication token is invalid, reauthenticate and retry.
-            await userLoginFromStorage();
-            return makeApiRequest(
-              method,
-              data: data,
-              requiresPartner: requiresPartner,
-              requiresUser: requiresUser,
-              encrypt: encrypt,
-              decrypt: decrypt,
-            );
+            if (loggedIn) {
+              await userLoginFromStorage();
+              return makeApiRequest(
+                method,
+                data: data,
+                requiresPartner: requiresPartner,
+                requiresUser: requiresUser,
+                encrypt: encrypt,
+                decrypt: decrypt,
+              );
+            } else {
+              throw const IapetusAuthenticationException();
+            }
           case PandoraApiErrorCode.licensingRestrictions:
           case PandoraApiErrorCode.invalidCountryCode:
             throw const IapetusLocationException();
