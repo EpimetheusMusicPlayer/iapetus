@@ -11,6 +11,7 @@ import 'package:iapetus/src/core/authentication/entities/authenticated_user.dart
 import 'package:iapetus/src/core/authentication/entities/gender.dart';
 import 'package:iapetus/src/core/authentication/errors/authentication.dart';
 import 'package:iapetus/src/core/authentication/errors/registration.dart';
+import 'package:iapetus/src/core/client_info.dart';
 import 'package:iapetus/src/core/crypto/data/crypto.dart';
 import 'package:iapetus/src/core/device/repositories/device_info.dart';
 import 'package:iapetus/src/core/http/entities/iapetus_network_config.dart';
@@ -44,7 +45,10 @@ class Iapetus {
     required this.fastStorage,
     required this.secureStorage,
     IapetusNetworkConfig networkConfig = const IapetusNetworkConfig(),
-  })  : _httpClient = createClient(networkConfig),
+  })  : _httpClient = createClient(
+          '$clientName/$clientProtocol/$clientVersionName ($clientVersion)',
+          networkConfig,
+        ),
         deviceInfo = DeviceInfo(secureStorage);
 
   AuthenticatedPartner? _partner;
