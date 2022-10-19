@@ -97,7 +97,8 @@ mixin _$PlaylistSegment {
 abstract class $PlaylistSegmentCopyWith<$Res> {
   factory $PlaylistSegmentCopyWith(
           PlaylistSegment value, $Res Function(PlaylistSegment) then) =
-      _$PlaylistSegmentCopyWithImpl<$Res>;
+      _$PlaylistSegmentCopyWithImpl<$Res, PlaylistSegment>;
+  @useResult
   $Res call(
       {@JsonKey(name: 'pandoraId')
           String pandoraId,
@@ -158,160 +159,163 @@ abstract class $PlaylistSegmentCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$PlaylistSegmentCopyWithImpl<$Res>
+class _$PlaylistSegmentCopyWithImpl<$Res, $Val extends PlaylistSegment>
     implements $PlaylistSegmentCopyWith<$Res> {
   _$PlaylistSegmentCopyWithImpl(this._value, this._then);
 
-  final PlaylistSegment _value;
   // ignore: unused_field
-  final $Res Function(PlaylistSegment) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? pandoraId = freezed,
-    Object? annotations = freezed,
-    Object? tracks = freezed,
-    Object? version = freezed,
-    Object? name = freezed,
-    Object? description = freezed,
-    Object? timeCreated = freezed,
-    Object? timeLastUpdated = freezed,
+    Object? pandoraId = null,
+    Object? annotations = null,
+    Object? tracks = null,
+    Object? version = null,
+    Object? name = null,
+    Object? description = null,
+    Object? timeCreated = null,
+    Object? timeLastUpdated = null,
     Object? timeLastRefreshed = freezed,
-    Object? private = freezed,
-    Object? secret = freezed,
-    Object? linkedType = freezed,
+    Object? private = null,
+    Object? secret = null,
+    Object? linkedType = null,
     Object? linkedSourceId = freezed,
-    Object? totalTracks = freezed,
-    Object? shareableUrlPath = freezed,
-    Object? thorLayers = freezed,
-    Object? duration = freezed,
-    Object? unlocked = freezed,
-    Object? viewerInfo = freezed,
-    Object? autogenForListener = freezed,
-    Object? includedTrackTypes = freezed,
-    Object? allowFeedback = freezed,
-    Object? collectible = freezed,
-    Object? notModified = freezed,
-    Object? listenerId = freezed,
-    Object? listenerPandoraId = freezed,
-    Object? listenerIdToken = freezed,
+    Object? totalTracks = null,
+    Object? shareableUrlPath = null,
+    Object? thorLayers = null,
+    Object? duration = null,
+    Object? unlocked = null,
+    Object? viewerInfo = null,
+    Object? autogenForListener = null,
+    Object? includedTrackTypes = null,
+    Object? allowFeedback = null,
+    Object? collectible = null,
+    Object? notModified = null,
+    Object? listenerId = null,
+    Object? listenerPandoraId = null,
+    Object? listenerIdToken = null,
   }) {
     return _then(_value.copyWith(
-      pandoraId: pandoraId == freezed
+      pandoraId: null == pandoraId
           ? _value.pandoraId
           : pandoraId // ignore: cast_nullable_to_non_nullable
               as String,
-      annotations: annotations == freezed
+      annotations: null == annotations
           ? _value.annotations
           : annotations // ignore: cast_nullable_to_non_nullable
               as Map<String, MediaAnnotation>,
-      tracks: tracks == freezed
+      tracks: null == tracks
           ? _value.tracks
           : tracks // ignore: cast_nullable_to_non_nullable
               as List<PlaylistTrack>,
-      version: version == freezed
+      version: null == version
           ? _value.version
           : version // ignore: cast_nullable_to_non_nullable
               as int,
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      description: description == freezed
+      description: null == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as String,
-      timeCreated: timeCreated == freezed
+      timeCreated: null == timeCreated
           ? _value.timeCreated
           : timeCreated // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      timeLastUpdated: timeLastUpdated == freezed
+      timeLastUpdated: null == timeLastUpdated
           ? _value.timeLastUpdated
           : timeLastUpdated // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      timeLastRefreshed: timeLastRefreshed == freezed
+      timeLastRefreshed: freezed == timeLastRefreshed
           ? _value.timeLastRefreshed
           : timeLastRefreshed // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      private: private == freezed
+      private: null == private
           ? _value.private
           : private // ignore: cast_nullable_to_non_nullable
               as bool,
-      secret: secret == freezed
+      secret: null == secret
           ? _value.secret
           : secret // ignore: cast_nullable_to_non_nullable
               as bool,
-      linkedType: linkedType == freezed
+      linkedType: null == linkedType
           ? _value.linkedType
           : linkedType // ignore: cast_nullable_to_non_nullable
               as String,
-      linkedSourceId: linkedSourceId == freezed
+      linkedSourceId: freezed == linkedSourceId
           ? _value.linkedSourceId
           : linkedSourceId // ignore: cast_nullable_to_non_nullable
               as String?,
-      totalTracks: totalTracks == freezed
+      totalTracks: null == totalTracks
           ? _value.totalTracks
           : totalTracks // ignore: cast_nullable_to_non_nullable
               as int,
-      shareableUrlPath: shareableUrlPath == freezed
+      shareableUrlPath: null == shareableUrlPath
           ? _value.shareableUrlPath
           : shareableUrlPath // ignore: cast_nullable_to_non_nullable
               as Uri,
-      thorLayers: thorLayers == freezed
+      thorLayers: null == thorLayers
           ? _value.thorLayers
           : thorLayers // ignore: cast_nullable_to_non_nullable
               as String,
-      duration: duration == freezed
+      duration: null == duration
           ? _value.duration
           : duration // ignore: cast_nullable_to_non_nullable
               as Duration,
-      unlocked: unlocked == freezed
+      unlocked: null == unlocked
           ? _value.unlocked
           : unlocked // ignore: cast_nullable_to_non_nullable
               as bool,
-      viewerInfo: viewerInfo == freezed
+      viewerInfo: null == viewerInfo
           ? _value.viewerInfo
           : viewerInfo // ignore: cast_nullable_to_non_nullable
               as PlaylistViewerInfo,
-      autogenForListener: autogenForListener == freezed
+      autogenForListener: null == autogenForListener
           ? _value.autogenForListener
           : autogenForListener // ignore: cast_nullable_to_non_nullable
               as bool,
-      includedTrackTypes: includedTrackTypes == freezed
+      includedTrackTypes: null == includedTrackTypes
           ? _value.includedTrackTypes
           : includedTrackTypes // ignore: cast_nullable_to_non_nullable
               as List<PandoraType>,
-      allowFeedback: allowFeedback == freezed
+      allowFeedback: null == allowFeedback
           ? _value.allowFeedback
           : allowFeedback // ignore: cast_nullable_to_non_nullable
               as bool,
-      collectible: collectible == freezed
+      collectible: null == collectible
           ? _value.collectible
           : collectible // ignore: cast_nullable_to_non_nullable
               as bool,
-      notModified: notModified == freezed
+      notModified: null == notModified
           ? _value.notModified
           : notModified // ignore: cast_nullable_to_non_nullable
               as bool,
-      listenerId: listenerId == freezed
+      listenerId: null == listenerId
           ? _value.listenerId
           : listenerId // ignore: cast_nullable_to_non_nullable
               as int,
-      listenerPandoraId: listenerPandoraId == freezed
+      listenerPandoraId: null == listenerPandoraId
           ? _value.listenerPandoraId
           : listenerPandoraId // ignore: cast_nullable_to_non_nullable
               as String,
-      listenerIdToken: listenerIdToken == freezed
+      listenerIdToken: null == listenerIdToken
           ? _value.listenerIdToken
           : listenerIdToken // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $PlaylistViewerInfoCopyWith<$Res> get viewerInfo {
     return $PlaylistViewerInfoCopyWith<$Res>(_value.viewerInfo, (value) {
-      return _then(_value.copyWith(viewerInfo: value));
+      return _then(_value.copyWith(viewerInfo: value) as $Val);
     });
   }
 }
@@ -323,6 +327,7 @@ abstract class _$$_PlaylistSegmentCopyWith<$Res>
           _$_PlaylistSegment value, $Res Function(_$_PlaylistSegment) then) =
       __$$_PlaylistSegmentCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(name: 'pandoraId')
           String pandoraId,
@@ -385,151 +390,149 @@ abstract class _$$_PlaylistSegmentCopyWith<$Res>
 
 /// @nodoc
 class __$$_PlaylistSegmentCopyWithImpl<$Res>
-    extends _$PlaylistSegmentCopyWithImpl<$Res>
+    extends _$PlaylistSegmentCopyWithImpl<$Res, _$_PlaylistSegment>
     implements _$$_PlaylistSegmentCopyWith<$Res> {
   __$$_PlaylistSegmentCopyWithImpl(
       _$_PlaylistSegment _value, $Res Function(_$_PlaylistSegment) _then)
-      : super(_value, (v) => _then(v as _$_PlaylistSegment));
+      : super(_value, _then);
 
-  @override
-  _$_PlaylistSegment get _value => super._value as _$_PlaylistSegment;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? pandoraId = freezed,
-    Object? annotations = freezed,
-    Object? tracks = freezed,
-    Object? version = freezed,
-    Object? name = freezed,
-    Object? description = freezed,
-    Object? timeCreated = freezed,
-    Object? timeLastUpdated = freezed,
+    Object? pandoraId = null,
+    Object? annotations = null,
+    Object? tracks = null,
+    Object? version = null,
+    Object? name = null,
+    Object? description = null,
+    Object? timeCreated = null,
+    Object? timeLastUpdated = null,
     Object? timeLastRefreshed = freezed,
-    Object? private = freezed,
-    Object? secret = freezed,
-    Object? linkedType = freezed,
+    Object? private = null,
+    Object? secret = null,
+    Object? linkedType = null,
     Object? linkedSourceId = freezed,
-    Object? totalTracks = freezed,
-    Object? shareableUrlPath = freezed,
-    Object? thorLayers = freezed,
-    Object? duration = freezed,
-    Object? unlocked = freezed,
-    Object? viewerInfo = freezed,
-    Object? autogenForListener = freezed,
-    Object? includedTrackTypes = freezed,
-    Object? allowFeedback = freezed,
-    Object? collectible = freezed,
-    Object? notModified = freezed,
-    Object? listenerId = freezed,
-    Object? listenerPandoraId = freezed,
-    Object? listenerIdToken = freezed,
+    Object? totalTracks = null,
+    Object? shareableUrlPath = null,
+    Object? thorLayers = null,
+    Object? duration = null,
+    Object? unlocked = null,
+    Object? viewerInfo = null,
+    Object? autogenForListener = null,
+    Object? includedTrackTypes = null,
+    Object? allowFeedback = null,
+    Object? collectible = null,
+    Object? notModified = null,
+    Object? listenerId = null,
+    Object? listenerPandoraId = null,
+    Object? listenerIdToken = null,
   }) {
     return _then(_$_PlaylistSegment(
-      pandoraId: pandoraId == freezed
+      pandoraId: null == pandoraId
           ? _value.pandoraId
           : pandoraId // ignore: cast_nullable_to_non_nullable
               as String,
-      annotations: annotations == freezed
+      annotations: null == annotations
           ? _value._annotations
           : annotations // ignore: cast_nullable_to_non_nullable
               as Map<String, MediaAnnotation>,
-      tracks: tracks == freezed
+      tracks: null == tracks
           ? _value._tracks
           : tracks // ignore: cast_nullable_to_non_nullable
               as List<PlaylistTrack>,
-      version: version == freezed
+      version: null == version
           ? _value.version
           : version // ignore: cast_nullable_to_non_nullable
               as int,
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      description: description == freezed
+      description: null == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as String,
-      timeCreated: timeCreated == freezed
+      timeCreated: null == timeCreated
           ? _value.timeCreated
           : timeCreated // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      timeLastUpdated: timeLastUpdated == freezed
+      timeLastUpdated: null == timeLastUpdated
           ? _value.timeLastUpdated
           : timeLastUpdated // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      timeLastRefreshed: timeLastRefreshed == freezed
+      timeLastRefreshed: freezed == timeLastRefreshed
           ? _value.timeLastRefreshed
           : timeLastRefreshed // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      private: private == freezed
+      private: null == private
           ? _value.private
           : private // ignore: cast_nullable_to_non_nullable
               as bool,
-      secret: secret == freezed
+      secret: null == secret
           ? _value.secret
           : secret // ignore: cast_nullable_to_non_nullable
               as bool,
-      linkedType: linkedType == freezed
+      linkedType: null == linkedType
           ? _value.linkedType
           : linkedType // ignore: cast_nullable_to_non_nullable
               as String,
-      linkedSourceId: linkedSourceId == freezed
+      linkedSourceId: freezed == linkedSourceId
           ? _value.linkedSourceId
           : linkedSourceId // ignore: cast_nullable_to_non_nullable
               as String?,
-      totalTracks: totalTracks == freezed
+      totalTracks: null == totalTracks
           ? _value.totalTracks
           : totalTracks // ignore: cast_nullable_to_non_nullable
               as int,
-      shareableUrlPath: shareableUrlPath == freezed
+      shareableUrlPath: null == shareableUrlPath
           ? _value.shareableUrlPath
           : shareableUrlPath // ignore: cast_nullable_to_non_nullable
               as Uri,
-      thorLayers: thorLayers == freezed
+      thorLayers: null == thorLayers
           ? _value.thorLayers
           : thorLayers // ignore: cast_nullable_to_non_nullable
               as String,
-      duration: duration == freezed
+      duration: null == duration
           ? _value.duration
           : duration // ignore: cast_nullable_to_non_nullable
               as Duration,
-      unlocked: unlocked == freezed
+      unlocked: null == unlocked
           ? _value.unlocked
           : unlocked // ignore: cast_nullable_to_non_nullable
               as bool,
-      viewerInfo: viewerInfo == freezed
+      viewerInfo: null == viewerInfo
           ? _value.viewerInfo
           : viewerInfo // ignore: cast_nullable_to_non_nullable
               as PlaylistViewerInfo,
-      autogenForListener: autogenForListener == freezed
+      autogenForListener: null == autogenForListener
           ? _value.autogenForListener
           : autogenForListener // ignore: cast_nullable_to_non_nullable
               as bool,
-      includedTrackTypes: includedTrackTypes == freezed
+      includedTrackTypes: null == includedTrackTypes
           ? _value._includedTrackTypes
           : includedTrackTypes // ignore: cast_nullable_to_non_nullable
               as List<PandoraType>,
-      allowFeedback: allowFeedback == freezed
+      allowFeedback: null == allowFeedback
           ? _value.allowFeedback
           : allowFeedback // ignore: cast_nullable_to_non_nullable
               as bool,
-      collectible: collectible == freezed
+      collectible: null == collectible
           ? _value.collectible
           : collectible // ignore: cast_nullable_to_non_nullable
               as bool,
-      notModified: notModified == freezed
+      notModified: null == notModified
           ? _value.notModified
           : notModified // ignore: cast_nullable_to_non_nullable
               as bool,
-      listenerId: listenerId == freezed
+      listenerId: null == listenerId
           ? _value.listenerId
           : listenerId // ignore: cast_nullable_to_non_nullable
               as int,
-      listenerPandoraId: listenerPandoraId == freezed
+      listenerPandoraId: null == listenerPandoraId
           ? _value.listenerPandoraId
           : listenerPandoraId // ignore: cast_nullable_to_non_nullable
               as String,
-      listenerIdToken: listenerIdToken == freezed
+      listenerIdToken: null == listenerIdToken
           ? _value.listenerIdToken
           : listenerIdToken // ignore: cast_nullable_to_non_nullable
               as String,
@@ -720,89 +723,93 @@ class _$_PlaylistSegment extends _PlaylistSegment {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_PlaylistSegment &&
-            const DeepCollectionEquality().equals(other.pandoraId, pandoraId) &&
+            (identical(other.pandoraId, pandoraId) ||
+                other.pandoraId == pandoraId) &&
             const DeepCollectionEquality()
                 .equals(other._annotations, _annotations) &&
             const DeepCollectionEquality().equals(other._tracks, _tracks) &&
-            const DeepCollectionEquality().equals(other.version, version) &&
-            const DeepCollectionEquality().equals(other.name, name) &&
-            const DeepCollectionEquality()
-                .equals(other.description, description) &&
-            const DeepCollectionEquality()
-                .equals(other.timeCreated, timeCreated) &&
-            const DeepCollectionEquality()
-                .equals(other.timeLastUpdated, timeLastUpdated) &&
-            const DeepCollectionEquality()
-                .equals(other.timeLastRefreshed, timeLastRefreshed) &&
-            const DeepCollectionEquality().equals(other.private, private) &&
-            const DeepCollectionEquality().equals(other.secret, secret) &&
-            const DeepCollectionEquality()
-                .equals(other.linkedType, linkedType) &&
-            const DeepCollectionEquality()
-                .equals(other.linkedSourceId, linkedSourceId) &&
-            const DeepCollectionEquality()
-                .equals(other.totalTracks, totalTracks) &&
-            const DeepCollectionEquality()
-                .equals(other.shareableUrlPath, shareableUrlPath) &&
-            const DeepCollectionEquality()
-                .equals(other.thorLayers, thorLayers) &&
-            const DeepCollectionEquality().equals(other.duration, duration) &&
-            const DeepCollectionEquality().equals(other.unlocked, unlocked) &&
-            const DeepCollectionEquality()
-                .equals(other.viewerInfo, viewerInfo) &&
-            const DeepCollectionEquality()
-                .equals(other.autogenForListener, autogenForListener) &&
+            (identical(other.version, version) || other.version == version) &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.description, description) ||
+                other.description == description) &&
+            (identical(other.timeCreated, timeCreated) ||
+                other.timeCreated == timeCreated) &&
+            (identical(other.timeLastUpdated, timeLastUpdated) ||
+                other.timeLastUpdated == timeLastUpdated) &&
+            (identical(other.timeLastRefreshed, timeLastRefreshed) ||
+                other.timeLastRefreshed == timeLastRefreshed) &&
+            (identical(other.private, private) || other.private == private) &&
+            (identical(other.secret, secret) || other.secret == secret) &&
+            (identical(other.linkedType, linkedType) ||
+                other.linkedType == linkedType) &&
+            (identical(other.linkedSourceId, linkedSourceId) ||
+                other.linkedSourceId == linkedSourceId) &&
+            (identical(other.totalTracks, totalTracks) ||
+                other.totalTracks == totalTracks) &&
+            (identical(other.shareableUrlPath, shareableUrlPath) ||
+                other.shareableUrlPath == shareableUrlPath) &&
+            (identical(other.thorLayers, thorLayers) ||
+                other.thorLayers == thorLayers) &&
+            (identical(other.duration, duration) ||
+                other.duration == duration) &&
+            (identical(other.unlocked, unlocked) ||
+                other.unlocked == unlocked) &&
+            (identical(other.viewerInfo, viewerInfo) ||
+                other.viewerInfo == viewerInfo) &&
+            (identical(other.autogenForListener, autogenForListener) ||
+                other.autogenForListener == autogenForListener) &&
             const DeepCollectionEquality()
                 .equals(other._includedTrackTypes, _includedTrackTypes) &&
-            const DeepCollectionEquality()
-                .equals(other.allowFeedback, allowFeedback) &&
-            const DeepCollectionEquality()
-                .equals(other.collectible, collectible) &&
-            const DeepCollectionEquality()
-                .equals(other.notModified, notModified) &&
-            const DeepCollectionEquality()
-                .equals(other.listenerId, listenerId) &&
-            const DeepCollectionEquality()
-                .equals(other.listenerPandoraId, listenerPandoraId) &&
-            const DeepCollectionEquality()
-                .equals(other.listenerIdToken, listenerIdToken));
+            (identical(other.allowFeedback, allowFeedback) ||
+                other.allowFeedback == allowFeedback) &&
+            (identical(other.collectible, collectible) ||
+                other.collectible == collectible) &&
+            (identical(other.notModified, notModified) ||
+                other.notModified == notModified) &&
+            (identical(other.listenerId, listenerId) ||
+                other.listenerId == listenerId) &&
+            (identical(other.listenerPandoraId, listenerPandoraId) ||
+                other.listenerPandoraId == listenerPandoraId) &&
+            (identical(other.listenerIdToken, listenerIdToken) ||
+                other.listenerIdToken == listenerIdToken));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
-        const DeepCollectionEquality().hash(pandoraId),
+        pandoraId,
         const DeepCollectionEquality().hash(_annotations),
         const DeepCollectionEquality().hash(_tracks),
-        const DeepCollectionEquality().hash(version),
-        const DeepCollectionEquality().hash(name),
-        const DeepCollectionEquality().hash(description),
-        const DeepCollectionEquality().hash(timeCreated),
-        const DeepCollectionEquality().hash(timeLastUpdated),
-        const DeepCollectionEquality().hash(timeLastRefreshed),
-        const DeepCollectionEquality().hash(private),
-        const DeepCollectionEquality().hash(secret),
-        const DeepCollectionEquality().hash(linkedType),
-        const DeepCollectionEquality().hash(linkedSourceId),
-        const DeepCollectionEquality().hash(totalTracks),
-        const DeepCollectionEquality().hash(shareableUrlPath),
-        const DeepCollectionEquality().hash(thorLayers),
-        const DeepCollectionEquality().hash(duration),
-        const DeepCollectionEquality().hash(unlocked),
-        const DeepCollectionEquality().hash(viewerInfo),
-        const DeepCollectionEquality().hash(autogenForListener),
+        version,
+        name,
+        description,
+        timeCreated,
+        timeLastUpdated,
+        timeLastRefreshed,
+        private,
+        secret,
+        linkedType,
+        linkedSourceId,
+        totalTracks,
+        shareableUrlPath,
+        thorLayers,
+        duration,
+        unlocked,
+        viewerInfo,
+        autogenForListener,
         const DeepCollectionEquality().hash(_includedTrackTypes),
-        const DeepCollectionEquality().hash(allowFeedback),
-        const DeepCollectionEquality().hash(collectible),
-        const DeepCollectionEquality().hash(notModified),
-        const DeepCollectionEquality().hash(listenerId),
-        const DeepCollectionEquality().hash(listenerPandoraId),
-        const DeepCollectionEquality().hash(listenerIdToken)
+        allowFeedback,
+        collectible,
+        notModified,
+        listenerId,
+        listenerPandoraId,
+        listenerIdToken
       ]);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_PlaylistSegmentCopyWith<_$_PlaylistSegment> get copyWith =>
       __$$_PlaylistSegmentCopyWithImpl<_$_PlaylistSegment>(this, _$identity);
 

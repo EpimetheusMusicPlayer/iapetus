@@ -40,7 +40,8 @@ mixin _$OnDemandMedia {
 abstract class $OnDemandMediaCopyWith<$Res> {
   factory $OnDemandMediaCopyWith(
           OnDemandMedia value, $Res Function(OnDemandMedia) then) =
-      _$OnDemandMediaCopyWithImpl<$Res>;
+      _$OnDemandMediaCopyWithImpl<$Res, OnDemandMedia>;
+  @useResult
   $Res call(
       {@JsonKey(name: 'audioSkipUrl')
           Uri audioSkipUrl,
@@ -53,39 +54,41 @@ abstract class $OnDemandMediaCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$OnDemandMediaCopyWithImpl<$Res>
+class _$OnDemandMediaCopyWithImpl<$Res, $Val extends OnDemandMedia>
     implements $OnDemandMediaCopyWith<$Res> {
   _$OnDemandMediaCopyWithImpl(this._value, this._then);
 
-  final OnDemandMedia _value;
   // ignore: unused_field
-  final $Res Function(OnDemandMedia) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? audioSkipUrl = freezed,
-    Object? audioReceiptUrl = freezed,
-    Object? audioUrlMap = freezed,
-    Object? trackGain = freezed,
+    Object? audioSkipUrl = null,
+    Object? audioReceiptUrl = null,
+    Object? audioUrlMap = null,
+    Object? trackGain = null,
   }) {
     return _then(_value.copyWith(
-      audioSkipUrl: audioSkipUrl == freezed
+      audioSkipUrl: null == audioSkipUrl
           ? _value.audioSkipUrl
           : audioSkipUrl // ignore: cast_nullable_to_non_nullable
               as Uri,
-      audioReceiptUrl: audioReceiptUrl == freezed
+      audioReceiptUrl: null == audioReceiptUrl
           ? _value.audioReceiptUrl
           : audioReceiptUrl // ignore: cast_nullable_to_non_nullable
               as Uri,
-      audioUrlMap: audioUrlMap == freezed
+      audioUrlMap: null == audioUrlMap
           ? _value.audioUrlMap
           : audioUrlMap // ignore: cast_nullable_to_non_nullable
               as Map<AudioUrlQuality, AudioUrlData>,
-      trackGain: trackGain == freezed
+      trackGain: null == trackGain
           ? _value.trackGain
           : trackGain // ignore: cast_nullable_to_non_nullable
               as double,
-    ));
+    ) as $Val);
   }
 }
 
@@ -96,6 +99,7 @@ abstract class _$$_OnDemandMediaCopyWith<$Res>
           _$_OnDemandMedia value, $Res Function(_$_OnDemandMedia) then) =
       __$$_OnDemandMediaCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(name: 'audioSkipUrl')
           Uri audioSkipUrl,
@@ -109,36 +113,34 @@ abstract class _$$_OnDemandMediaCopyWith<$Res>
 
 /// @nodoc
 class __$$_OnDemandMediaCopyWithImpl<$Res>
-    extends _$OnDemandMediaCopyWithImpl<$Res>
+    extends _$OnDemandMediaCopyWithImpl<$Res, _$_OnDemandMedia>
     implements _$$_OnDemandMediaCopyWith<$Res> {
   __$$_OnDemandMediaCopyWithImpl(
       _$_OnDemandMedia _value, $Res Function(_$_OnDemandMedia) _then)
-      : super(_value, (v) => _then(v as _$_OnDemandMedia));
+      : super(_value, _then);
 
-  @override
-  _$_OnDemandMedia get _value => super._value as _$_OnDemandMedia;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? audioSkipUrl = freezed,
-    Object? audioReceiptUrl = freezed,
-    Object? audioUrlMap = freezed,
-    Object? trackGain = freezed,
+    Object? audioSkipUrl = null,
+    Object? audioReceiptUrl = null,
+    Object? audioUrlMap = null,
+    Object? trackGain = null,
   }) {
     return _then(_$_OnDemandMedia(
-      audioSkipUrl: audioSkipUrl == freezed
+      audioSkipUrl: null == audioSkipUrl
           ? _value.audioSkipUrl
           : audioSkipUrl // ignore: cast_nullable_to_non_nullable
               as Uri,
-      audioReceiptUrl: audioReceiptUrl == freezed
+      audioReceiptUrl: null == audioReceiptUrl
           ? _value.audioReceiptUrl
           : audioReceiptUrl // ignore: cast_nullable_to_non_nullable
               as Uri,
-      audioUrlMap: audioUrlMap == freezed
+      audioUrlMap: null == audioUrlMap
           ? _value._audioUrlMap
           : audioUrlMap // ignore: cast_nullable_to_non_nullable
               as Map<AudioUrlQuality, AudioUrlData>,
-      trackGain: trackGain == freezed
+      trackGain: null == trackGain
           ? _value.trackGain
           : trackGain // ignore: cast_nullable_to_non_nullable
               as double,
@@ -191,26 +193,24 @@ class _$_OnDemandMedia implements _OnDemandMedia {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_OnDemandMedia &&
-            const DeepCollectionEquality()
-                .equals(other.audioSkipUrl, audioSkipUrl) &&
-            const DeepCollectionEquality()
-                .equals(other.audioReceiptUrl, audioReceiptUrl) &&
+            (identical(other.audioSkipUrl, audioSkipUrl) ||
+                other.audioSkipUrl == audioSkipUrl) &&
+            (identical(other.audioReceiptUrl, audioReceiptUrl) ||
+                other.audioReceiptUrl == audioReceiptUrl) &&
             const DeepCollectionEquality()
                 .equals(other._audioUrlMap, _audioUrlMap) &&
-            const DeepCollectionEquality().equals(other.trackGain, trackGain));
+            (identical(other.trackGain, trackGain) ||
+                other.trackGain == trackGain));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(audioSkipUrl),
-      const DeepCollectionEquality().hash(audioReceiptUrl),
-      const DeepCollectionEquality().hash(_audioUrlMap),
-      const DeepCollectionEquality().hash(trackGain));
+  int get hashCode => Object.hash(runtimeType, audioSkipUrl, audioReceiptUrl,
+      const DeepCollectionEquality().hash(_audioUrlMap), trackGain);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_OnDemandMediaCopyWith<_$_OnDemandMedia> get copyWith =>
       __$$_OnDemandMediaCopyWithImpl<_$_OnDemandMedia>(this, _$identity);
 

@@ -46,7 +46,8 @@ mixin _$RightsInfo {
 abstract class $RightsInfoCopyWith<$Res> {
   factory $RightsInfoCopyWith(
           RightsInfo value, $Res Function(RightsInfo) then) =
-      _$RightsInfoCopyWithImpl<$Res>;
+      _$RightsInfoCopyWithImpl<$Res, RightsInfo>;
+  @useResult
   $Res call(
       {@JsonKey(name: 'hasInteractive')
           bool hasInteractive,
@@ -63,48 +64,51 @@ abstract class $RightsInfoCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$RightsInfoCopyWithImpl<$Res> implements $RightsInfoCopyWith<$Res> {
+class _$RightsInfoCopyWithImpl<$Res, $Val extends RightsInfo>
+    implements $RightsInfoCopyWith<$Res> {
   _$RightsInfoCopyWithImpl(this._value, this._then);
 
-  final RightsInfo _value;
   // ignore: unused_field
-  final $Res Function(RightsInfo) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? hasInteractive = freezed,
-    Object? hasOffline = freezed,
-    Object? hasNonInteractive = freezed,
-    Object? hasStatutory = freezed,
-    Object? hasRadioRights = freezed,
-    Object? expiresIn = freezed,
+    Object? hasInteractive = null,
+    Object? hasOffline = null,
+    Object? hasNonInteractive = null,
+    Object? hasStatutory = null,
+    Object? hasRadioRights = null,
+    Object? expiresIn = null,
   }) {
     return _then(_value.copyWith(
-      hasInteractive: hasInteractive == freezed
+      hasInteractive: null == hasInteractive
           ? _value.hasInteractive
           : hasInteractive // ignore: cast_nullable_to_non_nullable
               as bool,
-      hasOffline: hasOffline == freezed
+      hasOffline: null == hasOffline
           ? _value.hasOffline
           : hasOffline // ignore: cast_nullable_to_non_nullable
               as bool,
-      hasNonInteractive: hasNonInteractive == freezed
+      hasNonInteractive: null == hasNonInteractive
           ? _value.hasNonInteractive
           : hasNonInteractive // ignore: cast_nullable_to_non_nullable
               as bool,
-      hasStatutory: hasStatutory == freezed
+      hasStatutory: null == hasStatutory
           ? _value.hasStatutory
           : hasStatutory // ignore: cast_nullable_to_non_nullable
               as bool,
-      hasRadioRights: hasRadioRights == freezed
+      hasRadioRights: null == hasRadioRights
           ? _value.hasRadioRights
           : hasRadioRights // ignore: cast_nullable_to_non_nullable
               as bool,
-      expiresIn: expiresIn == freezed
+      expiresIn: null == expiresIn
           ? _value.expiresIn
           : expiresIn // ignore: cast_nullable_to_non_nullable
               as Duration,
-    ));
+    ) as $Val);
   }
 }
 
@@ -115,6 +119,7 @@ abstract class _$$_RightsInfoCopyWith<$Res>
           _$_RightsInfo value, $Res Function(_$_RightsInfo) then) =
       __$$_RightsInfoCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(name: 'hasInteractive')
           bool hasInteractive,
@@ -131,46 +136,45 @@ abstract class _$$_RightsInfoCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_RightsInfoCopyWithImpl<$Res> extends _$RightsInfoCopyWithImpl<$Res>
+class __$$_RightsInfoCopyWithImpl<$Res>
+    extends _$RightsInfoCopyWithImpl<$Res, _$_RightsInfo>
     implements _$$_RightsInfoCopyWith<$Res> {
   __$$_RightsInfoCopyWithImpl(
       _$_RightsInfo _value, $Res Function(_$_RightsInfo) _then)
-      : super(_value, (v) => _then(v as _$_RightsInfo));
+      : super(_value, _then);
 
-  @override
-  _$_RightsInfo get _value => super._value as _$_RightsInfo;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? hasInteractive = freezed,
-    Object? hasOffline = freezed,
-    Object? hasNonInteractive = freezed,
-    Object? hasStatutory = freezed,
-    Object? hasRadioRights = freezed,
-    Object? expiresIn = freezed,
+    Object? hasInteractive = null,
+    Object? hasOffline = null,
+    Object? hasNonInteractive = null,
+    Object? hasStatutory = null,
+    Object? hasRadioRights = null,
+    Object? expiresIn = null,
   }) {
     return _then(_$_RightsInfo(
-      hasInteractive: hasInteractive == freezed
+      hasInteractive: null == hasInteractive
           ? _value.hasInteractive
           : hasInteractive // ignore: cast_nullable_to_non_nullable
               as bool,
-      hasOffline: hasOffline == freezed
+      hasOffline: null == hasOffline
           ? _value.hasOffline
           : hasOffline // ignore: cast_nullable_to_non_nullable
               as bool,
-      hasNonInteractive: hasNonInteractive == freezed
+      hasNonInteractive: null == hasNonInteractive
           ? _value.hasNonInteractive
           : hasNonInteractive // ignore: cast_nullable_to_non_nullable
               as bool,
-      hasStatutory: hasStatutory == freezed
+      hasStatutory: null == hasStatutory
           ? _value.hasStatutory
           : hasStatutory // ignore: cast_nullable_to_non_nullable
               as bool,
-      hasRadioRights: hasRadioRights == freezed
+      hasRadioRights: null == hasRadioRights
           ? _value.hasRadioRights
           : hasRadioRights // ignore: cast_nullable_to_non_nullable
               as bool,
-      expiresIn: expiresIn == freezed
+      expiresIn: null == expiresIn
           ? _value.expiresIn
           : expiresIn // ignore: cast_nullable_to_non_nullable
               as Duration,
@@ -230,32 +234,28 @@ class _$_RightsInfo implements _RightsInfo {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_RightsInfo &&
-            const DeepCollectionEquality()
-                .equals(other.hasInteractive, hasInteractive) &&
-            const DeepCollectionEquality()
-                .equals(other.hasOffline, hasOffline) &&
-            const DeepCollectionEquality()
-                .equals(other.hasNonInteractive, hasNonInteractive) &&
-            const DeepCollectionEquality()
-                .equals(other.hasStatutory, hasStatutory) &&
-            const DeepCollectionEquality()
-                .equals(other.hasRadioRights, hasRadioRights) &&
-            const DeepCollectionEquality().equals(other.expiresIn, expiresIn));
+            (identical(other.hasInteractive, hasInteractive) ||
+                other.hasInteractive == hasInteractive) &&
+            (identical(other.hasOffline, hasOffline) ||
+                other.hasOffline == hasOffline) &&
+            (identical(other.hasNonInteractive, hasNonInteractive) ||
+                other.hasNonInteractive == hasNonInteractive) &&
+            (identical(other.hasStatutory, hasStatutory) ||
+                other.hasStatutory == hasStatutory) &&
+            (identical(other.hasRadioRights, hasRadioRights) ||
+                other.hasRadioRights == hasRadioRights) &&
+            (identical(other.expiresIn, expiresIn) ||
+                other.expiresIn == expiresIn));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(hasInteractive),
-      const DeepCollectionEquality().hash(hasOffline),
-      const DeepCollectionEquality().hash(hasNonInteractive),
-      const DeepCollectionEquality().hash(hasStatutory),
-      const DeepCollectionEquality().hash(hasRadioRights),
-      const DeepCollectionEquality().hash(expiresIn));
+  int get hashCode => Object.hash(runtimeType, hasInteractive, hasOffline,
+      hasNonInteractive, hasStatutory, hasRadioRights, expiresIn);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_RightsInfoCopyWith<_$_RightsInfo> get copyWith =>
       __$$_RightsInfoCopyWithImpl<_$_RightsInfo>(this, _$identity);
 

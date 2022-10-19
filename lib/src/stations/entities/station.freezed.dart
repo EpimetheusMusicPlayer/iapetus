@@ -66,7 +66,8 @@ mixin _$Station {
 /// @nodoc
 abstract class $StationCopyWith<$Res> {
   factory $StationCopyWith(Station value, $Res Function(Station) then) =
-      _$StationCopyWithImpl<$Res>;
+      _$StationCopyWithImpl<$Res, Station>;
+  @useResult
   $Res call(
       {@JsonKey(name: 'suppressVideoAds')
           bool? suppressVideoAds,
@@ -105,103 +106,106 @@ abstract class $StationCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$StationCopyWithImpl<$Res> implements $StationCopyWith<$Res> {
+class _$StationCopyWithImpl<$Res, $Val extends Station>
+    implements $StationCopyWith<$Res> {
   _$StationCopyWithImpl(this._value, this._then);
 
-  final Station _value;
   // ignore: unused_field
-  final $Res Function(Station) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? suppressVideoAds = freezed,
-    Object? stationId = freezed,
-    Object? allowAddMusic = freezed,
-    Object? dateCreated = freezed,
-    Object? stationDetailUrl = freezed,
-    Object? artUrl = freezed,
-    Object? allowEditDescription = freezed,
+    Object? stationId = null,
+    Object? allowAddMusic = null,
+    Object? dateCreated = null,
+    Object? stationDetailUrl = null,
+    Object? artUrl = null,
+    Object? allowEditDescription = null,
     Object? requiresCleanAds = freezed,
-    Object? isGenreStation = freezed,
-    Object? stationToken = freezed,
-    Object? stationName = freezed,
-    Object? hasTakeoverModes = freezed,
-    Object? isShared = freezed,
-    Object? hasCuratedModes = freezed,
-    Object? allowDelete = freezed,
-    Object? allowRename = freezed,
-    Object? stationSharingUrl = freezed,
+    Object? isGenreStation = null,
+    Object? stationToken = null,
+    Object? stationName = null,
+    Object? hasTakeoverModes = null,
+    Object? isShared = null,
+    Object? hasCuratedModes = null,
+    Object? allowDelete = null,
+    Object? allowRename = null,
+    Object? stationSharingUrl = null,
   }) {
     return _then(_value.copyWith(
-      suppressVideoAds: suppressVideoAds == freezed
+      suppressVideoAds: freezed == suppressVideoAds
           ? _value.suppressVideoAds
           : suppressVideoAds // ignore: cast_nullable_to_non_nullable
               as bool?,
-      stationId: stationId == freezed
+      stationId: null == stationId
           ? _value.stationId
           : stationId // ignore: cast_nullable_to_non_nullable
               as String,
-      allowAddMusic: allowAddMusic == freezed
+      allowAddMusic: null == allowAddMusic
           ? _value.allowAddMusic
           : allowAddMusic // ignore: cast_nullable_to_non_nullable
               as bool,
-      dateCreated: dateCreated == freezed
+      dateCreated: null == dateCreated
           ? _value.dateCreated
           : dateCreated // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      stationDetailUrl: stationDetailUrl == freezed
+      stationDetailUrl: null == stationDetailUrl
           ? _value.stationDetailUrl
           : stationDetailUrl // ignore: cast_nullable_to_non_nullable
               as Uri,
-      artUrl: artUrl == freezed
+      artUrl: null == artUrl
           ? _value.artUrl
           : artUrl // ignore: cast_nullable_to_non_nullable
               as Uri,
-      allowEditDescription: allowEditDescription == freezed
+      allowEditDescription: null == allowEditDescription
           ? _value.allowEditDescription
           : allowEditDescription // ignore: cast_nullable_to_non_nullable
               as bool,
-      requiresCleanAds: requiresCleanAds == freezed
+      requiresCleanAds: freezed == requiresCleanAds
           ? _value.requiresCleanAds
           : requiresCleanAds // ignore: cast_nullable_to_non_nullable
               as bool?,
-      isGenreStation: isGenreStation == freezed
+      isGenreStation: null == isGenreStation
           ? _value.isGenreStation
           : isGenreStation // ignore: cast_nullable_to_non_nullable
               as bool,
-      stationToken: stationToken == freezed
+      stationToken: null == stationToken
           ? _value.stationToken
           : stationToken // ignore: cast_nullable_to_non_nullable
               as String,
-      stationName: stationName == freezed
+      stationName: null == stationName
           ? _value.stationName
           : stationName // ignore: cast_nullable_to_non_nullable
               as String,
-      hasTakeoverModes: hasTakeoverModes == freezed
+      hasTakeoverModes: null == hasTakeoverModes
           ? _value.hasTakeoverModes
           : hasTakeoverModes // ignore: cast_nullable_to_non_nullable
               as bool,
-      isShared: isShared == freezed
+      isShared: null == isShared
           ? _value.isShared
           : isShared // ignore: cast_nullable_to_non_nullable
               as bool,
-      hasCuratedModes: hasCuratedModes == freezed
+      hasCuratedModes: null == hasCuratedModes
           ? _value.hasCuratedModes
           : hasCuratedModes // ignore: cast_nullable_to_non_nullable
               as bool,
-      allowDelete: allowDelete == freezed
+      allowDelete: null == allowDelete
           ? _value.allowDelete
           : allowDelete // ignore: cast_nullable_to_non_nullable
               as bool,
-      allowRename: allowRename == freezed
+      allowRename: null == allowRename
           ? _value.allowRename
           : allowRename // ignore: cast_nullable_to_non_nullable
               as bool,
-      stationSharingUrl: stationSharingUrl == freezed
+      stationSharingUrl: null == stationSharingUrl
           ? _value.stationSharingUrl
           : stationSharingUrl // ignore: cast_nullable_to_non_nullable
               as Uri,
-    ));
+    ) as $Val);
   }
 }
 
@@ -211,6 +215,7 @@ abstract class _$$_StationCopyWith<$Res> implements $StationCopyWith<$Res> {
           _$_Station value, $Res Function(_$_Station) then) =
       __$$_StationCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(name: 'suppressVideoAds')
           bool? suppressVideoAds,
@@ -249,100 +254,99 @@ abstract class _$$_StationCopyWith<$Res> implements $StationCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_StationCopyWithImpl<$Res> extends _$StationCopyWithImpl<$Res>
+class __$$_StationCopyWithImpl<$Res>
+    extends _$StationCopyWithImpl<$Res, _$_Station>
     implements _$$_StationCopyWith<$Res> {
   __$$_StationCopyWithImpl(_$_Station _value, $Res Function(_$_Station) _then)
-      : super(_value, (v) => _then(v as _$_Station));
+      : super(_value, _then);
 
-  @override
-  _$_Station get _value => super._value as _$_Station;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? suppressVideoAds = freezed,
-    Object? stationId = freezed,
-    Object? allowAddMusic = freezed,
-    Object? dateCreated = freezed,
-    Object? stationDetailUrl = freezed,
-    Object? artUrl = freezed,
-    Object? allowEditDescription = freezed,
+    Object? stationId = null,
+    Object? allowAddMusic = null,
+    Object? dateCreated = null,
+    Object? stationDetailUrl = null,
+    Object? artUrl = null,
+    Object? allowEditDescription = null,
     Object? requiresCleanAds = freezed,
-    Object? isGenreStation = freezed,
-    Object? stationToken = freezed,
-    Object? stationName = freezed,
-    Object? hasTakeoverModes = freezed,
-    Object? isShared = freezed,
-    Object? hasCuratedModes = freezed,
-    Object? allowDelete = freezed,
-    Object? allowRename = freezed,
-    Object? stationSharingUrl = freezed,
+    Object? isGenreStation = null,
+    Object? stationToken = null,
+    Object? stationName = null,
+    Object? hasTakeoverModes = null,
+    Object? isShared = null,
+    Object? hasCuratedModes = null,
+    Object? allowDelete = null,
+    Object? allowRename = null,
+    Object? stationSharingUrl = null,
   }) {
     return _then(_$_Station(
-      suppressVideoAds: suppressVideoAds == freezed
+      suppressVideoAds: freezed == suppressVideoAds
           ? _value.suppressVideoAds
           : suppressVideoAds // ignore: cast_nullable_to_non_nullable
               as bool?,
-      stationId: stationId == freezed
+      stationId: null == stationId
           ? _value.stationId
           : stationId // ignore: cast_nullable_to_non_nullable
               as String,
-      allowAddMusic: allowAddMusic == freezed
+      allowAddMusic: null == allowAddMusic
           ? _value.allowAddMusic
           : allowAddMusic // ignore: cast_nullable_to_non_nullable
               as bool,
-      dateCreated: dateCreated == freezed
+      dateCreated: null == dateCreated
           ? _value.dateCreated
           : dateCreated // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      stationDetailUrl: stationDetailUrl == freezed
+      stationDetailUrl: null == stationDetailUrl
           ? _value.stationDetailUrl
           : stationDetailUrl // ignore: cast_nullable_to_non_nullable
               as Uri,
-      artUrl: artUrl == freezed
+      artUrl: null == artUrl
           ? _value.artUrl
           : artUrl // ignore: cast_nullable_to_non_nullable
               as Uri,
-      allowEditDescription: allowEditDescription == freezed
+      allowEditDescription: null == allowEditDescription
           ? _value.allowEditDescription
           : allowEditDescription // ignore: cast_nullable_to_non_nullable
               as bool,
-      requiresCleanAds: requiresCleanAds == freezed
+      requiresCleanAds: freezed == requiresCleanAds
           ? _value.requiresCleanAds
           : requiresCleanAds // ignore: cast_nullable_to_non_nullable
               as bool?,
-      isGenreStation: isGenreStation == freezed
+      isGenreStation: null == isGenreStation
           ? _value.isGenreStation
           : isGenreStation // ignore: cast_nullable_to_non_nullable
               as bool,
-      stationToken: stationToken == freezed
+      stationToken: null == stationToken
           ? _value.stationToken
           : stationToken // ignore: cast_nullable_to_non_nullable
               as String,
-      stationName: stationName == freezed
+      stationName: null == stationName
           ? _value.stationName
           : stationName // ignore: cast_nullable_to_non_nullable
               as String,
-      hasTakeoverModes: hasTakeoverModes == freezed
+      hasTakeoverModes: null == hasTakeoverModes
           ? _value.hasTakeoverModes
           : hasTakeoverModes // ignore: cast_nullable_to_non_nullable
               as bool,
-      isShared: isShared == freezed
+      isShared: null == isShared
           ? _value.isShared
           : isShared // ignore: cast_nullable_to_non_nullable
               as bool,
-      hasCuratedModes: hasCuratedModes == freezed
+      hasCuratedModes: null == hasCuratedModes
           ? _value.hasCuratedModes
           : hasCuratedModes // ignore: cast_nullable_to_non_nullable
               as bool,
-      allowDelete: allowDelete == freezed
+      allowDelete: null == allowDelete
           ? _value.allowDelete
           : allowDelete // ignore: cast_nullable_to_non_nullable
               as bool,
-      allowRename: allowRename == freezed
+      allowRename: null == allowRename
           ? _value.allowRename
           : allowRename // ignore: cast_nullable_to_non_nullable
               as bool,
-      stationSharingUrl: stationSharingUrl == freezed
+      stationSharingUrl: null == stationSharingUrl
           ? _value.stationSharingUrl
           : stationSharingUrl // ignore: cast_nullable_to_non_nullable
               as Uri,
@@ -457,63 +461,66 @@ class _$_Station implements _Station {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_Station &&
-            const DeepCollectionEquality()
-                .equals(other.suppressVideoAds, suppressVideoAds) &&
-            const DeepCollectionEquality().equals(other.stationId, stationId) &&
-            const DeepCollectionEquality()
-                .equals(other.allowAddMusic, allowAddMusic) &&
-            const DeepCollectionEquality()
-                .equals(other.dateCreated, dateCreated) &&
-            const DeepCollectionEquality()
-                .equals(other.stationDetailUrl, stationDetailUrl) &&
-            const DeepCollectionEquality().equals(other.artUrl, artUrl) &&
-            const DeepCollectionEquality()
-                .equals(other.allowEditDescription, allowEditDescription) &&
-            const DeepCollectionEquality()
-                .equals(other.requiresCleanAds, requiresCleanAds) &&
-            const DeepCollectionEquality()
-                .equals(other.isGenreStation, isGenreStation) &&
-            const DeepCollectionEquality()
-                .equals(other.stationToken, stationToken) &&
-            const DeepCollectionEquality()
-                .equals(other.stationName, stationName) &&
-            const DeepCollectionEquality()
-                .equals(other.hasTakeoverModes, hasTakeoverModes) &&
-            const DeepCollectionEquality().equals(other.isShared, isShared) &&
-            const DeepCollectionEquality()
-                .equals(other.hasCuratedModes, hasCuratedModes) &&
-            const DeepCollectionEquality()
-                .equals(other.allowDelete, allowDelete) &&
-            const DeepCollectionEquality()
-                .equals(other.allowRename, allowRename) &&
-            const DeepCollectionEquality()
-                .equals(other.stationSharingUrl, stationSharingUrl));
+            (identical(other.suppressVideoAds, suppressVideoAds) ||
+                other.suppressVideoAds == suppressVideoAds) &&
+            (identical(other.stationId, stationId) ||
+                other.stationId == stationId) &&
+            (identical(other.allowAddMusic, allowAddMusic) ||
+                other.allowAddMusic == allowAddMusic) &&
+            (identical(other.dateCreated, dateCreated) ||
+                other.dateCreated == dateCreated) &&
+            (identical(other.stationDetailUrl, stationDetailUrl) ||
+                other.stationDetailUrl == stationDetailUrl) &&
+            (identical(other.artUrl, artUrl) || other.artUrl == artUrl) &&
+            (identical(other.allowEditDescription, allowEditDescription) ||
+                other.allowEditDescription == allowEditDescription) &&
+            (identical(other.requiresCleanAds, requiresCleanAds) ||
+                other.requiresCleanAds == requiresCleanAds) &&
+            (identical(other.isGenreStation, isGenreStation) ||
+                other.isGenreStation == isGenreStation) &&
+            (identical(other.stationToken, stationToken) ||
+                other.stationToken == stationToken) &&
+            (identical(other.stationName, stationName) ||
+                other.stationName == stationName) &&
+            (identical(other.hasTakeoverModes, hasTakeoverModes) ||
+                other.hasTakeoverModes == hasTakeoverModes) &&
+            (identical(other.isShared, isShared) ||
+                other.isShared == isShared) &&
+            (identical(other.hasCuratedModes, hasCuratedModes) ||
+                other.hasCuratedModes == hasCuratedModes) &&
+            (identical(other.allowDelete, allowDelete) ||
+                other.allowDelete == allowDelete) &&
+            (identical(other.allowRename, allowRename) ||
+                other.allowRename == allowRename) &&
+            (identical(other.stationSharingUrl, stationSharingUrl) ||
+                other.stationSharingUrl == stationSharingUrl));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(suppressVideoAds),
-      const DeepCollectionEquality().hash(stationId),
-      const DeepCollectionEquality().hash(allowAddMusic),
-      const DeepCollectionEquality().hash(dateCreated),
-      const DeepCollectionEquality().hash(stationDetailUrl),
-      const DeepCollectionEquality().hash(artUrl),
-      const DeepCollectionEquality().hash(allowEditDescription),
-      const DeepCollectionEquality().hash(requiresCleanAds),
-      const DeepCollectionEquality().hash(isGenreStation),
-      const DeepCollectionEquality().hash(stationToken),
-      const DeepCollectionEquality().hash(stationName),
-      const DeepCollectionEquality().hash(hasTakeoverModes),
-      const DeepCollectionEquality().hash(isShared),
-      const DeepCollectionEquality().hash(hasCuratedModes),
-      const DeepCollectionEquality().hash(allowDelete),
-      const DeepCollectionEquality().hash(allowRename),
-      const DeepCollectionEquality().hash(stationSharingUrl));
+      suppressVideoAds,
+      stationId,
+      allowAddMusic,
+      dateCreated,
+      stationDetailUrl,
+      artUrl,
+      allowEditDescription,
+      requiresCleanAds,
+      isGenreStation,
+      stationToken,
+      stationName,
+      hasTakeoverModes,
+      isShared,
+      hasCuratedModes,
+      allowDelete,
+      allowRename,
+      stationSharingUrl);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_StationCopyWith<_$_Station> get copyWith =>
       __$$_StationCopyWithImpl<_$_Station>(this, _$identity);
 

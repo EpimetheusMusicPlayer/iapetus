@@ -40,7 +40,8 @@ mixin _$SongRecommendationSet {
 abstract class $SongRecommendationSetCopyWith<$Res> {
   factory $SongRecommendationSetCopyWith(SongRecommendationSet value,
           $Res Function(SongRecommendationSet) then) =
-      _$SongRecommendationSetCopyWithImpl<$Res>;
+      _$SongRecommendationSetCopyWithImpl<$Res, SongRecommendationSet>;
+  @useResult
   $Res call(
       {@JsonKey(name: 'requestId')
           String requestId,
@@ -51,34 +52,37 @@ abstract class $SongRecommendationSetCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$SongRecommendationSetCopyWithImpl<$Res>
+class _$SongRecommendationSetCopyWithImpl<$Res,
+        $Val extends SongRecommendationSet>
     implements $SongRecommendationSetCopyWith<$Res> {
   _$SongRecommendationSetCopyWithImpl(this._value, this._then);
 
-  final SongRecommendationSet _value;
   // ignore: unused_field
-  final $Res Function(SongRecommendationSet) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? requestId = freezed,
-    Object? songRecommendations = freezed,
-    Object? annotations = freezed,
+    Object? requestId = null,
+    Object? songRecommendations = null,
+    Object? annotations = null,
   }) {
     return _then(_value.copyWith(
-      requestId: requestId == freezed
+      requestId: null == requestId
           ? _value.requestId
           : requestId // ignore: cast_nullable_to_non_nullable
               as String,
-      songRecommendations: songRecommendations == freezed
+      songRecommendations: null == songRecommendations
           ? _value.songRecommendations
           : songRecommendations // ignore: cast_nullable_to_non_nullable
               as List<SongRecommendation>,
-      annotations: annotations == freezed
+      annotations: null == annotations
           ? _value.annotations
           : annotations // ignore: cast_nullable_to_non_nullable
               as Map<String, MediaAnnotation>,
-    ));
+    ) as $Val);
   }
 }
 
@@ -89,6 +93,7 @@ abstract class _$$_SongRecommendationSetCopyWith<$Res>
           $Res Function(_$_SongRecommendationSet) then) =
       __$$_SongRecommendationSetCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(name: 'requestId')
           String requestId,
@@ -100,32 +105,29 @@ abstract class _$$_SongRecommendationSetCopyWith<$Res>
 
 /// @nodoc
 class __$$_SongRecommendationSetCopyWithImpl<$Res>
-    extends _$SongRecommendationSetCopyWithImpl<$Res>
+    extends _$SongRecommendationSetCopyWithImpl<$Res, _$_SongRecommendationSet>
     implements _$$_SongRecommendationSetCopyWith<$Res> {
   __$$_SongRecommendationSetCopyWithImpl(_$_SongRecommendationSet _value,
       $Res Function(_$_SongRecommendationSet) _then)
-      : super(_value, (v) => _then(v as _$_SongRecommendationSet));
+      : super(_value, _then);
 
-  @override
-  _$_SongRecommendationSet get _value =>
-      super._value as _$_SongRecommendationSet;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? requestId = freezed,
-    Object? songRecommendations = freezed,
-    Object? annotations = freezed,
+    Object? requestId = null,
+    Object? songRecommendations = null,
+    Object? annotations = null,
   }) {
     return _then(_$_SongRecommendationSet(
-      requestId: requestId == freezed
+      requestId: null == requestId
           ? _value.requestId
           : requestId // ignore: cast_nullable_to_non_nullable
               as String,
-      songRecommendations: songRecommendations == freezed
+      songRecommendations: null == songRecommendations
           ? _value._songRecommendations
           : songRecommendations // ignore: cast_nullable_to_non_nullable
               as List<SongRecommendation>,
-      annotations: annotations == freezed
+      annotations: null == annotations
           ? _value._annotations
           : annotations // ignore: cast_nullable_to_non_nullable
               as Map<String, MediaAnnotation>,
@@ -178,7 +180,8 @@ class _$_SongRecommendationSet implements _SongRecommendationSet {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_SongRecommendationSet &&
-            const DeepCollectionEquality().equals(other.requestId, requestId) &&
+            (identical(other.requestId, requestId) ||
+                other.requestId == requestId) &&
             const DeepCollectionEquality()
                 .equals(other._songRecommendations, _songRecommendations) &&
             const DeepCollectionEquality()
@@ -189,12 +192,13 @@ class _$_SongRecommendationSet implements _SongRecommendationSet {
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(requestId),
+      requestId,
       const DeepCollectionEquality().hash(_songRecommendations),
       const DeepCollectionEquality().hash(_annotations));
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_SongRecommendationSetCopyWith<_$_SongRecommendationSet> get copyWith =>
       __$$_SongRecommendationSetCopyWithImpl<_$_SongRecommendationSet>(
           this, _$identity);

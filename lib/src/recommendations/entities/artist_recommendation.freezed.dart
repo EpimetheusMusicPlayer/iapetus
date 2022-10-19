@@ -49,7 +49,8 @@ mixin _$ArtistRecommendation {
 abstract class $ArtistRecommendationCopyWith<$Res> {
   factory $ArtistRecommendationCopyWith(ArtistRecommendation value,
           $Res Function(ArtistRecommendation) then) =
-      _$ArtistRecommendationCopyWithImpl<$Res>;
+      _$ArtistRecommendationCopyWithImpl<$Res, ArtistRecommendation>;
+  @useResult
   $Res call(
       {@JsonKey(name: 'artistName')
           String artistName,
@@ -68,54 +69,57 @@ abstract class $ArtistRecommendationCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ArtistRecommendationCopyWithImpl<$Res>
+class _$ArtistRecommendationCopyWithImpl<$Res,
+        $Val extends ArtistRecommendation>
     implements $ArtistRecommendationCopyWith<$Res> {
   _$ArtistRecommendationCopyWithImpl(this._value, this._then);
 
-  final ArtistRecommendation _value;
   // ignore: unused_field
-  final $Res Function(ArtistRecommendation) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? artistName = freezed,
+    Object? artistName = null,
     Object? score = freezed,
-    Object? likelyMatch = freezed,
+    Object? likelyMatch = null,
     Object? artUrl = freezed,
-    Object? musicToken = freezed,
-    Object? pandoraId = freezed,
-    Object? explanation = freezed,
+    Object? musicToken = null,
+    Object? pandoraId = null,
+    Object? explanation = null,
   }) {
     return _then(_value.copyWith(
-      artistName: artistName == freezed
+      artistName: null == artistName
           ? _value.artistName
           : artistName // ignore: cast_nullable_to_non_nullable
               as String,
-      score: score == freezed
+      score: freezed == score
           ? _value.score
           : score // ignore: cast_nullable_to_non_nullable
               as int?,
-      likelyMatch: likelyMatch == freezed
+      likelyMatch: null == likelyMatch
           ? _value.likelyMatch
           : likelyMatch // ignore: cast_nullable_to_non_nullable
               as bool,
-      artUrl: artUrl == freezed
+      artUrl: freezed == artUrl
           ? _value.artUrl
           : artUrl // ignore: cast_nullable_to_non_nullable
               as Uri?,
-      musicToken: musicToken == freezed
+      musicToken: null == musicToken
           ? _value.musicToken
           : musicToken // ignore: cast_nullable_to_non_nullable
               as String,
-      pandoraId: pandoraId == freezed
+      pandoraId: null == pandoraId
           ? _value.pandoraId
           : pandoraId // ignore: cast_nullable_to_non_nullable
               as String,
-      explanation: explanation == freezed
+      explanation: null == explanation
           ? _value.explanation
           : explanation // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -126,6 +130,7 @@ abstract class _$$_ArtistRecommendationCopyWith<$Res>
           $Res Function(_$_ArtistRecommendation) then) =
       __$$_ArtistRecommendationCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(name: 'artistName')
           String artistName,
@@ -145,51 +150,49 @@ abstract class _$$_ArtistRecommendationCopyWith<$Res>
 
 /// @nodoc
 class __$$_ArtistRecommendationCopyWithImpl<$Res>
-    extends _$ArtistRecommendationCopyWithImpl<$Res>
+    extends _$ArtistRecommendationCopyWithImpl<$Res, _$_ArtistRecommendation>
     implements _$$_ArtistRecommendationCopyWith<$Res> {
   __$$_ArtistRecommendationCopyWithImpl(_$_ArtistRecommendation _value,
       $Res Function(_$_ArtistRecommendation) _then)
-      : super(_value, (v) => _then(v as _$_ArtistRecommendation));
+      : super(_value, _then);
 
-  @override
-  _$_ArtistRecommendation get _value => super._value as _$_ArtistRecommendation;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? artistName = freezed,
+    Object? artistName = null,
     Object? score = freezed,
-    Object? likelyMatch = freezed,
+    Object? likelyMatch = null,
     Object? artUrl = freezed,
-    Object? musicToken = freezed,
-    Object? pandoraId = freezed,
-    Object? explanation = freezed,
+    Object? musicToken = null,
+    Object? pandoraId = null,
+    Object? explanation = null,
   }) {
     return _then(_$_ArtistRecommendation(
-      artistName: artistName == freezed
+      artistName: null == artistName
           ? _value.artistName
           : artistName // ignore: cast_nullable_to_non_nullable
               as String,
-      score: score == freezed
+      score: freezed == score
           ? _value.score
           : score // ignore: cast_nullable_to_non_nullable
               as int?,
-      likelyMatch: likelyMatch == freezed
+      likelyMatch: null == likelyMatch
           ? _value.likelyMatch
           : likelyMatch // ignore: cast_nullable_to_non_nullable
               as bool,
-      artUrl: artUrl == freezed
+      artUrl: freezed == artUrl
           ? _value.artUrl
           : artUrl // ignore: cast_nullable_to_non_nullable
               as Uri?,
-      musicToken: musicToken == freezed
+      musicToken: null == musicToken
           ? _value.musicToken
           : musicToken // ignore: cast_nullable_to_non_nullable
               as String,
-      pandoraId: pandoraId == freezed
+      pandoraId: null == pandoraId
           ? _value.pandoraId
           : pandoraId // ignore: cast_nullable_to_non_nullable
               as String,
-      explanation: explanation == freezed
+      explanation: null == explanation
           ? _value.explanation
           : explanation // ignore: cast_nullable_to_non_nullable
               as String,
@@ -255,33 +258,28 @@ class _$_ArtistRecommendation implements _ArtistRecommendation {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_ArtistRecommendation &&
-            const DeepCollectionEquality()
-                .equals(other.artistName, artistName) &&
-            const DeepCollectionEquality().equals(other.score, score) &&
-            const DeepCollectionEquality()
-                .equals(other.likelyMatch, likelyMatch) &&
-            const DeepCollectionEquality().equals(other.artUrl, artUrl) &&
-            const DeepCollectionEquality()
-                .equals(other.musicToken, musicToken) &&
-            const DeepCollectionEquality().equals(other.pandoraId, pandoraId) &&
-            const DeepCollectionEquality()
-                .equals(other.explanation, explanation));
+            (identical(other.artistName, artistName) ||
+                other.artistName == artistName) &&
+            (identical(other.score, score) || other.score == score) &&
+            (identical(other.likelyMatch, likelyMatch) ||
+                other.likelyMatch == likelyMatch) &&
+            (identical(other.artUrl, artUrl) || other.artUrl == artUrl) &&
+            (identical(other.musicToken, musicToken) ||
+                other.musicToken == musicToken) &&
+            (identical(other.pandoraId, pandoraId) ||
+                other.pandoraId == pandoraId) &&
+            (identical(other.explanation, explanation) ||
+                other.explanation == explanation));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(artistName),
-      const DeepCollectionEquality().hash(score),
-      const DeepCollectionEquality().hash(likelyMatch),
-      const DeepCollectionEquality().hash(artUrl),
-      const DeepCollectionEquality().hash(musicToken),
-      const DeepCollectionEquality().hash(pandoraId),
-      const DeepCollectionEquality().hash(explanation));
+  int get hashCode => Object.hash(runtimeType, artistName, score, likelyMatch,
+      artUrl, musicToken, pandoraId, explanation);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_ArtistRecommendationCopyWith<_$_ArtistRecommendation> get copyWith =>
       __$$_ArtistRecommendationCopyWithImpl<_$_ArtistRecommendation>(
           this, _$identity);

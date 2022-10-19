@@ -155,7 +155,8 @@ mixin _$AuthenticatedUser {
 abstract class $AuthenticatedUserCopyWith<$Res> {
   factory $AuthenticatedUserCopyWith(
           AuthenticatedUser value, $Res Function(AuthenticatedUser) then) =
-      _$AuthenticatedUserCopyWithImpl<$Res>;
+      _$AuthenticatedUserCopyWithImpl<$Res, AuthenticatedUser>;
+  @useResult
   $Res call(
       {@JsonKey(name: 'isMonthlyPayer')
           bool isMonthlyPayer,
@@ -258,264 +259,266 @@ abstract class $AuthenticatedUserCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$AuthenticatedUserCopyWithImpl<$Res>
+class _$AuthenticatedUserCopyWithImpl<$Res, $Val extends AuthenticatedUser>
     implements $AuthenticatedUserCopyWith<$Res> {
   _$AuthenticatedUserCopyWithImpl(this._value, this._then);
 
-  final AuthenticatedUser _value;
   // ignore: unused_field
-  final $Res Function(AuthenticatedUser) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? isMonthlyPayer = freezed,
-    Object? dailySkipLimitSubscriber = freezed,
+    Object? isMonthlyPayer = null,
+    Object? dailySkipLimitSubscriber = null,
     Object? minimumAdRefreshInterval = freezed,
-    Object? age = freezed,
-    Object? facebookPermissions = freezed,
+    Object? age = null,
+    Object? facebookPermissions = null,
     Object? splashScreenAdUrl = freezed,
-    Object? userProfileUrl = freezed,
-    Object? canListen = freezed,
-    Object? hasUsedTrial = freezed,
-    Object? facebookAppId = freezed,
-    Object? maxStationsAllowed = freezed,
-    Object? userId = freezed,
-    Object? accountMonthlyListening = freezed,
-    Object? zeroVolumeAutoPauseEnabledFlag = freezed,
-    Object? isSubscriber = freezed,
-    Object? stationHourlySkipLimit = freezed,
-    Object? listeningTimeout = freezed,
-    Object? deviceMonthlyListening = freezed,
-    Object? zip = freezed,
+    Object? userProfileUrl = null,
+    Object? canListen = null,
+    Object? hasUsedTrial = null,
+    Object? facebookAppId = null,
+    Object? maxStationsAllowed = null,
+    Object? userId = null,
+    Object? accountMonthlyListening = null,
+    Object? zeroVolumeAutoPauseEnabledFlag = null,
+    Object? isSubscriber = null,
+    Object? stationHourlySkipLimit = null,
+    Object? listeningTimeout = null,
+    Object? deviceMonthlyListening = null,
+    Object? zip = null,
     Object? stationCreationAdUrl = freezed,
     Object? accountMessageUrl = freezed,
-    Object? isCapped = freezed,
-    Object? googleplayApiKey = freezed,
-    Object? dailySkipLimitNonSubscriber = freezed,
-    Object? collectTrackLifetimeStats = freezed,
-    Object? subscriptionHasExpired = freezed,
-    Object? userAuthToken = freezed,
-    Object? username = freezed,
-    Object? googleplayMonthlySku = freezed,
-    Object? listeningTimeoutAlertMsgUri = freezed,
-    Object? monthlyCapWarningRepeatPercent = freezed,
+    Object? isCapped = null,
+    Object? googleplayApiKey = null,
+    Object? dailySkipLimitNonSubscriber = null,
+    Object? collectTrackLifetimeStats = null,
+    Object? subscriptionHasExpired = null,
+    Object? userAuthToken = null,
+    Object? username = null,
+    Object? googleplayMonthlySku = null,
+    Object? listeningTimeoutAlertMsgUri = null,
+    Object? monthlyCapWarningRepeatPercent = null,
     Object? videoAdUrl = freezed,
-    Object? zeroVolumeNumMutedTracks = freezed,
+    Object? zeroVolumeNumMutedTracks = null,
     Object? skipDelayAfterTrackStart = freezed,
     Object? accountMessageKey = freezed,
-    Object? dailySkipLimit = freezed,
-    Object? monthlyCapHours = freezed,
-    Object? webname = freezed,
-    Object? gender = freezed,
-    Object? userstate = freezed,
-    Object? monthlyCapWarningPercent = freezed,
-    Object? hasAudioAds = freezed,
+    Object? dailySkipLimit = null,
+    Object? monthlyCapHours = null,
+    Object? webname = null,
+    Object? gender = null,
+    Object? userstate = null,
+    Object? monthlyCapWarningPercent = null,
+    Object? hasAudioAds = null,
     Object? fullname = freezed,
-    Object? skipLimitBehavior = freezed,
-    Object? enableOnDemand = freezed,
-    Object? isEligibleForOffline = freezed,
-    Object? isEligibleForManualDownload = freezed,
+    Object? skipLimitBehavior = null,
+    Object? enableOnDemand = null,
+    Object? isEligibleForOffline = null,
+    Object? isEligibleForManualDownload = null,
     Object? pandoraBrandingType = freezed,
-    Object? canSellUserData = freezed,
+    Object? canSellUserData = null,
   }) {
     return _then(_value.copyWith(
-      isMonthlyPayer: isMonthlyPayer == freezed
+      isMonthlyPayer: null == isMonthlyPayer
           ? _value.isMonthlyPayer
           : isMonthlyPayer // ignore: cast_nullable_to_non_nullable
               as bool,
-      dailySkipLimitSubscriber: dailySkipLimitSubscriber == freezed
+      dailySkipLimitSubscriber: null == dailySkipLimitSubscriber
           ? _value.dailySkipLimitSubscriber
           : dailySkipLimitSubscriber // ignore: cast_nullable_to_non_nullable
               as int,
-      minimumAdRefreshInterval: minimumAdRefreshInterval == freezed
+      minimumAdRefreshInterval: freezed == minimumAdRefreshInterval
           ? _value.minimumAdRefreshInterval
           : minimumAdRefreshInterval // ignore: cast_nullable_to_non_nullable
               as int?,
-      age: age == freezed
+      age: null == age
           ? _value.age
           : age // ignore: cast_nullable_to_non_nullable
               as int,
-      facebookPermissions: facebookPermissions == freezed
+      facebookPermissions: null == facebookPermissions
           ? _value.facebookPermissions
           : facebookPermissions // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      splashScreenAdUrl: splashScreenAdUrl == freezed
+      splashScreenAdUrl: freezed == splashScreenAdUrl
           ? _value.splashScreenAdUrl
           : splashScreenAdUrl // ignore: cast_nullable_to_non_nullable
               as Uri?,
-      userProfileUrl: userProfileUrl == freezed
+      userProfileUrl: null == userProfileUrl
           ? _value.userProfileUrl
           : userProfileUrl // ignore: cast_nullable_to_non_nullable
               as Uri,
-      canListen: canListen == freezed
+      canListen: null == canListen
           ? _value.canListen
           : canListen // ignore: cast_nullable_to_non_nullable
               as bool,
-      hasUsedTrial: hasUsedTrial == freezed
+      hasUsedTrial: null == hasUsedTrial
           ? _value.hasUsedTrial
           : hasUsedTrial // ignore: cast_nullable_to_non_nullable
               as bool,
-      facebookAppId: facebookAppId == freezed
+      facebookAppId: null == facebookAppId
           ? _value.facebookAppId
           : facebookAppId // ignore: cast_nullable_to_non_nullable
               as String,
-      maxStationsAllowed: maxStationsAllowed == freezed
+      maxStationsAllowed: null == maxStationsAllowed
           ? _value.maxStationsAllowed
           : maxStationsAllowed // ignore: cast_nullable_to_non_nullable
               as int,
-      userId: userId == freezed
+      userId: null == userId
           ? _value.userId
           : userId // ignore: cast_nullable_to_non_nullable
               as String,
-      accountMonthlyListening: accountMonthlyListening == freezed
+      accountMonthlyListening: null == accountMonthlyListening
           ? _value.accountMonthlyListening
           : accountMonthlyListening // ignore: cast_nullable_to_non_nullable
               as int,
-      zeroVolumeAutoPauseEnabledFlag: zeroVolumeAutoPauseEnabledFlag == freezed
+      zeroVolumeAutoPauseEnabledFlag: null == zeroVolumeAutoPauseEnabledFlag
           ? _value.zeroVolumeAutoPauseEnabledFlag
           : zeroVolumeAutoPauseEnabledFlag // ignore: cast_nullable_to_non_nullable
               as bool,
-      isSubscriber: isSubscriber == freezed
+      isSubscriber: null == isSubscriber
           ? _value.isSubscriber
           : isSubscriber // ignore: cast_nullable_to_non_nullable
               as bool,
-      stationHourlySkipLimit: stationHourlySkipLimit == freezed
+      stationHourlySkipLimit: null == stationHourlySkipLimit
           ? _value.stationHourlySkipLimit
           : stationHourlySkipLimit // ignore: cast_nullable_to_non_nullable
               as int,
-      listeningTimeout: listeningTimeout == freezed
+      listeningTimeout: null == listeningTimeout
           ? _value.listeningTimeout
           : listeningTimeout // ignore: cast_nullable_to_non_nullable
               as Duration,
-      deviceMonthlyListening: deviceMonthlyListening == freezed
+      deviceMonthlyListening: null == deviceMonthlyListening
           ? _value.deviceMonthlyListening
           : deviceMonthlyListening // ignore: cast_nullable_to_non_nullable
               as int,
-      zip: zip == freezed
+      zip: null == zip
           ? _value.zip
           : zip // ignore: cast_nullable_to_non_nullable
               as String,
-      stationCreationAdUrl: stationCreationAdUrl == freezed
+      stationCreationAdUrl: freezed == stationCreationAdUrl
           ? _value.stationCreationAdUrl
           : stationCreationAdUrl // ignore: cast_nullable_to_non_nullable
               as Uri?,
-      accountMessageUrl: accountMessageUrl == freezed
+      accountMessageUrl: freezed == accountMessageUrl
           ? _value.accountMessageUrl
           : accountMessageUrl // ignore: cast_nullable_to_non_nullable
               as Uri?,
-      isCapped: isCapped == freezed
+      isCapped: null == isCapped
           ? _value.isCapped
           : isCapped // ignore: cast_nullable_to_non_nullable
               as bool,
-      googleplayApiKey: googleplayApiKey == freezed
+      googleplayApiKey: null == googleplayApiKey
           ? _value.googleplayApiKey
           : googleplayApiKey // ignore: cast_nullable_to_non_nullable
               as String,
-      dailySkipLimitNonSubscriber: dailySkipLimitNonSubscriber == freezed
+      dailySkipLimitNonSubscriber: null == dailySkipLimitNonSubscriber
           ? _value.dailySkipLimitNonSubscriber
           : dailySkipLimitNonSubscriber // ignore: cast_nullable_to_non_nullable
               as int,
-      collectTrackLifetimeStats: collectTrackLifetimeStats == freezed
+      collectTrackLifetimeStats: null == collectTrackLifetimeStats
           ? _value.collectTrackLifetimeStats
           : collectTrackLifetimeStats // ignore: cast_nullable_to_non_nullable
               as bool,
-      subscriptionHasExpired: subscriptionHasExpired == freezed
+      subscriptionHasExpired: null == subscriptionHasExpired
           ? _value.subscriptionHasExpired
           : subscriptionHasExpired // ignore: cast_nullable_to_non_nullable
               as bool,
-      userAuthToken: userAuthToken == freezed
+      userAuthToken: null == userAuthToken
           ? _value.userAuthToken
           : userAuthToken // ignore: cast_nullable_to_non_nullable
               as String,
-      username: username == freezed
+      username: null == username
           ? _value.username
           : username // ignore: cast_nullable_to_non_nullable
               as String,
-      googleplayMonthlySku: googleplayMonthlySku == freezed
+      googleplayMonthlySku: null == googleplayMonthlySku
           ? _value.googleplayMonthlySku
           : googleplayMonthlySku // ignore: cast_nullable_to_non_nullable
               as String,
-      listeningTimeoutAlertMsgUri: listeningTimeoutAlertMsgUri == freezed
+      listeningTimeoutAlertMsgUri: null == listeningTimeoutAlertMsgUri
           ? _value.listeningTimeoutAlertMsgUri
           : listeningTimeoutAlertMsgUri // ignore: cast_nullable_to_non_nullable
               as Uri,
-      monthlyCapWarningRepeatPercent: monthlyCapWarningRepeatPercent == freezed
+      monthlyCapWarningRepeatPercent: null == monthlyCapWarningRepeatPercent
           ? _value.monthlyCapWarningRepeatPercent
           : monthlyCapWarningRepeatPercent // ignore: cast_nullable_to_non_nullable
               as int,
-      videoAdUrl: videoAdUrl == freezed
+      videoAdUrl: freezed == videoAdUrl
           ? _value.videoAdUrl
           : videoAdUrl // ignore: cast_nullable_to_non_nullable
               as Uri?,
-      zeroVolumeNumMutedTracks: zeroVolumeNumMutedTracks == freezed
+      zeroVolumeNumMutedTracks: null == zeroVolumeNumMutedTracks
           ? _value.zeroVolumeNumMutedTracks
           : zeroVolumeNumMutedTracks // ignore: cast_nullable_to_non_nullable
               as int,
-      skipDelayAfterTrackStart: skipDelayAfterTrackStart == freezed
+      skipDelayAfterTrackStart: freezed == skipDelayAfterTrackStart
           ? _value.skipDelayAfterTrackStart
           : skipDelayAfterTrackStart // ignore: cast_nullable_to_non_nullable
               as Duration?,
-      accountMessageKey: accountMessageKey == freezed
+      accountMessageKey: freezed == accountMessageKey
           ? _value.accountMessageKey
           : accountMessageKey // ignore: cast_nullable_to_non_nullable
               as String?,
-      dailySkipLimit: dailySkipLimit == freezed
+      dailySkipLimit: null == dailySkipLimit
           ? _value.dailySkipLimit
           : dailySkipLimit // ignore: cast_nullable_to_non_nullable
               as int,
-      monthlyCapHours: monthlyCapHours == freezed
+      monthlyCapHours: null == monthlyCapHours
           ? _value.monthlyCapHours
           : monthlyCapHours // ignore: cast_nullable_to_non_nullable
               as int,
-      webname: webname == freezed
+      webname: null == webname
           ? _value.webname
           : webname // ignore: cast_nullable_to_non_nullable
               as String,
-      gender: gender == freezed
+      gender: null == gender
           ? _value.gender
           : gender // ignore: cast_nullable_to_non_nullable
               as Gender,
-      userstate: userstate == freezed
+      userstate: null == userstate
           ? _value.userstate
           : userstate // ignore: cast_nullable_to_non_nullable
               as String,
-      monthlyCapWarningPercent: monthlyCapWarningPercent == freezed
+      monthlyCapWarningPercent: null == monthlyCapWarningPercent
           ? _value.monthlyCapWarningPercent
           : monthlyCapWarningPercent // ignore: cast_nullable_to_non_nullable
               as int,
-      hasAudioAds: hasAudioAds == freezed
+      hasAudioAds: null == hasAudioAds
           ? _value.hasAudioAds
           : hasAudioAds // ignore: cast_nullable_to_non_nullable
               as bool,
-      fullname: fullname == freezed
+      fullname: freezed == fullname
           ? _value.fullname
           : fullname // ignore: cast_nullable_to_non_nullable
               as String?,
-      skipLimitBehavior: skipLimitBehavior == freezed
+      skipLimitBehavior: null == skipLimitBehavior
           ? _value.skipLimitBehavior
           : skipLimitBehavior // ignore: cast_nullable_to_non_nullable
               as SkipLimitBehavior,
-      enableOnDemand: enableOnDemand == freezed
+      enableOnDemand: null == enableOnDemand
           ? _value.enableOnDemand
           : enableOnDemand // ignore: cast_nullable_to_non_nullable
               as bool,
-      isEligibleForOffline: isEligibleForOffline == freezed
+      isEligibleForOffline: null == isEligibleForOffline
           ? _value.isEligibleForOffline
           : isEligibleForOffline // ignore: cast_nullable_to_non_nullable
               as bool,
-      isEligibleForManualDownload: isEligibleForManualDownload == freezed
+      isEligibleForManualDownload: null == isEligibleForManualDownload
           ? _value.isEligibleForManualDownload
           : isEligibleForManualDownload // ignore: cast_nullable_to_non_nullable
               as bool,
-      pandoraBrandingType: pandoraBrandingType == freezed
+      pandoraBrandingType: freezed == pandoraBrandingType
           ? _value.pandoraBrandingType
           : pandoraBrandingType // ignore: cast_nullable_to_non_nullable
               as PandoraBrandingType?,
-      canSellUserData: canSellUserData == freezed
+      canSellUserData: null == canSellUserData
           ? _value.canSellUserData
           : canSellUserData // ignore: cast_nullable_to_non_nullable
               as bool,
-    ));
+    ) as $Val);
   }
 }
 
@@ -526,6 +529,7 @@ abstract class _$$_AuthenticatedUserCopyWith<$Res>
           $Res Function(_$_AuthenticatedUser) then) =
       __$$_AuthenticatedUserCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(name: 'isMonthlyPayer')
           bool isMonthlyPayer,
@@ -629,261 +633,259 @@ abstract class _$$_AuthenticatedUserCopyWith<$Res>
 
 /// @nodoc
 class __$$_AuthenticatedUserCopyWithImpl<$Res>
-    extends _$AuthenticatedUserCopyWithImpl<$Res>
+    extends _$AuthenticatedUserCopyWithImpl<$Res, _$_AuthenticatedUser>
     implements _$$_AuthenticatedUserCopyWith<$Res> {
   __$$_AuthenticatedUserCopyWithImpl(
       _$_AuthenticatedUser _value, $Res Function(_$_AuthenticatedUser) _then)
-      : super(_value, (v) => _then(v as _$_AuthenticatedUser));
+      : super(_value, _then);
 
-  @override
-  _$_AuthenticatedUser get _value => super._value as _$_AuthenticatedUser;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? isMonthlyPayer = freezed,
-    Object? dailySkipLimitSubscriber = freezed,
+    Object? isMonthlyPayer = null,
+    Object? dailySkipLimitSubscriber = null,
     Object? minimumAdRefreshInterval = freezed,
-    Object? age = freezed,
-    Object? facebookPermissions = freezed,
+    Object? age = null,
+    Object? facebookPermissions = null,
     Object? splashScreenAdUrl = freezed,
-    Object? userProfileUrl = freezed,
-    Object? canListen = freezed,
-    Object? hasUsedTrial = freezed,
-    Object? facebookAppId = freezed,
-    Object? maxStationsAllowed = freezed,
-    Object? userId = freezed,
-    Object? accountMonthlyListening = freezed,
-    Object? zeroVolumeAutoPauseEnabledFlag = freezed,
-    Object? isSubscriber = freezed,
-    Object? stationHourlySkipLimit = freezed,
-    Object? listeningTimeout = freezed,
-    Object? deviceMonthlyListening = freezed,
-    Object? zip = freezed,
+    Object? userProfileUrl = null,
+    Object? canListen = null,
+    Object? hasUsedTrial = null,
+    Object? facebookAppId = null,
+    Object? maxStationsAllowed = null,
+    Object? userId = null,
+    Object? accountMonthlyListening = null,
+    Object? zeroVolumeAutoPauseEnabledFlag = null,
+    Object? isSubscriber = null,
+    Object? stationHourlySkipLimit = null,
+    Object? listeningTimeout = null,
+    Object? deviceMonthlyListening = null,
+    Object? zip = null,
     Object? stationCreationAdUrl = freezed,
     Object? accountMessageUrl = freezed,
-    Object? isCapped = freezed,
-    Object? googleplayApiKey = freezed,
-    Object? dailySkipLimitNonSubscriber = freezed,
-    Object? collectTrackLifetimeStats = freezed,
-    Object? subscriptionHasExpired = freezed,
-    Object? userAuthToken = freezed,
-    Object? username = freezed,
-    Object? googleplayMonthlySku = freezed,
-    Object? listeningTimeoutAlertMsgUri = freezed,
-    Object? monthlyCapWarningRepeatPercent = freezed,
+    Object? isCapped = null,
+    Object? googleplayApiKey = null,
+    Object? dailySkipLimitNonSubscriber = null,
+    Object? collectTrackLifetimeStats = null,
+    Object? subscriptionHasExpired = null,
+    Object? userAuthToken = null,
+    Object? username = null,
+    Object? googleplayMonthlySku = null,
+    Object? listeningTimeoutAlertMsgUri = null,
+    Object? monthlyCapWarningRepeatPercent = null,
     Object? videoAdUrl = freezed,
-    Object? zeroVolumeNumMutedTracks = freezed,
+    Object? zeroVolumeNumMutedTracks = null,
     Object? skipDelayAfterTrackStart = freezed,
     Object? accountMessageKey = freezed,
-    Object? dailySkipLimit = freezed,
-    Object? monthlyCapHours = freezed,
-    Object? webname = freezed,
-    Object? gender = freezed,
-    Object? userstate = freezed,
-    Object? monthlyCapWarningPercent = freezed,
-    Object? hasAudioAds = freezed,
+    Object? dailySkipLimit = null,
+    Object? monthlyCapHours = null,
+    Object? webname = null,
+    Object? gender = null,
+    Object? userstate = null,
+    Object? monthlyCapWarningPercent = null,
+    Object? hasAudioAds = null,
     Object? fullname = freezed,
-    Object? skipLimitBehavior = freezed,
-    Object? enableOnDemand = freezed,
-    Object? isEligibleForOffline = freezed,
-    Object? isEligibleForManualDownload = freezed,
+    Object? skipLimitBehavior = null,
+    Object? enableOnDemand = null,
+    Object? isEligibleForOffline = null,
+    Object? isEligibleForManualDownload = null,
     Object? pandoraBrandingType = freezed,
-    Object? canSellUserData = freezed,
+    Object? canSellUserData = null,
   }) {
     return _then(_$_AuthenticatedUser(
-      isMonthlyPayer: isMonthlyPayer == freezed
+      isMonthlyPayer: null == isMonthlyPayer
           ? _value.isMonthlyPayer
           : isMonthlyPayer // ignore: cast_nullable_to_non_nullable
               as bool,
-      dailySkipLimitSubscriber: dailySkipLimitSubscriber == freezed
+      dailySkipLimitSubscriber: null == dailySkipLimitSubscriber
           ? _value.dailySkipLimitSubscriber
           : dailySkipLimitSubscriber // ignore: cast_nullable_to_non_nullable
               as int,
-      minimumAdRefreshInterval: minimumAdRefreshInterval == freezed
+      minimumAdRefreshInterval: freezed == minimumAdRefreshInterval
           ? _value.minimumAdRefreshInterval
           : minimumAdRefreshInterval // ignore: cast_nullable_to_non_nullable
               as int?,
-      age: age == freezed
+      age: null == age
           ? _value.age
           : age // ignore: cast_nullable_to_non_nullable
               as int,
-      facebookPermissions: facebookPermissions == freezed
+      facebookPermissions: null == facebookPermissions
           ? _value._facebookPermissions
           : facebookPermissions // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      splashScreenAdUrl: splashScreenAdUrl == freezed
+      splashScreenAdUrl: freezed == splashScreenAdUrl
           ? _value.splashScreenAdUrl
           : splashScreenAdUrl // ignore: cast_nullable_to_non_nullable
               as Uri?,
-      userProfileUrl: userProfileUrl == freezed
+      userProfileUrl: null == userProfileUrl
           ? _value.userProfileUrl
           : userProfileUrl // ignore: cast_nullable_to_non_nullable
               as Uri,
-      canListen: canListen == freezed
+      canListen: null == canListen
           ? _value.canListen
           : canListen // ignore: cast_nullable_to_non_nullable
               as bool,
-      hasUsedTrial: hasUsedTrial == freezed
+      hasUsedTrial: null == hasUsedTrial
           ? _value.hasUsedTrial
           : hasUsedTrial // ignore: cast_nullable_to_non_nullable
               as bool,
-      facebookAppId: facebookAppId == freezed
+      facebookAppId: null == facebookAppId
           ? _value.facebookAppId
           : facebookAppId // ignore: cast_nullable_to_non_nullable
               as String,
-      maxStationsAllowed: maxStationsAllowed == freezed
+      maxStationsAllowed: null == maxStationsAllowed
           ? _value.maxStationsAllowed
           : maxStationsAllowed // ignore: cast_nullable_to_non_nullable
               as int,
-      userId: userId == freezed
+      userId: null == userId
           ? _value.userId
           : userId // ignore: cast_nullable_to_non_nullable
               as String,
-      accountMonthlyListening: accountMonthlyListening == freezed
+      accountMonthlyListening: null == accountMonthlyListening
           ? _value.accountMonthlyListening
           : accountMonthlyListening // ignore: cast_nullable_to_non_nullable
               as int,
-      zeroVolumeAutoPauseEnabledFlag: zeroVolumeAutoPauseEnabledFlag == freezed
+      zeroVolumeAutoPauseEnabledFlag: null == zeroVolumeAutoPauseEnabledFlag
           ? _value.zeroVolumeAutoPauseEnabledFlag
           : zeroVolumeAutoPauseEnabledFlag // ignore: cast_nullable_to_non_nullable
               as bool,
-      isSubscriber: isSubscriber == freezed
+      isSubscriber: null == isSubscriber
           ? _value.isSubscriber
           : isSubscriber // ignore: cast_nullable_to_non_nullable
               as bool,
-      stationHourlySkipLimit: stationHourlySkipLimit == freezed
+      stationHourlySkipLimit: null == stationHourlySkipLimit
           ? _value.stationHourlySkipLimit
           : stationHourlySkipLimit // ignore: cast_nullable_to_non_nullable
               as int,
-      listeningTimeout: listeningTimeout == freezed
+      listeningTimeout: null == listeningTimeout
           ? _value.listeningTimeout
           : listeningTimeout // ignore: cast_nullable_to_non_nullable
               as Duration,
-      deviceMonthlyListening: deviceMonthlyListening == freezed
+      deviceMonthlyListening: null == deviceMonthlyListening
           ? _value.deviceMonthlyListening
           : deviceMonthlyListening // ignore: cast_nullable_to_non_nullable
               as int,
-      zip: zip == freezed
+      zip: null == zip
           ? _value.zip
           : zip // ignore: cast_nullable_to_non_nullable
               as String,
-      stationCreationAdUrl: stationCreationAdUrl == freezed
+      stationCreationAdUrl: freezed == stationCreationAdUrl
           ? _value.stationCreationAdUrl
           : stationCreationAdUrl // ignore: cast_nullable_to_non_nullable
               as Uri?,
-      accountMessageUrl: accountMessageUrl == freezed
+      accountMessageUrl: freezed == accountMessageUrl
           ? _value.accountMessageUrl
           : accountMessageUrl // ignore: cast_nullable_to_non_nullable
               as Uri?,
-      isCapped: isCapped == freezed
+      isCapped: null == isCapped
           ? _value.isCapped
           : isCapped // ignore: cast_nullable_to_non_nullable
               as bool,
-      googleplayApiKey: googleplayApiKey == freezed
+      googleplayApiKey: null == googleplayApiKey
           ? _value.googleplayApiKey
           : googleplayApiKey // ignore: cast_nullable_to_non_nullable
               as String,
-      dailySkipLimitNonSubscriber: dailySkipLimitNonSubscriber == freezed
+      dailySkipLimitNonSubscriber: null == dailySkipLimitNonSubscriber
           ? _value.dailySkipLimitNonSubscriber
           : dailySkipLimitNonSubscriber // ignore: cast_nullable_to_non_nullable
               as int,
-      collectTrackLifetimeStats: collectTrackLifetimeStats == freezed
+      collectTrackLifetimeStats: null == collectTrackLifetimeStats
           ? _value.collectTrackLifetimeStats
           : collectTrackLifetimeStats // ignore: cast_nullable_to_non_nullable
               as bool,
-      subscriptionHasExpired: subscriptionHasExpired == freezed
+      subscriptionHasExpired: null == subscriptionHasExpired
           ? _value.subscriptionHasExpired
           : subscriptionHasExpired // ignore: cast_nullable_to_non_nullable
               as bool,
-      userAuthToken: userAuthToken == freezed
+      userAuthToken: null == userAuthToken
           ? _value.userAuthToken
           : userAuthToken // ignore: cast_nullable_to_non_nullable
               as String,
-      username: username == freezed
+      username: null == username
           ? _value.username
           : username // ignore: cast_nullable_to_non_nullable
               as String,
-      googleplayMonthlySku: googleplayMonthlySku == freezed
+      googleplayMonthlySku: null == googleplayMonthlySku
           ? _value.googleplayMonthlySku
           : googleplayMonthlySku // ignore: cast_nullable_to_non_nullable
               as String,
-      listeningTimeoutAlertMsgUri: listeningTimeoutAlertMsgUri == freezed
+      listeningTimeoutAlertMsgUri: null == listeningTimeoutAlertMsgUri
           ? _value.listeningTimeoutAlertMsgUri
           : listeningTimeoutAlertMsgUri // ignore: cast_nullable_to_non_nullable
               as Uri,
-      monthlyCapWarningRepeatPercent: monthlyCapWarningRepeatPercent == freezed
+      monthlyCapWarningRepeatPercent: null == monthlyCapWarningRepeatPercent
           ? _value.monthlyCapWarningRepeatPercent
           : monthlyCapWarningRepeatPercent // ignore: cast_nullable_to_non_nullable
               as int,
-      videoAdUrl: videoAdUrl == freezed
+      videoAdUrl: freezed == videoAdUrl
           ? _value.videoAdUrl
           : videoAdUrl // ignore: cast_nullable_to_non_nullable
               as Uri?,
-      zeroVolumeNumMutedTracks: zeroVolumeNumMutedTracks == freezed
+      zeroVolumeNumMutedTracks: null == zeroVolumeNumMutedTracks
           ? _value.zeroVolumeNumMutedTracks
           : zeroVolumeNumMutedTracks // ignore: cast_nullable_to_non_nullable
               as int,
-      skipDelayAfterTrackStart: skipDelayAfterTrackStart == freezed
+      skipDelayAfterTrackStart: freezed == skipDelayAfterTrackStart
           ? _value.skipDelayAfterTrackStart
           : skipDelayAfterTrackStart // ignore: cast_nullable_to_non_nullable
               as Duration?,
-      accountMessageKey: accountMessageKey == freezed
+      accountMessageKey: freezed == accountMessageKey
           ? _value.accountMessageKey
           : accountMessageKey // ignore: cast_nullable_to_non_nullable
               as String?,
-      dailySkipLimit: dailySkipLimit == freezed
+      dailySkipLimit: null == dailySkipLimit
           ? _value.dailySkipLimit
           : dailySkipLimit // ignore: cast_nullable_to_non_nullable
               as int,
-      monthlyCapHours: monthlyCapHours == freezed
+      monthlyCapHours: null == monthlyCapHours
           ? _value.monthlyCapHours
           : monthlyCapHours // ignore: cast_nullable_to_non_nullable
               as int,
-      webname: webname == freezed
+      webname: null == webname
           ? _value.webname
           : webname // ignore: cast_nullable_to_non_nullable
               as String,
-      gender: gender == freezed
+      gender: null == gender
           ? _value.gender
           : gender // ignore: cast_nullable_to_non_nullable
               as Gender,
-      userstate: userstate == freezed
+      userstate: null == userstate
           ? _value.userstate
           : userstate // ignore: cast_nullable_to_non_nullable
               as String,
-      monthlyCapWarningPercent: monthlyCapWarningPercent == freezed
+      monthlyCapWarningPercent: null == monthlyCapWarningPercent
           ? _value.monthlyCapWarningPercent
           : monthlyCapWarningPercent // ignore: cast_nullable_to_non_nullable
               as int,
-      hasAudioAds: hasAudioAds == freezed
+      hasAudioAds: null == hasAudioAds
           ? _value.hasAudioAds
           : hasAudioAds // ignore: cast_nullable_to_non_nullable
               as bool,
-      fullname: fullname == freezed
+      fullname: freezed == fullname
           ? _value.fullname
           : fullname // ignore: cast_nullable_to_non_nullable
               as String?,
-      skipLimitBehavior: skipLimitBehavior == freezed
+      skipLimitBehavior: null == skipLimitBehavior
           ? _value.skipLimitBehavior
           : skipLimitBehavior // ignore: cast_nullable_to_non_nullable
               as SkipLimitBehavior,
-      enableOnDemand: enableOnDemand == freezed
+      enableOnDemand: null == enableOnDemand
           ? _value.enableOnDemand
           : enableOnDemand // ignore: cast_nullable_to_non_nullable
               as bool,
-      isEligibleForOffline: isEligibleForOffline == freezed
+      isEligibleForOffline: null == isEligibleForOffline
           ? _value.isEligibleForOffline
           : isEligibleForOffline // ignore: cast_nullable_to_non_nullable
               as bool,
-      isEligibleForManualDownload: isEligibleForManualDownload == freezed
+      isEligibleForManualDownload: null == isEligibleForManualDownload
           ? _value.isEligibleForManualDownload
           : isEligibleForManualDownload // ignore: cast_nullable_to_non_nullable
               as bool,
-      pandoraBrandingType: pandoraBrandingType == freezed
+      pandoraBrandingType: freezed == pandoraBrandingType
           ? _value.pandoraBrandingType
           : pandoraBrandingType // ignore: cast_nullable_to_non_nullable
               as PandoraBrandingType?,
-      canSellUserData: canSellUserData == freezed
+      canSellUserData: null == canSellUserData
           ? _value.canSellUserData
           : canSellUserData // ignore: cast_nullable_to_non_nullable
               as bool,
@@ -1186,157 +1188,139 @@ class _$_AuthenticatedUser implements _AuthenticatedUser {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_AuthenticatedUser &&
-            const DeepCollectionEquality()
-                .equals(other.isMonthlyPayer, isMonthlyPayer) &&
-            const DeepCollectionEquality().equals(
-                other.dailySkipLimitSubscriber, dailySkipLimitSubscriber) &&
-            const DeepCollectionEquality().equals(
-                other.minimumAdRefreshInterval, minimumAdRefreshInterval) &&
-            const DeepCollectionEquality().equals(other.age, age) &&
+            (identical(other.isMonthlyPayer, isMonthlyPayer) ||
+                other.isMonthlyPayer == isMonthlyPayer) &&
+            (identical(other.dailySkipLimitSubscriber, dailySkipLimitSubscriber) ||
+                other.dailySkipLimitSubscriber == dailySkipLimitSubscriber) &&
+            (identical(other.minimumAdRefreshInterval, minimumAdRefreshInterval) ||
+                other.minimumAdRefreshInterval == minimumAdRefreshInterval) &&
+            (identical(other.age, age) || other.age == age) &&
             const DeepCollectionEquality()
                 .equals(other._facebookPermissions, _facebookPermissions) &&
-            const DeepCollectionEquality()
-                .equals(other.splashScreenAdUrl, splashScreenAdUrl) &&
-            const DeepCollectionEquality()
-                .equals(other.userProfileUrl, userProfileUrl) &&
-            const DeepCollectionEquality().equals(other.canListen, canListen) &&
-            const DeepCollectionEquality()
-                .equals(other.hasUsedTrial, hasUsedTrial) &&
-            const DeepCollectionEquality()
-                .equals(other.facebookAppId, facebookAppId) &&
-            const DeepCollectionEquality()
-                .equals(other.maxStationsAllowed, maxStationsAllowed) &&
-            const DeepCollectionEquality().equals(other.userId, userId) &&
-            const DeepCollectionEquality().equals(
-                other.accountMonthlyListening, accountMonthlyListening) &&
-            const DeepCollectionEquality().equals(
-                other.zeroVolumeAutoPauseEnabledFlag,
-                zeroVolumeAutoPauseEnabledFlag) &&
-            const DeepCollectionEquality()
-                .equals(other.isSubscriber, isSubscriber) &&
-            const DeepCollectionEquality()
-                .equals(other.stationHourlySkipLimit, stationHourlySkipLimit) &&
-            const DeepCollectionEquality()
-                .equals(other.listeningTimeout, listeningTimeout) &&
-            const DeepCollectionEquality()
-                .equals(other.deviceMonthlyListening, deviceMonthlyListening) &&
-            const DeepCollectionEquality().equals(other.zip, zip) &&
-            const DeepCollectionEquality()
-                .equals(other.stationCreationAdUrl, stationCreationAdUrl) &&
-            const DeepCollectionEquality()
-                .equals(other.accountMessageUrl, accountMessageUrl) &&
-            const DeepCollectionEquality().equals(other.isCapped, isCapped) &&
-            const DeepCollectionEquality()
-                .equals(other.googleplayApiKey, googleplayApiKey) &&
-            const DeepCollectionEquality().equals(
-                other.dailySkipLimitNonSubscriber,
-                dailySkipLimitNonSubscriber) &&
-            const DeepCollectionEquality().equals(
-                other.collectTrackLifetimeStats, collectTrackLifetimeStats) &&
-            const DeepCollectionEquality()
-                .equals(other.subscriptionHasExpired, subscriptionHasExpired) &&
-            const DeepCollectionEquality()
-                .equals(other.userAuthToken, userAuthToken) &&
-            const DeepCollectionEquality().equals(other.username, username) &&
-            const DeepCollectionEquality()
-                .equals(other.googleplayMonthlySku, googleplayMonthlySku) &&
-            const DeepCollectionEquality().equals(
-                other.listeningTimeoutAlertMsgUri,
-                listeningTimeoutAlertMsgUri) &&
-            const DeepCollectionEquality().equals(
-                other.monthlyCapWarningRepeatPercent,
-                monthlyCapWarningRepeatPercent) &&
-            const DeepCollectionEquality()
-                .equals(other.videoAdUrl, videoAdUrl) &&
-            const DeepCollectionEquality().equals(
-                other.zeroVolumeNumMutedTracks, zeroVolumeNumMutedTracks) &&
-            const DeepCollectionEquality().equals(
-                other.skipDelayAfterTrackStart, skipDelayAfterTrackStart) &&
-            const DeepCollectionEquality()
-                .equals(other.accountMessageKey, accountMessageKey) &&
-            const DeepCollectionEquality()
-                .equals(other.dailySkipLimit, dailySkipLimit) &&
-            const DeepCollectionEquality()
-                .equals(other.monthlyCapHours, monthlyCapHours) &&
-            const DeepCollectionEquality().equals(other.webname, webname) &&
-            const DeepCollectionEquality().equals(other.gender, gender) &&
-            const DeepCollectionEquality().equals(other.userstate, userstate) &&
-            const DeepCollectionEquality().equals(
-                other.monthlyCapWarningPercent, monthlyCapWarningPercent) &&
-            const DeepCollectionEquality()
-                .equals(other.hasAudioAds, hasAudioAds) &&
-            const DeepCollectionEquality().equals(other.fullname, fullname) &&
-            const DeepCollectionEquality()
-                .equals(other.skipLimitBehavior, skipLimitBehavior) &&
-            const DeepCollectionEquality()
-                .equals(other.enableOnDemand, enableOnDemand) &&
-            const DeepCollectionEquality()
-                .equals(other.isEligibleForOffline, isEligibleForOffline) &&
-            const DeepCollectionEquality().equals(
-                other.isEligibleForManualDownload,
-                isEligibleForManualDownload) &&
-            const DeepCollectionEquality()
-                .equals(other.pandoraBrandingType, pandoraBrandingType) &&
-            const DeepCollectionEquality().equals(other.canSellUserData, canSellUserData));
+            (identical(other.splashScreenAdUrl, splashScreenAdUrl) ||
+                other.splashScreenAdUrl == splashScreenAdUrl) &&
+            (identical(other.userProfileUrl, userProfileUrl) ||
+                other.userProfileUrl == userProfileUrl) &&
+            (identical(other.canListen, canListen) ||
+                other.canListen == canListen) &&
+            (identical(other.hasUsedTrial, hasUsedTrial) ||
+                other.hasUsedTrial == hasUsedTrial) &&
+            (identical(other.facebookAppId, facebookAppId) ||
+                other.facebookAppId == facebookAppId) &&
+            (identical(other.maxStationsAllowed, maxStationsAllowed) ||
+                other.maxStationsAllowed == maxStationsAllowed) &&
+            (identical(other.userId, userId) || other.userId == userId) &&
+            (identical(other.accountMonthlyListening, accountMonthlyListening) ||
+                other.accountMonthlyListening == accountMonthlyListening) &&
+            (identical(other.zeroVolumeAutoPauseEnabledFlag, zeroVolumeAutoPauseEnabledFlag) ||
+                other.zeroVolumeAutoPauseEnabledFlag ==
+                    zeroVolumeAutoPauseEnabledFlag) &&
+            (identical(other.isSubscriber, isSubscriber) ||
+                other.isSubscriber == isSubscriber) &&
+            (identical(other.stationHourlySkipLimit, stationHourlySkipLimit) ||
+                other.stationHourlySkipLimit == stationHourlySkipLimit) &&
+            (identical(other.listeningTimeout, listeningTimeout) ||
+                other.listeningTimeout == listeningTimeout) &&
+            (identical(other.deviceMonthlyListening, deviceMonthlyListening) ||
+                other.deviceMonthlyListening == deviceMonthlyListening) &&
+            (identical(other.zip, zip) || other.zip == zip) &&
+            (identical(other.stationCreationAdUrl, stationCreationAdUrl) ||
+                other.stationCreationAdUrl == stationCreationAdUrl) &&
+            (identical(other.accountMessageUrl, accountMessageUrl) ||
+                other.accountMessageUrl == accountMessageUrl) &&
+            (identical(other.isCapped, isCapped) ||
+                other.isCapped == isCapped) &&
+            (identical(other.googleplayApiKey, googleplayApiKey) ||
+                other.googleplayApiKey == googleplayApiKey) &&
+            (identical(other.dailySkipLimitNonSubscriber, dailySkipLimitNonSubscriber) ||
+                other.dailySkipLimitNonSubscriber ==
+                    dailySkipLimitNonSubscriber) &&
+            (identical(other.collectTrackLifetimeStats, collectTrackLifetimeStats) ||
+                other.collectTrackLifetimeStats == collectTrackLifetimeStats) &&
+            (identical(other.subscriptionHasExpired, subscriptionHasExpired) || other.subscriptionHasExpired == subscriptionHasExpired) &&
+            (identical(other.userAuthToken, userAuthToken) || other.userAuthToken == userAuthToken) &&
+            (identical(other.username, username) || other.username == username) &&
+            (identical(other.googleplayMonthlySku, googleplayMonthlySku) || other.googleplayMonthlySku == googleplayMonthlySku) &&
+            (identical(other.listeningTimeoutAlertMsgUri, listeningTimeoutAlertMsgUri) || other.listeningTimeoutAlertMsgUri == listeningTimeoutAlertMsgUri) &&
+            (identical(other.monthlyCapWarningRepeatPercent, monthlyCapWarningRepeatPercent) || other.monthlyCapWarningRepeatPercent == monthlyCapWarningRepeatPercent) &&
+            (identical(other.videoAdUrl, videoAdUrl) || other.videoAdUrl == videoAdUrl) &&
+            (identical(other.zeroVolumeNumMutedTracks, zeroVolumeNumMutedTracks) || other.zeroVolumeNumMutedTracks == zeroVolumeNumMutedTracks) &&
+            (identical(other.skipDelayAfterTrackStart, skipDelayAfterTrackStart) || other.skipDelayAfterTrackStart == skipDelayAfterTrackStart) &&
+            (identical(other.accountMessageKey, accountMessageKey) || other.accountMessageKey == accountMessageKey) &&
+            (identical(other.dailySkipLimit, dailySkipLimit) || other.dailySkipLimit == dailySkipLimit) &&
+            (identical(other.monthlyCapHours, monthlyCapHours) || other.monthlyCapHours == monthlyCapHours) &&
+            (identical(other.webname, webname) || other.webname == webname) &&
+            (identical(other.gender, gender) || other.gender == gender) &&
+            (identical(other.userstate, userstate) || other.userstate == userstate) &&
+            (identical(other.monthlyCapWarningPercent, monthlyCapWarningPercent) || other.monthlyCapWarningPercent == monthlyCapWarningPercent) &&
+            (identical(other.hasAudioAds, hasAudioAds) || other.hasAudioAds == hasAudioAds) &&
+            (identical(other.fullname, fullname) || other.fullname == fullname) &&
+            (identical(other.skipLimitBehavior, skipLimitBehavior) || other.skipLimitBehavior == skipLimitBehavior) &&
+            (identical(other.enableOnDemand, enableOnDemand) || other.enableOnDemand == enableOnDemand) &&
+            (identical(other.isEligibleForOffline, isEligibleForOffline) || other.isEligibleForOffline == isEligibleForOffline) &&
+            (identical(other.isEligibleForManualDownload, isEligibleForManualDownload) || other.isEligibleForManualDownload == isEligibleForManualDownload) &&
+            (identical(other.pandoraBrandingType, pandoraBrandingType) || other.pandoraBrandingType == pandoraBrandingType) &&
+            (identical(other.canSellUserData, canSellUserData) || other.canSellUserData == canSellUserData));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
-        const DeepCollectionEquality().hash(isMonthlyPayer),
-        const DeepCollectionEquality().hash(dailySkipLimitSubscriber),
-        const DeepCollectionEquality().hash(minimumAdRefreshInterval),
-        const DeepCollectionEquality().hash(age),
+        isMonthlyPayer,
+        dailySkipLimitSubscriber,
+        minimumAdRefreshInterval,
+        age,
         const DeepCollectionEquality().hash(_facebookPermissions),
-        const DeepCollectionEquality().hash(splashScreenAdUrl),
-        const DeepCollectionEquality().hash(userProfileUrl),
-        const DeepCollectionEquality().hash(canListen),
-        const DeepCollectionEquality().hash(hasUsedTrial),
-        const DeepCollectionEquality().hash(facebookAppId),
-        const DeepCollectionEquality().hash(maxStationsAllowed),
-        const DeepCollectionEquality().hash(userId),
-        const DeepCollectionEquality().hash(accountMonthlyListening),
-        const DeepCollectionEquality().hash(zeroVolumeAutoPauseEnabledFlag),
-        const DeepCollectionEquality().hash(isSubscriber),
-        const DeepCollectionEquality().hash(stationHourlySkipLimit),
-        const DeepCollectionEquality().hash(listeningTimeout),
-        const DeepCollectionEquality().hash(deviceMonthlyListening),
-        const DeepCollectionEquality().hash(zip),
-        const DeepCollectionEquality().hash(stationCreationAdUrl),
-        const DeepCollectionEquality().hash(accountMessageUrl),
-        const DeepCollectionEquality().hash(isCapped),
-        const DeepCollectionEquality().hash(googleplayApiKey),
-        const DeepCollectionEquality().hash(dailySkipLimitNonSubscriber),
-        const DeepCollectionEquality().hash(collectTrackLifetimeStats),
-        const DeepCollectionEquality().hash(subscriptionHasExpired),
-        const DeepCollectionEquality().hash(userAuthToken),
-        const DeepCollectionEquality().hash(username),
-        const DeepCollectionEquality().hash(googleplayMonthlySku),
-        const DeepCollectionEquality().hash(listeningTimeoutAlertMsgUri),
-        const DeepCollectionEquality().hash(monthlyCapWarningRepeatPercent),
-        const DeepCollectionEquality().hash(videoAdUrl),
-        const DeepCollectionEquality().hash(zeroVolumeNumMutedTracks),
-        const DeepCollectionEquality().hash(skipDelayAfterTrackStart),
-        const DeepCollectionEquality().hash(accountMessageKey),
-        const DeepCollectionEquality().hash(dailySkipLimit),
-        const DeepCollectionEquality().hash(monthlyCapHours),
-        const DeepCollectionEquality().hash(webname),
-        const DeepCollectionEquality().hash(gender),
-        const DeepCollectionEquality().hash(userstate),
-        const DeepCollectionEquality().hash(monthlyCapWarningPercent),
-        const DeepCollectionEquality().hash(hasAudioAds),
-        const DeepCollectionEquality().hash(fullname),
-        const DeepCollectionEquality().hash(skipLimitBehavior),
-        const DeepCollectionEquality().hash(enableOnDemand),
-        const DeepCollectionEquality().hash(isEligibleForOffline),
-        const DeepCollectionEquality().hash(isEligibleForManualDownload),
-        const DeepCollectionEquality().hash(pandoraBrandingType),
-        const DeepCollectionEquality().hash(canSellUserData)
+        splashScreenAdUrl,
+        userProfileUrl,
+        canListen,
+        hasUsedTrial,
+        facebookAppId,
+        maxStationsAllowed,
+        userId,
+        accountMonthlyListening,
+        zeroVolumeAutoPauseEnabledFlag,
+        isSubscriber,
+        stationHourlySkipLimit,
+        listeningTimeout,
+        deviceMonthlyListening,
+        zip,
+        stationCreationAdUrl,
+        accountMessageUrl,
+        isCapped,
+        googleplayApiKey,
+        dailySkipLimitNonSubscriber,
+        collectTrackLifetimeStats,
+        subscriptionHasExpired,
+        userAuthToken,
+        username,
+        googleplayMonthlySku,
+        listeningTimeoutAlertMsgUri,
+        monthlyCapWarningRepeatPercent,
+        videoAdUrl,
+        zeroVolumeNumMutedTracks,
+        skipDelayAfterTrackStart,
+        accountMessageKey,
+        dailySkipLimit,
+        monthlyCapHours,
+        webname,
+        gender,
+        userstate,
+        monthlyCapWarningPercent,
+        hasAudioAds,
+        fullname,
+        skipLimitBehavior,
+        enableOnDemand,
+        isEligibleForOffline,
+        isEligibleForManualDownload,
+        pandoraBrandingType,
+        canSellUserData
       ]);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_AuthenticatedUserCopyWith<_$_AuthenticatedUser> get copyWith =>
       __$$_AuthenticatedUserCopyWithImpl<_$_AuthenticatedUser>(
           this, _$identity);

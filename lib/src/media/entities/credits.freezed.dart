@@ -33,35 +33,39 @@ mixin _$Credits {
 /// @nodoc
 abstract class $CreditsCopyWith<$Res> {
   factory $CreditsCopyWith(Credits value, $Res Function(Credits) then) =
-      _$CreditsCopyWithImpl<$Res>;
+      _$CreditsCopyWithImpl<$Res, Credits>;
+  @useResult
   $Res call(
       {@JsonKey(name: 'creditsSnippet') String creditsSnippetHtml,
       @JsonKey(name: 'fullCredits') String fullCreditsHtml});
 }
 
 /// @nodoc
-class _$CreditsCopyWithImpl<$Res> implements $CreditsCopyWith<$Res> {
+class _$CreditsCopyWithImpl<$Res, $Val extends Credits>
+    implements $CreditsCopyWith<$Res> {
   _$CreditsCopyWithImpl(this._value, this._then);
 
-  final Credits _value;
   // ignore: unused_field
-  final $Res Function(Credits) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? creditsSnippetHtml = freezed,
-    Object? fullCreditsHtml = freezed,
+    Object? creditsSnippetHtml = null,
+    Object? fullCreditsHtml = null,
   }) {
     return _then(_value.copyWith(
-      creditsSnippetHtml: creditsSnippetHtml == freezed
+      creditsSnippetHtml: null == creditsSnippetHtml
           ? _value.creditsSnippetHtml
           : creditsSnippetHtml // ignore: cast_nullable_to_non_nullable
               as String,
-      fullCreditsHtml: fullCreditsHtml == freezed
+      fullCreditsHtml: null == fullCreditsHtml
           ? _value.fullCreditsHtml
           : fullCreditsHtml // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -71,31 +75,31 @@ abstract class _$$_CreditsCopyWith<$Res> implements $CreditsCopyWith<$Res> {
           _$_Credits value, $Res Function(_$_Credits) then) =
       __$$_CreditsCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(name: 'creditsSnippet') String creditsSnippetHtml,
       @JsonKey(name: 'fullCredits') String fullCreditsHtml});
 }
 
 /// @nodoc
-class __$$_CreditsCopyWithImpl<$Res> extends _$CreditsCopyWithImpl<$Res>
+class __$$_CreditsCopyWithImpl<$Res>
+    extends _$CreditsCopyWithImpl<$Res, _$_Credits>
     implements _$$_CreditsCopyWith<$Res> {
   __$$_CreditsCopyWithImpl(_$_Credits _value, $Res Function(_$_Credits) _then)
-      : super(_value, (v) => _then(v as _$_Credits));
+      : super(_value, _then);
 
-  @override
-  _$_Credits get _value => super._value as _$_Credits;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? creditsSnippetHtml = freezed,
-    Object? fullCreditsHtml = freezed,
+    Object? creditsSnippetHtml = null,
+    Object? fullCreditsHtml = null,
   }) {
     return _then(_$_Credits(
-      creditsSnippetHtml: creditsSnippetHtml == freezed
+      creditsSnippetHtml: null == creditsSnippetHtml
           ? _value.creditsSnippetHtml
           : creditsSnippetHtml // ignore: cast_nullable_to_non_nullable
               as String,
-      fullCreditsHtml: fullCreditsHtml == freezed
+      fullCreditsHtml: null == fullCreditsHtml
           ? _value.fullCreditsHtml
           : fullCreditsHtml // ignore: cast_nullable_to_non_nullable
               as String,
@@ -130,21 +134,20 @@ class _$_Credits implements _Credits {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_Credits &&
-            const DeepCollectionEquality()
-                .equals(other.creditsSnippetHtml, creditsSnippetHtml) &&
-            const DeepCollectionEquality()
-                .equals(other.fullCreditsHtml, fullCreditsHtml));
+            (identical(other.creditsSnippetHtml, creditsSnippetHtml) ||
+                other.creditsSnippetHtml == creditsSnippetHtml) &&
+            (identical(other.fullCreditsHtml, fullCreditsHtml) ||
+                other.fullCreditsHtml == fullCreditsHtml));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(creditsSnippetHtml),
-      const DeepCollectionEquality().hash(fullCreditsHtml));
+  int get hashCode =>
+      Object.hash(runtimeType, creditsSnippetHtml, fullCreditsHtml);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_CreditsCopyWith<_$_Credits> get copyWith =>
       __$$_CreditsCopyWithImpl<_$_Credits>(this, _$identity);
 

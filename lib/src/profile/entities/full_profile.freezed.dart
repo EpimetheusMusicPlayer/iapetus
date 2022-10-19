@@ -67,7 +67,8 @@ mixin _$FullProfile {
 abstract class $FullProfileCopyWith<$Res> {
   factory $FullProfileCopyWith(
           FullProfile value, $Res Function(FullProfile) then) =
-      _$FullProfileCopyWithImpl<$Res>;
+      _$FullProfileCopyWithImpl<$Res, FullProfile>;
+  @useResult
   $Res call(
       {@JsonKey(name: 'ownerPandoraId') String ownerPandoraId,
       @JsonKey(name: 'ownerListenerId') int ownerListenerId,
@@ -89,103 +90,106 @@ abstract class $FullProfileCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$FullProfileCopyWithImpl<$Res> implements $FullProfileCopyWith<$Res> {
+class _$FullProfileCopyWithImpl<$Res, $Val extends FullProfile>
+    implements $FullProfileCopyWith<$Res> {
   _$FullProfileCopyWithImpl(this._value, this._then);
 
-  final FullProfile _value;
   // ignore: unused_field
-  final $Res Function(FullProfile) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? ownerPandoraId = freezed,
-    Object? ownerListenerId = freezed,
-    Object? isPremiumUser = freezed,
-    Object? isOwnProfile = freezed,
-    Object? isFollowing = freezed,
-    Object? isPrivate = freezed,
-    Object? thumbCount = freezed,
-    Object? playlistCount = freezed,
-    Object? stationCount = freezed,
-    Object? followerCount = freezed,
-    Object? followingCount = freezed,
-    Object? recentFavoritesCount = freezed,
-    Object? topArtistsCount = freezed,
-    Object? recentFavoritePandoraIds = freezed,
-    Object? topArtistPandoraIds = freezed,
-    Object? playlistPandoraIds = freezed,
-    Object? annotations = freezed,
+    Object? ownerPandoraId = null,
+    Object? ownerListenerId = null,
+    Object? isPremiumUser = null,
+    Object? isOwnProfile = null,
+    Object? isFollowing = null,
+    Object? isPrivate = null,
+    Object? thumbCount = null,
+    Object? playlistCount = null,
+    Object? stationCount = null,
+    Object? followerCount = null,
+    Object? followingCount = null,
+    Object? recentFavoritesCount = null,
+    Object? topArtistsCount = null,
+    Object? recentFavoritePandoraIds = null,
+    Object? topArtistPandoraIds = null,
+    Object? playlistPandoraIds = null,
+    Object? annotations = null,
   }) {
     return _then(_value.copyWith(
-      ownerPandoraId: ownerPandoraId == freezed
+      ownerPandoraId: null == ownerPandoraId
           ? _value.ownerPandoraId
           : ownerPandoraId // ignore: cast_nullable_to_non_nullable
               as String,
-      ownerListenerId: ownerListenerId == freezed
+      ownerListenerId: null == ownerListenerId
           ? _value.ownerListenerId
           : ownerListenerId // ignore: cast_nullable_to_non_nullable
               as int,
-      isPremiumUser: isPremiumUser == freezed
+      isPremiumUser: null == isPremiumUser
           ? _value.isPremiumUser
           : isPremiumUser // ignore: cast_nullable_to_non_nullable
               as bool,
-      isOwnProfile: isOwnProfile == freezed
+      isOwnProfile: null == isOwnProfile
           ? _value.isOwnProfile
           : isOwnProfile // ignore: cast_nullable_to_non_nullable
               as bool,
-      isFollowing: isFollowing == freezed
+      isFollowing: null == isFollowing
           ? _value.isFollowing
           : isFollowing // ignore: cast_nullable_to_non_nullable
               as bool,
-      isPrivate: isPrivate == freezed
+      isPrivate: null == isPrivate
           ? _value.isPrivate
           : isPrivate // ignore: cast_nullable_to_non_nullable
               as bool,
-      thumbCount: thumbCount == freezed
+      thumbCount: null == thumbCount
           ? _value.thumbCount
           : thumbCount // ignore: cast_nullable_to_non_nullable
               as int,
-      playlistCount: playlistCount == freezed
+      playlistCount: null == playlistCount
           ? _value.playlistCount
           : playlistCount // ignore: cast_nullable_to_non_nullable
               as int,
-      stationCount: stationCount == freezed
+      stationCount: null == stationCount
           ? _value.stationCount
           : stationCount // ignore: cast_nullable_to_non_nullable
               as int,
-      followerCount: followerCount == freezed
+      followerCount: null == followerCount
           ? _value.followerCount
           : followerCount // ignore: cast_nullable_to_non_nullable
               as int,
-      followingCount: followingCount == freezed
+      followingCount: null == followingCount
           ? _value.followingCount
           : followingCount // ignore: cast_nullable_to_non_nullable
               as int,
-      recentFavoritesCount: recentFavoritesCount == freezed
+      recentFavoritesCount: null == recentFavoritesCount
           ? _value.recentFavoritesCount
           : recentFavoritesCount // ignore: cast_nullable_to_non_nullable
               as int,
-      topArtistsCount: topArtistsCount == freezed
+      topArtistsCount: null == topArtistsCount
           ? _value.topArtistsCount
           : topArtistsCount // ignore: cast_nullable_to_non_nullable
               as int,
-      recentFavoritePandoraIds: recentFavoritePandoraIds == freezed
+      recentFavoritePandoraIds: null == recentFavoritePandoraIds
           ? _value.recentFavoritePandoraIds
           : recentFavoritePandoraIds // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      topArtistPandoraIds: topArtistPandoraIds == freezed
+      topArtistPandoraIds: null == topArtistPandoraIds
           ? _value.topArtistPandoraIds
           : topArtistPandoraIds // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      playlistPandoraIds: playlistPandoraIds == freezed
+      playlistPandoraIds: null == playlistPandoraIds
           ? _value.playlistPandoraIds
           : playlistPandoraIds // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      annotations: annotations == freezed
+      annotations: null == annotations
           ? _value.annotations
           : annotations // ignore: cast_nullable_to_non_nullable
               as Map<String, MediaAnnotation>,
-    ));
+    ) as $Val);
   }
 }
 
@@ -196,6 +200,7 @@ abstract class _$$_FullProfileCopyWith<$Res>
           _$_FullProfile value, $Res Function(_$_FullProfile) then) =
       __$$_FullProfileCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(name: 'ownerPandoraId') String ownerPandoraId,
       @JsonKey(name: 'ownerListenerId') int ownerListenerId,
@@ -217,101 +222,100 @@ abstract class _$$_FullProfileCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_FullProfileCopyWithImpl<$Res> extends _$FullProfileCopyWithImpl<$Res>
+class __$$_FullProfileCopyWithImpl<$Res>
+    extends _$FullProfileCopyWithImpl<$Res, _$_FullProfile>
     implements _$$_FullProfileCopyWith<$Res> {
   __$$_FullProfileCopyWithImpl(
       _$_FullProfile _value, $Res Function(_$_FullProfile) _then)
-      : super(_value, (v) => _then(v as _$_FullProfile));
+      : super(_value, _then);
 
-  @override
-  _$_FullProfile get _value => super._value as _$_FullProfile;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? ownerPandoraId = freezed,
-    Object? ownerListenerId = freezed,
-    Object? isPremiumUser = freezed,
-    Object? isOwnProfile = freezed,
-    Object? isFollowing = freezed,
-    Object? isPrivate = freezed,
-    Object? thumbCount = freezed,
-    Object? playlistCount = freezed,
-    Object? stationCount = freezed,
-    Object? followerCount = freezed,
-    Object? followingCount = freezed,
-    Object? recentFavoritesCount = freezed,
-    Object? topArtistsCount = freezed,
-    Object? recentFavoritePandoraIds = freezed,
-    Object? topArtistPandoraIds = freezed,
-    Object? playlistPandoraIds = freezed,
-    Object? annotations = freezed,
+    Object? ownerPandoraId = null,
+    Object? ownerListenerId = null,
+    Object? isPremiumUser = null,
+    Object? isOwnProfile = null,
+    Object? isFollowing = null,
+    Object? isPrivate = null,
+    Object? thumbCount = null,
+    Object? playlistCount = null,
+    Object? stationCount = null,
+    Object? followerCount = null,
+    Object? followingCount = null,
+    Object? recentFavoritesCount = null,
+    Object? topArtistsCount = null,
+    Object? recentFavoritePandoraIds = null,
+    Object? topArtistPandoraIds = null,
+    Object? playlistPandoraIds = null,
+    Object? annotations = null,
   }) {
     return _then(_$_FullProfile(
-      ownerPandoraId: ownerPandoraId == freezed
+      ownerPandoraId: null == ownerPandoraId
           ? _value.ownerPandoraId
           : ownerPandoraId // ignore: cast_nullable_to_non_nullable
               as String,
-      ownerListenerId: ownerListenerId == freezed
+      ownerListenerId: null == ownerListenerId
           ? _value.ownerListenerId
           : ownerListenerId // ignore: cast_nullable_to_non_nullable
               as int,
-      isPremiumUser: isPremiumUser == freezed
+      isPremiumUser: null == isPremiumUser
           ? _value.isPremiumUser
           : isPremiumUser // ignore: cast_nullable_to_non_nullable
               as bool,
-      isOwnProfile: isOwnProfile == freezed
+      isOwnProfile: null == isOwnProfile
           ? _value.isOwnProfile
           : isOwnProfile // ignore: cast_nullable_to_non_nullable
               as bool,
-      isFollowing: isFollowing == freezed
+      isFollowing: null == isFollowing
           ? _value.isFollowing
           : isFollowing // ignore: cast_nullable_to_non_nullable
               as bool,
-      isPrivate: isPrivate == freezed
+      isPrivate: null == isPrivate
           ? _value.isPrivate
           : isPrivate // ignore: cast_nullable_to_non_nullable
               as bool,
-      thumbCount: thumbCount == freezed
+      thumbCount: null == thumbCount
           ? _value.thumbCount
           : thumbCount // ignore: cast_nullable_to_non_nullable
               as int,
-      playlistCount: playlistCount == freezed
+      playlistCount: null == playlistCount
           ? _value.playlistCount
           : playlistCount // ignore: cast_nullable_to_non_nullable
               as int,
-      stationCount: stationCount == freezed
+      stationCount: null == stationCount
           ? _value.stationCount
           : stationCount // ignore: cast_nullable_to_non_nullable
               as int,
-      followerCount: followerCount == freezed
+      followerCount: null == followerCount
           ? _value.followerCount
           : followerCount // ignore: cast_nullable_to_non_nullable
               as int,
-      followingCount: followingCount == freezed
+      followingCount: null == followingCount
           ? _value.followingCount
           : followingCount // ignore: cast_nullable_to_non_nullable
               as int,
-      recentFavoritesCount: recentFavoritesCount == freezed
+      recentFavoritesCount: null == recentFavoritesCount
           ? _value.recentFavoritesCount
           : recentFavoritesCount // ignore: cast_nullable_to_non_nullable
               as int,
-      topArtistsCount: topArtistsCount == freezed
+      topArtistsCount: null == topArtistsCount
           ? _value.topArtistsCount
           : topArtistsCount // ignore: cast_nullable_to_non_nullable
               as int,
-      recentFavoritePandoraIds: recentFavoritePandoraIds == freezed
+      recentFavoritePandoraIds: null == recentFavoritePandoraIds
           ? _value._recentFavoritePandoraIds
           : recentFavoritePandoraIds // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      topArtistPandoraIds: topArtistPandoraIds == freezed
+      topArtistPandoraIds: null == topArtistPandoraIds
           ? _value._topArtistPandoraIds
           : topArtistPandoraIds // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      playlistPandoraIds: playlistPandoraIds == freezed
+      playlistPandoraIds: null == playlistPandoraIds
           ? _value._playlistPandoraIds
           : playlistPandoraIds // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      annotations: annotations == freezed
+      annotations: null == annotations
           ? _value._annotations
           : annotations // ignore: cast_nullable_to_non_nullable
               as Map<String, MediaAnnotation>,
@@ -447,31 +451,32 @@ class _$_FullProfile extends _FullProfile {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_FullProfile &&
-            const DeepCollectionEquality()
-                .equals(other.ownerPandoraId, ownerPandoraId) &&
-            const DeepCollectionEquality()
-                .equals(other.ownerListenerId, ownerListenerId) &&
-            const DeepCollectionEquality()
-                .equals(other.isPremiumUser, isPremiumUser) &&
-            const DeepCollectionEquality()
-                .equals(other.isOwnProfile, isOwnProfile) &&
-            const DeepCollectionEquality()
-                .equals(other.isFollowing, isFollowing) &&
-            const DeepCollectionEquality().equals(other.isPrivate, isPrivate) &&
-            const DeepCollectionEquality()
-                .equals(other.thumbCount, thumbCount) &&
-            const DeepCollectionEquality()
-                .equals(other.playlistCount, playlistCount) &&
-            const DeepCollectionEquality()
-                .equals(other.stationCount, stationCount) &&
-            const DeepCollectionEquality()
-                .equals(other.followerCount, followerCount) &&
-            const DeepCollectionEquality()
-                .equals(other.followingCount, followingCount) &&
-            const DeepCollectionEquality()
-                .equals(other.recentFavoritesCount, recentFavoritesCount) &&
-            const DeepCollectionEquality()
-                .equals(other.topArtistsCount, topArtistsCount) &&
+            (identical(other.ownerPandoraId, ownerPandoraId) ||
+                other.ownerPandoraId == ownerPandoraId) &&
+            (identical(other.ownerListenerId, ownerListenerId) ||
+                other.ownerListenerId == ownerListenerId) &&
+            (identical(other.isPremiumUser, isPremiumUser) ||
+                other.isPremiumUser == isPremiumUser) &&
+            (identical(other.isOwnProfile, isOwnProfile) ||
+                other.isOwnProfile == isOwnProfile) &&
+            (identical(other.isFollowing, isFollowing) ||
+                other.isFollowing == isFollowing) &&
+            (identical(other.isPrivate, isPrivate) ||
+                other.isPrivate == isPrivate) &&
+            (identical(other.thumbCount, thumbCount) ||
+                other.thumbCount == thumbCount) &&
+            (identical(other.playlistCount, playlistCount) ||
+                other.playlistCount == playlistCount) &&
+            (identical(other.stationCount, stationCount) ||
+                other.stationCount == stationCount) &&
+            (identical(other.followerCount, followerCount) ||
+                other.followerCount == followerCount) &&
+            (identical(other.followingCount, followingCount) ||
+                other.followingCount == followingCount) &&
+            (identical(other.recentFavoritesCount, recentFavoritesCount) ||
+                other.recentFavoritesCount == recentFavoritesCount) &&
+            (identical(other.topArtistsCount, topArtistsCount) ||
+                other.topArtistsCount == topArtistsCount) &&
             const DeepCollectionEquality().equals(
                 other._recentFavoritePandoraIds, _recentFavoritePandoraIds) &&
             const DeepCollectionEquality()
@@ -486,19 +491,19 @@ class _$_FullProfile extends _FullProfile {
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(ownerPandoraId),
-      const DeepCollectionEquality().hash(ownerListenerId),
-      const DeepCollectionEquality().hash(isPremiumUser),
-      const DeepCollectionEquality().hash(isOwnProfile),
-      const DeepCollectionEquality().hash(isFollowing),
-      const DeepCollectionEquality().hash(isPrivate),
-      const DeepCollectionEquality().hash(thumbCount),
-      const DeepCollectionEquality().hash(playlistCount),
-      const DeepCollectionEquality().hash(stationCount),
-      const DeepCollectionEquality().hash(followerCount),
-      const DeepCollectionEquality().hash(followingCount),
-      const DeepCollectionEquality().hash(recentFavoritesCount),
-      const DeepCollectionEquality().hash(topArtistsCount),
+      ownerPandoraId,
+      ownerListenerId,
+      isPremiumUser,
+      isOwnProfile,
+      isFollowing,
+      isPrivate,
+      thumbCount,
+      playlistCount,
+      stationCount,
+      followerCount,
+      followingCount,
+      recentFavoritesCount,
+      topArtistsCount,
       const DeepCollectionEquality().hash(_recentFavoritePandoraIds),
       const DeepCollectionEquality().hash(_topArtistPandoraIds),
       const DeepCollectionEquality().hash(_playlistPandoraIds),
@@ -506,6 +511,7 @@ class _$_FullProfile extends _FullProfile {
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_FullProfileCopyWith<_$_FullProfile> get copyWith =>
       __$$_FullProfileCopyWithImpl<_$_FullProfile>(this, _$identity);
 

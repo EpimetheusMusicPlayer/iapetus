@@ -49,7 +49,8 @@ mixin _$CollectionItem {
 abstract class $CollectionItemCopyWith<$Res> {
   factory $CollectionItemCopyWith(
           CollectionItem value, $Res Function(CollectionItem) then) =
-      _$CollectionItemCopyWithImpl<$Res>;
+      _$CollectionItemCopyWithImpl<$Res, CollectionItem>;
+  @useResult
   $Res call(
       {@JsonKey(name: 'pandoraId')
           String pandoraId,
@@ -66,49 +67,51 @@ abstract class $CollectionItemCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$CollectionItemCopyWithImpl<$Res>
+class _$CollectionItemCopyWithImpl<$Res, $Val extends CollectionItem>
     implements $CollectionItemCopyWith<$Res> {
   _$CollectionItemCopyWithImpl(this._value, this._then);
 
-  final CollectionItem _value;
   // ignore: unused_field
-  final $Res Function(CollectionItem) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? pandoraId = freezed,
-    Object? pandoraType = freezed,
-    Object? addedTime = freezed,
-    Object? updatedTime = freezed,
+    Object? pandoraId = null,
+    Object? pandoraType = null,
+    Object? addedTime = null,
+    Object? updatedTime = null,
     Object? ownerId = freezed,
     Object? ownerPandoraId = freezed,
   }) {
     return _then(_value.copyWith(
-      pandoraId: pandoraId == freezed
+      pandoraId: null == pandoraId
           ? _value.pandoraId
           : pandoraId // ignore: cast_nullable_to_non_nullable
               as String,
-      pandoraType: pandoraType == freezed
+      pandoraType: null == pandoraType
           ? _value.pandoraType
           : pandoraType // ignore: cast_nullable_to_non_nullable
               as PandoraType,
-      addedTime: addedTime == freezed
+      addedTime: null == addedTime
           ? _value.addedTime
           : addedTime // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      updatedTime: updatedTime == freezed
+      updatedTime: null == updatedTime
           ? _value.updatedTime
           : updatedTime // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      ownerId: ownerId == freezed
+      ownerId: freezed == ownerId
           ? _value.ownerId
           : ownerId // ignore: cast_nullable_to_non_nullable
               as int?,
-      ownerPandoraId: ownerPandoraId == freezed
+      ownerPandoraId: freezed == ownerPandoraId
           ? _value.ownerPandoraId
           : ownerPandoraId // ignore: cast_nullable_to_non_nullable
               as String?,
-    ));
+    ) as $Val);
   }
 }
 
@@ -119,6 +122,7 @@ abstract class _$$_CollectionItemCopyWith<$Res>
           _$_CollectionItem value, $Res Function(_$_CollectionItem) then) =
       __$$_CollectionItemCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(name: 'pandoraId')
           String pandoraId,
@@ -136,46 +140,44 @@ abstract class _$$_CollectionItemCopyWith<$Res>
 
 /// @nodoc
 class __$$_CollectionItemCopyWithImpl<$Res>
-    extends _$CollectionItemCopyWithImpl<$Res>
+    extends _$CollectionItemCopyWithImpl<$Res, _$_CollectionItem>
     implements _$$_CollectionItemCopyWith<$Res> {
   __$$_CollectionItemCopyWithImpl(
       _$_CollectionItem _value, $Res Function(_$_CollectionItem) _then)
-      : super(_value, (v) => _then(v as _$_CollectionItem));
+      : super(_value, _then);
 
-  @override
-  _$_CollectionItem get _value => super._value as _$_CollectionItem;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? pandoraId = freezed,
-    Object? pandoraType = freezed,
-    Object? addedTime = freezed,
-    Object? updatedTime = freezed,
+    Object? pandoraId = null,
+    Object? pandoraType = null,
+    Object? addedTime = null,
+    Object? updatedTime = null,
     Object? ownerId = freezed,
     Object? ownerPandoraId = freezed,
   }) {
     return _then(_$_CollectionItem(
-      pandoraId: pandoraId == freezed
+      pandoraId: null == pandoraId
           ? _value.pandoraId
           : pandoraId // ignore: cast_nullable_to_non_nullable
               as String,
-      pandoraType: pandoraType == freezed
+      pandoraType: null == pandoraType
           ? _value.pandoraType
           : pandoraType // ignore: cast_nullable_to_non_nullable
               as PandoraType,
-      addedTime: addedTime == freezed
+      addedTime: null == addedTime
           ? _value.addedTime
           : addedTime // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      updatedTime: updatedTime == freezed
+      updatedTime: null == updatedTime
           ? _value.updatedTime
           : updatedTime // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      ownerId: ownerId == freezed
+      ownerId: freezed == ownerId
           ? _value.ownerId
           : ownerId // ignore: cast_nullable_to_non_nullable
               as int?,
-      ownerPandoraId: ownerPandoraId == freezed
+      ownerPandoraId: freezed == ownerPandoraId
           ? _value.ownerPandoraId
           : ownerPandoraId // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -238,30 +240,27 @@ class _$_CollectionItem implements _CollectionItem {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_CollectionItem &&
-            const DeepCollectionEquality().equals(other.pandoraId, pandoraId) &&
-            const DeepCollectionEquality()
-                .equals(other.pandoraType, pandoraType) &&
-            const DeepCollectionEquality().equals(other.addedTime, addedTime) &&
-            const DeepCollectionEquality()
-                .equals(other.updatedTime, updatedTime) &&
-            const DeepCollectionEquality().equals(other.ownerId, ownerId) &&
-            const DeepCollectionEquality()
-                .equals(other.ownerPandoraId, ownerPandoraId));
+            (identical(other.pandoraId, pandoraId) ||
+                other.pandoraId == pandoraId) &&
+            (identical(other.pandoraType, pandoraType) ||
+                other.pandoraType == pandoraType) &&
+            (identical(other.addedTime, addedTime) ||
+                other.addedTime == addedTime) &&
+            (identical(other.updatedTime, updatedTime) ||
+                other.updatedTime == updatedTime) &&
+            (identical(other.ownerId, ownerId) || other.ownerId == ownerId) &&
+            (identical(other.ownerPandoraId, ownerPandoraId) ||
+                other.ownerPandoraId == ownerPandoraId));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(pandoraId),
-      const DeepCollectionEquality().hash(pandoraType),
-      const DeepCollectionEquality().hash(addedTime),
-      const DeepCollectionEquality().hash(updatedTime),
-      const DeepCollectionEquality().hash(ownerId),
-      const DeepCollectionEquality().hash(ownerPandoraId));
+  int get hashCode => Object.hash(runtimeType, pandoraId, pandoraType,
+      addedTime, updatedTime, ownerId, ownerPandoraId);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_CollectionItemCopyWith<_$_CollectionItem> get copyWith =>
       __$$_CollectionItemCopyWithImpl<_$_CollectionItem>(this, _$identity);
 

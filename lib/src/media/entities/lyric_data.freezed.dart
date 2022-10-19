@@ -37,7 +37,8 @@ mixin _$MediaLyricData {
 abstract class $MediaLyricDataCopyWith<$Res> {
   factory $MediaLyricDataCopyWith(
           MediaLyricData value, $Res Function(MediaLyricData) then) =
-      _$MediaLyricDataCopyWithImpl<$Res>;
+      _$MediaLyricDataCopyWithImpl<$Res, MediaLyricData>;
+  @useResult
   $Res call(
       {@JsonKey(name: 'lyricId') String lyricId,
       @JsonKey(name: 'lyricSnippet') String lyricSnippetHtml,
@@ -45,34 +46,36 @@ abstract class $MediaLyricDataCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$MediaLyricDataCopyWithImpl<$Res>
+class _$MediaLyricDataCopyWithImpl<$Res, $Val extends MediaLyricData>
     implements $MediaLyricDataCopyWith<$Res> {
   _$MediaLyricDataCopyWithImpl(this._value, this._then);
 
-  final MediaLyricData _value;
   // ignore: unused_field
-  final $Res Function(MediaLyricData) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? lyricId = freezed,
-    Object? lyricSnippetHtml = freezed,
-    Object? lyricCreditsHtml = freezed,
+    Object? lyricId = null,
+    Object? lyricSnippetHtml = null,
+    Object? lyricCreditsHtml = null,
   }) {
     return _then(_value.copyWith(
-      lyricId: lyricId == freezed
+      lyricId: null == lyricId
           ? _value.lyricId
           : lyricId // ignore: cast_nullable_to_non_nullable
               as String,
-      lyricSnippetHtml: lyricSnippetHtml == freezed
+      lyricSnippetHtml: null == lyricSnippetHtml
           ? _value.lyricSnippetHtml
           : lyricSnippetHtml // ignore: cast_nullable_to_non_nullable
               as String,
-      lyricCreditsHtml: lyricCreditsHtml == freezed
+      lyricCreditsHtml: null == lyricCreditsHtml
           ? _value.lyricCreditsHtml
           : lyricCreditsHtml // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -83,6 +86,7 @@ abstract class _$$_IapetusMediaLyricDataCopyWith<$Res>
           $Res Function(_$_IapetusMediaLyricData) then) =
       __$$_IapetusMediaLyricDataCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(name: 'lyricId') String lyricId,
       @JsonKey(name: 'lyricSnippet') String lyricSnippetHtml,
@@ -91,32 +95,29 @@ abstract class _$$_IapetusMediaLyricDataCopyWith<$Res>
 
 /// @nodoc
 class __$$_IapetusMediaLyricDataCopyWithImpl<$Res>
-    extends _$MediaLyricDataCopyWithImpl<$Res>
+    extends _$MediaLyricDataCopyWithImpl<$Res, _$_IapetusMediaLyricData>
     implements _$$_IapetusMediaLyricDataCopyWith<$Res> {
   __$$_IapetusMediaLyricDataCopyWithImpl(_$_IapetusMediaLyricData _value,
       $Res Function(_$_IapetusMediaLyricData) _then)
-      : super(_value, (v) => _then(v as _$_IapetusMediaLyricData));
+      : super(_value, _then);
 
-  @override
-  _$_IapetusMediaLyricData get _value =>
-      super._value as _$_IapetusMediaLyricData;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? lyricId = freezed,
-    Object? lyricSnippetHtml = freezed,
-    Object? lyricCreditsHtml = freezed,
+    Object? lyricId = null,
+    Object? lyricSnippetHtml = null,
+    Object? lyricCreditsHtml = null,
   }) {
     return _then(_$_IapetusMediaLyricData(
-      lyricId: lyricId == freezed
+      lyricId: null == lyricId
           ? _value.lyricId
           : lyricId // ignore: cast_nullable_to_non_nullable
               as String,
-      lyricSnippetHtml: lyricSnippetHtml == freezed
+      lyricSnippetHtml: null == lyricSnippetHtml
           ? _value.lyricSnippetHtml
           : lyricSnippetHtml // ignore: cast_nullable_to_non_nullable
               as String,
-      lyricCreditsHtml: lyricCreditsHtml == freezed
+      lyricCreditsHtml: null == lyricCreditsHtml
           ? _value.lyricCreditsHtml
           : lyricCreditsHtml // ignore: cast_nullable_to_non_nullable
               as String,
@@ -155,23 +156,21 @@ class _$_IapetusMediaLyricData implements _IapetusMediaLyricData {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_IapetusMediaLyricData &&
-            const DeepCollectionEquality().equals(other.lyricId, lyricId) &&
-            const DeepCollectionEquality()
-                .equals(other.lyricSnippetHtml, lyricSnippetHtml) &&
-            const DeepCollectionEquality()
-                .equals(other.lyricCreditsHtml, lyricCreditsHtml));
+            (identical(other.lyricId, lyricId) || other.lyricId == lyricId) &&
+            (identical(other.lyricSnippetHtml, lyricSnippetHtml) ||
+                other.lyricSnippetHtml == lyricSnippetHtml) &&
+            (identical(other.lyricCreditsHtml, lyricCreditsHtml) ||
+                other.lyricCreditsHtml == lyricCreditsHtml));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(lyricId),
-      const DeepCollectionEquality().hash(lyricSnippetHtml),
-      const DeepCollectionEquality().hash(lyricCreditsHtml));
+  int get hashCode =>
+      Object.hash(runtimeType, lyricId, lyricSnippetHtml, lyricCreditsHtml);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_IapetusMediaLyricDataCopyWith<_$_IapetusMediaLyricData> get copyWith =>
       __$$_IapetusMediaLyricDataCopyWithImpl<_$_IapetusMediaLyricData>(
           this, _$identity);

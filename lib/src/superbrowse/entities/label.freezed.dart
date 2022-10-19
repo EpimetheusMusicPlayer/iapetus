@@ -45,7 +45,8 @@ mixin _$SuperbrowseLabel {
 abstract class $SuperbrowseLabelCopyWith<$Res> {
   factory $SuperbrowseLabelCopyWith(
           SuperbrowseLabel value, $Res Function(SuperbrowseLabel) then) =
-      _$SuperbrowseLabelCopyWithImpl<$Res>;
+      _$SuperbrowseLabelCopyWithImpl<$Res, SuperbrowseLabel>;
+  @useResult
   $Res call(
       {@JsonKey(name: 'text')
           String text,
@@ -64,54 +65,56 @@ abstract class $SuperbrowseLabelCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$SuperbrowseLabelCopyWithImpl<$Res>
+class _$SuperbrowseLabelCopyWithImpl<$Res, $Val extends SuperbrowseLabel>
     implements $SuperbrowseLabelCopyWith<$Res> {
   _$SuperbrowseLabelCopyWithImpl(this._value, this._then);
 
-  final SuperbrowseLabel _value;
   // ignore: unused_field
-  final $Res Function(SuperbrowseLabel) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? text = freezed,
-    Object? style = freezed,
+    Object? text = null,
+    Object? style = null,
     Object? alignment = freezed,
     Object? maxLines = freezed,
-    Object? bold = freezed,
-    Object? italic = freezed,
-    Object? underlined = freezed,
+    Object? bold = null,
+    Object? italic = null,
+    Object? underlined = null,
   }) {
     return _then(_value.copyWith(
-      text: text == freezed
+      text: null == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
               as String,
-      style: style == freezed
+      style: null == style
           ? _value.style
           : style // ignore: cast_nullable_to_non_nullable
               as LabelStyle,
-      alignment: alignment == freezed
+      alignment: freezed == alignment
           ? _value.alignment
           : alignment // ignore: cast_nullable_to_non_nullable
               as TextAlignment?,
-      maxLines: maxLines == freezed
+      maxLines: freezed == maxLines
           ? _value.maxLines
           : maxLines // ignore: cast_nullable_to_non_nullable
               as int?,
-      bold: bold == freezed
+      bold: null == bold
           ? _value.bold
           : bold // ignore: cast_nullable_to_non_nullable
               as bool,
-      italic: italic == freezed
+      italic: null == italic
           ? _value.italic
           : italic // ignore: cast_nullable_to_non_nullable
               as bool,
-      underlined: underlined == freezed
+      underlined: null == underlined
           ? _value.underlined
           : underlined // ignore: cast_nullable_to_non_nullable
               as bool,
-    ));
+    ) as $Val);
   }
 }
 
@@ -122,6 +125,7 @@ abstract class _$$_SuperbrowseLabelCopyWith<$Res>
           _$_SuperbrowseLabel value, $Res Function(_$_SuperbrowseLabel) then) =
       __$$_SuperbrowseLabelCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(name: 'text')
           String text,
@@ -141,51 +145,49 @@ abstract class _$$_SuperbrowseLabelCopyWith<$Res>
 
 /// @nodoc
 class __$$_SuperbrowseLabelCopyWithImpl<$Res>
-    extends _$SuperbrowseLabelCopyWithImpl<$Res>
+    extends _$SuperbrowseLabelCopyWithImpl<$Res, _$_SuperbrowseLabel>
     implements _$$_SuperbrowseLabelCopyWith<$Res> {
   __$$_SuperbrowseLabelCopyWithImpl(
       _$_SuperbrowseLabel _value, $Res Function(_$_SuperbrowseLabel) _then)
-      : super(_value, (v) => _then(v as _$_SuperbrowseLabel));
+      : super(_value, _then);
 
-  @override
-  _$_SuperbrowseLabel get _value => super._value as _$_SuperbrowseLabel;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? text = freezed,
-    Object? style = freezed,
+    Object? text = null,
+    Object? style = null,
     Object? alignment = freezed,
     Object? maxLines = freezed,
-    Object? bold = freezed,
-    Object? italic = freezed,
-    Object? underlined = freezed,
+    Object? bold = null,
+    Object? italic = null,
+    Object? underlined = null,
   }) {
     return _then(_$_SuperbrowseLabel(
-      text: text == freezed
+      text: null == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
               as String,
-      style: style == freezed
+      style: null == style
           ? _value.style
           : style // ignore: cast_nullable_to_non_nullable
               as LabelStyle,
-      alignment: alignment == freezed
+      alignment: freezed == alignment
           ? _value.alignment
           : alignment // ignore: cast_nullable_to_non_nullable
               as TextAlignment?,
-      maxLines: maxLines == freezed
+      maxLines: freezed == maxLines
           ? _value.maxLines
           : maxLines // ignore: cast_nullable_to_non_nullable
               as int?,
-      bold: bold == freezed
+      bold: null == bold
           ? _value.bold
           : bold // ignore: cast_nullable_to_non_nullable
               as bool,
-      italic: italic == freezed
+      italic: null == italic
           ? _value.italic
           : italic // ignore: cast_nullable_to_non_nullable
               as bool,
-      underlined: underlined == freezed
+      underlined: null == underlined
           ? _value.underlined
           : underlined // ignore: cast_nullable_to_non_nullable
               as bool,
@@ -247,30 +249,26 @@ class _$_SuperbrowseLabel implements _SuperbrowseLabel {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_SuperbrowseLabel &&
-            const DeepCollectionEquality().equals(other.text, text) &&
-            const DeepCollectionEquality().equals(other.style, style) &&
-            const DeepCollectionEquality().equals(other.alignment, alignment) &&
-            const DeepCollectionEquality().equals(other.maxLines, maxLines) &&
-            const DeepCollectionEquality().equals(other.bold, bold) &&
-            const DeepCollectionEquality().equals(other.italic, italic) &&
-            const DeepCollectionEquality()
-                .equals(other.underlined, underlined));
+            (identical(other.text, text) || other.text == text) &&
+            (identical(other.style, style) || other.style == style) &&
+            (identical(other.alignment, alignment) ||
+                other.alignment == alignment) &&
+            (identical(other.maxLines, maxLines) ||
+                other.maxLines == maxLines) &&
+            (identical(other.bold, bold) || other.bold == bold) &&
+            (identical(other.italic, italic) || other.italic == italic) &&
+            (identical(other.underlined, underlined) ||
+                other.underlined == underlined));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(text),
-      const DeepCollectionEquality().hash(style),
-      const DeepCollectionEquality().hash(alignment),
-      const DeepCollectionEquality().hash(maxLines),
-      const DeepCollectionEquality().hash(bold),
-      const DeepCollectionEquality().hash(italic),
-      const DeepCollectionEquality().hash(underlined));
+      runtimeType, text, style, alignment, maxLines, bold, italic, underlined);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_SuperbrowseLabelCopyWith<_$_SuperbrowseLabel> get copyWith =>
       __$$_SuperbrowseLabelCopyWithImpl<_$_SuperbrowseLabel>(this, _$identity);
 

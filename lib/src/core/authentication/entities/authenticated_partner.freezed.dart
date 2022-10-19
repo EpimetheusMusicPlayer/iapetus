@@ -43,7 +43,8 @@ mixin _$AuthenticatedPartner {
 abstract class $AuthenticatedPartnerCopyWith<$Res> {
   factory $AuthenticatedPartnerCopyWith(AuthenticatedPartner value,
           $Res Function(AuthenticatedPartner) then) =
-      _$AuthenticatedPartnerCopyWithImpl<$Res>;
+      _$AuthenticatedPartnerCopyWithImpl<$Res, AuthenticatedPartner>;
+  @useResult
   $Res call(
       {@JsonKey(name: 'syncTime', fromJson: decryptSyncTime, toJson: encryptSyncTime)
           DateTime syncTime,
@@ -60,49 +61,52 @@ abstract class $AuthenticatedPartnerCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$AuthenticatedPartnerCopyWithImpl<$Res>
+class _$AuthenticatedPartnerCopyWithImpl<$Res,
+        $Val extends AuthenticatedPartner>
     implements $AuthenticatedPartnerCopyWith<$Res> {
   _$AuthenticatedPartnerCopyWithImpl(this._value, this._then);
 
-  final AuthenticatedPartner _value;
   // ignore: unused_field
-  final $Res Function(AuthenticatedPartner) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? syncTime = freezed,
-    Object? partnerAuthToken = freezed,
-    Object? partnerId = freezed,
-    Object? stationSkipUnit = freezed,
-    Object? stationSkipLimit = freezed,
-    Object? urls = freezed,
+    Object? syncTime = null,
+    Object? partnerAuthToken = null,
+    Object? partnerId = null,
+    Object? stationSkipUnit = null,
+    Object? stationSkipLimit = null,
+    Object? urls = null,
   }) {
     return _then(_value.copyWith(
-      syncTime: syncTime == freezed
+      syncTime: null == syncTime
           ? _value.syncTime
           : syncTime // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      partnerAuthToken: partnerAuthToken == freezed
+      partnerAuthToken: null == partnerAuthToken
           ? _value.partnerAuthToken
           : partnerAuthToken // ignore: cast_nullable_to_non_nullable
               as String,
-      partnerId: partnerId == freezed
+      partnerId: null == partnerId
           ? _value.partnerId
           : partnerId // ignore: cast_nullable_to_non_nullable
               as String,
-      stationSkipUnit: stationSkipUnit == freezed
+      stationSkipUnit: null == stationSkipUnit
           ? _value.stationSkipUnit
           : stationSkipUnit // ignore: cast_nullable_to_non_nullable
               as String,
-      stationSkipLimit: stationSkipLimit == freezed
+      stationSkipLimit: null == stationSkipLimit
           ? _value.stationSkipLimit
           : stationSkipLimit // ignore: cast_nullable_to_non_nullable
               as int,
-      urls: urls == freezed
+      urls: null == urls
           ? _value.urls
           : urls // ignore: cast_nullable_to_non_nullable
               as Map<String, Uri>,
-    ));
+    ) as $Val);
   }
 }
 
@@ -113,6 +117,7 @@ abstract class _$$_AuthenticatedPartnerCopyWith<$Res>
           $Res Function(_$_AuthenticatedPartner) then) =
       __$$_AuthenticatedPartnerCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(name: 'syncTime', fromJson: decryptSyncTime, toJson: encryptSyncTime)
           DateTime syncTime,
@@ -130,46 +135,44 @@ abstract class _$$_AuthenticatedPartnerCopyWith<$Res>
 
 /// @nodoc
 class __$$_AuthenticatedPartnerCopyWithImpl<$Res>
-    extends _$AuthenticatedPartnerCopyWithImpl<$Res>
+    extends _$AuthenticatedPartnerCopyWithImpl<$Res, _$_AuthenticatedPartner>
     implements _$$_AuthenticatedPartnerCopyWith<$Res> {
   __$$_AuthenticatedPartnerCopyWithImpl(_$_AuthenticatedPartner _value,
       $Res Function(_$_AuthenticatedPartner) _then)
-      : super(_value, (v) => _then(v as _$_AuthenticatedPartner));
+      : super(_value, _then);
 
-  @override
-  _$_AuthenticatedPartner get _value => super._value as _$_AuthenticatedPartner;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? syncTime = freezed,
-    Object? partnerAuthToken = freezed,
-    Object? partnerId = freezed,
-    Object? stationSkipUnit = freezed,
-    Object? stationSkipLimit = freezed,
-    Object? urls = freezed,
+    Object? syncTime = null,
+    Object? partnerAuthToken = null,
+    Object? partnerId = null,
+    Object? stationSkipUnit = null,
+    Object? stationSkipLimit = null,
+    Object? urls = null,
   }) {
     return _then(_$_AuthenticatedPartner(
-      syncTime: syncTime == freezed
+      syncTime: null == syncTime
           ? _value.syncTime
           : syncTime // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      partnerAuthToken: partnerAuthToken == freezed
+      partnerAuthToken: null == partnerAuthToken
           ? _value.partnerAuthToken
           : partnerAuthToken // ignore: cast_nullable_to_non_nullable
               as String,
-      partnerId: partnerId == freezed
+      partnerId: null == partnerId
           ? _value.partnerId
           : partnerId // ignore: cast_nullable_to_non_nullable
               as String,
-      stationSkipUnit: stationSkipUnit == freezed
+      stationSkipUnit: null == stationSkipUnit
           ? _value.stationSkipUnit
           : stationSkipUnit // ignore: cast_nullable_to_non_nullable
               as String,
-      stationSkipLimit: stationSkipLimit == freezed
+      stationSkipLimit: null == stationSkipLimit
           ? _value.stationSkipLimit
           : stationSkipLimit // ignore: cast_nullable_to_non_nullable
               as int,
-      urls: urls == freezed
+      urls: null == urls
           ? _value._urls
           : urls // ignore: cast_nullable_to_non_nullable
               as Map<String, Uri>,
@@ -232,14 +235,16 @@ class _$_AuthenticatedPartner extends _AuthenticatedPartner {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_AuthenticatedPartner &&
-            const DeepCollectionEquality().equals(other.syncTime, syncTime) &&
-            const DeepCollectionEquality()
-                .equals(other.partnerAuthToken, partnerAuthToken) &&
-            const DeepCollectionEquality().equals(other.partnerId, partnerId) &&
-            const DeepCollectionEquality()
-                .equals(other.stationSkipUnit, stationSkipUnit) &&
-            const DeepCollectionEquality()
-                .equals(other.stationSkipLimit, stationSkipLimit) &&
+            (identical(other.syncTime, syncTime) ||
+                other.syncTime == syncTime) &&
+            (identical(other.partnerAuthToken, partnerAuthToken) ||
+                other.partnerAuthToken == partnerAuthToken) &&
+            (identical(other.partnerId, partnerId) ||
+                other.partnerId == partnerId) &&
+            (identical(other.stationSkipUnit, stationSkipUnit) ||
+                other.stationSkipUnit == stationSkipUnit) &&
+            (identical(other.stationSkipLimit, stationSkipLimit) ||
+                other.stationSkipLimit == stationSkipLimit) &&
             const DeepCollectionEquality().equals(other._urls, _urls));
   }
 
@@ -247,15 +252,16 @@ class _$_AuthenticatedPartner extends _AuthenticatedPartner {
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(syncTime),
-      const DeepCollectionEquality().hash(partnerAuthToken),
-      const DeepCollectionEquality().hash(partnerId),
-      const DeepCollectionEquality().hash(stationSkipUnit),
-      const DeepCollectionEquality().hash(stationSkipLimit),
+      syncTime,
+      partnerAuthToken,
+      partnerId,
+      stationSkipUnit,
+      stationSkipLimit,
       const DeepCollectionEquality().hash(_urls));
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_AuthenticatedPartnerCopyWith<_$_AuthenticatedPartner> get copyWith =>
       __$$_AuthenticatedPartnerCopyWithImpl<_$_AuthenticatedPartner>(
           this, _$identity);

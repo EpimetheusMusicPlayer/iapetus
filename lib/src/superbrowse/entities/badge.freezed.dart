@@ -35,35 +35,38 @@ mixin _$SuperbrowseBadge {
 abstract class $SuperbrowseBadgeCopyWith<$Res> {
   factory $SuperbrowseBadgeCopyWith(
           SuperbrowseBadge value, $Res Function(SuperbrowseBadge) then) =
-      _$SuperbrowseBadgeCopyWithImpl<$Res>;
+      _$SuperbrowseBadgeCopyWithImpl<$Res, SuperbrowseBadge>;
+  @useResult
   $Res call(
       {@JsonValue('type') BadgeType type, @JsonKey(name: 'data') String? data});
 }
 
 /// @nodoc
-class _$SuperbrowseBadgeCopyWithImpl<$Res>
+class _$SuperbrowseBadgeCopyWithImpl<$Res, $Val extends SuperbrowseBadge>
     implements $SuperbrowseBadgeCopyWith<$Res> {
   _$SuperbrowseBadgeCopyWithImpl(this._value, this._then);
 
-  final SuperbrowseBadge _value;
   // ignore: unused_field
-  final $Res Function(SuperbrowseBadge) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? type = freezed,
+    Object? type = null,
     Object? data = freezed,
   }) {
     return _then(_value.copyWith(
-      type: type == freezed
+      type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as BadgeType,
-      data: data == freezed
+      data: freezed == data
           ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
               as String?,
-    ));
+    ) as $Val);
   }
 }
 
@@ -74,32 +77,31 @@ abstract class _$$_SuperbrowseBadgeCopyWith<$Res>
           _$_SuperbrowseBadge value, $Res Function(_$_SuperbrowseBadge) then) =
       __$$_SuperbrowseBadgeCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonValue('type') BadgeType type, @JsonKey(name: 'data') String? data});
 }
 
 /// @nodoc
 class __$$_SuperbrowseBadgeCopyWithImpl<$Res>
-    extends _$SuperbrowseBadgeCopyWithImpl<$Res>
+    extends _$SuperbrowseBadgeCopyWithImpl<$Res, _$_SuperbrowseBadge>
     implements _$$_SuperbrowseBadgeCopyWith<$Res> {
   __$$_SuperbrowseBadgeCopyWithImpl(
       _$_SuperbrowseBadge _value, $Res Function(_$_SuperbrowseBadge) _then)
-      : super(_value, (v) => _then(v as _$_SuperbrowseBadge));
+      : super(_value, _then);
 
-  @override
-  _$_SuperbrowseBadge get _value => super._value as _$_SuperbrowseBadge;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? type = freezed,
+    Object? type = null,
     Object? data = freezed,
   }) {
     return _then(_$_SuperbrowseBadge(
-      type: type == freezed
+      type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as BadgeType,
-      data: data == freezed
+      data: freezed == data
           ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -134,19 +136,17 @@ class _$_SuperbrowseBadge implements _SuperbrowseBadge {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_SuperbrowseBadge &&
-            const DeepCollectionEquality().equals(other.type, type) &&
-            const DeepCollectionEquality().equals(other.data, data));
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.data, data) || other.data == data));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(type),
-      const DeepCollectionEquality().hash(data));
+  int get hashCode => Object.hash(runtimeType, type, data);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_SuperbrowseBadgeCopyWith<_$_SuperbrowseBadge> get copyWith =>
       __$$_SuperbrowseBadgeCopyWithImpl<_$_SuperbrowseBadge>(this, _$identity);
 

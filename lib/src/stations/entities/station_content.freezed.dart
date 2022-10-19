@@ -131,7 +131,8 @@ mixin _$StationContent {
 abstract class $StationContentCopyWith<$Res> {
   factory $StationContentCopyWith(
           StationContent value, $Res Function(StationContent) then) =
-      _$StationContentCopyWithImpl<$Res>;
+      _$StationContentCopyWithImpl<$Res, StationContent>;
+  @useResult
   $Res call(
       {@JsonKey(name: 'userSeed')
           String? userSeed,
@@ -232,265 +233,268 @@ abstract class $StationContentCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$StationContentCopyWithImpl<$Res>
+class _$StationContentCopyWithImpl<$Res, $Val extends StationContent>
     implements $StationContentCopyWith<$Res> {
   _$StationContentCopyWithImpl(this._value, this._then);
 
-  final StationContent _value;
   // ignore: unused_field
-  final $Res Function(StationContent) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? userSeed = freezed,
-    Object? allowBookmarkTrack = freezed,
-    Object? albumExplorerUrl = freezed,
-    Object? albumArtUrl = freezed,
-    Object? artistDetailUrl = freezed,
-    Object? artistExplorerUrl = freezed,
-    Object? songDetailUrl = freezed,
-    Object? trackType = freezed,
+    Object? allowBookmarkTrack = null,
+    Object? albumExplorerUrl = null,
+    Object? albumArtUrl = null,
+    Object? artistDetailUrl = null,
+    Object? artistExplorerUrl = null,
+    Object? songDetailUrl = null,
+    Object? trackType = null,
     Object? nowPlayingStationAdUrl = freezed,
-    Object? allowStartStationFromTrack = freezed,
+    Object? allowStartStationFromTrack = null,
     Object? nowPlayingStationAdTargeting = freezed,
     Object? nowPlayingStationPremiumAdTargeting = freezed,
-    Object? allowShareTrack = freezed,
-    Object? pandoraType = freezed,
-    Object? songIdentity = freezed,
+    Object? allowShareTrack = null,
+    Object? pandoraType = null,
+    Object? songIdentity = null,
     Object? nowPlayingStationPremiumAdUrl = freezed,
-    Object? allowFeedback = freezed,
-    Object? musicId = freezed,
-    Object? categoryDescriptor = freezed,
-    Object? isFeatured = freezed,
-    Object? disableTrackDetail = freezed,
-    Object? songName = freezed,
-    Object? allowTiredOfTrack = freezed,
-    Object? programDescriptor = freezed,
-    Object? artistName = freezed,
-    Object? trackLength = freezed,
-    Object? trackToken = freezed,
-    Object? allowBuyTrack = freezed,
-    Object? albumDetailUrl = freezed,
-    Object? audioUrlMap = freezed,
-    Object? albumIdentity = freezed,
-    Object? trackGain = freezed,
-    Object? albumName = freezed,
-    Object? amazonAlbumUrl = freezed,
-    Object? shareLandingUrl = freezed,
-    Object? songExplorerUrl = freezed,
+    Object? allowFeedback = null,
+    Object? musicId = null,
+    Object? categoryDescriptor = null,
+    Object? isFeatured = null,
+    Object? disableTrackDetail = null,
+    Object? songName = null,
+    Object? allowTiredOfTrack = null,
+    Object? programDescriptor = null,
+    Object? artistName = null,
+    Object? trackLength = null,
+    Object? trackToken = null,
+    Object? allowBuyTrack = null,
+    Object? albumDetailUrl = null,
+    Object? audioUrlMap = null,
+    Object? albumIdentity = null,
+    Object? trackGain = null,
+    Object? albumName = null,
+    Object? amazonAlbumUrl = null,
+    Object? shareLandingUrl = null,
+    Object? songExplorerUrl = null,
     Object? nowPlayingStationPremiumAdUnit = freezed,
-    Object? songRating = freezed,
+    Object? songRating = null,
     Object? trackKey = freezed,
     Object? nowPlayingStationAdUnit = freezed,
-    Object? requestedModeId = freezed,
-    Object? stationId = freezed,
-    Object? pandoraId = freezed,
-    Object? allowSkipTrackWithoutLimit = freezed,
-    Object? itunesSongUrl = freezed,
-    Object? disableSkipButton = freezed,
-    Object? modeId = freezed,
+    Object? requestedModeId = null,
+    Object? stationId = null,
+    Object? pandoraId = null,
+    Object? allowSkipTrackWithoutLimit = null,
+    Object? itunesSongUrl = null,
+    Object? disableSkipButton = null,
+    Object? modeId = null,
   }) {
     return _then(_value.copyWith(
-      userSeed: userSeed == freezed
+      userSeed: freezed == userSeed
           ? _value.userSeed
           : userSeed // ignore: cast_nullable_to_non_nullable
               as String?,
-      allowBookmarkTrack: allowBookmarkTrack == freezed
+      allowBookmarkTrack: null == allowBookmarkTrack
           ? _value.allowBookmarkTrack
           : allowBookmarkTrack // ignore: cast_nullable_to_non_nullable
               as bool,
-      albumExplorerUrl: albumExplorerUrl == freezed
+      albumExplorerUrl: null == albumExplorerUrl
           ? _value.albumExplorerUrl
           : albumExplorerUrl // ignore: cast_nullable_to_non_nullable
               as Uri,
-      albumArtUrl: albumArtUrl == freezed
+      albumArtUrl: null == albumArtUrl
           ? _value.albumArtUrl
           : albumArtUrl // ignore: cast_nullable_to_non_nullable
               as Uri,
-      artistDetailUrl: artistDetailUrl == freezed
+      artistDetailUrl: null == artistDetailUrl
           ? _value.artistDetailUrl
           : artistDetailUrl // ignore: cast_nullable_to_non_nullable
               as Uri,
-      artistExplorerUrl: artistExplorerUrl == freezed
+      artistExplorerUrl: null == artistExplorerUrl
           ? _value.artistExplorerUrl
           : artistExplorerUrl // ignore: cast_nullable_to_non_nullable
               as Uri,
-      songDetailUrl: songDetailUrl == freezed
+      songDetailUrl: null == songDetailUrl
           ? _value.songDetailUrl
           : songDetailUrl // ignore: cast_nullable_to_non_nullable
               as Uri,
-      trackType: trackType == freezed
+      trackType: null == trackType
           ? _value.trackType
           : trackType // ignore: cast_nullable_to_non_nullable
               as TrackType,
-      nowPlayingStationAdUrl: nowPlayingStationAdUrl == freezed
+      nowPlayingStationAdUrl: freezed == nowPlayingStationAdUrl
           ? _value.nowPlayingStationAdUrl
           : nowPlayingStationAdUrl // ignore: cast_nullable_to_non_nullable
               as Uri?,
-      allowStartStationFromTrack: allowStartStationFromTrack == freezed
+      allowStartStationFromTrack: null == allowStartStationFromTrack
           ? _value.allowStartStationFromTrack
           : allowStartStationFromTrack // ignore: cast_nullable_to_non_nullable
               as bool,
-      nowPlayingStationAdTargeting: nowPlayingStationAdTargeting == freezed
+      nowPlayingStationAdTargeting: freezed == nowPlayingStationAdTargeting
           ? _value.nowPlayingStationAdTargeting
           : nowPlayingStationAdTargeting // ignore: cast_nullable_to_non_nullable
               as String?,
-      nowPlayingStationPremiumAdTargeting: nowPlayingStationPremiumAdTargeting ==
-              freezed
+      nowPlayingStationPremiumAdTargeting: freezed ==
+              nowPlayingStationPremiumAdTargeting
           ? _value.nowPlayingStationPremiumAdTargeting
           : nowPlayingStationPremiumAdTargeting // ignore: cast_nullable_to_non_nullable
               as String?,
-      allowShareTrack: allowShareTrack == freezed
+      allowShareTrack: null == allowShareTrack
           ? _value.allowShareTrack
           : allowShareTrack // ignore: cast_nullable_to_non_nullable
               as bool,
-      pandoraType: pandoraType == freezed
+      pandoraType: null == pandoraType
           ? _value.pandoraType
           : pandoraType // ignore: cast_nullable_to_non_nullable
               as PandoraType,
-      songIdentity: songIdentity == freezed
+      songIdentity: null == songIdentity
           ? _value.songIdentity
           : songIdentity // ignore: cast_nullable_to_non_nullable
               as String,
-      nowPlayingStationPremiumAdUrl: nowPlayingStationPremiumAdUrl == freezed
+      nowPlayingStationPremiumAdUrl: freezed == nowPlayingStationPremiumAdUrl
           ? _value.nowPlayingStationPremiumAdUrl
           : nowPlayingStationPremiumAdUrl // ignore: cast_nullable_to_non_nullable
               as Uri?,
-      allowFeedback: allowFeedback == freezed
+      allowFeedback: null == allowFeedback
           ? _value.allowFeedback
           : allowFeedback // ignore: cast_nullable_to_non_nullable
               as bool,
-      musicId: musicId == freezed
+      musicId: null == musicId
           ? _value.musicId
           : musicId // ignore: cast_nullable_to_non_nullable
               as String,
-      categoryDescriptor: categoryDescriptor == freezed
+      categoryDescriptor: null == categoryDescriptor
           ? _value.categoryDescriptor
           : categoryDescriptor // ignore: cast_nullable_to_non_nullable
               as String,
-      isFeatured: isFeatured == freezed
+      isFeatured: null == isFeatured
           ? _value.isFeatured
           : isFeatured // ignore: cast_nullable_to_non_nullable
               as bool,
-      disableTrackDetail: disableTrackDetail == freezed
+      disableTrackDetail: null == disableTrackDetail
           ? _value.disableTrackDetail
           : disableTrackDetail // ignore: cast_nullable_to_non_nullable
               as bool,
-      songName: songName == freezed
+      songName: null == songName
           ? _value.songName
           : songName // ignore: cast_nullable_to_non_nullable
               as String,
-      allowTiredOfTrack: allowTiredOfTrack == freezed
+      allowTiredOfTrack: null == allowTiredOfTrack
           ? _value.allowTiredOfTrack
           : allowTiredOfTrack // ignore: cast_nullable_to_non_nullable
               as bool,
-      programDescriptor: programDescriptor == freezed
+      programDescriptor: null == programDescriptor
           ? _value.programDescriptor
           : programDescriptor // ignore: cast_nullable_to_non_nullable
               as String,
-      artistName: artistName == freezed
+      artistName: null == artistName
           ? _value.artistName
           : artistName // ignore: cast_nullable_to_non_nullable
               as String,
-      trackLength: trackLength == freezed
+      trackLength: null == trackLength
           ? _value.trackLength
           : trackLength // ignore: cast_nullable_to_non_nullable
               as Duration,
-      trackToken: trackToken == freezed
+      trackToken: null == trackToken
           ? _value.trackToken
           : trackToken // ignore: cast_nullable_to_non_nullable
               as String,
-      allowBuyTrack: allowBuyTrack == freezed
+      allowBuyTrack: null == allowBuyTrack
           ? _value.allowBuyTrack
           : allowBuyTrack // ignore: cast_nullable_to_non_nullable
               as bool,
-      albumDetailUrl: albumDetailUrl == freezed
+      albumDetailUrl: null == albumDetailUrl
           ? _value.albumDetailUrl
           : albumDetailUrl // ignore: cast_nullable_to_non_nullable
               as Uri,
-      audioUrlMap: audioUrlMap == freezed
+      audioUrlMap: null == audioUrlMap
           ? _value.audioUrlMap
           : audioUrlMap // ignore: cast_nullable_to_non_nullable
               as Map<AudioUrlQuality, AudioUrlData>,
-      albumIdentity: albumIdentity == freezed
+      albumIdentity: null == albumIdentity
           ? _value.albumIdentity
           : albumIdentity // ignore: cast_nullable_to_non_nullable
               as String,
-      trackGain: trackGain == freezed
+      trackGain: null == trackGain
           ? _value.trackGain
           : trackGain // ignore: cast_nullable_to_non_nullable
               as num,
-      albumName: albumName == freezed
+      albumName: null == albumName
           ? _value.albumName
           : albumName // ignore: cast_nullable_to_non_nullable
               as String,
-      amazonAlbumUrl: amazonAlbumUrl == freezed
+      amazonAlbumUrl: null == amazonAlbumUrl
           ? _value.amazonAlbumUrl
           : amazonAlbumUrl // ignore: cast_nullable_to_non_nullable
               as Uri,
-      shareLandingUrl: shareLandingUrl == freezed
+      shareLandingUrl: null == shareLandingUrl
           ? _value.shareLandingUrl
           : shareLandingUrl // ignore: cast_nullable_to_non_nullable
               as Uri,
-      songExplorerUrl: songExplorerUrl == freezed
+      songExplorerUrl: null == songExplorerUrl
           ? _value.songExplorerUrl
           : songExplorerUrl // ignore: cast_nullable_to_non_nullable
               as Uri,
-      nowPlayingStationPremiumAdUnit: nowPlayingStationPremiumAdUnit == freezed
+      nowPlayingStationPremiumAdUnit: freezed == nowPlayingStationPremiumAdUnit
           ? _value.nowPlayingStationPremiumAdUnit
           : nowPlayingStationPremiumAdUnit // ignore: cast_nullable_to_non_nullable
               as String?,
-      songRating: songRating == freezed
+      songRating: null == songRating
           ? _value.songRating
           : songRating // ignore: cast_nullable_to_non_nullable
               as MediaRating,
-      trackKey: trackKey == freezed
+      trackKey: freezed == trackKey
           ? _value.trackKey
           : trackKey // ignore: cast_nullable_to_non_nullable
               as TrackKey?,
-      nowPlayingStationAdUnit: nowPlayingStationAdUnit == freezed
+      nowPlayingStationAdUnit: freezed == nowPlayingStationAdUnit
           ? _value.nowPlayingStationAdUnit
           : nowPlayingStationAdUnit // ignore: cast_nullable_to_non_nullable
               as String?,
-      requestedModeId: requestedModeId == freezed
+      requestedModeId: null == requestedModeId
           ? _value.requestedModeId
           : requestedModeId // ignore: cast_nullable_to_non_nullable
               as int,
-      stationId: stationId == freezed
+      stationId: null == stationId
           ? _value.stationId
           : stationId // ignore: cast_nullable_to_non_nullable
               as String,
-      pandoraId: pandoraId == freezed
+      pandoraId: null == pandoraId
           ? _value.pandoraId
           : pandoraId // ignore: cast_nullable_to_non_nullable
               as String,
-      allowSkipTrackWithoutLimit: allowSkipTrackWithoutLimit == freezed
+      allowSkipTrackWithoutLimit: null == allowSkipTrackWithoutLimit
           ? _value.allowSkipTrackWithoutLimit
           : allowSkipTrackWithoutLimit // ignore: cast_nullable_to_non_nullable
               as bool,
-      itunesSongUrl: itunesSongUrl == freezed
+      itunesSongUrl: null == itunesSongUrl
           ? _value.itunesSongUrl
           : itunesSongUrl // ignore: cast_nullable_to_non_nullable
               as Uri,
-      disableSkipButton: disableSkipButton == freezed
+      disableSkipButton: null == disableSkipButton
           ? _value.disableSkipButton
           : disableSkipButton // ignore: cast_nullable_to_non_nullable
               as bool,
-      modeId: modeId == freezed
+      modeId: null == modeId
           ? _value.modeId
           : modeId // ignore: cast_nullable_to_non_nullable
               as int,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $TrackKeyCopyWith<$Res>? get trackKey {
     if (_value.trackKey == null) {
       return null;
     }
 
     return $TrackKeyCopyWith<$Res>(_value.trackKey!, (value) {
-      return _then(_value.copyWith(trackKey: value));
+      return _then(_value.copyWith(trackKey: value) as $Val);
     });
   }
 }
@@ -502,6 +506,7 @@ abstract class _$$_StationContentCopyWith<$Res>
           _$_StationContent value, $Res Function(_$_StationContent) then) =
       __$$_StationContentCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(name: 'userSeed')
           String? userSeed,
@@ -604,252 +609,250 @@ abstract class _$$_StationContentCopyWith<$Res>
 
 /// @nodoc
 class __$$_StationContentCopyWithImpl<$Res>
-    extends _$StationContentCopyWithImpl<$Res>
+    extends _$StationContentCopyWithImpl<$Res, _$_StationContent>
     implements _$$_StationContentCopyWith<$Res> {
   __$$_StationContentCopyWithImpl(
       _$_StationContent _value, $Res Function(_$_StationContent) _then)
-      : super(_value, (v) => _then(v as _$_StationContent));
+      : super(_value, _then);
 
-  @override
-  _$_StationContent get _value => super._value as _$_StationContent;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? userSeed = freezed,
-    Object? allowBookmarkTrack = freezed,
-    Object? albumExplorerUrl = freezed,
-    Object? albumArtUrl = freezed,
-    Object? artistDetailUrl = freezed,
-    Object? artistExplorerUrl = freezed,
-    Object? songDetailUrl = freezed,
-    Object? trackType = freezed,
+    Object? allowBookmarkTrack = null,
+    Object? albumExplorerUrl = null,
+    Object? albumArtUrl = null,
+    Object? artistDetailUrl = null,
+    Object? artistExplorerUrl = null,
+    Object? songDetailUrl = null,
+    Object? trackType = null,
     Object? nowPlayingStationAdUrl = freezed,
-    Object? allowStartStationFromTrack = freezed,
+    Object? allowStartStationFromTrack = null,
     Object? nowPlayingStationAdTargeting = freezed,
     Object? nowPlayingStationPremiumAdTargeting = freezed,
-    Object? allowShareTrack = freezed,
-    Object? pandoraType = freezed,
-    Object? songIdentity = freezed,
+    Object? allowShareTrack = null,
+    Object? pandoraType = null,
+    Object? songIdentity = null,
     Object? nowPlayingStationPremiumAdUrl = freezed,
-    Object? allowFeedback = freezed,
-    Object? musicId = freezed,
-    Object? categoryDescriptor = freezed,
-    Object? isFeatured = freezed,
-    Object? disableTrackDetail = freezed,
-    Object? songName = freezed,
-    Object? allowTiredOfTrack = freezed,
-    Object? programDescriptor = freezed,
-    Object? artistName = freezed,
-    Object? trackLength = freezed,
-    Object? trackToken = freezed,
-    Object? allowBuyTrack = freezed,
-    Object? albumDetailUrl = freezed,
-    Object? audioUrlMap = freezed,
-    Object? albumIdentity = freezed,
-    Object? trackGain = freezed,
-    Object? albumName = freezed,
-    Object? amazonAlbumUrl = freezed,
-    Object? shareLandingUrl = freezed,
-    Object? songExplorerUrl = freezed,
+    Object? allowFeedback = null,
+    Object? musicId = null,
+    Object? categoryDescriptor = null,
+    Object? isFeatured = null,
+    Object? disableTrackDetail = null,
+    Object? songName = null,
+    Object? allowTiredOfTrack = null,
+    Object? programDescriptor = null,
+    Object? artistName = null,
+    Object? trackLength = null,
+    Object? trackToken = null,
+    Object? allowBuyTrack = null,
+    Object? albumDetailUrl = null,
+    Object? audioUrlMap = null,
+    Object? albumIdentity = null,
+    Object? trackGain = null,
+    Object? albumName = null,
+    Object? amazonAlbumUrl = null,
+    Object? shareLandingUrl = null,
+    Object? songExplorerUrl = null,
     Object? nowPlayingStationPremiumAdUnit = freezed,
-    Object? songRating = freezed,
+    Object? songRating = null,
     Object? trackKey = freezed,
     Object? nowPlayingStationAdUnit = freezed,
-    Object? requestedModeId = freezed,
-    Object? stationId = freezed,
-    Object? pandoraId = freezed,
-    Object? allowSkipTrackWithoutLimit = freezed,
-    Object? itunesSongUrl = freezed,
-    Object? disableSkipButton = freezed,
-    Object? modeId = freezed,
+    Object? requestedModeId = null,
+    Object? stationId = null,
+    Object? pandoraId = null,
+    Object? allowSkipTrackWithoutLimit = null,
+    Object? itunesSongUrl = null,
+    Object? disableSkipButton = null,
+    Object? modeId = null,
   }) {
     return _then(_$_StationContent(
-      userSeed: userSeed == freezed
+      userSeed: freezed == userSeed
           ? _value.userSeed
           : userSeed // ignore: cast_nullable_to_non_nullable
               as String?,
-      allowBookmarkTrack: allowBookmarkTrack == freezed
+      allowBookmarkTrack: null == allowBookmarkTrack
           ? _value.allowBookmarkTrack
           : allowBookmarkTrack // ignore: cast_nullable_to_non_nullable
               as bool,
-      albumExplorerUrl: albumExplorerUrl == freezed
+      albumExplorerUrl: null == albumExplorerUrl
           ? _value.albumExplorerUrl
           : albumExplorerUrl // ignore: cast_nullable_to_non_nullable
               as Uri,
-      albumArtUrl: albumArtUrl == freezed
+      albumArtUrl: null == albumArtUrl
           ? _value.albumArtUrl
           : albumArtUrl // ignore: cast_nullable_to_non_nullable
               as Uri,
-      artistDetailUrl: artistDetailUrl == freezed
+      artistDetailUrl: null == artistDetailUrl
           ? _value.artistDetailUrl
           : artistDetailUrl // ignore: cast_nullable_to_non_nullable
               as Uri,
-      artistExplorerUrl: artistExplorerUrl == freezed
+      artistExplorerUrl: null == artistExplorerUrl
           ? _value.artistExplorerUrl
           : artistExplorerUrl // ignore: cast_nullable_to_non_nullable
               as Uri,
-      songDetailUrl: songDetailUrl == freezed
+      songDetailUrl: null == songDetailUrl
           ? _value.songDetailUrl
           : songDetailUrl // ignore: cast_nullable_to_non_nullable
               as Uri,
-      trackType: trackType == freezed
+      trackType: null == trackType
           ? _value.trackType
           : trackType // ignore: cast_nullable_to_non_nullable
               as TrackType,
-      nowPlayingStationAdUrl: nowPlayingStationAdUrl == freezed
+      nowPlayingStationAdUrl: freezed == nowPlayingStationAdUrl
           ? _value.nowPlayingStationAdUrl
           : nowPlayingStationAdUrl // ignore: cast_nullable_to_non_nullable
               as Uri?,
-      allowStartStationFromTrack: allowStartStationFromTrack == freezed
+      allowStartStationFromTrack: null == allowStartStationFromTrack
           ? _value.allowStartStationFromTrack
           : allowStartStationFromTrack // ignore: cast_nullable_to_non_nullable
               as bool,
-      nowPlayingStationAdTargeting: nowPlayingStationAdTargeting == freezed
+      nowPlayingStationAdTargeting: freezed == nowPlayingStationAdTargeting
           ? _value.nowPlayingStationAdTargeting
           : nowPlayingStationAdTargeting // ignore: cast_nullable_to_non_nullable
               as String?,
-      nowPlayingStationPremiumAdTargeting: nowPlayingStationPremiumAdTargeting ==
-              freezed
+      nowPlayingStationPremiumAdTargeting: freezed ==
+              nowPlayingStationPremiumAdTargeting
           ? _value.nowPlayingStationPremiumAdTargeting
           : nowPlayingStationPremiumAdTargeting // ignore: cast_nullable_to_non_nullable
               as String?,
-      allowShareTrack: allowShareTrack == freezed
+      allowShareTrack: null == allowShareTrack
           ? _value.allowShareTrack
           : allowShareTrack // ignore: cast_nullable_to_non_nullable
               as bool,
-      pandoraType: pandoraType == freezed
+      pandoraType: null == pandoraType
           ? _value.pandoraType
           : pandoraType // ignore: cast_nullable_to_non_nullable
               as PandoraType,
-      songIdentity: songIdentity == freezed
+      songIdentity: null == songIdentity
           ? _value.songIdentity
           : songIdentity // ignore: cast_nullable_to_non_nullable
               as String,
-      nowPlayingStationPremiumAdUrl: nowPlayingStationPremiumAdUrl == freezed
+      nowPlayingStationPremiumAdUrl: freezed == nowPlayingStationPremiumAdUrl
           ? _value.nowPlayingStationPremiumAdUrl
           : nowPlayingStationPremiumAdUrl // ignore: cast_nullable_to_non_nullable
               as Uri?,
-      allowFeedback: allowFeedback == freezed
+      allowFeedback: null == allowFeedback
           ? _value.allowFeedback
           : allowFeedback // ignore: cast_nullable_to_non_nullable
               as bool,
-      musicId: musicId == freezed
+      musicId: null == musicId
           ? _value.musicId
           : musicId // ignore: cast_nullable_to_non_nullable
               as String,
-      categoryDescriptor: categoryDescriptor == freezed
+      categoryDescriptor: null == categoryDescriptor
           ? _value.categoryDescriptor
           : categoryDescriptor // ignore: cast_nullable_to_non_nullable
               as String,
-      isFeatured: isFeatured == freezed
+      isFeatured: null == isFeatured
           ? _value.isFeatured
           : isFeatured // ignore: cast_nullable_to_non_nullable
               as bool,
-      disableTrackDetail: disableTrackDetail == freezed
+      disableTrackDetail: null == disableTrackDetail
           ? _value.disableTrackDetail
           : disableTrackDetail // ignore: cast_nullable_to_non_nullable
               as bool,
-      songName: songName == freezed
+      songName: null == songName
           ? _value.songName
           : songName // ignore: cast_nullable_to_non_nullable
               as String,
-      allowTiredOfTrack: allowTiredOfTrack == freezed
+      allowTiredOfTrack: null == allowTiredOfTrack
           ? _value.allowTiredOfTrack
           : allowTiredOfTrack // ignore: cast_nullable_to_non_nullable
               as bool,
-      programDescriptor: programDescriptor == freezed
+      programDescriptor: null == programDescriptor
           ? _value.programDescriptor
           : programDescriptor // ignore: cast_nullable_to_non_nullable
               as String,
-      artistName: artistName == freezed
+      artistName: null == artistName
           ? _value.artistName
           : artistName // ignore: cast_nullable_to_non_nullable
               as String,
-      trackLength: trackLength == freezed
+      trackLength: null == trackLength
           ? _value.trackLength
           : trackLength // ignore: cast_nullable_to_non_nullable
               as Duration,
-      trackToken: trackToken == freezed
+      trackToken: null == trackToken
           ? _value.trackToken
           : trackToken // ignore: cast_nullable_to_non_nullable
               as String,
-      allowBuyTrack: allowBuyTrack == freezed
+      allowBuyTrack: null == allowBuyTrack
           ? _value.allowBuyTrack
           : allowBuyTrack // ignore: cast_nullable_to_non_nullable
               as bool,
-      albumDetailUrl: albumDetailUrl == freezed
+      albumDetailUrl: null == albumDetailUrl
           ? _value.albumDetailUrl
           : albumDetailUrl // ignore: cast_nullable_to_non_nullable
               as Uri,
-      audioUrlMap: audioUrlMap == freezed
+      audioUrlMap: null == audioUrlMap
           ? _value._audioUrlMap
           : audioUrlMap // ignore: cast_nullable_to_non_nullable
               as Map<AudioUrlQuality, AudioUrlData>,
-      albumIdentity: albumIdentity == freezed
+      albumIdentity: null == albumIdentity
           ? _value.albumIdentity
           : albumIdentity // ignore: cast_nullable_to_non_nullable
               as String,
-      trackGain: trackGain == freezed
+      trackGain: null == trackGain
           ? _value.trackGain
           : trackGain // ignore: cast_nullable_to_non_nullable
               as num,
-      albumName: albumName == freezed
+      albumName: null == albumName
           ? _value.albumName
           : albumName // ignore: cast_nullable_to_non_nullable
               as String,
-      amazonAlbumUrl: amazonAlbumUrl == freezed
+      amazonAlbumUrl: null == amazonAlbumUrl
           ? _value.amazonAlbumUrl
           : amazonAlbumUrl // ignore: cast_nullable_to_non_nullable
               as Uri,
-      shareLandingUrl: shareLandingUrl == freezed
+      shareLandingUrl: null == shareLandingUrl
           ? _value.shareLandingUrl
           : shareLandingUrl // ignore: cast_nullable_to_non_nullable
               as Uri,
-      songExplorerUrl: songExplorerUrl == freezed
+      songExplorerUrl: null == songExplorerUrl
           ? _value.songExplorerUrl
           : songExplorerUrl // ignore: cast_nullable_to_non_nullable
               as Uri,
-      nowPlayingStationPremiumAdUnit: nowPlayingStationPremiumAdUnit == freezed
+      nowPlayingStationPremiumAdUnit: freezed == nowPlayingStationPremiumAdUnit
           ? _value.nowPlayingStationPremiumAdUnit
           : nowPlayingStationPremiumAdUnit // ignore: cast_nullable_to_non_nullable
               as String?,
-      songRating: songRating == freezed
+      songRating: null == songRating
           ? _value.songRating
           : songRating // ignore: cast_nullable_to_non_nullable
               as MediaRating,
-      trackKey: trackKey == freezed
+      trackKey: freezed == trackKey
           ? _value.trackKey
           : trackKey // ignore: cast_nullable_to_non_nullable
               as TrackKey?,
-      nowPlayingStationAdUnit: nowPlayingStationAdUnit == freezed
+      nowPlayingStationAdUnit: freezed == nowPlayingStationAdUnit
           ? _value.nowPlayingStationAdUnit
           : nowPlayingStationAdUnit // ignore: cast_nullable_to_non_nullable
               as String?,
-      requestedModeId: requestedModeId == freezed
+      requestedModeId: null == requestedModeId
           ? _value.requestedModeId
           : requestedModeId // ignore: cast_nullable_to_non_nullable
               as int,
-      stationId: stationId == freezed
+      stationId: null == stationId
           ? _value.stationId
           : stationId // ignore: cast_nullable_to_non_nullable
               as String,
-      pandoraId: pandoraId == freezed
+      pandoraId: null == pandoraId
           ? _value.pandoraId
           : pandoraId // ignore: cast_nullable_to_non_nullable
               as String,
-      allowSkipTrackWithoutLimit: allowSkipTrackWithoutLimit == freezed
+      allowSkipTrackWithoutLimit: null == allowSkipTrackWithoutLimit
           ? _value.allowSkipTrackWithoutLimit
           : allowSkipTrackWithoutLimit // ignore: cast_nullable_to_non_nullable
               as bool,
-      itunesSongUrl: itunesSongUrl == freezed
+      itunesSongUrl: null == itunesSongUrl
           ? _value.itunesSongUrl
           : itunesSongUrl // ignore: cast_nullable_to_non_nullable
               as Uri,
-      disableSkipButton: disableSkipButton == freezed
+      disableSkipButton: null == disableSkipButton
           ? _value.disableSkipButton
           : disableSkipButton // ignore: cast_nullable_to_non_nullable
               as bool,
-      modeId: modeId == freezed
+      modeId: null == modeId
           ? _value.modeId
           : modeId // ignore: cast_nullable_to_non_nullable
               as int,
@@ -1120,152 +1123,141 @@ class _$_StationContent extends _StationContent {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_StationContent &&
-            const DeepCollectionEquality().equals(other.userSeed, userSeed) &&
-            const DeepCollectionEquality()
-                .equals(other.allowBookmarkTrack, allowBookmarkTrack) &&
-            const DeepCollectionEquality()
-                .equals(other.albumExplorerUrl, albumExplorerUrl) &&
-            const DeepCollectionEquality()
-                .equals(other.albumArtUrl, albumArtUrl) &&
-            const DeepCollectionEquality()
-                .equals(other.artistDetailUrl, artistDetailUrl) &&
-            const DeepCollectionEquality()
-                .equals(other.artistExplorerUrl, artistExplorerUrl) &&
-            const DeepCollectionEquality()
-                .equals(other.songDetailUrl, songDetailUrl) &&
-            const DeepCollectionEquality().equals(other.trackType, trackType) &&
-            const DeepCollectionEquality()
-                .equals(other.nowPlayingStationAdUrl, nowPlayingStationAdUrl) &&
-            const DeepCollectionEquality().equals(
-                other.allowStartStationFromTrack, allowStartStationFromTrack) &&
-            const DeepCollectionEquality().equals(
-                other.nowPlayingStationAdTargeting,
-                nowPlayingStationAdTargeting) &&
-            const DeepCollectionEquality().equals(
-                other.nowPlayingStationPremiumAdTargeting,
-                nowPlayingStationPremiumAdTargeting) &&
-            const DeepCollectionEquality()
-                .equals(other.allowShareTrack, allowShareTrack) &&
-            const DeepCollectionEquality()
-                .equals(other.pandoraType, pandoraType) &&
-            const DeepCollectionEquality()
-                .equals(other.songIdentity, songIdentity) &&
-            const DeepCollectionEquality().equals(
-                other.nowPlayingStationPremiumAdUrl,
-                nowPlayingStationPremiumAdUrl) &&
-            const DeepCollectionEquality()
-                .equals(other.allowFeedback, allowFeedback) &&
-            const DeepCollectionEquality().equals(other.musicId, musicId) &&
-            const DeepCollectionEquality()
-                .equals(other.categoryDescriptor, categoryDescriptor) &&
-            const DeepCollectionEquality()
-                .equals(other.isFeatured, isFeatured) &&
-            const DeepCollectionEquality()
-                .equals(other.disableTrackDetail, disableTrackDetail) &&
-            const DeepCollectionEquality().equals(other.songName, songName) &&
-            const DeepCollectionEquality()
-                .equals(other.allowTiredOfTrack, allowTiredOfTrack) &&
-            const DeepCollectionEquality()
-                .equals(other.programDescriptor, programDescriptor) &&
-            const DeepCollectionEquality()
-                .equals(other.artistName, artistName) &&
-            const DeepCollectionEquality()
-                .equals(other.trackLength, trackLength) &&
-            const DeepCollectionEquality()
-                .equals(other.trackToken, trackToken) &&
-            const DeepCollectionEquality()
-                .equals(other.allowBuyTrack, allowBuyTrack) &&
-            const DeepCollectionEquality()
-                .equals(other.albumDetailUrl, albumDetailUrl) &&
-            const DeepCollectionEquality()
-                .equals(other._audioUrlMap, _audioUrlMap) &&
-            const DeepCollectionEquality()
-                .equals(other.albumIdentity, albumIdentity) &&
-            const DeepCollectionEquality().equals(other.trackGain, trackGain) &&
-            const DeepCollectionEquality().equals(other.albumName, albumName) &&
-            const DeepCollectionEquality()
-                .equals(other.amazonAlbumUrl, amazonAlbumUrl) &&
-            const DeepCollectionEquality()
-                .equals(other.shareLandingUrl, shareLandingUrl) &&
-            const DeepCollectionEquality()
-                .equals(other.songExplorerUrl, songExplorerUrl) &&
-            const DeepCollectionEquality().equals(
-                other.nowPlayingStationPremiumAdUnit,
-                nowPlayingStationPremiumAdUnit) &&
-            const DeepCollectionEquality()
-                .equals(other.songRating, songRating) &&
-            const DeepCollectionEquality().equals(other.trackKey, trackKey) &&
-            const DeepCollectionEquality().equals(
-                other.nowPlayingStationAdUnit, nowPlayingStationAdUnit) &&
-            const DeepCollectionEquality()
-                .equals(other.requestedModeId, requestedModeId) &&
-            const DeepCollectionEquality().equals(other.stationId, stationId) &&
-            const DeepCollectionEquality().equals(other.pandoraId, pandoraId) &&
-            const DeepCollectionEquality().equals(
-                other.allowSkipTrackWithoutLimit, allowSkipTrackWithoutLimit) &&
-            const DeepCollectionEquality()
-                .equals(other.itunesSongUrl, itunesSongUrl) &&
-            const DeepCollectionEquality()
-                .equals(other.disableSkipButton, disableSkipButton) &&
-            const DeepCollectionEquality().equals(other.modeId, modeId));
+            (identical(other.userSeed, userSeed) ||
+                other.userSeed == userSeed) &&
+            (identical(other.allowBookmarkTrack, allowBookmarkTrack) ||
+                other.allowBookmarkTrack == allowBookmarkTrack) &&
+            (identical(other.albumExplorerUrl, albumExplorerUrl) ||
+                other.albumExplorerUrl == albumExplorerUrl) &&
+            (identical(other.albumArtUrl, albumArtUrl) ||
+                other.albumArtUrl == albumArtUrl) &&
+            (identical(other.artistDetailUrl, artistDetailUrl) ||
+                other.artistDetailUrl == artistDetailUrl) &&
+            (identical(other.artistExplorerUrl, artistExplorerUrl) ||
+                other.artistExplorerUrl == artistExplorerUrl) &&
+            (identical(other.songDetailUrl, songDetailUrl) ||
+                other.songDetailUrl == songDetailUrl) &&
+            (identical(other.trackType, trackType) ||
+                other.trackType == trackType) &&
+            (identical(other.nowPlayingStationAdUrl, nowPlayingStationAdUrl) ||
+                other.nowPlayingStationAdUrl == nowPlayingStationAdUrl) &&
+            (identical(other.allowStartStationFromTrack, allowStartStationFromTrack) ||
+                other.allowStartStationFromTrack ==
+                    allowStartStationFromTrack) &&
+            (identical(other.nowPlayingStationAdTargeting, nowPlayingStationAdTargeting) ||
+                other.nowPlayingStationAdTargeting ==
+                    nowPlayingStationAdTargeting) &&
+            (identical(other.nowPlayingStationPremiumAdTargeting, nowPlayingStationPremiumAdTargeting) ||
+                other.nowPlayingStationPremiumAdTargeting ==
+                    nowPlayingStationPremiumAdTargeting) &&
+            (identical(other.allowShareTrack, allowShareTrack) ||
+                other.allowShareTrack == allowShareTrack) &&
+            (identical(other.pandoraType, pandoraType) ||
+                other.pandoraType == pandoraType) &&
+            (identical(other.songIdentity, songIdentity) ||
+                other.songIdentity == songIdentity) &&
+            (identical(other.nowPlayingStationPremiumAdUrl, nowPlayingStationPremiumAdUrl) ||
+                other.nowPlayingStationPremiumAdUrl ==
+                    nowPlayingStationPremiumAdUrl) &&
+            (identical(other.allowFeedback, allowFeedback) ||
+                other.allowFeedback == allowFeedback) &&
+            (identical(other.musicId, musicId) || other.musicId == musicId) &&
+            (identical(other.categoryDescriptor, categoryDescriptor) ||
+                other.categoryDescriptor == categoryDescriptor) &&
+            (identical(other.isFeatured, isFeatured) ||
+                other.isFeatured == isFeatured) &&
+            (identical(other.disableTrackDetail, disableTrackDetail) ||
+                other.disableTrackDetail == disableTrackDetail) &&
+            (identical(other.songName, songName) ||
+                other.songName == songName) &&
+            (identical(other.allowTiredOfTrack, allowTiredOfTrack) ||
+                other.allowTiredOfTrack == allowTiredOfTrack) &&
+            (identical(other.programDescriptor, programDescriptor) ||
+                other.programDescriptor == programDescriptor) &&
+            (identical(other.artistName, artistName) ||
+                other.artistName == artistName) &&
+            (identical(other.trackLength, trackLength) ||
+                other.trackLength == trackLength) &&
+            (identical(other.trackToken, trackToken) ||
+                other.trackToken == trackToken) &&
+            (identical(other.allowBuyTrack, allowBuyTrack) || other.allowBuyTrack == allowBuyTrack) &&
+            (identical(other.albumDetailUrl, albumDetailUrl) || other.albumDetailUrl == albumDetailUrl) &&
+            const DeepCollectionEquality().equals(other._audioUrlMap, _audioUrlMap) &&
+            (identical(other.albumIdentity, albumIdentity) || other.albumIdentity == albumIdentity) &&
+            (identical(other.trackGain, trackGain) || other.trackGain == trackGain) &&
+            (identical(other.albumName, albumName) || other.albumName == albumName) &&
+            (identical(other.amazonAlbumUrl, amazonAlbumUrl) || other.amazonAlbumUrl == amazonAlbumUrl) &&
+            (identical(other.shareLandingUrl, shareLandingUrl) || other.shareLandingUrl == shareLandingUrl) &&
+            (identical(other.songExplorerUrl, songExplorerUrl) || other.songExplorerUrl == songExplorerUrl) &&
+            (identical(other.nowPlayingStationPremiumAdUnit, nowPlayingStationPremiumAdUnit) || other.nowPlayingStationPremiumAdUnit == nowPlayingStationPremiumAdUnit) &&
+            (identical(other.songRating, songRating) || other.songRating == songRating) &&
+            (identical(other.trackKey, trackKey) || other.trackKey == trackKey) &&
+            (identical(other.nowPlayingStationAdUnit, nowPlayingStationAdUnit) || other.nowPlayingStationAdUnit == nowPlayingStationAdUnit) &&
+            (identical(other.requestedModeId, requestedModeId) || other.requestedModeId == requestedModeId) &&
+            (identical(other.stationId, stationId) || other.stationId == stationId) &&
+            (identical(other.pandoraId, pandoraId) || other.pandoraId == pandoraId) &&
+            (identical(other.allowSkipTrackWithoutLimit, allowSkipTrackWithoutLimit) || other.allowSkipTrackWithoutLimit == allowSkipTrackWithoutLimit) &&
+            (identical(other.itunesSongUrl, itunesSongUrl) || other.itunesSongUrl == itunesSongUrl) &&
+            (identical(other.disableSkipButton, disableSkipButton) || other.disableSkipButton == disableSkipButton) &&
+            (identical(other.modeId, modeId) || other.modeId == modeId));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
-        const DeepCollectionEquality().hash(userSeed),
-        const DeepCollectionEquality().hash(allowBookmarkTrack),
-        const DeepCollectionEquality().hash(albumExplorerUrl),
-        const DeepCollectionEquality().hash(albumArtUrl),
-        const DeepCollectionEquality().hash(artistDetailUrl),
-        const DeepCollectionEquality().hash(artistExplorerUrl),
-        const DeepCollectionEquality().hash(songDetailUrl),
-        const DeepCollectionEquality().hash(trackType),
-        const DeepCollectionEquality().hash(nowPlayingStationAdUrl),
-        const DeepCollectionEquality().hash(allowStartStationFromTrack),
-        const DeepCollectionEquality().hash(nowPlayingStationAdTargeting),
-        const DeepCollectionEquality()
-            .hash(nowPlayingStationPremiumAdTargeting),
-        const DeepCollectionEquality().hash(allowShareTrack),
-        const DeepCollectionEquality().hash(pandoraType),
-        const DeepCollectionEquality().hash(songIdentity),
-        const DeepCollectionEquality().hash(nowPlayingStationPremiumAdUrl),
-        const DeepCollectionEquality().hash(allowFeedback),
-        const DeepCollectionEquality().hash(musicId),
-        const DeepCollectionEquality().hash(categoryDescriptor),
-        const DeepCollectionEquality().hash(isFeatured),
-        const DeepCollectionEquality().hash(disableTrackDetail),
-        const DeepCollectionEquality().hash(songName),
-        const DeepCollectionEquality().hash(allowTiredOfTrack),
-        const DeepCollectionEquality().hash(programDescriptor),
-        const DeepCollectionEquality().hash(artistName),
-        const DeepCollectionEquality().hash(trackLength),
-        const DeepCollectionEquality().hash(trackToken),
-        const DeepCollectionEquality().hash(allowBuyTrack),
-        const DeepCollectionEquality().hash(albumDetailUrl),
+        userSeed,
+        allowBookmarkTrack,
+        albumExplorerUrl,
+        albumArtUrl,
+        artistDetailUrl,
+        artistExplorerUrl,
+        songDetailUrl,
+        trackType,
+        nowPlayingStationAdUrl,
+        allowStartStationFromTrack,
+        nowPlayingStationAdTargeting,
+        nowPlayingStationPremiumAdTargeting,
+        allowShareTrack,
+        pandoraType,
+        songIdentity,
+        nowPlayingStationPremiumAdUrl,
+        allowFeedback,
+        musicId,
+        categoryDescriptor,
+        isFeatured,
+        disableTrackDetail,
+        songName,
+        allowTiredOfTrack,
+        programDescriptor,
+        artistName,
+        trackLength,
+        trackToken,
+        allowBuyTrack,
+        albumDetailUrl,
         const DeepCollectionEquality().hash(_audioUrlMap),
-        const DeepCollectionEquality().hash(albumIdentity),
-        const DeepCollectionEquality().hash(trackGain),
-        const DeepCollectionEquality().hash(albumName),
-        const DeepCollectionEquality().hash(amazonAlbumUrl),
-        const DeepCollectionEquality().hash(shareLandingUrl),
-        const DeepCollectionEquality().hash(songExplorerUrl),
-        const DeepCollectionEquality().hash(nowPlayingStationPremiumAdUnit),
-        const DeepCollectionEquality().hash(songRating),
-        const DeepCollectionEquality().hash(trackKey),
-        const DeepCollectionEquality().hash(nowPlayingStationAdUnit),
-        const DeepCollectionEquality().hash(requestedModeId),
-        const DeepCollectionEquality().hash(stationId),
-        const DeepCollectionEquality().hash(pandoraId),
-        const DeepCollectionEquality().hash(allowSkipTrackWithoutLimit),
-        const DeepCollectionEquality().hash(itunesSongUrl),
-        const DeepCollectionEquality().hash(disableSkipButton),
-        const DeepCollectionEquality().hash(modeId)
+        albumIdentity,
+        trackGain,
+        albumName,
+        amazonAlbumUrl,
+        shareLandingUrl,
+        songExplorerUrl,
+        nowPlayingStationPremiumAdUnit,
+        songRating,
+        trackKey,
+        nowPlayingStationAdUnit,
+        requestedModeId,
+        stationId,
+        pandoraId,
+        allowSkipTrackWithoutLimit,
+        itunesSongUrl,
+        disableSkipButton,
+        modeId
       ]);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_StationContentCopyWith<_$_StationContent> get copyWith =>
       __$$_StationContentCopyWithImpl<_$_StationContent>(this, _$identity);
 

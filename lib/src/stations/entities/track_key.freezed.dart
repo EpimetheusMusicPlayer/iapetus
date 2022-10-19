@@ -38,7 +38,8 @@ mixin _$TrackKey {
 /// @nodoc
 abstract class $TrackKeyCopyWith<$Res> {
   factory $TrackKeyCopyWith(TrackKey value, $Res Function(TrackKey) then) =
-      _$TrackKeyCopyWithImpl<$Res>;
+      _$TrackKeyCopyWithImpl<$Res, TrackKey>;
+  @useResult
   $Res call(
       {@JsonKey(name: 'trackId') String trackId,
       @JsonKey(name: 'trackType') TrackType trackType,
@@ -47,38 +48,41 @@ abstract class $TrackKeyCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$TrackKeyCopyWithImpl<$Res> implements $TrackKeyCopyWith<$Res> {
+class _$TrackKeyCopyWithImpl<$Res, $Val extends TrackKey>
+    implements $TrackKeyCopyWith<$Res> {
   _$TrackKeyCopyWithImpl(this._value, this._then);
 
-  final TrackKey _value;
   // ignore: unused_field
-  final $Res Function(TrackKey) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? trackId = freezed,
-    Object? trackType = freezed,
-    Object? trackSubtype = freezed,
-    Object? spinId = freezed,
+    Object? trackId = null,
+    Object? trackType = null,
+    Object? trackSubtype = null,
+    Object? spinId = null,
   }) {
     return _then(_value.copyWith(
-      trackId: trackId == freezed
+      trackId: null == trackId
           ? _value.trackId
           : trackId // ignore: cast_nullable_to_non_nullable
               as String,
-      trackType: trackType == freezed
+      trackType: null == trackType
           ? _value.trackType
           : trackType // ignore: cast_nullable_to_non_nullable
               as TrackType,
-      trackSubtype: trackSubtype == freezed
+      trackSubtype: null == trackSubtype
           ? _value.trackSubtype
           : trackSubtype // ignore: cast_nullable_to_non_nullable
               as String,
-      spinId: spinId == freezed
+      spinId: null == spinId
           ? _value.spinId
           : spinId // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -88,6 +92,7 @@ abstract class _$$_TrackKeyCopyWith<$Res> implements $TrackKeyCopyWith<$Res> {
           _$_TrackKey value, $Res Function(_$_TrackKey) then) =
       __$$_TrackKeyCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(name: 'trackId') String trackId,
       @JsonKey(name: 'trackType') TrackType trackType,
@@ -96,36 +101,35 @@ abstract class _$$_TrackKeyCopyWith<$Res> implements $TrackKeyCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_TrackKeyCopyWithImpl<$Res> extends _$TrackKeyCopyWithImpl<$Res>
+class __$$_TrackKeyCopyWithImpl<$Res>
+    extends _$TrackKeyCopyWithImpl<$Res, _$_TrackKey>
     implements _$$_TrackKeyCopyWith<$Res> {
   __$$_TrackKeyCopyWithImpl(
       _$_TrackKey _value, $Res Function(_$_TrackKey) _then)
-      : super(_value, (v) => _then(v as _$_TrackKey));
+      : super(_value, _then);
 
-  @override
-  _$_TrackKey get _value => super._value as _$_TrackKey;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? trackId = freezed,
-    Object? trackType = freezed,
-    Object? trackSubtype = freezed,
-    Object? spinId = freezed,
+    Object? trackId = null,
+    Object? trackType = null,
+    Object? trackSubtype = null,
+    Object? spinId = null,
   }) {
     return _then(_$_TrackKey(
-      trackId: trackId == freezed
+      trackId: null == trackId
           ? _value.trackId
           : trackId // ignore: cast_nullable_to_non_nullable
               as String,
-      trackType: trackType == freezed
+      trackType: null == trackType
           ? _value.trackType
           : trackType // ignore: cast_nullable_to_non_nullable
               as TrackType,
-      trackSubtype: trackSubtype == freezed
+      trackSubtype: null == trackSubtype
           ? _value.trackSubtype
           : trackSubtype // ignore: cast_nullable_to_non_nullable
               as String,
-      spinId: spinId == freezed
+      spinId: null == spinId
           ? _value.spinId
           : spinId // ignore: cast_nullable_to_non_nullable
               as String,
@@ -168,24 +172,22 @@ class _$_TrackKey implements _TrackKey {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_TrackKey &&
-            const DeepCollectionEquality().equals(other.trackId, trackId) &&
-            const DeepCollectionEquality().equals(other.trackType, trackType) &&
-            const DeepCollectionEquality()
-                .equals(other.trackSubtype, trackSubtype) &&
-            const DeepCollectionEquality().equals(other.spinId, spinId));
+            (identical(other.trackId, trackId) || other.trackId == trackId) &&
+            (identical(other.trackType, trackType) ||
+                other.trackType == trackType) &&
+            (identical(other.trackSubtype, trackSubtype) ||
+                other.trackSubtype == trackSubtype) &&
+            (identical(other.spinId, spinId) || other.spinId == spinId));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(trackId),
-      const DeepCollectionEquality().hash(trackType),
-      const DeepCollectionEquality().hash(trackSubtype),
-      const DeepCollectionEquality().hash(spinId));
+  int get hashCode =>
+      Object.hash(runtimeType, trackId, trackType, trackSubtype, spinId);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_TrackKeyCopyWith<_$_TrackKey> get copyWith =>
       __$$_TrackKeyCopyWithImpl<_$_TrackKey>(this, _$identity);
 

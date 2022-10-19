@@ -42,7 +42,8 @@ mixin _$CollectionListSegment {
 abstract class $CollectionListSegmentCopyWith<$Res> {
   factory $CollectionListSegmentCopyWith(CollectionListSegment value,
           $Res Function(CollectionListSegment) then) =
-      _$CollectionListSegmentCopyWithImpl<$Res>;
+      _$CollectionListSegmentCopyWithImpl<$Res, CollectionListSegment>;
+  @useResult
   $Res call(
       {@JsonKey(name: 'listenerId') int listenerId,
       @JsonKey(name: 'cursor') String? cursor,
@@ -52,44 +53,47 @@ abstract class $CollectionListSegmentCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$CollectionListSegmentCopyWithImpl<$Res>
+class _$CollectionListSegmentCopyWithImpl<$Res,
+        $Val extends CollectionListSegment>
     implements $CollectionListSegmentCopyWith<$Res> {
   _$CollectionListSegmentCopyWithImpl(this._value, this._then);
 
-  final CollectionListSegment _value;
   // ignore: unused_field
-  final $Res Function(CollectionListSegment) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? listenerId = freezed,
+    Object? listenerId = null,
     Object? cursor = freezed,
-    Object? limit = freezed,
-    Object? version = freezed,
-    Object? items = freezed,
+    Object? limit = null,
+    Object? version = null,
+    Object? items = null,
   }) {
     return _then(_value.copyWith(
-      listenerId: listenerId == freezed
+      listenerId: null == listenerId
           ? _value.listenerId
           : listenerId // ignore: cast_nullable_to_non_nullable
               as int,
-      cursor: cursor == freezed
+      cursor: freezed == cursor
           ? _value.cursor
           : cursor // ignore: cast_nullable_to_non_nullable
               as String?,
-      limit: limit == freezed
+      limit: null == limit
           ? _value.limit
           : limit // ignore: cast_nullable_to_non_nullable
               as int,
-      version: version == freezed
+      version: null == version
           ? _value.version
           : version // ignore: cast_nullable_to_non_nullable
               as int,
-      items: items == freezed
+      items: null == items
           ? _value.items
           : items // ignore: cast_nullable_to_non_nullable
               as List<CollectionItem>,
-    ));
+    ) as $Val);
   }
 }
 
@@ -100,6 +104,7 @@ abstract class _$$_CollectionListSegmentCopyWith<$Res>
           $Res Function(_$_CollectionListSegment) then) =
       __$$_CollectionListSegmentCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(name: 'listenerId') int listenerId,
       @JsonKey(name: 'cursor') String? cursor,
@@ -110,42 +115,39 @@ abstract class _$$_CollectionListSegmentCopyWith<$Res>
 
 /// @nodoc
 class __$$_CollectionListSegmentCopyWithImpl<$Res>
-    extends _$CollectionListSegmentCopyWithImpl<$Res>
+    extends _$CollectionListSegmentCopyWithImpl<$Res, _$_CollectionListSegment>
     implements _$$_CollectionListSegmentCopyWith<$Res> {
   __$$_CollectionListSegmentCopyWithImpl(_$_CollectionListSegment _value,
       $Res Function(_$_CollectionListSegment) _then)
-      : super(_value, (v) => _then(v as _$_CollectionListSegment));
+      : super(_value, _then);
 
-  @override
-  _$_CollectionListSegment get _value =>
-      super._value as _$_CollectionListSegment;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? listenerId = freezed,
+    Object? listenerId = null,
     Object? cursor = freezed,
-    Object? limit = freezed,
-    Object? version = freezed,
-    Object? items = freezed,
+    Object? limit = null,
+    Object? version = null,
+    Object? items = null,
   }) {
     return _then(_$_CollectionListSegment(
-      listenerId: listenerId == freezed
+      listenerId: null == listenerId
           ? _value.listenerId
           : listenerId // ignore: cast_nullable_to_non_nullable
               as int,
-      cursor: cursor == freezed
+      cursor: freezed == cursor
           ? _value.cursor
           : cursor // ignore: cast_nullable_to_non_nullable
               as String?,
-      limit: limit == freezed
+      limit: null == limit
           ? _value.limit
           : limit // ignore: cast_nullable_to_non_nullable
               as int,
-      version: version == freezed
+      version: null == version
           ? _value.version
           : version // ignore: cast_nullable_to_non_nullable
               as int,
-      items: items == freezed
+      items: null == items
           ? _value._items
           : items // ignore: cast_nullable_to_non_nullable
               as List<CollectionItem>,
@@ -197,26 +199,22 @@ class _$_CollectionListSegment implements _CollectionListSegment {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_CollectionListSegment &&
-            const DeepCollectionEquality()
-                .equals(other.listenerId, listenerId) &&
-            const DeepCollectionEquality().equals(other.cursor, cursor) &&
-            const DeepCollectionEquality().equals(other.limit, limit) &&
-            const DeepCollectionEquality().equals(other.version, version) &&
+            (identical(other.listenerId, listenerId) ||
+                other.listenerId == listenerId) &&
+            (identical(other.cursor, cursor) || other.cursor == cursor) &&
+            (identical(other.limit, limit) || other.limit == limit) &&
+            (identical(other.version, version) || other.version == version) &&
             const DeepCollectionEquality().equals(other._items, _items));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(listenerId),
-      const DeepCollectionEquality().hash(cursor),
-      const DeepCollectionEquality().hash(limit),
-      const DeepCollectionEquality().hash(version),
-      const DeepCollectionEquality().hash(_items));
+  int get hashCode => Object.hash(runtimeType, listenerId, cursor, limit,
+      version, const DeepCollectionEquality().hash(_items));
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_CollectionListSegmentCopyWith<_$_CollectionListSegment> get copyWith =>
       __$$_CollectionListSegmentCopyWithImpl<_$_CollectionListSegment>(
           this, _$identity);

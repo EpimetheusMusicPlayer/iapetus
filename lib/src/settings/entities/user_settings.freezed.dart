@@ -115,7 +115,8 @@ mixin _$UserSettings {
 abstract class $UserSettingsCopyWith<$Res> {
   factory $UserSettingsCopyWith(
           UserSettings value, $Res Function(UserSettings) then) =
-      _$UserSettingsCopyWithImpl<$Res>;
+      _$UserSettingsCopyWithImpl<$Res, UserSettings>;
+  @useResult
   $Res call(
       {@JsonKey(name: 'pushNotificationDeviceOptIn', fromJson: readOptOutBool, toJson: writeOptOutBool)
           bool pushNotificationDeviceOptIn,
@@ -166,134 +167,136 @@ abstract class $UserSettingsCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$UserSettingsCopyWithImpl<$Res> implements $UserSettingsCopyWith<$Res> {
+class _$UserSettingsCopyWithImpl<$Res, $Val extends UserSettings>
+    implements $UserSettingsCopyWith<$Res> {
   _$UserSettingsCopyWithImpl(this._value, this._then);
 
-  final UserSettings _value;
   // ignore: unused_field
-  final $Res Function(UserSettings) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? pushNotificationDeviceOptIn = freezed,
-    Object? birthYear = freezed,
-    Object? artistAudioMessagesEnabled = freezed,
-    Object? emailNewFollowers = freezed,
-    Object? emailOptInListeners = freezed,
-    Object? pushOptInListeners = freezed,
-    Object? zipCode = freezed,
-    Object? artistMessageMilestonesPushOptIn = freezed,
-    Object? username = freezed,
-    Object? emailOptInArtists = freezed,
-    Object? gender = freezed,
-    Object? emailComments = freezed,
-    Object? emailOptIn = freezed,
-    Object? isExplicitContentFilterEnabled = freezed,
-    Object? emailOptInPandora = freezed,
-    Object? pushOptInPandora = freezed,
-    Object? enableFacebook = freezed,
-    Object? facebookAutoShareEnabled = freezed,
-    Object? isProfilePrivate = freezed,
-    Object? autoShareFollows = freezed,
-    Object? autoShareTrackPlay = freezed,
+    Object? pushNotificationDeviceOptIn = null,
+    Object? birthYear = null,
+    Object? artistAudioMessagesEnabled = null,
+    Object? emailNewFollowers = null,
+    Object? emailOptInListeners = null,
+    Object? pushOptInListeners = null,
+    Object? zipCode = null,
+    Object? artistMessageMilestonesPushOptIn = null,
+    Object? username = null,
+    Object? emailOptInArtists = null,
+    Object? gender = null,
+    Object? emailComments = null,
+    Object? emailOptIn = null,
+    Object? isExplicitContentFilterEnabled = null,
+    Object? emailOptInPandora = null,
+    Object? pushOptInPandora = null,
+    Object? enableFacebook = null,
+    Object? facebookAutoShareEnabled = null,
+    Object? isProfilePrivate = null,
+    Object? autoShareFollows = null,
+    Object? autoShareTrackPlay = null,
     Object? facebookName = freezed,
-    Object? autoShareLikes = freezed,
+    Object? autoShareLikes = null,
   }) {
     return _then(_value.copyWith(
-      pushNotificationDeviceOptIn: pushNotificationDeviceOptIn == freezed
+      pushNotificationDeviceOptIn: null == pushNotificationDeviceOptIn
           ? _value.pushNotificationDeviceOptIn
           : pushNotificationDeviceOptIn // ignore: cast_nullable_to_non_nullable
               as bool,
-      birthYear: birthYear == freezed
+      birthYear: null == birthYear
           ? _value.birthYear
           : birthYear // ignore: cast_nullable_to_non_nullable
               as int,
-      artistAudioMessagesEnabled: artistAudioMessagesEnabled == freezed
+      artistAudioMessagesEnabled: null == artistAudioMessagesEnabled
           ? _value.artistAudioMessagesEnabled
           : artistAudioMessagesEnabled // ignore: cast_nullable_to_non_nullable
               as SettingEnableStatus,
-      emailNewFollowers: emailNewFollowers == freezed
+      emailNewFollowers: null == emailNewFollowers
           ? _value.emailNewFollowers
           : emailNewFollowers // ignore: cast_nullable_to_non_nullable
               as bool,
-      emailOptInListeners: emailOptInListeners == freezed
+      emailOptInListeners: null == emailOptInListeners
           ? _value.emailOptInListeners
           : emailOptInListeners // ignore: cast_nullable_to_non_nullable
               as bool,
-      pushOptInListeners: pushOptInListeners == freezed
+      pushOptInListeners: null == pushOptInListeners
           ? _value.pushOptInListeners
           : pushOptInListeners // ignore: cast_nullable_to_non_nullable
               as bool,
-      zipCode: zipCode == freezed
+      zipCode: null == zipCode
           ? _value.zipCode
           : zipCode // ignore: cast_nullable_to_non_nullable
               as String,
-      artistMessageMilestonesPushOptIn: artistMessageMilestonesPushOptIn ==
-              freezed
+      artistMessageMilestonesPushOptIn: null == artistMessageMilestonesPushOptIn
           ? _value.artistMessageMilestonesPushOptIn
           : artistMessageMilestonesPushOptIn // ignore: cast_nullable_to_non_nullable
               as bool,
-      username: username == freezed
+      username: null == username
           ? _value.username
           : username // ignore: cast_nullable_to_non_nullable
               as String,
-      emailOptInArtists: emailOptInArtists == freezed
+      emailOptInArtists: null == emailOptInArtists
           ? _value.emailOptInArtists
           : emailOptInArtists // ignore: cast_nullable_to_non_nullable
               as bool,
-      gender: gender == freezed
+      gender: null == gender
           ? _value.gender
           : gender // ignore: cast_nullable_to_non_nullable
               as Gender,
-      emailComments: emailComments == freezed
+      emailComments: null == emailComments
           ? _value.emailComments
           : emailComments // ignore: cast_nullable_to_non_nullable
               as bool,
-      emailOptIn: emailOptIn == freezed
+      emailOptIn: null == emailOptIn
           ? _value.emailOptIn
           : emailOptIn // ignore: cast_nullable_to_non_nullable
               as bool,
-      isExplicitContentFilterEnabled: isExplicitContentFilterEnabled == freezed
+      isExplicitContentFilterEnabled: null == isExplicitContentFilterEnabled
           ? _value.isExplicitContentFilterEnabled
           : isExplicitContentFilterEnabled // ignore: cast_nullable_to_non_nullable
               as bool,
-      emailOptInPandora: emailOptInPandora == freezed
+      emailOptInPandora: null == emailOptInPandora
           ? _value.emailOptInPandora
           : emailOptInPandora // ignore: cast_nullable_to_non_nullable
               as bool,
-      pushOptInPandora: pushOptInPandora == freezed
+      pushOptInPandora: null == pushOptInPandora
           ? _value.pushOptInPandora
           : pushOptInPandora // ignore: cast_nullable_to_non_nullable
               as bool,
-      enableFacebook: enableFacebook == freezed
+      enableFacebook: null == enableFacebook
           ? _value.enableFacebook
           : enableFacebook // ignore: cast_nullable_to_non_nullable
               as bool,
-      facebookAutoShareEnabled: facebookAutoShareEnabled == freezed
+      facebookAutoShareEnabled: null == facebookAutoShareEnabled
           ? _value.facebookAutoShareEnabled
           : facebookAutoShareEnabled // ignore: cast_nullable_to_non_nullable
               as bool,
-      isProfilePrivate: isProfilePrivate == freezed
+      isProfilePrivate: null == isProfilePrivate
           ? _value.isProfilePrivate
           : isProfilePrivate // ignore: cast_nullable_to_non_nullable
               as bool,
-      autoShareFollows: autoShareFollows == freezed
+      autoShareFollows: null == autoShareFollows
           ? _value.autoShareFollows
           : autoShareFollows // ignore: cast_nullable_to_non_nullable
               as bool,
-      autoShareTrackPlay: autoShareTrackPlay == freezed
+      autoShareTrackPlay: null == autoShareTrackPlay
           ? _value.autoShareTrackPlay
           : autoShareTrackPlay // ignore: cast_nullable_to_non_nullable
               as bool,
-      facebookName: facebookName == freezed
+      facebookName: freezed == facebookName
           ? _value.facebookName
           : facebookName // ignore: cast_nullable_to_non_nullable
               as String?,
-      autoShareLikes: autoShareLikes == freezed
+      autoShareLikes: null == autoShareLikes
           ? _value.autoShareLikes
           : autoShareLikes // ignore: cast_nullable_to_non_nullable
               as bool,
-    ));
+    ) as $Val);
   }
 }
 
@@ -304,6 +307,7 @@ abstract class _$$_UserSettingsCopyWith<$Res>
           _$_UserSettings value, $Res Function(_$_UserSettings) then) =
       __$$_UserSettingsCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(name: 'pushNotificationDeviceOptIn', fromJson: readOptOutBool, toJson: writeOptOutBool)
           bool pushNotificationDeviceOptIn,
@@ -355,132 +359,129 @@ abstract class _$$_UserSettingsCopyWith<$Res>
 
 /// @nodoc
 class __$$_UserSettingsCopyWithImpl<$Res>
-    extends _$UserSettingsCopyWithImpl<$Res>
+    extends _$UserSettingsCopyWithImpl<$Res, _$_UserSettings>
     implements _$$_UserSettingsCopyWith<$Res> {
   __$$_UserSettingsCopyWithImpl(
       _$_UserSettings _value, $Res Function(_$_UserSettings) _then)
-      : super(_value, (v) => _then(v as _$_UserSettings));
+      : super(_value, _then);
 
-  @override
-  _$_UserSettings get _value => super._value as _$_UserSettings;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? pushNotificationDeviceOptIn = freezed,
-    Object? birthYear = freezed,
-    Object? artistAudioMessagesEnabled = freezed,
-    Object? emailNewFollowers = freezed,
-    Object? emailOptInListeners = freezed,
-    Object? pushOptInListeners = freezed,
-    Object? zipCode = freezed,
-    Object? artistMessageMilestonesPushOptIn = freezed,
-    Object? username = freezed,
-    Object? emailOptInArtists = freezed,
-    Object? gender = freezed,
-    Object? emailComments = freezed,
-    Object? emailOptIn = freezed,
-    Object? isExplicitContentFilterEnabled = freezed,
-    Object? emailOptInPandora = freezed,
-    Object? pushOptInPandora = freezed,
-    Object? enableFacebook = freezed,
-    Object? facebookAutoShareEnabled = freezed,
-    Object? isProfilePrivate = freezed,
-    Object? autoShareFollows = freezed,
-    Object? autoShareTrackPlay = freezed,
+    Object? pushNotificationDeviceOptIn = null,
+    Object? birthYear = null,
+    Object? artistAudioMessagesEnabled = null,
+    Object? emailNewFollowers = null,
+    Object? emailOptInListeners = null,
+    Object? pushOptInListeners = null,
+    Object? zipCode = null,
+    Object? artistMessageMilestonesPushOptIn = null,
+    Object? username = null,
+    Object? emailOptInArtists = null,
+    Object? gender = null,
+    Object? emailComments = null,
+    Object? emailOptIn = null,
+    Object? isExplicitContentFilterEnabled = null,
+    Object? emailOptInPandora = null,
+    Object? pushOptInPandora = null,
+    Object? enableFacebook = null,
+    Object? facebookAutoShareEnabled = null,
+    Object? isProfilePrivate = null,
+    Object? autoShareFollows = null,
+    Object? autoShareTrackPlay = null,
     Object? facebookName = freezed,
-    Object? autoShareLikes = freezed,
+    Object? autoShareLikes = null,
   }) {
     return _then(_$_UserSettings(
-      pushNotificationDeviceOptIn: pushNotificationDeviceOptIn == freezed
+      pushNotificationDeviceOptIn: null == pushNotificationDeviceOptIn
           ? _value.pushNotificationDeviceOptIn
           : pushNotificationDeviceOptIn // ignore: cast_nullable_to_non_nullable
               as bool,
-      birthYear: birthYear == freezed
+      birthYear: null == birthYear
           ? _value.birthYear
           : birthYear // ignore: cast_nullable_to_non_nullable
               as int,
-      artistAudioMessagesEnabled: artistAudioMessagesEnabled == freezed
+      artistAudioMessagesEnabled: null == artistAudioMessagesEnabled
           ? _value.artistAudioMessagesEnabled
           : artistAudioMessagesEnabled // ignore: cast_nullable_to_non_nullable
               as SettingEnableStatus,
-      emailNewFollowers: emailNewFollowers == freezed
+      emailNewFollowers: null == emailNewFollowers
           ? _value.emailNewFollowers
           : emailNewFollowers // ignore: cast_nullable_to_non_nullable
               as bool,
-      emailOptInListeners: emailOptInListeners == freezed
+      emailOptInListeners: null == emailOptInListeners
           ? _value.emailOptInListeners
           : emailOptInListeners // ignore: cast_nullable_to_non_nullable
               as bool,
-      pushOptInListeners: pushOptInListeners == freezed
+      pushOptInListeners: null == pushOptInListeners
           ? _value.pushOptInListeners
           : pushOptInListeners // ignore: cast_nullable_to_non_nullable
               as bool,
-      zipCode: zipCode == freezed
+      zipCode: null == zipCode
           ? _value.zipCode
           : zipCode // ignore: cast_nullable_to_non_nullable
               as String,
-      artistMessageMilestonesPushOptIn: artistMessageMilestonesPushOptIn ==
-              freezed
+      artistMessageMilestonesPushOptIn: null == artistMessageMilestonesPushOptIn
           ? _value.artistMessageMilestonesPushOptIn
           : artistMessageMilestonesPushOptIn // ignore: cast_nullable_to_non_nullable
               as bool,
-      username: username == freezed
+      username: null == username
           ? _value.username
           : username // ignore: cast_nullable_to_non_nullable
               as String,
-      emailOptInArtists: emailOptInArtists == freezed
+      emailOptInArtists: null == emailOptInArtists
           ? _value.emailOptInArtists
           : emailOptInArtists // ignore: cast_nullable_to_non_nullable
               as bool,
-      gender: gender == freezed
+      gender: null == gender
           ? _value.gender
           : gender // ignore: cast_nullable_to_non_nullable
               as Gender,
-      emailComments: emailComments == freezed
+      emailComments: null == emailComments
           ? _value.emailComments
           : emailComments // ignore: cast_nullable_to_non_nullable
               as bool,
-      emailOptIn: emailOptIn == freezed
+      emailOptIn: null == emailOptIn
           ? _value.emailOptIn
           : emailOptIn // ignore: cast_nullable_to_non_nullable
               as bool,
-      isExplicitContentFilterEnabled: isExplicitContentFilterEnabled == freezed
+      isExplicitContentFilterEnabled: null == isExplicitContentFilterEnabled
           ? _value.isExplicitContentFilterEnabled
           : isExplicitContentFilterEnabled // ignore: cast_nullable_to_non_nullable
               as bool,
-      emailOptInPandora: emailOptInPandora == freezed
+      emailOptInPandora: null == emailOptInPandora
           ? _value.emailOptInPandora
           : emailOptInPandora // ignore: cast_nullable_to_non_nullable
               as bool,
-      pushOptInPandora: pushOptInPandora == freezed
+      pushOptInPandora: null == pushOptInPandora
           ? _value.pushOptInPandora
           : pushOptInPandora // ignore: cast_nullable_to_non_nullable
               as bool,
-      enableFacebook: enableFacebook == freezed
+      enableFacebook: null == enableFacebook
           ? _value.enableFacebook
           : enableFacebook // ignore: cast_nullable_to_non_nullable
               as bool,
-      facebookAutoShareEnabled: facebookAutoShareEnabled == freezed
+      facebookAutoShareEnabled: null == facebookAutoShareEnabled
           ? _value.facebookAutoShareEnabled
           : facebookAutoShareEnabled // ignore: cast_nullable_to_non_nullable
               as bool,
-      isProfilePrivate: isProfilePrivate == freezed
+      isProfilePrivate: null == isProfilePrivate
           ? _value.isProfilePrivate
           : isProfilePrivate // ignore: cast_nullable_to_non_nullable
               as bool,
-      autoShareFollows: autoShareFollows == freezed
+      autoShareFollows: null == autoShareFollows
           ? _value.autoShareFollows
           : autoShareFollows // ignore: cast_nullable_to_non_nullable
               as bool,
-      autoShareTrackPlay: autoShareTrackPlay == freezed
+      autoShareTrackPlay: null == autoShareTrackPlay
           ? _value.autoShareTrackPlay
           : autoShareTrackPlay // ignore: cast_nullable_to_non_nullable
               as bool,
-      facebookName: facebookName == freezed
+      facebookName: freezed == facebookName
           ? _value.facebookName
           : facebookName // ignore: cast_nullable_to_non_nullable
               as String?,
-      autoShareLikes: autoShareLikes == freezed
+      autoShareLikes: null == autoShareLikes
           ? _value.autoShareLikes
           : autoShareLikes // ignore: cast_nullable_to_non_nullable
               as bool,
@@ -658,84 +659,88 @@ class _$_UserSettings implements _UserSettings {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_UserSettings &&
-            const DeepCollectionEquality().equals(
-                other.pushNotificationDeviceOptIn,
-                pushNotificationDeviceOptIn) &&
-            const DeepCollectionEquality().equals(other.birthYear, birthYear) &&
-            const DeepCollectionEquality().equals(
-                other.artistAudioMessagesEnabled, artistAudioMessagesEnabled) &&
-            const DeepCollectionEquality()
-                .equals(other.emailNewFollowers, emailNewFollowers) &&
-            const DeepCollectionEquality()
-                .equals(other.emailOptInListeners, emailOptInListeners) &&
-            const DeepCollectionEquality()
-                .equals(other.pushOptInListeners, pushOptInListeners) &&
-            const DeepCollectionEquality().equals(other.zipCode, zipCode) &&
-            const DeepCollectionEquality().equals(
-                other.artistMessageMilestonesPushOptIn,
-                artistMessageMilestonesPushOptIn) &&
-            const DeepCollectionEquality().equals(other.username, username) &&
-            const DeepCollectionEquality()
-                .equals(other.emailOptInArtists, emailOptInArtists) &&
-            const DeepCollectionEquality().equals(other.gender, gender) &&
-            const DeepCollectionEquality()
-                .equals(other.emailComments, emailComments) &&
-            const DeepCollectionEquality()
-                .equals(other.emailOptIn, emailOptIn) &&
-            const DeepCollectionEquality().equals(
-                other.isExplicitContentFilterEnabled,
-                isExplicitContentFilterEnabled) &&
-            const DeepCollectionEquality()
-                .equals(other.emailOptInPandora, emailOptInPandora) &&
-            const DeepCollectionEquality()
-                .equals(other.pushOptInPandora, pushOptInPandora) &&
-            const DeepCollectionEquality()
-                .equals(other.enableFacebook, enableFacebook) &&
-            const DeepCollectionEquality().equals(
-                other.facebookAutoShareEnabled, facebookAutoShareEnabled) &&
-            const DeepCollectionEquality()
-                .equals(other.isProfilePrivate, isProfilePrivate) &&
-            const DeepCollectionEquality()
-                .equals(other.autoShareFollows, autoShareFollows) &&
-            const DeepCollectionEquality()
-                .equals(other.autoShareTrackPlay, autoShareTrackPlay) &&
-            const DeepCollectionEquality()
-                .equals(other.facebookName, facebookName) &&
-            const DeepCollectionEquality()
-                .equals(other.autoShareLikes, autoShareLikes));
+            (identical(other.pushNotificationDeviceOptIn, pushNotificationDeviceOptIn) ||
+                other.pushNotificationDeviceOptIn ==
+                    pushNotificationDeviceOptIn) &&
+            (identical(other.birthYear, birthYear) ||
+                other.birthYear == birthYear) &&
+            (identical(other.artistAudioMessagesEnabled, artistAudioMessagesEnabled) ||
+                other.artistAudioMessagesEnabled ==
+                    artistAudioMessagesEnabled) &&
+            (identical(other.emailNewFollowers, emailNewFollowers) ||
+                other.emailNewFollowers == emailNewFollowers) &&
+            (identical(other.emailOptInListeners, emailOptInListeners) ||
+                other.emailOptInListeners == emailOptInListeners) &&
+            (identical(other.pushOptInListeners, pushOptInListeners) ||
+                other.pushOptInListeners == pushOptInListeners) &&
+            (identical(other.zipCode, zipCode) || other.zipCode == zipCode) &&
+            (identical(other.artistMessageMilestonesPushOptIn, artistMessageMilestonesPushOptIn) ||
+                other.artistMessageMilestonesPushOptIn ==
+                    artistMessageMilestonesPushOptIn) &&
+            (identical(other.username, username) ||
+                other.username == username) &&
+            (identical(other.emailOptInArtists, emailOptInArtists) ||
+                other.emailOptInArtists == emailOptInArtists) &&
+            (identical(other.gender, gender) || other.gender == gender) &&
+            (identical(other.emailComments, emailComments) ||
+                other.emailComments == emailComments) &&
+            (identical(other.emailOptIn, emailOptIn) ||
+                other.emailOptIn == emailOptIn) &&
+            (identical(other.isExplicitContentFilterEnabled, isExplicitContentFilterEnabled) ||
+                other.isExplicitContentFilterEnabled ==
+                    isExplicitContentFilterEnabled) &&
+            (identical(other.emailOptInPandora, emailOptInPandora) ||
+                other.emailOptInPandora == emailOptInPandora) &&
+            (identical(other.pushOptInPandora, pushOptInPandora) ||
+                other.pushOptInPandora == pushOptInPandora) &&
+            (identical(other.enableFacebook, enableFacebook) ||
+                other.enableFacebook == enableFacebook) &&
+            (identical(other.facebookAutoShareEnabled, facebookAutoShareEnabled) ||
+                other.facebookAutoShareEnabled == facebookAutoShareEnabled) &&
+            (identical(other.isProfilePrivate, isProfilePrivate) ||
+                other.isProfilePrivate == isProfilePrivate) &&
+            (identical(other.autoShareFollows, autoShareFollows) ||
+                other.autoShareFollows == autoShareFollows) &&
+            (identical(other.autoShareTrackPlay, autoShareTrackPlay) ||
+                other.autoShareTrackPlay == autoShareTrackPlay) &&
+            (identical(other.facebookName, facebookName) ||
+                other.facebookName == facebookName) &&
+            (identical(other.autoShareLikes, autoShareLikes) ||
+                other.autoShareLikes == autoShareLikes));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
-        const DeepCollectionEquality().hash(pushNotificationDeviceOptIn),
-        const DeepCollectionEquality().hash(birthYear),
-        const DeepCollectionEquality().hash(artistAudioMessagesEnabled),
-        const DeepCollectionEquality().hash(emailNewFollowers),
-        const DeepCollectionEquality().hash(emailOptInListeners),
-        const DeepCollectionEquality().hash(pushOptInListeners),
-        const DeepCollectionEquality().hash(zipCode),
-        const DeepCollectionEquality().hash(artistMessageMilestonesPushOptIn),
-        const DeepCollectionEquality().hash(username),
-        const DeepCollectionEquality().hash(emailOptInArtists),
-        const DeepCollectionEquality().hash(gender),
-        const DeepCollectionEquality().hash(emailComments),
-        const DeepCollectionEquality().hash(emailOptIn),
-        const DeepCollectionEquality().hash(isExplicitContentFilterEnabled),
-        const DeepCollectionEquality().hash(emailOptInPandora),
-        const DeepCollectionEquality().hash(pushOptInPandora),
-        const DeepCollectionEquality().hash(enableFacebook),
-        const DeepCollectionEquality().hash(facebookAutoShareEnabled),
-        const DeepCollectionEquality().hash(isProfilePrivate),
-        const DeepCollectionEquality().hash(autoShareFollows),
-        const DeepCollectionEquality().hash(autoShareTrackPlay),
-        const DeepCollectionEquality().hash(facebookName),
-        const DeepCollectionEquality().hash(autoShareLikes)
+        pushNotificationDeviceOptIn,
+        birthYear,
+        artistAudioMessagesEnabled,
+        emailNewFollowers,
+        emailOptInListeners,
+        pushOptInListeners,
+        zipCode,
+        artistMessageMilestonesPushOptIn,
+        username,
+        emailOptInArtists,
+        gender,
+        emailComments,
+        emailOptIn,
+        isExplicitContentFilterEnabled,
+        emailOptInPandora,
+        pushOptInPandora,
+        enableFacebook,
+        facebookAutoShareEnabled,
+        isProfilePrivate,
+        autoShareFollows,
+        autoShareTrackPlay,
+        facebookName,
+        autoShareLikes
       ]);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_UserSettingsCopyWith<_$_UserSettings> get copyWith =>
       __$$_UserSettingsCopyWithImpl<_$_UserSettings>(this, _$identity);
 

@@ -39,7 +39,8 @@ mixin _$AudioUrlData {
 abstract class $AudioUrlDataCopyWith<$Res> {
   factory $AudioUrlDataCopyWith(
           AudioUrlData value, $Res Function(AudioUrlData) then) =
-      _$AudioUrlDataCopyWithImpl<$Res>;
+      _$AudioUrlDataCopyWithImpl<$Res, AudioUrlData>;
+  @useResult
   $Res call(
       {@JsonKey(name: 'audioToken') String audioToken,
       @JsonKey(name: 'bitrate') String bitrate,
@@ -48,38 +49,41 @@ abstract class $AudioUrlDataCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$AudioUrlDataCopyWithImpl<$Res> implements $AudioUrlDataCopyWith<$Res> {
+class _$AudioUrlDataCopyWithImpl<$Res, $Val extends AudioUrlData>
+    implements $AudioUrlDataCopyWith<$Res> {
   _$AudioUrlDataCopyWithImpl(this._value, this._then);
 
-  final AudioUrlData _value;
   // ignore: unused_field
-  final $Res Function(AudioUrlData) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? audioToken = freezed,
-    Object? bitrate = freezed,
-    Object? encoding = freezed,
-    Object? audioUrl = freezed,
+    Object? audioToken = null,
+    Object? bitrate = null,
+    Object? encoding = null,
+    Object? audioUrl = null,
   }) {
     return _then(_value.copyWith(
-      audioToken: audioToken == freezed
+      audioToken: null == audioToken
           ? _value.audioToken
           : audioToken // ignore: cast_nullable_to_non_nullable
               as String,
-      bitrate: bitrate == freezed
+      bitrate: null == bitrate
           ? _value.bitrate
           : bitrate // ignore: cast_nullable_to_non_nullable
               as String,
-      encoding: encoding == freezed
+      encoding: null == encoding
           ? _value.encoding
           : encoding // ignore: cast_nullable_to_non_nullable
               as String,
-      audioUrl: audioUrl == freezed
+      audioUrl: null == audioUrl
           ? _value.audioUrl
           : audioUrl // ignore: cast_nullable_to_non_nullable
               as Uri,
-    ));
+    ) as $Val);
   }
 }
 
@@ -90,6 +94,7 @@ abstract class _$$_AudioUrlDataCopyWith<$Res>
           _$_AudioUrlData value, $Res Function(_$_AudioUrlData) then) =
       __$$_AudioUrlDataCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(name: 'audioToken') String audioToken,
       @JsonKey(name: 'bitrate') String bitrate,
@@ -99,36 +104,34 @@ abstract class _$$_AudioUrlDataCopyWith<$Res>
 
 /// @nodoc
 class __$$_AudioUrlDataCopyWithImpl<$Res>
-    extends _$AudioUrlDataCopyWithImpl<$Res>
+    extends _$AudioUrlDataCopyWithImpl<$Res, _$_AudioUrlData>
     implements _$$_AudioUrlDataCopyWith<$Res> {
   __$$_AudioUrlDataCopyWithImpl(
       _$_AudioUrlData _value, $Res Function(_$_AudioUrlData) _then)
-      : super(_value, (v) => _then(v as _$_AudioUrlData));
+      : super(_value, _then);
 
-  @override
-  _$_AudioUrlData get _value => super._value as _$_AudioUrlData;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? audioToken = freezed,
-    Object? bitrate = freezed,
-    Object? encoding = freezed,
-    Object? audioUrl = freezed,
+    Object? audioToken = null,
+    Object? bitrate = null,
+    Object? encoding = null,
+    Object? audioUrl = null,
   }) {
     return _then(_$_AudioUrlData(
-      audioToken: audioToken == freezed
+      audioToken: null == audioToken
           ? _value.audioToken
           : audioToken // ignore: cast_nullable_to_non_nullable
               as String,
-      bitrate: bitrate == freezed
+      bitrate: null == bitrate
           ? _value.bitrate
           : bitrate // ignore: cast_nullable_to_non_nullable
               as String,
-      encoding: encoding == freezed
+      encoding: null == encoding
           ? _value.encoding
           : encoding // ignore: cast_nullable_to_non_nullable
               as String,
-      audioUrl: audioUrl == freezed
+      audioUrl: null == audioUrl
           ? _value.audioUrl
           : audioUrl // ignore: cast_nullable_to_non_nullable
               as Uri,
@@ -171,24 +174,23 @@ class _$_AudioUrlData implements _AudioUrlData {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_AudioUrlData &&
-            const DeepCollectionEquality()
-                .equals(other.audioToken, audioToken) &&
-            const DeepCollectionEquality().equals(other.bitrate, bitrate) &&
-            const DeepCollectionEquality().equals(other.encoding, encoding) &&
-            const DeepCollectionEquality().equals(other.audioUrl, audioUrl));
+            (identical(other.audioToken, audioToken) ||
+                other.audioToken == audioToken) &&
+            (identical(other.bitrate, bitrate) || other.bitrate == bitrate) &&
+            (identical(other.encoding, encoding) ||
+                other.encoding == encoding) &&
+            (identical(other.audioUrl, audioUrl) ||
+                other.audioUrl == audioUrl));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(audioToken),
-      const DeepCollectionEquality().hash(bitrate),
-      const DeepCollectionEquality().hash(encoding),
-      const DeepCollectionEquality().hash(audioUrl));
+  int get hashCode =>
+      Object.hash(runtimeType, audioToken, bitrate, encoding, audioUrl);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_AudioUrlDataCopyWith<_$_AudioUrlData> get copyWith =>
       __$$_AudioUrlDataCopyWithImpl<_$_AudioUrlData>(this, _$identity);
 

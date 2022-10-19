@@ -46,7 +46,9 @@ mixin _$GenreStationRecommendation {
 abstract class $GenreStationRecommendationCopyWith<$Res> {
   factory $GenreStationRecommendationCopyWith(GenreStationRecommendation value,
           $Res Function(GenreStationRecommendation) then) =
-      _$GenreStationRecommendationCopyWithImpl<$Res>;
+      _$GenreStationRecommendationCopyWithImpl<$Res,
+          GenreStationRecommendation>;
+  @useResult
   $Res call(
       {@JsonKey(name: 'musicToken')
           String musicToken,
@@ -61,44 +63,47 @@ abstract class $GenreStationRecommendationCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$GenreStationRecommendationCopyWithImpl<$Res>
+class _$GenreStationRecommendationCopyWithImpl<$Res,
+        $Val extends GenreStationRecommendation>
     implements $GenreStationRecommendationCopyWith<$Res> {
   _$GenreStationRecommendationCopyWithImpl(this._value, this._then);
 
-  final GenreStationRecommendation _value;
   // ignore: unused_field
-  final $Res Function(GenreStationRecommendation) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? musicToken = freezed,
-    Object? explanation = freezed,
+    Object? musicToken = null,
+    Object? explanation = null,
     Object? artUrl = freezed,
-    Object? stationName = freezed,
+    Object? stationName = null,
     Object? score = freezed,
   }) {
     return _then(_value.copyWith(
-      musicToken: musicToken == freezed
+      musicToken: null == musicToken
           ? _value.musicToken
           : musicToken // ignore: cast_nullable_to_non_nullable
               as String,
-      explanation: explanation == freezed
+      explanation: null == explanation
           ? _value.explanation
           : explanation // ignore: cast_nullable_to_non_nullable
               as String,
-      artUrl: artUrl == freezed
+      artUrl: freezed == artUrl
           ? _value.artUrl
           : artUrl // ignore: cast_nullable_to_non_nullable
               as Uri?,
-      stationName: stationName == freezed
+      stationName: null == stationName
           ? _value.stationName
           : stationName // ignore: cast_nullable_to_non_nullable
               as String,
-      score: score == freezed
+      score: freezed == score
           ? _value.score
           : score // ignore: cast_nullable_to_non_nullable
               as int?,
-    ));
+    ) as $Val);
   }
 }
 
@@ -110,6 +115,7 @@ abstract class _$$_GenreStationRecommendationCopyWith<$Res>
           $Res Function(_$_GenreStationRecommendation) then) =
       __$$_GenreStationRecommendationCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(name: 'musicToken')
           String musicToken,
@@ -125,43 +131,41 @@ abstract class _$$_GenreStationRecommendationCopyWith<$Res>
 
 /// @nodoc
 class __$$_GenreStationRecommendationCopyWithImpl<$Res>
-    extends _$GenreStationRecommendationCopyWithImpl<$Res>
+    extends _$GenreStationRecommendationCopyWithImpl<$Res,
+        _$_GenreStationRecommendation>
     implements _$$_GenreStationRecommendationCopyWith<$Res> {
   __$$_GenreStationRecommendationCopyWithImpl(
       _$_GenreStationRecommendation _value,
       $Res Function(_$_GenreStationRecommendation) _then)
-      : super(_value, (v) => _then(v as _$_GenreStationRecommendation));
+      : super(_value, _then);
 
-  @override
-  _$_GenreStationRecommendation get _value =>
-      super._value as _$_GenreStationRecommendation;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? musicToken = freezed,
-    Object? explanation = freezed,
+    Object? musicToken = null,
+    Object? explanation = null,
     Object? artUrl = freezed,
-    Object? stationName = freezed,
+    Object? stationName = null,
     Object? score = freezed,
   }) {
     return _then(_$_GenreStationRecommendation(
-      musicToken: musicToken == freezed
+      musicToken: null == musicToken
           ? _value.musicToken
           : musicToken // ignore: cast_nullable_to_non_nullable
               as String,
-      explanation: explanation == freezed
+      explanation: null == explanation
           ? _value.explanation
           : explanation // ignore: cast_nullable_to_non_nullable
               as String,
-      artUrl: artUrl == freezed
+      artUrl: freezed == artUrl
           ? _value.artUrl
           : artUrl // ignore: cast_nullable_to_non_nullable
               as Uri?,
-      stationName: stationName == freezed
+      stationName: null == stationName
           ? _value.stationName
           : stationName // ignore: cast_nullable_to_non_nullable
               as String,
-      score: score == freezed
+      score: freezed == score
           ? _value.score
           : score // ignore: cast_nullable_to_non_nullable
               as int?,
@@ -217,28 +221,24 @@ class _$_GenreStationRecommendation implements _GenreStationRecommendation {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_GenreStationRecommendation &&
-            const DeepCollectionEquality()
-                .equals(other.musicToken, musicToken) &&
-            const DeepCollectionEquality()
-                .equals(other.explanation, explanation) &&
-            const DeepCollectionEquality().equals(other.artUrl, artUrl) &&
-            const DeepCollectionEquality()
-                .equals(other.stationName, stationName) &&
-            const DeepCollectionEquality().equals(other.score, score));
+            (identical(other.musicToken, musicToken) ||
+                other.musicToken == musicToken) &&
+            (identical(other.explanation, explanation) ||
+                other.explanation == explanation) &&
+            (identical(other.artUrl, artUrl) || other.artUrl == artUrl) &&
+            (identical(other.stationName, stationName) ||
+                other.stationName == stationName) &&
+            (identical(other.score, score) || other.score == score));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(musicToken),
-      const DeepCollectionEquality().hash(explanation),
-      const DeepCollectionEquality().hash(artUrl),
-      const DeepCollectionEquality().hash(stationName),
-      const DeepCollectionEquality().hash(score));
+      runtimeType, musicToken, explanation, artUrl, stationName, score);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_GenreStationRecommendationCopyWith<_$_GenreStationRecommendation>
       get copyWith => __$$_GenreStationRecommendationCopyWithImpl<
           _$_GenreStationRecommendation>(this, _$identity);

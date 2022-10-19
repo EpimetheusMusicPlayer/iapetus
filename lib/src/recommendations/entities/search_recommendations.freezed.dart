@@ -37,7 +37,8 @@ mixin _$SearchRecommendations {
 abstract class $SearchRecommendationsCopyWith<$Res> {
   factory $SearchRecommendationsCopyWith(SearchRecommendations value,
           $Res Function(SearchRecommendations) then) =
-      _$SearchRecommendationsCopyWithImpl<$Res>;
+      _$SearchRecommendationsCopyWithImpl<$Res, SearchRecommendations>;
+  @useResult
   $Res call(
       {@JsonKey(name: 'artists')
           List<ArtistRecommendation> artists,
@@ -46,29 +47,32 @@ abstract class $SearchRecommendationsCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$SearchRecommendationsCopyWithImpl<$Res>
+class _$SearchRecommendationsCopyWithImpl<$Res,
+        $Val extends SearchRecommendations>
     implements $SearchRecommendationsCopyWith<$Res> {
   _$SearchRecommendationsCopyWithImpl(this._value, this._then);
 
-  final SearchRecommendations _value;
   // ignore: unused_field
-  final $Res Function(SearchRecommendations) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? artists = freezed,
-    Object? genreStations = freezed,
+    Object? artists = null,
+    Object? genreStations = null,
   }) {
     return _then(_value.copyWith(
-      artists: artists == freezed
+      artists: null == artists
           ? _value.artists
           : artists // ignore: cast_nullable_to_non_nullable
               as List<ArtistRecommendation>,
-      genreStations: genreStations == freezed
+      genreStations: null == genreStations
           ? _value.genreStations
           : genreStations // ignore: cast_nullable_to_non_nullable
               as List<GenreStationRecommendation>,
-    ));
+    ) as $Val);
   }
 }
 
@@ -79,6 +83,7 @@ abstract class _$$_SearchRecommendationsCopyWith<$Res>
           $Res Function(_$_SearchRecommendations) then) =
       __$$_SearchRecommendationsCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(name: 'artists')
           List<ArtistRecommendation> artists,
@@ -88,27 +93,24 @@ abstract class _$$_SearchRecommendationsCopyWith<$Res>
 
 /// @nodoc
 class __$$_SearchRecommendationsCopyWithImpl<$Res>
-    extends _$SearchRecommendationsCopyWithImpl<$Res>
+    extends _$SearchRecommendationsCopyWithImpl<$Res, _$_SearchRecommendations>
     implements _$$_SearchRecommendationsCopyWith<$Res> {
   __$$_SearchRecommendationsCopyWithImpl(_$_SearchRecommendations _value,
       $Res Function(_$_SearchRecommendations) _then)
-      : super(_value, (v) => _then(v as _$_SearchRecommendations));
+      : super(_value, _then);
 
-  @override
-  _$_SearchRecommendations get _value =>
-      super._value as _$_SearchRecommendations;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? artists = freezed,
-    Object? genreStations = freezed,
+    Object? artists = null,
+    Object? genreStations = null,
   }) {
     return _then(_$_SearchRecommendations(
-      artists: artists == freezed
+      artists: null == artists
           ? _value._artists
           : artists // ignore: cast_nullable_to_non_nullable
               as List<ArtistRecommendation>,
-      genreStations: genreStations == freezed
+      genreStations: null == genreStations
           ? _value._genreStations
           : genreStations // ignore: cast_nullable_to_non_nullable
               as List<GenreStationRecommendation>,
@@ -170,6 +172,7 @@ class _$_SearchRecommendations implements _SearchRecommendations {
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_SearchRecommendationsCopyWith<_$_SearchRecommendations> get copyWith =>
       __$$_SearchRecommendationsCopyWithImpl<_$_SearchRecommendations>(
           this, _$identity);

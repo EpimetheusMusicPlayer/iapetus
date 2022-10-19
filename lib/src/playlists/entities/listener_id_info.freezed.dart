@@ -37,7 +37,8 @@ mixin _$ListenerIdInfo {
 abstract class $ListenerIdInfoCopyWith<$Res> {
   factory $ListenerIdInfoCopyWith(
           ListenerIdInfo value, $Res Function(ListenerIdInfo) then) =
-      _$ListenerIdInfoCopyWithImpl<$Res>;
+      _$ListenerIdInfoCopyWithImpl<$Res, ListenerIdInfo>;
+  @useResult
   $Res call(
       {@JsonKey(name: 'listenerId') int listenerId,
       @JsonKey(name: 'listenerPandoraId') String listenerPandoraId,
@@ -45,34 +46,36 @@ abstract class $ListenerIdInfoCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ListenerIdInfoCopyWithImpl<$Res>
+class _$ListenerIdInfoCopyWithImpl<$Res, $Val extends ListenerIdInfo>
     implements $ListenerIdInfoCopyWith<$Res> {
   _$ListenerIdInfoCopyWithImpl(this._value, this._then);
 
-  final ListenerIdInfo _value;
   // ignore: unused_field
-  final $Res Function(ListenerIdInfo) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? listenerId = freezed,
-    Object? listenerPandoraId = freezed,
-    Object? listenerIdToken = freezed,
+    Object? listenerId = null,
+    Object? listenerPandoraId = null,
+    Object? listenerIdToken = null,
   }) {
     return _then(_value.copyWith(
-      listenerId: listenerId == freezed
+      listenerId: null == listenerId
           ? _value.listenerId
           : listenerId // ignore: cast_nullable_to_non_nullable
               as int,
-      listenerPandoraId: listenerPandoraId == freezed
+      listenerPandoraId: null == listenerPandoraId
           ? _value.listenerPandoraId
           : listenerPandoraId // ignore: cast_nullable_to_non_nullable
               as String,
-      listenerIdToken: listenerIdToken == freezed
+      listenerIdToken: null == listenerIdToken
           ? _value.listenerIdToken
           : listenerIdToken // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -83,6 +86,7 @@ abstract class _$$_ListenerIdInfoCopyWith<$Res>
           _$_ListenerIdInfo value, $Res Function(_$_ListenerIdInfo) then) =
       __$$_ListenerIdInfoCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(name: 'listenerId') int listenerId,
       @JsonKey(name: 'listenerPandoraId') String listenerPandoraId,
@@ -91,31 +95,29 @@ abstract class _$$_ListenerIdInfoCopyWith<$Res>
 
 /// @nodoc
 class __$$_ListenerIdInfoCopyWithImpl<$Res>
-    extends _$ListenerIdInfoCopyWithImpl<$Res>
+    extends _$ListenerIdInfoCopyWithImpl<$Res, _$_ListenerIdInfo>
     implements _$$_ListenerIdInfoCopyWith<$Res> {
   __$$_ListenerIdInfoCopyWithImpl(
       _$_ListenerIdInfo _value, $Res Function(_$_ListenerIdInfo) _then)
-      : super(_value, (v) => _then(v as _$_ListenerIdInfo));
+      : super(_value, _then);
 
-  @override
-  _$_ListenerIdInfo get _value => super._value as _$_ListenerIdInfo;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? listenerId = freezed,
-    Object? listenerPandoraId = freezed,
-    Object? listenerIdToken = freezed,
+    Object? listenerId = null,
+    Object? listenerPandoraId = null,
+    Object? listenerIdToken = null,
   }) {
     return _then(_$_ListenerIdInfo(
-      listenerId: listenerId == freezed
+      listenerId: null == listenerId
           ? _value.listenerId
           : listenerId // ignore: cast_nullable_to_non_nullable
               as int,
-      listenerPandoraId: listenerPandoraId == freezed
+      listenerPandoraId: null == listenerPandoraId
           ? _value.listenerPandoraId
           : listenerPandoraId // ignore: cast_nullable_to_non_nullable
               as String,
-      listenerIdToken: listenerIdToken == freezed
+      listenerIdToken: null == listenerIdToken
           ? _value.listenerIdToken
           : listenerIdToken // ignore: cast_nullable_to_non_nullable
               as String,
@@ -155,24 +157,22 @@ class _$_ListenerIdInfo extends _ListenerIdInfo {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_ListenerIdInfo &&
-            const DeepCollectionEquality()
-                .equals(other.listenerId, listenerId) &&
-            const DeepCollectionEquality()
-                .equals(other.listenerPandoraId, listenerPandoraId) &&
-            const DeepCollectionEquality()
-                .equals(other.listenerIdToken, listenerIdToken));
+            (identical(other.listenerId, listenerId) ||
+                other.listenerId == listenerId) &&
+            (identical(other.listenerPandoraId, listenerPandoraId) ||
+                other.listenerPandoraId == listenerPandoraId) &&
+            (identical(other.listenerIdToken, listenerIdToken) ||
+                other.listenerIdToken == listenerIdToken));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(listenerId),
-      const DeepCollectionEquality().hash(listenerPandoraId),
-      const DeepCollectionEquality().hash(listenerIdToken));
+  int get hashCode =>
+      Object.hash(runtimeType, listenerId, listenerPandoraId, listenerIdToken);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_ListenerIdInfoCopyWith<_$_ListenerIdInfo> get copyWith =>
       __$$_ListenerIdInfoCopyWithImpl<_$_ListenerIdInfo>(this, _$identity);
 

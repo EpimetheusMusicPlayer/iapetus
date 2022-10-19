@@ -47,7 +47,8 @@ mixin _$PlaylistTrack {
 abstract class $PlaylistTrackCopyWith<$Res> {
   factory $PlaylistTrackCopyWith(
           PlaylistTrack value, $Res Function(PlaylistTrack) then) =
-      _$PlaylistTrackCopyWithImpl<$Res>;
+      _$PlaylistTrackCopyWithImpl<$Res, PlaylistTrack>;
+  @useResult
   $Res call(
       {@JsonKey(name: 'pandoraId')
           String pandoraId,
@@ -62,44 +63,46 @@ abstract class $PlaylistTrackCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$PlaylistTrackCopyWithImpl<$Res>
+class _$PlaylistTrackCopyWithImpl<$Res, $Val extends PlaylistTrack>
     implements $PlaylistTrackCopyWith<$Res> {
   _$PlaylistTrackCopyWithImpl(this._value, this._then);
 
-  final PlaylistTrack _value;
   // ignore: unused_field
-  final $Res Function(PlaylistTrack) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? pandoraId = freezed,
-    Object? itemId = freezed,
-    Object? addedTimestamp = freezed,
+    Object? pandoraId = null,
+    Object? itemId = null,
+    Object? addedTimestamp = null,
     Object? duration = freezed,
-    Object? trackPandoraId = freezed,
+    Object? trackPandoraId = null,
   }) {
     return _then(_value.copyWith(
-      pandoraId: pandoraId == freezed
+      pandoraId: null == pandoraId
           ? _value.pandoraId
           : pandoraId // ignore: cast_nullable_to_non_nullable
               as String,
-      itemId: itemId == freezed
+      itemId: null == itemId
           ? _value.itemId
           : itemId // ignore: cast_nullable_to_non_nullable
               as int,
-      addedTimestamp: addedTimestamp == freezed
+      addedTimestamp: null == addedTimestamp
           ? _value.addedTimestamp
           : addedTimestamp // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      duration: duration == freezed
+      duration: freezed == duration
           ? _value.duration
           : duration // ignore: cast_nullable_to_non_nullable
               as Duration?,
-      trackPandoraId: trackPandoraId == freezed
+      trackPandoraId: null == trackPandoraId
           ? _value.trackPandoraId
           : trackPandoraId // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -110,6 +113,7 @@ abstract class _$$_PlaylistTrackCopyWith<$Res>
           _$_PlaylistTrack value, $Res Function(_$_PlaylistTrack) then) =
       __$$_PlaylistTrackCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(name: 'pandoraId')
           String pandoraId,
@@ -125,41 +129,39 @@ abstract class _$$_PlaylistTrackCopyWith<$Res>
 
 /// @nodoc
 class __$$_PlaylistTrackCopyWithImpl<$Res>
-    extends _$PlaylistTrackCopyWithImpl<$Res>
+    extends _$PlaylistTrackCopyWithImpl<$Res, _$_PlaylistTrack>
     implements _$$_PlaylistTrackCopyWith<$Res> {
   __$$_PlaylistTrackCopyWithImpl(
       _$_PlaylistTrack _value, $Res Function(_$_PlaylistTrack) _then)
-      : super(_value, (v) => _then(v as _$_PlaylistTrack));
+      : super(_value, _then);
 
-  @override
-  _$_PlaylistTrack get _value => super._value as _$_PlaylistTrack;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? pandoraId = freezed,
-    Object? itemId = freezed,
-    Object? addedTimestamp = freezed,
+    Object? pandoraId = null,
+    Object? itemId = null,
+    Object? addedTimestamp = null,
     Object? duration = freezed,
-    Object? trackPandoraId = freezed,
+    Object? trackPandoraId = null,
   }) {
     return _then(_$_PlaylistTrack(
-      pandoraId: pandoraId == freezed
+      pandoraId: null == pandoraId
           ? _value.pandoraId
           : pandoraId // ignore: cast_nullable_to_non_nullable
               as String,
-      itemId: itemId == freezed
+      itemId: null == itemId
           ? _value.itemId
           : itemId // ignore: cast_nullable_to_non_nullable
               as int,
-      addedTimestamp: addedTimestamp == freezed
+      addedTimestamp: null == addedTimestamp
           ? _value.addedTimestamp
           : addedTimestamp // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      duration: duration == freezed
+      duration: freezed == duration
           ? _value.duration
           : duration // ignore: cast_nullable_to_non_nullable
               as Duration?,
-      trackPandoraId: trackPandoraId == freezed
+      trackPandoraId: null == trackPandoraId
           ? _value.trackPandoraId
           : trackPandoraId // ignore: cast_nullable_to_non_nullable
               as String,
@@ -218,27 +220,25 @@ class _$_PlaylistTrack extends _PlaylistTrack {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_PlaylistTrack &&
-            const DeepCollectionEquality().equals(other.pandoraId, pandoraId) &&
-            const DeepCollectionEquality().equals(other.itemId, itemId) &&
-            const DeepCollectionEquality()
-                .equals(other.addedTimestamp, addedTimestamp) &&
-            const DeepCollectionEquality().equals(other.duration, duration) &&
-            const DeepCollectionEquality()
-                .equals(other.trackPandoraId, trackPandoraId));
+            (identical(other.pandoraId, pandoraId) ||
+                other.pandoraId == pandoraId) &&
+            (identical(other.itemId, itemId) || other.itemId == itemId) &&
+            (identical(other.addedTimestamp, addedTimestamp) ||
+                other.addedTimestamp == addedTimestamp) &&
+            (identical(other.duration, duration) ||
+                other.duration == duration) &&
+            (identical(other.trackPandoraId, trackPandoraId) ||
+                other.trackPandoraId == trackPandoraId));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(pandoraId),
-      const DeepCollectionEquality().hash(itemId),
-      const DeepCollectionEquality().hash(addedTimestamp),
-      const DeepCollectionEquality().hash(duration),
-      const DeepCollectionEquality().hash(trackPandoraId));
+      runtimeType, pandoraId, itemId, addedTimestamp, duration, trackPandoraId);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_PlaylistTrackCopyWith<_$_PlaylistTrack> get copyWith =>
       __$$_PlaylistTrackCopyWithImpl<_$_PlaylistTrack>(this, _$identity);
 

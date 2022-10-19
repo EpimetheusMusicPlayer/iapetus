@@ -37,7 +37,8 @@ mixin _$FormFactor {
 abstract class $FormFactorCopyWith<$Res> {
   factory $FormFactorCopyWith(
           FormFactor value, $Res Function(FormFactor) then) =
-      _$FormFactorCopyWithImpl<$Res>;
+      _$FormFactorCopyWithImpl<$Res, FormFactor>;
+  @useResult
   $Res call(
       {@JsonKey(name: 'numRows') int? rowCount,
       @JsonKey(name: 'numCols') int? columnCount,
@@ -45,13 +46,16 @@ abstract class $FormFactorCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$FormFactorCopyWithImpl<$Res> implements $FormFactorCopyWith<$Res> {
+class _$FormFactorCopyWithImpl<$Res, $Val extends FormFactor>
+    implements $FormFactorCopyWith<$Res> {
   _$FormFactorCopyWithImpl(this._value, this._then);
 
-  final FormFactor _value;
   // ignore: unused_field
-  final $Res Function(FormFactor) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? rowCount = freezed,
@@ -59,19 +63,19 @@ class _$FormFactorCopyWithImpl<$Res> implements $FormFactorCopyWith<$Res> {
     Object? fractionSize = freezed,
   }) {
     return _then(_value.copyWith(
-      rowCount: rowCount == freezed
+      rowCount: freezed == rowCount
           ? _value.rowCount
           : rowCount // ignore: cast_nullable_to_non_nullable
               as int?,
-      columnCount: columnCount == freezed
+      columnCount: freezed == columnCount
           ? _value.columnCount
           : columnCount // ignore: cast_nullable_to_non_nullable
               as int?,
-      fractionSize: fractionSize == freezed
+      fractionSize: freezed == fractionSize
           ? _value.fractionSize
           : fractionSize // ignore: cast_nullable_to_non_nullable
               as double?,
-    ));
+    ) as $Val);
   }
 }
 
@@ -82,6 +86,7 @@ abstract class _$$_FormFactorCopyWith<$Res>
           _$_FormFactor value, $Res Function(_$_FormFactor) then) =
       __$$_FormFactorCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(name: 'numRows') int? rowCount,
       @JsonKey(name: 'numCols') int? columnCount,
@@ -89,15 +94,14 @@ abstract class _$$_FormFactorCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_FormFactorCopyWithImpl<$Res> extends _$FormFactorCopyWithImpl<$Res>
+class __$$_FormFactorCopyWithImpl<$Res>
+    extends _$FormFactorCopyWithImpl<$Res, _$_FormFactor>
     implements _$$_FormFactorCopyWith<$Res> {
   __$$_FormFactorCopyWithImpl(
       _$_FormFactor _value, $Res Function(_$_FormFactor) _then)
-      : super(_value, (v) => _then(v as _$_FormFactor));
+      : super(_value, _then);
 
-  @override
-  _$_FormFactor get _value => super._value as _$_FormFactor;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? rowCount = freezed,
@@ -105,15 +109,15 @@ class __$$_FormFactorCopyWithImpl<$Res> extends _$FormFactorCopyWithImpl<$Res>
     Object? fractionSize = freezed,
   }) {
     return _then(_$_FormFactor(
-      rowCount: rowCount == freezed
+      rowCount: freezed == rowCount
           ? _value.rowCount
           : rowCount // ignore: cast_nullable_to_non_nullable
               as int?,
-      columnCount: columnCount == freezed
+      columnCount: freezed == columnCount
           ? _value.columnCount
           : columnCount // ignore: cast_nullable_to_non_nullable
               as int?,
-      fractionSize: fractionSize == freezed
+      fractionSize: freezed == fractionSize
           ? _value.fractionSize
           : fractionSize // ignore: cast_nullable_to_non_nullable
               as double?,
@@ -152,23 +156,22 @@ class _$_FormFactor implements _FormFactor {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_FormFactor &&
-            const DeepCollectionEquality().equals(other.rowCount, rowCount) &&
-            const DeepCollectionEquality()
-                .equals(other.columnCount, columnCount) &&
-            const DeepCollectionEquality()
-                .equals(other.fractionSize, fractionSize));
+            (identical(other.rowCount, rowCount) ||
+                other.rowCount == rowCount) &&
+            (identical(other.columnCount, columnCount) ||
+                other.columnCount == columnCount) &&
+            (identical(other.fractionSize, fractionSize) ||
+                other.fractionSize == fractionSize));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(rowCount),
-      const DeepCollectionEquality().hash(columnCount),
-      const DeepCollectionEquality().hash(fractionSize));
+  int get hashCode =>
+      Object.hash(runtimeType, rowCount, columnCount, fractionSize);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_FormFactorCopyWith<_$_FormFactor> get copyWith =>
       __$$_FormFactorCopyWithImpl<_$_FormFactor>(this, _$identity);
 

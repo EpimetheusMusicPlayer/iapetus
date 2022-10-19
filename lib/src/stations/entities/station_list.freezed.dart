@@ -36,7 +36,8 @@ mixin _$StationList {
 abstract class $StationListCopyWith<$Res> {
   factory $StationListCopyWith(
           StationList value, $Res Function(StationList) then) =
-      _$StationListCopyWithImpl<$Res>;
+      _$StationListCopyWithImpl<$Res, StationList>;
+  @useResult
   $Res call(
       {@JsonKey(name: 'stations') List<Station> stations,
       @JsonKey(name: 'recommendations') SearchRecommendations recommendations});
@@ -45,35 +46,39 @@ abstract class $StationListCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$StationListCopyWithImpl<$Res> implements $StationListCopyWith<$Res> {
+class _$StationListCopyWithImpl<$Res, $Val extends StationList>
+    implements $StationListCopyWith<$Res> {
   _$StationListCopyWithImpl(this._value, this._then);
 
-  final StationList _value;
   // ignore: unused_field
-  final $Res Function(StationList) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? stations = freezed,
-    Object? recommendations = freezed,
+    Object? stations = null,
+    Object? recommendations = null,
   }) {
     return _then(_value.copyWith(
-      stations: stations == freezed
+      stations: null == stations
           ? _value.stations
           : stations // ignore: cast_nullable_to_non_nullable
               as List<Station>,
-      recommendations: recommendations == freezed
+      recommendations: null == recommendations
           ? _value.recommendations
           : recommendations // ignore: cast_nullable_to_non_nullable
               as SearchRecommendations,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $SearchRecommendationsCopyWith<$Res> get recommendations {
     return $SearchRecommendationsCopyWith<$Res>(_value.recommendations,
         (value) {
-      return _then(_value.copyWith(recommendations: value));
+      return _then(_value.copyWith(recommendations: value) as $Val);
     });
   }
 }
@@ -85,6 +90,7 @@ abstract class _$$_StationListCopyWith<$Res>
           _$_StationList value, $Res Function(_$_StationList) then) =
       __$$_StationListCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(name: 'stations') List<Station> stations,
       @JsonKey(name: 'recommendations') SearchRecommendations recommendations});
@@ -94,26 +100,25 @@ abstract class _$$_StationListCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_StationListCopyWithImpl<$Res> extends _$StationListCopyWithImpl<$Res>
+class __$$_StationListCopyWithImpl<$Res>
+    extends _$StationListCopyWithImpl<$Res, _$_StationList>
     implements _$$_StationListCopyWith<$Res> {
   __$$_StationListCopyWithImpl(
       _$_StationList _value, $Res Function(_$_StationList) _then)
-      : super(_value, (v) => _then(v as _$_StationList));
+      : super(_value, _then);
 
-  @override
-  _$_StationList get _value => super._value as _$_StationList;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? stations = freezed,
-    Object? recommendations = freezed,
+    Object? stations = null,
+    Object? recommendations = null,
   }) {
     return _then(_$_StationList(
-      stations: stations == freezed
+      stations: null == stations
           ? _value._stations
           : stations // ignore: cast_nullable_to_non_nullable
               as List<Station>,
-      recommendations: recommendations == freezed
+      recommendations: null == recommendations
           ? _value.recommendations
           : recommendations // ignore: cast_nullable_to_non_nullable
               as SearchRecommendations,
@@ -155,19 +160,18 @@ class _$_StationList implements _StationList {
         (other.runtimeType == runtimeType &&
             other is _$_StationList &&
             const DeepCollectionEquality().equals(other._stations, _stations) &&
-            const DeepCollectionEquality()
-                .equals(other.recommendations, recommendations));
+            (identical(other.recommendations, recommendations) ||
+                other.recommendations == recommendations));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(_stations),
-      const DeepCollectionEquality().hash(recommendations));
+  int get hashCode => Object.hash(runtimeType,
+      const DeepCollectionEquality().hash(_stations), recommendations);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_StationListCopyWith<_$_StationList> get copyWith =>
       __$$_StationListCopyWithImpl<_$_StationList>(this, _$identity);
 

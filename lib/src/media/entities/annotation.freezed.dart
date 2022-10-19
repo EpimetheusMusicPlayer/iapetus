@@ -445,7 +445,7 @@ mixin _$MediaAnnotation {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -483,7 +483,7 @@ mixin _$MediaAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         track,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -519,7 +519,7 @@ mixin _$MediaAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         artist,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -561,7 +561,7 @@ mixin _$MediaAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         album,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -591,7 +591,7 @@ mixin _$MediaAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         artistMessage,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -615,7 +615,7 @@ mixin _$MediaAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         genre,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'allowFeedback', fromJson: readOptInBool, toJson: writeOptInBool)
@@ -665,7 +665,7 @@ mixin _$MediaAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         playlist,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'stationName')
                 String name,
             @JsonKey(name: 'stationId')
@@ -687,7 +687,7 @@ mixin _$MediaAnnotation {
             @JsonKey(name: 'pandoraId')
                 String pandoraId)?
         station,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -729,7 +729,7 @@ mixin _$MediaAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         podcast,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'aliases')
@@ -743,7 +743,7 @@ mixin _$MediaAnnotation {
             @JsonKey(name: 'scope')
                 String scope)?
         podcastCategory,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -781,7 +781,7 @@ mixin _$MediaAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         episode,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -797,7 +797,7 @@ mixin _$MediaAnnotation {
             @JsonKey(name: 'scope')
                 String scope)?
         curator,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -821,7 +821,7 @@ mixin _$MediaAnnotation {
             @JsonKey(name: 'scope')
                 String scope)?
         composer,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'listenerId') int listenerId,
             @JsonKey(name: 'webname') String webname,
             @JsonKey(name: 'fullname') String? fullName,
@@ -1243,19 +1243,19 @@ mixin _$MediaAnnotation {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(TrackAnnotation value)? track,
-    TResult Function(ArtistAnnotation value)? artist,
-    TResult Function(AlbumAnnotation value)? album,
-    TResult Function(ArtistMessageAnnotation value)? artistMessage,
-    TResult Function(GenreAnnotation value)? genre,
-    TResult Function(PlaylistAnnotation value)? playlist,
-    TResult Function(StationAnnotation value)? station,
-    TResult Function(PodcastAnnotation value)? podcast,
-    TResult Function(PodcastCategoryAnnotation value)? podcastCategory,
-    TResult Function(EpisodeAnnotation value)? episode,
-    TResult Function(CuratorAnnotation value)? curator,
-    TResult Function(ComposerAnnotation value)? composer,
-    TResult Function(ListenerAnnotation value)? listener,
+    TResult? Function(TrackAnnotation value)? track,
+    TResult? Function(ArtistAnnotation value)? artist,
+    TResult? Function(AlbumAnnotation value)? album,
+    TResult? Function(ArtistMessageAnnotation value)? artistMessage,
+    TResult? Function(GenreAnnotation value)? genre,
+    TResult? Function(PlaylistAnnotation value)? playlist,
+    TResult? Function(StationAnnotation value)? station,
+    TResult? Function(PodcastAnnotation value)? podcast,
+    TResult? Function(PodcastCategoryAnnotation value)? podcastCategory,
+    TResult? Function(EpisodeAnnotation value)? episode,
+    TResult? Function(CuratorAnnotation value)? curator,
+    TResult? Function(ComposerAnnotation value)? composer,
+    TResult? Function(ListenerAnnotation value)? listener,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -1286,29 +1286,32 @@ mixin _$MediaAnnotation {
 abstract class $MediaAnnotationCopyWith<$Res> {
   factory $MediaAnnotationCopyWith(
           MediaAnnotation value, $Res Function(MediaAnnotation) then) =
-      _$MediaAnnotationCopyWithImpl<$Res>;
+      _$MediaAnnotationCopyWithImpl<$Res, MediaAnnotation>;
+  @useResult
   $Res call({@JsonKey(name: 'pandoraId') String pandoraId});
 }
 
 /// @nodoc
-class _$MediaAnnotationCopyWithImpl<$Res>
+class _$MediaAnnotationCopyWithImpl<$Res, $Val extends MediaAnnotation>
     implements $MediaAnnotationCopyWith<$Res> {
   _$MediaAnnotationCopyWithImpl(this._value, this._then);
 
-  final MediaAnnotation _value;
   // ignore: unused_field
-  final $Res Function(MediaAnnotation) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? pandoraId = freezed,
+    Object? pandoraId = null,
   }) {
     return _then(_value.copyWith(
-      pandoraId: pandoraId == freezed
+      pandoraId: null == pandoraId
           ? _value.pandoraId
           : pandoraId // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -1319,6 +1322,7 @@ abstract class _$$TrackAnnotationCopyWith<$Res>
           _$TrackAnnotation value, $Res Function(_$TrackAnnotation) then) =
       __$$TrackAnnotationCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(name: 'name')
           String name,
@@ -1363,106 +1367,104 @@ abstract class _$$TrackAnnotationCopyWith<$Res>
 
 /// @nodoc
 class __$$TrackAnnotationCopyWithImpl<$Res>
-    extends _$MediaAnnotationCopyWithImpl<$Res>
+    extends _$MediaAnnotationCopyWithImpl<$Res, _$TrackAnnotation>
     implements _$$TrackAnnotationCopyWith<$Res> {
   __$$TrackAnnotationCopyWithImpl(
       _$TrackAnnotation _value, $Res Function(_$TrackAnnotation) _then)
-      : super(_value, (v) => _then(v as _$TrackAnnotation));
+      : super(_value, _then);
 
-  @override
-  _$TrackAnnotation get _value => super._value as _$TrackAnnotation;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? name = freezed,
-    Object? sortableName = freezed,
-    Object? duration = freezed,
-    Object? trackNumber = freezed,
+    Object? name = null,
+    Object? sortableName = null,
+    Object? duration = null,
+    Object? trackNumber = null,
     Object? icon = freezed,
-    Object? rightsInfo = freezed,
-    Object? albumId = freezed,
-    Object? albumName = freezed,
-    Object? artistId = freezed,
-    Object? artistName = freezed,
-    Object? explicitness = freezed,
-    Object? shareableUrlPath = freezed,
-    Object? hasRadio = freezed,
-    Object? modificationTime = freezed,
-    Object? slugPlusPandoraId = freezed,
-    Object? isrc = freezed,
-    Object? pandoraId = freezed,
-    Object? scope = freezed,
+    Object? rightsInfo = null,
+    Object? albumId = null,
+    Object? albumName = null,
+    Object? artistId = null,
+    Object? artistName = null,
+    Object? explicitness = null,
+    Object? shareableUrlPath = null,
+    Object? hasRadio = null,
+    Object? modificationTime = null,
+    Object? slugPlusPandoraId = null,
+    Object? isrc = null,
+    Object? pandoraId = null,
+    Object? scope = null,
   }) {
     return _then(_$TrackAnnotation(
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      sortableName: sortableName == freezed
+      sortableName: null == sortableName
           ? _value.sortableName
           : sortableName // ignore: cast_nullable_to_non_nullable
               as String,
-      duration: duration == freezed
+      duration: null == duration
           ? _value.duration
           : duration // ignore: cast_nullable_to_non_nullable
               as Duration,
-      trackNumber: trackNumber == freezed
+      trackNumber: null == trackNumber
           ? _value.trackNumber
           : trackNumber // ignore: cast_nullable_to_non_nullable
               as int,
-      icon: icon == freezed
+      icon: freezed == icon
           ? _value.icon
           : icon // ignore: cast_nullable_to_non_nullable
               as MediaIcon?,
-      rightsInfo: rightsInfo == freezed
+      rightsInfo: null == rightsInfo
           ? _value.rightsInfo
           : rightsInfo // ignore: cast_nullable_to_non_nullable
               as RightsInfo,
-      albumId: albumId == freezed
+      albumId: null == albumId
           ? _value.albumId
           : albumId // ignore: cast_nullable_to_non_nullable
               as String,
-      albumName: albumName == freezed
+      albumName: null == albumName
           ? _value.albumName
           : albumName // ignore: cast_nullable_to_non_nullable
               as String,
-      artistId: artistId == freezed
+      artistId: null == artistId
           ? _value.artistId
           : artistId // ignore: cast_nullable_to_non_nullable
               as String,
-      artistName: artistName == freezed
+      artistName: null == artistName
           ? _value.artistName
           : artistName // ignore: cast_nullable_to_non_nullable
               as String,
-      explicitness: explicitness == freezed
+      explicitness: null == explicitness
           ? _value.explicitness
           : explicitness // ignore: cast_nullable_to_non_nullable
               as Explicitness,
-      shareableUrlPath: shareableUrlPath == freezed
+      shareableUrlPath: null == shareableUrlPath
           ? _value.shareableUrlPath
           : shareableUrlPath // ignore: cast_nullable_to_non_nullable
               as String,
-      hasRadio: hasRadio == freezed
+      hasRadio: null == hasRadio
           ? _value.hasRadio
           : hasRadio // ignore: cast_nullable_to_non_nullable
               as bool,
-      modificationTime: modificationTime == freezed
+      modificationTime: null == modificationTime
           ? _value.modificationTime
           : modificationTime // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      slugPlusPandoraId: slugPlusPandoraId == freezed
+      slugPlusPandoraId: null == slugPlusPandoraId
           ? _value.slugPlusPandoraId
           : slugPlusPandoraId // ignore: cast_nullable_to_non_nullable
               as String,
-      isrc: isrc == freezed
+      isrc: null == isrc
           ? _value.isrc
           : isrc // ignore: cast_nullable_to_non_nullable
               as String,
-      pandoraId: pandoraId == freezed
+      pandoraId: null == pandoraId
           ? _value.pandoraId
           : pandoraId // ignore: cast_nullable_to_non_nullable
               as String,
-      scope: scope == freezed
+      scope: null == scope
           ? _value.scope
           : scope // ignore: cast_nullable_to_non_nullable
               as Scope,
@@ -1470,6 +1472,7 @@ class __$$TrackAnnotationCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $MediaIconCopyWith<$Res>? get icon {
     if (_value.icon == null) {
       return null;
@@ -1481,6 +1484,7 @@ class __$$TrackAnnotationCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $RightsInfoCopyWith<$Res> get rightsInfo {
     return $RightsInfoCopyWith<$Res>(_value.rightsInfo, (value) {
       return _then(_value.copyWith(rightsInfo: value));
@@ -1609,59 +1613,65 @@ class _$TrackAnnotation extends TrackAnnotation {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$TrackAnnotation &&
-            const DeepCollectionEquality().equals(other.name, name) &&
-            const DeepCollectionEquality()
-                .equals(other.sortableName, sortableName) &&
-            const DeepCollectionEquality().equals(other.duration, duration) &&
-            const DeepCollectionEquality()
-                .equals(other.trackNumber, trackNumber) &&
-            const DeepCollectionEquality().equals(other.icon, icon) &&
-            const DeepCollectionEquality()
-                .equals(other.rightsInfo, rightsInfo) &&
-            const DeepCollectionEquality().equals(other.albumId, albumId) &&
-            const DeepCollectionEquality().equals(other.albumName, albumName) &&
-            const DeepCollectionEquality().equals(other.artistId, artistId) &&
-            const DeepCollectionEquality()
-                .equals(other.artistName, artistName) &&
-            const DeepCollectionEquality()
-                .equals(other.explicitness, explicitness) &&
-            const DeepCollectionEquality()
-                .equals(other.shareableUrlPath, shareableUrlPath) &&
-            const DeepCollectionEquality().equals(other.hasRadio, hasRadio) &&
-            const DeepCollectionEquality()
-                .equals(other.modificationTime, modificationTime) &&
-            const DeepCollectionEquality()
-                .equals(other.slugPlusPandoraId, slugPlusPandoraId) &&
-            const DeepCollectionEquality().equals(other.isrc, isrc) &&
-            const DeepCollectionEquality().equals(other.pandoraId, pandoraId) &&
-            const DeepCollectionEquality().equals(other.scope, scope));
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.sortableName, sortableName) ||
+                other.sortableName == sortableName) &&
+            (identical(other.duration, duration) ||
+                other.duration == duration) &&
+            (identical(other.trackNumber, trackNumber) ||
+                other.trackNumber == trackNumber) &&
+            (identical(other.icon, icon) || other.icon == icon) &&
+            (identical(other.rightsInfo, rightsInfo) ||
+                other.rightsInfo == rightsInfo) &&
+            (identical(other.albumId, albumId) || other.albumId == albumId) &&
+            (identical(other.albumName, albumName) ||
+                other.albumName == albumName) &&
+            (identical(other.artistId, artistId) ||
+                other.artistId == artistId) &&
+            (identical(other.artistName, artistName) ||
+                other.artistName == artistName) &&
+            (identical(other.explicitness, explicitness) ||
+                other.explicitness == explicitness) &&
+            (identical(other.shareableUrlPath, shareableUrlPath) ||
+                other.shareableUrlPath == shareableUrlPath) &&
+            (identical(other.hasRadio, hasRadio) ||
+                other.hasRadio == hasRadio) &&
+            (identical(other.modificationTime, modificationTime) ||
+                other.modificationTime == modificationTime) &&
+            (identical(other.slugPlusPandoraId, slugPlusPandoraId) ||
+                other.slugPlusPandoraId == slugPlusPandoraId) &&
+            (identical(other.isrc, isrc) || other.isrc == isrc) &&
+            (identical(other.pandoraId, pandoraId) ||
+                other.pandoraId == pandoraId) &&
+            (identical(other.scope, scope) || other.scope == scope));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(name),
-      const DeepCollectionEquality().hash(sortableName),
-      const DeepCollectionEquality().hash(duration),
-      const DeepCollectionEquality().hash(trackNumber),
-      const DeepCollectionEquality().hash(icon),
-      const DeepCollectionEquality().hash(rightsInfo),
-      const DeepCollectionEquality().hash(albumId),
-      const DeepCollectionEquality().hash(albumName),
-      const DeepCollectionEquality().hash(artistId),
-      const DeepCollectionEquality().hash(artistName),
-      const DeepCollectionEquality().hash(explicitness),
-      const DeepCollectionEquality().hash(shareableUrlPath),
-      const DeepCollectionEquality().hash(hasRadio),
-      const DeepCollectionEquality().hash(modificationTime),
-      const DeepCollectionEquality().hash(slugPlusPandoraId),
-      const DeepCollectionEquality().hash(isrc),
-      const DeepCollectionEquality().hash(pandoraId),
-      const DeepCollectionEquality().hash(scope));
+      name,
+      sortableName,
+      duration,
+      trackNumber,
+      icon,
+      rightsInfo,
+      albumId,
+      albumName,
+      artistId,
+      artistName,
+      explicitness,
+      shareableUrlPath,
+      hasRadio,
+      modificationTime,
+      slugPlusPandoraId,
+      isrc,
+      pandoraId,
+      scope);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$TrackAnnotationCopyWith<_$TrackAnnotation> get copyWith =>
       __$$TrackAnnotationCopyWithImpl<_$TrackAnnotation>(this, _$identity);
 
@@ -2079,7 +2089,7 @@ class _$TrackAnnotation extends TrackAnnotation {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -2117,7 +2127,7 @@ class _$TrackAnnotation extends TrackAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         track,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -2153,7 +2163,7 @@ class _$TrackAnnotation extends TrackAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         artist,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -2195,7 +2205,7 @@ class _$TrackAnnotation extends TrackAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         album,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -2225,7 +2235,7 @@ class _$TrackAnnotation extends TrackAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         artistMessage,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -2249,7 +2259,7 @@ class _$TrackAnnotation extends TrackAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         genre,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'allowFeedback', fromJson: readOptInBool, toJson: writeOptInBool)
@@ -2299,7 +2309,7 @@ class _$TrackAnnotation extends TrackAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         playlist,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'stationName')
                 String name,
             @JsonKey(name: 'stationId')
@@ -2321,7 +2331,7 @@ class _$TrackAnnotation extends TrackAnnotation {
             @JsonKey(name: 'pandoraId')
                 String pandoraId)?
         station,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -2363,7 +2373,7 @@ class _$TrackAnnotation extends TrackAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         podcast,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'aliases')
@@ -2377,7 +2387,7 @@ class _$TrackAnnotation extends TrackAnnotation {
             @JsonKey(name: 'scope')
                 String scope)?
         podcastCategory,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -2415,7 +2425,7 @@ class _$TrackAnnotation extends TrackAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         episode,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -2431,7 +2441,7 @@ class _$TrackAnnotation extends TrackAnnotation {
             @JsonKey(name: 'scope')
                 String scope)?
         curator,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -2455,7 +2465,7 @@ class _$TrackAnnotation extends TrackAnnotation {
             @JsonKey(name: 'scope')
                 String scope)?
         composer,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'listenerId') int listenerId,
             @JsonKey(name: 'webname') String webname,
             @JsonKey(name: 'fullname') String? fullName,
@@ -2925,19 +2935,19 @@ class _$TrackAnnotation extends TrackAnnotation {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(TrackAnnotation value)? track,
-    TResult Function(ArtistAnnotation value)? artist,
-    TResult Function(AlbumAnnotation value)? album,
-    TResult Function(ArtistMessageAnnotation value)? artistMessage,
-    TResult Function(GenreAnnotation value)? genre,
-    TResult Function(PlaylistAnnotation value)? playlist,
-    TResult Function(StationAnnotation value)? station,
-    TResult Function(PodcastAnnotation value)? podcast,
-    TResult Function(PodcastCategoryAnnotation value)? podcastCategory,
-    TResult Function(EpisodeAnnotation value)? episode,
-    TResult Function(CuratorAnnotation value)? curator,
-    TResult Function(ComposerAnnotation value)? composer,
-    TResult Function(ListenerAnnotation value)? listener,
+    TResult? Function(TrackAnnotation value)? track,
+    TResult? Function(ArtistAnnotation value)? artist,
+    TResult? Function(AlbumAnnotation value)? album,
+    TResult? Function(ArtistMessageAnnotation value)? artistMessage,
+    TResult? Function(GenreAnnotation value)? genre,
+    TResult? Function(PlaylistAnnotation value)? playlist,
+    TResult? Function(StationAnnotation value)? station,
+    TResult? Function(PodcastAnnotation value)? podcast,
+    TResult? Function(PodcastCategoryAnnotation value)? podcastCategory,
+    TResult? Function(EpisodeAnnotation value)? episode,
+    TResult? Function(CuratorAnnotation value)? curator,
+    TResult? Function(ComposerAnnotation value)? composer,
+    TResult? Function(ListenerAnnotation value)? listener,
   }) {
     return track?.call(this);
   }
@@ -3073,6 +3083,7 @@ abstract class _$$ArtistAnnotationCopyWith<$Res>
           _$ArtistAnnotation value, $Res Function(_$ArtistAnnotation) then) =
       __$$ArtistAnnotationCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(name: 'name')
           String name,
@@ -3114,101 +3125,99 @@ abstract class _$$ArtistAnnotationCopyWith<$Res>
 
 /// @nodoc
 class __$$ArtistAnnotationCopyWithImpl<$Res>
-    extends _$MediaAnnotationCopyWithImpl<$Res>
+    extends _$MediaAnnotationCopyWithImpl<$Res, _$ArtistAnnotation>
     implements _$$ArtistAnnotationCopyWith<$Res> {
   __$$ArtistAnnotationCopyWithImpl(
       _$ArtistAnnotation _value, $Res Function(_$ArtistAnnotation) _then)
-      : super(_value, (v) => _then(v as _$ArtistAnnotation));
+      : super(_value, _then);
 
-  @override
-  _$ArtistAnnotation get _value => super._value as _$ArtistAnnotation;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? name = freezed,
-    Object? sortableName = freezed,
-    Object? trackCount = freezed,
-    Object? albumCount = freezed,
+    Object? name = null,
+    Object? sortableName = null,
+    Object? trackCount = null,
+    Object? albumCount = null,
     Object? icon = freezed,
-    Object? shareableUrlPath = freezed,
+    Object? shareableUrlPath = null,
     Object? twitterHandle = freezed,
-    Object? hasRadio = freezed,
-    Object? modificationTime = freezed,
-    Object? slugPlusPandoraId = freezed,
-    Object? collaboration = freezed,
-    Object? primaryArtistIds = freezed,
-    Object? variousArtist = freezed,
-    Object? megastar = freezed,
-    Object? hasTakeoverModes = freezed,
-    Object? pandoraId = freezed,
-    Object? scope = freezed,
+    Object? hasRadio = null,
+    Object? modificationTime = null,
+    Object? slugPlusPandoraId = null,
+    Object? collaboration = null,
+    Object? primaryArtistIds = null,
+    Object? variousArtist = null,
+    Object? megastar = null,
+    Object? hasTakeoverModes = null,
+    Object? pandoraId = null,
+    Object? scope = null,
   }) {
     return _then(_$ArtistAnnotation(
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      sortableName: sortableName == freezed
+      sortableName: null == sortableName
           ? _value.sortableName
           : sortableName // ignore: cast_nullable_to_non_nullable
               as String,
-      trackCount: trackCount == freezed
+      trackCount: null == trackCount
           ? _value.trackCount
           : trackCount // ignore: cast_nullable_to_non_nullable
               as int,
-      albumCount: albumCount == freezed
+      albumCount: null == albumCount
           ? _value.albumCount
           : albumCount // ignore: cast_nullable_to_non_nullable
               as int,
-      icon: icon == freezed
+      icon: freezed == icon
           ? _value.icon
           : icon // ignore: cast_nullable_to_non_nullable
               as MediaIcon?,
-      shareableUrlPath: shareableUrlPath == freezed
+      shareableUrlPath: null == shareableUrlPath
           ? _value.shareableUrlPath
           : shareableUrlPath // ignore: cast_nullable_to_non_nullable
               as String,
-      twitterHandle: twitterHandle == freezed
+      twitterHandle: freezed == twitterHandle
           ? _value.twitterHandle
           : twitterHandle // ignore: cast_nullable_to_non_nullable
               as String?,
-      hasRadio: hasRadio == freezed
+      hasRadio: null == hasRadio
           ? _value.hasRadio
           : hasRadio // ignore: cast_nullable_to_non_nullable
               as bool,
-      modificationTime: modificationTime == freezed
+      modificationTime: null == modificationTime
           ? _value.modificationTime
           : modificationTime // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      slugPlusPandoraId: slugPlusPandoraId == freezed
+      slugPlusPandoraId: null == slugPlusPandoraId
           ? _value.slugPlusPandoraId
           : slugPlusPandoraId // ignore: cast_nullable_to_non_nullable
               as String,
-      collaboration: collaboration == freezed
+      collaboration: null == collaboration
           ? _value.collaboration
           : collaboration // ignore: cast_nullable_to_non_nullable
               as bool,
-      primaryArtistIds: primaryArtistIds == freezed
+      primaryArtistIds: null == primaryArtistIds
           ? _value._primaryArtistIds
           : primaryArtistIds // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      variousArtist: variousArtist == freezed
+      variousArtist: null == variousArtist
           ? _value.variousArtist
           : variousArtist // ignore: cast_nullable_to_non_nullable
               as bool,
-      megastar: megastar == freezed
+      megastar: null == megastar
           ? _value.megastar
           : megastar // ignore: cast_nullable_to_non_nullable
               as bool,
-      hasTakeoverModes: hasTakeoverModes == freezed
+      hasTakeoverModes: null == hasTakeoverModes
           ? _value.hasTakeoverModes
           : hasTakeoverModes // ignore: cast_nullable_to_non_nullable
               as bool,
-      pandoraId: pandoraId == freezed
+      pandoraId: null == pandoraId
           ? _value.pandoraId
           : pandoraId // ignore: cast_nullable_to_non_nullable
               as String,
-      scope: scope == freezed
+      scope: null == scope
           ? _value.scope
           : scope // ignore: cast_nullable_to_non_nullable
               as Scope,
@@ -3216,6 +3225,7 @@ class __$$ArtistAnnotationCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $MediaIconCopyWith<$Res>? get icon {
     if (_value.icon == null) {
       return null;
@@ -3349,60 +3359,64 @@ class _$ArtistAnnotation extends ArtistAnnotation {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ArtistAnnotation &&
-            const DeepCollectionEquality().equals(other.name, name) &&
-            const DeepCollectionEquality()
-                .equals(other.sortableName, sortableName) &&
-            const DeepCollectionEquality()
-                .equals(other.trackCount, trackCount) &&
-            const DeepCollectionEquality()
-                .equals(other.albumCount, albumCount) &&
-            const DeepCollectionEquality().equals(other.icon, icon) &&
-            const DeepCollectionEquality()
-                .equals(other.shareableUrlPath, shareableUrlPath) &&
-            const DeepCollectionEquality()
-                .equals(other.twitterHandle, twitterHandle) &&
-            const DeepCollectionEquality().equals(other.hasRadio, hasRadio) &&
-            const DeepCollectionEquality()
-                .equals(other.modificationTime, modificationTime) &&
-            const DeepCollectionEquality()
-                .equals(other.slugPlusPandoraId, slugPlusPandoraId) &&
-            const DeepCollectionEquality()
-                .equals(other.collaboration, collaboration) &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.sortableName, sortableName) ||
+                other.sortableName == sortableName) &&
+            (identical(other.trackCount, trackCount) ||
+                other.trackCount == trackCount) &&
+            (identical(other.albumCount, albumCount) ||
+                other.albumCount == albumCount) &&
+            (identical(other.icon, icon) || other.icon == icon) &&
+            (identical(other.shareableUrlPath, shareableUrlPath) ||
+                other.shareableUrlPath == shareableUrlPath) &&
+            (identical(other.twitterHandle, twitterHandle) ||
+                other.twitterHandle == twitterHandle) &&
+            (identical(other.hasRadio, hasRadio) ||
+                other.hasRadio == hasRadio) &&
+            (identical(other.modificationTime, modificationTime) ||
+                other.modificationTime == modificationTime) &&
+            (identical(other.slugPlusPandoraId, slugPlusPandoraId) ||
+                other.slugPlusPandoraId == slugPlusPandoraId) &&
+            (identical(other.collaboration, collaboration) ||
+                other.collaboration == collaboration) &&
             const DeepCollectionEquality()
                 .equals(other._primaryArtistIds, _primaryArtistIds) &&
-            const DeepCollectionEquality()
-                .equals(other.variousArtist, variousArtist) &&
-            const DeepCollectionEquality().equals(other.megastar, megastar) &&
-            const DeepCollectionEquality()
-                .equals(other.hasTakeoverModes, hasTakeoverModes) &&
-            const DeepCollectionEquality().equals(other.pandoraId, pandoraId) &&
-            const DeepCollectionEquality().equals(other.scope, scope));
+            (identical(other.variousArtist, variousArtist) ||
+                other.variousArtist == variousArtist) &&
+            (identical(other.megastar, megastar) ||
+                other.megastar == megastar) &&
+            (identical(other.hasTakeoverModes, hasTakeoverModes) ||
+                other.hasTakeoverModes == hasTakeoverModes) &&
+            (identical(other.pandoraId, pandoraId) ||
+                other.pandoraId == pandoraId) &&
+            (identical(other.scope, scope) || other.scope == scope));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(name),
-      const DeepCollectionEquality().hash(sortableName),
-      const DeepCollectionEquality().hash(trackCount),
-      const DeepCollectionEquality().hash(albumCount),
-      const DeepCollectionEquality().hash(icon),
-      const DeepCollectionEquality().hash(shareableUrlPath),
-      const DeepCollectionEquality().hash(twitterHandle),
-      const DeepCollectionEquality().hash(hasRadio),
-      const DeepCollectionEquality().hash(modificationTime),
-      const DeepCollectionEquality().hash(slugPlusPandoraId),
-      const DeepCollectionEquality().hash(collaboration),
+      name,
+      sortableName,
+      trackCount,
+      albumCount,
+      icon,
+      shareableUrlPath,
+      twitterHandle,
+      hasRadio,
+      modificationTime,
+      slugPlusPandoraId,
+      collaboration,
       const DeepCollectionEquality().hash(_primaryArtistIds),
-      const DeepCollectionEquality().hash(variousArtist),
-      const DeepCollectionEquality().hash(megastar),
-      const DeepCollectionEquality().hash(hasTakeoverModes),
-      const DeepCollectionEquality().hash(pandoraId),
-      const DeepCollectionEquality().hash(scope));
+      variousArtist,
+      megastar,
+      hasTakeoverModes,
+      pandoraId,
+      scope);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$ArtistAnnotationCopyWith<_$ArtistAnnotation> get copyWith =>
       __$$ArtistAnnotationCopyWithImpl<_$ArtistAnnotation>(this, _$identity);
 
@@ -3819,7 +3833,7 @@ class _$ArtistAnnotation extends ArtistAnnotation {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -3857,7 +3871,7 @@ class _$ArtistAnnotation extends ArtistAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         track,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -3893,7 +3907,7 @@ class _$ArtistAnnotation extends ArtistAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         artist,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -3935,7 +3949,7 @@ class _$ArtistAnnotation extends ArtistAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         album,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -3965,7 +3979,7 @@ class _$ArtistAnnotation extends ArtistAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         artistMessage,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -3989,7 +4003,7 @@ class _$ArtistAnnotation extends ArtistAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         genre,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'allowFeedback', fromJson: readOptInBool, toJson: writeOptInBool)
@@ -4039,7 +4053,7 @@ class _$ArtistAnnotation extends ArtistAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         playlist,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'stationName')
                 String name,
             @JsonKey(name: 'stationId')
@@ -4061,7 +4075,7 @@ class _$ArtistAnnotation extends ArtistAnnotation {
             @JsonKey(name: 'pandoraId')
                 String pandoraId)?
         station,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -4103,7 +4117,7 @@ class _$ArtistAnnotation extends ArtistAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         podcast,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'aliases')
@@ -4117,7 +4131,7 @@ class _$ArtistAnnotation extends ArtistAnnotation {
             @JsonKey(name: 'scope')
                 String scope)?
         podcastCategory,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -4155,7 +4169,7 @@ class _$ArtistAnnotation extends ArtistAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         episode,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -4171,7 +4185,7 @@ class _$ArtistAnnotation extends ArtistAnnotation {
             @JsonKey(name: 'scope')
                 String scope)?
         curator,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -4195,7 +4209,7 @@ class _$ArtistAnnotation extends ArtistAnnotation {
             @JsonKey(name: 'scope')
                 String scope)?
         composer,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'listenerId') int listenerId,
             @JsonKey(name: 'webname') String webname,
             @JsonKey(name: 'fullname') String? fullName,
@@ -4663,19 +4677,19 @@ class _$ArtistAnnotation extends ArtistAnnotation {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(TrackAnnotation value)? track,
-    TResult Function(ArtistAnnotation value)? artist,
-    TResult Function(AlbumAnnotation value)? album,
-    TResult Function(ArtistMessageAnnotation value)? artistMessage,
-    TResult Function(GenreAnnotation value)? genre,
-    TResult Function(PlaylistAnnotation value)? playlist,
-    TResult Function(StationAnnotation value)? station,
-    TResult Function(PodcastAnnotation value)? podcast,
-    TResult Function(PodcastCategoryAnnotation value)? podcastCategory,
-    TResult Function(EpisodeAnnotation value)? episode,
-    TResult Function(CuratorAnnotation value)? curator,
-    TResult Function(ComposerAnnotation value)? composer,
-    TResult Function(ListenerAnnotation value)? listener,
+    TResult? Function(TrackAnnotation value)? track,
+    TResult? Function(ArtistAnnotation value)? artist,
+    TResult? Function(AlbumAnnotation value)? album,
+    TResult? Function(ArtistMessageAnnotation value)? artistMessage,
+    TResult? Function(GenreAnnotation value)? genre,
+    TResult? Function(PlaylistAnnotation value)? playlist,
+    TResult? Function(StationAnnotation value)? station,
+    TResult? Function(PodcastAnnotation value)? podcast,
+    TResult? Function(PodcastCategoryAnnotation value)? podcastCategory,
+    TResult? Function(EpisodeAnnotation value)? episode,
+    TResult? Function(CuratorAnnotation value)? curator,
+    TResult? Function(ComposerAnnotation value)? composer,
+    TResult? Function(ListenerAnnotation value)? listener,
   }) {
     return artist?.call(this);
   }
@@ -4807,6 +4821,7 @@ abstract class _$$AlbumAnnotationCopyWith<$Res>
           _$AlbumAnnotation value, $Res Function(_$AlbumAnnotation) then) =
       __$$AlbumAnnotationCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(name: 'name')
           String name,
@@ -4855,116 +4870,114 @@ abstract class _$$AlbumAnnotationCopyWith<$Res>
 
 /// @nodoc
 class __$$AlbumAnnotationCopyWithImpl<$Res>
-    extends _$MediaAnnotationCopyWithImpl<$Res>
+    extends _$MediaAnnotationCopyWithImpl<$Res, _$AlbumAnnotation>
     implements _$$AlbumAnnotationCopyWith<$Res> {
   __$$AlbumAnnotationCopyWithImpl(
       _$AlbumAnnotation _value, $Res Function(_$AlbumAnnotation) _then)
-      : super(_value, (v) => _then(v as _$AlbumAnnotation));
+      : super(_value, _then);
 
-  @override
-  _$AlbumAnnotation get _value => super._value as _$AlbumAnnotation;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? name = freezed,
-    Object? sortableName = freezed,
+    Object? name = null,
+    Object? sortableName = null,
     Object? releaseDate = freezed,
-    Object? duration = freezed,
-    Object? trackCount = freezed,
-    Object? isCompilation = freezed,
+    Object? duration = null,
+    Object? trackCount = null,
+    Object? isCompilation = null,
     Object? icon = freezed,
-    Object? rightsInfo = freezed,
-    Object? trackIds = freezed,
-    Object? artistId = freezed,
-    Object? artistName = freezed,
-    Object? explicitness = freezed,
-    Object? shareableUrlPath = freezed,
-    Object? modificationTime = freezed,
-    Object? slugPlusPandoraId = freezed,
-    Object? hasRadio = freezed,
-    Object? releaseType = freezed,
-    Object? listenerReleaseType = freezed,
-    Object? pandoraId = freezed,
-    Object? scope = freezed,
+    Object? rightsInfo = null,
+    Object? trackIds = null,
+    Object? artistId = null,
+    Object? artistName = null,
+    Object? explicitness = null,
+    Object? shareableUrlPath = null,
+    Object? modificationTime = null,
+    Object? slugPlusPandoraId = null,
+    Object? hasRadio = null,
+    Object? releaseType = null,
+    Object? listenerReleaseType = null,
+    Object? pandoraId = null,
+    Object? scope = null,
   }) {
     return _then(_$AlbumAnnotation(
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      sortableName: sortableName == freezed
+      sortableName: null == sortableName
           ? _value.sortableName
           : sortableName // ignore: cast_nullable_to_non_nullable
               as String,
-      releaseDate: releaseDate == freezed
+      releaseDate: freezed == releaseDate
           ? _value.releaseDate
           : releaseDate // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      duration: duration == freezed
+      duration: null == duration
           ? _value.duration
           : duration // ignore: cast_nullable_to_non_nullable
               as Duration,
-      trackCount: trackCount == freezed
+      trackCount: null == trackCount
           ? _value.trackCount
           : trackCount // ignore: cast_nullable_to_non_nullable
               as int,
-      isCompilation: isCompilation == freezed
+      isCompilation: null == isCompilation
           ? _value.isCompilation
           : isCompilation // ignore: cast_nullable_to_non_nullable
               as bool,
-      icon: icon == freezed
+      icon: freezed == icon
           ? _value.icon
           : icon // ignore: cast_nullable_to_non_nullable
               as MediaIcon?,
-      rightsInfo: rightsInfo == freezed
+      rightsInfo: null == rightsInfo
           ? _value.rightsInfo
           : rightsInfo // ignore: cast_nullable_to_non_nullable
               as RightsInfo,
-      trackIds: trackIds == freezed
+      trackIds: null == trackIds
           ? _value._trackIds
           : trackIds // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      artistId: artistId == freezed
+      artistId: null == artistId
           ? _value.artistId
           : artistId // ignore: cast_nullable_to_non_nullable
               as String,
-      artistName: artistName == freezed
+      artistName: null == artistName
           ? _value.artistName
           : artistName // ignore: cast_nullable_to_non_nullable
               as String,
-      explicitness: explicitness == freezed
+      explicitness: null == explicitness
           ? _value.explicitness
           : explicitness // ignore: cast_nullable_to_non_nullable
               as Explicitness,
-      shareableUrlPath: shareableUrlPath == freezed
+      shareableUrlPath: null == shareableUrlPath
           ? _value.shareableUrlPath
           : shareableUrlPath // ignore: cast_nullable_to_non_nullable
               as String,
-      modificationTime: modificationTime == freezed
+      modificationTime: null == modificationTime
           ? _value.modificationTime
           : modificationTime // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      slugPlusPandoraId: slugPlusPandoraId == freezed
+      slugPlusPandoraId: null == slugPlusPandoraId
           ? _value.slugPlusPandoraId
           : slugPlusPandoraId // ignore: cast_nullable_to_non_nullable
               as String,
-      hasRadio: hasRadio == freezed
+      hasRadio: null == hasRadio
           ? _value.hasRadio
           : hasRadio // ignore: cast_nullable_to_non_nullable
               as bool,
-      releaseType: releaseType == freezed
+      releaseType: null == releaseType
           ? _value.releaseType
           : releaseType // ignore: cast_nullable_to_non_nullable
               as String,
-      listenerReleaseType: listenerReleaseType == freezed
+      listenerReleaseType: null == listenerReleaseType
           ? _value.listenerReleaseType
           : listenerReleaseType // ignore: cast_nullable_to_non_nullable
               as String,
-      pandoraId: pandoraId == freezed
+      pandoraId: null == pandoraId
           ? _value.pandoraId
           : pandoraId // ignore: cast_nullable_to_non_nullable
               as String,
-      scope: scope == freezed
+      scope: null == scope
           ? _value.scope
           : scope // ignore: cast_nullable_to_non_nullable
               as Scope,
@@ -4972,6 +4985,7 @@ class __$$AlbumAnnotationCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $MediaIconCopyWith<$Res>? get icon {
     if (_value.icon == null) {
       return null;
@@ -4983,6 +4997,7 @@ class __$$AlbumAnnotationCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $RightsInfoCopyWith<$Res> get rightsInfo {
     return $RightsInfoCopyWith<$Res>(_value.rightsInfo, (value) {
       return _then(_value.copyWith(rightsInfo: value));
@@ -5127,68 +5142,73 @@ class _$AlbumAnnotation extends AlbumAnnotation {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$AlbumAnnotation &&
-            const DeepCollectionEquality().equals(other.name, name) &&
-            const DeepCollectionEquality()
-                .equals(other.sortableName, sortableName) &&
-            const DeepCollectionEquality()
-                .equals(other.releaseDate, releaseDate) &&
-            const DeepCollectionEquality().equals(other.duration, duration) &&
-            const DeepCollectionEquality()
-                .equals(other.trackCount, trackCount) &&
-            const DeepCollectionEquality()
-                .equals(other.isCompilation, isCompilation) &&
-            const DeepCollectionEquality().equals(other.icon, icon) &&
-            const DeepCollectionEquality()
-                .equals(other.rightsInfo, rightsInfo) &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.sortableName, sortableName) ||
+                other.sortableName == sortableName) &&
+            (identical(other.releaseDate, releaseDate) ||
+                other.releaseDate == releaseDate) &&
+            (identical(other.duration, duration) ||
+                other.duration == duration) &&
+            (identical(other.trackCount, trackCount) ||
+                other.trackCount == trackCount) &&
+            (identical(other.isCompilation, isCompilation) ||
+                other.isCompilation == isCompilation) &&
+            (identical(other.icon, icon) || other.icon == icon) &&
+            (identical(other.rightsInfo, rightsInfo) ||
+                other.rightsInfo == rightsInfo) &&
             const DeepCollectionEquality().equals(other._trackIds, _trackIds) &&
-            const DeepCollectionEquality().equals(other.artistId, artistId) &&
-            const DeepCollectionEquality()
-                .equals(other.artistName, artistName) &&
-            const DeepCollectionEquality()
-                .equals(other.explicitness, explicitness) &&
-            const DeepCollectionEquality()
-                .equals(other.shareableUrlPath, shareableUrlPath) &&
-            const DeepCollectionEquality()
-                .equals(other.modificationTime, modificationTime) &&
-            const DeepCollectionEquality()
-                .equals(other.slugPlusPandoraId, slugPlusPandoraId) &&
-            const DeepCollectionEquality().equals(other.hasRadio, hasRadio) &&
-            const DeepCollectionEquality()
-                .equals(other.releaseType, releaseType) &&
-            const DeepCollectionEquality()
-                .equals(other.listenerReleaseType, listenerReleaseType) &&
-            const DeepCollectionEquality().equals(other.pandoraId, pandoraId) &&
-            const DeepCollectionEquality().equals(other.scope, scope));
+            (identical(other.artistId, artistId) ||
+                other.artistId == artistId) &&
+            (identical(other.artistName, artistName) ||
+                other.artistName == artistName) &&
+            (identical(other.explicitness, explicitness) ||
+                other.explicitness == explicitness) &&
+            (identical(other.shareableUrlPath, shareableUrlPath) ||
+                other.shareableUrlPath == shareableUrlPath) &&
+            (identical(other.modificationTime, modificationTime) ||
+                other.modificationTime == modificationTime) &&
+            (identical(other.slugPlusPandoraId, slugPlusPandoraId) ||
+                other.slugPlusPandoraId == slugPlusPandoraId) &&
+            (identical(other.hasRadio, hasRadio) ||
+                other.hasRadio == hasRadio) &&
+            (identical(other.releaseType, releaseType) ||
+                other.releaseType == releaseType) &&
+            (identical(other.listenerReleaseType, listenerReleaseType) ||
+                other.listenerReleaseType == listenerReleaseType) &&
+            (identical(other.pandoraId, pandoraId) ||
+                other.pandoraId == pandoraId) &&
+            (identical(other.scope, scope) || other.scope == scope));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
-        const DeepCollectionEquality().hash(name),
-        const DeepCollectionEquality().hash(sortableName),
-        const DeepCollectionEquality().hash(releaseDate),
-        const DeepCollectionEquality().hash(duration),
-        const DeepCollectionEquality().hash(trackCount),
-        const DeepCollectionEquality().hash(isCompilation),
-        const DeepCollectionEquality().hash(icon),
-        const DeepCollectionEquality().hash(rightsInfo),
+        name,
+        sortableName,
+        releaseDate,
+        duration,
+        trackCount,
+        isCompilation,
+        icon,
+        rightsInfo,
         const DeepCollectionEquality().hash(_trackIds),
-        const DeepCollectionEquality().hash(artistId),
-        const DeepCollectionEquality().hash(artistName),
-        const DeepCollectionEquality().hash(explicitness),
-        const DeepCollectionEquality().hash(shareableUrlPath),
-        const DeepCollectionEquality().hash(modificationTime),
-        const DeepCollectionEquality().hash(slugPlusPandoraId),
-        const DeepCollectionEquality().hash(hasRadio),
-        const DeepCollectionEquality().hash(releaseType),
-        const DeepCollectionEquality().hash(listenerReleaseType),
-        const DeepCollectionEquality().hash(pandoraId),
-        const DeepCollectionEquality().hash(scope)
+        artistId,
+        artistName,
+        explicitness,
+        shareableUrlPath,
+        modificationTime,
+        slugPlusPandoraId,
+        hasRadio,
+        releaseType,
+        listenerReleaseType,
+        pandoraId,
+        scope
       ]);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$AlbumAnnotationCopyWith<_$AlbumAnnotation> get copyWith =>
       __$$AlbumAnnotationCopyWithImpl<_$AlbumAnnotation>(this, _$identity);
 
@@ -5608,7 +5628,7 @@ class _$AlbumAnnotation extends AlbumAnnotation {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -5646,7 +5666,7 @@ class _$AlbumAnnotation extends AlbumAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         track,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -5682,7 +5702,7 @@ class _$AlbumAnnotation extends AlbumAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         artist,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -5724,7 +5744,7 @@ class _$AlbumAnnotation extends AlbumAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         album,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -5754,7 +5774,7 @@ class _$AlbumAnnotation extends AlbumAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         artistMessage,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -5778,7 +5798,7 @@ class _$AlbumAnnotation extends AlbumAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         genre,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'allowFeedback', fromJson: readOptInBool, toJson: writeOptInBool)
@@ -5828,7 +5848,7 @@ class _$AlbumAnnotation extends AlbumAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         playlist,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'stationName')
                 String name,
             @JsonKey(name: 'stationId')
@@ -5850,7 +5870,7 @@ class _$AlbumAnnotation extends AlbumAnnotation {
             @JsonKey(name: 'pandoraId')
                 String pandoraId)?
         station,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -5892,7 +5912,7 @@ class _$AlbumAnnotation extends AlbumAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         podcast,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'aliases')
@@ -5906,7 +5926,7 @@ class _$AlbumAnnotation extends AlbumAnnotation {
             @JsonKey(name: 'scope')
                 String scope)?
         podcastCategory,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -5944,7 +5964,7 @@ class _$AlbumAnnotation extends AlbumAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         episode,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -5960,7 +5980,7 @@ class _$AlbumAnnotation extends AlbumAnnotation {
             @JsonKey(name: 'scope')
                 String scope)?
         curator,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -5984,7 +6004,7 @@ class _$AlbumAnnotation extends AlbumAnnotation {
             @JsonKey(name: 'scope')
                 String scope)?
         composer,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'listenerId') int listenerId,
             @JsonKey(name: 'webname') String webname,
             @JsonKey(name: 'fullname') String? fullName,
@@ -6458,19 +6478,19 @@ class _$AlbumAnnotation extends AlbumAnnotation {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(TrackAnnotation value)? track,
-    TResult Function(ArtistAnnotation value)? artist,
-    TResult Function(AlbumAnnotation value)? album,
-    TResult Function(ArtistMessageAnnotation value)? artistMessage,
-    TResult Function(GenreAnnotation value)? genre,
-    TResult Function(PlaylistAnnotation value)? playlist,
-    TResult Function(StationAnnotation value)? station,
-    TResult Function(PodcastAnnotation value)? podcast,
-    TResult Function(PodcastCategoryAnnotation value)? podcastCategory,
-    TResult Function(EpisodeAnnotation value)? episode,
-    TResult Function(CuratorAnnotation value)? curator,
-    TResult Function(ComposerAnnotation value)? composer,
-    TResult Function(ListenerAnnotation value)? listener,
+    TResult? Function(TrackAnnotation value)? track,
+    TResult? Function(ArtistAnnotation value)? artist,
+    TResult? Function(AlbumAnnotation value)? album,
+    TResult? Function(ArtistMessageAnnotation value)? artistMessage,
+    TResult? Function(GenreAnnotation value)? genre,
+    TResult? Function(PlaylistAnnotation value)? playlist,
+    TResult? Function(StationAnnotation value)? station,
+    TResult? Function(PodcastAnnotation value)? podcast,
+    TResult? Function(PodcastCategoryAnnotation value)? podcastCategory,
+    TResult? Function(EpisodeAnnotation value)? episode,
+    TResult? Function(CuratorAnnotation value)? curator,
+    TResult? Function(ComposerAnnotation value)? composer,
+    TResult? Function(ListenerAnnotation value)? listener,
   }) {
     return album?.call(this);
   }
@@ -6614,6 +6634,7 @@ abstract class _$$ArtistMessageAnnotationCopyWith<$Res>
           $Res Function(_$ArtistMessageAnnotation) then) =
       __$$ArtistMessageAnnotationCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(name: 'name')
           String name,
@@ -6651,87 +6672,84 @@ abstract class _$$ArtistMessageAnnotationCopyWith<$Res>
 
 /// @nodoc
 class __$$ArtistMessageAnnotationCopyWithImpl<$Res>
-    extends _$MediaAnnotationCopyWithImpl<$Res>
+    extends _$MediaAnnotationCopyWithImpl<$Res, _$ArtistMessageAnnotation>
     implements _$$ArtistMessageAnnotationCopyWith<$Res> {
   __$$ArtistMessageAnnotationCopyWithImpl(_$ArtistMessageAnnotation _value,
       $Res Function(_$ArtistMessageAnnotation) _then)
-      : super(_value, (v) => _then(v as _$ArtistMessageAnnotation));
+      : super(_value, _then);
 
-  @override
-  _$ArtistMessageAnnotation get _value =>
-      super._value as _$ArtistMessageAnnotation;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? name = freezed,
-    Object? sortableName = freezed,
-    Object? duration = freezed,
+    Object? name = null,
+    Object? sortableName = null,
+    Object? duration = null,
     Object? icon = freezed,
     Object? tileIcon = freezed,
-    Object? authorId = freezed,
-    Object? authorName = freezed,
-    Object? rightsInfo = freezed,
-    Object? deliveryType = freezed,
+    Object? authorId = null,
+    Object? authorName = null,
+    Object? rightsInfo = null,
+    Object? deliveryType = null,
     Object? playsWithTrackId = freezed,
-    Object? modificationTime = freezed,
-    Object? contentState = freezed,
-    Object? pandoraId = freezed,
-    Object? scope = freezed,
+    Object? modificationTime = null,
+    Object? contentState = null,
+    Object? pandoraId = null,
+    Object? scope = null,
   }) {
     return _then(_$ArtistMessageAnnotation(
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      sortableName: sortableName == freezed
+      sortableName: null == sortableName
           ? _value.sortableName
           : sortableName // ignore: cast_nullable_to_non_nullable
               as String,
-      duration: duration == freezed
+      duration: null == duration
           ? _value.duration
           : duration // ignore: cast_nullable_to_non_nullable
               as Duration,
-      icon: icon == freezed
+      icon: freezed == icon
           ? _value.icon
           : icon // ignore: cast_nullable_to_non_nullable
               as MediaIcon?,
-      tileIcon: tileIcon == freezed
+      tileIcon: freezed == tileIcon
           ? _value.tileIcon
           : tileIcon // ignore: cast_nullable_to_non_nullable
               as MediaIcon?,
-      authorId: authorId == freezed
+      authorId: null == authorId
           ? _value.authorId
           : authorId // ignore: cast_nullable_to_non_nullable
               as String,
-      authorName: authorName == freezed
+      authorName: null == authorName
           ? _value.authorName
           : authorName // ignore: cast_nullable_to_non_nullable
               as String,
-      rightsInfo: rightsInfo == freezed
+      rightsInfo: null == rightsInfo
           ? _value.rightsInfo
           : rightsInfo // ignore: cast_nullable_to_non_nullable
               as RightsInfo,
-      deliveryType: deliveryType == freezed
+      deliveryType: null == deliveryType
           ? _value.deliveryType
           : deliveryType // ignore: cast_nullable_to_non_nullable
               as DeliveryType,
-      playsWithTrackId: playsWithTrackId == freezed
+      playsWithTrackId: freezed == playsWithTrackId
           ? _value.playsWithTrackId
           : playsWithTrackId // ignore: cast_nullable_to_non_nullable
               as String?,
-      modificationTime: modificationTime == freezed
+      modificationTime: null == modificationTime
           ? _value.modificationTime
           : modificationTime // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      contentState: contentState == freezed
+      contentState: null == contentState
           ? _value.contentState
           : contentState // ignore: cast_nullable_to_non_nullable
               as ContentState,
-      pandoraId: pandoraId == freezed
+      pandoraId: null == pandoraId
           ? _value.pandoraId
           : pandoraId // ignore: cast_nullable_to_non_nullable
               as String,
-      scope: scope == freezed
+      scope: null == scope
           ? _value.scope
           : scope // ignore: cast_nullable_to_non_nullable
               as Scope,
@@ -6739,6 +6757,7 @@ class __$$ArtistMessageAnnotationCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $MediaIconCopyWith<$Res>? get icon {
     if (_value.icon == null) {
       return null;
@@ -6750,6 +6769,7 @@ class __$$ArtistMessageAnnotationCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $MediaIconCopyWith<$Res>? get tileIcon {
     if (_value.tileIcon == null) {
       return null;
@@ -6761,6 +6781,7 @@ class __$$ArtistMessageAnnotationCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $RightsInfoCopyWith<$Res> get rightsInfo {
     return $RightsInfoCopyWith<$Res>(_value.rightsInfo, (value) {
       return _then(_value.copyWith(rightsInfo: value));
@@ -6872,50 +6893,55 @@ class _$ArtistMessageAnnotation extends ArtistMessageAnnotation {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ArtistMessageAnnotation &&
-            const DeepCollectionEquality().equals(other.name, name) &&
-            const DeepCollectionEquality()
-                .equals(other.sortableName, sortableName) &&
-            const DeepCollectionEquality().equals(other.duration, duration) &&
-            const DeepCollectionEquality().equals(other.icon, icon) &&
-            const DeepCollectionEquality().equals(other.tileIcon, tileIcon) &&
-            const DeepCollectionEquality().equals(other.authorId, authorId) &&
-            const DeepCollectionEquality()
-                .equals(other.authorName, authorName) &&
-            const DeepCollectionEquality()
-                .equals(other.rightsInfo, rightsInfo) &&
-            const DeepCollectionEquality()
-                .equals(other.deliveryType, deliveryType) &&
-            const DeepCollectionEquality()
-                .equals(other.playsWithTrackId, playsWithTrackId) &&
-            const DeepCollectionEquality()
-                .equals(other.modificationTime, modificationTime) &&
-            const DeepCollectionEquality()
-                .equals(other.contentState, contentState) &&
-            const DeepCollectionEquality().equals(other.pandoraId, pandoraId) &&
-            const DeepCollectionEquality().equals(other.scope, scope));
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.sortableName, sortableName) ||
+                other.sortableName == sortableName) &&
+            (identical(other.duration, duration) ||
+                other.duration == duration) &&
+            (identical(other.icon, icon) || other.icon == icon) &&
+            (identical(other.tileIcon, tileIcon) ||
+                other.tileIcon == tileIcon) &&
+            (identical(other.authorId, authorId) ||
+                other.authorId == authorId) &&
+            (identical(other.authorName, authorName) ||
+                other.authorName == authorName) &&
+            (identical(other.rightsInfo, rightsInfo) ||
+                other.rightsInfo == rightsInfo) &&
+            (identical(other.deliveryType, deliveryType) ||
+                other.deliveryType == deliveryType) &&
+            (identical(other.playsWithTrackId, playsWithTrackId) ||
+                other.playsWithTrackId == playsWithTrackId) &&
+            (identical(other.modificationTime, modificationTime) ||
+                other.modificationTime == modificationTime) &&
+            (identical(other.contentState, contentState) ||
+                other.contentState == contentState) &&
+            (identical(other.pandoraId, pandoraId) ||
+                other.pandoraId == pandoraId) &&
+            (identical(other.scope, scope) || other.scope == scope));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(name),
-      const DeepCollectionEquality().hash(sortableName),
-      const DeepCollectionEquality().hash(duration),
-      const DeepCollectionEquality().hash(icon),
-      const DeepCollectionEquality().hash(tileIcon),
-      const DeepCollectionEquality().hash(authorId),
-      const DeepCollectionEquality().hash(authorName),
-      const DeepCollectionEquality().hash(rightsInfo),
-      const DeepCollectionEquality().hash(deliveryType),
-      const DeepCollectionEquality().hash(playsWithTrackId),
-      const DeepCollectionEquality().hash(modificationTime),
-      const DeepCollectionEquality().hash(contentState),
-      const DeepCollectionEquality().hash(pandoraId),
-      const DeepCollectionEquality().hash(scope));
+      name,
+      sortableName,
+      duration,
+      icon,
+      tileIcon,
+      authorId,
+      authorName,
+      rightsInfo,
+      deliveryType,
+      playsWithTrackId,
+      modificationTime,
+      contentState,
+      pandoraId,
+      scope);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$ArtistMessageAnnotationCopyWith<_$ArtistMessageAnnotation> get copyWith =>
       __$$ArtistMessageAnnotationCopyWithImpl<_$ArtistMessageAnnotation>(
           this, _$identity);
@@ -7330,7 +7356,7 @@ class _$ArtistMessageAnnotation extends ArtistMessageAnnotation {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -7368,7 +7394,7 @@ class _$ArtistMessageAnnotation extends ArtistMessageAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         track,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -7404,7 +7430,7 @@ class _$ArtistMessageAnnotation extends ArtistMessageAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         artist,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -7446,7 +7472,7 @@ class _$ArtistMessageAnnotation extends ArtistMessageAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         album,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -7476,7 +7502,7 @@ class _$ArtistMessageAnnotation extends ArtistMessageAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         artistMessage,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -7500,7 +7526,7 @@ class _$ArtistMessageAnnotation extends ArtistMessageAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         genre,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'allowFeedback', fromJson: readOptInBool, toJson: writeOptInBool)
@@ -7550,7 +7576,7 @@ class _$ArtistMessageAnnotation extends ArtistMessageAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         playlist,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'stationName')
                 String name,
             @JsonKey(name: 'stationId')
@@ -7572,7 +7598,7 @@ class _$ArtistMessageAnnotation extends ArtistMessageAnnotation {
             @JsonKey(name: 'pandoraId')
                 String pandoraId)?
         station,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -7614,7 +7640,7 @@ class _$ArtistMessageAnnotation extends ArtistMessageAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         podcast,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'aliases')
@@ -7628,7 +7654,7 @@ class _$ArtistMessageAnnotation extends ArtistMessageAnnotation {
             @JsonKey(name: 'scope')
                 String scope)?
         podcastCategory,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -7666,7 +7692,7 @@ class _$ArtistMessageAnnotation extends ArtistMessageAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         episode,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -7682,7 +7708,7 @@ class _$ArtistMessageAnnotation extends ArtistMessageAnnotation {
             @JsonKey(name: 'scope')
                 String scope)?
         curator,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -7706,7 +7732,7 @@ class _$ArtistMessageAnnotation extends ArtistMessageAnnotation {
             @JsonKey(name: 'scope')
                 String scope)?
         composer,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'listenerId') int listenerId,
             @JsonKey(name: 'webname') String webname,
             @JsonKey(name: 'fullname') String? fullName,
@@ -8168,19 +8194,19 @@ class _$ArtistMessageAnnotation extends ArtistMessageAnnotation {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(TrackAnnotation value)? track,
-    TResult Function(ArtistAnnotation value)? artist,
-    TResult Function(AlbumAnnotation value)? album,
-    TResult Function(ArtistMessageAnnotation value)? artistMessage,
-    TResult Function(GenreAnnotation value)? genre,
-    TResult Function(PlaylistAnnotation value)? playlist,
-    TResult Function(StationAnnotation value)? station,
-    TResult Function(PodcastAnnotation value)? podcast,
-    TResult Function(PodcastCategoryAnnotation value)? podcastCategory,
-    TResult Function(EpisodeAnnotation value)? episode,
-    TResult Function(CuratorAnnotation value)? curator,
-    TResult Function(ComposerAnnotation value)? composer,
-    TResult Function(ListenerAnnotation value)? listener,
+    TResult? Function(TrackAnnotation value)? track,
+    TResult? Function(ArtistAnnotation value)? artist,
+    TResult? Function(AlbumAnnotation value)? album,
+    TResult? Function(ArtistMessageAnnotation value)? artistMessage,
+    TResult? Function(GenreAnnotation value)? genre,
+    TResult? Function(PlaylistAnnotation value)? playlist,
+    TResult? Function(StationAnnotation value)? station,
+    TResult? Function(PodcastAnnotation value)? podcast,
+    TResult? Function(PodcastCategoryAnnotation value)? podcastCategory,
+    TResult? Function(EpisodeAnnotation value)? episode,
+    TResult? Function(CuratorAnnotation value)? curator,
+    TResult? Function(ComposerAnnotation value)? composer,
+    TResult? Function(ListenerAnnotation value)? listener,
   }) {
     return artistMessage?.call(this);
   }
@@ -8303,6 +8329,7 @@ abstract class _$$GenreAnnotationCopyWith<$Res>
           _$GenreAnnotation value, $Res Function(_$GenreAnnotation) then) =
       __$$GenreAnnotationCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(name: 'name')
           String name,
@@ -8332,71 +8359,69 @@ abstract class _$$GenreAnnotationCopyWith<$Res>
 
 /// @nodoc
 class __$$GenreAnnotationCopyWithImpl<$Res>
-    extends _$MediaAnnotationCopyWithImpl<$Res>
+    extends _$MediaAnnotationCopyWithImpl<$Res, _$GenreAnnotation>
     implements _$$GenreAnnotationCopyWith<$Res> {
   __$$GenreAnnotationCopyWithImpl(
       _$GenreAnnotation _value, $Res Function(_$GenreAnnotation) _then)
-      : super(_value, (v) => _then(v as _$GenreAnnotation));
+      : super(_value, _then);
 
-  @override
-  _$GenreAnnotation get _value => super._value as _$GenreAnnotation;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? name = freezed,
-    Object? sortableName = freezed,
+    Object? name = null,
+    Object? sortableName = null,
     Object? icon = freezed,
-    Object? modificationTime = freezed,
-    Object? description = freezed,
-    Object? stationListenerCount = freezed,
-    Object? shareableUrlPath = freezed,
-    Object? hasTakeoverModes = freezed,
-    Object? hasCuratedModes = freezed,
-    Object? pandoraId = freezed,
-    Object? scope = freezed,
+    Object? modificationTime = null,
+    Object? description = null,
+    Object? stationListenerCount = null,
+    Object? shareableUrlPath = null,
+    Object? hasTakeoverModes = null,
+    Object? hasCuratedModes = null,
+    Object? pandoraId = null,
+    Object? scope = null,
   }) {
     return _then(_$GenreAnnotation(
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      sortableName: sortableName == freezed
+      sortableName: null == sortableName
           ? _value.sortableName
           : sortableName // ignore: cast_nullable_to_non_nullable
               as String,
-      icon: icon == freezed
+      icon: freezed == icon
           ? _value.icon
           : icon // ignore: cast_nullable_to_non_nullable
               as MediaIcon?,
-      modificationTime: modificationTime == freezed
+      modificationTime: null == modificationTime
           ? _value.modificationTime
           : modificationTime // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      description: description == freezed
+      description: null == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as String,
-      stationListenerCount: stationListenerCount == freezed
+      stationListenerCount: null == stationListenerCount
           ? _value.stationListenerCount
           : stationListenerCount // ignore: cast_nullable_to_non_nullable
               as int,
-      shareableUrlPath: shareableUrlPath == freezed
+      shareableUrlPath: null == shareableUrlPath
           ? _value.shareableUrlPath
           : shareableUrlPath // ignore: cast_nullable_to_non_nullable
               as String,
-      hasTakeoverModes: hasTakeoverModes == freezed
+      hasTakeoverModes: null == hasTakeoverModes
           ? _value.hasTakeoverModes
           : hasTakeoverModes // ignore: cast_nullable_to_non_nullable
               as bool,
-      hasCuratedModes: hasCuratedModes == freezed
+      hasCuratedModes: null == hasCuratedModes
           ? _value.hasCuratedModes
           : hasCuratedModes // ignore: cast_nullable_to_non_nullable
               as bool,
-      pandoraId: pandoraId == freezed
+      pandoraId: null == pandoraId
           ? _value.pandoraId
           : pandoraId // ignore: cast_nullable_to_non_nullable
               as String,
-      scope: scope == freezed
+      scope: null == scope
           ? _value.scope
           : scope // ignore: cast_nullable_to_non_nullable
               as Scope,
@@ -8404,6 +8429,7 @@ class __$$GenreAnnotationCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $MediaIconCopyWith<$Res>? get icon {
     if (_value.icon == null) {
       return null;
@@ -8502,44 +8528,46 @@ class _$GenreAnnotation extends GenreAnnotation {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$GenreAnnotation &&
-            const DeepCollectionEquality().equals(other.name, name) &&
-            const DeepCollectionEquality()
-                .equals(other.sortableName, sortableName) &&
-            const DeepCollectionEquality().equals(other.icon, icon) &&
-            const DeepCollectionEquality()
-                .equals(other.modificationTime, modificationTime) &&
-            const DeepCollectionEquality()
-                .equals(other.description, description) &&
-            const DeepCollectionEquality()
-                .equals(other.stationListenerCount, stationListenerCount) &&
-            const DeepCollectionEquality()
-                .equals(other.shareableUrlPath, shareableUrlPath) &&
-            const DeepCollectionEquality()
-                .equals(other.hasTakeoverModes, hasTakeoverModes) &&
-            const DeepCollectionEquality()
-                .equals(other.hasCuratedModes, hasCuratedModes) &&
-            const DeepCollectionEquality().equals(other.pandoraId, pandoraId) &&
-            const DeepCollectionEquality().equals(other.scope, scope));
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.sortableName, sortableName) ||
+                other.sortableName == sortableName) &&
+            (identical(other.icon, icon) || other.icon == icon) &&
+            (identical(other.modificationTime, modificationTime) ||
+                other.modificationTime == modificationTime) &&
+            (identical(other.description, description) ||
+                other.description == description) &&
+            (identical(other.stationListenerCount, stationListenerCount) ||
+                other.stationListenerCount == stationListenerCount) &&
+            (identical(other.shareableUrlPath, shareableUrlPath) ||
+                other.shareableUrlPath == shareableUrlPath) &&
+            (identical(other.hasTakeoverModes, hasTakeoverModes) ||
+                other.hasTakeoverModes == hasTakeoverModes) &&
+            (identical(other.hasCuratedModes, hasCuratedModes) ||
+                other.hasCuratedModes == hasCuratedModes) &&
+            (identical(other.pandoraId, pandoraId) ||
+                other.pandoraId == pandoraId) &&
+            (identical(other.scope, scope) || other.scope == scope));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(name),
-      const DeepCollectionEquality().hash(sortableName),
-      const DeepCollectionEquality().hash(icon),
-      const DeepCollectionEquality().hash(modificationTime),
-      const DeepCollectionEquality().hash(description),
-      const DeepCollectionEquality().hash(stationListenerCount),
-      const DeepCollectionEquality().hash(shareableUrlPath),
-      const DeepCollectionEquality().hash(hasTakeoverModes),
-      const DeepCollectionEquality().hash(hasCuratedModes),
-      const DeepCollectionEquality().hash(pandoraId),
-      const DeepCollectionEquality().hash(scope));
+      name,
+      sortableName,
+      icon,
+      modificationTime,
+      description,
+      stationListenerCount,
+      shareableUrlPath,
+      hasTakeoverModes,
+      hasCuratedModes,
+      pandoraId,
+      scope);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$GenreAnnotationCopyWith<_$GenreAnnotation> get copyWith =>
       __$$GenreAnnotationCopyWithImpl<_$GenreAnnotation>(this, _$identity);
 
@@ -8950,7 +8978,7 @@ class _$GenreAnnotation extends GenreAnnotation {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -8988,7 +9016,7 @@ class _$GenreAnnotation extends GenreAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         track,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -9024,7 +9052,7 @@ class _$GenreAnnotation extends GenreAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         artist,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -9066,7 +9094,7 @@ class _$GenreAnnotation extends GenreAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         album,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -9096,7 +9124,7 @@ class _$GenreAnnotation extends GenreAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         artistMessage,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -9120,7 +9148,7 @@ class _$GenreAnnotation extends GenreAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         genre,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'allowFeedback', fromJson: readOptInBool, toJson: writeOptInBool)
@@ -9170,7 +9198,7 @@ class _$GenreAnnotation extends GenreAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         playlist,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'stationName')
                 String name,
             @JsonKey(name: 'stationId')
@@ -9192,7 +9220,7 @@ class _$GenreAnnotation extends GenreAnnotation {
             @JsonKey(name: 'pandoraId')
                 String pandoraId)?
         station,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -9234,7 +9262,7 @@ class _$GenreAnnotation extends GenreAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         podcast,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'aliases')
@@ -9248,7 +9276,7 @@ class _$GenreAnnotation extends GenreAnnotation {
             @JsonKey(name: 'scope')
                 String scope)?
         podcastCategory,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -9286,7 +9314,7 @@ class _$GenreAnnotation extends GenreAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         episode,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -9302,7 +9330,7 @@ class _$GenreAnnotation extends GenreAnnotation {
             @JsonKey(name: 'scope')
                 String scope)?
         curator,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -9326,7 +9354,7 @@ class _$GenreAnnotation extends GenreAnnotation {
             @JsonKey(name: 'scope')
                 String scope)?
         composer,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'listenerId') int listenerId,
             @JsonKey(name: 'webname') String webname,
             @JsonKey(name: 'fullname') String? fullName,
@@ -9782,19 +9810,19 @@ class _$GenreAnnotation extends GenreAnnotation {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(TrackAnnotation value)? track,
-    TResult Function(ArtistAnnotation value)? artist,
-    TResult Function(AlbumAnnotation value)? album,
-    TResult Function(ArtistMessageAnnotation value)? artistMessage,
-    TResult Function(GenreAnnotation value)? genre,
-    TResult Function(PlaylistAnnotation value)? playlist,
-    TResult Function(StationAnnotation value)? station,
-    TResult Function(PodcastAnnotation value)? podcast,
-    TResult Function(PodcastCategoryAnnotation value)? podcastCategory,
-    TResult Function(EpisodeAnnotation value)? episode,
-    TResult Function(CuratorAnnotation value)? curator,
-    TResult Function(ComposerAnnotation value)? composer,
-    TResult Function(ListenerAnnotation value)? listener,
+    TResult? Function(TrackAnnotation value)? track,
+    TResult? Function(ArtistAnnotation value)? artist,
+    TResult? Function(AlbumAnnotation value)? album,
+    TResult? Function(ArtistMessageAnnotation value)? artistMessage,
+    TResult? Function(GenreAnnotation value)? genre,
+    TResult? Function(PlaylistAnnotation value)? playlist,
+    TResult? Function(StationAnnotation value)? station,
+    TResult? Function(PodcastAnnotation value)? podcast,
+    TResult? Function(PodcastCategoryAnnotation value)? podcastCategory,
+    TResult? Function(EpisodeAnnotation value)? episode,
+    TResult? Function(CuratorAnnotation value)? curator,
+    TResult? Function(ComposerAnnotation value)? composer,
+    TResult? Function(ListenerAnnotation value)? listener,
   }) {
     return genre?.call(this);
   }
@@ -9902,6 +9930,7 @@ abstract class _$$PlaylistAnnotationCopyWith<$Res>
           $Res Function(_$PlaylistAnnotation) then) =
       __$$PlaylistAnnotationCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(name: 'name')
           String name,
@@ -9958,136 +9987,134 @@ abstract class _$$PlaylistAnnotationCopyWith<$Res>
 
 /// @nodoc
 class __$$PlaylistAnnotationCopyWithImpl<$Res>
-    extends _$MediaAnnotationCopyWithImpl<$Res>
+    extends _$MediaAnnotationCopyWithImpl<$Res, _$PlaylistAnnotation>
     implements _$$PlaylistAnnotationCopyWith<$Res> {
   __$$PlaylistAnnotationCopyWithImpl(
       _$PlaylistAnnotation _value, $Res Function(_$PlaylistAnnotation) _then)
-      : super(_value, (v) => _then(v as _$PlaylistAnnotation));
+      : super(_value, _then);
 
-  @override
-  _$PlaylistAnnotation get _value => super._value as _$PlaylistAnnotation;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? name = freezed,
-    Object? allowFeedback = freezed,
-    Object? autogenForListener = freezed,
-    Object? collectible = freezed,
+    Object? name = null,
+    Object? allowFeedback = null,
+    Object? autogenForListener = null,
+    Object? collectible = null,
     Object? description = freezed,
-    Object? duration = freezed,
-    Object? includedTrackTypes = freezed,
-    Object? isPrivate = freezed,
-    Object? linkedType = freezed,
-    Object? listenerId = freezed,
-    Object? listenerIdInfo = freezed,
-    Object? listenerIdToken = freezed,
-    Object? listenerPandoraId = freezed,
-    Object? secret = freezed,
-    Object? shareableUrlPath = freezed,
-    Object? thorLayers = freezed,
-    Object? timeCreated = freezed,
+    Object? duration = null,
+    Object? includedTrackTypes = null,
+    Object? isPrivate = null,
+    Object? linkedType = null,
+    Object? listenerId = null,
+    Object? listenerIdInfo = null,
+    Object? listenerIdToken = null,
+    Object? listenerPandoraId = null,
+    Object? secret = null,
+    Object? shareableUrlPath = null,
+    Object? thorLayers = null,
+    Object? timeCreated = null,
     Object? timeLastPlayed = freezed,
     Object? timeLastUpdated = freezed,
-    Object? totalTracks = freezed,
-    Object? unlocked = freezed,
+    Object? totalTracks = null,
+    Object? unlocked = null,
     Object? viewerInfo = freezed,
-    Object? pandoraId = freezed,
-    Object? scope = freezed,
+    Object? pandoraId = null,
+    Object? scope = null,
   }) {
     return _then(_$PlaylistAnnotation(
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      allowFeedback: allowFeedback == freezed
+      allowFeedback: null == allowFeedback
           ? _value.allowFeedback
           : allowFeedback // ignore: cast_nullable_to_non_nullable
               as bool,
-      autogenForListener: autogenForListener == freezed
+      autogenForListener: null == autogenForListener
           ? _value.autogenForListener
           : autogenForListener // ignore: cast_nullable_to_non_nullable
               as bool,
-      collectible: collectible == freezed
+      collectible: null == collectible
           ? _value.collectible
           : collectible // ignore: cast_nullable_to_non_nullable
               as bool,
-      description: description == freezed
+      description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as String?,
-      duration: duration == freezed
+      duration: null == duration
           ? _value.duration
           : duration // ignore: cast_nullable_to_non_nullable
               as Duration,
-      includedTrackTypes: includedTrackTypes == freezed
+      includedTrackTypes: null == includedTrackTypes
           ? _value._includedTrackTypes
           : includedTrackTypes // ignore: cast_nullable_to_non_nullable
               as List<PandoraType>,
-      isPrivate: isPrivate == freezed
+      isPrivate: null == isPrivate
           ? _value.isPrivate
           : isPrivate // ignore: cast_nullable_to_non_nullable
               as bool,
-      linkedType: linkedType == freezed
+      linkedType: null == linkedType
           ? _value.linkedType
           : linkedType // ignore: cast_nullable_to_non_nullable
               as PlaylistLinkedType,
-      listenerId: listenerId == freezed
+      listenerId: null == listenerId
           ? _value.listenerId
           : listenerId // ignore: cast_nullable_to_non_nullable
               as int,
-      listenerIdInfo: listenerIdInfo == freezed
+      listenerIdInfo: null == listenerIdInfo
           ? _value.listenerIdInfo
           : listenerIdInfo // ignore: cast_nullable_to_non_nullable
               as ListenerIdInfo,
-      listenerIdToken: listenerIdToken == freezed
+      listenerIdToken: null == listenerIdToken
           ? _value.listenerIdToken
           : listenerIdToken // ignore: cast_nullable_to_non_nullable
               as String,
-      listenerPandoraId: listenerPandoraId == freezed
+      listenerPandoraId: null == listenerPandoraId
           ? _value.listenerPandoraId
           : listenerPandoraId // ignore: cast_nullable_to_non_nullable
               as String,
-      secret: secret == freezed
+      secret: null == secret
           ? _value.secret
           : secret // ignore: cast_nullable_to_non_nullable
               as bool,
-      shareableUrlPath: shareableUrlPath == freezed
+      shareableUrlPath: null == shareableUrlPath
           ? _value.shareableUrlPath
           : shareableUrlPath // ignore: cast_nullable_to_non_nullable
               as String,
-      thorLayers: thorLayers == freezed
+      thorLayers: null == thorLayers
           ? _value.thorLayers
           : thorLayers // ignore: cast_nullable_to_non_nullable
               as String,
-      timeCreated: timeCreated == freezed
+      timeCreated: null == timeCreated
           ? _value.timeCreated
           : timeCreated // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      timeLastPlayed: timeLastPlayed == freezed
+      timeLastPlayed: freezed == timeLastPlayed
           ? _value.timeLastPlayed
           : timeLastPlayed // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      timeLastUpdated: timeLastUpdated == freezed
+      timeLastUpdated: freezed == timeLastUpdated
           ? _value.timeLastUpdated
           : timeLastUpdated // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      totalTracks: totalTracks == freezed
+      totalTracks: null == totalTracks
           ? _value.totalTracks
           : totalTracks // ignore: cast_nullable_to_non_nullable
               as int,
-      unlocked: unlocked == freezed
+      unlocked: null == unlocked
           ? _value.unlocked
           : unlocked // ignore: cast_nullable_to_non_nullable
               as bool,
-      viewerInfo: viewerInfo == freezed
+      viewerInfo: freezed == viewerInfo
           ? _value.viewerInfo
           : viewerInfo // ignore: cast_nullable_to_non_nullable
               as PlaylistViewerInfo?,
-      pandoraId: pandoraId == freezed
+      pandoraId: null == pandoraId
           ? _value.pandoraId
           : pandoraId // ignore: cast_nullable_to_non_nullable
               as String,
-      scope: scope == freezed
+      scope: null == scope
           ? _value.scope
           : scope // ignore: cast_nullable_to_non_nullable
               as Scope,
@@ -10095,6 +10122,7 @@ class __$$PlaylistAnnotationCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ListenerIdInfoCopyWith<$Res> get listenerIdInfo {
     return $ListenerIdInfoCopyWith<$Res>(_value.listenerIdInfo, (value) {
       return _then(_value.copyWith(listenerIdInfo: value));
@@ -10102,6 +10130,7 @@ class __$$PlaylistAnnotationCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $PlaylistViewerInfoCopyWith<$Res>? get viewerInfo {
     if (_value.viewerInfo == null) {
       return null;
@@ -10277,81 +10306,86 @@ class _$PlaylistAnnotation extends PlaylistAnnotation {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$PlaylistAnnotation &&
-            const DeepCollectionEquality().equals(other.name, name) &&
-            const DeepCollectionEquality()
-                .equals(other.allowFeedback, allowFeedback) &&
-            const DeepCollectionEquality()
-                .equals(other.autogenForListener, autogenForListener) &&
-            const DeepCollectionEquality()
-                .equals(other.collectible, collectible) &&
-            const DeepCollectionEquality()
-                .equals(other.description, description) &&
-            const DeepCollectionEquality().equals(other.duration, duration) &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.allowFeedback, allowFeedback) ||
+                other.allowFeedback == allowFeedback) &&
+            (identical(other.autogenForListener, autogenForListener) ||
+                other.autogenForListener == autogenForListener) &&
+            (identical(other.collectible, collectible) ||
+                other.collectible == collectible) &&
+            (identical(other.description, description) ||
+                other.description == description) &&
+            (identical(other.duration, duration) ||
+                other.duration == duration) &&
             const DeepCollectionEquality()
                 .equals(other._includedTrackTypes, _includedTrackTypes) &&
-            const DeepCollectionEquality().equals(other.isPrivate, isPrivate) &&
-            const DeepCollectionEquality()
-                .equals(other.linkedType, linkedType) &&
-            const DeepCollectionEquality()
-                .equals(other.listenerId, listenerId) &&
-            const DeepCollectionEquality()
-                .equals(other.listenerIdInfo, listenerIdInfo) &&
-            const DeepCollectionEquality()
-                .equals(other.listenerIdToken, listenerIdToken) &&
-            const DeepCollectionEquality()
-                .equals(other.listenerPandoraId, listenerPandoraId) &&
-            const DeepCollectionEquality().equals(other.secret, secret) &&
-            const DeepCollectionEquality()
-                .equals(other.shareableUrlPath, shareableUrlPath) &&
-            const DeepCollectionEquality()
-                .equals(other.thorLayers, thorLayers) &&
-            const DeepCollectionEquality()
-                .equals(other.timeCreated, timeCreated) &&
-            const DeepCollectionEquality()
-                .equals(other.timeLastPlayed, timeLastPlayed) &&
-            const DeepCollectionEquality()
-                .equals(other.timeLastUpdated, timeLastUpdated) &&
-            const DeepCollectionEquality()
-                .equals(other.totalTracks, totalTracks) &&
-            const DeepCollectionEquality().equals(other.unlocked, unlocked) &&
-            const DeepCollectionEquality()
-                .equals(other.viewerInfo, viewerInfo) &&
-            const DeepCollectionEquality().equals(other.pandoraId, pandoraId) &&
-            const DeepCollectionEquality().equals(other.scope, scope));
+            (identical(other.isPrivate, isPrivate) ||
+                other.isPrivate == isPrivate) &&
+            (identical(other.linkedType, linkedType) ||
+                other.linkedType == linkedType) &&
+            (identical(other.listenerId, listenerId) ||
+                other.listenerId == listenerId) &&
+            (identical(other.listenerIdInfo, listenerIdInfo) ||
+                other.listenerIdInfo == listenerIdInfo) &&
+            (identical(other.listenerIdToken, listenerIdToken) ||
+                other.listenerIdToken == listenerIdToken) &&
+            (identical(other.listenerPandoraId, listenerPandoraId) ||
+                other.listenerPandoraId == listenerPandoraId) &&
+            (identical(other.secret, secret) || other.secret == secret) &&
+            (identical(other.shareableUrlPath, shareableUrlPath) ||
+                other.shareableUrlPath == shareableUrlPath) &&
+            (identical(other.thorLayers, thorLayers) ||
+                other.thorLayers == thorLayers) &&
+            (identical(other.timeCreated, timeCreated) ||
+                other.timeCreated == timeCreated) &&
+            (identical(other.timeLastPlayed, timeLastPlayed) ||
+                other.timeLastPlayed == timeLastPlayed) &&
+            (identical(other.timeLastUpdated, timeLastUpdated) ||
+                other.timeLastUpdated == timeLastUpdated) &&
+            (identical(other.totalTracks, totalTracks) ||
+                other.totalTracks == totalTracks) &&
+            (identical(other.unlocked, unlocked) ||
+                other.unlocked == unlocked) &&
+            (identical(other.viewerInfo, viewerInfo) ||
+                other.viewerInfo == viewerInfo) &&
+            (identical(other.pandoraId, pandoraId) ||
+                other.pandoraId == pandoraId) &&
+            (identical(other.scope, scope) || other.scope == scope));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
-        const DeepCollectionEquality().hash(name),
-        const DeepCollectionEquality().hash(allowFeedback),
-        const DeepCollectionEquality().hash(autogenForListener),
-        const DeepCollectionEquality().hash(collectible),
-        const DeepCollectionEquality().hash(description),
-        const DeepCollectionEquality().hash(duration),
+        name,
+        allowFeedback,
+        autogenForListener,
+        collectible,
+        description,
+        duration,
         const DeepCollectionEquality().hash(_includedTrackTypes),
-        const DeepCollectionEquality().hash(isPrivate),
-        const DeepCollectionEquality().hash(linkedType),
-        const DeepCollectionEquality().hash(listenerId),
-        const DeepCollectionEquality().hash(listenerIdInfo),
-        const DeepCollectionEquality().hash(listenerIdToken),
-        const DeepCollectionEquality().hash(listenerPandoraId),
-        const DeepCollectionEquality().hash(secret),
-        const DeepCollectionEquality().hash(shareableUrlPath),
-        const DeepCollectionEquality().hash(thorLayers),
-        const DeepCollectionEquality().hash(timeCreated),
-        const DeepCollectionEquality().hash(timeLastPlayed),
-        const DeepCollectionEquality().hash(timeLastUpdated),
-        const DeepCollectionEquality().hash(totalTracks),
-        const DeepCollectionEquality().hash(unlocked),
-        const DeepCollectionEquality().hash(viewerInfo),
-        const DeepCollectionEquality().hash(pandoraId),
-        const DeepCollectionEquality().hash(scope)
+        isPrivate,
+        linkedType,
+        listenerId,
+        listenerIdInfo,
+        listenerIdToken,
+        listenerPandoraId,
+        secret,
+        shareableUrlPath,
+        thorLayers,
+        timeCreated,
+        timeLastPlayed,
+        timeLastUpdated,
+        totalTracks,
+        unlocked,
+        viewerInfo,
+        pandoraId,
+        scope
       ]);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$PlaylistAnnotationCopyWith<_$PlaylistAnnotation> get copyWith =>
       __$$PlaylistAnnotationCopyWithImpl<_$PlaylistAnnotation>(
           this, _$identity);
@@ -10776,7 +10810,7 @@ class _$PlaylistAnnotation extends PlaylistAnnotation {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -10814,7 +10848,7 @@ class _$PlaylistAnnotation extends PlaylistAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         track,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -10850,7 +10884,7 @@ class _$PlaylistAnnotation extends PlaylistAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         artist,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -10892,7 +10926,7 @@ class _$PlaylistAnnotation extends PlaylistAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         album,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -10922,7 +10956,7 @@ class _$PlaylistAnnotation extends PlaylistAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         artistMessage,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -10946,7 +10980,7 @@ class _$PlaylistAnnotation extends PlaylistAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         genre,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'allowFeedback', fromJson: readOptInBool, toJson: writeOptInBool)
@@ -10996,7 +11030,7 @@ class _$PlaylistAnnotation extends PlaylistAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         playlist,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'stationName')
                 String name,
             @JsonKey(name: 'stationId')
@@ -11018,7 +11052,7 @@ class _$PlaylistAnnotation extends PlaylistAnnotation {
             @JsonKey(name: 'pandoraId')
                 String pandoraId)?
         station,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -11060,7 +11094,7 @@ class _$PlaylistAnnotation extends PlaylistAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         podcast,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'aliases')
@@ -11074,7 +11108,7 @@ class _$PlaylistAnnotation extends PlaylistAnnotation {
             @JsonKey(name: 'scope')
                 String scope)?
         podcastCategory,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -11112,7 +11146,7 @@ class _$PlaylistAnnotation extends PlaylistAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         episode,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -11128,7 +11162,7 @@ class _$PlaylistAnnotation extends PlaylistAnnotation {
             @JsonKey(name: 'scope')
                 String scope)?
         curator,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -11152,7 +11186,7 @@ class _$PlaylistAnnotation extends PlaylistAnnotation {
             @JsonKey(name: 'scope')
                 String scope)?
         composer,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'listenerId') int listenerId,
             @JsonKey(name: 'webname') String webname,
             @JsonKey(name: 'fullname') String? fullName,
@@ -11634,19 +11668,19 @@ class _$PlaylistAnnotation extends PlaylistAnnotation {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(TrackAnnotation value)? track,
-    TResult Function(ArtistAnnotation value)? artist,
-    TResult Function(AlbumAnnotation value)? album,
-    TResult Function(ArtistMessageAnnotation value)? artistMessage,
-    TResult Function(GenreAnnotation value)? genre,
-    TResult Function(PlaylistAnnotation value)? playlist,
-    TResult Function(StationAnnotation value)? station,
-    TResult Function(PodcastAnnotation value)? podcast,
-    TResult Function(PodcastCategoryAnnotation value)? podcastCategory,
-    TResult Function(EpisodeAnnotation value)? episode,
-    TResult Function(CuratorAnnotation value)? curator,
-    TResult Function(ComposerAnnotation value)? composer,
-    TResult Function(ListenerAnnotation value)? listener,
+    TResult? Function(TrackAnnotation value)? track,
+    TResult? Function(ArtistAnnotation value)? artist,
+    TResult? Function(AlbumAnnotation value)? album,
+    TResult? Function(ArtistMessageAnnotation value)? artistMessage,
+    TResult? Function(GenreAnnotation value)? genre,
+    TResult? Function(PlaylistAnnotation value)? playlist,
+    TResult? Function(StationAnnotation value)? station,
+    TResult? Function(PodcastAnnotation value)? podcast,
+    TResult? Function(PodcastCategoryAnnotation value)? podcastCategory,
+    TResult? Function(EpisodeAnnotation value)? episode,
+    TResult? Function(CuratorAnnotation value)? curator,
+    TResult? Function(ComposerAnnotation value)? composer,
+    TResult? Function(ListenerAnnotation value)? listener,
   }) {
     return playlist?.call(this);
   }
@@ -11813,6 +11847,7 @@ abstract class _$$StationAnnotationCopyWith<$Res>
           _$StationAnnotation value, $Res Function(_$StationAnnotation) then) =
       __$$StationAnnotationCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(name: 'stationName')
           String name,
@@ -11840,66 +11875,64 @@ abstract class _$$StationAnnotationCopyWith<$Res>
 
 /// @nodoc
 class __$$StationAnnotationCopyWithImpl<$Res>
-    extends _$MediaAnnotationCopyWithImpl<$Res>
+    extends _$MediaAnnotationCopyWithImpl<$Res, _$StationAnnotation>
     implements _$$StationAnnotationCopyWith<$Res> {
   __$$StationAnnotationCopyWithImpl(
       _$StationAnnotation _value, $Res Function(_$StationAnnotation) _then)
-      : super(_value, (v) => _then(v as _$StationAnnotation));
+      : super(_value, _then);
 
-  @override
-  _$StationAnnotation get _value => super._value as _$StationAnnotation;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? name = freezed,
-    Object? stationId = freezed,
-    Object? listenerId = freezed,
-    Object? listenerPandoraId = freezed,
+    Object? name = null,
+    Object? stationId = null,
+    Object? listenerId = null,
+    Object? listenerPandoraId = null,
     Object? initialSeedId = freezed,
-    Object? isQuickMix = freezed,
-    Object? isThumbprint = freezed,
-    Object? hasCuratedModes = freezed,
+    Object? isQuickMix = null,
+    Object? isThumbprint = null,
+    Object? hasCuratedModes = null,
     Object? icon = freezed,
-    Object? pandoraId = freezed,
+    Object? pandoraId = null,
   }) {
     return _then(_$StationAnnotation(
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      stationId: stationId == freezed
+      stationId: null == stationId
           ? _value.stationId
           : stationId // ignore: cast_nullable_to_non_nullable
               as String,
-      listenerId: listenerId == freezed
+      listenerId: null == listenerId
           ? _value.listenerId
           : listenerId // ignore: cast_nullable_to_non_nullable
               as int,
-      listenerPandoraId: listenerPandoraId == freezed
+      listenerPandoraId: null == listenerPandoraId
           ? _value.listenerPandoraId
           : listenerPandoraId // ignore: cast_nullable_to_non_nullable
               as String,
-      initialSeedId: initialSeedId == freezed
+      initialSeedId: freezed == initialSeedId
           ? _value.initialSeedId
           : initialSeedId // ignore: cast_nullable_to_non_nullable
               as String?,
-      isQuickMix: isQuickMix == freezed
+      isQuickMix: null == isQuickMix
           ? _value.isQuickMix
           : isQuickMix // ignore: cast_nullable_to_non_nullable
               as bool,
-      isThumbprint: isThumbprint == freezed
+      isThumbprint: null == isThumbprint
           ? _value.isThumbprint
           : isThumbprint // ignore: cast_nullable_to_non_nullable
               as bool,
-      hasCuratedModes: hasCuratedModes == freezed
+      hasCuratedModes: null == hasCuratedModes
           ? _value.hasCuratedModes
           : hasCuratedModes // ignore: cast_nullable_to_non_nullable
               as bool,
-      icon: icon == freezed
+      icon: freezed == icon
           ? _value.icon
           : icon // ignore: cast_nullable_to_non_nullable
               as MediaIcon?,
-      pandoraId: pandoraId == freezed
+      pandoraId: null == pandoraId
           ? _value.pandoraId
           : pandoraId // ignore: cast_nullable_to_non_nullable
               as String,
@@ -11907,6 +11940,7 @@ class __$$StationAnnotationCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $MediaIconCopyWith<$Res>? get icon {
     if (_value.icon == null) {
       return null;
@@ -11997,41 +12031,44 @@ class _$StationAnnotation extends StationAnnotation {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$StationAnnotation &&
-            const DeepCollectionEquality().equals(other.name, name) &&
-            const DeepCollectionEquality().equals(other.stationId, stationId) &&
-            const DeepCollectionEquality()
-                .equals(other.listenerId, listenerId) &&
-            const DeepCollectionEquality()
-                .equals(other.listenerPandoraId, listenerPandoraId) &&
-            const DeepCollectionEquality()
-                .equals(other.initialSeedId, initialSeedId) &&
-            const DeepCollectionEquality()
-                .equals(other.isQuickMix, isQuickMix) &&
-            const DeepCollectionEquality()
-                .equals(other.isThumbprint, isThumbprint) &&
-            const DeepCollectionEquality()
-                .equals(other.hasCuratedModes, hasCuratedModes) &&
-            const DeepCollectionEquality().equals(other.icon, icon) &&
-            const DeepCollectionEquality().equals(other.pandoraId, pandoraId));
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.stationId, stationId) ||
+                other.stationId == stationId) &&
+            (identical(other.listenerId, listenerId) ||
+                other.listenerId == listenerId) &&
+            (identical(other.listenerPandoraId, listenerPandoraId) ||
+                other.listenerPandoraId == listenerPandoraId) &&
+            (identical(other.initialSeedId, initialSeedId) ||
+                other.initialSeedId == initialSeedId) &&
+            (identical(other.isQuickMix, isQuickMix) ||
+                other.isQuickMix == isQuickMix) &&
+            (identical(other.isThumbprint, isThumbprint) ||
+                other.isThumbprint == isThumbprint) &&
+            (identical(other.hasCuratedModes, hasCuratedModes) ||
+                other.hasCuratedModes == hasCuratedModes) &&
+            (identical(other.icon, icon) || other.icon == icon) &&
+            (identical(other.pandoraId, pandoraId) ||
+                other.pandoraId == pandoraId));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(name),
-      const DeepCollectionEquality().hash(stationId),
-      const DeepCollectionEquality().hash(listenerId),
-      const DeepCollectionEquality().hash(listenerPandoraId),
-      const DeepCollectionEquality().hash(initialSeedId),
-      const DeepCollectionEquality().hash(isQuickMix),
-      const DeepCollectionEquality().hash(isThumbprint),
-      const DeepCollectionEquality().hash(hasCuratedModes),
-      const DeepCollectionEquality().hash(icon),
-      const DeepCollectionEquality().hash(pandoraId));
+      name,
+      stationId,
+      listenerId,
+      listenerPandoraId,
+      initialSeedId,
+      isQuickMix,
+      isThumbprint,
+      hasCuratedModes,
+      icon,
+      pandoraId);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$StationAnnotationCopyWith<_$StationAnnotation> get copyWith =>
       __$$StationAnnotationCopyWithImpl<_$StationAnnotation>(this, _$identity);
 
@@ -12441,7 +12478,7 @@ class _$StationAnnotation extends StationAnnotation {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -12479,7 +12516,7 @@ class _$StationAnnotation extends StationAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         track,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -12515,7 +12552,7 @@ class _$StationAnnotation extends StationAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         artist,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -12557,7 +12594,7 @@ class _$StationAnnotation extends StationAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         album,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -12587,7 +12624,7 @@ class _$StationAnnotation extends StationAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         artistMessage,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -12611,7 +12648,7 @@ class _$StationAnnotation extends StationAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         genre,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'allowFeedback', fromJson: readOptInBool, toJson: writeOptInBool)
@@ -12661,7 +12698,7 @@ class _$StationAnnotation extends StationAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         playlist,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'stationName')
                 String name,
             @JsonKey(name: 'stationId')
@@ -12683,7 +12720,7 @@ class _$StationAnnotation extends StationAnnotation {
             @JsonKey(name: 'pandoraId')
                 String pandoraId)?
         station,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -12725,7 +12762,7 @@ class _$StationAnnotation extends StationAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         podcast,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'aliases')
@@ -12739,7 +12776,7 @@ class _$StationAnnotation extends StationAnnotation {
             @JsonKey(name: 'scope')
                 String scope)?
         podcastCategory,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -12777,7 +12814,7 @@ class _$StationAnnotation extends StationAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         episode,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -12793,7 +12830,7 @@ class _$StationAnnotation extends StationAnnotation {
             @JsonKey(name: 'scope')
                 String scope)?
         curator,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -12817,7 +12854,7 @@ class _$StationAnnotation extends StationAnnotation {
             @JsonKey(name: 'scope')
                 String scope)?
         composer,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'listenerId') int listenerId,
             @JsonKey(name: 'webname') String webname,
             @JsonKey(name: 'fullname') String? fullName,
@@ -13271,19 +13308,19 @@ class _$StationAnnotation extends StationAnnotation {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(TrackAnnotation value)? track,
-    TResult Function(ArtistAnnotation value)? artist,
-    TResult Function(AlbumAnnotation value)? album,
-    TResult Function(ArtistMessageAnnotation value)? artistMessage,
-    TResult Function(GenreAnnotation value)? genre,
-    TResult Function(PlaylistAnnotation value)? playlist,
-    TResult Function(StationAnnotation value)? station,
-    TResult Function(PodcastAnnotation value)? podcast,
-    TResult Function(PodcastCategoryAnnotation value)? podcastCategory,
-    TResult Function(EpisodeAnnotation value)? episode,
-    TResult Function(CuratorAnnotation value)? curator,
-    TResult Function(ComposerAnnotation value)? composer,
-    TResult Function(ListenerAnnotation value)? listener,
+    TResult? Function(TrackAnnotation value)? track,
+    TResult? Function(ArtistAnnotation value)? artist,
+    TResult? Function(AlbumAnnotation value)? album,
+    TResult? Function(ArtistMessageAnnotation value)? artistMessage,
+    TResult? Function(GenreAnnotation value)? genre,
+    TResult? Function(PlaylistAnnotation value)? playlist,
+    TResult? Function(StationAnnotation value)? station,
+    TResult? Function(PodcastAnnotation value)? podcast,
+    TResult? Function(PodcastCategoryAnnotation value)? podcastCategory,
+    TResult? Function(EpisodeAnnotation value)? episode,
+    TResult? Function(CuratorAnnotation value)? curator,
+    TResult? Function(ComposerAnnotation value)? composer,
+    TResult? Function(ListenerAnnotation value)? listener,
   }) {
     return station?.call(this);
   }
@@ -13385,6 +13422,7 @@ abstract class _$$PodcastAnnotationCopyWith<$Res>
           _$PodcastAnnotation value, $Res Function(_$PodcastAnnotation) then) =
       __$$PodcastAnnotationCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(name: 'name')
           String name,
@@ -13433,116 +13471,114 @@ abstract class _$$PodcastAnnotationCopyWith<$Res>
 
 /// @nodoc
 class __$$PodcastAnnotationCopyWithImpl<$Res>
-    extends _$MediaAnnotationCopyWithImpl<$Res>
+    extends _$MediaAnnotationCopyWithImpl<$Res, _$PodcastAnnotation>
     implements _$$PodcastAnnotationCopyWith<$Res> {
   __$$PodcastAnnotationCopyWithImpl(
       _$PodcastAnnotation _value, $Res Function(_$PodcastAnnotation) _then)
-      : super(_value, (v) => _then(v as _$PodcastAnnotation));
+      : super(_value, _then);
 
-  @override
-  _$PodcastAnnotation get _value => super._value as _$PodcastAnnotation;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? name = freezed,
-    Object? sortableName = freezed,
+    Object? name = null,
+    Object? sortableName = null,
     Object? icon = freezed,
-    Object? modificationTime = freezed,
-    Object? publisherName = freezed,
-    Object? publisherId = freezed,
-    Object? ordering = freezed,
-    Object? episodeCount = freezed,
-    Object? shelfLife = freezed,
-    Object? categoryPandoraIds = freezed,
-    Object? shareableUrlPath = freezed,
-    Object? slugPlusPandoraId = freezed,
-    Object? contentState = freezed,
-    Object? rightsInfo = freezed,
-    Object? sxmEnabled = freezed,
+    Object? modificationTime = null,
+    Object? publisherName = null,
+    Object? publisherId = null,
+    Object? ordering = null,
+    Object? episodeCount = null,
+    Object? shelfLife = null,
+    Object? categoryPandoraIds = null,
+    Object? shareableUrlPath = null,
+    Object? slugPlusPandoraId = null,
+    Object? contentState = null,
+    Object? rightsInfo = null,
+    Object? sxmEnabled = null,
     Object? sxmChannelId = freezed,
     Object? latestEpisodePandoraId = freezed,
-    Object? exclusivityGroups = freezed,
-    Object? pandoraId = freezed,
-    Object? scope = freezed,
+    Object? exclusivityGroups = null,
+    Object? pandoraId = null,
+    Object? scope = null,
   }) {
     return _then(_$PodcastAnnotation(
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      sortableName: sortableName == freezed
+      sortableName: null == sortableName
           ? _value.sortableName
           : sortableName // ignore: cast_nullable_to_non_nullable
               as String,
-      icon: icon == freezed
+      icon: freezed == icon
           ? _value.icon
           : icon // ignore: cast_nullable_to_non_nullable
               as MediaIcon?,
-      modificationTime: modificationTime == freezed
+      modificationTime: null == modificationTime
           ? _value.modificationTime
           : modificationTime // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      publisherName: publisherName == freezed
+      publisherName: null == publisherName
           ? _value.publisherName
           : publisherName // ignore: cast_nullable_to_non_nullable
               as String,
-      publisherId: publisherId == freezed
+      publisherId: null == publisherId
           ? _value.publisherId
           : publisherId // ignore: cast_nullable_to_non_nullable
               as String,
-      ordering: ordering == freezed
+      ordering: null == ordering
           ? _value.ordering
           : ordering // ignore: cast_nullable_to_non_nullable
               as String,
-      episodeCount: episodeCount == freezed
+      episodeCount: null == episodeCount
           ? _value.episodeCount
           : episodeCount // ignore: cast_nullable_to_non_nullable
               as int,
-      shelfLife: shelfLife == freezed
+      shelfLife: null == shelfLife
           ? _value.shelfLife
           : shelfLife // ignore: cast_nullable_to_non_nullable
               as String,
-      categoryPandoraIds: categoryPandoraIds == freezed
+      categoryPandoraIds: null == categoryPandoraIds
           ? _value._categoryPandoraIds
           : categoryPandoraIds // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      shareableUrlPath: shareableUrlPath == freezed
+      shareableUrlPath: null == shareableUrlPath
           ? _value.shareableUrlPath
           : shareableUrlPath // ignore: cast_nullable_to_non_nullable
               as String,
-      slugPlusPandoraId: slugPlusPandoraId == freezed
+      slugPlusPandoraId: null == slugPlusPandoraId
           ? _value.slugPlusPandoraId
           : slugPlusPandoraId // ignore: cast_nullable_to_non_nullable
               as String,
-      contentState: contentState == freezed
+      contentState: null == contentState
           ? _value.contentState
           : contentState // ignore: cast_nullable_to_non_nullable
               as ContentState,
-      rightsInfo: rightsInfo == freezed
+      rightsInfo: null == rightsInfo
           ? _value.rightsInfo
           : rightsInfo // ignore: cast_nullable_to_non_nullable
               as RightsInfo,
-      sxmEnabled: sxmEnabled == freezed
+      sxmEnabled: null == sxmEnabled
           ? _value.sxmEnabled
           : sxmEnabled // ignore: cast_nullable_to_non_nullable
               as bool,
-      sxmChannelId: sxmChannelId == freezed
+      sxmChannelId: freezed == sxmChannelId
           ? _value.sxmChannelId
           : sxmChannelId // ignore: cast_nullable_to_non_nullable
               as String?,
-      latestEpisodePandoraId: latestEpisodePandoraId == freezed
+      latestEpisodePandoraId: freezed == latestEpisodePandoraId
           ? _value.latestEpisodePandoraId
           : latestEpisodePandoraId // ignore: cast_nullable_to_non_nullable
               as String?,
-      exclusivityGroups: exclusivityGroups == freezed
+      exclusivityGroups: null == exclusivityGroups
           ? _value._exclusivityGroups
           : exclusivityGroups // ignore: cast_nullable_to_non_nullable
               as List<Object>,
-      pandoraId: pandoraId == freezed
+      pandoraId: null == pandoraId
           ? _value.pandoraId
           : pandoraId // ignore: cast_nullable_to_non_nullable
               as String,
-      scope: scope == freezed
+      scope: null == scope
           ? _value.scope
           : scope // ignore: cast_nullable_to_non_nullable
               as Scope,
@@ -13550,6 +13586,7 @@ class __$$PodcastAnnotationCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $MediaIconCopyWith<$Res>? get icon {
     if (_value.icon == null) {
       return null;
@@ -13561,6 +13598,7 @@ class __$$PodcastAnnotationCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $RightsInfoCopyWith<$Res> get rightsInfo {
     return $RightsInfoCopyWith<$Res>(_value.rightsInfo, (value) {
       return _then(_value.copyWith(rightsInfo: value));
@@ -13711,70 +13749,74 @@ class _$PodcastAnnotation extends PodcastAnnotation {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$PodcastAnnotation &&
-            const DeepCollectionEquality().equals(other.name, name) &&
-            const DeepCollectionEquality()
-                .equals(other.sortableName, sortableName) &&
-            const DeepCollectionEquality().equals(other.icon, icon) &&
-            const DeepCollectionEquality()
-                .equals(other.modificationTime, modificationTime) &&
-            const DeepCollectionEquality()
-                .equals(other.publisherName, publisherName) &&
-            const DeepCollectionEquality()
-                .equals(other.publisherId, publisherId) &&
-            const DeepCollectionEquality().equals(other.ordering, ordering) &&
-            const DeepCollectionEquality()
-                .equals(other.episodeCount, episodeCount) &&
-            const DeepCollectionEquality().equals(other.shelfLife, shelfLife) &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.sortableName, sortableName) ||
+                other.sortableName == sortableName) &&
+            (identical(other.icon, icon) || other.icon == icon) &&
+            (identical(other.modificationTime, modificationTime) ||
+                other.modificationTime == modificationTime) &&
+            (identical(other.publisherName, publisherName) ||
+                other.publisherName == publisherName) &&
+            (identical(other.publisherId, publisherId) ||
+                other.publisherId == publisherId) &&
+            (identical(other.ordering, ordering) ||
+                other.ordering == ordering) &&
+            (identical(other.episodeCount, episodeCount) ||
+                other.episodeCount == episodeCount) &&
+            (identical(other.shelfLife, shelfLife) ||
+                other.shelfLife == shelfLife) &&
             const DeepCollectionEquality()
                 .equals(other._categoryPandoraIds, _categoryPandoraIds) &&
-            const DeepCollectionEquality()
-                .equals(other.shareableUrlPath, shareableUrlPath) &&
-            const DeepCollectionEquality()
-                .equals(other.slugPlusPandoraId, slugPlusPandoraId) &&
-            const DeepCollectionEquality()
-                .equals(other.contentState, contentState) &&
-            const DeepCollectionEquality()
-                .equals(other.rightsInfo, rightsInfo) &&
-            const DeepCollectionEquality()
-                .equals(other.sxmEnabled, sxmEnabled) &&
-            const DeepCollectionEquality()
-                .equals(other.sxmChannelId, sxmChannelId) &&
-            const DeepCollectionEquality()
-                .equals(other.latestEpisodePandoraId, latestEpisodePandoraId) &&
+            (identical(other.shareableUrlPath, shareableUrlPath) ||
+                other.shareableUrlPath == shareableUrlPath) &&
+            (identical(other.slugPlusPandoraId, slugPlusPandoraId) ||
+                other.slugPlusPandoraId == slugPlusPandoraId) &&
+            (identical(other.contentState, contentState) ||
+                other.contentState == contentState) &&
+            (identical(other.rightsInfo, rightsInfo) ||
+                other.rightsInfo == rightsInfo) &&
+            (identical(other.sxmEnabled, sxmEnabled) ||
+                other.sxmEnabled == sxmEnabled) &&
+            (identical(other.sxmChannelId, sxmChannelId) ||
+                other.sxmChannelId == sxmChannelId) &&
+            (identical(other.latestEpisodePandoraId, latestEpisodePandoraId) ||
+                other.latestEpisodePandoraId == latestEpisodePandoraId) &&
             const DeepCollectionEquality()
                 .equals(other._exclusivityGroups, _exclusivityGroups) &&
-            const DeepCollectionEquality().equals(other.pandoraId, pandoraId) &&
-            const DeepCollectionEquality().equals(other.scope, scope));
+            (identical(other.pandoraId, pandoraId) ||
+                other.pandoraId == pandoraId) &&
+            (identical(other.scope, scope) || other.scope == scope));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
-        const DeepCollectionEquality().hash(name),
-        const DeepCollectionEquality().hash(sortableName),
-        const DeepCollectionEquality().hash(icon),
-        const DeepCollectionEquality().hash(modificationTime),
-        const DeepCollectionEquality().hash(publisherName),
-        const DeepCollectionEquality().hash(publisherId),
-        const DeepCollectionEquality().hash(ordering),
-        const DeepCollectionEquality().hash(episodeCount),
-        const DeepCollectionEquality().hash(shelfLife),
+        name,
+        sortableName,
+        icon,
+        modificationTime,
+        publisherName,
+        publisherId,
+        ordering,
+        episodeCount,
+        shelfLife,
         const DeepCollectionEquality().hash(_categoryPandoraIds),
-        const DeepCollectionEquality().hash(shareableUrlPath),
-        const DeepCollectionEquality().hash(slugPlusPandoraId),
-        const DeepCollectionEquality().hash(contentState),
-        const DeepCollectionEquality().hash(rightsInfo),
-        const DeepCollectionEquality().hash(sxmEnabled),
-        const DeepCollectionEquality().hash(sxmChannelId),
-        const DeepCollectionEquality().hash(latestEpisodePandoraId),
+        shareableUrlPath,
+        slugPlusPandoraId,
+        contentState,
+        rightsInfo,
+        sxmEnabled,
+        sxmChannelId,
+        latestEpisodePandoraId,
         const DeepCollectionEquality().hash(_exclusivityGroups),
-        const DeepCollectionEquality().hash(pandoraId),
-        const DeepCollectionEquality().hash(scope)
+        pandoraId,
+        scope
       ]);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$PodcastAnnotationCopyWith<_$PodcastAnnotation> get copyWith =>
       __$$PodcastAnnotationCopyWithImpl<_$PodcastAnnotation>(this, _$identity);
 
@@ -14194,7 +14236,7 @@ class _$PodcastAnnotation extends PodcastAnnotation {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -14232,7 +14274,7 @@ class _$PodcastAnnotation extends PodcastAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         track,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -14268,7 +14310,7 @@ class _$PodcastAnnotation extends PodcastAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         artist,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -14310,7 +14352,7 @@ class _$PodcastAnnotation extends PodcastAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         album,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -14340,7 +14382,7 @@ class _$PodcastAnnotation extends PodcastAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         artistMessage,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -14364,7 +14406,7 @@ class _$PodcastAnnotation extends PodcastAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         genre,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'allowFeedback', fromJson: readOptInBool, toJson: writeOptInBool)
@@ -14414,7 +14456,7 @@ class _$PodcastAnnotation extends PodcastAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         playlist,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'stationName')
                 String name,
             @JsonKey(name: 'stationId')
@@ -14436,7 +14478,7 @@ class _$PodcastAnnotation extends PodcastAnnotation {
             @JsonKey(name: 'pandoraId')
                 String pandoraId)?
         station,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -14478,7 +14520,7 @@ class _$PodcastAnnotation extends PodcastAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         podcast,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'aliases')
@@ -14492,7 +14534,7 @@ class _$PodcastAnnotation extends PodcastAnnotation {
             @JsonKey(name: 'scope')
                 String scope)?
         podcastCategory,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -14530,7 +14572,7 @@ class _$PodcastAnnotation extends PodcastAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         episode,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -14546,7 +14588,7 @@ class _$PodcastAnnotation extends PodcastAnnotation {
             @JsonKey(name: 'scope')
                 String scope)?
         curator,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -14570,7 +14612,7 @@ class _$PodcastAnnotation extends PodcastAnnotation {
             @JsonKey(name: 'scope')
                 String scope)?
         composer,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'listenerId') int listenerId,
             @JsonKey(name: 'webname') String webname,
             @JsonKey(name: 'fullname') String? fullName,
@@ -15044,19 +15086,19 @@ class _$PodcastAnnotation extends PodcastAnnotation {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(TrackAnnotation value)? track,
-    TResult Function(ArtistAnnotation value)? artist,
-    TResult Function(AlbumAnnotation value)? album,
-    TResult Function(ArtistMessageAnnotation value)? artistMessage,
-    TResult Function(GenreAnnotation value)? genre,
-    TResult Function(PlaylistAnnotation value)? playlist,
-    TResult Function(StationAnnotation value)? station,
-    TResult Function(PodcastAnnotation value)? podcast,
-    TResult Function(PodcastCategoryAnnotation value)? podcastCategory,
-    TResult Function(EpisodeAnnotation value)? episode,
-    TResult Function(CuratorAnnotation value)? curator,
-    TResult Function(ComposerAnnotation value)? composer,
-    TResult Function(ListenerAnnotation value)? listener,
+    TResult? Function(TrackAnnotation value)? track,
+    TResult? Function(ArtistAnnotation value)? artist,
+    TResult? Function(AlbumAnnotation value)? album,
+    TResult? Function(ArtistMessageAnnotation value)? artistMessage,
+    TResult? Function(GenreAnnotation value)? genre,
+    TResult? Function(PlaylistAnnotation value)? playlist,
+    TResult? Function(StationAnnotation value)? station,
+    TResult? Function(PodcastAnnotation value)? podcast,
+    TResult? Function(PodcastCategoryAnnotation value)? podcastCategory,
+    TResult? Function(EpisodeAnnotation value)? episode,
+    TResult? Function(CuratorAnnotation value)? curator,
+    TResult? Function(ComposerAnnotation value)? composer,
+    TResult? Function(ListenerAnnotation value)? listener,
   }) {
     return podcast?.call(this);
   }
@@ -15201,6 +15243,7 @@ abstract class _$$PodcastCategoryAnnotationCopyWith<$Res>
           $Res Function(_$PodcastCategoryAnnotation) then) =
       __$$PodcastCategoryAnnotationCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(name: 'name')
           String name,
@@ -15220,47 +15263,44 @@ abstract class _$$PodcastCategoryAnnotationCopyWith<$Res>
 
 /// @nodoc
 class __$$PodcastCategoryAnnotationCopyWithImpl<$Res>
-    extends _$MediaAnnotationCopyWithImpl<$Res>
+    extends _$MediaAnnotationCopyWithImpl<$Res, _$PodcastCategoryAnnotation>
     implements _$$PodcastCategoryAnnotationCopyWith<$Res> {
   __$$PodcastCategoryAnnotationCopyWithImpl(_$PodcastCategoryAnnotation _value,
       $Res Function(_$PodcastCategoryAnnotation) _then)
-      : super(_value, (v) => _then(v as _$PodcastCategoryAnnotation));
+      : super(_value, _then);
 
-  @override
-  _$PodcastCategoryAnnotation get _value =>
-      super._value as _$PodcastCategoryAnnotation;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? name = freezed,
-    Object? aliases = freezed,
+    Object? name = null,
+    Object? aliases = null,
     Object? icon = freezed,
-    Object? modificationTime = freezed,
-    Object? pandoraId = freezed,
-    Object? scope = freezed,
+    Object? modificationTime = null,
+    Object? pandoraId = null,
+    Object? scope = null,
   }) {
     return _then(_$PodcastCategoryAnnotation(
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      aliases: aliases == freezed
+      aliases: null == aliases
           ? _value._aliases
           : aliases // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      icon: icon == freezed
+      icon: freezed == icon
           ? _value.icon
           : icon // ignore: cast_nullable_to_non_nullable
               as MediaIcon?,
-      modificationTime: modificationTime == freezed
+      modificationTime: null == modificationTime
           ? _value.modificationTime
           : modificationTime // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      pandoraId: pandoraId == freezed
+      pandoraId: null == pandoraId
           ? _value.pandoraId
           : pandoraId // ignore: cast_nullable_to_non_nullable
               as String,
-      scope: scope == freezed
+      scope: null == scope
           ? _value.scope
           : scope // ignore: cast_nullable_to_non_nullable
               as String,
@@ -15268,6 +15308,7 @@ class __$$PodcastCategoryAnnotationCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $MediaIconCopyWith<$Res>? get icon {
     if (_value.icon == null) {
       return null;
@@ -15346,28 +15387,30 @@ class _$PodcastCategoryAnnotation extends PodcastCategoryAnnotation {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$PodcastCategoryAnnotation &&
-            const DeepCollectionEquality().equals(other.name, name) &&
+            (identical(other.name, name) || other.name == name) &&
             const DeepCollectionEquality().equals(other._aliases, _aliases) &&
-            const DeepCollectionEquality().equals(other.icon, icon) &&
-            const DeepCollectionEquality()
-                .equals(other.modificationTime, modificationTime) &&
-            const DeepCollectionEquality().equals(other.pandoraId, pandoraId) &&
-            const DeepCollectionEquality().equals(other.scope, scope));
+            (identical(other.icon, icon) || other.icon == icon) &&
+            (identical(other.modificationTime, modificationTime) ||
+                other.modificationTime == modificationTime) &&
+            (identical(other.pandoraId, pandoraId) ||
+                other.pandoraId == pandoraId) &&
+            (identical(other.scope, scope) || other.scope == scope));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(name),
+      name,
       const DeepCollectionEquality().hash(_aliases),
-      const DeepCollectionEquality().hash(icon),
-      const DeepCollectionEquality().hash(modificationTime),
-      const DeepCollectionEquality().hash(pandoraId),
-      const DeepCollectionEquality().hash(scope));
+      icon,
+      modificationTime,
+      pandoraId,
+      scope);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$PodcastCategoryAnnotationCopyWith<_$PodcastCategoryAnnotation>
       get copyWith => __$$PodcastCategoryAnnotationCopyWithImpl<
           _$PodcastCategoryAnnotation>(this, _$identity);
@@ -15769,7 +15812,7 @@ class _$PodcastCategoryAnnotation extends PodcastCategoryAnnotation {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -15807,7 +15850,7 @@ class _$PodcastCategoryAnnotation extends PodcastCategoryAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         track,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -15843,7 +15886,7 @@ class _$PodcastCategoryAnnotation extends PodcastCategoryAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         artist,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -15885,7 +15928,7 @@ class _$PodcastCategoryAnnotation extends PodcastCategoryAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         album,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -15915,7 +15958,7 @@ class _$PodcastCategoryAnnotation extends PodcastCategoryAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         artistMessage,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -15939,7 +15982,7 @@ class _$PodcastCategoryAnnotation extends PodcastCategoryAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         genre,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'allowFeedback', fromJson: readOptInBool, toJson: writeOptInBool)
@@ -15989,7 +16032,7 @@ class _$PodcastCategoryAnnotation extends PodcastCategoryAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         playlist,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'stationName')
                 String name,
             @JsonKey(name: 'stationId')
@@ -16011,7 +16054,7 @@ class _$PodcastCategoryAnnotation extends PodcastCategoryAnnotation {
             @JsonKey(name: 'pandoraId')
                 String pandoraId)?
         station,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -16053,7 +16096,7 @@ class _$PodcastCategoryAnnotation extends PodcastCategoryAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         podcast,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'aliases')
@@ -16067,7 +16110,7 @@ class _$PodcastCategoryAnnotation extends PodcastCategoryAnnotation {
             @JsonKey(name: 'scope')
                 String scope)?
         podcastCategory,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -16105,7 +16148,7 @@ class _$PodcastCategoryAnnotation extends PodcastCategoryAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         episode,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -16121,7 +16164,7 @@ class _$PodcastCategoryAnnotation extends PodcastCategoryAnnotation {
             @JsonKey(name: 'scope')
                 String scope)?
         curator,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -16145,7 +16188,7 @@ class _$PodcastCategoryAnnotation extends PodcastCategoryAnnotation {
             @JsonKey(name: 'scope')
                 String scope)?
         composer,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'listenerId') int listenerId,
             @JsonKey(name: 'webname') String webname,
             @JsonKey(name: 'fullname') String? fullName,
@@ -16581,19 +16624,19 @@ class _$PodcastCategoryAnnotation extends PodcastCategoryAnnotation {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(TrackAnnotation value)? track,
-    TResult Function(ArtistAnnotation value)? artist,
-    TResult Function(AlbumAnnotation value)? album,
-    TResult Function(ArtistMessageAnnotation value)? artistMessage,
-    TResult Function(GenreAnnotation value)? genre,
-    TResult Function(PlaylistAnnotation value)? playlist,
-    TResult Function(StationAnnotation value)? station,
-    TResult Function(PodcastAnnotation value)? podcast,
-    TResult Function(PodcastCategoryAnnotation value)? podcastCategory,
-    TResult Function(EpisodeAnnotation value)? episode,
-    TResult Function(CuratorAnnotation value)? curator,
-    TResult Function(ComposerAnnotation value)? composer,
-    TResult Function(ListenerAnnotation value)? listener,
+    TResult? Function(TrackAnnotation value)? track,
+    TResult? Function(ArtistAnnotation value)? artist,
+    TResult? Function(AlbumAnnotation value)? album,
+    TResult? Function(ArtistMessageAnnotation value)? artistMessage,
+    TResult? Function(GenreAnnotation value)? genre,
+    TResult? Function(PlaylistAnnotation value)? playlist,
+    TResult? Function(StationAnnotation value)? station,
+    TResult? Function(PodcastAnnotation value)? podcast,
+    TResult? Function(PodcastCategoryAnnotation value)? podcastCategory,
+    TResult? Function(EpisodeAnnotation value)? episode,
+    TResult? Function(CuratorAnnotation value)? curator,
+    TResult? Function(ComposerAnnotation value)? composer,
+    TResult? Function(ListenerAnnotation value)? listener,
   }) {
     return podcastCategory?.call(this);
   }
@@ -16681,6 +16724,7 @@ abstract class _$$EpisodeAnnotationCopyWith<$Res>
           _$EpisodeAnnotation value, $Res Function(_$EpisodeAnnotation) then) =
       __$$EpisodeAnnotationCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(name: 'name')
           String name,
@@ -16725,106 +16769,104 @@ abstract class _$$EpisodeAnnotationCopyWith<$Res>
 
 /// @nodoc
 class __$$EpisodeAnnotationCopyWithImpl<$Res>
-    extends _$MediaAnnotationCopyWithImpl<$Res>
+    extends _$MediaAnnotationCopyWithImpl<$Res, _$EpisodeAnnotation>
     implements _$$EpisodeAnnotationCopyWith<$Res> {
   __$$EpisodeAnnotationCopyWithImpl(
       _$EpisodeAnnotation _value, $Res Function(_$EpisodeAnnotation) _then)
-      : super(_value, (v) => _then(v as _$EpisodeAnnotation));
+      : super(_value, _then);
 
-  @override
-  _$EpisodeAnnotation get _value => super._value as _$EpisodeAnnotation;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? name = freezed,
-    Object? sortableName = freezed,
+    Object? name = null,
+    Object? sortableName = null,
     Object? icon = freezed,
-    Object? modificationTime = freezed,
-    Object? programName = freezed,
-    Object? summary = freezed,
+    Object? modificationTime = null,
+    Object? programName = null,
+    Object? summary = null,
     Object? releaseDate = freezed,
-    Object? podcastPandoraId = freezed,
-    Object? duration = freezed,
-    Object? rightsInfo = freezed,
-    Object? explicitness = freezed,
-    Object? shareableUrlPath = freezed,
-    Object? slugPlusPandoraId = freezed,
-    Object? contentState = freezed,
-    Object? adBreaks = freezed,
-    Object? exclusivityGroups = freezed,
-    Object? pandoraId = freezed,
-    Object? scope = freezed,
+    Object? podcastPandoraId = null,
+    Object? duration = null,
+    Object? rightsInfo = null,
+    Object? explicitness = null,
+    Object? shareableUrlPath = null,
+    Object? slugPlusPandoraId = null,
+    Object? contentState = null,
+    Object? adBreaks = null,
+    Object? exclusivityGroups = null,
+    Object? pandoraId = null,
+    Object? scope = null,
   }) {
     return _then(_$EpisodeAnnotation(
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      sortableName: sortableName == freezed
+      sortableName: null == sortableName
           ? _value.sortableName
           : sortableName // ignore: cast_nullable_to_non_nullable
               as String,
-      icon: icon == freezed
+      icon: freezed == icon
           ? _value.icon
           : icon // ignore: cast_nullable_to_non_nullable
               as MediaIcon?,
-      modificationTime: modificationTime == freezed
+      modificationTime: null == modificationTime
           ? _value.modificationTime
           : modificationTime // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      programName: programName == freezed
+      programName: null == programName
           ? _value.programName
           : programName // ignore: cast_nullable_to_non_nullable
               as String,
-      summary: summary == freezed
+      summary: null == summary
           ? _value.summary
           : summary // ignore: cast_nullable_to_non_nullable
               as String,
-      releaseDate: releaseDate == freezed
+      releaseDate: freezed == releaseDate
           ? _value.releaseDate
           : releaseDate // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      podcastPandoraId: podcastPandoraId == freezed
+      podcastPandoraId: null == podcastPandoraId
           ? _value.podcastPandoraId
           : podcastPandoraId // ignore: cast_nullable_to_non_nullable
               as String,
-      duration: duration == freezed
+      duration: null == duration
           ? _value.duration
           : duration // ignore: cast_nullable_to_non_nullable
               as Duration,
-      rightsInfo: rightsInfo == freezed
+      rightsInfo: null == rightsInfo
           ? _value.rightsInfo
           : rightsInfo // ignore: cast_nullable_to_non_nullable
               as RightsInfo,
-      explicitness: explicitness == freezed
+      explicitness: null == explicitness
           ? _value.explicitness
           : explicitness // ignore: cast_nullable_to_non_nullable
               as Explicitness,
-      shareableUrlPath: shareableUrlPath == freezed
+      shareableUrlPath: null == shareableUrlPath
           ? _value.shareableUrlPath
           : shareableUrlPath // ignore: cast_nullable_to_non_nullable
               as String,
-      slugPlusPandoraId: slugPlusPandoraId == freezed
+      slugPlusPandoraId: null == slugPlusPandoraId
           ? _value.slugPlusPandoraId
           : slugPlusPandoraId // ignore: cast_nullable_to_non_nullable
               as String,
-      contentState: contentState == freezed
+      contentState: null == contentState
           ? _value.contentState
           : contentState // ignore: cast_nullable_to_non_nullable
               as ContentState,
-      adBreaks: adBreaks == freezed
+      adBreaks: null == adBreaks
           ? _value._adBreaks
           : adBreaks // ignore: cast_nullable_to_non_nullable
               as List<Object>,
-      exclusivityGroups: exclusivityGroups == freezed
+      exclusivityGroups: null == exclusivityGroups
           ? _value._exclusivityGroups
           : exclusivityGroups // ignore: cast_nullable_to_non_nullable
               as List<Object>,
-      pandoraId: pandoraId == freezed
+      pandoraId: null == pandoraId
           ? _value.pandoraId
           : pandoraId // ignore: cast_nullable_to_non_nullable
               as String,
-      scope: scope == freezed
+      scope: null == scope
           ? _value.scope
           : scope // ignore: cast_nullable_to_non_nullable
               as Scope,
@@ -16832,6 +16874,7 @@ class __$$EpisodeAnnotationCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $MediaIconCopyWith<$Res>? get icon {
     if (_value.icon == null) {
       return null;
@@ -16843,6 +16886,7 @@ class __$$EpisodeAnnotationCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $RightsInfoCopyWith<$Res> get rightsInfo {
     return $RightsInfoCopyWith<$Res>(_value.rightsInfo, (value) {
       return _then(_value.copyWith(rightsInfo: value));
@@ -16983,62 +17027,65 @@ class _$EpisodeAnnotation extends EpisodeAnnotation {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$EpisodeAnnotation &&
-            const DeepCollectionEquality().equals(other.name, name) &&
-            const DeepCollectionEquality()
-                .equals(other.sortableName, sortableName) &&
-            const DeepCollectionEquality().equals(other.icon, icon) &&
-            const DeepCollectionEquality()
-                .equals(other.modificationTime, modificationTime) &&
-            const DeepCollectionEquality()
-                .equals(other.programName, programName) &&
-            const DeepCollectionEquality().equals(other.summary, summary) &&
-            const DeepCollectionEquality()
-                .equals(other.releaseDate, releaseDate) &&
-            const DeepCollectionEquality()
-                .equals(other.podcastPandoraId, podcastPandoraId) &&
-            const DeepCollectionEquality().equals(other.duration, duration) &&
-            const DeepCollectionEquality()
-                .equals(other.rightsInfo, rightsInfo) &&
-            const DeepCollectionEquality()
-                .equals(other.explicitness, explicitness) &&
-            const DeepCollectionEquality()
-                .equals(other.shareableUrlPath, shareableUrlPath) &&
-            const DeepCollectionEquality()
-                .equals(other.slugPlusPandoraId, slugPlusPandoraId) &&
-            const DeepCollectionEquality()
-                .equals(other.contentState, contentState) &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.sortableName, sortableName) ||
+                other.sortableName == sortableName) &&
+            (identical(other.icon, icon) || other.icon == icon) &&
+            (identical(other.modificationTime, modificationTime) ||
+                other.modificationTime == modificationTime) &&
+            (identical(other.programName, programName) ||
+                other.programName == programName) &&
+            (identical(other.summary, summary) || other.summary == summary) &&
+            (identical(other.releaseDate, releaseDate) ||
+                other.releaseDate == releaseDate) &&
+            (identical(other.podcastPandoraId, podcastPandoraId) ||
+                other.podcastPandoraId == podcastPandoraId) &&
+            (identical(other.duration, duration) ||
+                other.duration == duration) &&
+            (identical(other.rightsInfo, rightsInfo) ||
+                other.rightsInfo == rightsInfo) &&
+            (identical(other.explicitness, explicitness) ||
+                other.explicitness == explicitness) &&
+            (identical(other.shareableUrlPath, shareableUrlPath) ||
+                other.shareableUrlPath == shareableUrlPath) &&
+            (identical(other.slugPlusPandoraId, slugPlusPandoraId) ||
+                other.slugPlusPandoraId == slugPlusPandoraId) &&
+            (identical(other.contentState, contentState) ||
+                other.contentState == contentState) &&
             const DeepCollectionEquality().equals(other._adBreaks, _adBreaks) &&
             const DeepCollectionEquality()
                 .equals(other._exclusivityGroups, _exclusivityGroups) &&
-            const DeepCollectionEquality().equals(other.pandoraId, pandoraId) &&
-            const DeepCollectionEquality().equals(other.scope, scope));
+            (identical(other.pandoraId, pandoraId) ||
+                other.pandoraId == pandoraId) &&
+            (identical(other.scope, scope) || other.scope == scope));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(name),
-      const DeepCollectionEquality().hash(sortableName),
-      const DeepCollectionEquality().hash(icon),
-      const DeepCollectionEquality().hash(modificationTime),
-      const DeepCollectionEquality().hash(programName),
-      const DeepCollectionEquality().hash(summary),
-      const DeepCollectionEquality().hash(releaseDate),
-      const DeepCollectionEquality().hash(podcastPandoraId),
-      const DeepCollectionEquality().hash(duration),
-      const DeepCollectionEquality().hash(rightsInfo),
-      const DeepCollectionEquality().hash(explicitness),
-      const DeepCollectionEquality().hash(shareableUrlPath),
-      const DeepCollectionEquality().hash(slugPlusPandoraId),
-      const DeepCollectionEquality().hash(contentState),
+      name,
+      sortableName,
+      icon,
+      modificationTime,
+      programName,
+      summary,
+      releaseDate,
+      podcastPandoraId,
+      duration,
+      rightsInfo,
+      explicitness,
+      shareableUrlPath,
+      slugPlusPandoraId,
+      contentState,
       const DeepCollectionEquality().hash(_adBreaks),
       const DeepCollectionEquality().hash(_exclusivityGroups),
-      const DeepCollectionEquality().hash(pandoraId),
-      const DeepCollectionEquality().hash(scope));
+      pandoraId,
+      scope);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$EpisodeAnnotationCopyWith<_$EpisodeAnnotation> get copyWith =>
       __$$EpisodeAnnotationCopyWithImpl<_$EpisodeAnnotation>(this, _$identity);
 
@@ -17456,7 +17503,7 @@ class _$EpisodeAnnotation extends EpisodeAnnotation {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -17494,7 +17541,7 @@ class _$EpisodeAnnotation extends EpisodeAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         track,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -17530,7 +17577,7 @@ class _$EpisodeAnnotation extends EpisodeAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         artist,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -17572,7 +17619,7 @@ class _$EpisodeAnnotation extends EpisodeAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         album,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -17602,7 +17649,7 @@ class _$EpisodeAnnotation extends EpisodeAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         artistMessage,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -17626,7 +17673,7 @@ class _$EpisodeAnnotation extends EpisodeAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         genre,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'allowFeedback', fromJson: readOptInBool, toJson: writeOptInBool)
@@ -17676,7 +17723,7 @@ class _$EpisodeAnnotation extends EpisodeAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         playlist,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'stationName')
                 String name,
             @JsonKey(name: 'stationId')
@@ -17698,7 +17745,7 @@ class _$EpisodeAnnotation extends EpisodeAnnotation {
             @JsonKey(name: 'pandoraId')
                 String pandoraId)?
         station,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -17740,7 +17787,7 @@ class _$EpisodeAnnotation extends EpisodeAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         podcast,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'aliases')
@@ -17754,7 +17801,7 @@ class _$EpisodeAnnotation extends EpisodeAnnotation {
             @JsonKey(name: 'scope')
                 String scope)?
         podcastCategory,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -17792,7 +17839,7 @@ class _$EpisodeAnnotation extends EpisodeAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         episode,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -17808,7 +17855,7 @@ class _$EpisodeAnnotation extends EpisodeAnnotation {
             @JsonKey(name: 'scope')
                 String scope)?
         curator,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -17832,7 +17879,7 @@ class _$EpisodeAnnotation extends EpisodeAnnotation {
             @JsonKey(name: 'scope')
                 String scope)?
         composer,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'listenerId') int listenerId,
             @JsonKey(name: 'webname') String webname,
             @JsonKey(name: 'fullname') String? fullName,
@@ -18302,19 +18349,19 @@ class _$EpisodeAnnotation extends EpisodeAnnotation {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(TrackAnnotation value)? track,
-    TResult Function(ArtistAnnotation value)? artist,
-    TResult Function(AlbumAnnotation value)? album,
-    TResult Function(ArtistMessageAnnotation value)? artistMessage,
-    TResult Function(GenreAnnotation value)? genre,
-    TResult Function(PlaylistAnnotation value)? playlist,
-    TResult Function(StationAnnotation value)? station,
-    TResult Function(PodcastAnnotation value)? podcast,
-    TResult Function(PodcastCategoryAnnotation value)? podcastCategory,
-    TResult Function(EpisodeAnnotation value)? episode,
-    TResult Function(CuratorAnnotation value)? curator,
-    TResult Function(ComposerAnnotation value)? composer,
-    TResult Function(ListenerAnnotation value)? listener,
+    TResult? Function(TrackAnnotation value)? track,
+    TResult? Function(ArtistAnnotation value)? artist,
+    TResult? Function(AlbumAnnotation value)? album,
+    TResult? Function(ArtistMessageAnnotation value)? artistMessage,
+    TResult? Function(GenreAnnotation value)? genre,
+    TResult? Function(PlaylistAnnotation value)? playlist,
+    TResult? Function(StationAnnotation value)? station,
+    TResult? Function(PodcastAnnotation value)? podcast,
+    TResult? Function(PodcastCategoryAnnotation value)? podcastCategory,
+    TResult? Function(EpisodeAnnotation value)? episode,
+    TResult? Function(CuratorAnnotation value)? curator,
+    TResult? Function(ComposerAnnotation value)? composer,
+    TResult? Function(ListenerAnnotation value)? listener,
   }) {
     return episode?.call(this);
   }
@@ -18450,6 +18497,7 @@ abstract class _$$CuratorAnnotationCopyWith<$Res>
           _$CuratorAnnotation value, $Res Function(_$CuratorAnnotation) then) =
       __$$CuratorAnnotationCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(name: 'name')
           String name,
@@ -18471,51 +18519,49 @@ abstract class _$$CuratorAnnotationCopyWith<$Res>
 
 /// @nodoc
 class __$$CuratorAnnotationCopyWithImpl<$Res>
-    extends _$MediaAnnotationCopyWithImpl<$Res>
+    extends _$MediaAnnotationCopyWithImpl<$Res, _$CuratorAnnotation>
     implements _$$CuratorAnnotationCopyWith<$Res> {
   __$$CuratorAnnotationCopyWithImpl(
       _$CuratorAnnotation _value, $Res Function(_$CuratorAnnotation) _then)
-      : super(_value, (v) => _then(v as _$CuratorAnnotation));
+      : super(_value, _then);
 
-  @override
-  _$CuratorAnnotation get _value => super._value as _$CuratorAnnotation;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? name = freezed,
-    Object? sortableName = freezed,
+    Object? name = null,
+    Object? sortableName = null,
     Object? icon = freezed,
-    Object? listenerId = freezed,
-    Object? listenerPandoraId = freezed,
-    Object? pandoraId = freezed,
-    Object? scope = freezed,
+    Object? listenerId = null,
+    Object? listenerPandoraId = null,
+    Object? pandoraId = null,
+    Object? scope = null,
   }) {
     return _then(_$CuratorAnnotation(
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      sortableName: sortableName == freezed
+      sortableName: null == sortableName
           ? _value.sortableName
           : sortableName // ignore: cast_nullable_to_non_nullable
               as String,
-      icon: icon == freezed
+      icon: freezed == icon
           ? _value.icon
           : icon // ignore: cast_nullable_to_non_nullable
               as MediaIcon?,
-      listenerId: listenerId == freezed
+      listenerId: null == listenerId
           ? _value.listenerId
           : listenerId // ignore: cast_nullable_to_non_nullable
               as int,
-      listenerPandoraId: listenerPandoraId == freezed
+      listenerPandoraId: null == listenerPandoraId
           ? _value.listenerPandoraId
           : listenerPandoraId // ignore: cast_nullable_to_non_nullable
               as String,
-      pandoraId: pandoraId == freezed
+      pandoraId: null == pandoraId
           ? _value.pandoraId
           : pandoraId // ignore: cast_nullable_to_non_nullable
               as String,
-      scope: scope == freezed
+      scope: null == scope
           ? _value.scope
           : scope // ignore: cast_nullable_to_non_nullable
               as String,
@@ -18523,6 +18569,7 @@ class __$$CuratorAnnotationCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $MediaIconCopyWith<$Res>? get icon {
     if (_value.icon == null) {
       return null;
@@ -18597,32 +18644,27 @@ class _$CuratorAnnotation extends CuratorAnnotation {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CuratorAnnotation &&
-            const DeepCollectionEquality().equals(other.name, name) &&
-            const DeepCollectionEquality()
-                .equals(other.sortableName, sortableName) &&
-            const DeepCollectionEquality().equals(other.icon, icon) &&
-            const DeepCollectionEquality()
-                .equals(other.listenerId, listenerId) &&
-            const DeepCollectionEquality()
-                .equals(other.listenerPandoraId, listenerPandoraId) &&
-            const DeepCollectionEquality().equals(other.pandoraId, pandoraId) &&
-            const DeepCollectionEquality().equals(other.scope, scope));
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.sortableName, sortableName) ||
+                other.sortableName == sortableName) &&
+            (identical(other.icon, icon) || other.icon == icon) &&
+            (identical(other.listenerId, listenerId) ||
+                other.listenerId == listenerId) &&
+            (identical(other.listenerPandoraId, listenerPandoraId) ||
+                other.listenerPandoraId == listenerPandoraId) &&
+            (identical(other.pandoraId, pandoraId) ||
+                other.pandoraId == pandoraId) &&
+            (identical(other.scope, scope) || other.scope == scope));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(name),
-      const DeepCollectionEquality().hash(sortableName),
-      const DeepCollectionEquality().hash(icon),
-      const DeepCollectionEquality().hash(listenerId),
-      const DeepCollectionEquality().hash(listenerPandoraId),
-      const DeepCollectionEquality().hash(pandoraId),
-      const DeepCollectionEquality().hash(scope));
+  int get hashCode => Object.hash(runtimeType, name, sortableName, icon,
+      listenerId, listenerPandoraId, pandoraId, scope);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$CuratorAnnotationCopyWith<_$CuratorAnnotation> get copyWith =>
       __$$CuratorAnnotationCopyWithImpl<_$CuratorAnnotation>(this, _$identity);
 
@@ -19023,7 +19065,7 @@ class _$CuratorAnnotation extends CuratorAnnotation {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -19061,7 +19103,7 @@ class _$CuratorAnnotation extends CuratorAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         track,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -19097,7 +19139,7 @@ class _$CuratorAnnotation extends CuratorAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         artist,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -19139,7 +19181,7 @@ class _$CuratorAnnotation extends CuratorAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         album,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -19169,7 +19211,7 @@ class _$CuratorAnnotation extends CuratorAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         artistMessage,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -19193,7 +19235,7 @@ class _$CuratorAnnotation extends CuratorAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         genre,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'allowFeedback', fromJson: readOptInBool, toJson: writeOptInBool)
@@ -19243,7 +19285,7 @@ class _$CuratorAnnotation extends CuratorAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         playlist,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'stationName')
                 String name,
             @JsonKey(name: 'stationId')
@@ -19265,7 +19307,7 @@ class _$CuratorAnnotation extends CuratorAnnotation {
             @JsonKey(name: 'pandoraId')
                 String pandoraId)?
         station,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -19307,7 +19349,7 @@ class _$CuratorAnnotation extends CuratorAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         podcast,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'aliases')
@@ -19321,7 +19363,7 @@ class _$CuratorAnnotation extends CuratorAnnotation {
             @JsonKey(name: 'scope')
                 String scope)?
         podcastCategory,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -19359,7 +19401,7 @@ class _$CuratorAnnotation extends CuratorAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         episode,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -19375,7 +19417,7 @@ class _$CuratorAnnotation extends CuratorAnnotation {
             @JsonKey(name: 'scope')
                 String scope)?
         curator,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -19399,7 +19441,7 @@ class _$CuratorAnnotation extends CuratorAnnotation {
             @JsonKey(name: 'scope')
                 String scope)?
         composer,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'listenerId') int listenerId,
             @JsonKey(name: 'webname') String webname,
             @JsonKey(name: 'fullname') String? fullName,
@@ -19835,19 +19877,19 @@ class _$CuratorAnnotation extends CuratorAnnotation {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(TrackAnnotation value)? track,
-    TResult Function(ArtistAnnotation value)? artist,
-    TResult Function(AlbumAnnotation value)? album,
-    TResult Function(ArtistMessageAnnotation value)? artistMessage,
-    TResult Function(GenreAnnotation value)? genre,
-    TResult Function(PlaylistAnnotation value)? playlist,
-    TResult Function(StationAnnotation value)? station,
-    TResult Function(PodcastAnnotation value)? podcast,
-    TResult Function(PodcastCategoryAnnotation value)? podcastCategory,
-    TResult Function(EpisodeAnnotation value)? episode,
-    TResult Function(CuratorAnnotation value)? curator,
-    TResult Function(ComposerAnnotation value)? composer,
-    TResult Function(ListenerAnnotation value)? listener,
+    TResult? Function(TrackAnnotation value)? track,
+    TResult? Function(ArtistAnnotation value)? artist,
+    TResult? Function(AlbumAnnotation value)? album,
+    TResult? Function(ArtistMessageAnnotation value)? artistMessage,
+    TResult? Function(GenreAnnotation value)? genre,
+    TResult? Function(PlaylistAnnotation value)? playlist,
+    TResult? Function(StationAnnotation value)? station,
+    TResult? Function(PodcastAnnotation value)? podcast,
+    TResult? Function(PodcastCategoryAnnotation value)? podcastCategory,
+    TResult? Function(EpisodeAnnotation value)? episode,
+    TResult? Function(CuratorAnnotation value)? curator,
+    TResult? Function(ComposerAnnotation value)? composer,
+    TResult? Function(ListenerAnnotation value)? listener,
   }) {
     return curator?.call(this);
   }
@@ -19936,6 +19978,7 @@ abstract class _$$ComposerAnnotationCopyWith<$Res>
           $Res Function(_$ComposerAnnotation) then) =
       __$$ComposerAnnotationCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(name: 'name')
           String name,
@@ -19965,71 +20008,69 @@ abstract class _$$ComposerAnnotationCopyWith<$Res>
 
 /// @nodoc
 class __$$ComposerAnnotationCopyWithImpl<$Res>
-    extends _$MediaAnnotationCopyWithImpl<$Res>
+    extends _$MediaAnnotationCopyWithImpl<$Res, _$ComposerAnnotation>
     implements _$$ComposerAnnotationCopyWith<$Res> {
   __$$ComposerAnnotationCopyWithImpl(
       _$ComposerAnnotation _value, $Res Function(_$ComposerAnnotation) _then)
-      : super(_value, (v) => _then(v as _$ComposerAnnotation));
+      : super(_value, _then);
 
-  @override
-  _$ComposerAnnotation get _value => super._value as _$ComposerAnnotation;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? name = freezed,
-    Object? sortableName = freezed,
+    Object? name = null,
+    Object? sortableName = null,
     Object? icon = freezed,
-    Object? hasRadio = freezed,
-    Object? albumCount = freezed,
-    Object? trackCount = freezed,
-    Object? shareableUrlPath = freezed,
-    Object? modificationTime = freezed,
-    Object? slugPlusPandoraId = freezed,
-    Object? pandoraId = freezed,
-    Object? scope = freezed,
+    Object? hasRadio = null,
+    Object? albumCount = null,
+    Object? trackCount = null,
+    Object? shareableUrlPath = null,
+    Object? modificationTime = null,
+    Object? slugPlusPandoraId = null,
+    Object? pandoraId = null,
+    Object? scope = null,
   }) {
     return _then(_$ComposerAnnotation(
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      sortableName: sortableName == freezed
+      sortableName: null == sortableName
           ? _value.sortableName
           : sortableName // ignore: cast_nullable_to_non_nullable
               as String,
-      icon: icon == freezed
+      icon: freezed == icon
           ? _value.icon
           : icon // ignore: cast_nullable_to_non_nullable
               as MediaIcon?,
-      hasRadio: hasRadio == freezed
+      hasRadio: null == hasRadio
           ? _value.hasRadio
           : hasRadio // ignore: cast_nullable_to_non_nullable
               as bool,
-      albumCount: albumCount == freezed
+      albumCount: null == albumCount
           ? _value.albumCount
           : albumCount // ignore: cast_nullable_to_non_nullable
               as int,
-      trackCount: trackCount == freezed
+      trackCount: null == trackCount
           ? _value.trackCount
           : trackCount // ignore: cast_nullable_to_non_nullable
               as int,
-      shareableUrlPath: shareableUrlPath == freezed
+      shareableUrlPath: null == shareableUrlPath
           ? _value.shareableUrlPath
           : shareableUrlPath // ignore: cast_nullable_to_non_nullable
               as String,
-      modificationTime: modificationTime == freezed
+      modificationTime: null == modificationTime
           ? _value.modificationTime
           : modificationTime // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      slugPlusPandoraId: slugPlusPandoraId == freezed
+      slugPlusPandoraId: null == slugPlusPandoraId
           ? _value.slugPlusPandoraId
           : slugPlusPandoraId // ignore: cast_nullable_to_non_nullable
               as String,
-      pandoraId: pandoraId == freezed
+      pandoraId: null == pandoraId
           ? _value.pandoraId
           : pandoraId // ignore: cast_nullable_to_non_nullable
               as String,
-      scope: scope == freezed
+      scope: null == scope
           ? _value.scope
           : scope // ignore: cast_nullable_to_non_nullable
               as String,
@@ -20037,6 +20078,7 @@ class __$$ComposerAnnotationCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $MediaIconCopyWith<$Res>? get icon {
     if (_value.icon == null) {
       return null;
@@ -20134,43 +20176,46 @@ class _$ComposerAnnotation extends ComposerAnnotation {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ComposerAnnotation &&
-            const DeepCollectionEquality().equals(other.name, name) &&
-            const DeepCollectionEquality()
-                .equals(other.sortableName, sortableName) &&
-            const DeepCollectionEquality().equals(other.icon, icon) &&
-            const DeepCollectionEquality().equals(other.hasRadio, hasRadio) &&
-            const DeepCollectionEquality()
-                .equals(other.albumCount, albumCount) &&
-            const DeepCollectionEquality()
-                .equals(other.trackCount, trackCount) &&
-            const DeepCollectionEquality()
-                .equals(other.shareableUrlPath, shareableUrlPath) &&
-            const DeepCollectionEquality()
-                .equals(other.modificationTime, modificationTime) &&
-            const DeepCollectionEquality()
-                .equals(other.slugPlusPandoraId, slugPlusPandoraId) &&
-            const DeepCollectionEquality().equals(other.pandoraId, pandoraId) &&
-            const DeepCollectionEquality().equals(other.scope, scope));
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.sortableName, sortableName) ||
+                other.sortableName == sortableName) &&
+            (identical(other.icon, icon) || other.icon == icon) &&
+            (identical(other.hasRadio, hasRadio) ||
+                other.hasRadio == hasRadio) &&
+            (identical(other.albumCount, albumCount) ||
+                other.albumCount == albumCount) &&
+            (identical(other.trackCount, trackCount) ||
+                other.trackCount == trackCount) &&
+            (identical(other.shareableUrlPath, shareableUrlPath) ||
+                other.shareableUrlPath == shareableUrlPath) &&
+            (identical(other.modificationTime, modificationTime) ||
+                other.modificationTime == modificationTime) &&
+            (identical(other.slugPlusPandoraId, slugPlusPandoraId) ||
+                other.slugPlusPandoraId == slugPlusPandoraId) &&
+            (identical(other.pandoraId, pandoraId) ||
+                other.pandoraId == pandoraId) &&
+            (identical(other.scope, scope) || other.scope == scope));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(name),
-      const DeepCollectionEquality().hash(sortableName),
-      const DeepCollectionEquality().hash(icon),
-      const DeepCollectionEquality().hash(hasRadio),
-      const DeepCollectionEquality().hash(albumCount),
-      const DeepCollectionEquality().hash(trackCount),
-      const DeepCollectionEquality().hash(shareableUrlPath),
-      const DeepCollectionEquality().hash(modificationTime),
-      const DeepCollectionEquality().hash(slugPlusPandoraId),
-      const DeepCollectionEquality().hash(pandoraId),
-      const DeepCollectionEquality().hash(scope));
+      name,
+      sortableName,
+      icon,
+      hasRadio,
+      albumCount,
+      trackCount,
+      shareableUrlPath,
+      modificationTime,
+      slugPlusPandoraId,
+      pandoraId,
+      scope);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$ComposerAnnotationCopyWith<_$ComposerAnnotation> get copyWith =>
       __$$ComposerAnnotationCopyWithImpl<_$ComposerAnnotation>(
           this, _$identity);
@@ -20582,7 +20627,7 @@ class _$ComposerAnnotation extends ComposerAnnotation {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -20620,7 +20665,7 @@ class _$ComposerAnnotation extends ComposerAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         track,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -20656,7 +20701,7 @@ class _$ComposerAnnotation extends ComposerAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         artist,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -20698,7 +20743,7 @@ class _$ComposerAnnotation extends ComposerAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         album,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -20728,7 +20773,7 @@ class _$ComposerAnnotation extends ComposerAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         artistMessage,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -20752,7 +20797,7 @@ class _$ComposerAnnotation extends ComposerAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         genre,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'allowFeedback', fromJson: readOptInBool, toJson: writeOptInBool)
@@ -20802,7 +20847,7 @@ class _$ComposerAnnotation extends ComposerAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         playlist,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'stationName')
                 String name,
             @JsonKey(name: 'stationId')
@@ -20824,7 +20869,7 @@ class _$ComposerAnnotation extends ComposerAnnotation {
             @JsonKey(name: 'pandoraId')
                 String pandoraId)?
         station,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -20866,7 +20911,7 @@ class _$ComposerAnnotation extends ComposerAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         podcast,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'aliases')
@@ -20880,7 +20925,7 @@ class _$ComposerAnnotation extends ComposerAnnotation {
             @JsonKey(name: 'scope')
                 String scope)?
         podcastCategory,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -20918,7 +20963,7 @@ class _$ComposerAnnotation extends ComposerAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         episode,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -20934,7 +20979,7 @@ class _$ComposerAnnotation extends ComposerAnnotation {
             @JsonKey(name: 'scope')
                 String scope)?
         curator,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -20958,7 +21003,7 @@ class _$ComposerAnnotation extends ComposerAnnotation {
             @JsonKey(name: 'scope')
                 String scope)?
         composer,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'listenerId') int listenerId,
             @JsonKey(name: 'webname') String webname,
             @JsonKey(name: 'fullname') String? fullName,
@@ -21414,19 +21459,19 @@ class _$ComposerAnnotation extends ComposerAnnotation {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(TrackAnnotation value)? track,
-    TResult Function(ArtistAnnotation value)? artist,
-    TResult Function(AlbumAnnotation value)? album,
-    TResult Function(ArtistMessageAnnotation value)? artistMessage,
-    TResult Function(GenreAnnotation value)? genre,
-    TResult Function(PlaylistAnnotation value)? playlist,
-    TResult Function(StationAnnotation value)? station,
-    TResult Function(PodcastAnnotation value)? podcast,
-    TResult Function(PodcastCategoryAnnotation value)? podcastCategory,
-    TResult Function(EpisodeAnnotation value)? episode,
-    TResult Function(CuratorAnnotation value)? curator,
-    TResult Function(ComposerAnnotation value)? composer,
-    TResult Function(ListenerAnnotation value)? listener,
+    TResult? Function(TrackAnnotation value)? track,
+    TResult? Function(ArtistAnnotation value)? artist,
+    TResult? Function(AlbumAnnotation value)? album,
+    TResult? Function(ArtistMessageAnnotation value)? artistMessage,
+    TResult? Function(GenreAnnotation value)? genre,
+    TResult? Function(PlaylistAnnotation value)? playlist,
+    TResult? Function(StationAnnotation value)? station,
+    TResult? Function(PodcastAnnotation value)? podcast,
+    TResult? Function(PodcastCategoryAnnotation value)? podcastCategory,
+    TResult? Function(EpisodeAnnotation value)? episode,
+    TResult? Function(CuratorAnnotation value)? curator,
+    TResult? Function(ComposerAnnotation value)? composer,
+    TResult? Function(ListenerAnnotation value)? listener,
   }) {
     return composer?.call(this);
   }
@@ -21534,6 +21579,7 @@ abstract class _$$ListenerAnnotationCopyWith<$Res>
           $Res Function(_$ListenerAnnotation) then) =
       __$$ListenerAnnotationCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(name: 'listenerId') int listenerId,
       @JsonKey(name: 'webname') String webname,
@@ -21547,56 +21593,54 @@ abstract class _$$ListenerAnnotationCopyWith<$Res>
 
 /// @nodoc
 class __$$ListenerAnnotationCopyWithImpl<$Res>
-    extends _$MediaAnnotationCopyWithImpl<$Res>
+    extends _$MediaAnnotationCopyWithImpl<$Res, _$ListenerAnnotation>
     implements _$$ListenerAnnotationCopyWith<$Res> {
   __$$ListenerAnnotationCopyWithImpl(
       _$ListenerAnnotation _value, $Res Function(_$ListenerAnnotation) _then)
-      : super(_value, (v) => _then(v as _$ListenerAnnotation));
+      : super(_value, _then);
 
-  @override
-  _$ListenerAnnotation get _value => super._value as _$ListenerAnnotation;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? listenerId = freezed,
-    Object? webname = freezed,
+    Object? listenerId = null,
+    Object? webname = null,
     Object? fullName = freezed,
-    Object? displayName = freezed,
+    Object? displayName = null,
     Object? biography = freezed,
     Object? defaultImageUrl = freezed,
     Object? imageUrl = freezed,
-    Object? pandoraId = freezed,
+    Object? pandoraId = null,
   }) {
     return _then(_$ListenerAnnotation(
-      listenerId: listenerId == freezed
+      listenerId: null == listenerId
           ? _value.listenerId
           : listenerId // ignore: cast_nullable_to_non_nullable
               as int,
-      webname: webname == freezed
+      webname: null == webname
           ? _value.webname
           : webname // ignore: cast_nullable_to_non_nullable
               as String,
-      fullName: fullName == freezed
+      fullName: freezed == fullName
           ? _value.fullName
           : fullName // ignore: cast_nullable_to_non_nullable
               as String?,
-      displayName: displayName == freezed
+      displayName: null == displayName
           ? _value.displayName
           : displayName // ignore: cast_nullable_to_non_nullable
               as String,
-      biography: biography == freezed
+      biography: freezed == biography
           ? _value.biography
           : biography // ignore: cast_nullable_to_non_nullable
               as String?,
-      defaultImageUrl: defaultImageUrl == freezed
+      defaultImageUrl: freezed == defaultImageUrl
           ? _value.defaultImageUrl
           : defaultImageUrl // ignore: cast_nullable_to_non_nullable
               as Uri?,
-      imageUrl: imageUrl == freezed
+      imageUrl: freezed == imageUrl
           ? _value.imageUrl
           : imageUrl // ignore: cast_nullable_to_non_nullable
               as Uri?,
-      pandoraId: pandoraId == freezed
+      pandoraId: null == pandoraId
           ? _value.pandoraId
           : pandoraId // ignore: cast_nullable_to_non_nullable
               as String,
@@ -21667,34 +21711,31 @@ class _$ListenerAnnotation extends ListenerAnnotation {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ListenerAnnotation &&
-            const DeepCollectionEquality()
-                .equals(other.listenerId, listenerId) &&
-            const DeepCollectionEquality().equals(other.webname, webname) &&
-            const DeepCollectionEquality().equals(other.fullName, fullName) &&
-            const DeepCollectionEquality()
-                .equals(other.displayName, displayName) &&
-            const DeepCollectionEquality().equals(other.biography, biography) &&
-            const DeepCollectionEquality()
-                .equals(other.defaultImageUrl, defaultImageUrl) &&
-            const DeepCollectionEquality().equals(other.imageUrl, imageUrl) &&
-            const DeepCollectionEquality().equals(other.pandoraId, pandoraId));
+            (identical(other.listenerId, listenerId) ||
+                other.listenerId == listenerId) &&
+            (identical(other.webname, webname) || other.webname == webname) &&
+            (identical(other.fullName, fullName) ||
+                other.fullName == fullName) &&
+            (identical(other.displayName, displayName) ||
+                other.displayName == displayName) &&
+            (identical(other.biography, biography) ||
+                other.biography == biography) &&
+            (identical(other.defaultImageUrl, defaultImageUrl) ||
+                other.defaultImageUrl == defaultImageUrl) &&
+            (identical(other.imageUrl, imageUrl) ||
+                other.imageUrl == imageUrl) &&
+            (identical(other.pandoraId, pandoraId) ||
+                other.pandoraId == pandoraId));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(listenerId),
-      const DeepCollectionEquality().hash(webname),
-      const DeepCollectionEquality().hash(fullName),
-      const DeepCollectionEquality().hash(displayName),
-      const DeepCollectionEquality().hash(biography),
-      const DeepCollectionEquality().hash(defaultImageUrl),
-      const DeepCollectionEquality().hash(imageUrl),
-      const DeepCollectionEquality().hash(pandoraId));
+  int get hashCode => Object.hash(runtimeType, listenerId, webname, fullName,
+      displayName, biography, defaultImageUrl, imageUrl, pandoraId);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$ListenerAnnotationCopyWith<_$ListenerAnnotation> get copyWith =>
       __$$ListenerAnnotationCopyWithImpl<_$ListenerAnnotation>(
           this, _$identity);
@@ -22096,7 +22137,7 @@ class _$ListenerAnnotation extends ListenerAnnotation {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -22134,7 +22175,7 @@ class _$ListenerAnnotation extends ListenerAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         track,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -22170,7 +22211,7 @@ class _$ListenerAnnotation extends ListenerAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         artist,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -22212,7 +22253,7 @@ class _$ListenerAnnotation extends ListenerAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         album,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -22242,7 +22283,7 @@ class _$ListenerAnnotation extends ListenerAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         artistMessage,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -22266,7 +22307,7 @@ class _$ListenerAnnotation extends ListenerAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         genre,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'allowFeedback', fromJson: readOptInBool, toJson: writeOptInBool)
@@ -22316,7 +22357,7 @@ class _$ListenerAnnotation extends ListenerAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         playlist,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'stationName')
                 String name,
             @JsonKey(name: 'stationId')
@@ -22338,7 +22379,7 @@ class _$ListenerAnnotation extends ListenerAnnotation {
             @JsonKey(name: 'pandoraId')
                 String pandoraId)?
         station,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -22380,7 +22421,7 @@ class _$ListenerAnnotation extends ListenerAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         podcast,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'aliases')
@@ -22394,7 +22435,7 @@ class _$ListenerAnnotation extends ListenerAnnotation {
             @JsonKey(name: 'scope')
                 String scope)?
         podcastCategory,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -22432,7 +22473,7 @@ class _$ListenerAnnotation extends ListenerAnnotation {
             @JsonKey(name: 'scope')
                 Scope scope)?
         episode,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -22448,7 +22489,7 @@ class _$ListenerAnnotation extends ListenerAnnotation {
             @JsonKey(name: 'scope')
                 String scope)?
         curator,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'name')
                 String name,
             @JsonKey(name: 'sortableName')
@@ -22472,7 +22513,7 @@ class _$ListenerAnnotation extends ListenerAnnotation {
             @JsonKey(name: 'scope')
                 String scope)?
         composer,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: 'listenerId') int listenerId,
             @JsonKey(name: 'webname') String webname,
             @JsonKey(name: 'fullname') String? fullName,
@@ -22908,19 +22949,19 @@ class _$ListenerAnnotation extends ListenerAnnotation {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(TrackAnnotation value)? track,
-    TResult Function(ArtistAnnotation value)? artist,
-    TResult Function(AlbumAnnotation value)? album,
-    TResult Function(ArtistMessageAnnotation value)? artistMessage,
-    TResult Function(GenreAnnotation value)? genre,
-    TResult Function(PlaylistAnnotation value)? playlist,
-    TResult Function(StationAnnotation value)? station,
-    TResult Function(PodcastAnnotation value)? podcast,
-    TResult Function(PodcastCategoryAnnotation value)? podcastCategory,
-    TResult Function(EpisodeAnnotation value)? episode,
-    TResult Function(CuratorAnnotation value)? curator,
-    TResult Function(ComposerAnnotation value)? composer,
-    TResult Function(ListenerAnnotation value)? listener,
+    TResult? Function(TrackAnnotation value)? track,
+    TResult? Function(ArtistAnnotation value)? artist,
+    TResult? Function(AlbumAnnotation value)? album,
+    TResult? Function(ArtistMessageAnnotation value)? artistMessage,
+    TResult? Function(GenreAnnotation value)? genre,
+    TResult? Function(PlaylistAnnotation value)? playlist,
+    TResult? Function(StationAnnotation value)? station,
+    TResult? Function(PodcastAnnotation value)? podcast,
+    TResult? Function(PodcastCategoryAnnotation value)? podcastCategory,
+    TResult? Function(EpisodeAnnotation value)? episode,
+    TResult? Function(CuratorAnnotation value)? curator,
+    TResult? Function(ComposerAnnotation value)? composer,
+    TResult? Function(ListenerAnnotation value)? listener,
   }) {
     return listener?.call(this);
   }

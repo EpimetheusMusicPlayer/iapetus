@@ -35,7 +35,8 @@ mixin _$SuperbrowseButton {
 abstract class $SuperbrowseButtonCopyWith<$Res> {
   factory $SuperbrowseButtonCopyWith(
           SuperbrowseButton value, $Res Function(SuperbrowseButton) then) =
-      _$SuperbrowseButtonCopyWithImpl<$Res>;
+      _$SuperbrowseButtonCopyWithImpl<$Res, SuperbrowseButton>;
+  @useResult
   $Res call(
       {@JsonKey(name: 'action') SuperbrowseAction? action,
       @JsonKey(name: 'type') ButtonType type});
@@ -44,39 +45,42 @@ abstract class $SuperbrowseButtonCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$SuperbrowseButtonCopyWithImpl<$Res>
+class _$SuperbrowseButtonCopyWithImpl<$Res, $Val extends SuperbrowseButton>
     implements $SuperbrowseButtonCopyWith<$Res> {
   _$SuperbrowseButtonCopyWithImpl(this._value, this._then);
 
-  final SuperbrowseButton _value;
   // ignore: unused_field
-  final $Res Function(SuperbrowseButton) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? action = freezed,
-    Object? type = freezed,
+    Object? type = null,
   }) {
     return _then(_value.copyWith(
-      action: action == freezed
+      action: freezed == action
           ? _value.action
           : action // ignore: cast_nullable_to_non_nullable
               as SuperbrowseAction?,
-      type: type == freezed
+      type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as ButtonType,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $SuperbrowseActionCopyWith<$Res>? get action {
     if (_value.action == null) {
       return null;
     }
 
     return $SuperbrowseActionCopyWith<$Res>(_value.action!, (value) {
-      return _then(_value.copyWith(action: value));
+      return _then(_value.copyWith(action: value) as $Val);
     });
   }
 }
@@ -88,6 +92,7 @@ abstract class _$$_SuperbrowseButtonCopyWith<$Res>
           $Res Function(_$_SuperbrowseButton) then) =
       __$$_SuperbrowseButtonCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(name: 'action') SuperbrowseAction? action,
       @JsonKey(name: 'type') ButtonType type});
@@ -98,26 +103,24 @@ abstract class _$$_SuperbrowseButtonCopyWith<$Res>
 
 /// @nodoc
 class __$$_SuperbrowseButtonCopyWithImpl<$Res>
-    extends _$SuperbrowseButtonCopyWithImpl<$Res>
+    extends _$SuperbrowseButtonCopyWithImpl<$Res, _$_SuperbrowseButton>
     implements _$$_SuperbrowseButtonCopyWith<$Res> {
   __$$_SuperbrowseButtonCopyWithImpl(
       _$_SuperbrowseButton _value, $Res Function(_$_SuperbrowseButton) _then)
-      : super(_value, (v) => _then(v as _$_SuperbrowseButton));
+      : super(_value, _then);
 
-  @override
-  _$_SuperbrowseButton get _value => super._value as _$_SuperbrowseButton;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? action = freezed,
-    Object? type = freezed,
+    Object? type = null,
   }) {
     return _then(_$_SuperbrowseButton(
-      action: action == freezed
+      action: freezed == action
           ? _value.action
           : action // ignore: cast_nullable_to_non_nullable
               as SuperbrowseAction?,
-      type: type == freezed
+      type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as ButtonType,
@@ -152,19 +155,17 @@ class _$_SuperbrowseButton implements _SuperbrowseButton {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_SuperbrowseButton &&
-            const DeepCollectionEquality().equals(other.action, action) &&
-            const DeepCollectionEquality().equals(other.type, type));
+            (identical(other.action, action) || other.action == action) &&
+            (identical(other.type, type) || other.type == type));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(action),
-      const DeepCollectionEquality().hash(type));
+  int get hashCode => Object.hash(runtimeType, action, type);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_SuperbrowseButtonCopyWith<_$_SuperbrowseButton> get copyWith =>
       __$$_SuperbrowseButtonCopyWithImpl<_$_SuperbrowseButton>(
           this, _$identity);

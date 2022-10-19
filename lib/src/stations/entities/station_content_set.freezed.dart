@@ -36,7 +36,8 @@ mixin _$StationContentSet {
 abstract class $StationContentSetCopyWith<$Res> {
   factory $StationContentSetCopyWith(
           StationContentSet value, $Res Function(StationContentSet) then) =
-      _$StationContentSetCopyWithImpl<$Res>;
+      _$StationContentSetCopyWithImpl<$Res, StationContentSet>;
+  @useResult
   $Res call(
       {@JsonKey(name: 'content')
           Map<String, StationContent> content,
@@ -45,29 +46,31 @@ abstract class $StationContentSetCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$StationContentSetCopyWithImpl<$Res>
+class _$StationContentSetCopyWithImpl<$Res, $Val extends StationContentSet>
     implements $StationContentSetCopyWith<$Res> {
   _$StationContentSetCopyWithImpl(this._value, this._then);
 
-  final StationContentSet _value;
   // ignore: unused_field
-  final $Res Function(StationContentSet) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? content = freezed,
-    Object? contentTable = freezed,
+    Object? content = null,
+    Object? contentTable = null,
   }) {
     return _then(_value.copyWith(
-      content: content == freezed
+      content: null == content
           ? _value.content
           : content // ignore: cast_nullable_to_non_nullable
               as Map<String, StationContent>,
-      contentTable: contentTable == freezed
+      contentTable: null == contentTable
           ? _value.contentTable
           : contentTable // ignore: cast_nullable_to_non_nullable
               as Map<StationContentUse, List<String>>,
-    ));
+    ) as $Val);
   }
 }
 
@@ -78,6 +81,7 @@ abstract class _$$_StationContentSetCopyWith<$Res>
           $Res Function(_$_StationContentSet) then) =
       __$$_StationContentSetCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(name: 'content')
           Map<String, StationContent> content,
@@ -87,26 +91,24 @@ abstract class _$$_StationContentSetCopyWith<$Res>
 
 /// @nodoc
 class __$$_StationContentSetCopyWithImpl<$Res>
-    extends _$StationContentSetCopyWithImpl<$Res>
+    extends _$StationContentSetCopyWithImpl<$Res, _$_StationContentSet>
     implements _$$_StationContentSetCopyWith<$Res> {
   __$$_StationContentSetCopyWithImpl(
       _$_StationContentSet _value, $Res Function(_$_StationContentSet) _then)
-      : super(_value, (v) => _then(v as _$_StationContentSet));
+      : super(_value, _then);
 
-  @override
-  _$_StationContentSet get _value => super._value as _$_StationContentSet;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? content = freezed,
-    Object? contentTable = freezed,
+    Object? content = null,
+    Object? contentTable = null,
   }) {
     return _then(_$_StationContentSet(
-      content: content == freezed
+      content: null == content
           ? _value._content
           : content // ignore: cast_nullable_to_non_nullable
               as Map<String, StationContent>,
-      contentTable: contentTable == freezed
+      contentTable: null == contentTable
           ? _value._contentTable
           : contentTable // ignore: cast_nullable_to_non_nullable
               as Map<StationContentUse, List<String>>,
@@ -169,6 +171,7 @@ class _$_StationContentSet extends _StationContentSet {
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_StationContentSetCopyWith<_$_StationContentSet> get copyWith =>
       __$$_StationContentSetCopyWithImpl<_$_StationContentSet>(
           this, _$identity);

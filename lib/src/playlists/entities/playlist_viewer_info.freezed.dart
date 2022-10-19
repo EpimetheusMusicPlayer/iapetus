@@ -33,29 +33,32 @@ mixin _$PlaylistViewerInfo {
 abstract class $PlaylistViewerInfoCopyWith<$Res> {
   factory $PlaylistViewerInfoCopyWith(
           PlaylistViewerInfo value, $Res Function(PlaylistViewerInfo) then) =
-      _$PlaylistViewerInfoCopyWithImpl<$Res>;
+      _$PlaylistViewerInfoCopyWithImpl<$Res, PlaylistViewerInfo>;
+  @useResult
   $Res call({@JsonKey(name: 'editable') bool editable});
 }
 
 /// @nodoc
-class _$PlaylistViewerInfoCopyWithImpl<$Res>
+class _$PlaylistViewerInfoCopyWithImpl<$Res, $Val extends PlaylistViewerInfo>
     implements $PlaylistViewerInfoCopyWith<$Res> {
   _$PlaylistViewerInfoCopyWithImpl(this._value, this._then);
 
-  final PlaylistViewerInfo _value;
   // ignore: unused_field
-  final $Res Function(PlaylistViewerInfo) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? editable = freezed,
+    Object? editable = null,
   }) {
     return _then(_value.copyWith(
-      editable: editable == freezed
+      editable: null == editable
           ? _value.editable
           : editable // ignore: cast_nullable_to_non_nullable
               as bool,
-    ));
+    ) as $Val);
   }
 }
 
@@ -66,26 +69,25 @@ abstract class _$$_PlaylistViewerInfoCopyWith<$Res>
           $Res Function(_$_PlaylistViewerInfo) then) =
       __$$_PlaylistViewerInfoCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({@JsonKey(name: 'editable') bool editable});
 }
 
 /// @nodoc
 class __$$_PlaylistViewerInfoCopyWithImpl<$Res>
-    extends _$PlaylistViewerInfoCopyWithImpl<$Res>
+    extends _$PlaylistViewerInfoCopyWithImpl<$Res, _$_PlaylistViewerInfo>
     implements _$$_PlaylistViewerInfoCopyWith<$Res> {
   __$$_PlaylistViewerInfoCopyWithImpl(
       _$_PlaylistViewerInfo _value, $Res Function(_$_PlaylistViewerInfo) _then)
-      : super(_value, (v) => _then(v as _$_PlaylistViewerInfo));
+      : super(_value, _then);
 
-  @override
-  _$_PlaylistViewerInfo get _value => super._value as _$_PlaylistViewerInfo;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? editable = freezed,
+    Object? editable = null,
   }) {
     return _then(_$_PlaylistViewerInfo(
-      editable: editable == freezed
+      editable: null == editable
           ? _value.editable
           : editable // ignore: cast_nullable_to_non_nullable
               as bool,
@@ -116,16 +118,17 @@ class _$_PlaylistViewerInfo implements _PlaylistViewerInfo {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_PlaylistViewerInfo &&
-            const DeepCollectionEquality().equals(other.editable, editable));
+            (identical(other.editable, editable) ||
+                other.editable == editable));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(editable));
+  int get hashCode => Object.hash(runtimeType, editable);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_PlaylistViewerInfoCopyWith<_$_PlaylistViewerInfo> get copyWith =>
       __$$_PlaylistViewerInfoCopyWithImpl<_$_PlaylistViewerInfo>(
           this, _$identity);

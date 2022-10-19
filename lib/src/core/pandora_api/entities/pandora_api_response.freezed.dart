@@ -42,8 +42,8 @@ mixin _$PandoraApiResponse {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(@JsonKey(name: 'result') Object? result)? ok,
-    TResult Function(
+    TResult? Function(@JsonKey(name: 'result') Object? result)? ok,
+    TResult? Function(
             @JsonKey(name: 'code', fromJson: PandoraApiErrorCode.fromCode)
                 PandoraApiErrorCode code,
             @JsonKey(name: 'message')
@@ -71,8 +71,8 @@ mixin _$PandoraApiResponse {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(SuccessfulPandoraApiResponse value)? ok,
-    TResult Function(PandoraApiException value)? fail,
+    TResult? Function(SuccessfulPandoraApiResponse value)? ok,
+    TResult? Function(PandoraApiException value)? fail,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -89,17 +89,18 @@ mixin _$PandoraApiResponse {
 abstract class $PandoraApiResponseCopyWith<$Res> {
   factory $PandoraApiResponseCopyWith(
           PandoraApiResponse value, $Res Function(PandoraApiResponse) then) =
-      _$PandoraApiResponseCopyWithImpl<$Res>;
+      _$PandoraApiResponseCopyWithImpl<$Res, PandoraApiResponse>;
 }
 
 /// @nodoc
-class _$PandoraApiResponseCopyWithImpl<$Res>
+class _$PandoraApiResponseCopyWithImpl<$Res, $Val extends PandoraApiResponse>
     implements $PandoraApiResponseCopyWith<$Res> {
   _$PandoraApiResponseCopyWithImpl(this._value, this._then);
 
-  final PandoraApiResponse _value;
   // ignore: unused_field
-  final $Res Function(PandoraApiResponse) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 }
 
 /// @nodoc
@@ -108,28 +109,27 @@ abstract class _$$SuccessfulPandoraApiResponseCopyWith<$Res> {
           _$SuccessfulPandoraApiResponse value,
           $Res Function(_$SuccessfulPandoraApiResponse) then) =
       __$$SuccessfulPandoraApiResponseCopyWithImpl<$Res>;
+  @useResult
   $Res call({@JsonKey(name: 'result') Object? result});
 }
 
 /// @nodoc
 class __$$SuccessfulPandoraApiResponseCopyWithImpl<$Res>
-    extends _$PandoraApiResponseCopyWithImpl<$Res>
+    extends _$PandoraApiResponseCopyWithImpl<$Res,
+        _$SuccessfulPandoraApiResponse>
     implements _$$SuccessfulPandoraApiResponseCopyWith<$Res> {
   __$$SuccessfulPandoraApiResponseCopyWithImpl(
       _$SuccessfulPandoraApiResponse _value,
       $Res Function(_$SuccessfulPandoraApiResponse) _then)
-      : super(_value, (v) => _then(v as _$SuccessfulPandoraApiResponse));
+      : super(_value, _then);
 
-  @override
-  _$SuccessfulPandoraApiResponse get _value =>
-      super._value as _$SuccessfulPandoraApiResponse;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? result = freezed,
   }) {
     return _then(_$SuccessfulPandoraApiResponse(
-      result: result == freezed ? _value.result : result,
+      result: freezed == result ? _value.result : result,
     ));
   }
 }
@@ -171,6 +171,7 @@ class _$SuccessfulPandoraApiResponse implements SuccessfulPandoraApiResponse {
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$SuccessfulPandoraApiResponseCopyWith<_$SuccessfulPandoraApiResponse>
       get copyWith => __$$SuccessfulPandoraApiResponseCopyWithImpl<
           _$SuccessfulPandoraApiResponse>(this, _$identity);
@@ -192,8 +193,8 @@ class _$SuccessfulPandoraApiResponse implements SuccessfulPandoraApiResponse {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(@JsonKey(name: 'result') Object? result)? ok,
-    TResult Function(
+    TResult? Function(@JsonKey(name: 'result') Object? result)? ok,
+    TResult? Function(
             @JsonKey(name: 'code', fromJson: PandoraApiErrorCode.fromCode)
                 PandoraApiErrorCode code,
             @JsonKey(name: 'message')
@@ -233,8 +234,8 @@ class _$SuccessfulPandoraApiResponse implements SuccessfulPandoraApiResponse {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(SuccessfulPandoraApiResponse value)? ok,
-    TResult Function(PandoraApiException value)? fail,
+    TResult? Function(SuccessfulPandoraApiResponse value)? ok,
+    TResult? Function(PandoraApiException value)? fail,
   }) {
     return ok?.call(this);
   }
@@ -280,6 +281,7 @@ abstract class _$$PandoraApiExceptionCopyWith<$Res> {
   factory _$$PandoraApiExceptionCopyWith(_$PandoraApiException value,
           $Res Function(_$PandoraApiException) then) =
       __$$PandoraApiExceptionCopyWithImpl<$Res>;
+  @useResult
   $Res call(
       {@JsonKey(name: 'code', fromJson: PandoraApiErrorCode.fromCode)
           PandoraApiErrorCode code,
@@ -289,26 +291,24 @@ abstract class _$$PandoraApiExceptionCopyWith<$Res> {
 
 /// @nodoc
 class __$$PandoraApiExceptionCopyWithImpl<$Res>
-    extends _$PandoraApiResponseCopyWithImpl<$Res>
+    extends _$PandoraApiResponseCopyWithImpl<$Res, _$PandoraApiException>
     implements _$$PandoraApiExceptionCopyWith<$Res> {
   __$$PandoraApiExceptionCopyWithImpl(
       _$PandoraApiException _value, $Res Function(_$PandoraApiException) _then)
-      : super(_value, (v) => _then(v as _$PandoraApiException));
+      : super(_value, _then);
 
-  @override
-  _$PandoraApiException get _value => super._value as _$PandoraApiException;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? code = freezed,
-    Object? message = freezed,
+    Object? code = null,
+    Object? message = null,
   }) {
     return _then(_$PandoraApiException(
-      code: code == freezed
+      code: null == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
               as PandoraApiErrorCode,
-      message: message == freezed
+      message: null == message
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
               as String,
@@ -350,19 +350,17 @@ class _$PandoraApiException implements PandoraApiException {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$PandoraApiException &&
-            const DeepCollectionEquality().equals(other.code, code) &&
-            const DeepCollectionEquality().equals(other.message, message));
+            (identical(other.code, code) || other.code == code) &&
+            (identical(other.message, message) || other.message == message));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(code),
-      const DeepCollectionEquality().hash(message));
+  int get hashCode => Object.hash(runtimeType, code, message);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$PandoraApiExceptionCopyWith<_$PandoraApiException> get copyWith =>
       __$$PandoraApiExceptionCopyWithImpl<_$PandoraApiException>(
           this, _$identity);
@@ -384,8 +382,8 @@ class _$PandoraApiException implements PandoraApiException {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(@JsonKey(name: 'result') Object? result)? ok,
-    TResult Function(
+    TResult? Function(@JsonKey(name: 'result') Object? result)? ok,
+    TResult? Function(
             @JsonKey(name: 'code', fromJson: PandoraApiErrorCode.fromCode)
                 PandoraApiErrorCode code,
             @JsonKey(name: 'message')
@@ -425,8 +423,8 @@ class _$PandoraApiException implements PandoraApiException {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(SuccessfulPandoraApiResponse value)? ok,
-    TResult Function(PandoraApiException value)? fail,
+    TResult? Function(SuccessfulPandoraApiResponse value)? ok,
+    TResult? Function(PandoraApiException value)? fail,
   }) {
     return fail?.call(this);
   }

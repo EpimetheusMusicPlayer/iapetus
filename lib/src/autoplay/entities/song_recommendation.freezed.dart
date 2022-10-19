@@ -39,7 +39,8 @@ mixin _$SongRecommendation {
 abstract class $SongRecommendationCopyWith<$Res> {
   factory $SongRecommendationCopyWith(
           SongRecommendation value, $Res Function(SongRecommendation) then) =
-      _$SongRecommendationCopyWithImpl<$Res>;
+      _$SongRecommendationCopyWithImpl<$Res, SongRecommendation>;
+  @useResult
   $Res call(
       {@JsonKey(name: 'musicId') String pandoraId,
       @JsonKey(name: 'autoplaySourceId') String? autoplaySourceId,
@@ -48,39 +49,41 @@ abstract class $SongRecommendationCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$SongRecommendationCopyWithImpl<$Res>
+class _$SongRecommendationCopyWithImpl<$Res, $Val extends SongRecommendation>
     implements $SongRecommendationCopyWith<$Res> {
   _$SongRecommendationCopyWithImpl(this._value, this._then);
 
-  final SongRecommendation _value;
   // ignore: unused_field
-  final $Res Function(SongRecommendation) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? pandoraId = freezed,
+    Object? pandoraId = null,
     Object? autoplaySourceId = freezed,
-    Object? token = freezed,
-    Object? songRating = freezed,
+    Object? token = null,
+    Object? songRating = null,
   }) {
     return _then(_value.copyWith(
-      pandoraId: pandoraId == freezed
+      pandoraId: null == pandoraId
           ? _value.pandoraId
           : pandoraId // ignore: cast_nullable_to_non_nullable
               as String,
-      autoplaySourceId: autoplaySourceId == freezed
+      autoplaySourceId: freezed == autoplaySourceId
           ? _value.autoplaySourceId
           : autoplaySourceId // ignore: cast_nullable_to_non_nullable
               as String?,
-      token: token == freezed
+      token: null == token
           ? _value.token
           : token // ignore: cast_nullable_to_non_nullable
               as String,
-      songRating: songRating == freezed
+      songRating: null == songRating
           ? _value.songRating
           : songRating // ignore: cast_nullable_to_non_nullable
               as MediaRating,
-    ));
+    ) as $Val);
   }
 }
 
@@ -91,6 +94,7 @@ abstract class _$$_SongRecommendationCopyWith<$Res>
           $Res Function(_$_SongRecommendation) then) =
       __$$_SongRecommendationCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(name: 'musicId') String pandoraId,
       @JsonKey(name: 'autoplaySourceId') String? autoplaySourceId,
@@ -100,36 +104,34 @@ abstract class _$$_SongRecommendationCopyWith<$Res>
 
 /// @nodoc
 class __$$_SongRecommendationCopyWithImpl<$Res>
-    extends _$SongRecommendationCopyWithImpl<$Res>
+    extends _$SongRecommendationCopyWithImpl<$Res, _$_SongRecommendation>
     implements _$$_SongRecommendationCopyWith<$Res> {
   __$$_SongRecommendationCopyWithImpl(
       _$_SongRecommendation _value, $Res Function(_$_SongRecommendation) _then)
-      : super(_value, (v) => _then(v as _$_SongRecommendation));
+      : super(_value, _then);
 
-  @override
-  _$_SongRecommendation get _value => super._value as _$_SongRecommendation;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? pandoraId = freezed,
+    Object? pandoraId = null,
     Object? autoplaySourceId = freezed,
-    Object? token = freezed,
-    Object? songRating = freezed,
+    Object? token = null,
+    Object? songRating = null,
   }) {
     return _then(_$_SongRecommendation(
-      pandoraId: pandoraId == freezed
+      pandoraId: null == pandoraId
           ? _value.pandoraId
           : pandoraId // ignore: cast_nullable_to_non_nullable
               as String,
-      autoplaySourceId: autoplaySourceId == freezed
+      autoplaySourceId: freezed == autoplaySourceId
           ? _value.autoplaySourceId
           : autoplaySourceId // ignore: cast_nullable_to_non_nullable
               as String?,
-      token: token == freezed
+      token: null == token
           ? _value.token
           : token // ignore: cast_nullable_to_non_nullable
               as String,
-      songRating: songRating == freezed
+      songRating: null == songRating
           ? _value.songRating
           : songRating // ignore: cast_nullable_to_non_nullable
               as MediaRating,
@@ -173,25 +175,23 @@ class _$_SongRecommendation extends _SongRecommendation {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_SongRecommendation &&
-            const DeepCollectionEquality().equals(other.pandoraId, pandoraId) &&
-            const DeepCollectionEquality()
-                .equals(other.autoplaySourceId, autoplaySourceId) &&
-            const DeepCollectionEquality().equals(other.token, token) &&
-            const DeepCollectionEquality()
-                .equals(other.songRating, songRating));
+            (identical(other.pandoraId, pandoraId) ||
+                other.pandoraId == pandoraId) &&
+            (identical(other.autoplaySourceId, autoplaySourceId) ||
+                other.autoplaySourceId == autoplaySourceId) &&
+            (identical(other.token, token) || other.token == token) &&
+            (identical(other.songRating, songRating) ||
+                other.songRating == songRating));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(pandoraId),
-      const DeepCollectionEquality().hash(autoplaySourceId),
-      const DeepCollectionEquality().hash(token),
-      const DeepCollectionEquality().hash(songRating));
+  int get hashCode =>
+      Object.hash(runtimeType, pandoraId, autoplaySourceId, token, songRating);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_SongRecommendationCopyWith<_$_SongRecommendation> get copyWith =>
       __$$_SongRecommendationCopyWithImpl<_$_SongRecommendation>(
           this, _$identity);

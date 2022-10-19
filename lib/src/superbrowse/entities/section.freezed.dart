@@ -40,7 +40,8 @@ mixin _$SuperbrowseSection {
 abstract class $SuperbrowseSectionCopyWith<$Res> {
   factory $SuperbrowseSectionCopyWith(
           SuperbrowseSection value, $Res Function(SuperbrowseSection) then) =
-      _$SuperbrowseSectionCopyWithImpl<$Res>;
+      _$SuperbrowseSectionCopyWithImpl<$Res, SuperbrowseSection>;
+  @useResult
   $Res call(
       {@JsonKey(name: 'id') String id,
       @JsonKey(name: 'title') SuperbrowseItem? header,
@@ -52,60 +53,64 @@ abstract class $SuperbrowseSectionCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$SuperbrowseSectionCopyWithImpl<$Res>
+class _$SuperbrowseSectionCopyWithImpl<$Res, $Val extends SuperbrowseSection>
     implements $SuperbrowseSectionCopyWith<$Res> {
   _$SuperbrowseSectionCopyWithImpl(this._value, this._then);
 
-  final SuperbrowseSection _value;
   // ignore: unused_field
-  final $Res Function(SuperbrowseSection) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
+    Object? id = null,
     Object? header = freezed,
     Object? footer = freezed,
     Object? subsections = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
-      header: header == freezed
+      header: freezed == header
           ? _value.header
           : header // ignore: cast_nullable_to_non_nullable
               as SuperbrowseItem?,
-      footer: footer == freezed
+      footer: freezed == footer
           ? _value.footer
           : footer // ignore: cast_nullable_to_non_nullable
               as SuperbrowseItem?,
-      subsections: subsections == freezed
+      subsections: freezed == subsections
           ? _value.subsections
           : subsections // ignore: cast_nullable_to_non_nullable
               as List<SuperbrowseSubsection>?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $SuperbrowseItemCopyWith<$Res>? get header {
     if (_value.header == null) {
       return null;
     }
 
     return $SuperbrowseItemCopyWith<$Res>(_value.header!, (value) {
-      return _then(_value.copyWith(header: value));
+      return _then(_value.copyWith(header: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $SuperbrowseItemCopyWith<$Res>? get footer {
     if (_value.footer == null) {
       return null;
     }
 
     return $SuperbrowseItemCopyWith<$Res>(_value.footer!, (value) {
-      return _then(_value.copyWith(footer: value));
+      return _then(_value.copyWith(footer: value) as $Val);
     });
   }
 }
@@ -117,6 +122,7 @@ abstract class _$$_SuperbrowseSectionCopyWith<$Res>
           $Res Function(_$_SuperbrowseSection) then) =
       __$$_SuperbrowseSectionCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(name: 'id') String id,
       @JsonKey(name: 'title') SuperbrowseItem? header,
@@ -131,36 +137,34 @@ abstract class _$$_SuperbrowseSectionCopyWith<$Res>
 
 /// @nodoc
 class __$$_SuperbrowseSectionCopyWithImpl<$Res>
-    extends _$SuperbrowseSectionCopyWithImpl<$Res>
+    extends _$SuperbrowseSectionCopyWithImpl<$Res, _$_SuperbrowseSection>
     implements _$$_SuperbrowseSectionCopyWith<$Res> {
   __$$_SuperbrowseSectionCopyWithImpl(
       _$_SuperbrowseSection _value, $Res Function(_$_SuperbrowseSection) _then)
-      : super(_value, (v) => _then(v as _$_SuperbrowseSection));
+      : super(_value, _then);
 
-  @override
-  _$_SuperbrowseSection get _value => super._value as _$_SuperbrowseSection;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
+    Object? id = null,
     Object? header = freezed,
     Object? footer = freezed,
     Object? subsections = freezed,
   }) {
     return _then(_$_SuperbrowseSection(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
-      header: header == freezed
+      header: freezed == header
           ? _value.header
           : header // ignore: cast_nullable_to_non_nullable
               as SuperbrowseItem?,
-      footer: footer == freezed
+      footer: freezed == footer
           ? _value.footer
           : footer // ignore: cast_nullable_to_non_nullable
               as SuperbrowseItem?,
-      subsections: subsections == freezed
+      subsections: freezed == subsections
           ? _value._subsections
           : subsections // ignore: cast_nullable_to_non_nullable
               as List<SuperbrowseSubsection>?,
@@ -214,24 +218,21 @@ class _$_SuperbrowseSection implements _SuperbrowseSection {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_SuperbrowseSection &&
-            const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality().equals(other.header, header) &&
-            const DeepCollectionEquality().equals(other.footer, footer) &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.header, header) || other.header == header) &&
+            (identical(other.footer, footer) || other.footer == footer) &&
             const DeepCollectionEquality()
                 .equals(other._subsections, _subsections));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(header),
-      const DeepCollectionEquality().hash(footer),
+  int get hashCode => Object.hash(runtimeType, id, header, footer,
       const DeepCollectionEquality().hash(_subsections));
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_SuperbrowseSectionCopyWith<_$_SuperbrowseSection> get copyWith =>
       __$$_SuperbrowseSectionCopyWithImpl<_$_SuperbrowseSection>(
           this, _$identity);

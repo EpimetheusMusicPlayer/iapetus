@@ -35,7 +35,8 @@ mixin _$FormFactors {
 abstract class $FormFactorsCopyWith<$Res> {
   factory $FormFactorsCopyWith(
           FormFactors value, $Res Function(FormFactors) then) =
-      _$FormFactorsCopyWithImpl<$Res>;
+      _$FormFactorsCopyWithImpl<$Res, FormFactors>;
+  @useResult
   $Res call(
       {@JsonKey(name: 'portrait') FormFactor portrait,
       @JsonKey(name: 'landscape') FormFactor landscape});
@@ -45,41 +46,46 @@ abstract class $FormFactorsCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$FormFactorsCopyWithImpl<$Res> implements $FormFactorsCopyWith<$Res> {
+class _$FormFactorsCopyWithImpl<$Res, $Val extends FormFactors>
+    implements $FormFactorsCopyWith<$Res> {
   _$FormFactorsCopyWithImpl(this._value, this._then);
 
-  final FormFactors _value;
   // ignore: unused_field
-  final $Res Function(FormFactors) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? portrait = freezed,
-    Object? landscape = freezed,
+    Object? portrait = null,
+    Object? landscape = null,
   }) {
     return _then(_value.copyWith(
-      portrait: portrait == freezed
+      portrait: null == portrait
           ? _value.portrait
           : portrait // ignore: cast_nullable_to_non_nullable
               as FormFactor,
-      landscape: landscape == freezed
+      landscape: null == landscape
           ? _value.landscape
           : landscape // ignore: cast_nullable_to_non_nullable
               as FormFactor,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $FormFactorCopyWith<$Res> get portrait {
     return $FormFactorCopyWith<$Res>(_value.portrait, (value) {
-      return _then(_value.copyWith(portrait: value));
+      return _then(_value.copyWith(portrait: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $FormFactorCopyWith<$Res> get landscape {
     return $FormFactorCopyWith<$Res>(_value.landscape, (value) {
-      return _then(_value.copyWith(landscape: value));
+      return _then(_value.copyWith(landscape: value) as $Val);
     });
   }
 }
@@ -91,6 +97,7 @@ abstract class _$$_FormFactorsCopyWith<$Res>
           _$_FormFactors value, $Res Function(_$_FormFactors) then) =
       __$$_FormFactorsCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(name: 'portrait') FormFactor portrait,
       @JsonKey(name: 'landscape') FormFactor landscape});
@@ -102,26 +109,25 @@ abstract class _$$_FormFactorsCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_FormFactorsCopyWithImpl<$Res> extends _$FormFactorsCopyWithImpl<$Res>
+class __$$_FormFactorsCopyWithImpl<$Res>
+    extends _$FormFactorsCopyWithImpl<$Res, _$_FormFactors>
     implements _$$_FormFactorsCopyWith<$Res> {
   __$$_FormFactorsCopyWithImpl(
       _$_FormFactors _value, $Res Function(_$_FormFactors) _then)
-      : super(_value, (v) => _then(v as _$_FormFactors));
+      : super(_value, _then);
 
-  @override
-  _$_FormFactors get _value => super._value as _$_FormFactors;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? portrait = freezed,
-    Object? landscape = freezed,
+    Object? portrait = null,
+    Object? landscape = null,
   }) {
     return _then(_$_FormFactors(
-      portrait: portrait == freezed
+      portrait: null == portrait
           ? _value.portrait
           : portrait // ignore: cast_nullable_to_non_nullable
               as FormFactor,
-      landscape: landscape == freezed
+      landscape: null == landscape
           ? _value.landscape
           : landscape // ignore: cast_nullable_to_non_nullable
               as FormFactor,
@@ -156,19 +162,19 @@ class _$_FormFactors implements _FormFactors {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_FormFactors &&
-            const DeepCollectionEquality().equals(other.portrait, portrait) &&
-            const DeepCollectionEquality().equals(other.landscape, landscape));
+            (identical(other.portrait, portrait) ||
+                other.portrait == portrait) &&
+            (identical(other.landscape, landscape) ||
+                other.landscape == landscape));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(portrait),
-      const DeepCollectionEquality().hash(landscape));
+  int get hashCode => Object.hash(runtimeType, portrait, landscape);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_FormFactorsCopyWith<_$_FormFactors> get copyWith =>
       __$$_FormFactorsCopyWithImpl<_$_FormFactors>(this, _$identity);
 

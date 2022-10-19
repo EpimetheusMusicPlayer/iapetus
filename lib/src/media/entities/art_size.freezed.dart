@@ -26,33 +26,37 @@ mixin _$ArtSize {
 /// @nodoc
 abstract class $ArtSizeCopyWith<$Res> {
   factory $ArtSizeCopyWith(ArtSize value, $Res Function(ArtSize) then) =
-      _$ArtSizeCopyWithImpl<$Res>;
+      _$ArtSizeCopyWithImpl<$Res, ArtSize>;
+  @useResult
   $Res call({int width, int height});
 }
 
 /// @nodoc
-class _$ArtSizeCopyWithImpl<$Res> implements $ArtSizeCopyWith<$Res> {
+class _$ArtSizeCopyWithImpl<$Res, $Val extends ArtSize>
+    implements $ArtSizeCopyWith<$Res> {
   _$ArtSizeCopyWithImpl(this._value, this._then);
 
-  final ArtSize _value;
   // ignore: unused_field
-  final $Res Function(ArtSize) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? width = freezed,
-    Object? height = freezed,
+    Object? width = null,
+    Object? height = null,
   }) {
     return _then(_value.copyWith(
-      width: width == freezed
+      width: null == width
           ? _value.width
           : width // ignore: cast_nullable_to_non_nullable
               as int,
-      height: height == freezed
+      height: null == height
           ? _value.height
           : height // ignore: cast_nullable_to_non_nullable
               as int,
-    ));
+    ) as $Val);
   }
 }
 
@@ -62,29 +66,29 @@ abstract class _$$_ArtSizeCopyWith<$Res> implements $ArtSizeCopyWith<$Res> {
           _$_ArtSize value, $Res Function(_$_ArtSize) then) =
       __$$_ArtSizeCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({int width, int height});
 }
 
 /// @nodoc
-class __$$_ArtSizeCopyWithImpl<$Res> extends _$ArtSizeCopyWithImpl<$Res>
+class __$$_ArtSizeCopyWithImpl<$Res>
+    extends _$ArtSizeCopyWithImpl<$Res, _$_ArtSize>
     implements _$$_ArtSizeCopyWith<$Res> {
   __$$_ArtSizeCopyWithImpl(_$_ArtSize _value, $Res Function(_$_ArtSize) _then)
-      : super(_value, (v) => _then(v as _$_ArtSize));
+      : super(_value, _then);
 
-  @override
-  _$_ArtSize get _value => super._value as _$_ArtSize;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? width = freezed,
-    Object? height = freezed,
+    Object? width = null,
+    Object? height = null,
   }) {
     return _then(_$_ArtSize(
-      width == freezed
+      null == width
           ? _value.width
           : width // ignore: cast_nullable_to_non_nullable
               as int,
-      height == freezed
+      null == height
           ? _value.height
           : height // ignore: cast_nullable_to_non_nullable
               as int,
@@ -112,18 +116,16 @@ class _$_ArtSize extends _ArtSize {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_ArtSize &&
-            const DeepCollectionEquality().equals(other.width, width) &&
-            const DeepCollectionEquality().equals(other.height, height));
+            (identical(other.width, width) || other.width == width) &&
+            (identical(other.height, height) || other.height == height));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(width),
-      const DeepCollectionEquality().hash(height));
+  int get hashCode => Object.hash(runtimeType, width, height);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_ArtSizeCopyWith<_$_ArtSize> get copyWith =>
       __$$_ArtSizeCopyWithImpl<_$_ArtSize>(this, _$identity);
 }

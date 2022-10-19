@@ -46,7 +46,8 @@ mixin _$DirectoryResponse {
 abstract class $DirectoryResponseCopyWith<$Res> {
   factory $DirectoryResponseCopyWith(
           DirectoryResponse value, $Res Function(DirectoryResponse) then) =
-      _$DirectoryResponseCopyWithImpl<$Res>;
+      _$DirectoryResponseCopyWithImpl<$Res, DirectoryResponse>;
+  @useResult
   $Res call(
       {@JsonKey(name: 'ttl', fromJson: readSeconds, toJson: writeSeconds)
           Duration ttl,
@@ -65,54 +66,56 @@ abstract class $DirectoryResponseCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$DirectoryResponseCopyWithImpl<$Res>
+class _$DirectoryResponseCopyWithImpl<$Res, $Val extends DirectoryResponse>
     implements $DirectoryResponseCopyWith<$Res> {
   _$DirectoryResponseCopyWithImpl(this._value, this._then);
 
-  final DirectoryResponse _value;
   // ignore: unused_field
-  final $Res Function(DirectoryResponse) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? ttl = freezed,
+    Object? ttl = null,
     Object? title = freezed,
-    Object? checksum = freezed,
+    Object? checksum = null,
     Object? generation = freezed,
-    Object? sections = freezed,
-    Object? preferCachedData = freezed,
-    Object? formFactorsByType = freezed,
+    Object? sections = null,
+    Object? preferCachedData = null,
+    Object? formFactorsByType = null,
   }) {
     return _then(_value.copyWith(
-      ttl: ttl == freezed
+      ttl: null == ttl
           ? _value.ttl
           : ttl // ignore: cast_nullable_to_non_nullable
               as Duration,
-      title: title == freezed
+      title: freezed == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String?,
-      checksum: checksum == freezed
+      checksum: null == checksum
           ? _value.checksum
           : checksum // ignore: cast_nullable_to_non_nullable
               as String,
-      generation: generation == freezed
+      generation: freezed == generation
           ? _value.generation
           : generation // ignore: cast_nullable_to_non_nullable
               as String?,
-      sections: sections == freezed
+      sections: null == sections
           ? _value.sections
           : sections // ignore: cast_nullable_to_non_nullable
               as List<SuperbrowseSection>,
-      preferCachedData: preferCachedData == freezed
+      preferCachedData: null == preferCachedData
           ? _value.preferCachedData
           : preferCachedData // ignore: cast_nullable_to_non_nullable
               as bool,
-      formFactorsByType: formFactorsByType == freezed
+      formFactorsByType: null == formFactorsByType
           ? _value.formFactorsByType
           : formFactorsByType // ignore: cast_nullable_to_non_nullable
               as Map<SuperbrowseItemType, FormFactors>,
-    ));
+    ) as $Val);
   }
 }
 
@@ -123,6 +126,7 @@ abstract class _$$_DirectoryResponseCopyWith<$Res>
           $Res Function(_$_DirectoryResponse) then) =
       __$$_DirectoryResponseCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(name: 'ttl', fromJson: readSeconds, toJson: writeSeconds)
           Duration ttl,
@@ -142,51 +146,49 @@ abstract class _$$_DirectoryResponseCopyWith<$Res>
 
 /// @nodoc
 class __$$_DirectoryResponseCopyWithImpl<$Res>
-    extends _$DirectoryResponseCopyWithImpl<$Res>
+    extends _$DirectoryResponseCopyWithImpl<$Res, _$_DirectoryResponse>
     implements _$$_DirectoryResponseCopyWith<$Res> {
   __$$_DirectoryResponseCopyWithImpl(
       _$_DirectoryResponse _value, $Res Function(_$_DirectoryResponse) _then)
-      : super(_value, (v) => _then(v as _$_DirectoryResponse));
+      : super(_value, _then);
 
-  @override
-  _$_DirectoryResponse get _value => super._value as _$_DirectoryResponse;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? ttl = freezed,
+    Object? ttl = null,
     Object? title = freezed,
-    Object? checksum = freezed,
+    Object? checksum = null,
     Object? generation = freezed,
-    Object? sections = freezed,
-    Object? preferCachedData = freezed,
-    Object? formFactorsByType = freezed,
+    Object? sections = null,
+    Object? preferCachedData = null,
+    Object? formFactorsByType = null,
   }) {
     return _then(_$_DirectoryResponse(
-      ttl: ttl == freezed
+      ttl: null == ttl
           ? _value.ttl
           : ttl // ignore: cast_nullable_to_non_nullable
               as Duration,
-      title: title == freezed
+      title: freezed == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String?,
-      checksum: checksum == freezed
+      checksum: null == checksum
           ? _value.checksum
           : checksum // ignore: cast_nullable_to_non_nullable
               as String,
-      generation: generation == freezed
+      generation: freezed == generation
           ? _value.generation
           : generation // ignore: cast_nullable_to_non_nullable
               as String?,
-      sections: sections == freezed
+      sections: null == sections
           ? _value._sections
           : sections // ignore: cast_nullable_to_non_nullable
               as List<SuperbrowseSection>,
-      preferCachedData: preferCachedData == freezed
+      preferCachedData: null == preferCachedData
           ? _value.preferCachedData
           : preferCachedData // ignore: cast_nullable_to_non_nullable
               as bool,
-      formFactorsByType: formFactorsByType == freezed
+      formFactorsByType: null == formFactorsByType
           ? _value._formFactorsByType
           : formFactorsByType // ignore: cast_nullable_to_non_nullable
               as Map<SuperbrowseItemType, FormFactors>,
@@ -260,14 +262,15 @@ class _$_DirectoryResponse implements _DirectoryResponse {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_DirectoryResponse &&
-            const DeepCollectionEquality().equals(other.ttl, ttl) &&
-            const DeepCollectionEquality().equals(other.title, title) &&
-            const DeepCollectionEquality().equals(other.checksum, checksum) &&
-            const DeepCollectionEquality()
-                .equals(other.generation, generation) &&
+            (identical(other.ttl, ttl) || other.ttl == ttl) &&
+            (identical(other.title, title) || other.title == title) &&
+            (identical(other.checksum, checksum) ||
+                other.checksum == checksum) &&
+            (identical(other.generation, generation) ||
+                other.generation == generation) &&
             const DeepCollectionEquality().equals(other._sections, _sections) &&
-            const DeepCollectionEquality()
-                .equals(other.preferCachedData, preferCachedData) &&
+            (identical(other.preferCachedData, preferCachedData) ||
+                other.preferCachedData == preferCachedData) &&
             const DeepCollectionEquality()
                 .equals(other._formFactorsByType, _formFactorsByType));
   }
@@ -276,16 +279,17 @@ class _$_DirectoryResponse implements _DirectoryResponse {
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(ttl),
-      const DeepCollectionEquality().hash(title),
-      const DeepCollectionEquality().hash(checksum),
-      const DeepCollectionEquality().hash(generation),
+      ttl,
+      title,
+      checksum,
+      generation,
       const DeepCollectionEquality().hash(_sections),
-      const DeepCollectionEquality().hash(preferCachedData),
+      preferCachedData,
       const DeepCollectionEquality().hash(_formFactorsByType));
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_DirectoryResponseCopyWith<_$_DirectoryResponse> get copyWith =>
       __$$_DirectoryResponseCopyWithImpl<_$_DirectoryResponse>(
           this, _$identity);

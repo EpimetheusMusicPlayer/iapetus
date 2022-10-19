@@ -52,7 +52,8 @@ mixin _$SuperbrowseImage {
 abstract class $SuperbrowseImageCopyWith<$Res> {
   factory $SuperbrowseImageCopyWith(
           SuperbrowseImage value, $Res Function(SuperbrowseImage) then) =
-      _$SuperbrowseImageCopyWithImpl<$Res>;
+      _$SuperbrowseImageCopyWithImpl<$Res, SuperbrowseImage>;
+  @useResult
   $Res call(
       {@JsonKey(name: 'border', fromJson: readOptInBool, toJson: writeOptInBool)
           bool border,
@@ -75,18 +76,20 @@ abstract class $SuperbrowseImageCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$SuperbrowseImageCopyWithImpl<$Res>
+class _$SuperbrowseImageCopyWithImpl<$Res, $Val extends SuperbrowseImage>
     implements $SuperbrowseImageCopyWith<$Res> {
   _$SuperbrowseImageCopyWithImpl(this._value, this._then);
 
-  final SuperbrowseImage _value;
   // ignore: unused_field
-  final $Res Function(SuperbrowseImage) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? border = freezed,
-    Object? circular = freezed,
+    Object? border = null,
+    Object? circular = null,
     Object? color = freezed,
     Object? fullUrl = freezed,
     Object? fullUrlDark = freezed,
@@ -96,43 +99,43 @@ class _$SuperbrowseImageCopyWithImpl<$Res>
     Object? sizes = freezed,
   }) {
     return _then(_value.copyWith(
-      border: border == freezed
+      border: null == border
           ? _value.border
           : border // ignore: cast_nullable_to_non_nullable
               as bool,
-      circular: circular == freezed
+      circular: null == circular
           ? _value.circular
           : circular // ignore: cast_nullable_to_non_nullable
               as bool,
-      color: color == freezed
+      color: freezed == color
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
               as int?,
-      fullUrl: fullUrl == freezed
+      fullUrl: freezed == fullUrl
           ? _value.fullUrl
           : fullUrl // ignore: cast_nullable_to_non_nullable
               as Uri?,
-      fullUrlDark: fullUrlDark == freezed
+      fullUrlDark: freezed == fullUrlDark
           ? _value.fullUrlDark
           : fullUrlDark // ignore: cast_nullable_to_non_nullable
               as Uri?,
-      scalableUrl: scalableUrl == freezed
+      scalableUrl: freezed == scalableUrl
           ? _value.scalableUrl
           : scalableUrl // ignore: cast_nullable_to_non_nullable
               as Uri?,
-      sizedUrl: sizedUrl == freezed
+      sizedUrl: freezed == sizedUrl
           ? _value.sizedUrl
           : sizedUrl // ignore: cast_nullable_to_non_nullable
               as Uri?,
-      sizedUrlDart: sizedUrlDart == freezed
+      sizedUrlDart: freezed == sizedUrlDart
           ? _value.sizedUrlDart
           : sizedUrlDart // ignore: cast_nullable_to_non_nullable
               as Uri?,
-      sizes: sizes == freezed
+      sizes: freezed == sizes
           ? _value.sizes
           : sizes // ignore: cast_nullable_to_non_nullable
               as List<ArtSize>?,
-    ));
+    ) as $Val);
   }
 }
 
@@ -143,6 +146,7 @@ abstract class _$$_SuperbrowseImageCopyWith<$Res>
           _$_SuperbrowseImage value, $Res Function(_$_SuperbrowseImage) then) =
       __$$_SuperbrowseImageCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(name: 'border', fromJson: readOptInBool, toJson: writeOptInBool)
           bool border,
@@ -166,19 +170,17 @@ abstract class _$$_SuperbrowseImageCopyWith<$Res>
 
 /// @nodoc
 class __$$_SuperbrowseImageCopyWithImpl<$Res>
-    extends _$SuperbrowseImageCopyWithImpl<$Res>
+    extends _$SuperbrowseImageCopyWithImpl<$Res, _$_SuperbrowseImage>
     implements _$$_SuperbrowseImageCopyWith<$Res> {
   __$$_SuperbrowseImageCopyWithImpl(
       _$_SuperbrowseImage _value, $Res Function(_$_SuperbrowseImage) _then)
-      : super(_value, (v) => _then(v as _$_SuperbrowseImage));
+      : super(_value, _then);
 
-  @override
-  _$_SuperbrowseImage get _value => super._value as _$_SuperbrowseImage;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? border = freezed,
-    Object? circular = freezed,
+    Object? border = null,
+    Object? circular = null,
     Object? color = freezed,
     Object? fullUrl = freezed,
     Object? fullUrlDark = freezed,
@@ -188,39 +190,39 @@ class __$$_SuperbrowseImageCopyWithImpl<$Res>
     Object? sizes = freezed,
   }) {
     return _then(_$_SuperbrowseImage(
-      border: border == freezed
+      border: null == border
           ? _value.border
           : border // ignore: cast_nullable_to_non_nullable
               as bool,
-      circular: circular == freezed
+      circular: null == circular
           ? _value.circular
           : circular // ignore: cast_nullable_to_non_nullable
               as bool,
-      color: color == freezed
+      color: freezed == color
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
               as int?,
-      fullUrl: fullUrl == freezed
+      fullUrl: freezed == fullUrl
           ? _value.fullUrl
           : fullUrl // ignore: cast_nullable_to_non_nullable
               as Uri?,
-      fullUrlDark: fullUrlDark == freezed
+      fullUrlDark: freezed == fullUrlDark
           ? _value.fullUrlDark
           : fullUrlDark // ignore: cast_nullable_to_non_nullable
               as Uri?,
-      scalableUrl: scalableUrl == freezed
+      scalableUrl: freezed == scalableUrl
           ? _value.scalableUrl
           : scalableUrl // ignore: cast_nullable_to_non_nullable
               as Uri?,
-      sizedUrl: sizedUrl == freezed
+      sizedUrl: freezed == sizedUrl
           ? _value.sizedUrl
           : sizedUrl // ignore: cast_nullable_to_non_nullable
               as Uri?,
-      sizedUrlDart: sizedUrlDart == freezed
+      sizedUrlDart: freezed == sizedUrlDart
           ? _value.sizedUrlDart
           : sizedUrlDart // ignore: cast_nullable_to_non_nullable
               as Uri?,
-      sizes: sizes == freezed
+      sizes: freezed == sizes
           ? _value._sizes
           : sizes // ignore: cast_nullable_to_non_nullable
               as List<ArtSize>?,
@@ -303,17 +305,19 @@ class _$_SuperbrowseImage extends _SuperbrowseImage {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_SuperbrowseImage &&
-            const DeepCollectionEquality().equals(other.border, border) &&
-            const DeepCollectionEquality().equals(other.circular, circular) &&
-            const DeepCollectionEquality().equals(other.color, color) &&
-            const DeepCollectionEquality().equals(other.fullUrl, fullUrl) &&
-            const DeepCollectionEquality()
-                .equals(other.fullUrlDark, fullUrlDark) &&
-            const DeepCollectionEquality()
-                .equals(other.scalableUrl, scalableUrl) &&
-            const DeepCollectionEquality().equals(other.sizedUrl, sizedUrl) &&
-            const DeepCollectionEquality()
-                .equals(other.sizedUrlDart, sizedUrlDart) &&
+            (identical(other.border, border) || other.border == border) &&
+            (identical(other.circular, circular) ||
+                other.circular == circular) &&
+            (identical(other.color, color) || other.color == color) &&
+            (identical(other.fullUrl, fullUrl) || other.fullUrl == fullUrl) &&
+            (identical(other.fullUrlDark, fullUrlDark) ||
+                other.fullUrlDark == fullUrlDark) &&
+            (identical(other.scalableUrl, scalableUrl) ||
+                other.scalableUrl == scalableUrl) &&
+            (identical(other.sizedUrl, sizedUrl) ||
+                other.sizedUrl == sizedUrl) &&
+            (identical(other.sizedUrlDart, sizedUrlDart) ||
+                other.sizedUrlDart == sizedUrlDart) &&
             const DeepCollectionEquality().equals(other._sizes, _sizes));
   }
 
@@ -321,18 +325,19 @@ class _$_SuperbrowseImage extends _SuperbrowseImage {
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(border),
-      const DeepCollectionEquality().hash(circular),
-      const DeepCollectionEquality().hash(color),
-      const DeepCollectionEquality().hash(fullUrl),
-      const DeepCollectionEquality().hash(fullUrlDark),
-      const DeepCollectionEquality().hash(scalableUrl),
-      const DeepCollectionEquality().hash(sizedUrl),
-      const DeepCollectionEquality().hash(sizedUrlDart),
+      border,
+      circular,
+      color,
+      fullUrl,
+      fullUrlDark,
+      scalableUrl,
+      sizedUrl,
+      sizedUrlDart,
       const DeepCollectionEquality().hash(_sizes));
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_SuperbrowseImageCopyWith<_$_SuperbrowseImage> get copyWith =>
       __$$_SuperbrowseImageCopyWithImpl<_$_SuperbrowseImage>(this, _$identity);
 

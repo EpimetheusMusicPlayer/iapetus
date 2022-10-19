@@ -99,7 +99,7 @@ mixin _$SuperbrowseSubsection {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: SuperbrowseSubsection._sectionIdKey)
                 String sectionId,
             @JsonKey(name: SuperbrowseSubsection._scrollTypeKey)
@@ -109,7 +109,7 @@ mixin _$SuperbrowseSubsection {
             @JsonKey(name: SuperbrowseSubsection._itemsKey)
                 List<SuperbrowseItem> items)?
         horizontalScroll,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: SuperbrowseSubsection._sectionIdKey)
                 String sectionId,
             @JsonKey(name: SuperbrowseSubsection._scrollTypeKey)
@@ -125,7 +125,7 @@ mixin _$SuperbrowseSubsection {
             @JsonKey(name: 'maxRequired')
                 int? maxRequired)?
         recentlyPlayed,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: SuperbrowseSubsection._sectionIdKey)
                 String sectionId,
             @JsonKey(name: SuperbrowseSubsection._formFactorsKey)
@@ -133,7 +133,7 @@ mixin _$SuperbrowseSubsection {
             @JsonKey(name: SuperbrowseSubsection._itemsKey)
                 List<SuperbrowseItem> items)?
         singleton,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: SuperbrowseSubsection._sectionIdKey)
                 String sectionId,
             @JsonKey(name: SuperbrowseSubsection._formFactorsKey)
@@ -141,7 +141,7 @@ mixin _$SuperbrowseSubsection {
             @JsonKey(name: SuperbrowseSubsection._itemsKey)
                 List<SuperbrowseItem> items)?
         verticalList,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: SuperbrowseSubsection._sectionIdKey)
                 String sectionId,
             @JsonKey(name: SuperbrowseSubsection._formFactorsKey)
@@ -220,12 +220,13 @@ mixin _$SuperbrowseSubsection {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(HorizontalScrollSuperbrowseSubsection value)?
+    TResult? Function(HorizontalScrollSuperbrowseSubsection value)?
         horizontalScroll,
-    TResult Function(RecentlyPlayedSuperbrowseSubsection value)? recentlyPlayed,
-    TResult Function(SingletonSuperbrowseSubsection value)? singleton,
-    TResult Function(VerticalListSuperbrowseSubsection value)? verticalList,
-    TResult Function(DisplayAdSuperbrowseSubsection value)? displayAd,
+    TResult? Function(RecentlyPlayedSuperbrowseSubsection value)?
+        recentlyPlayed,
+    TResult? Function(SingletonSuperbrowseSubsection value)? singleton,
+    TResult? Function(VerticalListSuperbrowseSubsection value)? verticalList,
+    TResult? Function(DisplayAdSuperbrowseSubsection value)? displayAd,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -249,7 +250,8 @@ mixin _$SuperbrowseSubsection {
 abstract class $SuperbrowseSubsectionCopyWith<$Res> {
   factory $SuperbrowseSubsectionCopyWith(SuperbrowseSubsection value,
           $Res Function(SuperbrowseSubsection) then) =
-      _$SuperbrowseSubsectionCopyWithImpl<$Res>;
+      _$SuperbrowseSubsectionCopyWithImpl<$Res, SuperbrowseSubsection>;
+  @useResult
   $Res call(
       {@JsonKey(name: SuperbrowseSubsection._sectionIdKey)
           String sectionId,
@@ -258,29 +260,32 @@ abstract class $SuperbrowseSubsectionCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$SuperbrowseSubsectionCopyWithImpl<$Res>
+class _$SuperbrowseSubsectionCopyWithImpl<$Res,
+        $Val extends SuperbrowseSubsection>
     implements $SuperbrowseSubsectionCopyWith<$Res> {
   _$SuperbrowseSubsectionCopyWithImpl(this._value, this._then);
 
-  final SuperbrowseSubsection _value;
   // ignore: unused_field
-  final $Res Function(SuperbrowseSubsection) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? sectionId = freezed,
-    Object? items = freezed,
+    Object? sectionId = null,
+    Object? items = null,
   }) {
     return _then(_value.copyWith(
-      sectionId: sectionId == freezed
+      sectionId: null == sectionId
           ? _value.sectionId
           : sectionId // ignore: cast_nullable_to_non_nullable
               as String,
-      items: items == freezed
+      items: null == items
           ? _value.items
           : items // ignore: cast_nullable_to_non_nullable
               as List<SuperbrowseItem>,
-    ));
+    ) as $Val);
   }
 }
 
@@ -292,6 +297,7 @@ abstract class _$$HorizontalScrollSuperbrowseSubsectionCopyWith<$Res>
           $Res Function(_$HorizontalScrollSuperbrowseSubsection) then) =
       __$$HorizontalScrollSuperbrowseSubsectionCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(name: SuperbrowseSubsection._sectionIdKey)
           String sectionId,
@@ -307,39 +313,36 @@ abstract class _$$HorizontalScrollSuperbrowseSubsectionCopyWith<$Res>
 
 /// @nodoc
 class __$$HorizontalScrollSuperbrowseSubsectionCopyWithImpl<$Res>
-    extends _$SuperbrowseSubsectionCopyWithImpl<$Res>
+    extends _$SuperbrowseSubsectionCopyWithImpl<$Res,
+        _$HorizontalScrollSuperbrowseSubsection>
     implements _$$HorizontalScrollSuperbrowseSubsectionCopyWith<$Res> {
   __$$HorizontalScrollSuperbrowseSubsectionCopyWithImpl(
       _$HorizontalScrollSuperbrowseSubsection _value,
       $Res Function(_$HorizontalScrollSuperbrowseSubsection) _then)
-      : super(
-            _value, (v) => _then(v as _$HorizontalScrollSuperbrowseSubsection));
+      : super(_value, _then);
 
-  @override
-  _$HorizontalScrollSuperbrowseSubsection get _value =>
-      super._value as _$HorizontalScrollSuperbrowseSubsection;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? sectionId = freezed,
+    Object? sectionId = null,
     Object? scrollType = freezed,
-    Object? formFactors = freezed,
-    Object? items = freezed,
+    Object? formFactors = null,
+    Object? items = null,
   }) {
     return _then(_$HorizontalScrollSuperbrowseSubsection(
-      sectionId: sectionId == freezed
+      sectionId: null == sectionId
           ? _value.sectionId
           : sectionId // ignore: cast_nullable_to_non_nullable
               as String,
-      scrollType: scrollType == freezed
+      scrollType: freezed == scrollType
           ? _value.scrollType
           : scrollType // ignore: cast_nullable_to_non_nullable
               as ScrollType?,
-      formFactors: formFactors == freezed
+      formFactors: null == formFactors
           ? _value.formFactors
           : formFactors // ignore: cast_nullable_to_non_nullable
               as FormFactors,
-      items: items == freezed
+      items: null == items
           ? _value._items
           : items // ignore: cast_nullable_to_non_nullable
               as List<SuperbrowseItem>,
@@ -347,6 +350,7 @@ class __$$HorizontalScrollSuperbrowseSubsectionCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $FormFactorsCopyWith<$Res> get formFactors {
     return $FormFactorsCopyWith<$Res>(_value.formFactors, (value) {
       return _then(_value.copyWith(formFactors: value));
@@ -405,25 +409,23 @@ class _$HorizontalScrollSuperbrowseSubsection
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$HorizontalScrollSuperbrowseSubsection &&
-            const DeepCollectionEquality().equals(other.sectionId, sectionId) &&
-            const DeepCollectionEquality()
-                .equals(other.scrollType, scrollType) &&
-            const DeepCollectionEquality()
-                .equals(other.formFactors, formFactors) &&
+            (identical(other.sectionId, sectionId) ||
+                other.sectionId == sectionId) &&
+            (identical(other.scrollType, scrollType) ||
+                other.scrollType == scrollType) &&
+            (identical(other.formFactors, formFactors) ||
+                other.formFactors == formFactors) &&
             const DeepCollectionEquality().equals(other._items, _items));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(sectionId),
-      const DeepCollectionEquality().hash(scrollType),
-      const DeepCollectionEquality().hash(formFactors),
-      const DeepCollectionEquality().hash(_items));
+  int get hashCode => Object.hash(runtimeType, sectionId, scrollType,
+      formFactors, const DeepCollectionEquality().hash(_items));
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$HorizontalScrollSuperbrowseSubsectionCopyWith<
           _$HorizontalScrollSuperbrowseSubsection>
       get copyWith => __$$HorizontalScrollSuperbrowseSubsectionCopyWithImpl<
@@ -489,7 +491,7 @@ class _$HorizontalScrollSuperbrowseSubsection
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: SuperbrowseSubsection._sectionIdKey)
                 String sectionId,
             @JsonKey(name: SuperbrowseSubsection._scrollTypeKey)
@@ -499,7 +501,7 @@ class _$HorizontalScrollSuperbrowseSubsection
             @JsonKey(name: SuperbrowseSubsection._itemsKey)
                 List<SuperbrowseItem> items)?
         horizontalScroll,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: SuperbrowseSubsection._sectionIdKey)
                 String sectionId,
             @JsonKey(name: SuperbrowseSubsection._scrollTypeKey)
@@ -515,7 +517,7 @@ class _$HorizontalScrollSuperbrowseSubsection
             @JsonKey(name: 'maxRequired')
                 int? maxRequired)?
         recentlyPlayed,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: SuperbrowseSubsection._sectionIdKey)
                 String sectionId,
             @JsonKey(name: SuperbrowseSubsection._formFactorsKey)
@@ -523,7 +525,7 @@ class _$HorizontalScrollSuperbrowseSubsection
             @JsonKey(name: SuperbrowseSubsection._itemsKey)
                 List<SuperbrowseItem> items)?
         singleton,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: SuperbrowseSubsection._sectionIdKey)
                 String sectionId,
             @JsonKey(name: SuperbrowseSubsection._formFactorsKey)
@@ -531,7 +533,7 @@ class _$HorizontalScrollSuperbrowseSubsection
             @JsonKey(name: SuperbrowseSubsection._itemsKey)
                 List<SuperbrowseItem> items)?
         verticalList,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: SuperbrowseSubsection._sectionIdKey)
                 String sectionId,
             @JsonKey(name: SuperbrowseSubsection._formFactorsKey)
@@ -622,12 +624,13 @@ class _$HorizontalScrollSuperbrowseSubsection
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(HorizontalScrollSuperbrowseSubsection value)?
+    TResult? Function(HorizontalScrollSuperbrowseSubsection value)?
         horizontalScroll,
-    TResult Function(RecentlyPlayedSuperbrowseSubsection value)? recentlyPlayed,
-    TResult Function(SingletonSuperbrowseSubsection value)? singleton,
-    TResult Function(VerticalListSuperbrowseSubsection value)? verticalList,
-    TResult Function(DisplayAdSuperbrowseSubsection value)? displayAd,
+    TResult? Function(RecentlyPlayedSuperbrowseSubsection value)?
+        recentlyPlayed,
+    TResult? Function(SingletonSuperbrowseSubsection value)? singleton,
+    TResult? Function(VerticalListSuperbrowseSubsection value)? verticalList,
+    TResult? Function(DisplayAdSuperbrowseSubsection value)? displayAd,
   }) {
     return horizontalScroll?.call(this);
   }
@@ -699,6 +702,7 @@ abstract class _$$RecentlyPlayedSuperbrowseSubsectionCopyWith<$Res>
           $Res Function(_$RecentlyPlayedSuperbrowseSubsection) then) =
       __$$RecentlyPlayedSuperbrowseSubsectionCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(name: SuperbrowseSubsection._sectionIdKey)
           String sectionId,
@@ -720,53 +724,51 @@ abstract class _$$RecentlyPlayedSuperbrowseSubsectionCopyWith<$Res>
 
 /// @nodoc
 class __$$RecentlyPlayedSuperbrowseSubsectionCopyWithImpl<$Res>
-    extends _$SuperbrowseSubsectionCopyWithImpl<$Res>
+    extends _$SuperbrowseSubsectionCopyWithImpl<$Res,
+        _$RecentlyPlayedSuperbrowseSubsection>
     implements _$$RecentlyPlayedSuperbrowseSubsectionCopyWith<$Res> {
   __$$RecentlyPlayedSuperbrowseSubsectionCopyWithImpl(
       _$RecentlyPlayedSuperbrowseSubsection _value,
       $Res Function(_$RecentlyPlayedSuperbrowseSubsection) _then)
-      : super(_value, (v) => _then(v as _$RecentlyPlayedSuperbrowseSubsection));
+      : super(_value, _then);
 
-  @override
-  _$RecentlyPlayedSuperbrowseSubsection get _value =>
-      super._value as _$RecentlyPlayedSuperbrowseSubsection;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? sectionId = freezed,
+    Object? sectionId = null,
     Object? scrollType = freezed,
-    Object? formFactors = freezed,
-    Object? items = freezed,
+    Object? formFactors = null,
+    Object? items = null,
     Object? newItemTemplate = freezed,
     Object? minRequired = freezed,
     Object? maxRequired = freezed,
   }) {
     return _then(_$RecentlyPlayedSuperbrowseSubsection(
-      sectionId: sectionId == freezed
+      sectionId: null == sectionId
           ? _value.sectionId
           : sectionId // ignore: cast_nullable_to_non_nullable
               as String,
-      scrollType: scrollType == freezed
+      scrollType: freezed == scrollType
           ? _value.scrollType
           : scrollType // ignore: cast_nullable_to_non_nullable
               as ScrollType?,
-      formFactors: formFactors == freezed
+      formFactors: null == formFactors
           ? _value.formFactors
           : formFactors // ignore: cast_nullable_to_non_nullable
               as FormFactors,
-      items: items == freezed
+      items: null == items
           ? _value._items
           : items // ignore: cast_nullable_to_non_nullable
               as List<SuperbrowseItem>,
-      newItemTemplate: newItemTemplate == freezed
+      newItemTemplate: freezed == newItemTemplate
           ? _value._newItemTemplate
           : newItemTemplate // ignore: cast_nullable_to_non_nullable
               as Map<String, SuperbrowseItem>?,
-      minRequired: minRequired == freezed
+      minRequired: freezed == minRequired
           ? _value.minRequired
           : minRequired // ignore: cast_nullable_to_non_nullable
               as int?,
-      maxRequired: maxRequired == freezed
+      maxRequired: freezed == maxRequired
           ? _value.maxRequired
           : maxRequired // ignore: cast_nullable_to_non_nullable
               as int?,
@@ -774,6 +776,7 @@ class __$$RecentlyPlayedSuperbrowseSubsectionCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $FormFactorsCopyWith<$Res> get formFactors {
     return $FormFactorsCopyWith<$Res>(_value.formFactors, (value) {
       return _then(_value.copyWith(formFactors: value));
@@ -856,34 +859,36 @@ class _$RecentlyPlayedSuperbrowseSubsection
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$RecentlyPlayedSuperbrowseSubsection &&
-            const DeepCollectionEquality().equals(other.sectionId, sectionId) &&
-            const DeepCollectionEquality()
-                .equals(other.scrollType, scrollType) &&
-            const DeepCollectionEquality()
-                .equals(other.formFactors, formFactors) &&
+            (identical(other.sectionId, sectionId) ||
+                other.sectionId == sectionId) &&
+            (identical(other.scrollType, scrollType) ||
+                other.scrollType == scrollType) &&
+            (identical(other.formFactors, formFactors) ||
+                other.formFactors == formFactors) &&
             const DeepCollectionEquality().equals(other._items, _items) &&
             const DeepCollectionEquality()
                 .equals(other._newItemTemplate, _newItemTemplate) &&
-            const DeepCollectionEquality()
-                .equals(other.minRequired, minRequired) &&
-            const DeepCollectionEquality()
-                .equals(other.maxRequired, maxRequired));
+            (identical(other.minRequired, minRequired) ||
+                other.minRequired == minRequired) &&
+            (identical(other.maxRequired, maxRequired) ||
+                other.maxRequired == maxRequired));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(sectionId),
-      const DeepCollectionEquality().hash(scrollType),
-      const DeepCollectionEquality().hash(formFactors),
+      sectionId,
+      scrollType,
+      formFactors,
       const DeepCollectionEquality().hash(_items),
       const DeepCollectionEquality().hash(_newItemTemplate),
-      const DeepCollectionEquality().hash(minRequired),
-      const DeepCollectionEquality().hash(maxRequired));
+      minRequired,
+      maxRequired);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$RecentlyPlayedSuperbrowseSubsectionCopyWith<
           _$RecentlyPlayedSuperbrowseSubsection>
       get copyWith => __$$RecentlyPlayedSuperbrowseSubsectionCopyWithImpl<
@@ -950,7 +955,7 @@ class _$RecentlyPlayedSuperbrowseSubsection
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: SuperbrowseSubsection._sectionIdKey)
                 String sectionId,
             @JsonKey(name: SuperbrowseSubsection._scrollTypeKey)
@@ -960,7 +965,7 @@ class _$RecentlyPlayedSuperbrowseSubsection
             @JsonKey(name: SuperbrowseSubsection._itemsKey)
                 List<SuperbrowseItem> items)?
         horizontalScroll,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: SuperbrowseSubsection._sectionIdKey)
                 String sectionId,
             @JsonKey(name: SuperbrowseSubsection._scrollTypeKey)
@@ -976,7 +981,7 @@ class _$RecentlyPlayedSuperbrowseSubsection
             @JsonKey(name: 'maxRequired')
                 int? maxRequired)?
         recentlyPlayed,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: SuperbrowseSubsection._sectionIdKey)
                 String sectionId,
             @JsonKey(name: SuperbrowseSubsection._formFactorsKey)
@@ -984,7 +989,7 @@ class _$RecentlyPlayedSuperbrowseSubsection
             @JsonKey(name: SuperbrowseSubsection._itemsKey)
                 List<SuperbrowseItem> items)?
         singleton,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: SuperbrowseSubsection._sectionIdKey)
                 String sectionId,
             @JsonKey(name: SuperbrowseSubsection._formFactorsKey)
@@ -992,7 +997,7 @@ class _$RecentlyPlayedSuperbrowseSubsection
             @JsonKey(name: SuperbrowseSubsection._itemsKey)
                 List<SuperbrowseItem> items)?
         verticalList,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: SuperbrowseSubsection._sectionIdKey)
                 String sectionId,
             @JsonKey(name: SuperbrowseSubsection._formFactorsKey)
@@ -1085,12 +1090,13 @@ class _$RecentlyPlayedSuperbrowseSubsection
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(HorizontalScrollSuperbrowseSubsection value)?
+    TResult? Function(HorizontalScrollSuperbrowseSubsection value)?
         horizontalScroll,
-    TResult Function(RecentlyPlayedSuperbrowseSubsection value)? recentlyPlayed,
-    TResult Function(SingletonSuperbrowseSubsection value)? singleton,
-    TResult Function(VerticalListSuperbrowseSubsection value)? verticalList,
-    TResult Function(DisplayAdSuperbrowseSubsection value)? displayAd,
+    TResult? Function(RecentlyPlayedSuperbrowseSubsection value)?
+        recentlyPlayed,
+    TResult? Function(SingletonSuperbrowseSubsection value)? singleton,
+    TResult? Function(VerticalListSuperbrowseSubsection value)? verticalList,
+    TResult? Function(DisplayAdSuperbrowseSubsection value)? displayAd,
   }) {
     return recentlyPlayed?.call(this);
   }
@@ -1173,6 +1179,7 @@ abstract class _$$SingletonSuperbrowseSubsectionCopyWith<$Res>
           $Res Function(_$SingletonSuperbrowseSubsection) then) =
       __$$SingletonSuperbrowseSubsectionCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(name: SuperbrowseSubsection._sectionIdKey)
           String sectionId,
@@ -1186,33 +1193,31 @@ abstract class _$$SingletonSuperbrowseSubsectionCopyWith<$Res>
 
 /// @nodoc
 class __$$SingletonSuperbrowseSubsectionCopyWithImpl<$Res>
-    extends _$SuperbrowseSubsectionCopyWithImpl<$Res>
+    extends _$SuperbrowseSubsectionCopyWithImpl<$Res,
+        _$SingletonSuperbrowseSubsection>
     implements _$$SingletonSuperbrowseSubsectionCopyWith<$Res> {
   __$$SingletonSuperbrowseSubsectionCopyWithImpl(
       _$SingletonSuperbrowseSubsection _value,
       $Res Function(_$SingletonSuperbrowseSubsection) _then)
-      : super(_value, (v) => _then(v as _$SingletonSuperbrowseSubsection));
+      : super(_value, _then);
 
-  @override
-  _$SingletonSuperbrowseSubsection get _value =>
-      super._value as _$SingletonSuperbrowseSubsection;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? sectionId = freezed,
+    Object? sectionId = null,
     Object? formFactors = freezed,
-    Object? items = freezed,
+    Object? items = null,
   }) {
     return _then(_$SingletonSuperbrowseSubsection(
-      sectionId: sectionId == freezed
+      sectionId: null == sectionId
           ? _value.sectionId
           : sectionId // ignore: cast_nullable_to_non_nullable
               as String,
-      formFactors: formFactors == freezed
+      formFactors: freezed == formFactors
           ? _value.formFactors
           : formFactors // ignore: cast_nullable_to_non_nullable
               as FormFactors?,
-      items: items == freezed
+      items: null == items
           ? _value._items
           : items // ignore: cast_nullable_to_non_nullable
               as List<SuperbrowseItem>,
@@ -1220,6 +1225,7 @@ class __$$SingletonSuperbrowseSubsectionCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $FormFactorsCopyWith<$Res>? get formFactors {
     if (_value.formFactors == null) {
       return null;
@@ -1277,22 +1283,21 @@ class _$SingletonSuperbrowseSubsection
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$SingletonSuperbrowseSubsection &&
-            const DeepCollectionEquality().equals(other.sectionId, sectionId) &&
-            const DeepCollectionEquality()
-                .equals(other.formFactors, formFactors) &&
+            (identical(other.sectionId, sectionId) ||
+                other.sectionId == sectionId) &&
+            (identical(other.formFactors, formFactors) ||
+                other.formFactors == formFactors) &&
             const DeepCollectionEquality().equals(other._items, _items));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(sectionId),
-      const DeepCollectionEquality().hash(formFactors),
+  int get hashCode => Object.hash(runtimeType, sectionId, formFactors,
       const DeepCollectionEquality().hash(_items));
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$SingletonSuperbrowseSubsectionCopyWith<_$SingletonSuperbrowseSubsection>
       get copyWith => __$$SingletonSuperbrowseSubsectionCopyWithImpl<
           _$SingletonSuperbrowseSubsection>(this, _$identity);
@@ -1357,7 +1362,7 @@ class _$SingletonSuperbrowseSubsection
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: SuperbrowseSubsection._sectionIdKey)
                 String sectionId,
             @JsonKey(name: SuperbrowseSubsection._scrollTypeKey)
@@ -1367,7 +1372,7 @@ class _$SingletonSuperbrowseSubsection
             @JsonKey(name: SuperbrowseSubsection._itemsKey)
                 List<SuperbrowseItem> items)?
         horizontalScroll,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: SuperbrowseSubsection._sectionIdKey)
                 String sectionId,
             @JsonKey(name: SuperbrowseSubsection._scrollTypeKey)
@@ -1383,7 +1388,7 @@ class _$SingletonSuperbrowseSubsection
             @JsonKey(name: 'maxRequired')
                 int? maxRequired)?
         recentlyPlayed,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: SuperbrowseSubsection._sectionIdKey)
                 String sectionId,
             @JsonKey(name: SuperbrowseSubsection._formFactorsKey)
@@ -1391,7 +1396,7 @@ class _$SingletonSuperbrowseSubsection
             @JsonKey(name: SuperbrowseSubsection._itemsKey)
                 List<SuperbrowseItem> items)?
         singleton,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: SuperbrowseSubsection._sectionIdKey)
                 String sectionId,
             @JsonKey(name: SuperbrowseSubsection._formFactorsKey)
@@ -1399,7 +1404,7 @@ class _$SingletonSuperbrowseSubsection
             @JsonKey(name: SuperbrowseSubsection._itemsKey)
                 List<SuperbrowseItem> items)?
         verticalList,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: SuperbrowseSubsection._sectionIdKey)
                 String sectionId,
             @JsonKey(name: SuperbrowseSubsection._formFactorsKey)
@@ -1490,12 +1495,13 @@ class _$SingletonSuperbrowseSubsection
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(HorizontalScrollSuperbrowseSubsection value)?
+    TResult? Function(HorizontalScrollSuperbrowseSubsection value)?
         horizontalScroll,
-    TResult Function(RecentlyPlayedSuperbrowseSubsection value)? recentlyPlayed,
-    TResult Function(SingletonSuperbrowseSubsection value)? singleton,
-    TResult Function(VerticalListSuperbrowseSubsection value)? verticalList,
-    TResult Function(DisplayAdSuperbrowseSubsection value)? displayAd,
+    TResult? Function(RecentlyPlayedSuperbrowseSubsection value)?
+        recentlyPlayed,
+    TResult? Function(SingletonSuperbrowseSubsection value)? singleton,
+    TResult? Function(VerticalListSuperbrowseSubsection value)? verticalList,
+    TResult? Function(DisplayAdSuperbrowseSubsection value)? displayAd,
   }) {
     return singleton?.call(this);
   }
@@ -1560,6 +1566,7 @@ abstract class _$$VerticalListSuperbrowseSubsectionCopyWith<$Res>
           $Res Function(_$VerticalListSuperbrowseSubsection) then) =
       __$$VerticalListSuperbrowseSubsectionCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(name: SuperbrowseSubsection._sectionIdKey)
           String sectionId,
@@ -1573,33 +1580,31 @@ abstract class _$$VerticalListSuperbrowseSubsectionCopyWith<$Res>
 
 /// @nodoc
 class __$$VerticalListSuperbrowseSubsectionCopyWithImpl<$Res>
-    extends _$SuperbrowseSubsectionCopyWithImpl<$Res>
+    extends _$SuperbrowseSubsectionCopyWithImpl<$Res,
+        _$VerticalListSuperbrowseSubsection>
     implements _$$VerticalListSuperbrowseSubsectionCopyWith<$Res> {
   __$$VerticalListSuperbrowseSubsectionCopyWithImpl(
       _$VerticalListSuperbrowseSubsection _value,
       $Res Function(_$VerticalListSuperbrowseSubsection) _then)
-      : super(_value, (v) => _then(v as _$VerticalListSuperbrowseSubsection));
+      : super(_value, _then);
 
-  @override
-  _$VerticalListSuperbrowseSubsection get _value =>
-      super._value as _$VerticalListSuperbrowseSubsection;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? sectionId = freezed,
+    Object? sectionId = null,
     Object? formFactors = freezed,
-    Object? items = freezed,
+    Object? items = null,
   }) {
     return _then(_$VerticalListSuperbrowseSubsection(
-      sectionId: sectionId == freezed
+      sectionId: null == sectionId
           ? _value.sectionId
           : sectionId // ignore: cast_nullable_to_non_nullable
               as String,
-      formFactors: formFactors == freezed
+      formFactors: freezed == formFactors
           ? _value.formFactors
           : formFactors // ignore: cast_nullable_to_non_nullable
               as FormFactors?,
-      items: items == freezed
+      items: null == items
           ? _value._items
           : items // ignore: cast_nullable_to_non_nullable
               as List<SuperbrowseItem>,
@@ -1607,6 +1612,7 @@ class __$$VerticalListSuperbrowseSubsectionCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $FormFactorsCopyWith<$Res>? get formFactors {
     if (_value.formFactors == null) {
       return null;
@@ -1664,22 +1670,21 @@ class _$VerticalListSuperbrowseSubsection
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$VerticalListSuperbrowseSubsection &&
-            const DeepCollectionEquality().equals(other.sectionId, sectionId) &&
-            const DeepCollectionEquality()
-                .equals(other.formFactors, formFactors) &&
+            (identical(other.sectionId, sectionId) ||
+                other.sectionId == sectionId) &&
+            (identical(other.formFactors, formFactors) ||
+                other.formFactors == formFactors) &&
             const DeepCollectionEquality().equals(other._items, _items));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(sectionId),
-      const DeepCollectionEquality().hash(formFactors),
+  int get hashCode => Object.hash(runtimeType, sectionId, formFactors,
       const DeepCollectionEquality().hash(_items));
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$VerticalListSuperbrowseSubsectionCopyWith<
           _$VerticalListSuperbrowseSubsection>
       get copyWith => __$$VerticalListSuperbrowseSubsectionCopyWithImpl<
@@ -1745,7 +1750,7 @@ class _$VerticalListSuperbrowseSubsection
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: SuperbrowseSubsection._sectionIdKey)
                 String sectionId,
             @JsonKey(name: SuperbrowseSubsection._scrollTypeKey)
@@ -1755,7 +1760,7 @@ class _$VerticalListSuperbrowseSubsection
             @JsonKey(name: SuperbrowseSubsection._itemsKey)
                 List<SuperbrowseItem> items)?
         horizontalScroll,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: SuperbrowseSubsection._sectionIdKey)
                 String sectionId,
             @JsonKey(name: SuperbrowseSubsection._scrollTypeKey)
@@ -1771,7 +1776,7 @@ class _$VerticalListSuperbrowseSubsection
             @JsonKey(name: 'maxRequired')
                 int? maxRequired)?
         recentlyPlayed,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: SuperbrowseSubsection._sectionIdKey)
                 String sectionId,
             @JsonKey(name: SuperbrowseSubsection._formFactorsKey)
@@ -1779,7 +1784,7 @@ class _$VerticalListSuperbrowseSubsection
             @JsonKey(name: SuperbrowseSubsection._itemsKey)
                 List<SuperbrowseItem> items)?
         singleton,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: SuperbrowseSubsection._sectionIdKey)
                 String sectionId,
             @JsonKey(name: SuperbrowseSubsection._formFactorsKey)
@@ -1787,7 +1792,7 @@ class _$VerticalListSuperbrowseSubsection
             @JsonKey(name: SuperbrowseSubsection._itemsKey)
                 List<SuperbrowseItem> items)?
         verticalList,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: SuperbrowseSubsection._sectionIdKey)
                 String sectionId,
             @JsonKey(name: SuperbrowseSubsection._formFactorsKey)
@@ -1878,12 +1883,13 @@ class _$VerticalListSuperbrowseSubsection
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(HorizontalScrollSuperbrowseSubsection value)?
+    TResult? Function(HorizontalScrollSuperbrowseSubsection value)?
         horizontalScroll,
-    TResult Function(RecentlyPlayedSuperbrowseSubsection value)? recentlyPlayed,
-    TResult Function(SingletonSuperbrowseSubsection value)? singleton,
-    TResult Function(VerticalListSuperbrowseSubsection value)? verticalList,
-    TResult Function(DisplayAdSuperbrowseSubsection value)? displayAd,
+    TResult? Function(RecentlyPlayedSuperbrowseSubsection value)?
+        recentlyPlayed,
+    TResult? Function(SingletonSuperbrowseSubsection value)? singleton,
+    TResult? Function(VerticalListSuperbrowseSubsection value)? verticalList,
+    TResult? Function(DisplayAdSuperbrowseSubsection value)? displayAd,
   }) {
     return verticalList?.call(this);
   }
@@ -1950,6 +1956,7 @@ abstract class _$$DisplayAdSuperbrowseSubsectionCopyWith<$Res>
           $Res Function(_$DisplayAdSuperbrowseSubsection) then) =
       __$$DisplayAdSuperbrowseSubsectionCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(name: SuperbrowseSubsection._sectionIdKey)
           String sectionId,
@@ -1963,33 +1970,31 @@ abstract class _$$DisplayAdSuperbrowseSubsectionCopyWith<$Res>
 
 /// @nodoc
 class __$$DisplayAdSuperbrowseSubsectionCopyWithImpl<$Res>
-    extends _$SuperbrowseSubsectionCopyWithImpl<$Res>
+    extends _$SuperbrowseSubsectionCopyWithImpl<$Res,
+        _$DisplayAdSuperbrowseSubsection>
     implements _$$DisplayAdSuperbrowseSubsectionCopyWith<$Res> {
   __$$DisplayAdSuperbrowseSubsectionCopyWithImpl(
       _$DisplayAdSuperbrowseSubsection _value,
       $Res Function(_$DisplayAdSuperbrowseSubsection) _then)
-      : super(_value, (v) => _then(v as _$DisplayAdSuperbrowseSubsection));
+      : super(_value, _then);
 
-  @override
-  _$DisplayAdSuperbrowseSubsection get _value =>
-      super._value as _$DisplayAdSuperbrowseSubsection;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? sectionId = freezed,
-    Object? formFactors = freezed,
-    Object? items = freezed,
+    Object? sectionId = null,
+    Object? formFactors = null,
+    Object? items = null,
   }) {
     return _then(_$DisplayAdSuperbrowseSubsection(
-      sectionId: sectionId == freezed
+      sectionId: null == sectionId
           ? _value.sectionId
           : sectionId // ignore: cast_nullable_to_non_nullable
               as String,
-      formFactors: formFactors == freezed
+      formFactors: null == formFactors
           ? _value.formFactors
           : formFactors // ignore: cast_nullable_to_non_nullable
               as FormFactors,
-      items: items == freezed
+      items: null == items
           ? _value._items
           : items // ignore: cast_nullable_to_non_nullable
               as List<SuperbrowseItem>,
@@ -1997,6 +2002,7 @@ class __$$DisplayAdSuperbrowseSubsectionCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $FormFactorsCopyWith<$Res> get formFactors {
     return $FormFactorsCopyWith<$Res>(_value.formFactors, (value) {
       return _then(_value.copyWith(formFactors: value));
@@ -2050,22 +2056,21 @@ class _$DisplayAdSuperbrowseSubsection
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$DisplayAdSuperbrowseSubsection &&
-            const DeepCollectionEquality().equals(other.sectionId, sectionId) &&
-            const DeepCollectionEquality()
-                .equals(other.formFactors, formFactors) &&
+            (identical(other.sectionId, sectionId) ||
+                other.sectionId == sectionId) &&
+            (identical(other.formFactors, formFactors) ||
+                other.formFactors == formFactors) &&
             const DeepCollectionEquality().equals(other._items, _items));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(sectionId),
-      const DeepCollectionEquality().hash(formFactors),
+  int get hashCode => Object.hash(runtimeType, sectionId, formFactors,
       const DeepCollectionEquality().hash(_items));
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$DisplayAdSuperbrowseSubsectionCopyWith<_$DisplayAdSuperbrowseSubsection>
       get copyWith => __$$DisplayAdSuperbrowseSubsectionCopyWithImpl<
           _$DisplayAdSuperbrowseSubsection>(this, _$identity);
@@ -2130,7 +2135,7 @@ class _$DisplayAdSuperbrowseSubsection
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: SuperbrowseSubsection._sectionIdKey)
                 String sectionId,
             @JsonKey(name: SuperbrowseSubsection._scrollTypeKey)
@@ -2140,7 +2145,7 @@ class _$DisplayAdSuperbrowseSubsection
             @JsonKey(name: SuperbrowseSubsection._itemsKey)
                 List<SuperbrowseItem> items)?
         horizontalScroll,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: SuperbrowseSubsection._sectionIdKey)
                 String sectionId,
             @JsonKey(name: SuperbrowseSubsection._scrollTypeKey)
@@ -2156,7 +2161,7 @@ class _$DisplayAdSuperbrowseSubsection
             @JsonKey(name: 'maxRequired')
                 int? maxRequired)?
         recentlyPlayed,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: SuperbrowseSubsection._sectionIdKey)
                 String sectionId,
             @JsonKey(name: SuperbrowseSubsection._formFactorsKey)
@@ -2164,7 +2169,7 @@ class _$DisplayAdSuperbrowseSubsection
             @JsonKey(name: SuperbrowseSubsection._itemsKey)
                 List<SuperbrowseItem> items)?
         singleton,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: SuperbrowseSubsection._sectionIdKey)
                 String sectionId,
             @JsonKey(name: SuperbrowseSubsection._formFactorsKey)
@@ -2172,7 +2177,7 @@ class _$DisplayAdSuperbrowseSubsection
             @JsonKey(name: SuperbrowseSubsection._itemsKey)
                 List<SuperbrowseItem> items)?
         verticalList,
-    TResult Function(
+    TResult? Function(
             @JsonKey(name: SuperbrowseSubsection._sectionIdKey)
                 String sectionId,
             @JsonKey(name: SuperbrowseSubsection._formFactorsKey)
@@ -2263,12 +2268,13 @@ class _$DisplayAdSuperbrowseSubsection
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(HorizontalScrollSuperbrowseSubsection value)?
+    TResult? Function(HorizontalScrollSuperbrowseSubsection value)?
         horizontalScroll,
-    TResult Function(RecentlyPlayedSuperbrowseSubsection value)? recentlyPlayed,
-    TResult Function(SingletonSuperbrowseSubsection value)? singleton,
-    TResult Function(VerticalListSuperbrowseSubsection value)? verticalList,
-    TResult Function(DisplayAdSuperbrowseSubsection value)? displayAd,
+    TResult? Function(RecentlyPlayedSuperbrowseSubsection value)?
+        recentlyPlayed,
+    TResult? Function(SingletonSuperbrowseSubsection value)? singleton,
+    TResult? Function(VerticalListSuperbrowseSubsection value)? verticalList,
+    TResult? Function(DisplayAdSuperbrowseSubsection value)? displayAd,
   }) {
     return displayAd?.call(this);
   }

@@ -37,7 +37,8 @@ mixin _$FocusTrait {
 abstract class $FocusTraitCopyWith<$Res> {
   factory $FocusTraitCopyWith(
           FocusTrait value, $Res Function(FocusTrait) then) =
-      _$FocusTraitCopyWithImpl<$Res>;
+      _$FocusTraitCopyWithImpl<$Res, FocusTrait>;
+  @useResult
   $Res call(
       {@JsonKey(name: 'name') String name,
       @JsonKey(name: 'focusTraitSet') String focusTraitSet,
@@ -45,33 +46,36 @@ abstract class $FocusTraitCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$FocusTraitCopyWithImpl<$Res> implements $FocusTraitCopyWith<$Res> {
+class _$FocusTraitCopyWithImpl<$Res, $Val extends FocusTrait>
+    implements $FocusTraitCopyWith<$Res> {
   _$FocusTraitCopyWithImpl(this._value, this._then);
 
-  final FocusTrait _value;
   // ignore: unused_field
-  final $Res Function(FocusTrait) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? name = freezed,
-    Object? focusTraitSet = freezed,
-    Object? focusTraitSetType = freezed,
+    Object? name = null,
+    Object? focusTraitSet = null,
+    Object? focusTraitSetType = null,
   }) {
     return _then(_value.copyWith(
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      focusTraitSet: focusTraitSet == freezed
+      focusTraitSet: null == focusTraitSet
           ? _value.focusTraitSet
           : focusTraitSet // ignore: cast_nullable_to_non_nullable
               as String,
-      focusTraitSetType: focusTraitSetType == freezed
+      focusTraitSetType: null == focusTraitSetType
           ? _value.focusTraitSetType
           : focusTraitSetType // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -82,6 +86,7 @@ abstract class _$$_FocusTraitCopyWith<$Res>
           _$_FocusTrait value, $Res Function(_$_FocusTrait) then) =
       __$$_FocusTraitCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(name: 'name') String name,
       @JsonKey(name: 'focusTraitSet') String focusTraitSet,
@@ -89,31 +94,30 @@ abstract class _$$_FocusTraitCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_FocusTraitCopyWithImpl<$Res> extends _$FocusTraitCopyWithImpl<$Res>
+class __$$_FocusTraitCopyWithImpl<$Res>
+    extends _$FocusTraitCopyWithImpl<$Res, _$_FocusTrait>
     implements _$$_FocusTraitCopyWith<$Res> {
   __$$_FocusTraitCopyWithImpl(
       _$_FocusTrait _value, $Res Function(_$_FocusTrait) _then)
-      : super(_value, (v) => _then(v as _$_FocusTrait));
+      : super(_value, _then);
 
-  @override
-  _$_FocusTrait get _value => super._value as _$_FocusTrait;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? name = freezed,
-    Object? focusTraitSet = freezed,
-    Object? focusTraitSetType = freezed,
+    Object? name = null,
+    Object? focusTraitSet = null,
+    Object? focusTraitSetType = null,
   }) {
     return _then(_$_FocusTrait(
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      focusTraitSet: focusTraitSet == freezed
+      focusTraitSet: null == focusTraitSet
           ? _value.focusTraitSet
           : focusTraitSet // ignore: cast_nullable_to_non_nullable
               as String,
-      focusTraitSetType: focusTraitSetType == freezed
+      focusTraitSetType: null == focusTraitSetType
           ? _value.focusTraitSetType
           : focusTraitSetType // ignore: cast_nullable_to_non_nullable
               as String,
@@ -152,23 +156,21 @@ class _$_FocusTrait implements _FocusTrait {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_FocusTrait &&
-            const DeepCollectionEquality().equals(other.name, name) &&
-            const DeepCollectionEquality()
-                .equals(other.focusTraitSet, focusTraitSet) &&
-            const DeepCollectionEquality()
-                .equals(other.focusTraitSetType, focusTraitSetType));
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.focusTraitSet, focusTraitSet) ||
+                other.focusTraitSet == focusTraitSet) &&
+            (identical(other.focusTraitSetType, focusTraitSetType) ||
+                other.focusTraitSetType == focusTraitSetType));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(name),
-      const DeepCollectionEquality().hash(focusTraitSet),
-      const DeepCollectionEquality().hash(focusTraitSetType));
+  int get hashCode =>
+      Object.hash(runtimeType, name, focusTraitSet, focusTraitSetType);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_FocusTraitCopyWith<_$_FocusTrait> get copyWith =>
       __$$_FocusTraitCopyWithImpl<_$_FocusTrait>(this, _$identity);
 

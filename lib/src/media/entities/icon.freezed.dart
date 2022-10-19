@@ -43,7 +43,8 @@ mixin _$MediaIcon {
 /// @nodoc
 abstract class $MediaIconCopyWith<$Res> {
   factory $MediaIconCopyWith(MediaIcon value, $Res Function(MediaIcon) then) =
-      _$MediaIconCopyWithImpl<$Res>;
+      _$MediaIconCopyWithImpl<$Res, MediaIcon>;
+  @useResult
   $Res call(
       {@JsonKey(name: 'dominantColor', fromJson: readOptionalColor, toJson: writeOptionalColor)
           int? dominantColor,
@@ -54,33 +55,36 @@ abstract class $MediaIconCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$MediaIconCopyWithImpl<$Res> implements $MediaIconCopyWith<$Res> {
+class _$MediaIconCopyWithImpl<$Res, $Val extends MediaIcon>
+    implements $MediaIconCopyWith<$Res> {
   _$MediaIconCopyWithImpl(this._value, this._then);
 
-  final MediaIcon _value;
   // ignore: unused_field
-  final $Res Function(MediaIcon) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? dominantColor = freezed,
-    Object? artId = freezed,
+    Object? artId = null,
     Object? artUrl = freezed,
   }) {
     return _then(_value.copyWith(
-      dominantColor: dominantColor == freezed
+      dominantColor: freezed == dominantColor
           ? _value.dominantColor
           : dominantColor // ignore: cast_nullable_to_non_nullable
               as int?,
-      artId: artId == freezed
+      artId: null == artId
           ? _value.artId
           : artId // ignore: cast_nullable_to_non_nullable
               as String,
-      artUrl: artUrl == freezed
+      artUrl: freezed == artUrl
           ? _value.artUrl
           : artUrl // ignore: cast_nullable_to_non_nullable
               as Uri?,
-    ));
+    ) as $Val);
   }
 }
 
@@ -90,6 +94,7 @@ abstract class _$$_MediaIconCopyWith<$Res> implements $MediaIconCopyWith<$Res> {
           _$_MediaIcon value, $Res Function(_$_MediaIcon) then) =
       __$$_MediaIconCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(name: 'dominantColor', fromJson: readOptionalColor, toJson: writeOptionalColor)
           int? dominantColor,
@@ -100,31 +105,30 @@ abstract class _$$_MediaIconCopyWith<$Res> implements $MediaIconCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_MediaIconCopyWithImpl<$Res> extends _$MediaIconCopyWithImpl<$Res>
+class __$$_MediaIconCopyWithImpl<$Res>
+    extends _$MediaIconCopyWithImpl<$Res, _$_MediaIcon>
     implements _$$_MediaIconCopyWith<$Res> {
   __$$_MediaIconCopyWithImpl(
       _$_MediaIcon _value, $Res Function(_$_MediaIcon) _then)
-      : super(_value, (v) => _then(v as _$_MediaIcon));
+      : super(_value, _then);
 
-  @override
-  _$_MediaIcon get _value => super._value as _$_MediaIcon;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? dominantColor = freezed,
-    Object? artId = freezed,
+    Object? artId = null,
     Object? artUrl = freezed,
   }) {
     return _then(_$_MediaIcon(
-      dominantColor: dominantColor == freezed
+      dominantColor: freezed == dominantColor
           ? _value.dominantColor
           : dominantColor // ignore: cast_nullable_to_non_nullable
               as int?,
-      artId: artId == freezed
+      artId: null == artId
           ? _value.artId
           : artId // ignore: cast_nullable_to_non_nullable
               as String,
-      artUrl: artUrl == freezed
+      artUrl: freezed == artUrl
           ? _value.artUrl
           : artUrl // ignore: cast_nullable_to_non_nullable
               as Uri?,
@@ -173,22 +177,19 @@ class _$_MediaIcon implements _MediaIcon {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_MediaIcon &&
-            const DeepCollectionEquality()
-                .equals(other.dominantColor, dominantColor) &&
-            const DeepCollectionEquality().equals(other.artId, artId) &&
-            const DeepCollectionEquality().equals(other.artUrl, artUrl));
+            (identical(other.dominantColor, dominantColor) ||
+                other.dominantColor == dominantColor) &&
+            (identical(other.artId, artId) || other.artId == artId) &&
+            (identical(other.artUrl, artUrl) || other.artUrl == artUrl));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(dominantColor),
-      const DeepCollectionEquality().hash(artId),
-      const DeepCollectionEquality().hash(artUrl));
+  int get hashCode => Object.hash(runtimeType, dominantColor, artId, artUrl);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_MediaIconCopyWith<_$_MediaIcon> get copyWith =>
       __$$_MediaIconCopyWithImpl<_$_MediaIcon>(this, _$identity);
 

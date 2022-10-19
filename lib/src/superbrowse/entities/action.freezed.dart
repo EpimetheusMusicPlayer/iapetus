@@ -43,7 +43,8 @@ mixin _$SuperbrowseAction {
 abstract class $SuperbrowseActionCopyWith<$Res> {
   factory $SuperbrowseActionCopyWith(
           SuperbrowseAction value, $Res Function(SuperbrowseAction) then) =
-      _$SuperbrowseActionCopyWithImpl<$Res>;
+      _$SuperbrowseActionCopyWithImpl<$Res, SuperbrowseAction>;
+  @useResult
   $Res call(
       {@JsonKey(name: 'type') ActionType type,
       @JsonKey(name: 'pandoraId') String? pandoraId,
@@ -54,17 +55,19 @@ abstract class $SuperbrowseActionCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$SuperbrowseActionCopyWithImpl<$Res>
+class _$SuperbrowseActionCopyWithImpl<$Res, $Val extends SuperbrowseAction>
     implements $SuperbrowseActionCopyWith<$Res> {
   _$SuperbrowseActionCopyWithImpl(this._value, this._then);
 
-  final SuperbrowseAction _value;
   // ignore: unused_field
-  final $Res Function(SuperbrowseAction) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? type = freezed,
+    Object? type = null,
     Object? pandoraId = freezed,
     Object? sourceId = freezed,
     Object? title = freezed,
@@ -72,31 +75,31 @@ class _$SuperbrowseActionCopyWithImpl<$Res>
     Object? url = freezed,
   }) {
     return _then(_value.copyWith(
-      type: type == freezed
+      type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as ActionType,
-      pandoraId: pandoraId == freezed
+      pandoraId: freezed == pandoraId
           ? _value.pandoraId
           : pandoraId // ignore: cast_nullable_to_non_nullable
               as String?,
-      sourceId: sourceId == freezed
+      sourceId: freezed == sourceId
           ? _value.sourceId
           : sourceId // ignore: cast_nullable_to_non_nullable
               as String?,
-      title: title == freezed
+      title: freezed == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String?,
-      loadingScreen: loadingScreen == freezed
+      loadingScreen: freezed == loadingScreen
           ? _value.loadingScreen
           : loadingScreen // ignore: cast_nullable_to_non_nullable
               as LoadingScreenType?,
-      url: url == freezed
+      url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
               as Uri?,
-    ));
+    ) as $Val);
   }
 }
 
@@ -107,6 +110,7 @@ abstract class _$$_SuperbrowseActionCopyWith<$Res>
           $Res Function(_$_SuperbrowseAction) then) =
       __$$_SuperbrowseActionCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(name: 'type') ActionType type,
       @JsonKey(name: 'pandoraId') String? pandoraId,
@@ -118,18 +122,16 @@ abstract class _$$_SuperbrowseActionCopyWith<$Res>
 
 /// @nodoc
 class __$$_SuperbrowseActionCopyWithImpl<$Res>
-    extends _$SuperbrowseActionCopyWithImpl<$Res>
+    extends _$SuperbrowseActionCopyWithImpl<$Res, _$_SuperbrowseAction>
     implements _$$_SuperbrowseActionCopyWith<$Res> {
   __$$_SuperbrowseActionCopyWithImpl(
       _$_SuperbrowseAction _value, $Res Function(_$_SuperbrowseAction) _then)
-      : super(_value, (v) => _then(v as _$_SuperbrowseAction));
+      : super(_value, _then);
 
-  @override
-  _$_SuperbrowseAction get _value => super._value as _$_SuperbrowseAction;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? type = freezed,
+    Object? type = null,
     Object? pandoraId = freezed,
     Object? sourceId = freezed,
     Object? title = freezed,
@@ -137,27 +139,27 @@ class __$$_SuperbrowseActionCopyWithImpl<$Res>
     Object? url = freezed,
   }) {
     return _then(_$_SuperbrowseAction(
-      type: type == freezed
+      type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as ActionType,
-      pandoraId: pandoraId == freezed
+      pandoraId: freezed == pandoraId
           ? _value.pandoraId
           : pandoraId // ignore: cast_nullable_to_non_nullable
               as String?,
-      sourceId: sourceId == freezed
+      sourceId: freezed == sourceId
           ? _value.sourceId
           : sourceId // ignore: cast_nullable_to_non_nullable
               as String?,
-      title: title == freezed
+      title: freezed == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String?,
-      loadingScreen: loadingScreen == freezed
+      loadingScreen: freezed == loadingScreen
           ? _value.loadingScreen
           : loadingScreen // ignore: cast_nullable_to_non_nullable
               as LoadingScreenType?,
-      url: url == freezed
+      url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
               as Uri?,
@@ -208,28 +210,25 @@ class _$_SuperbrowseAction implements _SuperbrowseAction {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_SuperbrowseAction &&
-            const DeepCollectionEquality().equals(other.type, type) &&
-            const DeepCollectionEquality().equals(other.pandoraId, pandoraId) &&
-            const DeepCollectionEquality().equals(other.sourceId, sourceId) &&
-            const DeepCollectionEquality().equals(other.title, title) &&
-            const DeepCollectionEquality()
-                .equals(other.loadingScreen, loadingScreen) &&
-            const DeepCollectionEquality().equals(other.url, url));
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.pandoraId, pandoraId) ||
+                other.pandoraId == pandoraId) &&
+            (identical(other.sourceId, sourceId) ||
+                other.sourceId == sourceId) &&
+            (identical(other.title, title) || other.title == title) &&
+            (identical(other.loadingScreen, loadingScreen) ||
+                other.loadingScreen == loadingScreen) &&
+            (identical(other.url, url) || other.url == url));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(type),
-      const DeepCollectionEquality().hash(pandoraId),
-      const DeepCollectionEquality().hash(sourceId),
-      const DeepCollectionEquality().hash(title),
-      const DeepCollectionEquality().hash(loadingScreen),
-      const DeepCollectionEquality().hash(url));
+      runtimeType, type, pandoraId, sourceId, title, loadingScreen, url);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_SuperbrowseActionCopyWith<_$_SuperbrowseAction> get copyWith =>
       __$$_SuperbrowseActionCopyWithImpl<_$_SuperbrowseAction>(
           this, _$identity);
