@@ -6,52 +6,37 @@ import 'package:iapetus/src/core/partners/entities/partner.dart';
 
 class TunerPartner extends Partner {
   const TunerPartner({
-    required String username,
-    required String password,
-    required String deviceId,
-    required String requestEncryptKey,
-    required String responseEncryptKey,
+    required super.username,
+    required super.password,
+    required super.deviceId,
+    required super.requestEncryptKey,
+    required super.responseEncryptKey,
   }) : super(
           tunerHost: 'tuner.pandora.com',
-          username: username,
-          password: password,
-          deviceId: deviceId,
-          requestEncryptKey: requestEncryptKey,
-          responseEncryptKey: responseEncryptKey,
         );
 }
 
 class AndroidTunerPartner extends Partner {
   const AndroidTunerPartner({
-    required String username,
-    required String password,
-    required String deviceId,
-    required String requestEncryptKey,
-    required String responseEncryptKey,
+    required super.username,
+    required super.password,
+    required super.deviceId,
+    required super.requestEncryptKey,
+    required super.responseEncryptKey,
   }) : super(
           tunerHost: 'android-tuner.pandora.com',
-          username: username,
-          password: password,
-          deviceId: deviceId,
-          requestEncryptKey: requestEncryptKey,
-          responseEncryptKey: responseEncryptKey,
         );
 }
 
 class InternalTunerPartner extends Partner {
   const InternalTunerPartner({
-    required String username,
-    required String password,
-    required String deviceId,
-    required String requestEncryptKey,
-    required String responseEncryptKey,
+    required super.username,
+    required super.password,
+    required super.deviceId,
+    required super.requestEncryptKey,
+    required super.responseEncryptKey,
   }) : super(
           tunerHost: 'internal-tuner.pandora.com',
-          username: username,
-          password: password,
-          deviceId: deviceId,
-          requestEncryptKey: requestEncryptKey,
-          responseEncryptKey: responseEncryptKey,
         );
 }
 

@@ -6,15 +6,13 @@ import 'package:iapetus/src/core/crypto/data/hex.dart';
 import 'package:iapetus/src/core/crypto/data/pkcs5.dart';
 import 'package:iapetus/src/core/partners/data/partners.dart';
 
-late final _requestEncrypter = buildPandoraEncrypter(partner.requestEncryptKey);
+final _requestEncrypter = buildPandoraEncrypter(partner.requestEncryptKey);
 
-late final _requestDecrypter = buildPandoraDecrypter(partner.requestEncryptKey);
+final _requestDecrypter = buildPandoraDecrypter(partner.requestEncryptKey);
 
-late final _responseEncrypter =
-    buildPandoraEncrypter(partner.responseEncryptKey);
+final _responseEncrypter = buildPandoraEncrypter(partner.responseEncryptKey);
 
-late final _responseDecrypter =
-    buildPandoraDecrypter(partner.responseEncryptKey);
+final _responseDecrypter = buildPandoraDecrypter(partner.responseEncryptKey);
 
 /// Builds a request/response encrypter using the given [key].
 Converter<List<int>, String> buildPandoraEncrypter(String key) =>

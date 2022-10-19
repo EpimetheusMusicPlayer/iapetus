@@ -174,15 +174,15 @@ class MediaAnnotation with _$MediaAnnotation implements PandoraEntity {
 
   @FreezedUnionValue('ST')
   const factory MediaAnnotation.station({
-    @JsonKey(name: 'stationName') required final String name,
-    @JsonKey(name: 'stationId') required final String stationId,
-    @JsonKey(name: 'listenerId') required final int listenerId,
-    @JsonKey(name: 'listenerPandoraId') required final String listenerPandoraId,
-    @JsonKey(name: 'initialSeedId') final String? initialSeedId,
-    @JsonKey(name: 'isQuickMix') required final bool isQuickMix,
-    @JsonKey(name: 'isThumbprint') required final bool isThumbprint,
+    @JsonKey(name: 'stationName') required String name,
+    @JsonKey(name: 'stationId') required String stationId,
+    @JsonKey(name: 'listenerId') required int listenerId,
+    @JsonKey(name: 'listenerPandoraId') required String listenerPandoraId,
+    @JsonKey(name: 'initialSeedId') String? initialSeedId,
+    @JsonKey(name: 'isQuickMix') required bool isQuickMix,
+    @JsonKey(name: 'isThumbprint') required bool isThumbprint,
     @JsonKey(name: 'hasCuratedModes', fromJson: readOptInBool, toJson: writeOptInBool)
-        required final bool hasCuratedModes,
+        required bool hasCuratedModes,
     @JsonKey(name: 'icon', fromJson: MediaIcon.optionalFromJson, toJson: MediaIcon.optionalToJson)
         required MediaIcon? icon,
     @JsonKey(name: 'pandoraId') required String pandoraId,
