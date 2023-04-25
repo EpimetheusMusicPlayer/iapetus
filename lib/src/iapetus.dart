@@ -40,7 +40,7 @@ class Iapetus {
 
   /// Creates an [Iapetus] client.
   ///
-  /// The given [proxyHost] and [proxyPort] will not be used on the Web.
+  /// The given [networkConfig] will not be used on the Web.
   Iapetus({
     required this.fastStorage,
     required this.secureStorage,
