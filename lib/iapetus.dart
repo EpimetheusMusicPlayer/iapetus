@@ -1,3 +1,4 @@
+/// The main library for the iapetus package.
 library iapetus;
 
 export 'package:freezed_annotation/freezed_annotation.dart'
