@@ -64,7 +64,11 @@ Future<void> main(List<String> arguments) async {
 
   final track = collectionItems
       .firstWhere((item) => item.pandoraType == PandoraType.song);
-  final onDemandMedia = await iapetus.getOnDemandMedia(track);
+
+  if (iapetus.user.pandoraBrandingType == PandoraBrandingType.premium &&
+      iapetus.user.enableOnDemand) {
+    final onDemandMedia = await iapetus.getOnDemandMedia(track);
+  }
 
   final autoplayRecommendations = await iapetus.getAutoplaySongs(track);
 
