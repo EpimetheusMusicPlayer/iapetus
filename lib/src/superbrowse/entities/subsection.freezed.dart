@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'subsection.dart';
 
@@ -41,6 +41,8 @@ SuperbrowseSubsection _$SuperbrowseSubsectionFromJson(
 mixin _$SuperbrowseSubsection {
   @JsonKey(name: SuperbrowseSubsection._sectionIdKey)
   String get sectionId => throw _privateConstructorUsedError;
+  @JsonKey(name: SuperbrowseSubsection._formFactorsKey)
+  FormFactors? get formFactors => throw _privateConstructorUsedError;
   @JsonKey(name: SuperbrowseSubsection._itemsKey)
   List<SuperbrowseItem> get items => throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -255,8 +257,12 @@ abstract class $SuperbrowseSubsectionCopyWith<$Res> {
   $Res call(
       {@JsonKey(name: SuperbrowseSubsection._sectionIdKey)
           String sectionId,
+      @JsonKey(name: SuperbrowseSubsection._formFactorsKey)
+          FormFactors formFactors,
       @JsonKey(name: SuperbrowseSubsection._itemsKey)
           List<SuperbrowseItem> items});
+
+  $FormFactorsCopyWith<$Res>? get formFactors;
 }
 
 /// @nodoc
@@ -274,6 +280,7 @@ class _$SuperbrowseSubsectionCopyWithImpl<$Res,
   @override
   $Res call({
     Object? sectionId = null,
+    Object? formFactors = null,
     Object? items = null,
   }) {
     return _then(_value.copyWith(
@@ -281,11 +288,27 @@ class _$SuperbrowseSubsectionCopyWithImpl<$Res,
           ? _value.sectionId
           : sectionId // ignore: cast_nullable_to_non_nullable
               as String,
+      formFactors: null == formFactors
+          ? _value.formFactors!
+          : formFactors // ignore: cast_nullable_to_non_nullable
+              as FormFactors,
       items: null == items
           ? _value.items
           : items // ignore: cast_nullable_to_non_nullable
               as List<SuperbrowseItem>,
     ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $FormFactorsCopyWith<$Res>? get formFactors {
+    if (_value.formFactors == null) {
+      return null;
+    }
+
+    return $FormFactorsCopyWith<$Res>(_value.formFactors!, (value) {
+      return _then(_value.copyWith(formFactors: value) as $Val);
+    });
   }
 }
 
@@ -308,6 +331,7 @@ abstract class _$$HorizontalScrollSuperbrowseSubsectionCopyWith<$Res>
       @JsonKey(name: SuperbrowseSubsection._itemsKey)
           List<SuperbrowseItem> items});
 
+  @override
   $FormFactorsCopyWith<$Res> get formFactors;
 }
 
@@ -392,6 +416,7 @@ class _$HorizontalScrollSuperbrowseSubsection
   @override
   @JsonKey(name: SuperbrowseSubsection._itemsKey)
   List<SuperbrowseItem> get items {
+    if (_items is EqualUnmodifiableListView) return _items;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_items);
   }
@@ -682,6 +707,7 @@ abstract class HorizontalScrollSuperbrowseSubsection
   String get sectionId;
   @JsonKey(name: SuperbrowseSubsection._scrollTypeKey)
   ScrollType? get scrollType;
+  @override
   @JsonKey(name: SuperbrowseSubsection._formFactorsKey)
   FormFactors get formFactors;
   @override
@@ -719,6 +745,7 @@ abstract class _$$RecentlyPlayedSuperbrowseSubsectionCopyWith<$Res>
       @JsonKey(name: 'maxRequired')
           int? maxRequired});
 
+  @override
   $FormFactorsCopyWith<$Res> get formFactors;
 }
 
@@ -825,6 +852,7 @@ class _$RecentlyPlayedSuperbrowseSubsection
   @override
   @JsonKey(name: SuperbrowseSubsection._itemsKey)
   List<SuperbrowseItem> get items {
+    if (_items is EqualUnmodifiableListView) return _items;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_items);
   }
@@ -835,6 +863,7 @@ class _$RecentlyPlayedSuperbrowseSubsection
   Map<String, SuperbrowseItem>? get newItemTemplate {
     final value = _newItemTemplate;
     if (value == null) return null;
+    if (_newItemTemplate is EqualUnmodifiableMapView) return _newItemTemplate;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableMapView(value);
   }
@@ -1153,6 +1182,7 @@ abstract class RecentlyPlayedSuperbrowseSubsection
   String get sectionId;
   @JsonKey(name: SuperbrowseSubsection._scrollTypeKey)
   ScrollType? get scrollType;
+  @override
   @JsonKey(name: SuperbrowseSubsection._formFactorsKey)
   FormFactors get formFactors;
   @override
@@ -1188,6 +1218,7 @@ abstract class _$$SingletonSuperbrowseSubsectionCopyWith<$Res>
       @JsonKey(name: SuperbrowseSubsection._itemsKey)
           List<SuperbrowseItem> items});
 
+  @override
   $FormFactorsCopyWith<$Res>? get formFactors;
 }
 
@@ -1223,18 +1254,6 @@ class __$$SingletonSuperbrowseSubsectionCopyWithImpl<$Res>
               as List<SuperbrowseItem>,
     ));
   }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $FormFactorsCopyWith<$Res>? get formFactors {
-    if (_value.formFactors == null) {
-      return null;
-    }
-
-    return $FormFactorsCopyWith<$Res>(_value.formFactors!, (value) {
-      return _then(_value.copyWith(formFactors: value));
-    });
-  }
 }
 
 /// @nodoc
@@ -1266,6 +1285,7 @@ class _$SingletonSuperbrowseSubsection
   @override
   @JsonKey(name: SuperbrowseSubsection._itemsKey)
   List<SuperbrowseItem> get items {
+    if (_items is EqualUnmodifiableListView) return _items;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_items);
   }
@@ -1547,6 +1567,7 @@ abstract class SingletonSuperbrowseSubsection implements SuperbrowseSubsection {
   @override
   @JsonKey(name: SuperbrowseSubsection._sectionIdKey)
   String get sectionId;
+  @override
   @JsonKey(name: SuperbrowseSubsection._formFactorsKey)
   FormFactors? get formFactors;
   @override
@@ -1575,6 +1596,7 @@ abstract class _$$VerticalListSuperbrowseSubsectionCopyWith<$Res>
       @JsonKey(name: SuperbrowseSubsection._itemsKey)
           List<SuperbrowseItem> items});
 
+  @override
   $FormFactorsCopyWith<$Res>? get formFactors;
 }
 
@@ -1610,18 +1632,6 @@ class __$$VerticalListSuperbrowseSubsectionCopyWithImpl<$Res>
               as List<SuperbrowseItem>,
     ));
   }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $FormFactorsCopyWith<$Res>? get formFactors {
-    if (_value.formFactors == null) {
-      return null;
-    }
-
-    return $FormFactorsCopyWith<$Res>(_value.formFactors!, (value) {
-      return _then(_value.copyWith(formFactors: value));
-    });
-  }
 }
 
 /// @nodoc
@@ -1653,6 +1663,7 @@ class _$VerticalListSuperbrowseSubsection
   @override
   @JsonKey(name: SuperbrowseSubsection._itemsKey)
   List<SuperbrowseItem> get items {
+    if (_items is EqualUnmodifiableListView) return _items;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_items);
   }
@@ -1936,6 +1947,7 @@ abstract class VerticalListSuperbrowseSubsection
   @override
   @JsonKey(name: SuperbrowseSubsection._sectionIdKey)
   String get sectionId;
+  @override
   @JsonKey(name: SuperbrowseSubsection._formFactorsKey)
   FormFactors? get formFactors;
   @override
@@ -1965,6 +1977,7 @@ abstract class _$$DisplayAdSuperbrowseSubsectionCopyWith<$Res>
       @JsonKey(name: SuperbrowseSubsection._itemsKey)
           List<SuperbrowseItem> items});
 
+  @override
   $FormFactorsCopyWith<$Res> get formFactors;
 }
 
@@ -2039,6 +2052,7 @@ class _$DisplayAdSuperbrowseSubsection
   @override
   @JsonKey(name: SuperbrowseSubsection._itemsKey)
   List<SuperbrowseItem> get items {
+    if (_items is EqualUnmodifiableListView) return _items;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_items);
   }
@@ -2320,6 +2334,7 @@ abstract class DisplayAdSuperbrowseSubsection implements SuperbrowseSubsection {
   @override
   @JsonKey(name: SuperbrowseSubsection._sectionIdKey)
   String get sectionId;
+  @override
   @JsonKey(name: SuperbrowseSubsection._formFactorsKey)
   FormFactors get formFactors;
   @override

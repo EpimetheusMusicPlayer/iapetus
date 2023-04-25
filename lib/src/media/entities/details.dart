@@ -11,7 +11,7 @@ import 'package:iapetus/src/media/entities/lyric_data.dart';
 part 'details.freezed.dart';
 part 'details.g.dart';
 
-@freezed
+@Freezed(copyWith: false) // https://github.com/rrousselGit/freezed/issues/884
 class MediaDetailsSet with _$MediaDetailsSet implements Annotated {
   const factory MediaDetailsSet.track({
     @JsonKey(name: 'annotations')

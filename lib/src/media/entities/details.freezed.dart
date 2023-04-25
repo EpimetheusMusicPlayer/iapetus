@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'details.dart';
 
@@ -32,6 +32,8 @@ mixin _$MediaDetailsSet {
   @JsonKey(name: 'annotations')
   Map<String, MediaAnnotation> get annotations =>
       throw _privateConstructorUsedError;
+  @JsonKey(name: 'trackDetails')
+  dynamic get details => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(
@@ -101,83 +103,6 @@ mixin _$MediaDetailsSet {
   }) =>
       throw _privateConstructorUsedError;
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $MediaDetailsSetCopyWith<MediaDetailsSet> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $MediaDetailsSetCopyWith<$Res> {
-  factory $MediaDetailsSetCopyWith(
-          MediaDetailsSet value, $Res Function(MediaDetailsSet) then) =
-      _$MediaDetailsSetCopyWithImpl<$Res, MediaDetailsSet>;
-  @useResult
-  $Res call(
-      {@JsonKey(name: 'annotations') Map<String, MediaAnnotation> annotations});
-}
-
-/// @nodoc
-class _$MediaDetailsSetCopyWithImpl<$Res, $Val extends MediaDetailsSet>
-    implements $MediaDetailsSetCopyWith<$Res> {
-  _$MediaDetailsSetCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? annotations = null,
-  }) {
-    return _then(_value.copyWith(
-      annotations: null == annotations
-          ? _value.annotations
-          : annotations // ignore: cast_nullable_to_non_nullable
-              as Map<String, MediaAnnotation>,
-    ) as $Val);
-  }
-}
-
-/// @nodoc
-abstract class _$$TrackDetailsSetCopyWith<$Res>
-    implements $MediaDetailsSetCopyWith<$Res> {
-  factory _$$TrackDetailsSetCopyWith(
-          _$TrackDetailsSet value, $Res Function(_$TrackDetailsSet) then) =
-      __$$TrackDetailsSetCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call(
-      {@JsonKey(name: 'annotations') Map<String, MediaAnnotation> annotations,
-      @JsonKey(name: 'trackDetails') TrackDetails details});
-}
-
-/// @nodoc
-class __$$TrackDetailsSetCopyWithImpl<$Res>
-    extends _$MediaDetailsSetCopyWithImpl<$Res, _$TrackDetailsSet>
-    implements _$$TrackDetailsSetCopyWith<$Res> {
-  __$$TrackDetailsSetCopyWithImpl(
-      _$TrackDetailsSet _value, $Res Function(_$TrackDetailsSet) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? annotations = null,
-    Object? details = null,
-  }) {
-    return _then(_$TrackDetailsSet(
-      annotations: null == annotations
-          ? _value._annotations
-          : annotations // ignore: cast_nullable_to_non_nullable
-              as Map<String, MediaAnnotation>,
-      details: null == details
-          ? _value.details
-          : details // ignore: cast_nullable_to_non_nullable
-              as TrackDetails,
-    ));
-  }
 }
 
 /// @nodoc
@@ -199,6 +124,7 @@ class _$TrackDetailsSet implements TrackDetailsSet {
   @override
   @JsonKey(name: 'annotations')
   Map<String, MediaAnnotation> get annotations {
+    if (_annotations is EqualUnmodifiableMapView) return _annotations;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableMapView(_annotations);
   }
@@ -231,12 +157,6 @@ class _$TrackDetailsSet implements TrackDetailsSet {
       runtimeType,
       const DeepCollectionEquality().hash(_annotations),
       const DeepCollectionEquality().hash(details));
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$TrackDetailsSetCopyWith<_$TrackDetailsSet> get copyWith =>
-      __$$TrackDetailsSetCopyWithImpl<_$TrackDetailsSet>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -351,52 +271,9 @@ abstract class TrackDetailsSet implements MediaDetailsSet {
   @override
   @JsonKey(name: 'annotations')
   Map<String, MediaAnnotation> get annotations;
+  @override
   @JsonKey(name: 'trackDetails')
   TrackDetails get details;
-  @override
-  @JsonKey(ignore: true)
-  _$$TrackDetailsSetCopyWith<_$TrackDetailsSet> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$GenreDetailsSetCopyWith<$Res>
-    implements $MediaDetailsSetCopyWith<$Res> {
-  factory _$$GenreDetailsSetCopyWith(
-          _$GenreDetailsSet value, $Res Function(_$GenreDetailsSet) then) =
-      __$$GenreDetailsSetCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call(
-      {@JsonKey(name: 'annotations') Map<String, MediaAnnotation> annotations,
-      @JsonKey(name: 'genreDetails') GenreDetails details});
-}
-
-/// @nodoc
-class __$$GenreDetailsSetCopyWithImpl<$Res>
-    extends _$MediaDetailsSetCopyWithImpl<$Res, _$GenreDetailsSet>
-    implements _$$GenreDetailsSetCopyWith<$Res> {
-  __$$GenreDetailsSetCopyWithImpl(
-      _$GenreDetailsSet _value, $Res Function(_$GenreDetailsSet) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? annotations = null,
-    Object? details = null,
-  }) {
-    return _then(_$GenreDetailsSet(
-      annotations: null == annotations
-          ? _value._annotations
-          : annotations // ignore: cast_nullable_to_non_nullable
-              as Map<String, MediaAnnotation>,
-      details: null == details
-          ? _value.details
-          : details // ignore: cast_nullable_to_non_nullable
-              as GenreDetails,
-    ));
-  }
 }
 
 /// @nodoc
@@ -418,6 +295,7 @@ class _$GenreDetailsSet implements GenreDetailsSet {
   @override
   @JsonKey(name: 'annotations')
   Map<String, MediaAnnotation> get annotations {
+    if (_annotations is EqualUnmodifiableMapView) return _annotations;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableMapView(_annotations);
   }
@@ -450,12 +328,6 @@ class _$GenreDetailsSet implements GenreDetailsSet {
       runtimeType,
       const DeepCollectionEquality().hash(_annotations),
       const DeepCollectionEquality().hash(details));
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$GenreDetailsSetCopyWith<_$GenreDetailsSet> get copyWith =>
-      __$$GenreDetailsSetCopyWithImpl<_$GenreDetailsSet>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -570,12 +442,9 @@ abstract class GenreDetailsSet implements MediaDetailsSet {
   @override
   @JsonKey(name: 'annotations')
   Map<String, MediaAnnotation> get annotations;
+  @override
   @JsonKey(name: 'genreDetails')
   GenreDetails get details;
-  @override
-  @JsonKey(ignore: true)
-  _$$GenreDetailsSetCopyWith<_$GenreDetailsSet> get copyWith =>
-      throw _privateConstructorUsedError;
 }
 
 MediaDetails _$MediaDetailsFromJson(Map<String, dynamic> json) {
@@ -1070,6 +939,7 @@ class _$TrackDetails implements TrackDetails {
   @override
   @JsonKey(name: 'trackTags')
   List<String> get trackTags {
+    if (_trackTags is EqualUnmodifiableListView) return _trackTags;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_trackTags);
   }
@@ -1099,6 +969,7 @@ class _$TrackDetails implements TrackDetails {
   @override
   @JsonKey(name: 'similarTracks')
   List<String> get similarTrackIds {
+    if (_similarTrackIds is EqualUnmodifiableListView) return _similarTrackIds;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_similarTrackIds);
   }
@@ -1107,6 +978,7 @@ class _$TrackDetails implements TrackDetails {
   @override
   @JsonKey(name: 'focusTraits')
   List<FocusTrait> get focusTraits {
+    if (_focusTraits is EqualUnmodifiableListView) return _focusTraits;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_focusTraits);
   }
@@ -1657,6 +1529,7 @@ class _$GenreDetails implements GenreDetails {
   @override
   @JsonKey(name: 'sampleArtists')
   List<String> get sampleArtistIds {
+    if (_sampleArtistIds is EqualUnmodifiableListView) return _sampleArtistIds;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_sampleArtistIds);
   }
@@ -1665,6 +1538,7 @@ class _$GenreDetails implements GenreDetails {
   @override
   @JsonKey(name: 'sampleTracks')
   List<String> get sampleTrackIds {
+    if (_sampleTrackIds is EqualUnmodifiableListView) return _sampleTrackIds;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_sampleTrackIds);
   }
@@ -1673,6 +1547,7 @@ class _$GenreDetails implements GenreDetails {
   @override
   @JsonKey(name: 'focusTraits')
   List<FocusTrait> get focusTraits {
+    if (_focusTraits is EqualUnmodifiableListView) return _focusTraits;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_focusTraits);
   }

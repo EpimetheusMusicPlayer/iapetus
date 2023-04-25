@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'item.dart';
 
@@ -51,6 +51,8 @@ mixin _$SuperbrowseItem {
   String? get pandoraId => throw _privateConstructorUsedError;
   @JsonKey(name: 'analyticsToken')
   String get analyticsToken => throw _privateConstructorUsedError;
+  @JsonKey(name: 'labels')
+  List<SuperbrowseLabel>? get labels => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(
@@ -634,7 +636,8 @@ abstract class $SuperbrowseItemCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(name: 'pandoraId') String? pandoraId,
-      @JsonKey(name: 'analyticsToken') String analyticsToken});
+      @JsonKey(name: 'analyticsToken') String analyticsToken,
+      @JsonKey(name: 'labels') List<SuperbrowseLabel> labels});
 }
 
 /// @nodoc
@@ -652,6 +655,7 @@ class _$SuperbrowseItemCopyWithImpl<$Res, $Val extends SuperbrowseItem>
   $Res call({
     Object? pandoraId = freezed,
     Object? analyticsToken = null,
+    Object? labels = null,
   }) {
     return _then(_value.copyWith(
       pandoraId: freezed == pandoraId
@@ -662,6 +666,10 @@ class _$SuperbrowseItemCopyWithImpl<$Res, $Val extends SuperbrowseItem>
           ? _value.analyticsToken
           : analyticsToken // ignore: cast_nullable_to_non_nullable
               as String,
+      labels: null == labels
+          ? _value.labels!
+          : labels // ignore: cast_nullable_to_non_nullable
+              as List<SuperbrowseLabel>,
     ) as $Val);
   }
 }
@@ -757,6 +765,7 @@ class _$BannerSuperbrowseItem implements BannerSuperbrowseItem {
   @override
   @JsonKey(name: 'labels')
   List<SuperbrowseLabel> get labels {
+    if (_labels is EqualUnmodifiableListView) return _labels;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_labels);
   }
@@ -1416,6 +1425,7 @@ abstract class BannerSuperbrowseItem implements SuperbrowseItem {
   @override
   @JsonKey(name: 'analyticsToken')
   String get analyticsToken;
+  @override
   @JsonKey(name: 'labels')
   List<SuperbrowseLabel> get labels;
   @JsonKey(name: 'image')
@@ -1562,6 +1572,7 @@ class _$BeltSuperbrowseItem implements BeltSuperbrowseItem {
   List<SuperbrowseLabel>? get labels {
     final value = _labels;
     if (value == null) return null;
+    if (_labels is EqualUnmodifiableListView) return _labels;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -2254,6 +2265,7 @@ abstract class BeltSuperbrowseItem implements SuperbrowseItem {
   @override
   @JsonKey(name: 'analyticsToken')
   String get analyticsToken;
+  @override
   @JsonKey(name: 'labels')
   List<SuperbrowseLabel>? get labels;
   @JsonKey(name: 'image')
@@ -2405,6 +2417,7 @@ class _$FeaturedSuperbrowseItem implements FeaturedSuperbrowseItem {
   @override
   @JsonKey(name: 'labels')
   List<SuperbrowseLabel> get labels {
+    if (_labels is EqualUnmodifiableListView) return _labels;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_labels);
   }
@@ -2424,6 +2437,7 @@ class _$FeaturedSuperbrowseItem implements FeaturedSuperbrowseItem {
   List<SuperbrowseBadge>? get badges {
     final value = _badges;
     if (value == null) return null;
+    if (_badges is EqualUnmodifiableListView) return _badges;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -3102,6 +3116,7 @@ abstract class FeaturedSuperbrowseItem implements SuperbrowseItem {
   @override
   @JsonKey(name: 'analyticsToken')
   String get analyticsToken;
+  @override
   @JsonKey(name: 'labels')
   List<SuperbrowseLabel> get labels;
   @JsonKey(name: 'image')
@@ -3249,6 +3264,7 @@ class _$FooterSuperbrowseItem implements FooterSuperbrowseItem {
   @override
   @JsonKey(name: 'labels')
   List<SuperbrowseLabel> get labels {
+    if (_labels is EqualUnmodifiableListView) return _labels;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_labels);
   }
@@ -3933,6 +3949,7 @@ abstract class FooterSuperbrowseItem implements SuperbrowseItem {
   @override
   @JsonKey(name: 'analyticsToken')
   String get analyticsToken;
+  @override
   @JsonKey(name: 'labels')
   List<SuperbrowseLabel> get labels;
   @JsonKey(name: 'button')
@@ -4105,6 +4122,7 @@ class _$GridSuperbrowseItem implements GridSuperbrowseItem {
   @override
   @JsonKey(name: 'labels')
   List<SuperbrowseLabel> get labels {
+    if (_labels is EqualUnmodifiableListView) return _labels;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_labels);
   }
@@ -4124,6 +4142,7 @@ class _$GridSuperbrowseItem implements GridSuperbrowseItem {
   List<SuperbrowseBadge>? get badges {
     final value = _badges;
     if (value == null) return null;
+    if (_badges is EqualUnmodifiableListView) return _badges;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -4814,6 +4833,7 @@ abstract class GridSuperbrowseItem implements SuperbrowseItem {
   @override
   @JsonKey(name: 'analyticsToken')
   String get analyticsToken;
+  @override
   @JsonKey(name: 'labels')
   List<SuperbrowseLabel> get labels;
   @JsonKey(name: 'image')
@@ -4966,6 +4986,7 @@ class _$HeaderSuperbrowseItem implements HeaderSuperbrowseItem {
   @override
   @JsonKey(name: 'labels')
   List<SuperbrowseLabel> get labels {
+    if (_labels is EqualUnmodifiableListView) return _labels;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_labels);
   }
@@ -5650,6 +5671,7 @@ abstract class HeaderSuperbrowseItem implements SuperbrowseItem {
   @override
   @JsonKey(name: 'analyticsToken')
   String get analyticsToken;
+  @override
   @JsonKey(name: 'labels')
   List<SuperbrowseLabel> get labels;
   @JsonKey(name: 'image')
@@ -5819,6 +5841,7 @@ class _$HeroSuperbrowseItem implements HeroSuperbrowseItem {
   @override
   @JsonKey(name: 'labels')
   List<SuperbrowseLabel> get labels {
+    if (_labels is EqualUnmodifiableListView) return _labels;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_labels);
   }
@@ -5838,6 +5861,7 @@ class _$HeroSuperbrowseItem implements HeroSuperbrowseItem {
   List<SuperbrowseBadge>? get badges {
     final value = _badges;
     if (value == null) return null;
+    if (_badges is EqualUnmodifiableListView) return _badges;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -6525,6 +6549,7 @@ abstract class HeroSuperbrowseItem implements SuperbrowseItem {
   @override
   @JsonKey(name: 'analyticsToken')
   String get analyticsToken;
+  @override
   @JsonKey(name: 'labels')
   List<SuperbrowseLabel> get labels;
   @JsonKey(name: 'image')
@@ -6747,6 +6772,7 @@ class _$LargeRowSuperbrowseItem implements LargeRowSuperbrowseItem {
   List<SuperbrowseLabel>? get labels {
     final value = _labels;
     if (value == null) return null;
+    if (_labels is EqualUnmodifiableListView) return _labels;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -6772,6 +6798,7 @@ class _$LargeRowSuperbrowseItem implements LargeRowSuperbrowseItem {
   List<SuperbrowseBadge>? get badges {
     final value = _badges;
     if (value == null) return null;
+    if (_badges is EqualUnmodifiableListView) return _badges;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -7468,6 +7495,7 @@ abstract class LargeRowSuperbrowseItem implements SuperbrowseItem {
   @override
   @JsonKey(name: 'analyticsToken')
   String get analyticsToken;
+  @override
   @JsonKey(name: 'labels')
   List<SuperbrowseLabel>? get labels;
   @JsonKey(name: 'button')
@@ -7622,6 +7650,7 @@ class _$SmallRowSuperbrowseItem implements SmallRowSuperbrowseItem {
   @override
   @JsonKey(name: 'labels')
   List<SuperbrowseLabel> get labels {
+    if (_labels is EqualUnmodifiableListView) return _labels;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_labels);
   }
@@ -8307,6 +8336,7 @@ abstract class SmallRowSuperbrowseItem implements SuperbrowseItem {
   @override
   @JsonKey(name: 'analyticsToken')
   String get analyticsToken;
+  @override
   @JsonKey(name: 'labels')
   List<SuperbrowseLabel> get labels;
   @JsonKey(name: 'button')
@@ -8456,6 +8486,7 @@ class _$SplitSuperbrowseItem implements SplitSuperbrowseItem {
   @override
   @JsonKey(name: 'labels')
   List<SuperbrowseLabel> get labels {
+    if (_labels is EqualUnmodifiableListView) return _labels;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_labels);
   }
@@ -8475,6 +8506,7 @@ class _$SplitSuperbrowseItem implements SplitSuperbrowseItem {
   List<SuperbrowseBadge>? get badges {
     final value = _badges;
     if (value == null) return null;
+    if (_badges is EqualUnmodifiableListView) return _badges;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -9153,6 +9185,7 @@ abstract class SplitSuperbrowseItem implements SuperbrowseItem {
   @override
   @JsonKey(name: 'analyticsToken')
   String get analyticsToken;
+  @override
   @JsonKey(name: 'labels')
   List<SuperbrowseLabel> get labels;
   @JsonKey(name: 'image')
@@ -9305,6 +9338,7 @@ class _$TileSuperbrowseItem implements TileSuperbrowseItem {
   List<SuperbrowseLabel>? get labels {
     final value = _labels;
     if (value == null) return null;
+    if (_labels is EqualUnmodifiableListView) return _labels;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -9997,6 +10031,7 @@ abstract class TileSuperbrowseItem implements SuperbrowseItem {
   @override
   @JsonKey(name: 'analyticsToken')
   String get analyticsToken;
+  @override
   @JsonKey(name: 'labels')
   List<SuperbrowseLabel>? get labels;
   @JsonKey(name: 'image')

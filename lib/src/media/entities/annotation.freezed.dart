@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'annotation.dart';
 
@@ -3326,6 +3326,8 @@ class _$ArtistAnnotation extends ArtistAnnotation {
   @override
   @JsonKey(name: 'primaryArtists')
   List<String> get primaryArtistIds {
+    if (_primaryArtistIds is EqualUnmodifiableListView)
+      return _primaryArtistIds;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_primaryArtistIds);
   }
@@ -5088,6 +5090,7 @@ class _$AlbumAnnotation extends AlbumAnnotation {
   @override
   @JsonKey(name: 'tracks')
   List<String> get trackIds {
+    if (_trackIds is EqualUnmodifiableListView) return _trackIds;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_trackIds);
   }
@@ -10228,6 +10231,8 @@ class _$PlaylistAnnotation extends PlaylistAnnotation {
   @override
   @JsonKey(name: 'includedTrackTypes')
   List<PandoraType> get includedTrackTypes {
+    if (_includedTrackTypes is EqualUnmodifiableListView)
+      return _includedTrackTypes;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_includedTrackTypes);
   }
@@ -13696,6 +13701,8 @@ class _$PodcastAnnotation extends PodcastAnnotation {
   @override
   @JsonKey(name: 'categories')
   List<String> get categoryPandoraIds {
+    if (_categoryPandoraIds is EqualUnmodifiableListView)
+      return _categoryPandoraIds;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_categoryPandoraIds);
   }
@@ -13725,6 +13732,8 @@ class _$PodcastAnnotation extends PodcastAnnotation {
   @override
   @JsonKey(name: 'exclusivityGroups')
   List<Object> get exclusivityGroups {
+    if (_exclusivityGroups is EqualUnmodifiableListView)
+      return _exclusivityGroups;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_exclusivityGroups);
   }
@@ -15351,6 +15360,7 @@ class _$PodcastCategoryAnnotation extends PodcastCategoryAnnotation {
   @override
   @JsonKey(name: 'aliases')
   List<String> get aliases {
+    if (_aliases is EqualUnmodifiableListView) return _aliases;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_aliases);
   }
@@ -16995,6 +17005,7 @@ class _$EpisodeAnnotation extends EpisodeAnnotation {
   @override
   @JsonKey(name: 'adBreaks')
   List<Object> get adBreaks {
+    if (_adBreaks is EqualUnmodifiableListView) return _adBreaks;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_adBreaks);
   }
@@ -17003,6 +17014,8 @@ class _$EpisodeAnnotation extends EpisodeAnnotation {
   @override
   @JsonKey(name: 'exclusivityGroups')
   List<Object> get exclusivityGroups {
+    if (_exclusivityGroups is EqualUnmodifiableListView)
+      return _exclusivityGroups;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_exclusivityGroups);
   }
