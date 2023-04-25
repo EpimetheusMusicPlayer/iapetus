@@ -4,8 +4,8 @@ extension PandoraApi on Iapetus {
   /// Makes an API request to Pandora, using the provided [method] and request
   /// [data].
   ///
-  /// [usePartner] and [useUser] can be set to enable or disable the addition of
-  /// partner and user data into the request.
+  /// [requiresPartner] and [requiresUser] can be set to enable or disable the
+  /// addition of partner and user data into the request.
   ///
   /// [encrypt] and [decrypt] specify whether the requests and responses should
   /// be encrypted and decrypted. The default values apply to most methods.
