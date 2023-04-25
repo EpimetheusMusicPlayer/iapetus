@@ -1,7 +1,7 @@
 on:
   push:
     branches:
-      - master
+      - json/master
 
 jobs:
   build:
